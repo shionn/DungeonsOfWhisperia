@@ -95,6 +95,11 @@ shape = SubResource("CapsuleShape3D_qs2cd")
 
 [node name="Skeleton_Minion" parent="Ennemi1" unique_id=1011250144 instance=ExtResource("4_5ip2l")]
 
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="Ennemi1" unique_id=2092247791]
+target_desired_distance = 1.5
+
+[node name="AtkTimer" type="Timer" parent="Ennemi1" unique_id=735917238]
+
 [node name="Ennemi2" type="CharacterBody3D" parent="." unique_id=493089009]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 16, 0, 13)
 script = ExtResource("3_qs2cd")
@@ -104,6 +109,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1, 0)
 shape = SubResource("CapsuleShape3D_qs2cd")
 
 [node name="Skeleton_Minion" parent="Ennemi2" unique_id=335785745 instance=ExtResource("4_5ip2l")]
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="Ennemi2" unique_id=106669021]
+target_desired_distance = 2.0
+
+[node name="AtkTimer" type="Timer" parent="Ennemi2" unique_id=1243108285]
 
 [node name="walls" type="Node3D" parent="." unique_id=1311694527]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -2)
@@ -645,3 +655,5 @@ navigation_mesh = SubResource("NavigationMesh_ehcb8")
 [node name="NavigationRegion3D16" type="NavigationRegion3D" parent="Navigation" unique_id=442398111]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, 0.1, -4)
 navigation_mesh = SubResource("NavigationMesh_ehcb8")
+
+[connection signal="timeout" from="Ennemi1/AtkTimer" to="Ennemi1" method="_on_atk_timer_timeout"]
