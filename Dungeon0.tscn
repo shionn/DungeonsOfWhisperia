@@ -657,3 +657,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, 0.1, -4)
 navigation_mesh = SubResource("NavigationMesh_ehcb8")
 
 [connection signal="timeout" from="Ennemi1/AtkTimer" to="Ennemi1" method="_on_atk_timer_timeout"]
+[connection signal="timeout" from="Ennemi2/AtkTimer" to="Ennemi2" method="_on_atk_timer_timeout"]

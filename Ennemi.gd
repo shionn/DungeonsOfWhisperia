@@ -37,6 +37,10 @@ func _physics_process(delta: float) -> void:
 		Action.IDLE:
 			_animation.play("Idle")
 			velocity = Vector3.ZERO
+		_:
+			velocity = Vector3.ZERO
+			_action = Action.IDLE
+			
 
 	move_and_slide()
 
