@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dxix68pslk4ei"
-path.s3tc="res://.godot/imported/wall_cracked_dungeon_texture.png-8e892c9f25f274f969aee7b94ceaeaa2.s3tc.ctex"
+path.s3tc="res://.godot/imported/wall_cracked_dungeon_texture.png-cb118b145daa7124f4e73c442e869170.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://assets/kaykit/dungeon/wall/wall_cracked_dungeon_texture.png"
-dest_files=["res://.godot/imported/wall_cracked_dungeon_texture.png-8e892c9f25f274f969aee7b94ceaeaa2.s3tc.ctex"]
+source_file="res://assets/kaykit/dungeon/wall/straight/wall_cracked_dungeon_texture.png"
+dest_files=["res://.godot/imported/wall_cracked_dungeon_texture.png-cb118b145daa7124f4e73c442e869170.s3tc.ctex"]
 
 [params]
 

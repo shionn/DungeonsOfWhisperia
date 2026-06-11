@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://b0tok6e0yrle6"
-path="res://.godot/imported/wall_cracked.gltf.glb-e6cd7a07865a7eb292927bbbfecd2c0c.scn"
+path="res://.godot/imported/wall_cracked.gltf.glb-d730c29d54f0e22acd43f71e60956fc8.scn"
 
 [deps]
 
-source_file="res://assets/kaykit/dungeon/wall/wall_cracked.gltf.glb"
-dest_files=["res://.godot/imported/wall_cracked.gltf.glb-e6cd7a07865a7eb292927bbbfecd2c0c.scn"]
+source_file="res://assets/kaykit/dungeon/wall/straight/wall_cracked.gltf.glb"
+dest_files=["res://.godot/imported/wall_cracked.gltf.glb-d730c29d54f0e22acd43f71e60956fc8.scn"]
 
 [params]
 
@@ -37,6 +37,13 @@ import_script/path=""
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
-_subresources={}
+_subresources={
+"nodes": {
+"PATH:wall_cracked": {
+"generate/physics": true,
+"physics/shape_type": 2
+}
+}
+}
 gltf/naming_version=2
 gltf/embedded_image_handling=1

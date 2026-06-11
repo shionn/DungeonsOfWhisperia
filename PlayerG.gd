@@ -30,7 +30,6 @@ func _physics_process(delta: float) -> void:
 		velocity = Vector3.ZERO
 		_animation.play("Idle")
 
-	print(global_position)
 	move_and_slide()
 
 const tilt_limit = deg_to_rad(50)
