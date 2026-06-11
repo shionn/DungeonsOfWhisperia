@@ -38,7 +38,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 1.7, 0)
 
 [node name="Ennemi1" type="CharacterBody3D" parent="." unique_id=398959370]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -7)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 7, 0, -4)
 script = ExtResource("3_qs2cd")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Ennemi1" unique_id=890745068]
@@ -46,6 +46,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1, 0)
 shape = SubResource("CapsuleShape3D_qs2cd")
 
 [node name="Skeleton_Minion" parent="Ennemi1" unique_id=1011250144 instance=ExtResource("4_5ip2l")]
+
+[node name="Ennemi2" type="CharacterBody3D" parent="." unique_id=493089009]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 16, 0, 13)
+script = ExtResource("3_qs2cd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ennemi2" unique_id=471155177]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1, 0)
+shape = SubResource("CapsuleShape3D_qs2cd")
+
+[node name="Skeleton_Minion" parent="Ennemi2" unique_id=335785745 instance=ExtResource("4_5ip2l")]
 
 [node name="walls" type="Node3D" parent="." unique_id=1311694527]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -2)
