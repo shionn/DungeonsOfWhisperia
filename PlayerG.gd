@@ -1,3 +1,4 @@
+class_name PlayerG
 extends CharacterBody3D
 
 @onready var _character = $Rogue_Hooded as Node3D
