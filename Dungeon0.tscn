@@ -101,6 +101,9 @@ target_desired_distance = 1.5
 [node name="AtkTimer" type="Timer" parent="Ennemi1" unique_id=735917238]
 one_shot = true
 
+[node name="AtkDelay" type="Timer" parent="Ennemi1" unique_id=1972964326]
+one_shot = true
+
 [node name="Ennemi2" type="CharacterBody3D" parent="." unique_id=493089009]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 16, 0, 13)
 script = ExtResource("3_qs2cd")
@@ -116,6 +119,8 @@ target_desired_distance = 2.0
 
 [node name="AtkTimer" type="Timer" parent="Ennemi2" unique_id=1243108285]
 one_shot = true
+
+[node name="AtkDelay" type="Timer" parent="Ennemi2" unique_id=1127918616]
 
 [node name="walls" type="Node3D" parent="." unique_id=1311694527]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -2)
@@ -659,4 +664,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, 0.1, -4)
 navigation_mesh = SubResource("NavigationMesh_ehcb8")
 
 [connection signal="timeout" from="Ennemi1/AtkTimer" to="Ennemi1" method="_on_atk_timer_timeout"]
+[connection signal="timeout" from="Ennemi1/AtkDelay" to="Ennemi1" method="_on_atk_time_delay_timeout"]
 [connection signal="timeout" from="Ennemi2/AtkTimer" to="Ennemi2" method="_on_atk_timer_timeout"]
+[connection signal="timeout" from="Ennemi2/AtkDelay" to="Ennemi2" method="_on_atk_time_delay_timeout"]

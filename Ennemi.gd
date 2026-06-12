@@ -3,7 +3,8 @@ extends CharacterBody3D
 @onready var _player = $"../Player" as PlayerG
 @onready var _animation = $"Skeleton_Minion/AnimationPlayer" as AnimationPlayer
 @onready var _navigation_agent: NavigationAgent3D = $NavigationAgent3D
-@onready var _atkTimer= $AtkTimer as Timer
+@onready var _atkTimer = $AtkTimer as Timer
+@onready var _atkTimerDelay = $AtkDelay as Timer
 
 enum Action { IDLE, CHASE, ATTACK, ATTACKING }
 
@@ -12,13 +13,14 @@ const _chase_dist = 1.5
 var movement_speed: float = 4.0
 
 var _action : Action = Action.IDLE
+var _can_atk : bool = true
 
 func _ready() -> void:
 	_animation.get_animation("Idle").loop_mode = Animation.LOOP_LINEAR
 	_animation.play("Idle")
 	_navigation_agent.target_desired_distance = _chase_dist
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	if _see_player() :
 		_navigation_agent.set_target_position(_player.global_position)
 
@@ -35,9 +37,15 @@ func _physics_process(delta: float) -> void:
 				_move_to_player()
 		Action.ATTACK:
 			_look_player()
-			_animation.play("1H_Melee_Attack_Chop")
-			_atkTimer.start(_animation.get_animation("1H_Melee_Attack_Chop").length)
-			_action = Action.ATTACKING
+			if _can_atk :
+				var delay = _animation.get_animation("1H_Melee_Attack_Chop").length
+				_animation.play("1H_Melee_Attack_Chop")
+				_atkTimer.start(delay)
+				_atkTimerDelay.start(delay*2)
+				_can_atk = false
+				_action = Action.ATTACKING
+			else : 
+				_action = Action.IDLE
 			velocity = Vector3.ZERO
 		Action.ATTACKING:
 			_look_player()
@@ -49,7 +57,6 @@ func _physics_process(delta: float) -> void:
 		_:
 			velocity = Vector3.ZERO
 			_action = Action.IDLE
-			
 
 	move_and_slide()
 
@@ -91,15 +98,16 @@ func _move_to_player() -> void :
 	self.rotation.x=0
 	self.velocity = global_position.direction_to(next_path_position) * movement_speed
 	self._animation.play("Walking_A")
-	
 
 func _update_navigation() -> bool :
-	var start = global_position
-	var end = _player.global_position
-	var distance = (end-start).length()
 	if _see_player() :
-		self._navigation_agent.set_target_position(end)
+		self._navigation_agent.set_target_position(_player.global_position)
 	return self._navigation_agent.is_navigation_finished()
 
 func _on_atk_timer_timeout() -> void:
 	self._action = Action.CHASE
+
+
+func _on_atk_time_delay_timeout() -> void:
+	print("can atk")
+	self._can_atk = true
