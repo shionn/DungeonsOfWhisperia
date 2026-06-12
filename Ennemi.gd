@@ -19,22 +19,31 @@ func _ready() -> void:
 	_navigation_agent.target_desired_distance = _chase_dist
 
 func _physics_process(delta: float) -> void:
-	_search_player()
+	if _see_player() :
+		_navigation_agent.set_target_position(_player.global_position)
+
 	match _action: 
 		Action.CHASE:
-			var next_path_position: Vector3 = _navigation_agent.get_next_path_position()
-			self.look_at(next_path_position,Vector3.UP,true)
-			self.rotation.x=0
-			velocity = global_position.direction_to(next_path_position) * movement_speed
-			_animation.play("Walking_A")
+			var start = global_position
+			var end = _player.global_position
+			var distance = (end-start).length()
+			if (distance < _atk_dist) :
+				_action = Action.ATTACK
+			elif _navigation_agent.is_navigation_finished() : 
+				_action = Action.IDLE
+			else :
+				_move_to_player()
 		Action.ATTACK:
+			_look_player()
 			_animation.play("1H_Melee_Attack_Chop")
 			_atkTimer.start(_animation.get_animation("1H_Melee_Attack_Chop").length)
 			_action = Action.ATTACKING
 			velocity = Vector3.ZERO
 		Action.ATTACKING:
+			_look_player()
 			velocity = Vector3.ZERO
 		Action.IDLE:
+			_search_player()
 			_animation.play("Idle")
 			velocity = Vector3.ZERO
 		_:
@@ -44,7 +53,27 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 
-func _search_player() -> void :
+func _look_player() -> void :
+	self.look_at(_player.global_position,Vector3.UP,true)
+	self.rotation.x = 0
+
+func _search_player() -> float :
+	var start = global_position+Vector3.UP
+	var end = _player.global_position+Vector3.UP
+	var distance = (end-start).length()
+	var direction = (end-start).normalized()
+	var orientation = self.basis * Vector3.BACK
+	if rad_to_deg(orientation.angle_to(direction)) <= 60 :
+		var query = PhysicsRayQueryParameters3D.create(start, end)
+		var result = get_world_3d().direct_space_state.intersect_ray(query)
+		if (result && result.collider == _player):
+			self._action = Action.CHASE
+			self._navigation_agent.set_target_position(result["position"])
+		else:
+			self._action = Action.IDLE
+	return distance
+
+func _see_player() -> bool :
 	var start = global_position+Vector3.UP
 	var end = _player.global_position+Vector3.UP
 	var direction = (end-start).normalized()
@@ -53,19 +82,24 @@ func _search_player() -> void :
 		var query = PhysicsRayQueryParameters3D.create(start, end)
 		var result = get_world_3d().direct_space_state.intersect_ray(query)
 		if (result && result.collider == _player):
-			#print(self, "see player", result)
-			self.look_at(end,Vector3.UP,true)
-			self.rotation.x = 0
-			if _action != Action.ATTACKING :
-				if (end-start).length()>_atk_dist :
-					self._action = Action.CHASE
-					_navigation_agent.set_target_position(result["position"])
-				else :
-					self._action = Action.ATTACK
-		else:
-			self._action = Action.IDLE
+			return true
+	return false
 
+func _move_to_player() -> void :
+	var next_path_position: Vector3 = _navigation_agent.get_next_path_position()
+	self.look_at(next_path_position,Vector3.UP,true)
+	self.rotation.x=0
+	self.velocity = global_position.direction_to(next_path_position) * movement_speed
+	self._animation.play("Walking_A")
+	
+
+func _update_navigation() -> bool :
+	var start = global_position
+	var end = _player.global_position
+	var distance = (end-start).length()
+	if _see_player() :
+		self._navigation_agent.set_target_position(end)
+	return self._navigation_agent.is_navigation_finished()
 
 func _on_atk_timer_timeout() -> void:
-	print("end timer")
 	self._action = Action.CHASE

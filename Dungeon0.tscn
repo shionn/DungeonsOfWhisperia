@@ -99,6 +99,7 @@ shape = SubResource("CapsuleShape3D_qs2cd")
 target_desired_distance = 1.5
 
 [node name="AtkTimer" type="Timer" parent="Ennemi1" unique_id=735917238]
+one_shot = true
 
 [node name="Ennemi2" type="CharacterBody3D" parent="." unique_id=493089009]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 16, 0, 13)
@@ -114,6 +115,7 @@ shape = SubResource("CapsuleShape3D_qs2cd")
 target_desired_distance = 2.0
 
 [node name="AtkTimer" type="Timer" parent="Ennemi2" unique_id=1243108285]
+one_shot = true
 
 [node name="walls" type="Node3D" parent="." unique_id=1311694527]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -2)
