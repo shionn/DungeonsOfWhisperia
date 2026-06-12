@@ -1,3 +1,4 @@
+class_name Monster
 extends CharacterBody3D 
 
 @onready var _player = $"../Player" as PlayerG

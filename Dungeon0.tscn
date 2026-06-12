@@ -3,8 +3,6 @@
 [ext_resource type="PackedScene" uid="uid://bwsb5rrn4rx5v" path="res://assets/kaykit/dungeon/floor/large/floor_tile_large.gltf.glb" id="1_acsvp"]
 [ext_resource type="PackedScene" uid="uid://ckdwjb642168f" path="res://assets/kaykit/dungeon/floor/large/floor_dirt_large.gltf.glb" id="2_yxr20"]
 [ext_resource type="PackedScene" uid="uid://c2gmjs5iylgc4" path="res://assets/kaykit/dungeon/wall/corner/wall_corner.gltf.glb" id="3_aalsr"]
-[ext_resource type="Script" uid="uid://bb8mw3r2v2qsn" path="res://Ennemi.gd" id="3_qs2cd"]
-[ext_resource type="PackedScene" uid="uid://boj6netivsmpu" path="res://assets/kaykit/skeletons/Skeleton_Minion.glb" id="4_5ip2l"]
 [ext_resource type="PackedScene" uid="uid://b0tok6e0yrle6" path="res://assets/kaykit/dungeon/wall/straight/wall_cracked.gltf.glb" id="4_ipk3o"]
 [ext_resource type="PackedScene" uid="uid://sn0772t8w1w4" path="res://assets/kaykit/dungeon/wall/straight/wall.gltf.glb" id="5_rhsgf"]
 [ext_resource type="PackedScene" uid="uid://brp46a1tt100g" path="res://assets/kaykit/dungeon/wall/straight/wall_arched.gltf.glb" id="6_3uggc"]
@@ -17,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://6vgbf4prfq4h" path="res://assets/kaykit/dungeon/bed/bed_floor.gltf.glb" id="13_aalsr"]
 [ext_resource type="Script" uid="uid://crpe0nst55m8b" path="res://PlayerG.gd" id="14_rhsgf"]
 [ext_resource type="PackedScene" uid="uid://hykjt2jo4gmo" path="res://assets/kaykit/character/Rogue_Hooded.glb" id="15_3uggc"]
+[ext_resource type="PackedScene" uid="uid://dvd4uuprholj6" path="res://fragment/monsters/Monster.tscn" id="18_5ip2l"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_qs2cd"]
 radius = 0.6
@@ -84,43 +83,6 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0
 
 [node name="Camera3D" type="Camera3D" parent="Player" unique_id=836684446]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 1.7, 0)
-
-[node name="Ennemi1" type="CharacterBody3D" parent="." unique_id=398959370]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 7, 0, -4)
-script = ExtResource("3_qs2cd")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Ennemi1" unique_id=890745068]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1, 0)
-shape = SubResource("CapsuleShape3D_qs2cd")
-
-[node name="Skeleton_Minion" parent="Ennemi1" unique_id=1011250144 instance=ExtResource("4_5ip2l")]
-
-[node name="NavigationAgent3D" type="NavigationAgent3D" parent="Ennemi1" unique_id=2092247791]
-target_desired_distance = 1.5
-
-[node name="AtkTimer" type="Timer" parent="Ennemi1" unique_id=735917238]
-one_shot = true
-
-[node name="AtkDelay" type="Timer" parent="Ennemi1" unique_id=1972964326]
-one_shot = true
-
-[node name="Ennemi2" type="CharacterBody3D" parent="." unique_id=493089009]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 16, 0, 13)
-script = ExtResource("3_qs2cd")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Ennemi2" unique_id=471155177]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1, 0)
-shape = SubResource("CapsuleShape3D_qs2cd")
-
-[node name="Skeleton_Minion" parent="Ennemi2" unique_id=335785745 instance=ExtResource("4_5ip2l")]
-
-[node name="NavigationAgent3D" type="NavigationAgent3D" parent="Ennemi2" unique_id=106669021]
-target_desired_distance = 2.0
-
-[node name="AtkTimer" type="Timer" parent="Ennemi2" unique_id=1243108285]
-one_shot = true
-
-[node name="AtkDelay" type="Timer" parent="Ennemi2" unique_id=1127918616]
 
 [node name="walls" type="Node3D" parent="." unique_id=1311694527]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -2)
@@ -454,6 +416,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 18)
 
 [node name="roof" type="Node3D" parent="." unique_id=2031388596]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -2)
+visible = false
 
 [node name="floor_dirt_large_gltf5" parent="roof" unique_id=2071692895 instance=ExtResource("2_yxr20")]
 transform = Transform3D(1, 0, 0, 0, -1, -8.742278e-08, 0, 8.742278e-08, -1, 2, 4, 2)
@@ -663,7 +626,8 @@ navigation_mesh = SubResource("NavigationMesh_ehcb8")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, 0.1, -4)
 navigation_mesh = SubResource("NavigationMesh_ehcb8")
 
-[connection signal="timeout" from="Ennemi1/AtkTimer" to="Ennemi1" method="_on_atk_timer_timeout"]
-[connection signal="timeout" from="Ennemi1/AtkDelay" to="Ennemi1" method="_on_atk_time_delay_timeout"]
-[connection signal="timeout" from="Ennemi2/AtkTimer" to="Ennemi2" method="_on_atk_timer_timeout"]
-[connection signal="timeout" from="Ennemi2/AtkDelay" to="Ennemi2" method="_on_atk_time_delay_timeout"]
+[node name="Monster1" parent="." unique_id=706438754 instance=ExtResource("18_5ip2l")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 7, 0, -4)
+
+[node name="Monster2" parent="." unique_id=59902776 instance=ExtResource("18_5ip2l")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 16, 0, 13)
