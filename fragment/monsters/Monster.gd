@@ -2,10 +2,13 @@ class_name Monster
 extends CharacterBody3D 
 
 @onready var _player = $"../Player" as PlayerG
-@onready var _animation = $"Skeleton_Minion/AnimationPlayer" as AnimationPlayer
+@onready var _animation = $"Character/AnimationPlayer" as AnimationPlayer
 @onready var _navigation_agent: NavigationAgent3D = $NavigationAgent3D
 @onready var _atkTimer = $AtkTimer as Timer
 @onready var _atkTimerDelay = $AtkDelay as Timer
+
+@export_file("*.json") var model_file
+var model : MonsterModel
 
 enum Action { IDLE, CHASE, ATTACK, ATTACKING }
 
@@ -16,7 +19,10 @@ var movement_speed: float = 4.0
 var _action : Action = Action.IDLE
 var _can_atk : bool = true
 
+
+
 func _ready() -> void:
+	model = MonsterModel.new(model_file)
 	_animation.get_animation("Idle").loop_mode = Animation.LOOP_LINEAR
 	_animation.play("Idle")
 	_navigation_agent.target_desired_distance = _chase_dist
@@ -86,7 +92,7 @@ func _see_player() -> bool :
 	var end = _player.global_position+Vector3.UP
 	var direction = (end-start).normalized()
 	var orientation = self.basis * Vector3.BACK
-	if rad_to_deg(orientation.angle_to(direction)) <= 60 :
+	if rad_to_deg(orientation.angle_to(direction)) <= model.fov :
 		var query = PhysicsRayQueryParameters3D.create(start, end)
 		var result = get_world_3d().direct_space_state.intersect_ray(query)
 		if (result && result.collider == _player):

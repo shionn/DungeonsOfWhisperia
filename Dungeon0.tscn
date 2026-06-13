@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bwsb5rrn4rx5v" path="res://assets/kaykit/dungeon/floor/large/floor_tile_large.gltf.glb" id="1_acsvp"]
 [ext_resource type="PackedScene" uid="uid://ckdwjb642168f" path="res://assets/kaykit/dungeon/floor/large/floor_dirt_large.gltf.glb" id="2_yxr20"]
 [ext_resource type="PackedScene" uid="uid://c2gmjs5iylgc4" path="res://assets/kaykit/dungeon/wall/corner/wall_corner.gltf.glb" id="3_aalsr"]
+[ext_resource type="PackedScene" uid="uid://boj6netivsmpu" path="res://assets/kaykit/skeletons/Skeleton_Minion.glb" id="4_5ip2l"]
 [ext_resource type="PackedScene" uid="uid://b0tok6e0yrle6" path="res://assets/kaykit/dungeon/wall/straight/wall_cracked.gltf.glb" id="4_ipk3o"]
 [ext_resource type="PackedScene" uid="uid://sn0772t8w1w4" path="res://assets/kaykit/dungeon/wall/straight/wall.gltf.glb" id="5_rhsgf"]
 [ext_resource type="PackedScene" uid="uid://brp46a1tt100g" path="res://assets/kaykit/dungeon/wall/straight/wall_arched.gltf.glb" id="6_3uggc"]
@@ -628,6 +629,12 @@ navigation_mesh = SubResource("NavigationMesh_ehcb8")
 
 [node name="Monster1" parent="." unique_id=706438754 instance=ExtResource("18_5ip2l")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 7, 0, -4)
+model_file = "res://fragment/monsters/SkeletonMinion1.json"
+
+[node name="Character" parent="Monster1" unique_id=1011250144 instance=ExtResource("4_5ip2l")]
 
 [node name="Monster2" parent="." unique_id=59902776 instance=ExtResource("18_5ip2l")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 16, 0, 13)
+model_file = "res://fragment/monsters/SkeletonMinion1.json"
+
+[node name="Character" parent="Monster2" unique_id=1902064679 instance=ExtResource("4_5ip2l")]

@@ -1,20 +1,17 @@
 [gd_scene format=3 uid="uid://dvd4uuprholj6"]
 
 [ext_resource type="Script" uid="uid://bb8mw3r2v2qsn" path="res://fragment/monsters/Monster.gd" id="1_lqdau"]
-[ext_resource type="PackedScene" uid="uid://boj6netivsmpu" path="res://assets/kaykit/skeletons/Skeleton_Minion.glb" id="2_6jlyw"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_qs2cd"]
 radius = 0.6
 height = 2.2
 
-[node name="Ennemi" type="CharacterBody3D" unique_id=706438754]
+[node name="Monster" type="CharacterBody3D" unique_id=706438754]
 script = ExtResource("1_lqdau")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1253204839]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1, 0)
 shape = SubResource("CapsuleShape3D_qs2cd")
-
-[node name="Skeleton_Minion" parent="." unique_id=1011250144 instance=ExtResource("2_6jlyw")]
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=304693910]
 target_desired_distance = 1.5
