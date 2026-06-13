@@ -7,6 +7,7 @@ radius = 0.6
 height = 2.2
 
 [node name="Monster" type="CharacterBody3D" unique_id=706438754]
+collision_layer = 257
 script = ExtResource("1_lqdau")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1253204839]

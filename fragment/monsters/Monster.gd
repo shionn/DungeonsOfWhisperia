@@ -19,8 +19,6 @@ var movement_speed: float = 4.0
 var _action : Action = Action.IDLE
 var _on_gcd : bool = false
 
-
-
 func _ready() -> void:
 	model = MonsterModel.new(model_file, self)
 	_animation.get_animation("Idle").loop_mode = Animation.LOOP_LINEAR
