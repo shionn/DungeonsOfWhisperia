@@ -11,6 +11,8 @@ const _movement_speed: float = 4.0
 const _max_range: float = 20
 const _atk_range: float = 2
 var _state : State = State.MOVE
+var _dices = Dices.new()
+var _attacked_monster : Monster
 
 func _ready() -> void:
 	$"Rogue_Hooded/Rig/Skeleton3D/handslot_r/Throwable".hide()
@@ -29,11 +31,10 @@ func _physics_process(delta: float) -> void:
 				var query = PhysicsRayQueryParameters3D.create(from,to, 256)
 				var result = get_world_3d().direct_space_state.intersect_ray(query)
 				if result :
-					var monster : Monster = result["collider"]
-					print(monster)
-					if self.global_position.distance_to(monster.global_position) < _atk_range :
+					_attacked_monster = result["collider"]
+					if self.global_position.distance_to(_attacked_monster.global_position) < _atk_range :
 						_animation.play("Dualwield_Melee_Attack_Chop")
-						_atkTimer.start()
+						_atkTimer.start(_animation.get_animation("Dualwield_Melee_Attack_Chop").length*.75)
 						_state = State.ATTACK
 						_character.rotation.y = get_viewport().get_camera_3d().rotation.y+deg_to_rad(180)
 						velocity = Vector3.ZERO
@@ -62,6 +63,10 @@ func _handle_move_input() -> void:
 		_animation.play("Idle")
 
 
+func _on_atk_timer_timeout() -> void:
+	var nb_atk = _dices.d6(2,4)
+	_attacked_monster.receive_atk(nb_atk)
+	_state = State.MOVE
 
 
 const _tilt_limit = deg_to_rad(50)
@@ -80,7 +85,3 @@ func _unhandled_input(event: InputEvent) -> void:
 		camera.rotation.x -= event.relative.y * _mouse_sensitivity
 		camera.rotation.x = clampf(camera.rotation.x, -_tilt_limit, _tilt_limit)
 		camera.rotation.y += -event.relative.x * _mouse_sensitivity
-
-
-func _on_atk_timer_timeout() -> void:
-	_state = State.MOVE

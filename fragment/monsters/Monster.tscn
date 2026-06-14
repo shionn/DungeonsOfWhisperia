@@ -17,11 +17,11 @@ shape = SubResource("CapsuleShape3D_qs2cd")
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=304693910]
 target_desired_distance = 1.5
 
-[node name="AtkTimer" type="Timer" parent="." unique_id=1487360817]
+[node name="AnimationTimer" type="Timer" parent="." unique_id=1487360817]
 one_shot = true
 
 [node name="GcdTimer" type="Timer" parent="." unique_id=953134464]
 one_shot = true
 
-[connection signal="timeout" from="AtkTimer" to="." method="_on_atk_timer_timeout"]
+[connection signal="timeout" from="AnimationTimer" to="." method="_on_animationTimer_timeout"]
 [connection signal="timeout" from="GcdTimer" to="." method="_on_gcd_timer_timeout"]
