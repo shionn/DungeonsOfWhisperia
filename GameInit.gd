@@ -6,6 +6,7 @@ extends Node3D
 @onready var can_drop = load("res://assets/kenney/cursor-pack/hand_open.png")
 
 func _ready() -> void:
+	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	Input.set_custom_mouse_cursor(cursor, Input.CURSOR_ARROW)
 	Input.set_custom_mouse_cursor(point_hand, Input.CURSOR_POINTING_HAND)
 	Input.set_custom_mouse_cursor(drag, Input.CURSOR_DRAG)

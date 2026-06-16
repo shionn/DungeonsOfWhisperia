@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="DungeonsOfWhisperia"
-run/main_scene="uid://biry1imi3i5lg"
+run/main_scene="uid://chj6or7vh11ry"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
