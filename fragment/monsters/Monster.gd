@@ -99,6 +99,7 @@ func _update_navigation() -> bool :
 	return self._navigation_agent.is_navigation_finished()
 
 func receive_atk(nb_atk: int) -> void:
+	if state == State.DEATH : return
 	var nb_def = _dices.d6(_model.def, 6)
 	var deg = nb_atk - nb_def
 	if deg > 0 :
@@ -110,6 +111,7 @@ func receive_atk(nb_atk: int) -> void:
 		else :
 			_animation.play("Death_A")
 			_animationTimer.start(_animation.get_animation("Death_A").length)
+			$CollisionShape3D.rotation.z=deg_to_rad(-90)
 			state = State.DEATH
 	else :
 		_look_player()
@@ -118,7 +120,7 @@ func receive_atk(nb_atk: int) -> void:
 func _on_animationTimer_timeout() -> void:
 	match state:
 		State.DEATH : 
-			pass
+			self.collision_layer = 256
 		State.ATTACKING : state = State.CHASE
 		State.HIT:
 			_look_player()

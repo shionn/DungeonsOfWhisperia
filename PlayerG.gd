@@ -6,6 +6,7 @@ enum State { ATTACK, MOVE, IDLE }
 @onready var _character = $Rogue_Hooded as Node3D
 @onready var _animation = $Rogue_Hooded/AnimationPlayer as AnimationPlayer
 @onready var _atkTimer = $AtkTimer as Timer
+@onready var _world = $/root/World as World
 
 const _movement_speed: float = 4.0
 const _max_range: float = 20
@@ -26,14 +27,8 @@ func _physics_process(_delta: float) -> void:
 	match _state :
 		State.MOVE:
 			if Input.is_action_just_released("attack") :
-				var camera = get_viewport().get_camera_3d()
-				var center = get_viewport().get_visible_rect().size/2
-				var from = camera.project_ray_origin(center)
-				var to = from + camera.project_ray_normal(center) * _max_range
-				var query = PhysicsRayQueryParameters3D.create(from,to, 256)
-				var result = get_world_3d().direct_space_state.intersect_ray(query)
-				if result :
-					_attacked_monster = result["collider"]
+				if _world.target_monster :
+					_attacked_monster = _world.target_monster
 					if self.global_position.distance_to(_attacked_monster.global_position) < _atk_range :
 						_animation.play("Dualwield_Melee_Attack_Chop")
 						_atkTimer.start(_animation.get_animation("Dualwield_Melee_Attack_Chop").length*.75)
