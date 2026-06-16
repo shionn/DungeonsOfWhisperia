@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://dpbieqlycbivt"]
 
 [ext_resource type="Texture2D" uid="uid://brsj54noj8ouj" path="res://assets/kenney/cursor-pack/line_cross.png" id="1_oerka"]
-[ext_resource type="Script" uid="uid://d2auu0tiunlbj" path="res://gui/center_cursor.gd" id="2_5kbtw"]
+[ext_resource type="Script" uid="uid://d2auu0tiunlbj" path="res://gui/CenterCursor.gd" id="2_5kbtw"]
+[ext_resource type="Texture2D" uid="uid://tem7p5u78uq0" path="res://assets/kenney/cursor-pack/tool_sword_a.png" id="3_oe2qn"]
 
 [node name="Gui" type="Control" unique_id=679884730]
 layout_mode = 3
@@ -11,7 +12,23 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="CenterCursor" type="TextureRect" parent="." unique_id=1777142092]
+[node name="CenterCursor" type="Control" parent="." unique_id=1488707363]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("2_5kbtw")
+
+[node name="Cross" type="TextureRect" parent="CenterCursor" unique_id=1777142092]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -25,4 +42,18 @@ offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_oerka")
-script = ExtResource("2_5kbtw")
+
+[node name="Sword" type="TextureRect" parent="CenterCursor" unique_id=1981404509]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_oe2qn")

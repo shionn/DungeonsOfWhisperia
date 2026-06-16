@@ -1,7 +1,7 @@
 class_name Monster
 extends CharacterBody3D 
 
-enum Action { IDLE, CHASE, ATTACK, ATTACKING, HIT }
+enum State { IDLE, CHASE, ATTACK, ATTACKING, HIT, DEATH }
 
 @onready var _player = $"../Player" as PlayerG
 @onready var _animation = $"Character/AnimationPlayer" as AnimationPlayer
@@ -17,8 +17,8 @@ const _movement_speed: float = 4.0
 
 var _model : MonsterModel
 var _dices : Dices = Dices.new()
-var _action : Action = Action.IDLE
 var _on_gcd : bool = false
+var state : State = State.IDLE
 
 func _ready() -> void:
 	_model = MonsterModel.new(model_file, self)
@@ -30,18 +30,18 @@ func _physics_process(_delta: float) -> void:
 	if _see_player() :
 		_navigation_agent.set_target_position(_player.global_position)
 
-	match _action: 
-		Action.CHASE:
+	match state: 
+		State.CHASE:
 			var start = global_position
 			var end = _player.global_position
 			var distance = (end-start).length()
 			if (distance < _atk_dist) :
-				_action = Action.ATTACK
+				state = State.ATTACK
 			elif _navigation_agent.is_navigation_finished() : 
-				_action = Action.IDLE
+				state = State.IDLE
 			else :
 				_move_to_player()
-		Action.ATTACK:
+		State.ATTACK:
 			_look_player()
 			if not _on_gcd :
 				var atk : MonsterModelAtk = _model.getAtk()
@@ -51,23 +51,23 @@ func _physics_process(_delta: float) -> void:
 					_animationTimer.start(_animation.get_animation(atk.animation).length)
 					_gcdTimer.start(_model.global_cold_down)
 					_on_gcd = true
-					_action = Action.ATTACKING
+					state = State.ATTACKING
 			else : 
-				_action = Action.IDLE
+				state = State.IDLE
 			velocity = Vector3.ZERO
-		Action.ATTACKING:
+		State.ATTACKING:
 			_look_player()
 			velocity = Vector3.ZERO
-		Action.IDLE:
+		State.IDLE:
 			velocity = Vector3.ZERO
 			_animation.play("Idle")
 			if _see_player() :
-				self._action = Action.CHASE
-		Action.HIT:
+				state = State.CHASE
+		State.HIT, State.DEATH:
 			pass
 		_:
 			velocity = Vector3.ZERO
-			_action = Action.IDLE
+			state = State.IDLE
 	move_and_slide()
 
 func _look_player() -> void :
@@ -102,20 +102,31 @@ func receive_atk(nb_atk: int) -> void:
 	var nb_def = _dices.d6(_model.def, 6)
 	var deg = nb_atk - nb_def
 	if deg > 0 :
-		self._animation.play("Hit_A")
-		self._animationTimer.start(_animation.get_animation("Hit_A").length)
-		self._action = Action.HIT
-		pass
+		_model.pv = _model.pv - deg
+		if _model.pv > 0:
+			_animation.play("Hit_A")
+			_animationTimer.start(_animation.get_animation("Hit_A").length)
+			state = State.HIT
+		else :
+			_animation.play("Death_A")
+			_animationTimer.start(_animation.get_animation("Death_A").length)
+			state = State.DEATH
+	else :
+		_look_player()
+		state = State.CHASE
 
 func _on_animationTimer_timeout() -> void:
-	match _action:
-		Action.ATTACKING : self._action = Action.CHASE
-		Action.HIT:
+	match state:
+		State.DEATH : 
+			pass
+		State.ATTACKING : state = State.CHASE
+		State.HIT:
 			_look_player()
-			_action = Action.CHASE
-		_: self._action = Action.IDLE
-	# todo calculer l'impact joueur
+			state = State.CHASE
+		_: 
+			state = State.IDLE
 
 func _on_gcd_timer_timeout() -> void:
-	self._action = Action.CHASE
-	_on_gcd = false
+	if state != State.DEATH :
+		state = State.CHASE
+		_on_gcd = false

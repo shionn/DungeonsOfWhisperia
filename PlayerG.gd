@@ -10,6 +10,7 @@ enum State { ATTACK, MOVE, IDLE }
 const _movement_speed: float = 4.0
 const _max_range: float = 20
 const _atk_range: float = 2
+
 var _state : State = State.MOVE
 var _dices = Dices.new()
 var _attacked_monster : Monster
@@ -20,7 +21,8 @@ func _ready() -> void:
 	$"Rogue_Hooded/Rig/Skeleton3D/handslot_r/2H_Crossbow".hide()
 	$Rogue_Hooded/Rig/Skeleton3D/Rogue_Head_Hooded.hide()
 	
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
+	
 	match _state :
 		State.MOVE:
 			if Input.is_action_just_released("attack") :
@@ -40,7 +42,7 @@ func _physics_process(delta: float) -> void:
 						velocity = Vector3.ZERO
 			else : 
 				_handle_move_input()
-
+	
 	move_and_slide()
 
 func _handle_move_input() -> void:
@@ -67,21 +69,3 @@ func _on_atk_timer_timeout() -> void:
 	var nb_atk = _dices.d6(2,4)
 	_attacked_monster.receive_atk(nb_atk)
 	_state = State.MOVE
-
-
-const _tilt_limit = deg_to_rad(50)
-const _mouse_sensitivity = 0.01
-var _previous_mouse_position : Vector2
-
-func _unhandled_input(event: InputEvent) -> void:
-	if event is InputEventMouseButton and Input.is_action_just_pressed("move_camera"):
-		_previous_mouse_position = (event as InputEventMouseButton).position
-		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-	elif event is InputEventMouseButton and Input.is_action_just_released("move_camera") :
-		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-		Input.warp_mouse(_previous_mouse_position)
-	elif event is InputEventMouseMotion and Input.is_action_pressed("move_camera"):
-		var camera = get_viewport().get_camera_3d()
-		camera.rotation.x -= event.relative.y * _mouse_sensitivity
-		camera.rotation.x = clampf(camera.rotation.x, -_tilt_limit, _tilt_limit)
-		camera.rotation.y += -event.relative.x * _mouse_sensitivity
