@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://d2auu0tiunlbj" path="res://gui/CenterCursor.gd" id="2_5kbtw"]
 [ext_resource type="Texture2D" uid="uid://tem7p5u78uq0" path="res://assets/kenney/cursor-pack/tool_sword_a.png" id="3_oe2qn"]
 [ext_resource type="Texture2D" uid="uid://va0lo41y8273" path="res://assets/kenney/cursor-pack/zoom.png" id="4_5hgfq"]
+[ext_resource type="Script" uid="uid://fc4p1gee0wmr" path="res://gui/Stat.gd" id="5_7lsbh"]
 
 [node name="Gui" type="Control" unique_id=679884730]
 layout_mode = 3
@@ -73,3 +74,28 @@ offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("4_5hgfq")
+
+[node name="Stat" type="Control" parent="." unique_id=312672475]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 40.0
+grow_horizontal = 2
+script = ExtResource("5_7lsbh")
+
+[node name="MarginContainer" type="MarginContainer" parent="Stat" unique_id=1990197417]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 40.0
+grow_horizontal = 2
+theme_override_constants/margin_top = 10
+
+[node name="Label" type="Label" parent="Stat/MarginContainer" unique_id=1617087483]
+layout_mode = 2

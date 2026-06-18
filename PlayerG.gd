@@ -16,6 +16,9 @@ var _state : State = State.MOVE
 var _dices = Dices.new()
 var _attacked_monster : Monster
 
+var pv = 6
+var maxpv = 6
+
 func _ready() -> void:
 	$"Rogue_Hooded/Rig/Skeleton3D/handslot_r/Throwable".hide()
 	$"Rogue_Hooded/Rig/Skeleton3D/handslot_r/1H_Crossbow".hide()

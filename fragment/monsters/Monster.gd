@@ -3,11 +3,11 @@ extends CharacterBody3D
 
 enum State { IDLE, CHASE, ATTACK, ATTACKING, HIT, DEATH }
 
-@onready var _player = $"../Player" as PlayerG
+@onready var _player = $/root/World/Player as PlayerG
 @onready var _animation = $"Character/AnimationPlayer" as AnimationPlayer
 @onready var _navigation_agent: NavigationAgent3D = $NavigationAgent3D
 @onready var _animationTimer = $AnimationTimer as Timer
-@onready var _gcdTimer = $GcdTimer as Timer
+#@onready var _gcdTimer = $GcdTimer as Timer
 
 @export_file("*.json") var model_file
 
@@ -17,7 +17,6 @@ const _movement_speed: float = 4.0
 
 var _model : MonsterModel
 var _dices : Dices = Dices.new()
-var _on_gcd : bool = false
 var state : State = State.IDLE
 
 func _ready() -> void:
@@ -29,7 +28,6 @@ func _ready() -> void:
 func _physics_process(_delta: float) -> void:
 	if _see_player() :
 		_navigation_agent.set_target_position(_player.global_position)
-
 	match state: 
 		State.CHASE:
 			var start = global_position
@@ -42,19 +40,24 @@ func _physics_process(_delta: float) -> void:
 			else :
 				_move_to_player()
 		State.ATTACK:
-			_look_player()
-			if not _on_gcd :
-				var atk : MonsterModelAtk = _model.getAtk()
-				if atk : 
-					atk.start()
-					_animation.play(atk.animation)
-					_animationTimer.start(_animation.get_animation(atk.animation).length)
-					_gcdTimer.start(_model.global_cold_down)
-					_on_gcd = true
-					state = State.ATTACKING
-			else : 
+			if _model.startAtk() :
+				state = State.ATTACKING
+			else :
 				state = State.IDLE
 			velocity = Vector3.ZERO
+			
+			#if not _on_gcd :
+			#	var atk : MonsterModelAtk = _model.getAtk()
+			#	if atk : 
+			#		atk.start()
+			#		_animation.play(atk.animation)
+			#		_animationTimer.start(_animation.get_animation(atk.animation).length)
+			#		_gcdTimer.start(_model.global_cold_down)
+			#		_on_gcd = true
+			#		state = State.ATTACKING
+			#else : 
+			#	state = State.IDLE
+			#velocity = Vector3.ZERO
 		State.ATTACKING:
 			_look_player()
 			velocity = Vector3.ZERO
@@ -111,7 +114,7 @@ func receive_atk(nb_atk: int) -> void:
 		else :
 			_animation.play("Death_A")
 			_animationTimer.start(_animation.get_animation("Death_A").length)
-			$CollisionShape3D.rotation.z=deg_to_rad(-90)
+			# $CollisionShape3D.rotation.z=deg_to_rad(-90) # ca marche pas
 			state = State.DEATH
 	else :
 		_look_player()
@@ -121,14 +124,15 @@ func _on_animationTimer_timeout() -> void:
 	match state:
 		State.DEATH : 
 			self.collision_layer = 256
-		State.ATTACKING : state = State.CHASE
+		State.ATTACKING : 
+			state = State.CHASE
 		State.HIT:
 			_look_player()
 			state = State.CHASE
 		_: 
 			state = State.IDLE
 
-func _on_gcd_timer_timeout() -> void:
-	if state != State.DEATH :
-		state = State.CHASE
-		_on_gcd = false
+#func _on_gcd_timer_timeout() -> void:
+#	if state != State.DEATH :
+#		state = State.CHASE
+		#_on_gcd = false
