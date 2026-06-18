@@ -7,7 +7,7 @@ enum State { IDLE, CHASE, ATTACK, ATTACKING, HIT, DEATH }
 @onready var _animation = $"Character/AnimationPlayer" as AnimationPlayer
 @onready var _navigation_agent: NavigationAgent3D = $NavigationAgent3D
 @onready var _animationTimer = $AnimationTimer as Timer
-#@onready var _gcdTimer = $GcdTimer as Timer
+@onready var _gcdTimer = $GcdTimer as Timer
 
 @export_file("*.json") var model_file
 
@@ -17,22 +17,21 @@ const _movement_speed: float = 4.0
 
 var _model : MonsterModel
 var _dices : Dices = Dices.new()
+var _on_gcd : bool = false
 var state : State = State.IDLE
 
 func _ready() -> void:
 	_model = MonsterModel.new(model_file, self)
 	_animation.get_animation("Idle").loop_mode = Animation.LOOP_LINEAR
-	_animation.play("Idle")
 	_navigation_agent.target_desired_distance = _chase_dist
+	start_animation("Idle")
 
 func _physics_process(_delta: float) -> void:
 	if _see_player() :
 		_navigation_agent.set_target_position(_player.global_position)
 	match state: 
 		State.CHASE:
-			var start = global_position
-			var end = _player.global_position
-			var distance = (end-start).length()
+			var distance = (_player.global_position-global_position).length()
 			if (distance < _atk_dist) :
 				state = State.ATTACK
 			elif _navigation_agent.is_navigation_finished() : 
@@ -40,24 +39,21 @@ func _physics_process(_delta: float) -> void:
 			else :
 				_move_to_player()
 		State.ATTACK:
-			if _model.startAtk() :
-				state = State.ATTACKING
-			else :
-				state = State.IDLE
-			velocity = Vector3.ZERO
 			
-			#if not _on_gcd :
-			#	var atk : MonsterModelAtk = _model.getAtk()
-			#	if atk : 
-			#		atk.start()
-			#		_animation.play(atk.animation)
-			#		_animationTimer.start(_animation.get_animation(atk.animation).length)
-			#		_gcdTimer.start(_model.global_cold_down)
-			#		_on_gcd = true
-			#		state = State.ATTACKING
-			#else : 
-			#	state = State.IDLE
-			#velocity = Vector3.ZERO
+			
+			if _on_gcd : 
+				state = State.IDLE
+			else :
+				var atk = _model._getAtk()
+				if atk :
+					atk.start()
+					start_animation(atk.animation, true)
+					_gcdTimer.start(_model.global_cold_down)
+					_on_gcd = true
+					state = State.ATTACKING
+				else :
+					state = State.IDLE
+			velocity = Vector3.ZERO
 		State.ATTACKING:
 			_look_player()
 			velocity = Vector3.ZERO
@@ -101,6 +97,10 @@ func _update_navigation() -> bool :
 		self._navigation_agent.set_target_position(_player.global_position)
 	return self._navigation_agent.is_navigation_finished()
 
+func start_animation(anim:String, time:bool=false) -> void:
+	_animation.play(anim)
+	if time : _animationTimer.start(_animation.get_animation(anim).length)
+
 func receive_atk(nb_atk: int) -> void:
 	if state == State.DEATH : return
 	var nb_def = _dices.d6(_model.def, 6)
@@ -108,14 +108,10 @@ func receive_atk(nb_atk: int) -> void:
 	if deg > 0 :
 		_model.pv = _model.pv - deg
 		if _model.pv > 0:
-			_animation.play("Hit_A")
-			_animationTimer.start(_animation.get_animation("Hit_A").length)
+			start_animation("Hit_A", true)
 			state = State.HIT
 		else :
-			_animation.play("Death_A")
-			_animationTimer.start(_animation.get_animation("Death_A").length)
-			$CollisionDefault.disabled = true
-			$CollisionDeath.disabled = false
+			start_animation("Death_A", true)
 			state = State.DEATH
 	else :
 		_look_player()
@@ -125,6 +121,8 @@ func _on_animationTimer_timeout() -> void:
 	match state:
 		State.DEATH : 
 			self.collision_layer = 256
+			$CollisionDefault.disabled = true
+			$CollisionDeath.disabled = false
 		State.ATTACKING : 
 			state = State.CHASE
 		State.HIT:
@@ -133,7 +131,7 @@ func _on_animationTimer_timeout() -> void:
 		_: 
 			state = State.IDLE
 
-#func _on_gcd_timer_timeout() -> void:
-#	if state != State.DEATH :
-#		state = State.CHASE
-		#_on_gcd = false
+
+func _on_gcd_timer_timeout() -> void:
+	_on_gcd = false
+	
