@@ -16,6 +16,7 @@ const _chase_dist = 1.5
 const _movement_speed: float = 4.0
 
 var _model : MonsterModel
+var _atk : MonsterModelAtk
 var _dices : Dices = Dices.new()
 var _on_gcd : bool = false
 var state : State = State.IDLE
@@ -39,15 +40,13 @@ func _physics_process(_delta: float) -> void:
 			else :
 				_move_to_player()
 		State.ATTACK:
-			
-			
 			if _on_gcd : 
 				state = State.IDLE
 			else :
-				var atk = _model._getAtk()
-				if atk :
-					atk.start()
-					start_animation(atk.animation, true)
+				_atk = _model._getAtk()
+				if _atk :
+					_atk.start()
+					start_animation(_atk.animation, true)
 					_gcdTimer.start(_model.global_cold_down)
 					_on_gcd = true
 					state = State.ATTACKING
@@ -124,6 +123,7 @@ func _on_animationTimer_timeout() -> void:
 			$CollisionDefault.disabled = true
 			$CollisionDeath.disabled = false
 		State.ATTACKING : 
+			_player.receive_atk(_atk.damage())
 			state = State.CHASE
 		State.HIT:
 			_look_player()

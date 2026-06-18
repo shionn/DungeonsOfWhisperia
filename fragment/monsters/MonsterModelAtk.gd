@@ -4,8 +4,9 @@ extends Object
 var animation : String
 var cold_down : float
 var cold_down_factor : float
-var _cold_down_timer : Timer = Timer.new()
 var on_cold_down = false
+var _cold_down_timer : Timer = Timer.new()
+var _dice = Dices.new()
 
 func _init(json, g:Monster) -> void:
 	animation = json["animation"]
@@ -15,12 +16,13 @@ func _init(json, g:Monster) -> void:
 	g.add_child(_cold_down_timer)
 	_cold_down_timer.one_shot = true
 	_cold_down_timer.timeout.connect(self._on_cold_down_timer_timeout)
-	
+
+func damage() -> int:
+	return _dice.d6(2,5)
 
 func start() -> void:
 	on_cold_down = true
 	_cold_down_timer.start(cold_down)
 
 func _on_cold_down_timer_timeout() -> void:
-	
 	on_cold_down = false

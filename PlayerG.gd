@@ -1,7 +1,7 @@
 class_name PlayerG
 extends CharacterBody3D
 
-enum State { ATTACK, MOVE, IDLE }
+enum State { ATTACK, MOVE, IDLE, HIT, DEATH }
 
 @onready var _character = $Rogue_Hooded as Node3D
 @onready var _animation = $Rogue_Hooded/AnimationPlayer as AnimationPlayer
@@ -26,7 +26,6 @@ func _ready() -> void:
 	$Rogue_Hooded/Rig/Skeleton3D/Rogue_Head_Hooded.hide()
 	
 func _physics_process(_delta: float) -> void:
-	
 	match _state :
 		State.MOVE:
 			if Input.is_action_just_released("attack") :
@@ -64,7 +63,18 @@ func _handle_move_input() -> void:
 		velocity = Vector3.ZERO
 		_animation.play("Idle")
 
-
+func receive_atk(nb_atk: int) -> void:
+	var nb_def = _dices.d6(2, 5)
+	var deg = nb_atk - nb_def
+	if deg > 0 :
+		pv = max(pv - deg, 0)
+		if pv > 0:
+			_animation.play("Hit_A")
+			#state = State.HIT
+		else :
+			_animation.play("Death_A")
+			_state = State.DEATH
+		
 func _on_atk_timer_timeout() -> void:
 	var nb_atk = _dices.d6(2,4)
 	_attacked_monster.receive_atk(nb_atk)
