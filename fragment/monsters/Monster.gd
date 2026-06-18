@@ -114,7 +114,8 @@ func receive_atk(nb_atk: int) -> void:
 		else :
 			_animation.play("Death_A")
 			_animationTimer.start(_animation.get_animation("Death_A").length)
-			# $CollisionShape3D.rotation.z=deg_to_rad(-90) # ca marche pas
+			$CollisionDefault.disabled = true
+			$CollisionDeath.disabled = false
 			state = State.DEATH
 	else :
 		_look_player()
