@@ -22,7 +22,8 @@ func _physics_process(delta: float) -> void:
 	var center = get_viewport().get_visible_rect().size/2
 	var from = camera.project_ray_origin(center)
 	var to = from + camera.project_ray_normal(center) * _max_range
-	var query = PhysicsRayQueryParameters3D.create(from,to, 256)
+	var query = PhysicsRayQueryParameters3D.create(from,to)
 	var result = get_world_3d().direct_space_state.intersect_ray(query)
-	if result : target_monster = result["collider"]
+	if result and result["collider"] is Monster: 
+		target_monster = result["collider"]
 	else : target_monster = null
