@@ -17,7 +17,12 @@ func _ready() -> void:
 
 const _max_range: float = 20
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
+	_updateRayCast()
+	if Input.is_action_just_released("quit"):
+		get_tree().quit()
+	
+func _updateRayCast() -> void : 
 	var camera = get_viewport().get_camera_3d()
 	var center = get_viewport().get_visible_rect().size/2
 	var from = camera.project_ray_origin(center)
