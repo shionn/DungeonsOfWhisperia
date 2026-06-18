@@ -17,6 +17,8 @@ func _physics_process(_delta: float) -> void:
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED :
+		if abs(event.relative.y) > 50 or abs(event.relative.x) > 50 :
+			return
 		var camera = get_viewport().get_camera_3d()
 		camera.rotation.x -= event.relative.y * _mouse_sensitivity
 		camera.rotation.x = clampf(camera.rotation.x, -_tilt_limit, _tilt_limit)

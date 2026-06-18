@@ -27,7 +27,9 @@ func _physics_process(_delta: float) -> void:
 	match _state :
 		State.MOVE:
 			if Input.is_action_just_released("attack") :
-				if _world.target_monster :
+				if _world.target_monster and _world.target_monster.state == Monster.State.DEATH :
+					pass # do loot
+				if _world.target_monster and _world.target_monster.state != Monster.State.DEATH :
 					_attacked_monster = _world.target_monster
 					if self.global_position.distance_to(_attacked_monster.global_position) < _atk_range :
 						_animation.play("Dualwield_Melee_Attack_Chop")
