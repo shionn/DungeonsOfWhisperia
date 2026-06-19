@@ -5,6 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://dpbieqlycbivt" path="res://gui/Gui.tscn" id="2_2dftf"]
 [ext_resource type="PackedScene" uid="uid://ddvg2rw2bunm2" path="res://Player.tscn" id="2_js7pq"]
 
+[sub_resource type="Environment" id="Environment_js7pq"]
+background_energy_multiplier = 0.7
+
 [node name="World" type="Node3D" unique_id=1017407997]
 script = ExtResource("1_bcbcq")
 
@@ -14,3 +17,6 @@ script = ExtResource("1_bcbcq")
 
 [node name="Gui" parent="." unique_id=679884730 instance=ExtResource("2_2dftf")]
 mouse_filter = 2
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=464023489]
+environment = SubResource("Environment_js7pq")

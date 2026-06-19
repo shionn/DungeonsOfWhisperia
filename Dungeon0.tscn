@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://bsejwqpsa75o3" path="res://assets/kaykit/dungeon/wall/doorway/wall_doorway_Tsplit.gltf.glb" id="11_y04yx"]
 [ext_resource type="PackedScene" uid="uid://cffasie2ooey4" path="res://assets/kaykit/dungeon/wall/straight/wall_gated.gltf.glb" id="12_yxr20"]
 [ext_resource type="PackedScene" uid="uid://6vgbf4prfq4h" path="res://assets/kaykit/dungeon/bed/bed_floor.gltf.glb" id="13_aalsr"]
+[ext_resource type="PackedScene" uid="uid://dvwxwfk64ucfy" path="res://fragment/TorchWall.tscn" id="16_3uggc"]
 [ext_resource type="PackedScene" uid="uid://dvd4uuprholj6" path="res://fragment/monsters/Monster.tscn" id="18_5ip2l"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_qs2cd"]
@@ -618,3 +619,12 @@ navigation_mesh = SubResource("NavigationMesh_ehcb8")
 [node name="NavigationRegion3D16" type="NavigationRegion3D" parent="Navigation" unique_id=442398111]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, 0.1, -4)
 navigation_mesh = SubResource("NavigationMesh_ehcb8")
+
+[node name="TorchWall2" parent="." unique_id=1514516375 instance=ExtResource("16_3uggc")]
+transform = Transform3D(-4.5695586e-08, 0, 1, 0, 1, 0, -1, 0, -4.5695586e-08, 6, 0, -7.7)
+
+[node name="TorchWall3" parent="." unique_id=964167546 instance=ExtResource("16_3uggc")]
+transform = Transform3D(-4.5695586e-08, 0, 1, 0, 1, 0, -1, 0, -4.5695586e-08, 14, 0, 6)
+
+[node name="TorchWall4" parent="." unique_id=346849124 instance=ExtResource("16_3uggc")]
+transform = Transform3D(-1, 0, 8.543858e-08, 0, 1, 0, -8.543858e-08, 0, -1, 8, 0, 22)
