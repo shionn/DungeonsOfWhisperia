@@ -7,6 +7,7 @@ extends Node3D
 @onready var can_drop = load("res://assets/kenney/cursor-pack/hand_open.png")
 
 var target_monster: Monster = null
+var target_interactable: Interactable = null
 
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
@@ -29,6 +30,10 @@ func _updateRayCast() -> void :
 	var to = from + camera.project_ray_normal(center) * _max_range
 	var query = PhysicsRayQueryParameters3D.create(from,to)
 	var result = get_world_3d().direct_space_state.intersect_ray(query)
+	print(result)
 	if result and result["collider"] is Monster: 
 		target_monster = result["collider"]
 	else : target_monster = null
+	if result and result["collider"] is Interactable: 
+		target_interactable = result["collider"]
+	else : target_interactable = null
