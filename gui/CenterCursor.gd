@@ -31,3 +31,6 @@ func _unhandled_input(event: InputEvent) -> void:
 			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 		else : 
 			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+
+	if event is InputEventMouseButton :
+		print(event.position)
