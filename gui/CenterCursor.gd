@@ -13,8 +13,8 @@ const _max_range: float = 20
 
 func _physics_process(_delta: float) -> void:
 	visible = Input.mouse_mode == Input.MOUSE_MODE_CAPTURED and _player.pv > 0
-	_cross.visible = _world.target_monster == null
-	_sword.visible = _world.target_monster != null && _world.target_monster.state != Monster.State.DEATH
+	_cross.visible =     _world.target_monster == null
+	_sword.visible =     _world.target_monster != null && _world.target_monster.state != Monster.State.DEATH
 	_magnifier.visible = _world.target_monster != null && _world.target_monster.state == Monster.State.DEATH
 	
 
@@ -27,4 +27,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		camera.rotation.x = clampf(camera.rotation.x, -_tilt_limit, _tilt_limit)
 		camera.rotation.y += -event.relative.x * _mouse_sensitivity
 	if event is InputEventMouseButton and Input.is_mouse_button_pressed(MOUSE_BUTTON_RIGHT):
-		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+		if (Input.mouse_mode == Input.MOUSE_MODE_CAPTURED) :
+			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+		else : 
+			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED

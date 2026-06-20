@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://c2gmjs5iylgc4" path="res://assets/kaykit/dungeon/wall/corner/wall_corner.gltf.glb" id="3_aalsr"]
 [ext_resource type="PackedScene" uid="uid://boj6netivsmpu" path="res://assets/kaykit/skeletons/Skeleton_Minion.glb" id="4_5ip2l"]
 [ext_resource type="PackedScene" uid="uid://b0tok6e0yrle6" path="res://assets/kaykit/dungeon/wall/straight/wall_cracked.gltf.glb" id="4_ipk3o"]
+[ext_resource type="PackedScene" uid="uid://ddrglje3y5epr" path="res://fragment/Door.tscn" id="4_qs2cd"]
 [ext_resource type="PackedScene" uid="uid://sn0772t8w1w4" path="res://assets/kaykit/dungeon/wall/straight/wall.gltf.glb" id="5_rhsgf"]
 [ext_resource type="PackedScene" uid="uid://brp46a1tt100g" path="res://assets/kaykit/dungeon/wall/straight/wall_arched.gltf.glb" id="6_3uggc"]
 [ext_resource type="PackedScene" uid="uid://c0hovol1qe2l4" path="res://assets/kaykit/dungeon/wall/straight/wall_scaffold.gltf.glb" id="7_qs2cd"]
@@ -84,6 +85,21 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.6, 0, 16.2)
 
 [node name="bed_floor_gltf2" parent="." unique_id=752020397 instance=ExtResource("13_aalsr")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.20000029, 0, 20.500002)
+
+[node name="Door" parent="." unique_id=1540089670 instance=ExtResource("4_qs2cd")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 10, 0, -10)
+open = true
+
+[node name="Torchs" type="Node3D" parent="." unique_id=1360505579]
+
+[node name="TorchWall2" parent="Torchs" unique_id=1514516375 instance=ExtResource("16_3uggc")]
+transform = Transform3D(-4.5695586e-08, 0, 1, 0, 1, 0, -1, 0, -4.5695586e-08, 6, 0, -7.7)
+
+[node name="TorchWall3" parent="Torchs" unique_id=964167546 instance=ExtResource("16_3uggc")]
+transform = Transform3D(-4.5695586e-08, 0, 1, 0, 1, 0, -1, 0, -4.5695586e-08, 14, 0, 6)
+
+[node name="TorchWall4" parent="Torchs" unique_id=346849124 instance=ExtResource("16_3uggc")]
+transform = Transform3D(-1, 0, 8.543858e-08, 0, 1, 0, -8.543858e-08, 0, -1, 8, 0, 22)
 
 [node name="walls" type="Node3D" parent="." unique_id=1311694527]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -2)
@@ -225,9 +241,6 @@ transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 0, 0
 
 [node name="wall_scaffold_gltf8" parent="walls" unique_id=110835171 instance=ExtResource("7_qs2cd")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 15.999999, 0, 8)
-
-[node name="wall_doorway5" parent="walls" unique_id=752531936 instance=ExtResource("8_5ip2l")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 12, 0, -8)
 
 [node name="wall_doorway8" parent="walls" unique_id=925530380 instance=ExtResource("8_5ip2l")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 12, 0, 20)
@@ -417,6 +430,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 18)
 
 [node name="roof" type="Node3D" parent="." unique_id=2031388596]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -2)
+visible = false
 
 [node name="floor_dirt_large_gltf5" parent="roof" unique_id=2071692895 instance=ExtResource("2_yxr20")]
 transform = Transform3D(1, 0, 0, 0, -1, -8.742278e-08, 0, 8.742278e-08, -1, 2, 4, 2)
@@ -619,12 +633,3 @@ navigation_mesh = SubResource("NavigationMesh_ehcb8")
 [node name="NavigationRegion3D16" type="NavigationRegion3D" parent="Navigation" unique_id=442398111]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, 0.1, -4)
 navigation_mesh = SubResource("NavigationMesh_ehcb8")
-
-[node name="TorchWall2" parent="." unique_id=1514516375 instance=ExtResource("16_3uggc")]
-transform = Transform3D(-4.5695586e-08, 0, 1, 0, 1, 0, -1, 0, -4.5695586e-08, 6, 0, -7.7)
-
-[node name="TorchWall3" parent="." unique_id=964167546 instance=ExtResource("16_3uggc")]
-transform = Transform3D(-4.5695586e-08, 0, 1, 0, 1, 0, -1, 0, -4.5695586e-08, 14, 0, 6)
-
-[node name="TorchWall4" parent="." unique_id=346849124 instance=ExtResource("16_3uggc")]
-transform = Transform3D(-1, 0, 8.543858e-08, 0, 1, 0, -8.543858e-08, 0, -1, 8, 0, 22)

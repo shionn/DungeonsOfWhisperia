@@ -28,7 +28,7 @@ func _ready() -> void:
 func _physics_process(_delta: float) -> void:
 	match _state :
 		State.MOVE:
-			if Input.is_action_just_released("attack") :
+			if Input.is_action_just_released("interact") :
 				if _world.target_monster and _world.target_monster.state == Monster.State.DEATH :
 					pass # do loot
 				if _world.target_monster and _world.target_monster.state != Monster.State.DEATH :
