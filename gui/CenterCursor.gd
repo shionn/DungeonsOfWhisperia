@@ -6,6 +6,7 @@ extends Control
 @onready var _cross = $Cross as Control
 @onready var _sword = $Sword as Control
 @onready var _magnifier = $Manifier as Control
+@onready var _hand = $Hand as Control
 
 const _tilt_limit = deg_to_rad(50)
 const _mouse_sensitivity = 0.01
@@ -13,9 +14,10 @@ const _max_range: float = 20
 
 func _physics_process(_delta: float) -> void:
 	visible = Input.mouse_mode == Input.MOUSE_MODE_CAPTURED and _player.pv > 0
-	_cross.visible =     _world.target_monster == null
+	_cross.visible =     _world.target_monster == null and _world.target_interactable == null
 	_sword.visible =     _world.target_monster != null && _world.target_monster.state != Monster.State.DEATH
 	_magnifier.visible = _world.target_monster != null && _world.target_monster.state == Monster.State.DEATH
+	_hand.visible = _world.target_interactable != null
 	
 
 func _unhandled_input(event: InputEvent) -> void:
