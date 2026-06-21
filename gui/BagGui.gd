@@ -1,5 +1,5 @@
+class_name BagGui
 extends Control
-class_name Bag
 
 const BiereRousseDeEve = "BiereRousseDeEve"
 const BoisDeQualite = "BoisDeQualite"

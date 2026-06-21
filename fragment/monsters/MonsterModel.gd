@@ -20,7 +20,7 @@ func _init(model_file, g:Monster):
 		atks.append(MonsterModelAtk.new(jsonAtk, g))
 	file.close()
 
-func _getAtk() -> MonsterModelAtk :
+func get_atk() -> MonsterModelAtk :
 	var _atk = atks[_random.randi_range(0,atks.size()-1)]
 	if not _atk.on_cold_down:
 		return _atk

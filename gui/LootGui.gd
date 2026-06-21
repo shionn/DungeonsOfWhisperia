@@ -1,4 +1,4 @@
-class_name Loot
+class_name LootGui
 extends GridContainer
 
 func _ready() -> void:

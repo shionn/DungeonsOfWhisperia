@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://chx7nhpaq7lwl"]
 
-[ext_resource type="Script" uid="uid://c56odaje3xl6x" path="res://gui/Loot.gd" id="1_fhv8e"]
+[ext_resource type="Script" uid="uid://c56odaje3xl6x" path="res://gui/LootGui.gd" id="1_fhv8e"]
 [ext_resource type="Texture2D" uid="uid://ckgd4l0t7srqr" path="res://assets/kenney/ui-adventure/panel_brown_NW.png" id="1_j6m5i"]
 [ext_resource type="Texture2D" uid="uid://ccnqmwmalslbh" path="res://assets/kenney/ui-adventure/panel_brown_N.png" id="2_fhv8e"]
 [ext_resource type="Texture2D" uid="uid://8nho6rc3y7h0" path="res://assets/kenney/ui-adventure/panel_brown_NE.png" id="3_q60mf"]
