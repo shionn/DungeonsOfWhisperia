@@ -10,6 +10,8 @@
 [ext_resource type="Script" uid="uid://t5ana3e5k724" path="res://gui/GameOver.gd" id="6_spdw3"]
 [ext_resource type="PackedScene" uid="uid://d118p2b270b2g" path="res://gui/Bag.tscn" id="8_iof1j"]
 [ext_resource type="PackedScene" uid="uid://chx7nhpaq7lwl" path="res://gui/Loot.tscn" id="9_ubqqx"]
+[ext_resource type="Texture2D" uid="uid://dstsbh4f6k4j5" path="res://assets/kenney/cursor-pack/door_exit.png" id="11_0lspf"]
+[ext_resource type="Script" uid="uid://b5u38rsuiglhp" path="res://gui/Menu.gd" id="12_y62qr"]
 
 [node name="Gui" type="Control" unique_id=679884730]
 layout_mode = 3
@@ -151,3 +153,14 @@ offset_right = 0.0
 
 [node name="Loot" parent="." unique_id=1947795742 instance=ExtResource("9_ubqqx")]
 layout_mode = 1
+
+[node name="Menu" type="MenuButton" parent="." unique_id=436163507]
+layout_mode = 1
+offset_right = 40.0
+offset_bottom = 8.0
+text = "Menu"
+item_count = 1
+popup/item_0/text = "Quitter"
+popup/item_0/icon = ExtResource("11_0lspf")
+popup/item_0/id = 0
+script = ExtResource("12_y62qr")
