@@ -18,7 +18,6 @@ func _physics_process(_delta: float) -> void:
 	_sword.visible =     _world.target_monster != null && _world.target_monster.state != Monster.State.DEATH
 	_magnifier.visible = _world.target_monster != null && _world.target_monster.state == Monster.State.DEATH
 	_hand.visible = _world.target_interactable != null
-	
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED :
@@ -28,11 +27,8 @@ func _unhandled_input(event: InputEvent) -> void:
 		camera.rotation.x -= event.relative.y * _mouse_sensitivity
 		camera.rotation.x = clampf(camera.rotation.x, -_tilt_limit, _tilt_limit)
 		camera.rotation.y += -event.relative.x * _mouse_sensitivity
-	if event is InputEventMouseButton and Input.is_mouse_button_pressed(MOUSE_BUTTON_RIGHT):
-		if (Input.mouse_mode == Input.MOUSE_MODE_CAPTURED) :
-			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-		else : 
-			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-
-	if event is InputEventMouseButton :
-		print(event.position)
+#	if event is InputEventMouseButton and Input.is_mouse_button_pressed(MOUSE_BUTTON_RIGHT):
+#		if (Input.mouse_mode == Input.MOUSE_MODE_CAPTURED) :
+#			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+#		else : 
+#			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
