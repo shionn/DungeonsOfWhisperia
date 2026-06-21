@@ -5,7 +5,7 @@ enum State { ATTACK, MOVE, IDLE, HIT, DEATH }
 
 @onready var _character = $Rogue_Hooded as Node3D
 @onready var _animation = $Rogue_Hooded/AnimationPlayer as AnimationPlayer
-@onready var _atkTimer = $AtkTimer as Timer
+@onready var _timer = $Timer as Timer
 @onready var _world = $/root/World as World
 
 const _movement_speed: float = 4.0
@@ -35,7 +35,7 @@ func _physics_process(_delta: float) -> void:
 					_attacked_monster = _world.target_monster
 					if self.global_position.distance_to(_attacked_monster.global_position) < _atk_range :
 						_animation.play("Dualwield_Melee_Attack_Chop")
-						_atkTimer.start(_animation.get_animation("Dualwield_Melee_Attack_Chop").length*.75)
+						_timer.start(_animation.get_animation("Dualwield_Melee_Attack_Chop").length*.75)
 						_state = State.ATTACK
 						_character.rotation.y = get_viewport().get_camera_3d().rotation.y+deg_to_rad(180)
 						velocity = Vector3.ZERO
@@ -70,12 +70,17 @@ func receive_atk(nb_atk: int) -> void:
 		pv = max(pv - deg, 0)
 		if pv > 0:
 			_animation.play("Hit_A")
-			#state = State.HIT
+			_timer.start(_animation.get_animation("Hit_A").length)
+			_state = State.HIT
 		else :
 			_animation.play("Death_A")
 			_state = State.DEATH
 		
-func _on_atk_timer_timeout() -> void:
-	var nb_atk = _dices.d6(2,4)
-	_attacked_monster.receive_atk(nb_atk)
-	_state = State.MOVE
+func _on_timer_timeout() -> void:
+	match _state :
+		State.ATTACK:
+			var nb_atk = _dices.d6(2,4)
+			_attacked_monster.receive_atk(nb_atk)
+			_state = State.MOVE
+		State.HIT :
+			_state = State.MOVE

@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://d2auu0tiunlbj" path="res://gui/CenterCursor.gd" id="2_5kbtw"]
 [ext_resource type="Texture2D" uid="uid://tem7p5u78uq0" path="res://assets/kenney/cursor-pack/tool_sword_a.png" id="3_oe2qn"]
 [ext_resource type="Texture2D" uid="uid://va0lo41y8273" path="res://assets/kenney/cursor-pack/zoom.png" id="4_5hgfq"]
+[ext_resource type="Texture2D" uid="uid://bttyvn7xoe6wl" path="res://assets/kenney/cursor-pack/hand_open.png" id="4_resmn"]
 [ext_resource type="Script" uid="uid://fc4p1gee0wmr" path="res://gui/Stat.gd" id="5_7lsbh"]
 [ext_resource type="Script" uid="uid://t5ana3e5k724" path="res://gui/GameOver.gd" id="6_spdw3"]
 
@@ -63,6 +64,21 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 texture = ExtResource("3_oe2qn")
+
+[node name="Hand" type="TextureRect" parent="CenterCursor" unique_id=650575421]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_resmn")
 
 [node name="Manifier" type="TextureRect" parent="CenterCursor" unique_id=573061436]
 layout_mode = 1
