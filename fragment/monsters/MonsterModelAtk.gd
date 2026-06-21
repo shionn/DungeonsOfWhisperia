@@ -4,7 +4,7 @@ extends Object
 var animation : String
 var cold_down : float
 var cold_down_factor : float
-var range : int = 2
+var atk_range : float = 2
 var on_cold_down = false
 var _cold_down_timer : Timer = Timer.new()
 var _dice = Dices.new()
@@ -13,7 +13,7 @@ func _init(json, g:Monster) -> void:
 	animation = json["animation"]
 	cold_down = json.get("cold_down",0)
 	cold_down_factor =  json.get("cold_down_factor",0)
-	range = json.get("range", 2)
+	atk_range = json.get("range", 2)
 	
 	g.add_child(_cold_down_timer)
 	_cold_down_timer.one_shot = true

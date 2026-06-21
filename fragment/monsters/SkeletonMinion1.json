@@ -5,6 +5,7 @@
 		"cold_down": 2.0
 	}, {
 		"animation": "2H_Melee_Attack_Chop",
-		"cold_down": 2.0
+		"cold_down": 2.0,
+		"range": 3.0
 	}]
 }

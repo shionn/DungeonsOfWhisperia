@@ -11,9 +11,11 @@ func _physics_process(_delta: float) -> void:
 	_updateRayCast()
 	#if Input.is_action_just_released("quit"):
 	#	get_tree().quit()
-	if Input.is_action_just_pressed("interact"):
+	if Input.mouse_mode == Input.MOUSE_MODE_HIDDEN and Input.is_action_just_pressed("interact"):
 		if target_interactable :
 			target_interactable.on_interact()
+		if target_monster and target_monster.state == Monster.State.DEATH:
+			($/root/World/Gui/Loot as LootGui).loot(target_monster)
 	
 func _updateRayCast() -> void : 
 	var camera = get_viewport().get_camera_3d()

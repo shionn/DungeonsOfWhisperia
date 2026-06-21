@@ -10,8 +10,6 @@ enum State { IDLE, CHASE, ATTACK, ATTACKING, HIT, DEATH }
 @onready var _gcdTimer = $GcdTimer as Timer
 
 @export_file("*.json") var model_file
-@export_file("$.item") var _loot_file
-@export var _gold:int
 
 const _chase_dist = 1.5
 const _movement_speed: float = 4.0
@@ -21,7 +19,6 @@ var _atk : MonsterModelAtk
 var _dices : Dices = Dices.new()
 var _on_gcd : bool = false
 var state : State = State.IDLE
-#var _loot : Loo
 
 func _ready() -> void:
 	_model = MonsterModel.new(model_file, self)
@@ -36,7 +33,7 @@ func _physics_process(_delta: float) -> void:
 	match state: 
 		State.CHASE:
 			var distance = (_player.global_position-global_position).length()
-			if (_atk && distance < _atk.range or distance < 2) :
+			if (_atk && distance < _atk.atk_range or distance < 2) :
 				state = State.ATTACK
 			elif _navigation_agent.is_navigation_finished() : 
 				state = State.IDLE
