@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bwsb5rrn4rx5v" path="res://assets/kaykit/dungeon/floor/large/floor_tile_large.gltf.glb" id="1_acsvp"]
 [ext_resource type="PackedScene" uid="uid://ckdwjb642168f" path="res://assets/kaykit/dungeon/floor/large/floor_dirt_large.gltf.glb" id="2_yxr20"]
-[ext_resource type="Script" uid="uid://bjbab3ep2gfn2" path="res://fragment/item/ItemModel.gd" id="3_5ip2l"]
+[ext_resource type="Script" uid="uid://bjbab3ep2gfn2" path="res://fragment/item/Item.gd" id="3_5ip2l"]
 [ext_resource type="PackedScene" uid="uid://c2gmjs5iylgc4" path="res://assets/kaykit/dungeon/wall/corner/wall_corner.gltf.glb" id="3_aalsr"]
 [ext_resource type="Texture2D" uid="uid://dve5cabnc5o2x" path="res://assets/fanatisy-magic-set/potion-2-48.png" id="3_qs2cd"]
 [ext_resource type="PackedScene" uid="uid://boj6netivsmpu" path="res://assets/kaykit/skeletons/Skeleton_Minion.glb" id="4_5ip2l"]
