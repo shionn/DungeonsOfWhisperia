@@ -9,9 +9,20 @@
 [ext_resource type="Script" uid="uid://fc4p1gee0wmr" path="res://gui/StatGui.gd" id="5_7lsbh"]
 [ext_resource type="Script" uid="uid://t5ana3e5k724" path="res://gui/GameOverGui.gd" id="6_spdw3"]
 [ext_resource type="PackedScene" uid="uid://d118p2b270b2g" path="res://gui/BagGui.tscn" id="8_iof1j"]
-[ext_resource type="PackedScene" uid="uid://chx7nhpaq7lwl" path="res://gui/LootGui.tscn" id="9_ubqqx"]
+[ext_resource type="Script" uid="uid://c56odaje3xl6x" path="res://gui/LootGui.gd" id="10_ow3qa"]
 [ext_resource type="Texture2D" uid="uid://dstsbh4f6k4j5" path="res://assets/kenney/cursor-pack/door_exit.png" id="11_0lspf"]
+[ext_resource type="Texture2D" uid="uid://ckgd4l0t7srqr" path="res://assets/kenney/ui-adventure/panel_brown_NW.png" id="11_fucts"]
+[ext_resource type="Texture2D" uid="uid://ccnqmwmalslbh" path="res://assets/kenney/ui-adventure/panel_brown_N.png" id="12_m586l"]
 [ext_resource type="Script" uid="uid://b5u38rsuiglhp" path="res://gui/MenuGui.gd" id="12_y62qr"]
+[ext_resource type="Texture2D" uid="uid://8nho6rc3y7h0" path="res://assets/kenney/ui-adventure/panel_brown_NE.png" id="13_s2c3b"]
+[ext_resource type="Texture2D" uid="uid://byxfedvd3rio8" path="res://assets/kenney/ui-adventure/panel_brown_W.png" id="14_jpmve"]
+[ext_resource type="Texture2D" uid="uid://dtw1cmhurrgp1" path="res://assets/kenney/ui-adventure/panel_brown_E.png" id="15_mya5i"]
+[ext_resource type="Texture2D" uid="uid://bj22r3dqrlgrh" path="res://assets/kenney/ui-adventure/panel_brown_SW.png" id="16_v34si"]
+[ext_resource type="Texture2D" uid="uid://f4bn5pgi4ls3" path="res://assets/kenney/ui-adventure/panel_brown_S.png" id="17_03rpx"]
+[ext_resource type="Texture2D" uid="uid://coc4mm1g1nlkp" path="res://assets/kenney/ui-adventure/panel_brown_SE.png" id="18_u1nxv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8rxp0"]
+bg_color = Color(1, 0.94509804, 0.8235294, 1)
 
 [node name="Gui" type="Control" unique_id=679884730]
 layout_mode = 3
@@ -151,8 +162,93 @@ layout_mode = 1
 offset_left = -228.0
 offset_right = 0.0
 
-[node name="Loot" parent="." unique_id=1947795742 instance=ExtResource("9_ubqqx")]
+[node name="Loot" type="GridContainer" parent="." unique_id=1947795742]
+z_index = 10
 layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -114.0
+offset_top = -100.0
+offset_right = 114.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 3
+script = ExtResource("10_ow3qa")
+
+[node name="NW" type="TextureRect" parent="Loot" unique_id=51255029]
+layout_mode = 2
+texture = ExtResource("11_fucts")
+
+[node name="N" type="TextureRect" parent="Loot" unique_id=863925097]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("12_m586l")
+stretch_mode = 1
+
+[node name="NE" type="TextureRect" parent="Loot" unique_id=907156634]
+layout_mode = 2
+texture = ExtResource("13_s2c3b")
+
+[node name="W" type="TextureRect" parent="Loot" unique_id=395839548]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("14_jpmve")
+stretch_mode = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="Loot" unique_id=1562528043]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8rxp0")
+
+[node name="MarginContainer" type="MarginContainer" parent="Loot/PanelContainer" unique_id=1512514757]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Loot/PanelContainer/MarginContainer" unique_id=1986974646]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 0
+
+[node name="Container" type="HFlowContainer" parent="Loot/PanelContainer/MarginContainer/VBoxContainer" unique_id=1264443709]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+
+[node name="CloseButton" type="Button" parent="Loot/PanelContainer/MarginContainer/VBoxContainer" unique_id=860069637]
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "Fermer"
+text = "Fermer"
+
+[node name="E" type="TextureRect" parent="Loot" unique_id=94430058]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("15_mya5i")
+stretch_mode = 1
+
+[node name="SW" type="TextureRect" parent="Loot" unique_id=1373041934]
+layout_mode = 2
+texture = ExtResource("16_v34si")
+
+[node name="S" type="TextureRect" parent="Loot" unique_id=1841597024]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("17_03rpx")
+stretch_mode = 1
+
+[node name="SE" type="TextureRect" parent="Loot" unique_id=2051334909]
+layout_mode = 2
+texture = ExtResource("18_u1nxv")
 
 [node name="Menu" type="MenuButton" parent="." unique_id=436163507]
 layout_mode = 1
@@ -166,3 +262,5 @@ popup/item_1/text = "Quitter"
 popup/item_1/icon = ExtResource("11_0lspf")
 popup/item_1/id = 0
 script = ExtResource("12_y62qr")
+
+[connection signal="pressed" from="Loot/PanelContainer/MarginContainer/VBoxContainer/CloseButton" to="Loot" method="_on_close_button_pressed"]

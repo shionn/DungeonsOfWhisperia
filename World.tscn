@@ -16,7 +16,6 @@ script = ExtResource("1_bcbcq")
 [node name="Dungeon01" parent="." unique_id=266448183 instance=ExtResource("1_c6gwx")]
 
 [node name="Gui" parent="." unique_id=679884730 instance=ExtResource("2_2dftf")]
-mouse_filter = 2
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=464023489]
 environment = SubResource("Environment_js7pq")

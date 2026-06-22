@@ -21,6 +21,14 @@ func _physics_process(_delta: float) -> void:
 			$Menu.visible = false
 			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 		else :
-			$Bag.visible = true
-			$Menu.visible = true
-			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+			_open()
+
+func openLoot(monster: Monster) -> void :
+	$Loot.loot(monster)
+	_open()
+
+func _open() -> void : 
+	$Bag.visible = true
+	$Menu.visible = true
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	
