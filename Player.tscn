@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://mkg4k2u75l6x"]
+
+[ext_resource type="Script" path="res://PlayerG.gd" id="1_kpjcp"]
+[ext_resource type="PackedScene" uid="uid://hykjt2jo4gmo" path="res://assets/kaykit/character/Rogue_Hooded.glb" id="2_kne1u"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_qs2cd"]
+radius = 0.6
+height = 2.2
+
+[node name="Player" type="CharacterBody3D" unique_id=384338158]
+script = ExtResource("1_kpjcp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1054408802]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1, 0)
+shape = SubResource("CapsuleShape3D_qs2cd")
+
+[node name="Rogue_Hooded" parent="." unique_id=2047607489 instance=ExtResource("2_kne1u")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=915266410]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 1.7, 0)
+
+[node name="Timer" type="Timer" parent="." unique_id=926619263]
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
