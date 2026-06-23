@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bftxr17ntjqn5"
-path="res://.godot/imported/book-h-48.png-628955c6e3d411bc1f3e4fe299db377f.ctex"
+uid="uid://duf4vs1t733eh"
+path="res://.godot/imported/Paper-48.png-c4ba4d96121415f129c18b69dcb1b2ab.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/fanatisy-magic-set/book-h-48.png"
-dest_files=["res://.godot/imported/book-h-48.png-628955c6e3d411bc1f3e4fe299db377f.ctex"]
+source_file="res://assets/resources-pack-1/Paper-48.png"
+dest_files=["res://.godot/imported/Paper-48.png-c4ba4d96121415f129c18b69dcb1b2ab.ctex"]
 
 [params]
 

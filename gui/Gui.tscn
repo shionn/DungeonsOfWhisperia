@@ -348,4 +348,5 @@ popup/item_1/icon = ExtResource("11_0lspf")
 popup/item_1/id = 0
 script = ExtResource("12_y62qr")
 
-[connection signal="pressed" from="Loot/PanelContainer/MarginContainer/VBoxContainer/CloseButton" to="Loot" method="_on_close_button_pressed"]
+[connection signal="pressed" from="Bag/PanelContainer/MarginContainer/VBoxContainer/CloseButton" to="." method="_close"]
+[connection signal="pressed" from="Loot/PanelContainer/MarginContainer/VBoxContainer/CloseButton" to="." method="_close"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dwlr4a3s6n4v5"
-path="res://.godot/imported/book.png-5db63362e17df32015b78053b32be7b5.ctex"
+uid="uid://qedvb26kkfg5"
+path="res://.godot/imported/Minerals-48.png-de820ab6618407b714dc3fa26246c097.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/fanatisy-magic-set/book.png"
-dest_files=["res://.godot/imported/book.png-5db63362e17df32015b78053b32be7b5.ctex"]
+source_file="res://assets/resources-pack-1/Minerals-48.png"
+dest_files=["res://.godot/imported/Minerals-48.png-de820ab6618407b714dc3fa26246c097.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://doib661wj6vqs"
-path="res://.godot/imported/herbal-h-48.png-179d81f7b300f957279142ada19b815f.ctex"
+uid="uid://db2vs1y8oqao2"
+path="res://.godot/imported/Page-48.png-66f317c3f216e00192d2b9bed8033834.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/fanatisy-magic-set/herbal-h-48.png"
-dest_files=["res://.godot/imported/herbal-h-48.png-179d81f7b300f957279142ada19b815f.ctex"]
+source_file="res://assets/resources-pack-1/Page-48.png"
+dest_files=["res://.godot/imported/Page-48.png-66f317c3f216e00192d2b9bed8033834.ctex"]
 
 [params]
 

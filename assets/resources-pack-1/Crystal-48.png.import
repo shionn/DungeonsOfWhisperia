@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cs0qmdx5vl6um"
-path="res://.godot/imported/parchment-h-48.png-ad1d0fe493a05e7feb9ccefa1a294bb7.ctex"
+uid="uid://c76c56jlmxe5u"
+path="res://.godot/imported/Crystal-48.png-865cc3e3f580b5adc5ad8c9ce4beb622.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/fanatisy-magic-set/parchment-h-48.png"
-dest_files=["res://.godot/imported/parchment-h-48.png-ad1d0fe493a05e7feb9ccefa1a294bb7.ctex"]
+source_file="res://assets/resources-pack-1/Crystal-48.png"
+dest_files=["res://.godot/imported/Crystal-48.png-865cc3e3f580b5adc5ad8c9ce4beb622.ctex"]
 
 [params]
 

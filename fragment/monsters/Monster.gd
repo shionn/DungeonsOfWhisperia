@@ -11,6 +11,7 @@ enum State { IDLE, CHASE, ATTACK, ATTACKING, HIT, DEATH }
 
 @export_file("*.json") var _model_file
 @export var loot_obj : Items.ItemName = Items.ItemName.None
+@export var loot_gold: int = 0
 
 const _chase_dist = 1.5
 const _movement_speed: float = 4.0

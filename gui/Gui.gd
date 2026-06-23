@@ -16,10 +16,7 @@ func _ready() -> void:
 func _physics_process(_delta: float) -> void:
 	if Input.is_action_just_pressed("menu") :
 		if $Bag.visible : 
-			$Bag.visible = false
-			$Loot.visible = false
-			$Menu.visible = false
-			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+			_close()
 		else :
 			_open()
 
@@ -31,4 +28,9 @@ func _open() -> void :
 	$Bag.visible = true
 	$Menu.visible = true
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-	
+
+func _close() -> void :
+	$Bag.visible = false
+	$Loot.visible = false
+	$Menu.visible = false
+	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED

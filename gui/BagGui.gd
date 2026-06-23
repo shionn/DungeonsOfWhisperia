@@ -6,12 +6,12 @@ extends Control
 @onready var _bag = $"/root/World/Player/Bag" as Bag
 @onready var _items = $"/root/World/Items" as Items
 
+var _goldRessource = load("res://assets/resources-pack-1/Coin-48.png")
+
 #var drag : Item = null
-
-signal on_item_change()
-
 func _ready() -> void:
 	visible = false
+	_bag.on_item_change.connect(self.refresh)
 
 func _process(_delta: float) -> void:
 	#if drag != null :
@@ -20,17 +20,23 @@ func _process(_delta: float) -> void:
 
 func refresh() -> void:
 	for child in _container.get_children() : child.queue_free()
+	if _bag.gold > 0:
+		var button = TextureButton.new();
+		button.texture_normal = _goldRessource
+		button.tooltip_text = "OR: "+str(_bag.gold)
+		button.button_mask = MOUSE_BUTTON_MASK_LEFT | MOUSE_BUTTON_MASK_RIGHT
+		#button.pressed.connect(func(): self._loot_gold(button, monster))
+		_container.add_child(button)
+
 	for item_name in _bag.items :
 		var item : Item  = _items.from(item_name)
 		if item : 
-			var but = TextureButton.new();
-			but.texture_normal =  item.icon
-			but.tooltip_text = item.name
-			but.pressed.connect(func(): print(item))
-			_container.add_child(but)
-
-
-
+			var button = TextureButton.new();
+			button.texture_normal =  item.icon
+			button.tooltip_text = item.name
+			button.button_mask = MOUSE_BUTTON_MASK_LEFT | MOUSE_BUTTON_MASK_RIGHT
+			button.pressed.connect(func(): print(item))
+			_container.add_child(button)
 
 func _on_close_button_pressed() -> void:
 	hide()
@@ -50,4 +56,5 @@ func load_game() -> void :
 			#var item = _items.get_node(item_name)
 			#_items.remove_child(item)
 			#_grid.add_child(item)
-	on_item_change.emit()
+	#on_item_change.emit()
+	pass
