@@ -27,8 +27,3 @@ func _unhandled_input(event: InputEvent) -> void:
 		camera.rotation.x -= event.relative.y * _mouse_sensitivity
 		camera.rotation.x = clampf(camera.rotation.x, -_tilt_limit, _tilt_limit)
 		camera.rotation.y += -event.relative.x * _mouse_sensitivity
-#	if event is InputEventMouseButton and Input.is_mouse_button_pressed(MOUSE_BUTTON_RIGHT):
-#		if (Input.mouse_mode == Input.MOUSE_MODE_CAPTURED) :
-#			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-#		else : 
-#			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED

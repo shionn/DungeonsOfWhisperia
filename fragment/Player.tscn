@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://ddvg2rw2bunm2"]
 
-[ext_resource type="Script" uid="uid://crpe0nst55m8b" path="res://PlayerG.gd" id="1_kpjcp"]
+[ext_resource type="Script" uid="uid://crpe0nst55m8b" path="res://fragment/PlayerG.gd" id="1_kpjcp"]
 [ext_resource type="PackedScene" uid="uid://hykjt2jo4gmo" path="res://assets/kaykit/character/Rogue_Hooded.glb" id="2_kne1u"]
+[ext_resource type="Script" uid="uid://cy4qabbfkxrfk" path="res://fragment/items/Bag.gd" id="3_xb6lc"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_qs2cd"]
 radius = 0.6
@@ -22,5 +23,9 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 1
 
 [node name="Timer" type="Timer" parent="." unique_id=926619263]
 one_shot = true
+
+[node name="Bag" type="Node" parent="." unique_id=2142007347]
+script = ExtResource("3_xb6lc")
+metadata/_custom_type_script = "uid://cy4qabbfkxrfk"
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -3,8 +3,9 @@
 [ext_resource type="Script" uid="uid://cudoi1kpvpwh0" path="res://GameInit.gd" id="1_bcbcq"]
 [ext_resource type="PackedScene" uid="uid://biry1imi3i5lg" path="res://Dungeon0.tscn" id="1_c6gwx"]
 [ext_resource type="PackedScene" uid="uid://dpbieqlycbivt" path="res://gui/Gui.tscn" id="2_2dftf"]
-[ext_resource type="PackedScene" uid="uid://ddvg2rw2bunm2" path="res://Player.tscn" id="2_js7pq"]
-[ext_resource type="Script" uid="uid://bjbab3ep2gfn2" path="res://fragment/item/Item.gd" id="5_p1v5b"]
+[ext_resource type="PackedScene" uid="uid://ddvg2rw2bunm2" path="res://fragment/Player.tscn" id="2_js7pq"]
+[ext_resource type="Script" uid="uid://bjbab3ep2gfn2" path="res://fragment/items/Item.gd" id="5_p1v5b"]
+[ext_resource type="Script" uid="uid://ccps0bdr1ahel" path="res://fragment/items/Items.gd" id="5_wygdx"]
 [ext_resource type="Texture2D" uid="uid://dve5cabnc5o2x" path="res://assets/fanatisy-magic-set/potion-2-48.png" id="6_wygdx"]
 
 [sub_resource type="Environment" id="Environment_js7pq"]
@@ -23,10 +24,12 @@ script = ExtResource("1_bcbcq")
 environment = SubResource("Environment_js7pq")
 
 [node name="Items" type="Node" parent="." unique_id=1550606035]
+script = ExtResource("5_wygdx")
 
 [node name="Potion" type="Node" parent="Items" unique_id=411360577]
 script = ExtResource("5_p1v5b")
+item_name = 1
 icon = ExtResource("6_wygdx")
 metadata/_custom_type_script = "uid://bjbab3ep2gfn2"
 
-[connection signal="action" from="Items/Potion" to="Items/Potion" method="_give_back_4_pv"]
+[connection signal="_action" from="Items/Potion" to="Items/Potion" method="_give_back_4_pv"]

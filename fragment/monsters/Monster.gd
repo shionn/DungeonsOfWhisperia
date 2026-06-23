@@ -9,7 +9,8 @@ enum State { IDLE, CHASE, ATTACK, ATTACKING, HIT, DEATH }
 @onready var _animationTimer = $AnimationTimer as Timer
 @onready var _gcdTimer = $GcdTimer as Timer
 
-@export_file("*.json") var model_file
+@export_file("*.json") var _model_file
+@export var loot_obj : Items.ItemName = Items.ItemName.None
 
 const _chase_dist = 1.5
 const _movement_speed: float = 4.0
@@ -21,7 +22,7 @@ var _on_gcd : bool = false
 var state : State = State.IDLE
 
 func _ready() -> void:
-	_model = MonsterModel.new(model_file, self)
+	_model = MonsterModel.new(_model_file, self)
 	_animation.get_animation("Idle").loop_mode = Animation.LOOP_LINEAR
 	_navigation_agent.target_desired_distance = _chase_dist
 	start_animation("Idle")
