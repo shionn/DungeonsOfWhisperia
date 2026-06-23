@@ -3,8 +3,7 @@ extends Node
 
 @export var item_name : Items.ItemName = Items.ItemName.None
 @export var icon : Resource
-
-
+@export_multiline() var description : String
 
 signal _action()
 
