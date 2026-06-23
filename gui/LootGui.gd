@@ -24,5 +24,5 @@ func _loot_item(item:Item, button:TextureButton, monster:Monster) -> void:
 	_bag.loot(item.item_name)
 	monster.loot_obj = Items.ItemName.None
 	button.queue_free()
-	_bag_gui.refresh()
+	_bag_gui.refresh() # TODO passer par un signal sur le sac
 	
