@@ -78,6 +78,14 @@ loot_gold = 3
 
 [node name="Character" parent="Monster1" unique_id=1011250144 instance=ExtResource("4_5ip2l")]
 
+[node name="Monster3" parent="." unique_id=1532934273 instance=ExtResource("18_5ip2l")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5, 0, 0)
+_model_file = "res://fragment/monsters/SkeletonMinion1.json"
+loot_obj = 1
+loot_gold = 3
+
+[node name="Character" parent="Monster3" unique_id=1003060720 instance=ExtResource("4_5ip2l")]
+
 [node name="Monster2" parent="." unique_id=59902776 instance=ExtResource("18_5ip2l")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 16, 0, 13)
 _model_file = "res://fragment/monsters/SkeletonMinion1.json"
