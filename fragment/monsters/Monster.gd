@@ -24,9 +24,11 @@ var state : State = State.IDLE
 
 func _ready() -> void:
 	_model = MonsterModel.new(_model_file, self)
-	_animation.get_animation("Idle").loop_mode = Animation.LOOP_LINEAR
+	#print(_animation.get_animation_library_list())
+	#print(_animation.get_animation_library("RigMediumAnimation").get_animation_list())
+	#_animation.get_animation_library("RigMediumAnimation").get_animation("Idle_A").loop_mode = Animation.LOOP_LINEAR
 	_navigation_agent.target_desired_distance = _chase_dist
-	start_animation("Idle")
+	start_animation("Idle_A")
 	_atk = _model.get_atk()
 
 func _physics_process(_delta: float) -> void:
@@ -60,7 +62,7 @@ func _physics_process(_delta: float) -> void:
 			velocity = Vector3.ZERO
 		State.IDLE:
 			velocity = Vector3.ZERO
-			_animation.play("Idle")
+			start_animation("Idle_A")
 			if _see_player() :
 				state = State.CHASE
 		State.HIT, State.DEATH:
@@ -91,7 +93,7 @@ func _move_to_player() -> void :
 	self.look_at(next_path_position,Vector3.UP,true)
 	self.rotation.x=0
 	self.velocity = global_position.direction_to(next_path_position) * _movement_speed
-	self._animation.play("Walking_A")
+	start_animation("Walking_A")
 
 func _update_navigation() -> bool :
 	if _see_player() :
@@ -99,8 +101,9 @@ func _update_navigation() -> bool :
 	return self._navigation_agent.is_navigation_finished()
 
 func start_animation(anim:String, time:bool=false) -> void:
-	_animation.play(anim)
-	if time : _animationTimer.start(_animation.get_animation(anim).length)
+	const _animation_prefix = "RigMediumAnimation/"
+	_animation.play(_animation_prefix+anim)
+	if time : _animationTimer.start(_animation.get_animation(_animation_prefix+anim).length)
 
 func receive_atk(nb_atk: int) -> void:
 	if state == State.DEATH : return

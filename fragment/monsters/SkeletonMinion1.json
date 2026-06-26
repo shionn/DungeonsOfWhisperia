@@ -1,10 +1,10 @@
 {
 	"fov" : 60,
 	"atks": [{
-		"animation": "1H_Melee_Attack_Chop",
+		"animation": "Melee_1H_Attack_Chop",
 		"cold_down": 2.0
 	}, {
-		"animation": "2H_Melee_Attack_Chop",
+		"animation": "Melee_2H_Attack_Chop",
 		"cold_down": 2.0,
 		"range": 3.0
 	}]
