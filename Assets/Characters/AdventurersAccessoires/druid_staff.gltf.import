@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://ca847rbgur7n2"
-path="res://.godot/imported/Ranger.glb-547c44a3c2bb207f24ea9a5218f99287.scn"
+uid="uid://df8li1hs4aj7r"
+path="res://.godot/imported/druid_staff.gltf-e1847a13b5dca31249137a5de12ef4fb.scn"
 
 [deps]
 
-source_file="res://Assets/Characters/Ranger.glb"
-dest_files=["res://.godot/imported/Ranger.glb-547c44a3c2bb207f24ea9a5218f99287.scn"]
+source_file="res://Assets/Characters/AdventurersAccessoires/druid_staff.gltf"
+dest_files=["res://.godot/imported/druid_staff.gltf-e1847a13b5dca31249137a5de12ef4fb.scn"]
 
 [params]
 
@@ -36,9 +36,9 @@ animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
-materials/extract=2
+materials/extract=0
 materials/extract_format=0
-materials/extract_path="res://Assets/Materials/Characters"
+materials/extract_path=""
 _subresources={}
 gltf/naming_version=2
 gltf/embedded_image_handling=1
