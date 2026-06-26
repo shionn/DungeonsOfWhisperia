@@ -20,10 +20,12 @@ var pv = 6
 var maxpv = 6
 
 func _ready() -> void:
-	$"Rogue_Hooded/Rig/Skeleton3D/handslot_r/Throwable".hide()
-	$"Rogue_Hooded/Rig/Skeleton3D/handslot_r/1H_Crossbow".hide()
-	$"Rogue_Hooded/Rig/Skeleton3D/handslot_r/2H_Crossbow".hide()
-	$Rogue_Hooded/Rig/Skeleton3D/Rogue_Head_Hooded.hide()
+	#$"Rogue_Hooded/Rig/Skeleton3D/handslot_r/Throwable".hide()
+	#$"Rogue_Hooded/Rig/Skeleton3D/handslot_r/1H_Crossbow".hide()
+	#$"Rogue_Hooded/Rig/Skeleton3D/handslot_r/2H_Crossbow".hide()
+	$Rogue_Hooded/Rig_Medium/Skeleton3D/RogueHooded_Head.hide()
+	$Rogue_Hooded/Rig_Medium/Skeleton3D/RogueHooded_Mask.hide()
+	pass
 	
 func _physics_process(_delta: float) -> void:
 	match _state :
@@ -34,8 +36,7 @@ func _physics_process(_delta: float) -> void:
 				if _world.target_monster and _world.target_monster.state != Monster.State.DEATH :
 					_attacked_monster = _world.target_monster
 					if self.global_position.distance_to(_attacked_monster.global_position) < _atk_range :
-						_animation.play("Dualwield_Melee_Attack_Chop")
-						_timer.start(_animation.get_animation("Dualwield_Melee_Attack_Chop").length*.75)
+						_start_animation("Melee_Dualwield_Attack_Chop", true, .75)
 						_state = State.ATTACK
 						_character.rotation.y = get_viewport().get_camera_3d().rotation.y+deg_to_rad(180)
 						velocity = Vector3.ZERO
@@ -55,13 +56,13 @@ func _handle_move_input() -> void:
 			velocity.x = direction.x * _movement_speed
 			velocity.z = direction.z * _movement_speed
 			_character.rotation.y = atan2(direction.x,direction.z)
-			_animation.play("Walking_A")
+			_start_animation("Walking_A")
 		else:
 			velocity = Vector3.ZERO
-			_animation.play("Idle")
+			_start_animation("Idle_A")
 	else:
 		velocity = Vector3.ZERO
-		_animation.play("Idle")
+		_start_animation("Idle_A")
 
 func receive_atk(nb_atk: int) -> void:
 	var nb_def = _dices.d6(2, 5)
@@ -69,13 +70,18 @@ func receive_atk(nb_atk: int) -> void:
 	if deg > 0 :
 		pv = max(pv - deg, 0)
 		if pv > 0:
-			_animation.play("Hit_A")
-			_timer.start(_animation.get_animation("Hit_A").length)
+			_start_animation("Hit_A", true)
 			_state = State.HIT
 		else :
-			_animation.play("Death_A")
+			_start_animation("Death_A")
 			_state = State.DEATH
-		
+
+func _start_animation(anim:String, timer:bool=false, timerFactor:float=1) -> void:
+	const _animation_prefix = "RigMediumAnimation/"
+	_animation.play(_animation_prefix+anim)
+	if timer : _timer.start(_animation.get_animation(_animation_prefix+anim).length*timerFactor)
+	
+	
 func _on_timer_timeout() -> void:
 	match _state :
 		State.ATTACK:

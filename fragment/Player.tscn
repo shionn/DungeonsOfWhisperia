@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://ddvg2rw2bunm2"]
 
 [ext_resource type="Script" uid="uid://crpe0nst55m8b" path="res://fragment/PlayerG.gd" id="1_kpjcp"]
-[ext_resource type="PackedScene" uid="uid://hykjt2jo4gmo" path="res://assets/kaykit/character/Rogue_Hooded.glb" id="2_kne1u"]
+[ext_resource type="PackedScene" uid="uid://1504xbq0cc18" path="res://Assets/Characters/Rogue_Hooded.glb" id="2_xb6lc"]
+[ext_resource type="PackedScene" uid="uid://cilph76wsdfia" path="res://Assets/Animations/RigMediumAnimationCharacter.tscn" id="3_svw8l"]
 [ext_resource type="Script" uid="uid://cy4qabbfkxrfk" path="res://fragment/items/Bag.gd" id="3_xb6lc"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_qs2cd"]
@@ -15,8 +16,9 @@ script = ExtResource("1_kpjcp")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1, 0)
 shape = SubResource("CapsuleShape3D_qs2cd")
 
-[node name="Rogue_Hooded" parent="." unique_id=2047607489 instance=ExtResource("2_kne1u")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+[node name="Rogue_Hooded" parent="." unique_id=1243819384 instance=ExtResource("2_xb6lc")]
+
+[node name="AnimationPlayer" parent="Rogue_Hooded" unique_id=869308477 instance=ExtResource("3_svw8l")]
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=915266410]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 1.7, 0)

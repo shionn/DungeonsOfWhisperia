@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bcqj4vgg680ca"
-path="res://.godot/imported/Skeleton_Minion.glb-c5f97ae9b492803bba90d927d3466a1d.scn"
+uid="uid://ca847rbgur7n2"
+path="res://.godot/imported/Ranger.glb-547c44a3c2bb207f24ea9a5218f99287.scn"
 
 [deps]
 
-source_file="res://Assets/Characters/Skeleton_Minion.glb"
-dest_files=["res://.godot/imported/Skeleton_Minion.glb-c5f97ae9b492803bba90d927d3466a1d.scn"]
+source_file="res://Assets/Characters/Ranger.glb"
+dest_files=["res://.godot/imported/Ranger.glb-547c44a3c2bb207f24ea9a5218f99287.scn"]
 
 [params]
 
@@ -39,20 +39,7 @@ import_script/path=""
 materials/extract=2
 materials/extract_format=0
 materials/extract_path="res://Assets/Materials/Characters"
-_subresources={
-"materials": {
-"Glow": {
-"use_external/enabled": true,
-"use_external/fallback_path": "res://Assets/Materials/Characters/Glow.tres",
-"use_external/path": "uid://coawb8r3e4nkt"
-},
-"skeleton": {
-"use_external/enabled": true,
-"use_external/fallback_path": "res://Assets/Materials/Characters/skeleton.tres",
-"use_external/path": "uid://cjb6fjy4be7bj"
-}
-}
-}
+_subresources={}
 gltf/naming_version=2
-gltf/embedded_image_handling=1
+gltf/embedded_image_handling=0
 gltf/texture_map_mode=1

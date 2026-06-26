@@ -5,6 +5,7 @@
 
 
 # Assets
+- https://kaylousberg.itch.io/kaykit-complete
 
 ## peut etre : 
 - https://opengameart.org/content/free-rpg-icons-2

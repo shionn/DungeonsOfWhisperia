@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dgfgyxt3xufku"
-path="res://.godot/imported/skeleton_texture_B.png-4bda83ce7ff4b2f11e34025ca56d6e29.ctex"
+uid="uid://6ciqxyxukfju"
+path="res://.godot/imported/ranger_texture_alt_C.png-65e45d7a141562656470846c71e4c669.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Textures/skeleton_texture_B.png"
-dest_files=["res://.godot/imported/skeleton_texture_B.png-4bda83ce7ff4b2f11e34025ca56d6e29.ctex"]
+source_file="res://Assets/Textures/Characters/ranger_texture_alt_C.png"
+dest_files=["res://.godot/imported/ranger_texture_alt_C.png-65e45d7a141562656470846c71e4c669.ctex"]
 
 [params]
 
@@ -23,7 +23,7 @@ compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
@@ -37,4 +37,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1

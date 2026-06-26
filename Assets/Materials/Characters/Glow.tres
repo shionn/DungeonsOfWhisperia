@@ -2,7 +2,6 @@
 
 [resource]
 resource_name = "Glow"
-vertex_color_use_as_albedo = true
 metallic = 1.0
 emission_enabled = true
 emission = Color(0.7175985, 1, 1, 1)
