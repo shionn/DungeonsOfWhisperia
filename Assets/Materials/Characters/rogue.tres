@@ -1,6 +1,6 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://cigrtvjrb4j3j"]
 
-[ext_resource type="Texture2D" uid="uid://brhvdimkifj8x" path="res://Assets/Characters/Rogue_rogue_texture.png" id="1_yspoi"]
+[ext_resource type="Texture2D" uid="uid://brhvdimkifj8x" path="res://Assets/Characters/Adventurers/Rogue_rogue_texture.png" id="1_yspoi"]
 
 [resource]
 resource_name = "rogue"

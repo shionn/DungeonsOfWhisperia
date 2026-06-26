@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://1504xbq0cc18"
-path="res://.godot/imported/Rogue_Hooded.glb-41987409752b3e058b306ddfefbfe05c.scn"
+uid="uid://c42urmgdjjv7e"
+path="res://.godot/imported/Skeleton_Arrow_Broken.gltf-4e52896c8a6329cff2025331c79eb0fb.scn"
 
 [deps]
 
-source_file="res://Assets/Characters/Rogue_Hooded.glb"
-dest_files=["res://.godot/imported/Rogue_Hooded.glb-41987409752b3e058b306ddfefbfe05c.scn"]
+source_file="res://Assets/Characters/SkeletonAccessoires/Skeleton_Arrow_Broken.gltf"
+dest_files=["res://.godot/imported/Skeleton_Arrow_Broken.gltf-4e52896c8a6329cff2025331c79eb0fb.scn"]
 
 [params]
 
@@ -36,9 +36,9 @@ animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
-materials/extract=2
+materials/extract=0
 materials/extract_format=0
-materials/extract_path="res://Assets/Materials/Characters"
+materials/extract_path=""
 _subresources={}
 gltf/naming_version=2
 gltf/embedded_image_handling=1

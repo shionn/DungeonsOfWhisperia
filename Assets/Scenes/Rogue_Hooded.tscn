@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://croyspihojfyp"]
 
-[ext_resource type="PackedScene" uid="uid://1504xbq0cc18" path="res://Assets/Characters/Rogue_Hooded.glb" id="1_qt1yg"]
+[ext_resource type="PackedScene" uid="uid://1504xbq0cc18" path="res://Assets/Characters/Adventurers/Rogue_Hooded.glb" id="1_qt1yg"]
 [ext_resource type="PackedScene" uid="uid://bkqfestk1m036" path="res://Assets/Characters/AdventurersAccessoires/dagger.gltf" id="2_7hy7o"]
 [ext_resource type="PackedScene" uid="uid://cilph76wsdfia" path="res://Assets/Animations/RigMediumAnimationCharacter.tscn" id="2_qhb8x"]
 

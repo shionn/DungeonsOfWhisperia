@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bu4kc0khlgvss"
-path="res://.godot/imported/Rogue.glb-966cad03fbd22d19eee32c8ddda8e3bf.scn"
+uid="uid://bbnawtjqaa5p8"
+path="res://.godot/imported/Skeleton_Mage.glb-ca87a5875bf670298b3045cba024db72.scn"
 
 [deps]
 
-source_file="res://Assets/Characters/Rogue.glb"
-dest_files=["res://.godot/imported/Rogue.glb-966cad03fbd22d19eee32c8ddda8e3bf.scn"]
+source_file="res://Assets/Characters/Skeleton/Skeleton_Mage.glb"
+dest_files=["res://.godot/imported/Skeleton_Mage.glb-ca87a5875bf670298b3045cba024db72.scn"]
 
 [params]
 
@@ -36,18 +36,10 @@ animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
-materials/extract=2
+materials/extract=0
 materials/extract_format=0
-materials/extract_path="res://Assets/Materials/Characters"
-_subresources={
-"materials": {
-"rogue": {
-"use_external/enabled": true,
-"use_external/fallback_path": "res://Assets/Materials/Characters/rogue.tres",
-"use_external/path": "uid://cigrtvjrb4j3j"
-}
-}
-}
+materials/extract_path=""
+_subresources={}
 gltf/naming_version=2
 gltf/embedded_image_handling=1
 gltf/texture_map_mode=1

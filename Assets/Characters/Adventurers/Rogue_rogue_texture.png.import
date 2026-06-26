@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c07lrbyu74d5u"
-path.s3tc="res://.godot/imported/Ranger_ranger_texture.png-6c327d7aac467baedb96dec9ec93fa0a.s3tc.ctex"
+uid="uid://brhvdimkifj8x"
+path.s3tc="res://.godot/imported/Rogue_rogue_texture.png-56d8f3e15dfa110c6ed811cfb737f59d.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "cce0a8fd41d7db9bef78ccb560e9500d"
+"md5": "e24a3d2f6e39f79ab8c3dab2f3ab950f"
 }
 
 [deps]
 
-source_file="res://Assets/Characters/Ranger_ranger_texture.png"
-dest_files=["res://.godot/imported/Ranger_ranger_texture.png-6c327d7aac467baedb96dec9ec93fa0a.s3tc.ctex"]
+source_file="res://Assets/Characters/Adventurers/Rogue_rogue_texture.png"
+dest_files=["res://.godot/imported/Rogue_rogue_texture.png-56d8f3e15dfa110c6ed811cfb737f59d.s3tc.ctex"]
 
 [params]
 

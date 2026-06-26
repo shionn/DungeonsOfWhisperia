@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://duyv10q0hqy0g"]
 
-[ext_resource type="PackedScene" uid="uid://bcqj4vgg680ca" path="res://Assets/Characters/Skeleton_Minion.glb" id="1_3h15f"]
+[ext_resource type="PackedScene" uid="uid://bcqj4vgg680ca" path="res://Assets/Characters/Skeleton/Skeleton_Minion.glb" id="1_3h15f"]
 [ext_resource type="PackedScene" uid="uid://cilph76wsdfia" path="res://Assets/Animations/RigMediumAnimationCharacter.tscn" id="2_18h7b"]
 
 [node name="Skeleton_Minion" unique_id=1366271086 instance=ExtResource("1_3h15f")]

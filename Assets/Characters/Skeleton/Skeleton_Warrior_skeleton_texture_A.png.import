@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bdi75yg5xpifj"
-path.s3tc="res://.godot/imported/Skeleton_Minion_skeleton_texture_A.png-704f0959215f8333b10bb1f10abec57d.s3tc.ctex"
+uid="uid://cbdwprdkycaas"
+path.s3tc="res://.godot/imported/Skeleton_Warrior_skeleton_texture_A.png-7e4eb5a8d12a9d58314adb5049629179.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://Assets/Characters/Skeleton_Minion_skeleton_texture_A.png"
-dest_files=["res://.godot/imported/Skeleton_Minion_skeleton_texture_A.png-704f0959215f8333b10bb1f10abec57d.s3tc.ctex"]
+source_file="res://Assets/Characters/Skeleton/Skeleton_Warrior_skeleton_texture_A.png"
+dest_files=["res://.godot/imported/Skeleton_Warrior_skeleton_texture_A.png-7e4eb5a8d12a9d58314adb5049629179.s3tc.ctex"]
 
 [params]
 

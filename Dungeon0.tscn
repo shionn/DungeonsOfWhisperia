@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://duyv10q0hqy0g" path="res://Assets/Scenes/Skeleton_Minion.tscn" id="2_my37s"]
 [ext_resource type="PackedScene" uid="uid://ckdwjb642168f" path="res://assets/kaykit/dungeon/floor/large/floor_dirt_large.gltf.glb" id="2_yxr20"]
 [ext_resource type="PackedScene" uid="uid://c2gmjs5iylgc4" path="res://assets/kaykit/dungeon/wall/corner/wall_corner.gltf.glb" id="3_aalsr"]
-[ext_resource type="PackedScene" uid="uid://bcqj4vgg680ca" path="res://Assets/Characters/Skeleton_Minion.glb" id="3_y04yx"]
+[ext_resource type="PackedScene" uid="uid://bcqj4vgg680ca" path="res://Assets/Characters/Skeleton/Skeleton_Minion.glb" id="3_y04yx"]
 [ext_resource type="PackedScene" uid="uid://cilph76wsdfia" path="res://Assets/Animations/RigMediumAnimationCharacter.tscn" id="4_a7nm6"]
 [ext_resource type="PackedScene" uid="uid://b0tok6e0yrle6" path="res://assets/kaykit/dungeon/wall/straight/wall_cracked.gltf.glb" id="4_ipk3o"]
 [ext_resource type="PackedScene" uid="uid://ddrglje3y5epr" path="res://fragment/Door.tscn" id="4_qs2cd"]
