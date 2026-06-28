@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bttyvn7xoe6wl" path="res://assets/kenney/cursor-pack/hand_open.png" id="4_resmn"]
 [ext_resource type="Script" uid="uid://fc4p1gee0wmr" path="res://gui/StatGui.gd" id="5_7lsbh"]
 [ext_resource type="Script" uid="uid://t5ana3e5k724" path="res://gui/GameOverGui.gd" id="6_spdw3"]
+[ext_resource type="Texture2D" uid="uid://5u5b1flxfb1r" path="res://assets/kenney/cursor-pack/disabled.png" id="7_m586l"]
 [ext_resource type="Script" uid="uid://co00yowhdp11c" path="res://gui/BagGui.gd" id="9_ow3qa"]
 [ext_resource type="Script" uid="uid://c56odaje3xl6x" path="res://gui/LootGui.gd" id="10_ow3qa"]
 [ext_resource type="Texture2D" uid="uid://dstsbh4f6k4j5" path="res://assets/kenney/cursor-pack/door_exit.png" id="11_0lspf"]
@@ -119,6 +120,22 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 texture = ExtResource("4_5hgfq")
+
+[node name="Disabled" type="TextureRect" parent="CenterCursor" unique_id=676310297]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("7_m586l")
 
 [node name="Stat" type="Control" parent="." unique_id=312672475]
 layout_mode = 1

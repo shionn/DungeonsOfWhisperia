@@ -7,6 +7,7 @@ extends Control
 @onready var _sword = $Sword as Control
 @onready var _magnifier = $Manifier as Control
 @onready var _hand = $Hand as Control
+@onready var _disable = $Disabled as Control
 
 const _tilt_limit = deg_to_rad(50)
 const _mouse_sensitivity = 0.01
@@ -16,8 +17,12 @@ func _physics_process(_delta: float) -> void:
 	visible = Input.mouse_mode == Input.MOUSE_MODE_CAPTURED and _player.pv > 0
 	_cross.visible =     _world.target_monster == null and _world.target_interactable == null
 	_sword.visible =     _world.target_monster != null and _world.target_monster.state != Monster.State.DEATH
-	_magnifier.visible = _world.target_monster != null and _world.target_monster.state == Monster.State.DEATH or _world.target_interactable != null and _world.target_interactable.action == Interactable.Action.LOOK
-	_hand.visible = _world.target_interactable != null and _world.target_interactable.action == Interactable.Action.ACTIVATE
+	_magnifier.visible = (
+		_world.target_monster != null and _world.target_monster.state == Monster.State.DEATH 
+		or _world.target_interactable != null and _world.target_interactable.action == Interactable.Action.LOOK and _world.target_interactable.isInRange(_player)
+		)
+	_hand.visible = _world.target_interactable != null and _world.target_interactable.action == Interactable.Action.ACTIVATE and _world.target_interactable.isInRange(_player)
+	_disable.visible = _world.target_interactable != null and not _world.target_interactable.isInRange(_player)
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED :

@@ -8,6 +8,7 @@ enum Action { ACTIVATE, LOOK }
 @onready var _area := $Area3D as Area3D
 
 @export var action : Action = Action.ACTIVATE
+@export var interactDistance : float = 3
 
 func _ready() -> void:
 	_area.connect("mouse_entered", _on_mouse_entered)
@@ -20,6 +21,8 @@ func on_interact() -> void:
 	else : 
 		print("on_interact is not overwrite")
 
+func isInRange(target: Node3D) -> bool:
+	return global_position.distance_to(target.global_position) <= interactDistance
 
 func _on_mouse_entered() -> void:
 	pass
