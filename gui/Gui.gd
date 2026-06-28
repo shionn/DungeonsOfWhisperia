@@ -1,4 +1,5 @@
 extends Control
+class_name Gui
 
 @onready var cursor = load("res://assets/kenney/cursor-pack/pointer_c.png")
 @onready var point_hand = load("res://assets/kenney/cursor-pack/hand_small_point.png")
@@ -15,7 +16,7 @@ func _ready() -> void:
 
 func _physics_process(_delta: float) -> void:
 	if Input.is_action_just_pressed("menu") :
-		if $Bag.visible : 
+		if $Bag.visible or $DialogGui.visible or $Introduction.visible : 
 			_close()
 		else :
 			_open()
@@ -23,6 +24,10 @@ func _physics_process(_delta: float) -> void:
 func openLoot(monster: Monster) -> void :
 	$Loot.loot(monster)
 	_open()
+	
+func openDialog(dialog: Dialog) -> void:
+	$DialogGui.open(dialog)
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
 func _open() -> void : 
 	$Bag.show()
@@ -34,4 +39,5 @@ func _close() -> void :
 	$Loot.hide()
 	$Menu.hide()
 	$Introduction.hide()
+	$DialogGui.hide()
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED

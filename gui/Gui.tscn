@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://bj22r3dqrlgrh" path="res://assets/kenney/ui-adventure/panel_brown_SW.png" id="16_v34si"]
 [ext_resource type="Texture2D" uid="uid://f4bn5pgi4ls3" path="res://assets/kenney/ui-adventure/panel_brown_S.png" id="17_03rpx"]
 [ext_resource type="Texture2D" uid="uid://coc4mm1g1nlkp" path="res://assets/kenney/ui-adventure/panel_brown_SE.png" id="18_u1nxv"]
+[ext_resource type="Script" uid="uid://cstky8dpig813" path="res://gui/DialogGui.gd" id="21_fucts"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8rxp0"]
 bg_color = Color(1, 0.94509804, 0.8235294, 1)
@@ -27,13 +28,14 @@ bg_color = Color(1, 0.94509804, 0.8235294, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fucts"]
 bg_color = Color(1, 0.94509804, 0.8235294, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m586l"]
+bg_color = Color(1, 0.94509804, 0.8235294, 1)
+
 [node name="Gui" type="Control" unique_id=679884730]
 layout_mode = 3
-anchors_preset = 0
-offset_left = 5.0
-offset_top = 5.0
-offset_right = 1147.0
-offset_bottom = 644.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
@@ -424,7 +426,7 @@ Ceci est une version [color=red]alpha[/color] pour tester et montrer le concept.
 Se déplacer avec ZQSD
 Orienter la vue avec la souris
 Action avec le clic gauche (Attaquer/Ramasser/Actionner)
-Ouvrir l’interface avec Echap (Sac/Menu/Quitter/Sauvegarder)
+Ouvrir/Fermer l’interface avec Echap (Sac/Menu/Quitter/Sauvegarder)
 Utiliser un objet : 
 [ul]Clic droit depuis votre sac (Potion par exemple)
 Clic gauche et déplacer sur l’interaction (Clef sur Porte par exemple)[/ul]
@@ -458,6 +460,141 @@ stretch_mode = 1
 layout_mode = 2
 texture = ExtResource("18_u1nxv")
 
+[node name="DialogGui" type="GridContainer" parent="." unique_id=1189208125]
+z_index = 10
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -500.0
+offset_top = -260.0
+offset_right = 500.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 3
+script = ExtResource("21_fucts")
+
+[node name="NW" type="TextureRect" parent="DialogGui" unique_id=1117786014]
+layout_mode = 2
+texture = ExtResource("11_fucts")
+
+[node name="N" type="TextureRect" parent="DialogGui" unique_id=174734544]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("12_m586l")
+stretch_mode = 1
+
+[node name="NE" type="TextureRect" parent="DialogGui" unique_id=744489947]
+layout_mode = 2
+texture = ExtResource("13_s2c3b")
+
+[node name="W" type="TextureRect" parent="DialogGui" unique_id=1553917918]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("14_jpmve")
+stretch_mode = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="DialogGui" unique_id=1163594177]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_m586l")
+
+[node name="MarginContainer" type="MarginContainer" parent="DialogGui/PanelContainer" unique_id=1117722107]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DialogGui/PanelContainer/MarginContainer" unique_id=826935219]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="DialogGui/PanelContainer/MarginContainer/VBoxContainer" unique_id=772490081]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Ceci est un test d'exemple
+Ceci est un test d'exemple
+Ceci est un test d'exemple
+Ceci est un test d'exemple
+Ceci est un test d'exemple
+Ceci est un test d'exemple
+Ceci est un test d'exemple
+"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="DialogGui/PanelContainer/MarginContainer/VBoxContainer" unique_id=1449786005]
+layout_mode = 2
+
+[node name="OptionButton1" type="Button" parent="DialogGui/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1608557154]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "Option"
+text = "Option"
+
+[node name="OptionButton2" type="Button" parent="DialogGui/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1857374092]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "Option"
+text = "Option"
+
+[node name="OptionButton3" type="Button" parent="DialogGui/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1747482232]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "Option"
+text = "Option"
+
+[node name="OptionButton4" type="Button" parent="DialogGui/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1779051247]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "Option"
+text = "Option"
+
+[node name="OptionButton5" type="Button" parent="DialogGui/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=748938204]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "Option"
+text = "Option"
+
+[node name="CloseButton" type="Button" parent="DialogGui/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=699872883]
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "Fermer"
+text = "Fermer"
+
+[node name="E" type="TextureRect" parent="DialogGui" unique_id=1546131923]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("15_mya5i")
+stretch_mode = 1
+
+[node name="SW" type="TextureRect" parent="DialogGui" unique_id=1146358572]
+layout_mode = 2
+texture = ExtResource("16_v34si")
+
+[node name="S" type="TextureRect" parent="DialogGui" unique_id=207701471]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("17_03rpx")
+stretch_mode = 1
+
+[node name="SE" type="TextureRect" parent="DialogGui" unique_id=676692067]
+layout_mode = 2
+texture = ExtResource("18_u1nxv")
+
 [connection signal="pressed" from="Bag/PanelContainer/MarginContainer/VBoxContainer/CloseButton" to="." method="_close"]
 [connection signal="pressed" from="Loot/PanelContainer/MarginContainer/VBoxContainer/CloseButton" to="." method="_close"]
 [connection signal="pressed" from="Introduction/PanelContainer/MarginContainer/VBoxContainer/CloseButton" to="." method="_close"]
+[connection signal="pressed" from="DialogGui/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/CloseButton" to="." method="_close"]

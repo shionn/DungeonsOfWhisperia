@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dtkqe34k0hfda" path="res://Assets/Dungeons/Tables/stool_round.gltf" id="7_we3ui"]
 [ext_resource type="PackedScene" uid="uid://b0n3wa8ptu8li" path="res://Assets/Dungeons/Floor/Large/floor_wood_large.gltf" id="9_we3ui"]
 [ext_resource type="Script" uid="uid://bpgb3pwbq61mh" path="res://fragment/Interactable.gd" id="10_we3ui"]
+[ext_resource type="Script" uid="uid://cxe0hpd6pnr8q" path="res://gui/Dialog.gd" id="11_tbvcw"]
 [ext_resource type="PackedScene" uid="uid://y38wo3hdhqtq" path="res://Assets/Dungeons/Wall/wall_shelves.gltf" id="15_a7nm6"]
 [ext_resource type="PackedScene" uid="uid://dvd4uuprholj6" path="res://fragment/monsters/Monster.tscn" id="18_5ip2l"]
 [ext_resource type="PackedScene" uid="uid://kwbu30ltyyru" path="res://Assets/Dungeons/Floor/Large/floor_dirt_large.gltf" id="21_a7nm6"]
@@ -177,6 +178,13 @@ action = 1
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Entrance/stairs_walled2/Area3D" unique_id=1258115370]
 transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.7071068, 0, -0.7071068, 0.70710677, 0, 1.8902106, 2.2146444)
 shape = SubResource("BoxShape3D_b02ke")
+
+[node name="description" type="Node" parent="Entrance/stairs_walled2" unique_id=1605374156]
+script = ExtResource("11_tbvcw")
+text = "Ceci est l'entrée du donjon. 
+
+Dans les futures versions du jeu, cela permettra de sortir du donjon. Mais pour l'instant, ça sert à rien."
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
 [node name="torch_mounted" parent="Entrance" unique_id=342053045 instance=ExtResource("3_we3ui")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 18, 0, 6)
