@@ -7,18 +7,23 @@ extends Control
 @onready var _items = $"/root/World/Items" as Items
 
 var _goldRessource = load("res://assets/resources-pack-1/Coin-48.png")
+var _dragButton : TextureButton
+var _dragItem : Item
+var _interactable : Interactable
 
 #var drag : Item = null
 func _ready() -> void:
 	visible = false
-	_bag.on_item_change.connect(self.refresh)
+	_bag.on_item_change.connect(self._refresh)
 
 func _process(_delta: float) -> void:
+	if _dragButton:
+		_dragButton.global_position = get_viewport().get_mouse_position() + Vector2(5,5)
 	#if drag != null :
 	#	drag.global_position = get_viewport().get_mouse_position() + Vector2(5,5)
 	pass
 
-func refresh() -> void:
+func _refresh() -> void:
 	for child in _container.get_children() : child.queue_free()
 	if _bag.gold > 0:
 		var button = TextureButton.new();
@@ -33,14 +38,46 @@ func refresh() -> void:
 			var button = TextureButton.new();
 			button.texture_normal =  item.icon
 			button.tooltip_text = item.name+"\n"+item.description
-			button.button_mask = MOUSE_BUTTON_MASK_RIGHT
+			button.button_mask = MOUSE_BUTTON_MASK_RIGHT | MOUSE_BUTTON_MASK_LEFT
 			button.pressed.connect(func(): self._activate(item))
+			button.button_down.connect(func(): self._start_drag(button, item))
+			button.button_up.connect(func(): self._end_drag(button, item))
 			_container.add_child(button)
 
+func _start_drag(button : TextureButton, item : Item) -> void :
+	print("start drag")
+	if Input.is_action_just_pressed("interact"):
+		_dragButton = button
+		_dragItem = item
+		_dragButton.set_default_cursor_shape(Control.CURSOR_DRAG)
+		#set_default_cursor_shape()
+
+func _end_drag(_button : TextureButton, _item : Item) -> void :
+	print("end drag")
+	if Input.is_action_just_released("interact") and _dragButton:
+		_dragButton.set_default_cursor_shape(Control.CURSOR_ARROW)
+		_dragButton = null
+		_dragItem = null
+		_refresh()
+
+func on_enter(interactable : Node3D) -> void :
+	print("on enter")
+	if _dragButton :
+		self._interactable = interactable
+		_dragButton.set_default_cursor_shape(Control.CURSOR_CAN_DROP)
+		#set_default_cursor_shape(Control.CURSOR_CAN_DROP)
+
+func on_exit(interactable : Node3D) -> void :
+	print("on exit")
+	if self._interactable == interactable and _dragButton:
+		_dragButton.set_default_cursor_shape(Control.CURSOR_DRAG)
+		self._interactable = null
+
 func _activate(item : Item) -> void :
-	item._action.emit()
-	if item.conssommable :
-		_bag.unloot(item.item_name)
+	if not Input.is_action_just_released("interact"):
+		item._action.emit()
+		if item.conssommable :
+			_bag.unloot(item.item_name)
 
 func _on_close_button_pressed() -> void:
 	hide()
@@ -62,3 +99,9 @@ func load_game() -> void :
 			#_grid.add_child(item)
 	#on_item_change.emit()
 	pass
+
+func _on_visibility_changed() -> void:
+	if visible and _container : 
+		_dragButton = null
+		_dragItem = null
+		_refresh()

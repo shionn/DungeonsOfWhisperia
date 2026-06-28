@@ -8,9 +8,13 @@ const SPEED = 3
 
 @export var open = false
 @export var revert = false
+@export var locked = false
 
 func on_interact() -> void:
-	open = not open
+	if locked :
+		pass
+	else :
+		open = not open
 
 func _physics_process(delta: float) -> void:
 	if open :

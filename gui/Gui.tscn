@@ -611,6 +611,7 @@ stretch_mode = 1
 layout_mode = 2
 texture = ExtResource("18_u1nxv")
 
+[connection signal="visibility_changed" from="Bag" to="Bag" method="_on_visibility_changed"]
 [connection signal="pressed" from="Bag/PanelContainer/MarginContainer/VBoxContainer/CloseButton" to="." method="_close"]
 [connection signal="pressed" from="Loot/PanelContainer/MarginContainer/VBoxContainer/CloseButton" to="." method="_close"]
 [connection signal="pressed" from="Introduction/PanelContainer/MarginContainer/VBoxContainer/CloseButton" to="." method="_close"]
