@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cd70tnt7fd2v6" path="res://Assets/Dungeons/Tables/table_long_decorated_C.gltf" id="7_a7nm6"]
 [ext_resource type="PackedScene" uid="uid://dtkqe34k0hfda" path="res://Assets/Dungeons/Tables/stool_round.gltf" id="7_we3ui"]
 [ext_resource type="PackedScene" uid="uid://b0n3wa8ptu8li" path="res://Assets/Dungeons/Floor/Large/floor_wood_large.gltf" id="9_we3ui"]
+[ext_resource type="Script" uid="uid://bpgb3pwbq61mh" path="res://fragment/Interactable.gd" id="10_we3ui"]
 [ext_resource type="PackedScene" uid="uid://y38wo3hdhqtq" path="res://Assets/Dungeons/Wall/wall_shelves.gltf" id="15_a7nm6"]
 [ext_resource type="PackedScene" uid="uid://dvd4uuprholj6" path="res://fragment/monsters/Monster.tscn" id="18_5ip2l"]
 [ext_resource type="PackedScene" uid="uid://kwbu30ltyyru" path="res://Assets/Dungeons/Floor/Large/floor_dirt_large.gltf" id="21_a7nm6"]
@@ -22,6 +23,9 @@
 [ext_resource type="PackedScene" uid="uid://klr1d6x5mt0l" path="res://Assets/Dungeons/Wall/wall_cracked.gltf" id="22_tbvcw"]
 [ext_resource type="PackedScene" uid="uid://dfqu824ryf85i" path="res://Assets/Dungeons/Floor/Large/floor_dirt_large_rocky.gltf" id="22_we3ui"]
 [ext_resource type="PackedScene" uid="uid://b3w65ugrkoyx4" path="res://Assets/Dungeons/Floor/Large/floor_tile_large.gltf" id="23_tbvcw"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_b02ke"]
+size = Vector3(3.4, 4.8, 0.7)
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_qs2cd"]
 vertices = PackedVector3Array(10, 0, 1, -10, 0, 1, 10, 0, -1, -10, 0, -1)
@@ -165,6 +169,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
 
 [node name="stairs_walled2" parent="Entrance" unique_id=464899705 instance=ExtResource("22_swm8l")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8)
+script = ExtResource("10_we3ui")
+action = 1
+
+[node name="Area3D" type="Area3D" parent="Entrance/stairs_walled2" unique_id=1911576458]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Entrance/stairs_walled2/Area3D" unique_id=1258115370]
+transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.7071068, 0, -0.7071068, 0.70710677, 0, 1.8902106, 2.2146444)
+shape = SubResource("BoxShape3D_b02ke")
 
 [node name="torch_mounted" parent="Entrance" unique_id=342053045 instance=ExtResource("3_we3ui")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 18, 0, 6)

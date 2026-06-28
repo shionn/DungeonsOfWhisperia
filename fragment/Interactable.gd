@@ -1,7 +1,12 @@
 extends Node3D
 class_name Interactable
 
+enum Action { ACTIVATE, LOOK }
+
 @onready var _area := $Area3D as Area3D
+
+@export var action : Action = Action.ACTIVATE
+@export_multiline var description : String
 
 func _ready() -> void:
 	_area.connect("mouse_entered", _on_mouse_entered)
@@ -9,6 +14,8 @@ func _ready() -> void:
 	_area.connect("input_event", _on_input_event)
 
 func on_interact() -> void: 
+	#if description :
+		
 	print("on_interact is not overwrite")
 
 
