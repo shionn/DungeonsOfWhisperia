@@ -4,7 +4,8 @@ extends Node
 enum ItemName {
 	None,
 	Potion,
-	ClefGargouille
+	ClefBouclierEpee,
+	BoissonRaffinee
 }
 
 func from(item_name : ItemName) -> Item :

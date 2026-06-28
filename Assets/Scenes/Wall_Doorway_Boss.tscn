@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://cpt65wpacxuj1"]
+
+[ext_resource type="PackedScene" uid="uid://budb61il707se" path="res://Assets/Dungeons/Wall/Doorway/wall_doorway.gltf" id="1_n7vb2"]
+[ext_resource type="Script" uid="uid://o7onkoy5budk" path="res://Assets/Scenes/Scripts/Door.gd" id="2_t4tr4"]
+[ext_resource type="PackedScene" uid="uid://cvkc7f3ant8nr" path="res://Assets/Dungeons/Weapons/sword_shield.gltf" id="3_t4tr4"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_fhw0n"]
+radius = 0.45
+
+[node name="Wall_Doorway" unique_id=812446971 instance=ExtResource("1_n7vb2")]
+script = ExtResource("2_t4tr4")
+
+[node name="sword_shield2" parent="wall_doorway/wall_doorway_door" parent_id_path=PackedInt32Array(1034287910) index="1" unique_id=1419880763 instance=ExtResource("3_t4tr4")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0.8, 1.9, 0.1)
+
+[node name="sword_shield3" parent="wall_doorway/wall_doorway_door" parent_id_path=PackedInt32Array(1034287910) index="2" unique_id=288236470 instance=ExtResource("3_t4tr4")]
+transform = Transform3D(-0.8, 0, -6.9938224e-08, 0, 0.8, 0, 6.9938224e-08, 0, -0.8, 0.8, 1.9, -0.1)
+
+[node name="Area3D" type="Area3D" parent="." index="1" unique_id=1967343378]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0" unique_id=25147986]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5172886, 1.15, -1.4901161e-08)
+shape = SubResource("SphereShape3D_fhw0n")

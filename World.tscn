@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://ccps0bdr1ahel" path="res://fragment/items/Items.gd" id="5_wygdx"]
 [ext_resource type="Texture2D" uid="uid://dve5cabnc5o2x" path="res://assets/fanatisy-magic-set/potion-2-48.png" id="6_wygdx"]
 [ext_resource type="Texture2D" uid="uid://crhvjkxucw0xb" path="res://assets/free-rpg-icons-2/48x48/key.png" id="8_bah7m"]
+[ext_resource type="Texture2D" uid="uid://bho5wu36vyxai" path="res://assets/fanatisy-magic-set/potion-1-48.png" id="9_fv4w7"]
 
 [sub_resource type="Environment" id="Environment_js7pq"]
 background_energy_multiplier = 0.7
@@ -35,13 +36,21 @@ description = "Rend 1D3 pv"
 conssommable = true
 metadata/_custom_type_script = "uid://bjbab3ep2gfn2"
 
-[node name="ClefGargouille" type="Node" parent="Items" unique_id=1594641113]
+[node name="Clef Bouclier Epée" type="Node" parent="Items" unique_id=1594641113]
 script = ExtResource("5_p1v5b")
 item_name = 2
 icon = ExtResource("8_bah7m")
 description = "Cette clef à une inscription 
-en forme de gargouille"
+en forme de bouclier et d'épée"
+metadata/_custom_type_script = "uid://bjbab3ep2gfn2"
+
+[node name="Boisson Raffinée" type="Node" parent="Items" unique_id=1863142575]
+script = ExtResource("5_p1v5b")
+item_name = 3
+icon = ExtResource("9_fv4w7")
+description = "Rend 2 pv"
+conssommable = true
 metadata/_custom_type_script = "uid://bjbab3ep2gfn2"
 
 [connection signal="_action" from="Items/Potion" to="Items/Potion" method="_give_back_1d3_pv"]
-[connection signal="_action" from="Items/ClefGargouille" to="Items/ClefGargouille" method="_give_back_4_pv"]
+[connection signal="_action" from="Items/Boisson Raffinée" to="Items/Boisson Raffinée" method="_give_back_2_pv"]
