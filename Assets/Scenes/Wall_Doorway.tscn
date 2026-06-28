@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dnj0c0ut1hd35"]
+
+[ext_resource type="PackedScene" uid="uid://budb61il707se" path="res://Assets/Dungeons/Wall/Doorway/wall_doorway.gltf" id="1_fhw0n"]
+[ext_resource type="Script" uid="uid://o7onkoy5budk" path="res://Assets/Scenes/Scripts/Door.gd" id="2_gfxh0"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_fhw0n"]
+radius = 0.45
+
+[node name="Wall_Doorway" unique_id=812446971 instance=ExtResource("1_fhw0n")]
+script = ExtResource("2_gfxh0")
+
+[node name="Area3D" type="Area3D" parent="." index="1" unique_id=1967343378]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0" unique_id=25147986]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5172886, 1.15, -1.4901161e-08)
+shape = SubResource("SphereShape3D_fhw0n")

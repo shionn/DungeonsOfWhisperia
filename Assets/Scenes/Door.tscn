@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://ddrglje3y5epr"]
+[gd_scene format=3 uid="uid://bapg11xljg1nr"]
 
-[ext_resource type="Script" uid="uid://o7onkoy5budk" path="res://Assets/Scenes/Door.gd" id="1_yrjkr"]
-[ext_resource type="PackedScene" uid="uid://vsfsaiefggnp" path="res://assets/kaykit/dungeon/wall/doorway/wall_doorway.glb" id="2_3ki0k"]
+[ext_resource type="Script" uid="uid://o7onkoy5budk" path="res://Assets/Scenes/Scripts/Door.gd" id="1_yrjkr"]
+[ext_resource type="PackedScene" uid="uid://budb61il707se" path="res://Assets/Dungeons/Wall/Doorway/wall_doorway.gltf" id="2_n3k43"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_resmn"]
 radius = 0.45
@@ -9,7 +9,7 @@ radius = 0.45
 [node name="Door" type="Node3D" unique_id=1540089670]
 script = ExtResource("1_yrjkr")
 
-[node name="wall_doorway" parent="." unique_id=1319301759 instance=ExtResource("2_3ki0k")]
+[node name="wall_doorway" parent="." unique_id=1918121144 instance=ExtResource("2_n3k43")]
 
 [node name="Area3D" type="Area3D" parent="." unique_id=160373130]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9, 0, 0)

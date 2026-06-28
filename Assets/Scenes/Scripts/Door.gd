@@ -1,7 +1,7 @@
 class_name Door
 extends Interactable
 
-@onready var door = $wall_doorway/wall_doorway/wall_doorway_door
+@onready var door = $wall_doorway/wall_doorway_door
 
 const PI_2 = PI / 2
 const SPEED = 3
