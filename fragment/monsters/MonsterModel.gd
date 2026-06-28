@@ -12,7 +12,7 @@ var _random = RandomNumberGenerator.new()
 func _init(model_file, g:Monster):
 	var file = FileAccess.open(model_file, FileAccess.READ)
 	var json = JSON.parse_string(file.get_as_text())
-	fov = json.get("fov",60)
+	fov = json.get("fov",140)
 	def = json.get("def",1)
 	pv = json.get("pv",2)
 	global_cold_down = json.get("global_cold_down",2)

@@ -23,9 +23,6 @@ var state : State = State.IDLE
 
 func _ready() -> void:
 	_model = MonsterModel.new(_model_file, self)
-	#print(_animation.get_animation_library_list())
-	#print(_animation.get_animation_library("RigMediumAnimation").get_animation_list())
-	#_animation.get_animation_library("RigMediumAnimation").get_animation("Idle_A").loop_mode = Animation.LOOP_LINEAR
 	_navigation_agent.target_desired_distance = _chase_dist
 	start_animation("Idle_A")
 	_atk = _model.get_atk()
@@ -90,7 +87,7 @@ func _see_player() -> bool :
 func _move_to_player() -> void :
 	var next_path_position: Vector3 = _navigation_agent.get_next_path_position()
 	self.look_at(next_path_position,Vector3.UP,true)
-	self.rotation.x=0
+	self.rotation.x = 0
 	self.velocity = global_position.direction_to(next_path_position) * _movement_speed
 	start_animation("Walking_A")
 

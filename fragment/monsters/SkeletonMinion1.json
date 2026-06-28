@@ -1,11 +1,15 @@
 {
-	"fov" : 60,
+	"fov" : 80,
+	"pv" : 2,
+	"def" : 1,
 	"atks": [{
 		"animation": "Melee_1H_Attack_Chop",
-		"cold_down": 2.0
+		"cold_down": 2.0,
+		"atk": 1
 	}, {
 		"animation": "Melee_2H_Attack_Chop",
-		"cold_down": 2.0,
-		"range": 3.0
+		"cold_down": 5.0,
+		"range": 3.0,
+		"atk": 2
 	}]
 }
