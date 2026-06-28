@@ -25,7 +25,6 @@ func refresh() -> void:
 		button.texture_normal = _goldRessource
 		button.tooltip_text = "OR: "+str(_bag.gold)
 		button.button_mask = MOUSE_BUTTON_MASK_LEFT | MOUSE_BUTTON_MASK_RIGHT
-		#button.pressed.connect(func(): self._loot_gold(button, monster))
 		_container.add_child(button)
 
 	for item_name in _bag.items :
@@ -33,10 +32,15 @@ func refresh() -> void:
 		if item : 
 			var button = TextureButton.new();
 			button.texture_normal =  item.icon
-			button.tooltip_text = item.name
-			button.button_mask = MOUSE_BUTTON_MASK_LEFT | MOUSE_BUTTON_MASK_RIGHT
-			button.pressed.connect(func(): print(item))
+			button.tooltip_text = item.name+"\n"+item.description
+			button.button_mask = MOUSE_BUTTON_MASK_RIGHT
+			button.pressed.connect(func(): self._activate(item))
 			_container.add_child(button)
+
+func _activate(item : Item) -> void :
+	item._action.emit()
+	if item.conssommable :
+		_bag.unloot(item.item_name)
 
 func _on_close_button_pressed() -> void:
 	hide()

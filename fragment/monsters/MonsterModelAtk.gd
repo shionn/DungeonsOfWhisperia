@@ -7,7 +7,6 @@ var cold_down_factor : float
 var atk_range : float = 2
 var on_cold_down = false
 var _cold_down_timer : Timer = Timer.new()
-var _dice = Dices.new()
 
 func _init(json, g:Monster) -> void:
 	animation = json["animation"]
@@ -20,7 +19,7 @@ func _init(json, g:Monster) -> void:
 	_cold_down_timer.timeout.connect(self._on_cold_down_timer_timeout)
 
 func damage() -> int:
-	return _dice.d6(2,5)
+	return Dices.d6(2,5)
 
 func start() -> void:
 	on_cold_down = true

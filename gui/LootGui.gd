@@ -15,7 +15,7 @@ func loot(container:Object) -> void:
 	if container.loot_gold > 0:
 		var button = TextureButton.new();
 		button.texture_normal = _goldRessource
-		button.tooltip_text = "OR: "+str(container.loot_gold)+"\n Ceci"
+		button.tooltip_text = "OR: "+str(container.loot_gold)
 		button.pressed.connect(func(): self._loot_gold(button, container))
 		_container.add_child(button)
 
@@ -23,7 +23,7 @@ func loot(container:Object) -> void:
 	if item :
 		var button = TextureButton.new();
 		button.texture_normal =  item.icon
-		button.tooltip_text = item.name
+		button.tooltip_text = item.name+"\n"+item.description
 		button.pressed.connect(func(): self._loot_item(item, button, container))
 		_container.add_child(button)
 	self.visible = true

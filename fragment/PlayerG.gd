@@ -13,7 +13,6 @@ const _max_range: float = 20
 const _atk_range: float = 2
 
 var _state : State = State.MOVE
-var _dices = Dices.new()
 var _attacked_monster : Monster
 
 var pv = 6
@@ -65,7 +64,7 @@ func _handle_move_input() -> void:
 		_start_animation("Idle_A")
 
 func receive_atk(nb_atk: int) -> void:
-	var nb_def = _dices.d6(2, 5)
+	var nb_def = Dices.d6(2, 5)
 	var deg = nb_atk - nb_def
 	if deg > 0 :
 		pv = max(pv - deg, 0)
@@ -85,7 +84,7 @@ func _start_animation(anim:String, timer:bool=false, timerFactor:float=1) -> voi
 func _on_timer_timeout() -> void:
 	match _state :
 		State.ATTACK:
-			var nb_atk = _dices.d6(2,4)
+			var nb_atk = Dices.d6(2,4)
 			_attacked_monster.receive_atk(nb_atk)
 			_state = State.MOVE
 		State.HIT :

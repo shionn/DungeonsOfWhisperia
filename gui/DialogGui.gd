@@ -10,4 +10,3 @@ func open(dialog: Dialog)->void :
 	_text.clear()
 	_text.append_text(dialog.text)
 	show()
-	pass

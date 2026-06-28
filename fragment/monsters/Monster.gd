@@ -18,7 +18,6 @@ const _movement_speed: float = 4.0
 
 var _model : MonsterModel
 var _atk : MonsterModelAtk
-var _dices : Dices = Dices.new()
 var _on_gcd : bool = false
 var state : State = State.IDLE
 
@@ -107,7 +106,7 @@ func start_animation(anim:String, time:bool=false) -> void:
 
 func receive_atk(nb_atk: int) -> void:
 	if state == State.DEATH : return
-	var nb_def = _dices.d6(_model.def, 6)
+	var nb_def = Dices.d6(_model.def, 6)
 	var deg = nb_atk - nb_def
 	if deg > 0 :
 		_model.pv = _model.pv - deg
