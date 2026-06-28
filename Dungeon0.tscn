@@ -4,8 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://ddrglje3y5epr" path="res://Assets/Scenes/Scripts/Door.tscn" id="4_qs2cd"]
 [ext_resource type="PackedScene" uid="uid://sn0772t8w1w4" path="res://assets/kaykit/dungeon/wall/straight/wall.gltf.glb" id="5_rhsgf"]
 [ext_resource type="PackedScene" uid="uid://b0n3wa8ptu8li" path="res://Assets/Dungeons/Floor/Large/floor_wood_large.gltf" id="9_we3ui"]
-[ext_resource type="PackedScene" uid="uid://irfyi0yy7iab" path="res://assets/kaykit/dungeon/wall/straight/wall_shelves.gltf.glb" id="10_lm26k"]
 [ext_resource type="PackedScene" uid="uid://6vgbf4prfq4h" path="res://assets/kaykit/dungeon/bed/bed_floor.gltf.glb" id="13_aalsr"]
+[ext_resource type="PackedScene" uid="uid://y38wo3hdhqtq" path="res://Assets/Dungeons/Wall/wall_shelves.gltf" id="15_a7nm6"]
 [ext_resource type="PackedScene" uid="uid://dvwxwfk64ucfy" path="res://Assets/Scenes/TorchWall.tscn" id="16_3uggc"]
 [ext_resource type="PackedScene" uid="uid://7ev1fvcbuujf" path="res://assets/kaykit/dungeon/table/table_long_decorated_C.gltf.glb" id="17_qs2cd"]
 [ext_resource type="PackedScene" uid="uid://dvd4uuprholj6" path="res://fragment/monsters/Monster.tscn" id="18_5ip2l"]
@@ -176,12 +176,6 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 20, 
 
 [node name="wall_gltf10" parent="walls" unique_id=182956824 instance=ExtResource("5_rhsgf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 11.999999)
-
-[node name="wall_shelves_gltf2" parent="walls" unique_id=355980841 instance=ExtResource("10_lm26k")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 20, 0, -12)
-
-[node name="wall_shelves_gltf3" parent="walls" unique_id=123294932 instance=ExtResource("10_lm26k")]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 28, 0, 12)
 
 [node name="Roof" type="Node3D" parent="." unique_id=2031388596]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -2)
@@ -527,6 +521,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, -16)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -16)
 
 [node name="Walls" type="Node3D" parent="." unique_id=30849686]
+
+[node name="wall_shelves2" parent="Walls" unique_id=1481565781 instance=ExtResource("15_a7nm6")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 18, 0, -14)
+
+[node name="wall_shelves3" parent="Walls" unique_id=1807186846 instance=ExtResource("15_a7nm6")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 26, 0, 10)
 
 [node name="wall_cracked2" parent="Walls" unique_id=1473450079 instance=ExtResource("22_tbvcw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -2)
