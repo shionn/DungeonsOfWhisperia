@@ -4,6 +4,7 @@ class_name Interactable
 enum Action { ACTIVATE, LOOK }
 
 @onready var _gui := $/root/World/Gui as Gui
+@onready var _player := $/root/World/Player as PlayerG
 @onready var _area := $Area3D as Area3D
 
 @export var action : Action = Action.ACTIVATE

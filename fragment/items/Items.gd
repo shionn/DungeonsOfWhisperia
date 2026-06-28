@@ -3,11 +3,14 @@ extends Node
 
 enum ItemName {
 	None,
-	Potion
+	Potion,
+	ClefGargouille
 }
 
-func from(name : ItemName) -> Item :
-	match name :
-		ItemName.Potion:
-			return $Potion
-		_: return null
+func from(item_name : ItemName) -> Item :
+	for item in get_children() :
+		if item is Item :
+			var i = item as Item
+			if i.item_name == item_name :
+				return i
+	return null

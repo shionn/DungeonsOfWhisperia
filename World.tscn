@@ -16,7 +16,7 @@ script = ExtResource("1_bcbcq")
 
 [node name="Player" parent="." unique_id=384338158 instance=ExtResource("2_js7pq")]
 
-[node name="Dungeon01" parent="." unique_id=266448183 instance=ExtResource("1_c6gwx")]
+[node name="Dungeon00" parent="." unique_id=266448183 instance=ExtResource("1_c6gwx")]
 
 [node name="Gui" parent="." unique_id=679884730 instance=ExtResource("2_2dftf")]
 
@@ -32,4 +32,10 @@ item_name = 1
 icon = ExtResource("6_wygdx")
 metadata/_custom_type_script = "uid://bjbab3ep2gfn2"
 
+[node name="ClefGargouille" type="Node" parent="Items" unique_id=1594641113]
+script = ExtResource("5_p1v5b")
+item_name = 2
+metadata/_custom_type_script = "uid://bjbab3ep2gfn2"
+
 [connection signal="_action" from="Items/Potion" to="Items/Potion" method="_give_back_4_pv"]
+[connection signal="_action" from="Items/ClefGargouille" to="Items/ClefGargouille" method="_give_back_4_pv"]

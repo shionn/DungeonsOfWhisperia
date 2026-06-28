@@ -21,10 +21,10 @@ func _physics_process(_delta: float) -> void:
 		else :
 			_open()
 
-func openLoot(monster: Monster) -> void :
-	$Loot.loot(monster)
+func openLoot(container: Object) -> void :
+	$Loot.loot(container)
 	_open()
-	
+
 func openDialog(dialog: Dialog) -> void:
 	$DialogGui.open(dialog)
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE

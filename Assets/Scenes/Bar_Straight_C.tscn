@@ -1,23 +1,17 @@
 [gd_scene format=3 uid="uid://dj0modsh7x76o"]
 
 [ext_resource type="PackedScene" uid="uid://bta2mvfkcul0j" path="res://Assets/Dungeons/Bar/bar_straight_C.gltf" id="1_dasjt"]
-[ext_resource type="Script" uid="uid://bpgb3pwbq61mh" path="res://fragment/Interactable.gd" id="2_fav1t"]
-[ext_resource type="Script" uid="uid://cxe0hpd6pnr8q" path="res://gui/Dialog.gd" id="3_j3q06"]
+[ext_resource type="Script" uid="uid://ksn1twomxy1j" path="res://fragment/InteractableContainer.gd" id="2_j3q06"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_b02ke"]
 radius = 0.2
 height = 1.0
 
 [node name="bar_straight_C2" unique_id=946520791 instance=ExtResource("1_dasjt")]
-script = ExtResource("2_fav1t")
+script = ExtResource("2_j3q06")
 
 [node name="Area3D" type="Area3D" parent="." index="1" unique_id=752294620]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0" unique_id=500651030]
 transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 0.5, 0.7)
 shape = SubResource("CapsuleShape3D_b02ke")
-
-[node name="description" type="Node" parent="." index="2" unique_id=2122111954]
-script = ExtResource("3_j3q06")
-text = "Il n'y a rien d'intéressant."
-metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"

@@ -1,8 +1,7 @@
 [gd_scene format=3 uid="uid://bc0c4x5rj731i"]
 
 [ext_resource type="PackedScene" uid="uid://clio315eelfyl" path="res://Assets/Dungeons/Bar/bar_straight_C_short.gltf" id="1_sdbq4"]
-[ext_resource type="Script" uid="uid://bpgb3pwbq61mh" path="res://fragment/Interactable.gd" id="2_malek"]
-[ext_resource type="Script" uid="uid://cxe0hpd6pnr8q" path="res://gui/Dialog.gd" id="3_ei1ij"]
+[ext_resource type="Script" uid="uid://ksn1twomxy1j" path="res://fragment/InteractableContainer.gd" id="2_malek"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_b02ke"]
 radius = 0.2
@@ -15,8 +14,3 @@ script = ExtResource("2_malek")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0" unique_id=945930460]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0.70000005)
 shape = SubResource("SphereShape3D_b02ke")
-
-[node name="description" type="Node" parent="." index="2" unique_id=1931964037]
-script = ExtResource("3_ei1ij")
-text = "Il n'y a rien d'intéressant."
-metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"

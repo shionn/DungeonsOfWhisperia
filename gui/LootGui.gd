@@ -10,31 +10,31 @@ var _goldRessource = load("res://assets/resources-pack-1/Coin-48.png")
 func _ready() -> void:
 	self.visible = false
 
-func loot(monster:Monster) -> void:
+func loot(container:Object) -> void:
 	for child in _container.get_children() : child.queue_free()
-	if monster.loot_gold > 0:
+	if container.loot_gold > 0:
 		var button = TextureButton.new();
 		button.texture_normal = _goldRessource
-		button.tooltip_text = "OR: "+str(monster.loot_gold)+"\n Ceci"
-		button.pressed.connect(func(): self._loot_gold(button, monster))
+		button.tooltip_text = "OR: "+str(container.loot_gold)+"\n Ceci"
+		button.pressed.connect(func(): self._loot_gold(button, container))
 		_container.add_child(button)
 
-	var item : Item  = _items.from(monster.loot_obj)
+	var item : Item  = _items.from(container.loot_obj)
 	if item :
 		var button = TextureButton.new();
 		button.texture_normal =  item.icon
 		button.tooltip_text = item.name
-		button.pressed.connect(func(): self._loot_item(item, button, monster))
+		button.pressed.connect(func(): self._loot_item(item, button, container))
 		_container.add_child(button)
 	self.visible = true
 	
-func _loot_item(item:Item, button:TextureButton, monster:Monster) -> void:
+func _loot_item(item:Item, button:TextureButton, container:Object) -> void:
 	_bag.loot(item.item_name)
-	monster.loot_obj = Items.ItemName.None
+	container.loot_obj = Items.ItemName.None
 	button.queue_free()
 
-func _loot_gold(button:TextureButton, monster:Monster) -> void:
-	_bag.gold = _bag.gold + monster.loot_gold
-	monster.loot_gold = 0
+func _loot_gold(button:TextureButton, container:Object) -> void:
+	_bag.gold = _bag.gold + container.loot_gold
+	container.loot_gold = 0
 	button.queue_free()
 	
