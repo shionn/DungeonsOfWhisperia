@@ -7,7 +7,7 @@ extends Control
 
 func _ready() -> void:
 	Input.warp_mouse(get_viewport().get_visible_rect().size/2)
-	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	Input.set_custom_mouse_cursor(cursor, Input.CURSOR_ARROW)
 	Input.set_custom_mouse_cursor(point_hand, Input.CURSOR_POINTING_HAND)
 	Input.set_custom_mouse_cursor(drag, Input.CURSOR_DRAG)
@@ -25,12 +25,13 @@ func openLoot(monster: Monster) -> void :
 	_open()
 
 func _open() -> void : 
-	$Bag.visible = true
-	$Menu.visible = true
+	$Bag.show()
+	$Menu.show()
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
 func _close() -> void :
-	$Bag.visible = false
-	$Loot.visible = false
-	$Menu.visible = false
+	$Bag.hide()
+	$Loot.hide()
+	$Menu.hide()
+	$Introduction.hide()
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
