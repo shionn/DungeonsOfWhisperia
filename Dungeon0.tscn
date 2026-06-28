@@ -4,10 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://duyv10q0hqy0g" path="res://Assets/Scenes/Skeleton_Minion.tscn" id="2_my37s"]
 [ext_resource type="PackedScene" uid="uid://ckdwjb642168f" path="res://assets/kaykit/dungeon/floor/large/floor_dirt_large.gltf.glb" id="2_yxr20"]
 [ext_resource type="PackedScene" uid="uid://c2gmjs5iylgc4" path="res://assets/kaykit/dungeon/wall/corner/wall_corner.gltf.glb" id="3_aalsr"]
-[ext_resource type="PackedScene" uid="uid://bcqj4vgg680ca" path="res://Assets/Characters/Skeleton/Skeleton_Minion.glb" id="3_y04yx"]
-[ext_resource type="PackedScene" uid="uid://cilph76wsdfia" path="res://Assets/Animations/RigMediumAnimationCharacter.tscn" id="4_a7nm6"]
 [ext_resource type="PackedScene" uid="uid://b0tok6e0yrle6" path="res://assets/kaykit/dungeon/wall/straight/wall_cracked.gltf.glb" id="4_ipk3o"]
-[ext_resource type="PackedScene" uid="uid://ddrglje3y5epr" path="res://fragment/Door.tscn" id="4_qs2cd"]
+[ext_resource type="PackedScene" uid="uid://ddrglje3y5epr" path="res://Assets/Scenes/Scripts/Door.tscn" id="4_qs2cd"]
 [ext_resource type="PackedScene" uid="uid://sn0772t8w1w4" path="res://assets/kaykit/dungeon/wall/straight/wall.gltf.glb" id="5_rhsgf"]
 [ext_resource type="PackedScene" uid="uid://brp46a1tt100g" path="res://assets/kaykit/dungeon/wall/straight/wall_arched.gltf.glb" id="6_3uggc"]
 [ext_resource type="PackedScene" uid="uid://c0hovol1qe2l4" path="res://assets/kaykit/dungeon/wall/straight/wall_scaffold.gltf.glb" id="7_qs2cd"]
@@ -16,11 +14,12 @@
 [ext_resource type="PackedScene" uid="uid://bsejwqpsa75o3" path="res://assets/kaykit/dungeon/wall/doorway/wall_doorway_Tsplit.gltf.glb" id="11_y04yx"]
 [ext_resource type="PackedScene" uid="uid://cffasie2ooey4" path="res://assets/kaykit/dungeon/wall/straight/wall_gated.gltf.glb" id="12_yxr20"]
 [ext_resource type="PackedScene" uid="uid://6vgbf4prfq4h" path="res://assets/kaykit/dungeon/bed/bed_floor.gltf.glb" id="13_aalsr"]
-[ext_resource type="PackedScene" uid="uid://dvwxwfk64ucfy" path="res://fragment/TorchWall.tscn" id="16_3uggc"]
+[ext_resource type="PackedScene" uid="uid://dvwxwfk64ucfy" path="res://Assets/Scenes/TorchWall.tscn" id="16_3uggc"]
 [ext_resource type="PackedScene" uid="uid://7ev1fvcbuujf" path="res://assets/kaykit/dungeon/table/table_long_decorated_C.gltf.glb" id="17_qs2cd"]
 [ext_resource type="PackedScene" uid="uid://dvd4uuprholj6" path="res://fragment/monsters/Monster.tscn" id="18_5ip2l"]
 [ext_resource type="PackedScene" uid="uid://4jji78y8jvau" path="res://assets/kaykit/dungeon/table/table_long_decorated_A.gltf.glb" id="18_my37s"]
 [ext_resource type="PackedScene" uid="uid://cotsaw3wwvdrx" path="res://assets/kaykit/dungeon/table/stool.gltf.glb" id="19_lm26k"]
+[ext_resource type="Script" uid="uid://dexpl21rteomv" path="res://fragment/Roof.gd" id="22_a7nm6"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_qs2cd"]
 vertices = PackedVector3Array(10, 0, 1, -10, 0, 1, 10, 0, -1, -10, 0, -1)
@@ -86,9 +85,7 @@ _model_file = "res://fragment/monsters/SkeletonMinion1.json"
 loot_obj = 1
 loot_gold = 3
 
-[node name="Character" parent="Monster2" unique_id=447011869 instance=ExtResource("3_y04yx")]
-
-[node name="AnimationPlayer" parent="Monster2/Character" unique_id=869308477 instance=ExtResource("4_a7nm6")]
+[node name="Character" parent="Monster2" unique_id=1064022696 instance=ExtResource("2_my37s")]
 
 [node name="bed_floor_gltf" parent="." unique_id=1308285772 instance=ExtResource("13_aalsr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.6, 0, 16.2)
@@ -475,6 +472,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 18)
 [node name="roof" type="Node3D" parent="." unique_id=2031388596]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -2)
 visible = false
+script = ExtResource("22_a7nm6")
 
 [node name="floor_dirt_large_gltf5" parent="roof" unique_id=2071692895 instance=ExtResource("2_yxr20")]
 transform = Transform3D(1, 0, 0, 0, -1, -8.742278e-08, 0, 8.742278e-08, -1, 2, 4, 2)
