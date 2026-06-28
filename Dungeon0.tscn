@@ -8,7 +8,6 @@
 [ext_resource type="PackedScene" uid="uid://b0n3wa8ptu8li" path="res://Assets/Dungeons/Floor/Large/floor_wood_large.gltf" id="9_we3ui"]
 [ext_resource type="PackedScene" uid="uid://irfyi0yy7iab" path="res://assets/kaykit/dungeon/wall/straight/wall_shelves.gltf.glb" id="10_lm26k"]
 [ext_resource type="PackedScene" uid="uid://bsejwqpsa75o3" path="res://assets/kaykit/dungeon/wall/doorway/wall_doorway_Tsplit.gltf.glb" id="11_y04yx"]
-[ext_resource type="PackedScene" uid="uid://cffasie2ooey4" path="res://assets/kaykit/dungeon/wall/straight/wall_gated.gltf.glb" id="12_yxr20"]
 [ext_resource type="PackedScene" uid="uid://6vgbf4prfq4h" path="res://assets/kaykit/dungeon/bed/bed_floor.gltf.glb" id="13_aalsr"]
 [ext_resource type="PackedScene" uid="uid://dvwxwfk64ucfy" path="res://Assets/Scenes/TorchWall.tscn" id="16_3uggc"]
 [ext_resource type="PackedScene" uid="uid://7ev1fvcbuujf" path="res://assets/kaykit/dungeon/table/table_long_decorated_C.gltf.glb" id="17_qs2cd"]
@@ -17,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://cotsaw3wwvdrx" path="res://assets/kaykit/dungeon/table/stool.gltf.glb" id="19_lm26k"]
 [ext_resource type="PackedScene" uid="uid://kwbu30ltyyru" path="res://Assets/Dungeons/Floor/Large/floor_dirt_large.gltf" id="21_a7nm6"]
 [ext_resource type="Script" uid="uid://dexpl21rteomv" path="res://fragment/Roof.gd" id="22_a7nm6"]
+[ext_resource type="PackedScene" uid="uid://csf71yhygxqf3" path="res://Assets/Dungeons/Wall/wall_gated.gltf" id="22_benv4"]
 [ext_resource type="PackedScene" uid="uid://kxup3uev2bmh" path="res://Assets/Dungeons/Wall/wall_scaffold.gltf" id="22_ehcb8"]
 [ext_resource type="PackedScene" uid="uid://bjfrjb5gr6a3k" path="res://Assets/Dungeons/Wall/wall_arched.gltf" id="22_puq8f"]
 [ext_resource type="PackedScene" uid="uid://klr1d6x5mt0l" path="res://Assets/Dungeons/Wall/wall_cracked.gltf" id="22_tbvcw"]
@@ -155,12 +155,6 @@ transform = Transform3D(-1, 0, 8.543858e-08, 0, 1, 0, -8.543858e-08, 0, -1, 8, 0
 
 [node name="walls" type="Node3D" parent="." unique_id=1311694527]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -2)
-
-[node name="wall_gated_gltf" parent="walls" unique_id=511041879 instance=ExtResource("12_yxr20")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 16)
-
-[node name="wall_gated_gltf2" parent="walls" unique_id=985333031 instance=ExtResource("12_yxr20")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 16)
 
 [node name="wall_corner_gltf10" parent="walls" unique_id=854238337 instance=ExtResource("3_aalsr")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 8, 0, 0)
@@ -680,3 +674,9 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 14, 
 
 [node name="wall_scaffold7" parent="Walls" unique_id=933856731 instance=ExtResource("22_ehcb8")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 10, 0, -6)
+
+[node name="wall_gated2" parent="Walls" unique_id=1348771294 instance=ExtResource("22_benv4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 14)
+
+[node name="wall_gated3" parent="Walls" unique_id=849703614 instance=ExtResource("22_benv4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, 14)
