@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://biry1imi3i5lg"]
 
 [ext_resource type="PackedScene" uid="uid://duyv10q0hqy0g" path="res://Assets/Scenes/Skeleton_Minion.tscn" id="2_my37s"]
+[ext_resource type="PackedScene" uid="uid://bqbfybidqqw6b" path="res://Assets/Dungeons/Tables/table_long_decorated_A.gltf" id="6_y04yx"]
+[ext_resource type="PackedScene" uid="uid://cd70tnt7fd2v6" path="res://Assets/Dungeons/Tables/table_long_decorated_C.gltf" id="7_a7nm6"]
 [ext_resource type="PackedScene" uid="uid://b0n3wa8ptu8li" path="res://Assets/Dungeons/Floor/Large/floor_wood_large.gltf" id="9_we3ui"]
 [ext_resource type="PackedScene" uid="uid://6vgbf4prfq4h" path="res://assets/kaykit/dungeon/bed/bed_floor.gltf.glb" id="13_aalsr"]
 [ext_resource type="PackedScene" uid="uid://y38wo3hdhqtq" path="res://Assets/Dungeons/Wall/wall_shelves.gltf" id="15_a7nm6"]
 [ext_resource type="PackedScene" uid="uid://dvwxwfk64ucfy" path="res://Assets/Scenes/TorchWall.tscn" id="16_3uggc"]
-[ext_resource type="PackedScene" uid="uid://7ev1fvcbuujf" path="res://assets/kaykit/dungeon/table/table_long_decorated_C.gltf.glb" id="17_qs2cd"]
 [ext_resource type="PackedScene" uid="uid://dvd4uuprholj6" path="res://fragment/monsters/Monster.tscn" id="18_5ip2l"]
-[ext_resource type="PackedScene" uid="uid://4jji78y8jvau" path="res://assets/kaykit/dungeon/table/table_long_decorated_A.gltf.glb" id="18_my37s"]
 [ext_resource type="PackedScene" uid="uid://cotsaw3wwvdrx" path="res://assets/kaykit/dungeon/table/stool.gltf.glb" id="19_lm26k"]
 [ext_resource type="PackedScene" uid="uid://kwbu30ltyyru" path="res://Assets/Dungeons/Floor/Large/floor_dirt_large.gltf" id="21_a7nm6"]
 [ext_resource type="PackedScene" uid="uid://bmn1f1a3730p0" path="res://Assets/Dungeons/Wall/Doorway/wall_doorway_Tsplit.gltf" id="21_y04yx"]
@@ -103,12 +103,6 @@ transform = Transform3D(1.2914997e-07, 0, 1, 0, 1, 0, -1, 0, 1.2914997e-07, 10, 
 [node name="TorchWall2" parent="DinerRoom" unique_id=1539045840 instance=ExtResource("16_3uggc")]
 transform = Transform3D(-1, 0, 8.543858e-08, 0, 1, 0, -8.543858e-08, 0, -1, 15.9, 0, -2.1)
 
-[node name="table_long_decorated_C_gltf" parent="DinerRoom" unique_id=747146075 instance=ExtResource("17_qs2cd")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 14, 0, -16.6)
-
-[node name="table_long_decorated_A_gltf" parent="DinerRoom" unique_id=902796874 instance=ExtResource("18_my37s")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, -6)
-
 [node name="stool_gltf" parent="DinerRoom" unique_id=754533962 instance=ExtResource("19_lm26k")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.6, 0, -5)
 
@@ -120,6 +114,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.400001, 0, -7)
 
 [node name="stool_gltf4" parent="DinerRoom" unique_id=562103192 instance=ExtResource("19_lm26k")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.400001, 0, -5)
+
+[node name="table_long_decorated_A2" parent="DinerRoom" unique_id=1697882773 instance=ExtResource("6_y04yx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, -6)
+
+[node name="table_long_decorated_C2" parent="DinerRoom" unique_id=1030142129 instance=ExtResource("7_a7nm6")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 14, 0, -16.6)
 
 [node name="Torchs" type="Node3D" parent="." unique_id=1360505579]
 
