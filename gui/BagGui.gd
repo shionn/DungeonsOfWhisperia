@@ -8,7 +8,6 @@ extends Control
 
 var _goldRessource = load("res://assets/resources-pack-1/Coin-48.png")
 var _dragButton : TextureButton
-var _dragItem : Item
 var _interactable : Interactable
 
 #var drag : Item = null
@@ -44,20 +43,20 @@ func _refresh() -> void:
 			button.button_up.connect(func(): self._end_drag(button, item))
 			_container.add_child(button)
 
-func _start_drag(button : TextureButton, item : Item) -> void :
+func _start_drag(button : TextureButton, _item : Item) -> void :
 	print("start drag")
 	if Input.is_action_just_pressed("interact"):
 		_dragButton = button
-		_dragItem = item
 		_dragButton.set_default_cursor_shape(Control.CURSOR_DRAG)
 		#set_default_cursor_shape()
 
-func _end_drag(_button : TextureButton, _item : Item) -> void :
+func _end_drag(_button : TextureButton, item : Item) -> void :
 	print("end drag")
 	if Input.is_action_just_released("interact") and _dragButton:
+		if _interactable :
+			_interactable.on_item_drop(item)
 		_dragButton.set_default_cursor_shape(Control.CURSOR_ARROW)
 		_dragButton = null
-		_dragItem = null
 		_refresh()
 
 func on_enter(interactable : Node3D) -> void :
@@ -103,5 +102,4 @@ func load_game() -> void :
 func _on_visibility_changed() -> void:
 	if visible and _container : 
 		_dragButton = null
-		_dragItem = null
 		_refresh()

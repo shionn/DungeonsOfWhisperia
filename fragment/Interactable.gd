@@ -31,6 +31,9 @@ func _on_mouse_entered() -> void:
 func _on_mouse_exited() -> void:
 	_bag.on_exit(self)
 
+func on_item_drop(item : Item)-> void:
+	print("on_item_drop is not overwrite ", item.name)
+
 func _on_input_event(_camera: Node, event: InputEvent, _event_position: Vector3, _normal: Vector3, _shape_idx: int) -> void:
 	#if event is InputEventMouseButton and Input.is_action_just_pressed("interact"): 
 #		if player :
