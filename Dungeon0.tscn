@@ -128,6 +128,12 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -4, 
 transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -4, 0, 0)
 revert = true
 
+[node name="Armurerie" type="Node3D" parent="." unique_id=1040656146]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -16)
+
+[node name="Wall_Doorway" parent="Armurerie" unique_id=812446971 instance=ExtResource("22_5puas")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+
 [node name="Prison" type="Node3D" parent="." unique_id=995673675]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 18)
 
@@ -147,7 +153,12 @@ transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -8.6
 [node name="torch_mounted2" parent="Prison" unique_id=393295990 instance=ExtResource("3_we3ui")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 4)
 
-[node name="Torchs" type="Node3D" parent="." unique_id=1360505579]
+[node name="BossRoom" type="Node3D" parent="." unique_id=453869497]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, 0, 4)
+
+[node name="Wall_Doorway4" parent="BossRoom" unique_id=2092251914 instance=ExtResource("22_5puas")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -6, 0, 0)
+revert = true
 
 [node name="Roof" type="Node3D" parent="." unique_id=2031388596]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -2)
@@ -699,15 +710,11 @@ transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 6, 0
 [node name="wall9" parent="Walls" unique_id=706346975 instance=ExtResource("22_eig52")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -2, 0, 2)
 
-[node name="Wall_Doorway" parent="." unique_id=812446971 instance=ExtResource("22_5puas")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -12)
+[node name="Entrance" type="Node3D" parent="." unique_id=1411471295]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
 
-[node name="Wall_Doorway4" parent="." unique_id=2092251914 instance=ExtResource("22_5puas")]
-transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 20, 0, 4)
-revert = true
-
-[node name="stairs_walled2" parent="." unique_id=464899705 instance=ExtResource("22_swm8l")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -8)
+[node name="stairs_walled2" parent="Entrance" unique_id=464899705 instance=ExtResource("22_swm8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8)
 
 [node name="torch_mounted" parent="." unique_id=342053045 instance=ExtResource("3_we3ui")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 14, 0, 6)
