@@ -5,8 +5,12 @@
 [ext_resource type="PackedScene" uid="uid://bqbfybidqqw6b" path="res://Assets/Dungeons/Tables/table_long_decorated_A.gltf" id="6_y04yx"]
 [ext_resource type="PackedScene" uid="uid://cd70tnt7fd2v6" path="res://Assets/Dungeons/Tables/table_long_decorated_C.gltf" id="7_a7nm6"]
 [ext_resource type="PackedScene" uid="uid://dtkqe34k0hfda" path="res://Assets/Dungeons/Tables/stool_round.gltf" id="7_we3ui"]
+[ext_resource type="PackedScene" uid="uid://xxwvvhvlk5e1" path="res://Assets/Dungeons/Bar/bar_innercorner.gltf" id="8_puq8f"]
+[ext_resource type="PackedScene" uid="uid://clio315eelfyl" path="res://Assets/Dungeons/Bar/bar_straight_C_short.gltf" id="9_benv4"]
 [ext_resource type="PackedScene" uid="uid://b0n3wa8ptu8li" path="res://Assets/Dungeons/Floor/Large/floor_wood_large.gltf" id="9_we3ui"]
+[ext_resource type="PackedScene" uid="uid://bta2mvfkcul0j" path="res://Assets/Dungeons/Bar/bar_straight_C.gltf" id="10_bj4ce"]
 [ext_resource type="Script" uid="uid://bpgb3pwbq61mh" path="res://fragment/Interactable.gd" id="10_we3ui"]
+[ext_resource type="PackedScene" uid="uid://dg16k84dtvwob" path="res://Assets/Dungeons/Bar/bartop_A_large.gltf" id="11_prvkv"]
 [ext_resource type="Script" uid="uid://cxe0hpd6pnr8q" path="res://gui/Dialog.gd" id="11_tbvcw"]
 [ext_resource type="PackedScene" uid="uid://y38wo3hdhqtq" path="res://Assets/Dungeons/Wall/wall_shelves.gltf" id="15_a7nm6"]
 [ext_resource type="PackedScene" uid="uid://dvd4uuprholj6" path="res://fragment/monsters/Monster.tscn" id="18_5ip2l"]
@@ -24,6 +28,7 @@
 [ext_resource type="PackedScene" uid="uid://klr1d6x5mt0l" path="res://Assets/Dungeons/Wall/wall_cracked.gltf" id="22_tbvcw"]
 [ext_resource type="PackedScene" uid="uid://dfqu824ryf85i" path="res://Assets/Dungeons/Floor/Large/floor_dirt_large_rocky.gltf" id="22_we3ui"]
 [ext_resource type="PackedScene" uid="uid://b3w65ugrkoyx4" path="res://Assets/Dungeons/Floor/Large/floor_tile_large.gltf" id="23_tbvcw"]
+[ext_resource type="PackedScene" uid="uid://bmdvn7w6kv12i" path="res://Assets/Dungeons/Bar/bartop_A_medium.gltf" id="29_eig52"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_b02ke"]
 size = Vector3(3.4, 4.8, 0.7)
@@ -138,6 +143,24 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -16)
 
 [node name="Wall_Doorway" parent="Armurerie" unique_id=812446971 instance=ExtResource("22_5puas")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+
+[node name="bar_innercorner2" parent="Armurerie" unique_id=1487845929 instance=ExtResource("8_puq8f")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -5, 0, -0.5)
+
+[node name="bar_straight_C_short2" parent="Armurerie" unique_id=1297367655 instance=ExtResource("9_benv4")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -5, 0, 1)
+
+[node name="bar_straight_C2" parent="Armurerie" unique_id=946520791 instance=ExtResource("10_bj4ce")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0, -1)
+
+[node name="bar_straight_C3" parent="Armurerie" unique_id=1879579193 instance=ExtResource("10_bj4ce")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, -1)
+
+[node name="torch_mounted" parent="Armurerie" unique_id=290664578 instance=ExtResource("3_we3ui")]
+transform = Transform3D(-0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, -0.70710677, -2.05, 0, 2.05)
+
+[node name="bartop_A_large2" parent="Armurerie" unique_id=1036774138 instance=ExtResource("11_prvkv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 1, -1)
 
 [node name="Prison" type="Node3D" parent="." unique_id=995673675]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 18)
@@ -741,3 +764,6 @@ transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 6, 0
 
 [node name="wall9" parent="Walls" unique_id=706346975 instance=ExtResource("22_eig52")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -2, 0, 2)
+
+[node name="bartop_A_medium2" parent="." unique_id=780548732 instance=ExtResource("29_eig52")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3, 1, -15.5)
