@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cl36lcn4lo2eq"]
+
+[ext_resource type="PackedScene" uid="uid://s2v2y07aoqke" path="res://Assets/Dungeons/Torch/torch_mounted.gltf" id="1_6cvwo"]
+
+[node name="torch_mounted" unique_id=1245216849 instance=ExtResource("1_6cvwo")]
+
+[node name="torch_mounted" parent="." index="0" unique_id=176711989]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0.2)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." index="1" unique_id=307047342]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0.5)
+light_size = 1.0
+light_specular = 0.0
+shadow_enabled = true
+shadow_blur = 0.5
+shadow_caster_mask = 4294967293
+omni_range = 8.0
