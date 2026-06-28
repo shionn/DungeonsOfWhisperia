@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://geidl8rttv16"
-path="res://.godot/imported/keg.gltf-397ad1339a6cb531c6f391c9219604ef.scn"
+path="res://.godot/imported/keg.gltf-d2aa7067d1c1f7ed0b2b8ab168412f6c.scn"
 
 [deps]
 
-source_file="res://Assets/Dungeons/keg.gltf"
-dest_files=["res://.godot/imported/keg.gltf-397ad1339a6cb531c6f391c9219604ef.scn"]
+source_file="res://Assets/Dungeons/Barrel/keg.gltf"
+dest_files=["res://.godot/imported/keg.gltf-d2aa7067d1c1f7ed0b2b8ab168412f6c.scn"]
 
 [params]
 
