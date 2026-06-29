@@ -1,29 +1,29 @@
 [gd_scene format=3 uid="uid://dpbieqlycbivt"]
 
-[ext_resource type="Texture2D" uid="uid://brsj54noj8ouj" path="res://assets/kenney/cursor-pack/line_cross.png" id="1_oerka"]
-[ext_resource type="Script" uid="uid://c1q648y44m6n5" path="res://Gui/Gui.gd" id="1_wowgt"]
-[ext_resource type="Script" uid="uid://d2auu0tiunlbj" path="res://Gui/CenterCursor.gd" id="2_5kbtw"]
-[ext_resource type="Texture2D" uid="uid://tem7p5u78uq0" path="res://assets/kenney/cursor-pack/tool_sword_a.png" id="3_oe2qn"]
-[ext_resource type="Texture2D" uid="uid://va0lo41y8273" path="res://assets/kenney/cursor-pack/zoom.png" id="4_5hgfq"]
-[ext_resource type="Texture2D" uid="uid://bttyvn7xoe6wl" path="res://assets/kenney/cursor-pack/hand_open.png" id="4_resmn"]
-[ext_resource type="Script" uid="uid://fc4p1gee0wmr" path="res://Gui/StatGui.gd" id="5_7lsbh"]
-[ext_resource type="Script" uid="uid://t5ana3e5k724" path="res://Gui/GameOverGui.gd" id="6_spdw3"]
-[ext_resource type="Texture2D" uid="uid://5u5b1flxfb1r" path="res://assets/kenney/cursor-pack/disabled.png" id="7_m586l"]
-[ext_resource type="Script" uid="uid://co00yowhdp11c" path="res://Gui/BagGui.gd" id="9_ow3qa"]
-[ext_resource type="Script" uid="uid://c56odaje3xl6x" path="res://Gui/LootGui.gd" id="10_ow3qa"]
-[ext_resource type="Texture2D" uid="uid://dstsbh4f6k4j5" path="res://assets/kenney/cursor-pack/door_exit.png" id="11_0lspf"]
-[ext_resource type="Texture2D" uid="uid://ckgd4l0t7srqr" path="res://assets/kenney/ui-adventure/panel_brown_NW.png" id="11_fucts"]
-[ext_resource type="Texture2D" uid="uid://ccnqmwmalslbh" path="res://assets/kenney/ui-adventure/panel_brown_N.png" id="12_m586l"]
-[ext_resource type="Script" uid="uid://b5u38rsuiglhp" path="res://Gui/MenuGui.gd" id="12_y62qr"]
-[ext_resource type="Texture2D" uid="uid://8nho6rc3y7h0" path="res://assets/kenney/ui-adventure/panel_brown_NE.png" id="13_s2c3b"]
-[ext_resource type="Texture2D" uid="uid://byxfedvd3rio8" path="res://assets/kenney/ui-adventure/panel_brown_W.png" id="14_jpmve"]
-[ext_resource type="Texture2D" uid="uid://dtw1cmhurrgp1" path="res://assets/kenney/ui-adventure/panel_brown_E.png" id="15_mya5i"]
-[ext_resource type="Texture2D" uid="uid://bj22r3dqrlgrh" path="res://assets/kenney/ui-adventure/panel_brown_SW.png" id="16_v34si"]
-[ext_resource type="Texture2D" uid="uid://f4bn5pgi4ls3" path="res://assets/kenney/ui-adventure/panel_brown_S.png" id="17_03rpx"]
-[ext_resource type="Texture2D" uid="uid://coc4mm1g1nlkp" path="res://assets/kenney/ui-adventure/panel_brown_SE.png" id="18_u1nxv"]
-[ext_resource type="AudioStream" uid="uid://rc5hdthh3pa2" path="res://Audio/KenneyRpgAudio/handleCoins2.ogg" id="20_jpmve"]
-[ext_resource type="Script" uid="uid://cstky8dpig813" path="res://Gui/DialogGui.gd" id="21_fucts"]
-[ext_resource type="Script" uid="uid://bc4y4enkrwodc" path="res://Gui/ConsoleLog.gd" id="23_s2c3b"]
+[ext_resource type="Script" uid="uid://c1q648y44m6n5" path="res://Gui/Gui.gd" id="1_i3re6"]
+[ext_resource type="Script" uid="uid://d2auu0tiunlbj" path="res://Gui/CenterCursor.gd" id="2_60sjt"]
+[ext_resource type="Texture2D" uid="uid://brsj54noj8ouj" path="res://Gui/Assets/kenney/cursor-pack/line_cross.png" id="3_wbke4"]
+[ext_resource type="Texture2D" uid="uid://tem7p5u78uq0" path="res://Gui/Assets/kenney/cursor-pack/tool_sword_a.png" id="4_7xgee"]
+[ext_resource type="Texture2D" uid="uid://bttyvn7xoe6wl" path="res://Gui/Assets/kenney/cursor-pack/hand_open.png" id="5_c4ovl"]
+[ext_resource type="Texture2D" uid="uid://va0lo41y8273" path="res://Gui/Assets/kenney/cursor-pack/zoom.png" id="6_883rq"]
+[ext_resource type="Texture2D" uid="uid://5u5b1flxfb1r" path="res://Gui/Assets/kenney/cursor-pack/disabled.png" id="7_m2wub"]
+[ext_resource type="Script" uid="uid://fc4p1gee0wmr" path="res://Gui/StatGui.gd" id="8_irpma"]
+[ext_resource type="Script" uid="uid://t5ana3e5k724" path="res://Gui/GameOverGui.gd" id="9_3yfkq"]
+[ext_resource type="Script" uid="uid://co00yowhdp11c" path="res://Gui/BagGui.gd" id="10_ji1eb"]
+[ext_resource type="Texture2D" uid="uid://ckgd4l0t7srqr" path="res://Gui/Assets/kenney/ui-adventure/panel_brown_NW.png" id="11_8pck7"]
+[ext_resource type="Texture2D" uid="uid://ccnqmwmalslbh" path="res://Gui/Assets/kenney/ui-adventure/panel_brown_N.png" id="12_el8jn"]
+[ext_resource type="Texture2D" uid="uid://8nho6rc3y7h0" path="res://Gui/Assets/kenney/ui-adventure/panel_brown_NE.png" id="13_w65rx"]
+[ext_resource type="Texture2D" uid="uid://byxfedvd3rio8" path="res://Gui/Assets/kenney/ui-adventure/panel_brown_W.png" id="14_f4re5"]
+[ext_resource type="Texture2D" uid="uid://dtw1cmhurrgp1" path="res://Gui/Assets/kenney/ui-adventure/panel_brown_E.png" id="15_86xcp"]
+[ext_resource type="Texture2D" uid="uid://bj22r3dqrlgrh" path="res://Gui/Assets/kenney/ui-adventure/panel_brown_SW.png" id="16_5npq8"]
+[ext_resource type="Texture2D" uid="uid://f4bn5pgi4ls3" path="res://Gui/Assets/kenney/ui-adventure/panel_brown_S.png" id="17_6qw7v"]
+[ext_resource type="Texture2D" uid="uid://coc4mm1g1nlkp" path="res://Gui/Assets/kenney/ui-adventure/panel_brown_SE.png" id="18_tfp3c"]
+[ext_resource type="Script" uid="uid://c56odaje3xl6x" path="res://Gui/LootGui.gd" id="19_s1663"]
+[ext_resource type="AudioStream" uid="uid://rc5hdthh3pa2" path="res://Audio/KenneyRpgAudio/handleCoins2.ogg" id="20_cq4r1"]
+[ext_resource type="Texture2D" uid="uid://dstsbh4f6k4j5" path="res://Gui/Assets/kenney/cursor-pack/door_exit.png" id="21_tamh2"]
+[ext_resource type="Script" uid="uid://b5u38rsuiglhp" path="res://Gui/MenuGui.gd" id="22_mnphl"]
+[ext_resource type="Script" uid="uid://cstky8dpig813" path="res://Gui/DialogGui.gd" id="23_2m3pn"]
+[ext_resource type="Script" uid="uid://bc4y4enkrwodc" path="res://Gui/ConsoleLog.gd" id="24_xkmul"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8rxp0"]
 bg_color = Color(1, 0.94509804, 0.8235294, 1)
@@ -79,7 +79,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-script = ExtResource("1_wowgt")
+script = ExtResource("1_i3re6")
 
 [node name="CenterCursor" type="Control" parent="." unique_id=1488707363]
 layout_mode = 1
@@ -95,7 +95,7 @@ offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-script = ExtResource("2_5kbtw")
+script = ExtResource("2_60sjt")
 
 [node name="Cross" type="TextureRect" parent="CenterCursor" unique_id=1777142092]
 layout_mode = 1
@@ -111,7 +111,7 @@ offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-texture = ExtResource("1_oerka")
+texture = ExtResource("3_wbke4")
 
 [node name="Sword" type="TextureRect" parent="CenterCursor" unique_id=1981404509]
 layout_mode = 1
@@ -127,7 +127,7 @@ offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-texture = ExtResource("3_oe2qn")
+texture = ExtResource("4_7xgee")
 
 [node name="Hand" type="TextureRect" parent="CenterCursor" unique_id=650575421]
 layout_mode = 1
@@ -142,7 +142,7 @@ offset_right = 20.0
 offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("4_resmn")
+texture = ExtResource("5_c4ovl")
 
 [node name="Manifier" type="TextureRect" parent="CenterCursor" unique_id=573061436]
 layout_mode = 1
@@ -158,7 +158,7 @@ offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-texture = ExtResource("4_5hgfq")
+texture = ExtResource("6_883rq")
 
 [node name="Disabled" type="TextureRect" parent="CenterCursor" unique_id=676310297]
 layout_mode = 1
@@ -174,7 +174,7 @@ offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-texture = ExtResource("7_m586l")
+texture = ExtResource("7_m2wub")
 
 [node name="Stat" type="Control" parent="." unique_id=312672475]
 layout_mode = 1
@@ -185,7 +185,7 @@ offset_left = -20.0
 offset_right = 20.0
 offset_bottom = 40.0
 grow_horizontal = 2
-script = ExtResource("5_7lsbh")
+script = ExtResource("8_irpma")
 
 [node name="MarginContainer" type="MarginContainer" parent="Stat" unique_id=1990197417]
 layout_mode = 1
@@ -216,7 +216,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 64
 text = "Game Over"
-script = ExtResource("6_spdw3")
+script = ExtResource("9_3yfkq")
 
 [node name="Bag" type="GridContainer" parent="." unique_id=1113810662]
 z_index = 10
@@ -235,26 +235,26 @@ grow_vertical = 2
 theme_override_constants/h_separation = 0
 theme_override_constants/v_separation = 0
 columns = 3
-script = ExtResource("9_ow3qa")
+script = ExtResource("10_ji1eb")
 
 [node name="NW" type="TextureRect" parent="Bag" unique_id=51255029]
 layout_mode = 2
-texture = ExtResource("11_fucts")
+texture = ExtResource("11_8pck7")
 
 [node name="N" type="TextureRect" parent="Bag" unique_id=863925097]
 layout_mode = 2
 size_flags_horizontal = 3
-texture = ExtResource("12_m586l")
+texture = ExtResource("12_el8jn")
 stretch_mode = 1
 
 [node name="NE" type="TextureRect" parent="Bag" unique_id=907156634]
 layout_mode = 2
-texture = ExtResource("13_s2c3b")
+texture = ExtResource("13_w65rx")
 
 [node name="W" type="TextureRect" parent="Bag" unique_id=395839548]
 layout_mode = 2
 size_flags_vertical = 3
-texture = ExtResource("14_jpmve")
+texture = ExtResource("14_f4re5")
 stretch_mode = 1
 
 [node name="PanelContainer" type="PanelContainer" parent="Bag" unique_id=1562528043]
@@ -289,22 +289,22 @@ text = "Fermer"
 [node name="E" type="TextureRect" parent="Bag" unique_id=94430058]
 layout_mode = 2
 size_flags_vertical = 3
-texture = ExtResource("15_mya5i")
+texture = ExtResource("15_86xcp")
 stretch_mode = 1
 
 [node name="SW" type="TextureRect" parent="Bag" unique_id=1373041934]
 layout_mode = 2
-texture = ExtResource("16_v34si")
+texture = ExtResource("16_5npq8")
 
 [node name="S" type="TextureRect" parent="Bag" unique_id=1841597024]
 layout_mode = 2
 size_flags_horizontal = 3
-texture = ExtResource("17_03rpx")
+texture = ExtResource("17_6qw7v")
 stretch_mode = 1
 
 [node name="SE" type="TextureRect" parent="Bag" unique_id=2051334909]
 layout_mode = 2
-texture = ExtResource("18_u1nxv")
+texture = ExtResource("18_tfp3c")
 
 [node name="Loot" type="GridContainer" parent="." unique_id=1947795742]
 z_index = 10
@@ -323,26 +323,26 @@ grow_vertical = 2
 theme_override_constants/h_separation = 0
 theme_override_constants/v_separation = 0
 columns = 3
-script = ExtResource("10_ow3qa")
+script = ExtResource("19_s1663")
 
 [node name="NW" type="TextureRect" parent="Loot" unique_id=443821377]
 layout_mode = 2
-texture = ExtResource("11_fucts")
+texture = ExtResource("11_8pck7")
 
 [node name="N" type="TextureRect" parent="Loot" unique_id=40378259]
 layout_mode = 2
 size_flags_horizontal = 3
-texture = ExtResource("12_m586l")
+texture = ExtResource("12_el8jn")
 stretch_mode = 1
 
 [node name="NE" type="TextureRect" parent="Loot" unique_id=72130800]
 layout_mode = 2
-texture = ExtResource("13_s2c3b")
+texture = ExtResource("13_w65rx")
 
 [node name="W" type="TextureRect" parent="Loot" unique_id=1044866974]
 layout_mode = 2
 size_flags_vertical = 3
-texture = ExtResource("14_jpmve")
+texture = ExtResource("14_f4re5")
 stretch_mode = 1
 
 [node name="PanelContainer" type="PanelContainer" parent="Loot" unique_id=1274204140]
@@ -377,25 +377,25 @@ text = "Fermer"
 [node name="E" type="TextureRect" parent="Loot" unique_id=1356311920]
 layout_mode = 2
 size_flags_vertical = 3
-texture = ExtResource("15_mya5i")
+texture = ExtResource("15_86xcp")
 stretch_mode = 1
 
 [node name="SW" type="TextureRect" parent="Loot" unique_id=2091342781]
 layout_mode = 2
-texture = ExtResource("16_v34si")
+texture = ExtResource("16_5npq8")
 
 [node name="S" type="TextureRect" parent="Loot" unique_id=371852761]
 layout_mode = 2
 size_flags_horizontal = 3
-texture = ExtResource("17_03rpx")
+texture = ExtResource("17_6qw7v")
 stretch_mode = 1
 
 [node name="SE" type="TextureRect" parent="Loot" unique_id=1232061855]
 layout_mode = 2
-texture = ExtResource("18_u1nxv")
+texture = ExtResource("18_tfp3c")
 
 [node name="AudioOpen" type="AudioStreamPlayer" parent="Loot" unique_id=500088659]
-stream = ExtResource("20_jpmve")
+stream = ExtResource("20_cq4r1")
 
 [node name="Menu" type="MenuButton" parent="." unique_id=436163507]
 layout_mode = 1
@@ -406,9 +406,9 @@ item_count = 2
 popup/item_0/text = "Sauvegarder"
 popup/item_0/id = 1
 popup/item_1/text = "Quitter"
-popup/item_1/icon = ExtResource("11_0lspf")
+popup/item_1/icon = ExtResource("21_tamh2")
 popup/item_1/id = 0
-script = ExtResource("12_y62qr")
+script = ExtResource("22_mnphl")
 
 [node name="Introduction" type="GridContainer" parent="." unique_id=139407599]
 z_index = 10
@@ -430,22 +430,22 @@ columns = 3
 
 [node name="NW" type="TextureRect" parent="Introduction" unique_id=1184850325]
 layout_mode = 2
-texture = ExtResource("11_fucts")
+texture = ExtResource("11_8pck7")
 
 [node name="N" type="TextureRect" parent="Introduction" unique_id=382315284]
 layout_mode = 2
 size_flags_horizontal = 3
-texture = ExtResource("12_m586l")
+texture = ExtResource("12_el8jn")
 stretch_mode = 1
 
 [node name="NE" type="TextureRect" parent="Introduction" unique_id=613438406]
 layout_mode = 2
-texture = ExtResource("13_s2c3b")
+texture = ExtResource("13_w65rx")
 
 [node name="W" type="TextureRect" parent="Introduction" unique_id=1838260426]
 layout_mode = 2
 size_flags_vertical = 3
-texture = ExtResource("14_jpmve")
+texture = ExtResource("14_f4re5")
 stretch_mode = 1
 
 [node name="PanelContainer" type="PanelContainer" parent="Introduction" unique_id=857109422]
@@ -503,22 +503,22 @@ text = "Fermer"
 [node name="E" type="TextureRect" parent="Introduction" unique_id=1691465736]
 layout_mode = 2
 size_flags_vertical = 3
-texture = ExtResource("15_mya5i")
+texture = ExtResource("15_86xcp")
 stretch_mode = 1
 
 [node name="SW" type="TextureRect" parent="Introduction" unique_id=740020344]
 layout_mode = 2
-texture = ExtResource("16_v34si")
+texture = ExtResource("16_5npq8")
 
 [node name="S" type="TextureRect" parent="Introduction" unique_id=1387285435]
 layout_mode = 2
 size_flags_horizontal = 3
-texture = ExtResource("17_03rpx")
+texture = ExtResource("17_6qw7v")
 stretch_mode = 1
 
 [node name="SE" type="TextureRect" parent="Introduction" unique_id=252100647]
 layout_mode = 2
-texture = ExtResource("18_u1nxv")
+texture = ExtResource("18_tfp3c")
 
 [node name="DialogGui" type="GridContainer" parent="." unique_id=1189208125]
 visible = false
@@ -538,26 +538,26 @@ grow_vertical = 0
 theme_override_constants/h_separation = 0
 theme_override_constants/v_separation = 0
 columns = 3
-script = ExtResource("21_fucts")
+script = ExtResource("23_2m3pn")
 
 [node name="NW" type="TextureRect" parent="DialogGui" unique_id=1117786014]
 layout_mode = 2
-texture = ExtResource("11_fucts")
+texture = ExtResource("11_8pck7")
 
 [node name="N" type="TextureRect" parent="DialogGui" unique_id=174734544]
 layout_mode = 2
 size_flags_horizontal = 3
-texture = ExtResource("12_m586l")
+texture = ExtResource("12_el8jn")
 stretch_mode = 1
 
 [node name="NE" type="TextureRect" parent="DialogGui" unique_id=744489947]
 layout_mode = 2
-texture = ExtResource("13_s2c3b")
+texture = ExtResource("13_w65rx")
 
 [node name="W" type="TextureRect" parent="DialogGui" unique_id=1553917918]
 layout_mode = 2
 size_flags_vertical = 3
-texture = ExtResource("14_jpmve")
+texture = ExtResource("14_f4re5")
 stretch_mode = 1
 
 [node name="PanelContainer" type="PanelContainer" parent="DialogGui" unique_id=1163594177]
@@ -638,22 +638,22 @@ text = "Fermer"
 [node name="E" type="TextureRect" parent="DialogGui" unique_id=1546131923]
 layout_mode = 2
 size_flags_vertical = 3
-texture = ExtResource("15_mya5i")
+texture = ExtResource("15_86xcp")
 stretch_mode = 1
 
 [node name="SW" type="TextureRect" parent="DialogGui" unique_id=1146358572]
 layout_mode = 2
-texture = ExtResource("16_v34si")
+texture = ExtResource("16_5npq8")
 
 [node name="S" type="TextureRect" parent="DialogGui" unique_id=207701471]
 layout_mode = 2
 size_flags_horizontal = 3
-texture = ExtResource("17_03rpx")
+texture = ExtResource("17_6qw7v")
 stretch_mode = 1
 
 [node name="SE" type="TextureRect" parent="DialogGui" unique_id=676692067]
 layout_mode = 2
-texture = ExtResource("18_u1nxv")
+texture = ExtResource("18_tfp3c")
 
 [node name="ConsoleLog" type="RichTextLabel" parent="." unique_id=26585873]
 layout_mode = 1
@@ -669,7 +669,7 @@ mouse_filter = 2
 scroll_active = false
 scroll_following = true
 scroll_following_visible_characters = true
-script = ExtResource("23_s2c3b")
+script = ExtResource("24_xkmul")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="ConsoleLog" unique_id=2077119084]
 libraries/ = SubResource("AnimationLibrary_mya5i")

@@ -6,9 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://ddvg2rw2bunm2" path="res://fragment/Player.tscn" id="2_js7pq"]
 [ext_resource type="Script" uid="uid://bjbab3ep2gfn2" path="res://fragment/items/Item.gd" id="5_p1v5b"]
 [ext_resource type="Script" uid="uid://ccps0bdr1ahel" path="res://fragment/items/Items.gd" id="5_wygdx"]
-[ext_resource type="Texture2D" uid="uid://dve5cabnc5o2x" path="res://assets/fanatisy-magic-set/potion-2-48.png" id="6_wygdx"]
-[ext_resource type="Texture2D" uid="uid://crhvjkxucw0xb" path="res://assets/free-rpg-icons-2/48x48/key.png" id="8_bah7m"]
-[ext_resource type="Texture2D" uid="uid://bho5wu36vyxai" path="res://assets/fanatisy-magic-set/potion-1-48.png" id="9_fv4w7"]
+[ext_resource type="Texture2D" uid="uid://dve5cabnc5o2x" path="res://Gui/Assets/fanatisy-magic-set/potion-2-48.png" id="6_wygdx"]
+[ext_resource type="Texture2D" uid="uid://crhvjkxucw0xb" path="res://Gui/Assets/free-rpg-icons-2/48x48/key.png" id="8_bah7m"]
+[ext_resource type="Texture2D" uid="uid://bho5wu36vyxai" path="res://Gui/Assets/fanatisy-magic-set/potion-1-48.png" id="9_fv4w7"]
 
 [sub_resource type="Environment" id="Environment_js7pq"]
 background_energy_multiplier = 0.7
