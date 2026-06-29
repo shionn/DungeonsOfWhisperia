@@ -7,9 +7,9 @@ extends Node
 var items : Array[Items.ItemName] = []
 var gold: int = 0:
 	set(value) :
+		_gui.consoleLog("Vous obtenez %d 💰." % [value-gold])
 		gold = value
 		on_item_change.emit()
-		_gui.consoleLog("Vous obtenez %d pieces d'or." % value)
 
 signal on_item_change()
 	
@@ -22,5 +22,6 @@ func loot(item : Items.ItemName) -> void :
 func unloot(item : Items.ItemName) -> void : 
 	var index = items.find(item)
 	if index >=0 :
+		_gui.consoleLog("Vous utilisez %s." % _items.from(item).name)
 		items.remove_at(index)
 	on_item_change.emit()

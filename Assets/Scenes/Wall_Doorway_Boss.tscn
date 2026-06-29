@@ -3,6 +3,9 @@
 [ext_resource type="PackedScene" uid="uid://budb61il707se" path="res://Assets/Dungeons/Wall/Doorway/wall_doorway.gltf" id="1_n7vb2"]
 [ext_resource type="Script" uid="uid://o7onkoy5budk" path="res://Assets/Scenes/Scripts/Door.gd" id="2_t4tr4"]
 [ext_resource type="PackedScene" uid="uid://cvkc7f3ant8nr" path="res://Assets/Dungeons/Weapons/sword_shield.gltf" id="3_t4tr4"]
+[ext_resource type="AudioStream" uid="uid://cgpic01ptsq6v" path="res://Audio/KenneyRpgAudio/doorOpen_1.ogg" id="4_u084j"]
+[ext_resource type="AudioStream" uid="uid://dqgw1abk4jd2c" path="res://Audio/KenneyRpgAudio/doorClose_1.ogg" id="5_qqj0o"]
+[ext_resource type="AudioStream" uid="uid://ce7drpk5sjkcm" path="res://Audio/KenneyRpgAudio/metalClick.ogg" id="6_qqj0o"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_fhw0n"]
 radius = 0.45
@@ -22,3 +25,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9, 0, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0" unique_id=25147986]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5172886, 1.15, -1.4901161e-08)
 shape = SubResource("SphereShape3D_fhw0n")
+
+[node name="AudioOpen" type="AudioStreamPlayer3D" parent="." index="2" unique_id=1645843262]
+stream = ExtResource("4_u084j")
+
+[node name="AudioClose" type="AudioStreamPlayer3D" parent="." index="3" unique_id=1649709914]
+stream = ExtResource("5_qqj0o")
+
+[node name="AudioLocked" type="AudioStreamPlayer3D" parent="." index="4" unique_id=1753824038]
+stream = ExtResource("6_qqj0o")

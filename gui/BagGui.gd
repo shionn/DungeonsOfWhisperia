@@ -44,14 +44,12 @@ func _refresh() -> void:
 			_container.add_child(button)
 
 func _start_drag(button : TextureButton, _item : Item) -> void :
-	print("start drag")
 	if Input.is_action_just_pressed("interact"):
 		_dragButton = button
 		_dragButton.set_default_cursor_shape(Control.CURSOR_DRAG)
 		#set_default_cursor_shape()
 
 func _end_drag(_button : TextureButton, item : Item) -> void :
-	print("end drag")
 	if Input.is_action_just_released("interact") and _dragButton:
 		if _interactable :
 			_interactable.on_item_drop(item)
@@ -60,14 +58,12 @@ func _end_drag(_button : TextureButton, item : Item) -> void :
 		_refresh()
 
 func on_enter(interactable : Node3D) -> void :
-	print("on enter")
 	if _dragButton :
 		self._interactable = interactable
 		_dragButton.set_default_cursor_shape(Control.CURSOR_CAN_DROP)
 		#set_default_cursor_shape(Control.CURSOR_CAN_DROP)
 
 func on_exit(interactable : Node3D) -> void :
-	print("on exit")
 	if self._interactable == interactable and _dragButton:
 		_dragButton.set_default_cursor_shape(Control.CURSOR_DRAG)
 		self._interactable = null

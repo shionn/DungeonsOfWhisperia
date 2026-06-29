@@ -27,6 +27,8 @@ func loot(container:Object) -> void:
 		button.pressed.connect(func(): self._loot_item(item, button, container))
 		_container.add_child(button)
 	self.visible = true
+	if _container.get_child_count() > 0:
+		$AudioOpen.play()
 	
 func _loot_item(item:Item, button:TextureButton, container:Object) -> void:
 	_bag.loot(item.item_name)

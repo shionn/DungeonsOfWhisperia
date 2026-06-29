@@ -7,6 +7,7 @@ enum State { IDLE, CHASE, ATTACK, ATTACKING, HIT, DEATH }
 @onready var _animation = $"Character/AnimationPlayer" as AnimationPlayer
 @onready var _navigation_agent: NavigationAgent3D = $NavigationAgent3D
 @onready var _animationTimer = $AnimationTimer as Timer
+@onready var _atkTimer = $AtkTimer as Timer
 @onready var _gcdTimer = $GcdTimer as Timer
 @onready var _gui = $/root/World/Gui as Gui
 
@@ -34,7 +35,7 @@ func _physics_process(_delta: float) -> void:
 	match state: 
 		State.CHASE:
 			var distance = (_player.global_position-global_position).length()
-			if (_atk && distance < _atk.atk_range or distance < 2) :
+			if (_atk && distance < _atk.atk_range or distance < 2 and _player.pv>0) :
 				state = State.ATTACK
 			elif _navigation_agent.is_navigation_finished() : 
 				state = State.IDLE
@@ -46,7 +47,7 @@ func _physics_process(_delta: float) -> void:
 			else :
 				if _atk :
 					_atk.start()
-					start_animation(_atk.animation, true)
+					start_animation(_atk.animation, true, _atkTimer)
 					_gcdTimer.start(_model.global_cold_down)
 					_on_gcd = true
 					state = State.ATTACKING
@@ -97,10 +98,14 @@ func _update_navigation() -> bool :
 		self._navigation_agent.set_target_position(_player.global_position)
 	return self._navigation_agent.is_navigation_finished()
 
-func start_animation(anim:String, time:bool=false) -> void:
+func start_animation(anim:String, time:bool=false, timer:Timer=null) -> void:
 	const _animation_prefix = "RigMediumAnimation/"
 	_animation.play(_animation_prefix+anim)
-	if time : _animationTimer.start(_animation.get_animation(_animation_prefix+anim).length)
+	if time : 
+		if timer :
+			timer.start(_animation.get_animation(_animation_prefix+anim).length)
+		else :
+			_animationTimer.start(_animation.get_animation(_animation_prefix+anim).length)
 
 func receive_atk(nb_atk: int) -> void:
 	if state == State.DEATH : return
@@ -125,17 +130,17 @@ func _on_animationTimer_timeout() -> void:
 			self.collision_layer = 256
 			$CollisionDefault.disabled = true
 			$CollisionDeath.disabled = false
-		State.ATTACKING : 
-			_player.receive_atk(_atk.damage(), self)
-			_atk = null
-			state = State.CHASE
 		State.HIT:
 			_look_player()
 			state = State.CHASE
 		_: 
 			state = State.IDLE
 
-
 func _on_gcd_timer_timeout() -> void:
 	_on_gcd = false
-	
+
+func _on_atk_timer_timeout() -> void:
+	if state != State.DEATH :
+		_player.receive_atk(_atk.damage(), self)
+		_atk = null
+		if state == State.ATTACKING : state = State.CHASE

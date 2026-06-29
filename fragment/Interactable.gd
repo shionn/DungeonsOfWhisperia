@@ -5,8 +5,9 @@ enum Action { ACTIVATE, LOOK }
 
 @onready var _gui := $/root/World/Gui as Gui
 @onready var _player := $/root/World/Player as PlayerG
+@onready var _bag := $/root/World/Player/Bag as Bag
 @onready var _area := $Area3D as Area3D
-@onready var _bag := $/root/World/Gui/Bag as BagGui
+@onready var _bagGui := $/root/World/Gui/Bag as BagGui
 
 @export var action : Action = Action.ACTIVATE
 @export var interactDistance : float = 3
@@ -26,13 +27,16 @@ func isInRange(target: Node3D) -> bool:
 	return global_position.distance_to(target.global_position) <= interactDistance
 
 func _on_mouse_entered() -> void:
-	_bag.on_enter(self)
+	print("_on_mouse_entered")
+	_bagGui.on_enter(self)
 
 func _on_mouse_exited() -> void:
-	_bag.on_exit(self)
+	print("_on_mouse_exited")
+	_bagGui.on_exit(self)
 
-func on_item_drop(item : Item)-> void:
-	print("on_item_drop is not overwrite ", item.name)
+func on_item_drop(_item : Item)-> void:
+	_gui.consoleLog("Aucun effet.")
+	
 
 func _on_input_event(_camera: Node, event: InputEvent, _event_position: Vector3, _normal: Vector3, _shape_idx: int) -> void:
 	#if event is InputEventMouseButton and Input.is_action_just_pressed("interact"): 

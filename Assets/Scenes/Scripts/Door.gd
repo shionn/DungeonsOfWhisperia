@@ -2,6 +2,9 @@ class_name Door
 extends Interactable
 
 @onready var door = $wall_doorway/wall_doorway_door
+@onready var audioOpen = $AudioOpen
+@onready var audioClose = $AudioClose
+@onready var audioLocked = $AudioClose
 
 const PI_2 = PI / 2
 const SPEED = 3
@@ -12,9 +15,22 @@ const SPEED = 3
 
 func on_interact() -> void:
 	if locked :
-		pass
+		$AudioLocked.play()
+		_gui.consoleLog("C'est fermé")
 	else :
 		open = not open
+		if open : 
+			audioOpen.play()
+		else :
+			audioClose.play()
+
+func on_item_drop(item : Item)-> void:
+	if item.item_name == Items.ItemName.ClefBouclierEpee:
+		$AudioLocked.play()
+		locked = false
+		_bag.unloot(item.item_name)
+	else :
+		super.on_item_drop(item)
 
 func _physics_process(delta: float) -> void:
 	if open :

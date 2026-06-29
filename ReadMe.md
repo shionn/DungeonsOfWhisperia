@@ -7,6 +7,10 @@
 # Assets
 ## 3D and characters
 - https://kaylousberg.itch.io/kaykit-complete
+
+## UI 
+- https://www.kenney.nl/
+
 ## Icons
 - https://opengameart.org/content/free-rpg-icons-2
 
