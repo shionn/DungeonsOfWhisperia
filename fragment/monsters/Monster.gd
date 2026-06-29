@@ -126,7 +126,7 @@ func _on_animationTimer_timeout() -> void:
 			$CollisionDefault.disabled = true
 			$CollisionDeath.disabled = false
 		State.ATTACKING : 
-			_player.receive_atk(_atk.damage())
+			_player.receive_atk(_atk.damage(), self)
 			_atk = null
 			state = State.CHASE
 		State.HIT:

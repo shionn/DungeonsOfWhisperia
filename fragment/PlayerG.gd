@@ -7,6 +7,7 @@ enum State { ATTACK, MOVE, IDLE, HIT, DEATH }
 @onready var _animation = $Rogue_Hooded/AnimationPlayer as AnimationPlayer
 @onready var _timer = $Timer as Timer
 @onready var _world = $/root/World as World
+@onready var _gui = $/root/World/Gui as Gui
 
 const _movement_speed: float = 4.0
 const _max_range: float = 20
@@ -63,9 +64,10 @@ func _handle_move_input() -> void:
 		velocity = Vector3.ZERO
 		_start_animation("Idle_A")
 
-func receive_atk(nb_atk: int) -> void:
+func receive_atk(nb_atk: int, monster:Monster) -> void:
 	var nb_def = Dices.d6(2, 5)
 	var deg = nb_atk - nb_def
+	_gui.consoleLog("%s obtient %d 💀, vous obtenez %d 🛡" % [monster.name, nb_atk, nb_def])
 	if deg > 0 :
 		pv = max(pv - deg, 0)
 		if pv > 0:
