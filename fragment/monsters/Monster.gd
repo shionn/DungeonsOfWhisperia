@@ -114,9 +114,10 @@ func receive_atk(nb_atk: int) -> void:
 	_gui.consoleLog("Vous obtenez %d 💀, %s obtient %d 🛡" % [nb_atk, name, nb_def])
 	if deg > 0 :
 		_model.pv = _model.pv - deg
-		if _model.pv > 0:
-			start_animation("Hit_A", true)
-			state = State.HIT
+		if _model.pv > 0 :
+			if state != State.ATTACKING :
+				start_animation("Hit_A", true)
+				state = State.HIT
 		else :
 			start_animation("Death_A", true)
 			state = State.DEATH

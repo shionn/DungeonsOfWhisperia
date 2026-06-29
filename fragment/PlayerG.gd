@@ -5,9 +5,10 @@ enum State { ATTACK, MOVE, IDLE, HIT, DEATH }
 
 @onready var _character = $Rogue_Hooded as Node3D
 @onready var _animation = $Rogue_Hooded/AnimationPlayer as AnimationPlayer
-@onready var _timer = $Timer as Timer
 @onready var _world = $/root/World as World
 @onready var _gui = $/root/World/Gui as Gui
+@onready var _animationTimer = $AnimationTimer as Timer
+@onready var _atkTimer = $AtkTimer as Timer
 
 const _movement_speed: float = 4.0
 const _max_range: float = 20
@@ -36,11 +37,7 @@ func _physics_process(_delta: float) -> void:
 				if _world.target_monster and _world.target_monster.state != Monster.State.DEATH :
 					_attacked_monster = _world.target_monster
 					if self.global_position.distance_to(_attacked_monster.global_position) < _atk_range :
-						_start_animation("Melee_Dualwield_Attack_Chop", true, .75)
-						$AudioTimer.start(1)
-						_state = State.ATTACK
-						_character.rotation.y = get_viewport().get_camera_3d().rotation.y+deg_to_rad(180)
-						velocity = Vector3.ZERO
+						_start_atk()
 			else : 
 				_handle_move_input()
 	
@@ -78,12 +75,38 @@ func receive_atk(nb_atk: int, monster:Monster) -> void:
 			_start_animation("Death_A")
 			_state = State.DEATH
 
-func _start_animation(anim:String, timer:bool=false, timerFactor:float=1) -> void:
+func _start_atk() -> void:
+	var animation =  "RigMediumAnimation/" + "Melee_Dualwield_Attack_Chop"
+	var duration = _animation.get_animation(animation).length
+	_animation.play(animation)
+	_animationTimer.start(duration)
+	_atkTimer.start(duration*.75)
+	_character.rotation.y = get_viewport().get_camera_3d().rotation.y+deg_to_rad(180)
+	_state = State.ATTACK
+	velocity = Vector3.ZERO
+	
+func _on_atk_timer_timeout() -> void:
+	var nb_atk = Dices.d6(2,4)
+	_attacked_monster.receive_atk(nb_atk)
+	$AudioStreamPlayer3D.play()
+
+
+func _start_animation(anim:String, timer:bool=false) -> void:
 	const _animation_prefix = "RigMediumAnimation/"
 	_animation.play(_animation_prefix+anim)
-	if timer : _timer.start(_animation.get_animation(_animation_prefix+anim).length*timerFactor)
+	if timer : 
+		_animationTimer.start(_animation.get_animation(_animation_prefix+anim).length)
 	
-	
+func _on_animation_timer_timeout() -> void:
+	match _state :
+		State.ATTACK:
+			#var nb_atk = Dices.d6(2,4)
+			#_attacked_monster.receive_atk(nb_atk)
+			_state = State.MOVE
+		State.HIT :
+			_state = State.MOVE
+
+# old one
 func _on_timer_timeout() -> void:
 	match _state :
 		State.ATTACK:
