@@ -9,6 +9,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0.2)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="." index="1" unique_id=307047342]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0.5)
+light_color = Color(1, 0.53333336, 0.13333334, 1)
+light_energy = 2.0
 light_size = 0.5
 light_specular = 0.0
 shadow_enabled = true
