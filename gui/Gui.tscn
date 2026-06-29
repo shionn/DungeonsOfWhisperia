@@ -658,15 +658,10 @@ anchor_top = 1.0
 anchor_bottom = 1.0
 offset_left = 10.0
 offset_top = -110.0
-offset_right = 310.0
+offset_right = 510.0
 offset_bottom = -10.0
 grow_vertical = 0
 mouse_filter = 2
-text = "Ceci est un text de console.
-Ceci est un text de console
-Ceci est un text de console
-Ceci est un text de console
-Ceci est un text de console"
 scroll_following = true
 scroll_following_visible_characters = true
 script = ExtResource("23_s2c3b")

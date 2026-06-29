@@ -8,6 +8,7 @@ enum State { IDLE, CHASE, ATTACK, ATTACKING, HIT, DEATH }
 @onready var _navigation_agent: NavigationAgent3D = $NavigationAgent3D
 @onready var _animationTimer = $AnimationTimer as Timer
 @onready var _gcdTimer = $GcdTimer as Timer
+@onready var _gui = $/root/World/Gui as Gui
 
 @export_file("*.json") var _model_file
 @export var loot_obj : Items.ItemName = Items.ItemName.None
@@ -105,6 +106,7 @@ func receive_atk(nb_atk: int) -> void:
 	if state == State.DEATH : return
 	var nb_def = Dices.d6(_model.def, 6)
 	var deg = nb_atk - nb_def
+	_gui.consoleLog("Vous obtenez %d 💀, %s obtient %d 🛡" % [nb_atk, name, nb_def])
 	if deg > 0 :
 		_model.pv = _model.pv - deg
 		if _model.pv > 0:

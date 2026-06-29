@@ -4,4 +4,5 @@ extends RichTextLabel
 
 func log(_text : String) -> void :
 	append_text(_text)
+	newline()
 	_animation.play("Hide")
