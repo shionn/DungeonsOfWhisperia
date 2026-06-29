@@ -22,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://f4bn5pgi4ls3" path="res://assets/kenney/ui-adventure/panel_brown_S.png" id="17_03rpx"]
 [ext_resource type="Texture2D" uid="uid://coc4mm1g1nlkp" path="res://assets/kenney/ui-adventure/panel_brown_SE.png" id="18_u1nxv"]
 [ext_resource type="Script" uid="uid://cstky8dpig813" path="res://gui/DialogGui.gd" id="21_fucts"]
+[ext_resource type="Script" uid="uid://bc4y4enkrwodc" path="res://gui/ConsoleLog.gd" id="23_s2c3b"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8rxp0"]
 bg_color = Color(1, 0.94509804, 0.8235294, 1)
@@ -31,6 +32,43 @@ bg_color = Color(1, 0.94509804, 0.8235294, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m586l"]
 bg_color = Color(1, 0.94509804, 0.8235294, 1)
+
+[sub_resource type="Animation" id="Animation_s2c3b"]
+resource_name = "Hide"
+length = 15.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 10, 15),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [1.0, 1.0, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_jpmve"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mya5i"]
+_data = {
+&"Hide": SubResource("Animation_s2c3b"),
+&"RESET": SubResource("Animation_jpmve")
+}
 
 [node name="Gui" type="Control" unique_id=679884730]
 layout_mode = 3
@@ -187,8 +225,9 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -228.0
+offset_left = -238.0
 offset_top = -200.0
+offset_right = -10.0
 offset_bottom = 200.0
 grow_horizontal = 0
 grow_vertical = 2
@@ -478,6 +517,7 @@ layout_mode = 2
 texture = ExtResource("18_u1nxv")
 
 [node name="DialogGui" type="GridContainer" parent="." unique_id=1189208125]
+visible = false
 z_index = 10
 layout_mode = 1
 anchors_preset = 7
@@ -610,6 +650,29 @@ stretch_mode = 1
 [node name="SE" type="TextureRect" parent="DialogGui" unique_id=676692067]
 layout_mode = 2
 texture = ExtResource("18_u1nxv")
+
+[node name="ConsoleLog" type="RichTextLabel" parent="." unique_id=26585873]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = -110.0
+offset_right = 310.0
+offset_bottom = -10.0
+grow_vertical = 0
+mouse_filter = 2
+text = "Ceci est un text de console.
+Ceci est un text de console
+Ceci est un text de console
+Ceci est un text de console
+Ceci est un text de console"
+scroll_following = true
+scroll_following_visible_characters = true
+script = ExtResource("23_s2c3b")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ConsoleLog" unique_id=2077119084]
+libraries/ = SubResource("AnimationLibrary_mya5i")
 
 [connection signal="visibility_changed" from="Bag" to="Bag" method="_on_visibility_changed"]
 [connection signal="pressed" from="Bag/PanelContainer/MarginContainer/VBoxContainer/CloseButton" to="." method="_close"]

@@ -9,9 +9,9 @@
 		"atk" : 2
 	}, {
 		"animation": "Melee_1H_Attack_Slice_Diagonal",
-		"cold_down": 2.0,
+		"cold_down": 10.0,
 		"range": 2.0,
-		"atk" : 2
+		"atk" : 3
 	}, {
 		"animation": "Melee_1H_Attack_Slice_Horizontal",
 		"cold_down": 2.0,

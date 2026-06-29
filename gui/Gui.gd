@@ -9,10 +9,10 @@ class_name Gui
 func _ready() -> void:
 	Input.warp_mouse(get_viewport().get_visible_rect().size/2)
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-	Input.set_custom_mouse_cursor(cursor, Input.CURSOR_ARROW)
+	Input.set_custom_mouse_cursor(cursor,     Input.CURSOR_ARROW)
 	Input.set_custom_mouse_cursor(point_hand, Input.CURSOR_POINTING_HAND)
-	Input.set_custom_mouse_cursor(drag, Input.CURSOR_DRAG)
-	Input.set_custom_mouse_cursor(can_drop, Input.CURSOR_CAN_DROP)
+	Input.set_custom_mouse_cursor(drag,       Input.CURSOR_DRAG)
+	Input.set_custom_mouse_cursor(can_drop,   Input.CURSOR_CAN_DROP)
 
 func _physics_process(_delta: float) -> void:
 	if Input.is_action_just_pressed("menu") :
@@ -28,6 +28,9 @@ func openLoot(container: Object) -> void :
 func openDialog(dialog: Dialog) -> void:
 	$DialogGui.open(dialog)
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+
+func consoleLog(text: String) -> void:
+	$ConsoleLog.log(text)
 
 func _open() -> void : 
 	$Bag.show()
