@@ -5,11 +5,13 @@
 	"atks": [{
 		"animation": "Melee_1H_Attack_Chop",
 		"cold_down": 2.0,
-		"atk": 1
+		"atk": 1,
+		"animation_to_hit_factor" : 0.7
 	}, {
 		"animation": "Melee_2H_Attack_Chop",
 		"cold_down": 5.0,
 		"range": 3.0,
-		"atk": 2
+		"atk": 2,
+		"animation_to_hit_factor" : 0.6
 	}]
 }

@@ -7,8 +7,9 @@ enum State { ATTACK, MOVE, IDLE, HIT, DEATH }
 @onready var _animation = $Rogue_Hooded/AnimationPlayer as AnimationPlayer
 @onready var _world = $/root/World as World
 @onready var _gui = $/root/World/Gui as Gui
-@onready var _animationTimer = $AnimationTimer as Timer
 @onready var _atkTimer = $AtkTimer as Timer
+@onready var _audioTimer = $AudioTimer as Timer
+@onready var _animationTimer = $AnimationTimer as Timer
 
 const _movement_speed: float = 4.0
 const _max_range: float = 20
@@ -80,7 +81,8 @@ func _start_atk() -> void:
 	var duration = _animation.get_animation(animation).length
 	_animation.play(animation)
 	_animationTimer.start(duration)
-	_atkTimer.start(duration*.75)
+	_atkTimer.start(duration*.7)
+	_audioTimer.start(duration*.4)
 	_character.rotation.y = get_viewport().get_camera_3d().rotation.y+deg_to_rad(180)
 	_state = State.ATTACK
 	velocity = Vector3.ZERO
@@ -88,8 +90,7 @@ func _start_atk() -> void:
 func _on_atk_timer_timeout() -> void:
 	var nb_atk = Dices.d6(2,4)
 	_attacked_monster.receive_atk(nb_atk)
-	$AudioStreamPlayer3D.play()
-
+	$Swing3.play()
 
 func _start_animation(anim:String, timer:bool=false) -> void:
 	const _animation_prefix = "RigMediumAnimation/"
@@ -118,4 +119,4 @@ func _on_timer_timeout() -> void:
 
 
 func _on_audio_timer_timeout() -> void:
-	$AudioStreamPlayer3D.play()
+	$Swing3.play()

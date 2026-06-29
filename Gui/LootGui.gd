@@ -5,7 +5,7 @@ extends GridContainer
 @onready var _items = $"/root/World/Items" as Items
 @onready var _bag = $"/root/World/Player/Bag" as Bag
 
-var _goldRessource = load("res://assets/resources-pack-1/Coin-48.png")
+var _goldRessource = load("res://Gui/Assets/resources-pack-1/Coin-48.png")
 
 func _ready() -> void:
 	self.visible = false

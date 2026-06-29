@@ -2,7 +2,7 @@ class_name MonsterModelAtk
 extends Object
 
 var animation : String
-var hit_factor : float
+var animation_to_hit_factor : float
 var cold_down : float
 var cold_down_factor : float
 var _atk : int = 2
@@ -15,7 +15,7 @@ func _init(json, g:Monster) -> void:
 	cold_down = json.get("cold_down",0)
 	cold_down_factor =  json.get("cold_down_factor",0)
 	atk_range = json.get("range", 2)
-	hit_factor = json.get("hit_factor", 1)
+	animation_to_hit_factor = json.get("animation_to_hit_factor", .75)
 	_atk = json.get("atk", 2)
 	
 	g.add_child(_cold_down_timer)

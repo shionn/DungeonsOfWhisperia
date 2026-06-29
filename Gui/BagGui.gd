@@ -6,7 +6,7 @@ extends Control
 @onready var _bag = $"/root/World/Player/Bag" as Bag
 @onready var _items = $"/root/World/Items" as Items
 
-var _goldRessource = load("res://assets/resources-pack-1/Coin-48.png")
+var _goldRessource = load("res://Gui/Assets/resources-pack-1/Coin-48.png")
 var _dragButton : TextureButton
 var _interactable : Interactable
 

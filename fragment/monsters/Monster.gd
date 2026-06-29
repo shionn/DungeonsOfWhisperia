@@ -46,11 +46,7 @@ func _physics_process(_delta: float) -> void:
 				state = State.IDLE
 			else :
 				if _atk :
-					_atk.start()
-					start_animation(_atk.animation, true, _atkTimer, _atk.hit_factor)
-					_gcdTimer.start(_model.global_cold_down)
-					_on_gcd = true
-					state = State.ATTACKING
+					_start_atk()
 				else :
 					_atk = _model.get_atk()
 					state = State.IDLE
@@ -107,6 +103,38 @@ func start_animation(anim:String, time:bool=false, timer:Timer=null, timerFactor
 		else :
 			_animationTimer.start(_animation.get_animation(_animation_prefix+anim).length*timerFactor)
 
+func _on_animationTimer_timeout() -> void:
+	match state:
+		State.DEATH : 
+			self.collision_layer = 256
+			$CollisionDefault.disabled = true
+			$CollisionDeath.disabled = false
+		State.ATTACKING :
+			if state != State.DEATH : state = State.CHASE
+		State.HIT:
+			_look_player()
+			state = State.CHASE
+		_: 
+			state = State.IDLE
+
+func _start_atk() -> void:
+	var anim_name = "RigMediumAnimation/" + _atk.animation
+	var length = _animation.get_animation(anim_name).length
+	_animation.play(anim_name)
+	_animationTimer.start(length)
+	_atk.start()
+	_atkTimer.start(length*_atk.animation_to_hit_factor)
+	_gcdTimer.start(_model.global_cold_down)
+	_on_gcd = true
+	state = State.ATTACKING
+
+func _on_atk_timer_timeout() -> void:
+	if state != State.DEATH :
+		$Swing2.play()
+		_player.receive_atk(_atk.damage(), self)
+		_atk = null
+		
+
 func receive_atk(nb_atk: int) -> void:
 	if state == State.DEATH : return
 	var nb_def = Dices.d6(_model.def, 6)
@@ -114,34 +142,15 @@ func receive_atk(nb_atk: int) -> void:
 	_gui.consoleLog("Vous obtenez %d 💀, %s obtient %d 🛡" % [nb_atk, name, nb_def])
 	if deg > 0 :
 		_model.pv = _model.pv - deg
-		if _model.pv > 0 :
-			if state != State.ATTACKING :
-				start_animation("Hit_A", true)
-				state = State.HIT
-		else :
+		if _model.pv <= 0 :
 			start_animation("Death_A", true)
 			state = State.DEATH
-	else :
+		elif state != State.ATTACKING :
+			start_animation("Hit_A", true)
+			state = State.HIT
+	elif state != State.ATTACKING  :
 		_look_player()
 		state = State.CHASE
 
-func _on_animationTimer_timeout() -> void:
-	match state:
-		State.DEATH : 
-			self.collision_layer = 256
-			$CollisionDefault.disabled = true
-			$CollisionDeath.disabled = false
-		State.HIT:
-			_look_player()
-			state = State.CHASE
-		_: 
-			state = State.IDLE
-
 func _on_gcd_timer_timeout() -> void:
 	_on_gcd = false
-
-func _on_atk_timer_timeout() -> void:
-	if state != State.DEATH :
-		_player.receive_atk(_atk.damage(), self)
-		_atk = null
-		if state == State.ATTACKING : state = State.CHASE
