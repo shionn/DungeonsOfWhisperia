@@ -165,7 +165,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, -10)
 [node name="Guerrier 1" parent="DinerRoom" unique_id=706438754 instance=ExtResource("18_5ip2l")]
 transform = Transform3D(-0.50000006, 0, -0.8660254, 0, 1, 0, 0.8660254, 0, -0.50000006, 2.3999996, 0, 4)
 _model_file = "res://fragment/monsters/SkeletonWarrior1.json"
-loot_obj = null
 loot_gold = 2
 
 [node name="Character" parent="DinerRoom/Guerrier 1" unique_id=1197270133 instance=ExtResource("7_gw6wp")]
@@ -173,7 +172,6 @@ loot_gold = 2
 [node name="Guerrier 2" parent="DinerRoom" unique_id=299569849 instance=ExtResource("18_5ip2l")]
 transform = Transform3D(0.86602545, 0, -0.5, 0, 1, 0, 0.5, 0, 0.86602545, 1.7999992, 0, -4.500001)
 _model_file = "res://fragment/monsters/SkeletonWarrior1.json"
-loot_obj = null
 loot_gold = 3
 
 [node name="Character" parent="DinerRoom/Guerrier 2" unique_id=1318792153 instance=ExtResource("7_gw6wp")]
@@ -482,7 +480,6 @@ loot_gold = 3
 [node name="Minion 2" parent="Entrance" unique_id=617207210 instance=ExtResource("18_5ip2l")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 20, 0, 13)
 _model_file = "res://fragment/monsters/SkeletonMinion1.json"
-loot_obj = null
 loot_gold = 3
 
 [node name="Character" parent="Entrance/Minion 2" unique_id=1064022696 instance=ExtResource("2_my37s")]

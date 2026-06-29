@@ -14,6 +14,10 @@
 ## Icons
 - https://opengameart.org/content/free-rpg-icons-2
 
+# Audio
+- https://www.kenney.nl/
+- https://opengameart.org/content/80-cc0-rpg-sfx
+
 ## peut etre : 
 - https://opengameart.org/content/gemmed-items
 - https://opengameart.org/content/handpainted-rpg-icons

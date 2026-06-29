@@ -37,6 +37,7 @@ func _physics_process(_delta: float) -> void:
 					_attacked_monster = _world.target_monster
 					if self.global_position.distance_to(_attacked_monster.global_position) < _atk_range :
 						_start_animation("Melee_Dualwield_Attack_Chop", true, .75)
+						$AudioTimer.start(1)
 						_state = State.ATTACK
 						_character.rotation.y = get_viewport().get_camera_3d().rotation.y+deg_to_rad(180)
 						velocity = Vector3.ZERO
@@ -91,3 +92,7 @@ func _on_timer_timeout() -> void:
 			_state = State.MOVE
 		State.HIT :
 			_state = State.MOVE
+
+
+func _on_audio_timer_timeout() -> void:
+	$AudioStreamPlayer3D.play()

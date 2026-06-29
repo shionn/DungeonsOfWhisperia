@@ -47,7 +47,7 @@ func _physics_process(_delta: float) -> void:
 			else :
 				if _atk :
 					_atk.start()
-					start_animation(_atk.animation, true, _atkTimer)
+					start_animation(_atk.animation, true, _atkTimer, _atk.hit_factor)
 					_gcdTimer.start(_model.global_cold_down)
 					_on_gcd = true
 					state = State.ATTACKING
@@ -98,14 +98,14 @@ func _update_navigation() -> bool :
 		self._navigation_agent.set_target_position(_player.global_position)
 	return self._navigation_agent.is_navigation_finished()
 
-func start_animation(anim:String, time:bool=false, timer:Timer=null) -> void:
+func start_animation(anim:String, time:bool=false, timer:Timer=null, timerFactor:float = 1.0) -> void:
 	const _animation_prefix = "RigMediumAnimation/"
 	_animation.play(_animation_prefix+anim)
 	if time : 
 		if timer :
-			timer.start(_animation.get_animation(_animation_prefix+anim).length)
+			timer.start(_animation.get_animation(_animation_prefix+anim).length*timerFactor)
 		else :
-			_animationTimer.start(_animation.get_animation(_animation_prefix+anim).length)
+			_animationTimer.start(_animation.get_animation(_animation_prefix+anim).length*timerFactor)
 
 func receive_atk(nb_atk: int) -> void:
 	if state == State.DEATH : return

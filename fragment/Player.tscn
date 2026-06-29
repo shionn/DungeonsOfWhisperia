@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://crpe0nst55m8b" path="res://fragment/PlayerG.gd" id="1_kpjcp"]
 [ext_resource type="PackedScene" uid="uid://croyspihojfyp" path="res://Assets/Scenes/Rogue_Hooded.tscn" id="3_svw8l"]
 [ext_resource type="Script" uid="uid://cy4qabbfkxrfk" path="res://fragment/items/Bag.gd" id="3_xb6lc"]
+[ext_resource type="AudioStream" uid="uid://clp2ci6vwcun4" path="res://Audio/80-CC0-RPG-SFX/blade_01.ogg" id="4_svw8l"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_qs2cd"]
 radius = 0.6
@@ -27,4 +28,11 @@ metadata/_custom_type_script = "uid://cy4qabbfkxrfk"
 
 [node name="Rogue_Hooded" parent="." unique_id=1671600261 instance=ExtResource("3_svw8l")]
 
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=301490908]
+stream = ExtResource("4_svw8l")
+
+[node name="AudioTimer" type="Timer" parent="." unique_id=1351551849]
+one_shot = true
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="AudioTimer" to="." method="_on_audio_timer_timeout"]
