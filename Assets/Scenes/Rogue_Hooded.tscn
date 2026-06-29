@@ -6,7 +6,7 @@
 
 [node name="Rogue_Hooded" unique_id=1671600261 instance=ExtResource("1_qt1yg")]
 
-[node name="Skeleton3D" parent="Rig_Medium" parent_id_path=PackedInt32Array(549054688) index="0" unique_id=1915303353]
+[node name="Skeleton3D" parent="Rig_Medium" parent_id_path=PackedInt32Array(1161858912) index="0" unique_id=2116293435]
 bones/2/rotation = Quaternion(0.9998491, -7.13275e-08, -1.20427455e-08, 0.017373193)
 bones/3/rotation = Quaternion(0.10622513, 6.8652206e-08, -7.376967e-08, 0.99434215)
 bones/4/rotation = Quaternion(-0.45523903, 1.619773e-08, -3.435674e-08, 0.8903693)

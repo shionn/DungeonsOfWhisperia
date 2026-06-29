@@ -4,7 +4,7 @@
 
 [node name="torch_mounted" unique_id=1245216849 instance=ExtResource("1_6cvwo")]
 
-[node name="torch_mounted" parent="." index="0" unique_id=2124271790]
+[node name="torch_mounted" parent="." index="0" unique_id=1550438638]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0.2)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="." index="1" unique_id=307047342]

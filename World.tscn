@@ -11,7 +11,9 @@
 [ext_resource type="Texture2D" uid="uid://bho5wu36vyxai" path="res://Gui/Assets/fanatisy-magic-set/potion-1-48.png" id="9_fv4w7"]
 
 [sub_resource type="Environment" id="Environment_js7pq"]
-background_energy_multiplier = 0.7
+ssao_enabled = true
+adjustment_brightness = 0.81
+adjustment_contrast = 1.025
 
 [node name="World" type="Node3D" unique_id=1017407997]
 script = ExtResource("1_bcbcq")

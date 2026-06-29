@@ -15,7 +15,7 @@ _data = {
 
 [node name="Skeleton_Warrior" unique_id=1197270133 instance=ExtResource("1_gbl0a")]
 
-[node name="Skeleton3D" parent="Rig_Medium" parent_id_path=PackedInt32Array(66195981) index="0" unique_id=1795678235]
+[node name="Skeleton3D" parent="Rig_Medium" parent_id_path=PackedInt32Array(223260383) index="0" unique_id=1291296375]
 bones/1/position = Vector3(0, 0.39206383, 0)
 bones/1/rotation = Quaternion(-1.11122625e-10, 0.043157753, 2.5724098e-09, 0.9990683)
 bones/2/rotation = Quaternion(-6.938893e-18, 7.1054274e-15, 4.93038e-32, 1)
@@ -44,7 +44,7 @@ bones/20/rotation = Quaternion(0.16501392, 8.071145e-08, -1.0972214e-07, 0.98629
 bones/21/rotation = Quaternion(-0.53554744, -0.12492985, 0.0538403, 0.8334763)
 bones/22/rotation = Quaternion(-5.381821e-06, 0.92025304, -0.391324, 1.328151e-06)
 
-[node name="head" parent="Rig_Medium/Skeleton3D" index="0" unique_id=2045384714]
+[node name="head" parent="Rig_Medium/Skeleton3D" index="0" unique_id=185810418]
 transform = Transform3D(0.9997204, -1.4014349e-09, 0.023646597, 1.3934147e-09, 0.99999994, 3.5568634e-10, -0.023646597, -3.226374e-10, 0.9997204, -4.3038546e-09, 1.2278259, 1.5739471e-15)
 
 [node name="RightHand" type="BoneAttachment3D" parent="Rig_Medium/Skeleton3D" index="10" unique_id=111249048]
