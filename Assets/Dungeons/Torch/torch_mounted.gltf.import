@@ -49,7 +49,9 @@ _subresources={
 },
 "nodes": {
 "PATH:torch_mounted": {
-"mesh_instance/layers": 2
+"generate/physics": true,
+"mesh_instance/layers": 2,
+"physics/shape_type": 1
 }
 }
 }
