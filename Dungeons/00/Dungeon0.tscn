@@ -2,7 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://duyv10q0hqy0g" path="res://Assets/Scenes/Skeleton_Minion.tscn" id="2_my37s"]
 [ext_resource type="PackedScene" uid="uid://cl36lcn4lo2eq" path="res://Assets/Scenes/Torch_Mounted.tscn" id="3_we3ui"]
-[ext_resource type="Script" uid="uid://ksn1twomxy1j" path="res://fragment/InteractableContainer.gd" id="5_jv52g"]
 [ext_resource type="PackedScene" uid="uid://bqbfybidqqw6b" path="res://Assets/Dungeons/Tables/table_long_decorated_A.gltf" id="6_y04yx"]
 [ext_resource type="PackedScene" uid="uid://cd70tnt7fd2v6" path="res://Assets/Dungeons/Tables/table_long_decorated_C.gltf" id="7_a7nm6"]
 [ext_resource type="PackedScene" uid="uid://ciu823c3rw73b" path="res://Assets/Scenes/Skeleton_Warrior.tscn" id="7_gw6wp"]
@@ -251,7 +250,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0
 
 [node name="bottle_A_labeled_green3" parent="DinerRoom/table_long_decorated_C2" unique_id=839839246 instance=ExtResource("23_cvi8s")]
 transform = Transform3D(0.4226183, 0, -0.9063079, 0, 1, 0, 0.9063079, 0, 0.4226183, -0.60000515, 1, -1.5)
-script = ExtResource("5_jv52g")
+script = ExtResource("10_we3ui")
 loot_obj = 3
 hide_on_loot = true
 
@@ -270,8 +269,8 @@ revert = true
 
 [node name="wall_shelves2" parent="DinerRoom" unique_id=1481565781 instance=ExtResource("15_a7nm6")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4, 0, -4)
-script = ExtResource("5_jv52g")
-loot_gold = 25
+script = ExtResource("10_we3ui")
+loot_gold = 15
 
 [node name="Area3D" type="Area3D" parent="DinerRoom/wall_shelves2" unique_id=1982860981]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6999998, 1.4, 0.39999962)
@@ -286,6 +285,19 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -16)
 [node name="Wall_Doorway" parent="Armurerie" unique_id=812446971 instance=ExtResource("22_5puas")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
 
+[node name="bar_straight_C2" parent="Armurerie" unique_id=946520791 instance=ExtResource("11_eig52")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0, -1)
+loot_gold = 2
+
+[node name="bar_straight_C3" parent="Armurerie" unique_id=1000291513 instance=ExtResource("11_eig52")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, -1)
+loot_gold = 3
+
+[node name="bar_straight_C_short" parent="Armurerie" unique_id=1297367655 instance=ExtResource("11_u0nfn")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -5, 0, 1)
+loot_obj = 2
+loot_gold = 2
+
 [node name="bar_innercorner2" parent="Armurerie" unique_id=1487845929 instance=ExtResource("8_puq8f")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -5, 0, -0.5)
 
@@ -294,19 +306,6 @@ transform = Transform3D(-0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, -0.
 
 [node name="bartop_A_large2" parent="Armurerie" unique_id=1036774138 instance=ExtResource("11_prvkv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 1, -1)
-
-[node name="bar_straight_C2" parent="Armurerie" unique_id=946520791 instance=ExtResource("11_eig52")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0, -1)
-loot_gold = 2
-
-[node name="bar_straight_C3" parent="Armurerie" unique_id=1000291513 instance=ExtResource("11_eig52")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, -1)
-loot_gold = 1
-
-[node name="bar_straight_C_short" parent="Armurerie" unique_id=1297367655 instance=ExtResource("11_u0nfn")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -5, 0, 1)
-loot_obj = 2
-loot_gold = 1
 
 [node name="bartop_A_medium2" parent="Armurerie" unique_id=780548732 instance=ExtResource("29_eig52")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -5, 1, 0.5)
@@ -519,8 +518,8 @@ locked = true
 
 [node name="wall_shelves3" parent="BossRoom" unique_id=332301194 instance=ExtResource("15_a7nm6")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, 6)
-script = ExtResource("5_jv52g")
-loot_gold = 15
+script = ExtResource("10_we3ui")
+loot_gold = 18
 
 [node name="Area3D" type="Area3D" parent="BossRoom/wall_shelves3" unique_id=383017787]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6999998, 1.4, 0.39999962)
@@ -537,6 +536,7 @@ _model_file = "res://fragment/monsters/SkeletonGolem1.json"
 
 [node name="bar_straight_C2" parent="BossRoom" unique_id=1918491113 instance=ExtResource("11_eig52")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3, 0, 2)
+loot_gold = 2
 
 [node name="bartop_A_medium2" parent="BossRoom/bar_straight_C2" unique_id=1166037996 instance=ExtResource("29_eig52")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
@@ -647,7 +647,7 @@ metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 [node name="torch_mounted" parent="Entrance" unique_id=342053045 instance=ExtResource("3_we3ui")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 18, 0, 6)
 
-[node name="torch_mounted3" parent="Entrance" unique_id=95346266 instance=ExtResource("3_we3ui")]
+[node name="torch_mounted2" parent="Entrance" unique_id=95346266 instance=ExtResource("3_we3ui")]
 transform = Transform3D(0.08715568, 0, 0.9961947, 0, 1, 0, -0.9961947, 0, 0.08715568, 10, 0, -7.6)
 
 [node name="Navigation" type="Node3D" parent="." unique_id=2062026590]

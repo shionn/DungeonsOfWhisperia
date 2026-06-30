@@ -12,16 +12,34 @@ enum Action { ACTIVATE, LOOK }
 @export var action : Action = Action.ACTIVATE
 @export var interactDistance : float = 3
 
+@export var loot_obj : Items.ItemName = Items.ItemName.None
+@export var loot_gold: int = 0
+@export var hide_on_loot: bool = false
+
+signal activate() 
+
+var _lootable = false
+
 func _ready() -> void:
 	_area.connect("mouse_entered", _on_mouse_entered)
 	_area.connect("mouse_exited", _on_mouse_exited)
 	_area.connect("input_event", _on_input_event)
+	_lootable = loot_gold > 0 or loot_obj
 
 func on_interact() -> void: 
 	if $description :
 		_gui.openDialog($description)
+	elif _lootable :
+		_gui.openLoot(self)
 	else : 
-		print("on_interact is not overwrite")
+		activate.emit()
+
+func open_description() -> void:
+	if $description :
+		_gui.openDialog($description)
+
+func open_loot() -> void:
+	_gui.openLoot(self)
 
 func isInRange(target: Node3D) -> bool:
 	return global_position.distance_to(target.global_position) <= interactDistance

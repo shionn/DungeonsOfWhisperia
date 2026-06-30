@@ -1,14 +1,14 @@
 [gd_scene format=3 uid="uid://dj0modsh7x76o"]
 
 [ext_resource type="PackedScene" uid="uid://bta2mvfkcul0j" path="res://Assets/Dungeons/Bar/bar_straight_C.gltf" id="1_dasjt"]
-[ext_resource type="Script" uid="uid://ksn1twomxy1j" path="res://fragment/InteractableContainer.gd" id="2_j3q06"]
+[ext_resource type="Script" uid="uid://bpgb3pwbq61mh" path="res://fragment/Interactable.gd" id="2_fav1t"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_b02ke"]
 radius = 0.2
 height = 1.0
 
 [node name="bar_straight_C2" unique_id=946520791 instance=ExtResource("1_dasjt")]
-script = ExtResource("2_j3q06")
+script = ExtResource("2_fav1t")
 
 [node name="Area3D" type="Area3D" parent="." index="1" unique_id=752294620]
 

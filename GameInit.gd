@@ -12,7 +12,8 @@ func _physics_process(_delta: float) -> void:
 	#if Input.is_action_just_released("quit"):
 	#	get_tree().quit()
 	if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED and Input.is_action_just_pressed("interact"):
-		if target_interactable and $Player.global_position.distance_to(target_interactable.global_position) < target_interactable.interactDistance :
+		if ( target_interactable and 
+				$Player.global_position.distance_to(target_interactable.global_position) < target_interactable.interactDistance ):
 			target_interactable.on_interact()
 		if target_monster and target_monster.state == Monster.State.DEATH:
 			$Gui.openLoot(target_monster)
