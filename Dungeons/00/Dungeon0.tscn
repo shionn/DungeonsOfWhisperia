@@ -47,6 +47,7 @@
 [ext_resource type="PackedScene" uid="uid://wj4kthwrxw47" path="res://Assets/Characters/SkeletonAccessoires/Skeleton_Crossbow.gltf" id="33_w4mcl"]
 [ext_resource type="PackedScene" uid="uid://c740w1gfrmupy" path="res://Assets/Dungeons/Book/book_brown.gltf" id="35_cjfn2"]
 [ext_resource type="PackedScene" uid="uid://bdb2tkwvqixia" path="res://Assets/Dungeons/Book/book_tan.gltf" id="37_45lrj"]
+[ext_resource type="Script" uid="uid://y4tahlhuoy6j" path="res://Dungeons/00/BossRoomCode.gd" id="38_1qi0c"]
 [ext_resource type="PackedScene" uid="uid://ch3qca6f0r8yr" path="res://Assets/Characters/AdventurersAccessoires/potion_medium_blue.gltf" id="38_r3u65"]
 [ext_resource type="PackedScene" uid="uid://b1dvxk4po0ale" path="res://Assets/Dungeons/Candle/candle_melted.gltf" id="38_w53v0"]
 [ext_resource type="PackedScene" uid="uid://dgc6r0o5rxge4" path="res://Assets/Characters/AdventurersAccessoires/potion_small_blue.gltf" id="39_1qi0c"]
@@ -57,6 +58,7 @@
 [ext_resource type="PackedScene" uid="uid://b6lorylhdtgtv" path="res://Assets/Dungeons/Shelves/shelf_small_candles.gltf" id="41_y0h00"]
 [ext_resource type="PackedScene" uid="uid://c2eo4fhjbw8kj" path="res://Assets/Dungeons/Banner/banner_brown.gltf" id="42_kn3fm"]
 [ext_resource type="PackedScene" uid="uid://bifqjl5vbnrgq" path="res://Assets/Characters/AdventurersAccessoires/potion_small_red.gltf" id="42_pjm1s"]
+[ext_resource type="AudioStream" uid="uid://ce7drpk5sjkcm" path="res://Audio/KenneyRpgAudio/metalClick.ogg" id="43_1qi0c"]
 [ext_resource type="PackedScene" uid="uid://b6vicjv5yemah" path="res://Assets/Dungeons/Book/book_grey.gltf" id="47_3jgwx"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_78w8x"]
@@ -561,9 +563,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4, -0.2)
 
 [node name="Code" type="Node3D" parent="BossRoom/bar_straight_C2" unique_id=1793652639]
 transform = Transform3D(0.99999994, 0, 0, 0, -4.3711385e-08, 1, 0, -0.99999994, -4.371139e-08, 0.4000001, 1.05, 0.20000076)
+script = ExtResource("38_1qi0c")
 
 [node name="Action1" type="Node3D" parent="BossRoom/bar_straight_C2/Code" unique_id=2059168431]
 transform = Transform3D(1.0000001, -1.4901161e-08, 1.8626447e-09, 1.4901154e-08, 1.0000001, -7.450581e-09, 0, 7.450581e-09, 1.0000001, -0.099999905, -0.099617004, 0.008715391)
+script = ExtResource("10_we3ui")
 
 [node name="Area3D" type="Area3D" parent="BossRoom/bar_straight_C2/Code/Action1" unique_id=1173049448]
 
@@ -573,6 +577,7 @@ shape = SubResource("CylinderShape3D_oej0p")
 
 [node name="Action2" type="Node3D" parent="BossRoom/bar_straight_C2/Code" unique_id=2078527129]
 transform = Transform3D(1, -1.4901161e-08, 1.8626447e-09, 1.4901154e-08, 1, -7.450581e-09, 2.1175824e-22, 7.450577e-09, 1.0000001, 0.099999905, -0.099617004, 0.008715391)
+script = ExtResource("10_we3ui")
 
 [node name="Area3D" type="Area3D" parent="BossRoom/bar_straight_C2/Code/Action2" unique_id=1951731798]
 
@@ -582,6 +587,7 @@ shape = SubResource("CylinderShape3D_oej0p")
 
 [node name="Action3" type="Node3D" parent="BossRoom/bar_straight_C2/Code" unique_id=1194598509]
 transform = Transform3D(0.99999994, -1.4901161e-08, 1.8626447e-09, 1.4901154e-08, 0.99999994, -7.450581e-09, 2.1175824e-22, 7.4505735e-09, 1.0000001, 0.2999997, -0.099617004, 0.008715391)
+script = ExtResource("10_we3ui")
 
 [node name="Area3D" type="Area3D" parent="BossRoom/bar_straight_C2/Code/Action3" unique_id=633373936]
 
@@ -589,16 +595,31 @@ transform = Transform3D(0.99999994, -1.4901161e-08, 1.8626447e-09, 1.4901154e-08
 transform = Transform3D(1, 0, 0, 0, 1, 5.3663276e-17, 0, 4.8863076e-23, 1, 0, 0, 0)
 shape = SubResource("CylinderShape3D_oej0p")
 
-[node name="blue" parent="BossRoom/bar_straight_C2/Code" unique_id=1972663799 instance=ExtResource("39_1qi0c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.19999981, 0, 0)
+[node name="Slot1" type="Node3D" parent="BossRoom/bar_straight_C2/Code" unique_id=1936119043]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 8.351872e-23, 0, -3.5527137e-15, 1, -0.19999981, 0, 0)
 
-[node name="green" parent="BossRoom/bar_straight_C2/Code" unique_id=980597776 instance=ExtResource("40_w53v0")]
+[node name="blue" parent="BossRoom/bar_straight_C2/Code/Slot1" unique_id=1972663799 instance=ExtResource("39_1qi0c")]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 8.351872e-23, 0, -3.5527137e-15, 1, 0, 0, 0)
 
-[node name="orange" parent="BossRoom/bar_straight_C2/Code" unique_id=975049330 instance=ExtResource("41_1qi0c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.19999981, 0, 0)
+[node name="Slot2" type="Node3D" parent="BossRoom/bar_straight_C2/Code" unique_id=701549701]
 
-[node name="red" parent="BossRoom/bar_straight_C2/Code" unique_id=1798733911 instance=ExtResource("42_pjm1s")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4000001, 0, 0)
+[node name="green" parent="BossRoom/bar_straight_C2/Code/Slot2" unique_id=980597776 instance=ExtResource("40_w53v0")]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 8.351872e-23, 0, -3.5527137e-15, 1, 0, 0, 0)
+
+[node name="Slot3" type="Node3D" parent="BossRoom/bar_straight_C2/Code" unique_id=592085742]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 8.351872e-23, 0, -3.5527137e-15, 1, 0.19999981, 0, 0)
+
+[node name="orange" parent="BossRoom/bar_straight_C2/Code/Slot3" unique_id=975049330 instance=ExtResource("41_1qi0c")]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 8.351872e-23, 0, -3.5527137e-15, 1, 0, 0, 0)
+
+[node name="Slot4" type="Node3D" parent="BossRoom/bar_straight_C2/Code" unique_id=150594612]
+transform = Transform3D(0.9999999, -3.5527137e-15, 0, 3.5527137e-15, 0.9999999, 8.351872e-23, 2.1175824e-22, -3.5527137e-15, 1, 0.39999962, 0, 0)
+
+[node name="red" parent="BossRoom/bar_straight_C2/Code/Slot4" unique_id=1798733911 instance=ExtResource("42_pjm1s")]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 8.351872e-23, 0, -3.5527137e-15, 1, 0, 0, 0)
+
+[node name="Audio" type="AudioStreamPlayer3D" parent="BossRoom/bar_straight_C2/Code" unique_id=1501163227]
+stream = ExtResource("43_1qi0c")
 
 [node name="bookcase_single_decoratedA2" parent="BossRoom" unique_id=2029516822 instance=ExtResource("40_pjm1s")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3.2000008, 0, 4)
@@ -1208,3 +1229,7 @@ transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 6, 0
 
 [node name="wall9" parent="Walls" unique_id=706346975 instance=ExtResource("22_eig52")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -2, 0, 2)
+
+[connection signal="activate" from="BossRoom/bar_straight_C2/Code/Action1" to="BossRoom/bar_straight_C2/Code" method="_on_action_1_activate"]
+[connection signal="activate" from="BossRoom/bar_straight_C2/Code/Action2" to="BossRoom/bar_straight_C2/Code" method="_on_action_2_activate"]
+[connection signal="activate" from="BossRoom/bar_straight_C2/Code/Action3" to="BossRoom/bar_straight_C2/Code" method="_on_action_3_activate"]
