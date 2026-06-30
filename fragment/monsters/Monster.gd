@@ -15,7 +15,6 @@ enum State { IDLE, CHASE, ATTACK, ATTACKING, HIT, DEATH }
 @export var loot_obj : Items.ItemName = Items.ItemName.None
 @export var loot_gold: int = 0
 
-const _chase_dist = 1.5
 const _movement_speed: float = 4.0
 
 var _model : MonsterModel
@@ -25,7 +24,7 @@ var state : State = State.IDLE
 
 func _ready() -> void:
 	_model = MonsterModel.new(_model_file, self)
-	_navigation_agent.target_desired_distance = _chase_dist
+	_navigation_agent.target_desired_distance = _model.chase_distance
 	start_animation("Idle_A")
 	_atk = _model.get_atk()
 
@@ -35,7 +34,7 @@ func _physics_process(_delta: float) -> void:
 	match state: 
 		State.CHASE:
 			var distance = (_player.global_position-global_position).length()
-			if (_atk && distance < _atk.atk_range or distance < 2 and _player.pv>0) :
+			if (_atk && distance < _atk.atk_range or distance < _model.min_atk_range and _player.pv>0) :
 				state = State.ATTACK
 			elif _navigation_agent.is_navigation_finished() : 
 				state = State.IDLE
@@ -153,3 +152,7 @@ func receive_atk(nb_atk: int) -> void:
 
 func _on_gcd_timer_timeout() -> void:
 	_on_gcd = false
+
+func isLarge() -> bool:
+	return _model.large
+	

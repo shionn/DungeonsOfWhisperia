@@ -6,7 +6,7 @@
 
 [node name="Skeleton_Golem" unique_id=1568710970 instance=ExtResource("1_fucn3")]
 
-[node name="Skeleton3D" parent="Rig_Large" parent_id_path=PackedInt32Array(533795205) index="0" unique_id=872900823]
+[node name="Skeleton3D" parent="Rig_Large" parent_id_path=PackedInt32Array(1318696837) index="0" unique_id=1871649444]
 bones/1/position = Vector3(0, 0.95983857, 0)
 bones/1/rotation = Quaternion(2.255949e-10, 0.17319314, 2.5649072e-09, 0.9848879)
 bones/2/position = Vector3(-0.34189013, 0.22717452, 2.0398836e-08)
@@ -46,4 +46,4 @@ transform = Transform3D(-0.16077973, -0.106249854, 0.98125476, 0.9839672, 0.0604
 bone_name = "handslot.l"
 bone_idx = 16
 
-[node name="RigLarge" parent="." index="1" unique_id=63969122 instance=ExtResource("2_8qywu")]
+[node name="AnimationPlayer" parent="." index="1" unique_id=63969122 instance=ExtResource("2_8qywu")]

@@ -37,7 +37,8 @@ func _physics_process(_delta: float) -> void:
 					pass # do loot
 				if _world.target_monster and _world.target_monster.state != Monster.State.DEATH :
 					_attacked_monster = _world.target_monster
-					if self.global_position.distance_to(_attacked_monster.global_position) < _atk_range :
+					var _range = _atk_range + 1  if _attacked_monster.isLarge() else _atk_range
+					if self.global_position.distance_to(_attacked_monster.global_position) < _range  :
 						_start_atk()
 			else : 
 				_handle_move_input()
