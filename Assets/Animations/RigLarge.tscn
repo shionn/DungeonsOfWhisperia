@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://by01ys5qqtv5x"]
+
+[ext_resource type="Animation" uid="uid://bw3c11rmejymb" path="res://Assets/Animations/Rig_Large/Death_A.res" id="1_er4fa"]
+[ext_resource type="Animation" uid="uid://cepit0u8o8k36" path="res://Assets/Animations/Rig_Large/Hit_A.res" id="2_6k2yg"]
+[ext_resource type="Animation" uid="uid://b18p114eg8cns" path="res://Assets/Animations/Rig_Large/Idle_A.res" id="3_pq4if"]
+[ext_resource type="Animation" uid="uid://ylt6uolwaffu" path="res://Assets/Animations/Rig_Large/Walking_A.res" id="4_0jr0q"]
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_feo0d"]
+_data = {
+&"Death_A": ExtResource("1_er4fa"),
+&"Hit_A": ExtResource("2_6k2yg"),
+&"Idle_A": ExtResource("3_pq4if"),
+&"Walking_A": ExtResource("4_0jr0q")
+}
+
+[node name="RigLarge" type="AnimationPlayer" unique_id=63969122]
+libraries/RigLarge = SubResource("AnimationLibrary_feo0d")
