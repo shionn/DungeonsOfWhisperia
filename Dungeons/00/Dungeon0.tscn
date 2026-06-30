@@ -562,7 +562,7 @@ transform = Transform3D(0.99619466, 0, 0.087155804, 0, 1, 0, -0.087155804, 0, 0.
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4, -0.2)
 
 [node name="Code" type="Node3D" parent="BossRoom/bar_straight_C2" unique_id=1793652639]
-transform = Transform3D(0.99999994, 0, 0, 0, -4.3711385e-08, 1, 0, -0.99999994, -4.371139e-08, 0.4000001, 1.05, 0.20000076)
+transform = Transform3D(0.9659257, 0.25881898, 1.1313338e-08, 0, -4.3711385e-08, 1, 0.25881898, -0.9659257, -4.222196e-08, 0.4000001, 1.05, 0.20000076)
 script = ExtResource("38_1qi0c")
 
 [node name="Action1" type="Node3D" parent="BossRoom/bar_straight_C2/Code" unique_id=2059168431]
