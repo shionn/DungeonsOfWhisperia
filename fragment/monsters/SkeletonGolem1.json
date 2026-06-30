@@ -6,20 +6,20 @@
 	"atks": [{
 		"animation": "Melee_1H_Slash",
 		"cold_down": 2.0,
-		"range": 3.0,
-		"atk" : 3,
-		"animation_to_hit_factor" : 0.6
+		"range": 3.5,
+		"atk" : 5,
+		"animation_to_hit_factor" : 0.4
 	}, {
 		"animation": "Melee_2H_Attack",
-		"cold_down": 10.0,
-		"range": 3.0,
-		"atk" : 3,
-		"animation_to_hit_factor" : 0.5
+		"cold_down": 4.0,
+		"range": 3.5,
+		"atk" : 5,
+		"animation_to_hit_factor" : 0.3
 	}, {
 		"animation": "Melee_2H_Slam",
-		"cold_down": 10.0,
-		"range": 3.0,
-		"atk" : 4,
+		"cold_down": 15.0,
+		"range": 5.0,
+		"atk" : 6,
 		"animation_to_hit_factor" : 0.3
 	}]
 }

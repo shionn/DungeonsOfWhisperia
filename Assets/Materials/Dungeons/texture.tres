@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cqdkny5e1bhp8"]
+
+[ext_resource type="Texture2D" uid="uid://b0cbaa3q27hu6" path="res://Assets/Dungeons/Book/dungeon_texture.png" id="1_sequj"]
+
+[resource]
+resource_name = "texture"
+albedo_texture = ExtResource("1_sequj")
+roughness = 0.45
+metadata/_gltf_primary_texture_coord = 0

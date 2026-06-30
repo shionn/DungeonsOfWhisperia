@@ -5,6 +5,7 @@
 	"atks": [{
 		"animation": "Melee_1H_Attack_Chop",
 		"cold_down": 2.0,
+		"range": 2.0,
 		"atk": 1,
 		"animation_to_hit_factor" : 0.7
 	}, {

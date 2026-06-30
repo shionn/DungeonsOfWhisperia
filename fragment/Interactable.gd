@@ -27,11 +27,11 @@ func isInRange(target: Node3D) -> bool:
 	return global_position.distance_to(target.global_position) <= interactDistance
 
 func _on_mouse_entered() -> void:
-	print("_on_mouse_entered")
+	#print("_on_mouse_entered")
 	_bagGui.on_enter(self)
 
 func _on_mouse_exited() -> void:
-	print("_on_mouse_exited")
+	#print("_on_mouse_exited")
 	_bagGui.on_exit(self)
 
 func on_item_drop(_item : Item)-> void:

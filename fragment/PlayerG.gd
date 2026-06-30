@@ -67,7 +67,11 @@ func _handle_move_input() -> void:
 func receive_atk(nb_atk: int, monster:Monster) -> void:
 	var nb_def = Dices.d6(2, 5)
 	var deg = nb_atk - nb_def
-	_gui.consoleLog("%s obtient %d 💀, vous obtenez %d 🛡" % [monster.name, nb_atk, nb_def])
+	if nb_atk > 0 :
+		_gui.consoleLog("%s obtient %d 💀, vous obtenez %d 🛡" % [monster.name, nb_atk, nb_def])
+	else :
+		_gui.consoleLog("%s obtient %d 💀" % [monster.name, nb_atk])
+		
 	if deg > 0 :
 		pv = max(pv - deg, 0)
 		if pv > 0:
@@ -113,6 +117,8 @@ func _on_timer_timeout() -> void:
 	match _state :
 		State.ATTACK:
 			var nb_atk = Dices.d6(2,4)
+			_attacked_monster.receive_atk(nb_atk)
+			nb_atk = Dices.d6(2,4)
 			_attacked_monster.receive_atk(nb_atk)
 			_state = State.MOVE
 		State.HIT :

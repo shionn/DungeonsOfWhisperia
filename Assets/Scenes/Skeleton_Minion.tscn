@@ -2,10 +2,11 @@
 
 [ext_resource type="PackedScene" uid="uid://bcqj4vgg680ca" path="res://Assets/Characters/Skeleton/Skeleton_Minion.glb" id="1_3h15f"]
 [ext_resource type="PackedScene" uid="uid://pa16u3bxw2jq" path="res://Assets/Animations/RigMedium.tscn" id="2_18h7b"]
+[ext_resource type="PackedScene" uid="uid://cx81jxahw60nm" path="res://Assets/Characters/SkeletonAccessoires/Skeleton_Blade.gltf" id="2_at6h3"]
 
 [node name="Skeleton_Minion" unique_id=1366271086 instance=ExtResource("1_3h15f")]
 
-[node name="Skeleton3D" parent="Rig_Medium" parent_id_path=PackedInt32Array(1980652564) index="0" unique_id=1772777208]
+[node name="Skeleton3D" parent="Rig_Medium" parent_id_path=PackedInt32Array(1343421821) index="0" unique_id=1201822933]
 bones/1/position = Vector3(0, 0.39206383, 0)
 bones/1/rotation = Quaternion(-1.11122625e-10, 0.043157753, 2.5724098e-09, 0.9990683)
 bones/2/position = Vector3(0.17094508, 0.1135872, 1.5994095e-08)
@@ -37,5 +38,13 @@ bones/19/rotation = Quaternion(0.9973222, -0.029457364, 0.03152927, 0.05904832)
 bones/20/rotation = Quaternion(0.2740081, -6.3812955e-08, 1.927607e-07, 0.9617275)
 bones/21/rotation = Quaternion(-0.5590394, 0.11451276, -0.008627633, 0.82115)
 bones/22/rotation = Quaternion(-8.934892e-05, 0.9202217, -0.3913977, 2.0290998e-05)
+
+[node name="RightHand" type="BoneAttachment3D" parent="Rig_Medium/Skeleton3D" index="9" unique_id=1520788755]
+transform = Transform3D(4.5426856e-07, -0.14989443, -0.9887013, -0.99999917, 1.4901153e-07, -1.7406047e-07, -2.2557681e-07, 0.98870134, -0.14989455, -0.49106094, 0.6410296, 0.10659542)
+bone_name = "handslot.r"
+bone_idx = 12
+
+[node name="Skeleton_Blade" parent="Rig_Medium/Skeleton3D/RightHand" index="0" unique_id=914444647 instance=ExtResource("2_at6h3")]
+transform = Transform3D(-1.0000001, -4.5916107e-07, -1.8809525e-08, -4.329526e-07, 0.95506334, -0.2964023, 1.540607e-07, -0.29640228, -0.95506334, 0, 0, 0)
 
 [node name="AnimationPlayer" parent="." index="1" unique_id=1430341502 instance=ExtResource("2_18h7b")]

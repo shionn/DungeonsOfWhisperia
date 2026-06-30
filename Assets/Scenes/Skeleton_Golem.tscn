@@ -39,7 +39,7 @@ transform = Transform3D(-0.16078016, 0.10624957, -0.9812546, -0.98390955, 0.0612
 bone_name = "handslot.r"
 bone_idx = 22
 
-[node name="Skeleton_Mace_Large2" parent="Rig_Large/Skeleton3D/RightHand" index="0" unique_id=856041715 instance=ExtResource("2_3xrv4")]
+[node name="Skeleton_Mace_Large" parent="Rig_Large/Skeleton3D/RightHand" index="0" unique_id=856041715 instance=ExtResource("2_3xrv4")]
 
 [node name="LeftHand" type="BoneAttachment3D" parent="Rig_Large/Skeleton3D" index="9" unique_id=1405047992]
 transform = Transform3D(-0.16077973, -0.106249854, 0.98125476, 0.9839672, 0.060494788, 0.16777472, -0.077186465, 0.992497, 0.09481996, 1.1731902, 1.2665626, 0.22395352)
