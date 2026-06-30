@@ -6,6 +6,7 @@ var atks: Array[MonsterModelAtk] = []
 var def: int
 var pv: int
 var global_cold_down: float
+var rig: String
 
 var _random = RandomNumberGenerator.new()
 
@@ -15,6 +16,7 @@ func _init(model_file, g:Monster):
 	fov = json.get("fov",140)
 	def = json.get("def",1)
 	pv = json.get("pv",2)
+	rig = json.get("rig", "RigMedium")
 	global_cold_down = json.get("global_cold_down",2)
 	for jsonAtk in json["atks"]:
 		atks.append(MonsterModelAtk.new(jsonAtk, g))

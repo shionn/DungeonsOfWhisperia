@@ -77,7 +77,7 @@ func receive_atk(nb_atk: int, monster:Monster) -> void:
 			_state = State.DEATH
 
 func _start_atk() -> void:
-	var animation =  "RigMediumAnimation/" + "Melee_Dualwield_Attack_Chop"
+	var animation =  "RigMedium/" + "Melee_Dualwield_Attack_Chop"
 	var duration = _animation.get_animation(animation).length
 	_animation.play(animation)
 	_animationTimer.start(duration)
@@ -93,7 +93,7 @@ func _on_atk_timer_timeout() -> void:
 	$Swing3.play()
 
 func _start_animation(anim:String, timer:bool=false) -> void:
-	const _animation_prefix = "RigMediumAnimation/"
+	const _animation_prefix = "RigMedium/"
 	_animation.play(_animation_prefix+anim)
 	if timer : 
 		_animationTimer.start(_animation.get_animation(_animation_prefix+anim).length)

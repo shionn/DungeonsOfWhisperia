@@ -95,13 +95,12 @@ func _update_navigation() -> bool :
 	return self._navigation_agent.is_navigation_finished()
 
 func start_animation(anim:String, time:bool=false, timer:Timer=null, timerFactor:float = 1.0) -> void:
-	const _animation_prefix = "RigMediumAnimation/"
-	_animation.play(_animation_prefix+anim)
+	_animation.play(_model.rig+anim)
 	if time : 
 		if timer :
-			timer.start(_animation.get_animation(_animation_prefix+anim).length*timerFactor)
+			timer.start(_animation.get_animation(_model.rig+anim).length*timerFactor)
 		else :
-			_animationTimer.start(_animation.get_animation(_animation_prefix+anim).length*timerFactor)
+			_animationTimer.start(_animation.get_animation(_model.rig+anim).length*timerFactor)
 
 func _on_animationTimer_timeout() -> void:
 	match state:
@@ -118,7 +117,7 @@ func _on_animationTimer_timeout() -> void:
 			state = State.IDLE
 
 func _start_atk() -> void:
-	var anim_name = "RigMediumAnimation/" + _atk.animation
+	var anim_name = _model.rig + _atk.animation
 	var length = _animation.get_animation(anim_name).length
 	_animation.play(anim_name)
 	_animationTimer.start(length)
