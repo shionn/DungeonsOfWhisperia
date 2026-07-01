@@ -24,6 +24,7 @@
 [ext_resource type="Script" uid="uid://b5u38rsuiglhp" path="res://Gui/MenuGui.gd" id="22_mnphl"]
 [ext_resource type="Script" uid="uid://cstky8dpig813" path="res://Gui/DialogGui.gd" id="23_2m3pn"]
 [ext_resource type="Script" uid="uid://bc4y4enkrwodc" path="res://Gui/ConsoleLog.gd" id="24_xkmul"]
+[ext_resource type="Script" uid="uid://bcc2j6w4n4yqq" path="res://Gui/Transition.gd" id="25_60sjt"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8rxp0"]
 bg_color = Color(1, 0.94509804, 0.8235294, 1)
@@ -69,6 +70,63 @@ tracks/0/keys = {
 _data = {
 &"Hide": SubResource("Animation_s2c3b"),
 &"RESET": SubResource("Animation_jpmve")
+}
+
+[sub_resource type="Animation" id="Animation_i3re6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_60sjt"]
+resource_name = "fade_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.033333335, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_wbke4"]
+resource_name = "fade_out"
+markers = [{
+"color": Color(0, 0, 0, 1),
+"name": &"new_marker",
+"time": 0.02
+}]
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7xgee"]
+_data = {
+&"RESET": SubResource("Animation_i3re6"),
+&"fade_in": SubResource("Animation_60sjt"),
+&"fade_out": SubResource("Animation_wbke4")
 }
 
 [node name="Gui" type="Control" unique_id=679884730]
@@ -674,8 +732,24 @@ script = ExtResource("24_xkmul")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="ConsoleLog" unique_id=2077119084]
 libraries/ = SubResource("AnimationLibrary_mya5i")
 
+[node name="Transition" type="ColorRect" parent="." unique_id=1423279180]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+script = ExtResource("25_60sjt")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Transition" unique_id=187822661]
+libraries/ = SubResource("AnimationLibrary_7xgee")
+
 [connection signal="visibility_changed" from="Bag" to="Bag" method="_on_visibility_changed"]
 [connection signal="pressed" from="Bag/PanelContainer/MarginContainer/VBoxContainer/CloseButton" to="." method="_close"]
 [connection signal="pressed" from="Loot/PanelContainer/MarginContainer/VBoxContainer/CloseButton" to="." method="_close"]
 [connection signal="pressed" from="Introduction/PanelContainer/MarginContainer/VBoxContainer/CloseButton" to="." method="_close"]
 [connection signal="pressed" from="DialogGui/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/CloseButton" to="." method="_close"]
+[connection signal="animation_finished" from="Transition/AnimationPlayer" to="Transition" method="_on_animation_finished"]

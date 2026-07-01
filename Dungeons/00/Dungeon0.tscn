@@ -42,9 +42,11 @@
 [ext_resource type="PackedScene" uid="uid://blvuvv445i0ai" path="res://Assets/Scenes/Skeleton_Golem.tscn" id="28_le4on"]
 [ext_resource type="PackedScene" uid="uid://b80dbn70dnlhg" path="res://Assets/Bits/RpgTools/map_rolled.gltf" id="29_8g2oi"]
 [ext_resource type="PackedScene" uid="uid://bmdvn7w6kv12i" path="res://Assets/Dungeons/Bar/bartop_A_medium.gltf" id="29_eig52"]
+[ext_resource type="AudioStream" uid="uid://d3sex1te7mnxm" path="res://Audio/80-CC0-RPG-SFX/book_02.ogg" id="31_7d0x2"]
 [ext_resource type="PackedScene" uid="uid://bn8u3hkxao6jh" path="res://Assets/Characters/AdventurersAccessoires/spellbook_open.gltf" id="31_ilrwh"]
 [ext_resource type="PackedScene" uid="uid://ddltg2208h6ta" path="res://Assets/Characters/SkeletonAccessoires/Skeleton_Axe.gltf" id="31_uyrh4"]
 [ext_resource type="PackedScene" uid="uid://lhqqwnqs4xcc" path="res://Assets/Dungeons/Candle/candle_thin.gltf" id="32_7d0x2"]
+[ext_resource type="AudioStream" uid="uid://dkn80nhtqetgu" path="res://Audio/80-CC0-RPG-SFX/book_01.ogg" id="32_fs7r4"]
 [ext_resource type="PackedScene" uid="uid://k1idxjl5napw" path="res://Assets/Dungeons/Banner/banner_thin_brown.gltf" id="32_pklik"]
 [ext_resource type="PackedScene" uid="uid://cx81jxahw60nm" path="res://Assets/Characters/SkeletonAccessoires/Skeleton_Blade.gltf" id="32_wlvsb"]
 [ext_resource type="PackedScene" uid="uid://wj4kthwrxw47" path="res://Assets/Characters/SkeletonAccessoires/Skeleton_Crossbow.gltf" id="33_w4mcl"]
@@ -53,6 +55,7 @@
 [ext_resource type="PackedScene" uid="uid://dtu7oee4qcolx" path="res://Assets/Dungeons/Coin/coin_stack_large.gltf" id="35_efvkj"]
 [ext_resource type="PackedScene" uid="uid://bdb2tkwvqixia" path="res://Assets/Dungeons/Book/book_tan.gltf" id="37_45lrj"]
 [ext_resource type="Script" uid="uid://y4tahlhuoy6j" path="res://Dungeons/00/BossRoomCode.gd" id="38_1qi0c"]
+[ext_resource type="Script" uid="uid://cv8fowtnl0rq1" path="res://Dungeons/00/secret_room.gd" id="38_fs7r4"]
 [ext_resource type="PackedScene" uid="uid://ch3qca6f0r8yr" path="res://Assets/Characters/AdventurersAccessoires/potion_medium_blue.gltf" id="38_r3u65"]
 [ext_resource type="PackedScene" uid="uid://b1dvxk4po0ale" path="res://Assets/Dungeons/Candle/candle_melted.gltf" id="38_w53v0"]
 [ext_resource type="PackedScene" uid="uid://dgc6r0o5rxge4" path="res://Assets/Characters/AdventurersAccessoires/potion_small_blue.gltf" id="39_1qi0c"]
@@ -63,7 +66,9 @@
 [ext_resource type="PackedScene" uid="uid://b6lorylhdtgtv" path="res://Assets/Dungeons/Shelves/shelf_small_candles.gltf" id="41_y0h00"]
 [ext_resource type="PackedScene" uid="uid://c2eo4fhjbw8kj" path="res://Assets/Dungeons/Banner/banner_brown.gltf" id="42_kn3fm"]
 [ext_resource type="PackedScene" uid="uid://bifqjl5vbnrgq" path="res://Assets/Characters/AdventurersAccessoires/potion_small_red.gltf" id="42_pjm1s"]
+[ext_resource type="PackedScene" uid="uid://mfxyh576b4gl" path="res://Assets/Dungeons/Wall/wall_open_scaffold.gltf" id="42_qmktk"]
 [ext_resource type="AudioStream" uid="uid://ce7drpk5sjkcm" path="res://Audio/KenneyRpgAudio/metalClick.ogg" id="43_1qi0c"]
+[ext_resource type="AudioStream" uid="uid://bcafx5mkymm12" path="res://Audio/RPG Sound Pack/interface/interface3.wav" id="43_lbhkl"]
 [ext_resource type="PackedScene" uid="uid://d1eaddharejqv" path="res://Assets/Characters/AdventurersAccessoires/potion_huge_green.gltf" id="46_onncu"]
 [ext_resource type="PackedScene" uid="uid://b6vicjv5yemah" path="res://Assets/Dungeons/Book/book_grey.gltf" id="47_3jgwx"]
 [ext_resource type="PackedScene" uid="uid://bysoel76lf8pw" path="res://Assets/Dungeons/Bar/bar_straight_A.gltf" id="49_onncu"]
@@ -580,8 +585,11 @@ shape = SubResource("CylinderShape3D_oow84")
 
 [node name="description" type="Node" parent="Prison/Parchemin" unique_id=1322060037]
 script = ExtResource("11_tbvcw")
-text = "Bleu, Jaune, Vert et rouge"
+text = "Orange, Vert, Rouge, Bleu"
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Prison/Parchemin" unique_id=1328469988]
+stream = ExtResource("32_fs7r4")
 
 [node name="BossRoom" type="Node3D" parent="." unique_id=453869497]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, 4)
@@ -604,9 +612,12 @@ shape = SubResource("BoxShape3D_2pi1h")
 
 [node name="description" type="Node" parent="BossRoom/Desk/bar_straight_A2/spellbook_open2" unique_id=774727900]
 script = ExtResource("11_tbvcw")
-text = "[i]Les Donjon de Whisperia[/i]
+text = "[i]Les Donjons de Whisperia[/i]
 Ce livre aussi semble inachevé."
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="BossRoom/Desk/bar_straight_A2/spellbook_open2" unique_id=1666991161]
+stream = ExtResource("31_7d0x2")
 
 [node name="map_rolled2" parent="BossRoom/Desk/bar_straight_A2" unique_id=1916968847 instance=ExtResource("29_8g2oi")]
 transform = Transform3D(0.7071066, 0, 0.7071066, 0, 1, 0, -0.7071066, 0, 0.7071066, 0.85621643, 1.0828708, 0.08301926)
@@ -622,6 +633,9 @@ shape = SubResource("CylinderShape3D_pq73c")
 script = ExtResource("11_tbvcw")
 text = "Il est vierge."
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="BossRoom/Desk/bar_straight_A2/map_rolled2" unique_id=1933985912]
+stream = ExtResource("32_fs7r4")
 
 [node name="candle_thin2" parent="BossRoom/Desk/bar_straight_A2" unique_id=767218740 instance=ExtResource("32_7d0x2")]
 transform = Transform3D(0.5000001, 0, -0.8660257, 0, 1, 0, 0.8660257, 0, 0.5000001, 1.7062206, 0.7, -0.17679405)
@@ -656,6 +670,9 @@ shape = SubResource("BoxShape3D_oej0p")
 script = ExtResource("11_tbvcw")
 text = "Tout un tas de livres traitant de magie, d'alchimie et de nécromancie."
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="BossRoom/bookcase_single_decoratedB/Books" unique_id=1176882679]
+stream = ExtResource("31_7d0x2")
 
 [node name="Potions" type="Node3D" parent="BossRoom/bookcase_single_decoratedB" unique_id=1049938344]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
@@ -738,8 +755,12 @@ script = ExtResource("11_tbvcw")
 text = "Tout un tas de livres traitant de magie, d'alchimie et de nécromancie."
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="BossRoom/bookcase_single_decoratedA" unique_id=928379796]
+stream = ExtResource("31_7d0x2")
+
 [node name="SecretRoom" type="Node3D" parent="BossRoom" unique_id=668072580]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8)
+script = ExtResource("38_fs7r4")
 
 [node name="chest_large2" parent="BossRoom/SecretRoom" unique_id=418662175 instance=ExtResource("34_bunir")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2.3000011, 0, 0)
@@ -747,37 +768,50 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2.3
 [node name="coin_stack_large2" parent="BossRoom/SecretRoom" unique_id=1441510366 instance=ExtResource("35_efvkj")]
 transform = Transform3D(0.8660254, 0, -0.5, 0, 1, 0, 0.5, 0, 0.8660254, 2, 0, -1)
 
-[node name="bookcase_single_decoratedA2" parent="BossRoom/SecretRoom" unique_id=341571662 instance=ExtResource("40_pjm1s")]
+[node name="wall" parent="BossRoom/SecretRoom" unique_id=1344025320 instance=ExtResource("22_puq8f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="bookcase_single_decoratedA" parent="BossRoom/SecretRoom" unique_id=450196520 instance=ExtResource("40_pjm1s")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3.2000008, 0, 0)
 script = ExtResource("10_we3ui")
 
-[node name="Area3D" type="Area3D" parent="BossRoom/SecretRoom/bookcase_single_decoratedA2" unique_id=2034959231]
+[node name="Area3D" type="Area3D" parent="BossRoom/SecretRoom/bookcase_single_decoratedA" unique_id=1307402608]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="BossRoom/SecretRoom/bookcase_single_decoratedA2/Area3D" unique_id=1986203020]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BossRoom/SecretRoom/bookcase_single_decoratedA/Area3D" unique_id=905691171]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0.009376526)
 shape = SubResource("BoxShape3D_3gcn8")
 
-[node name="CollisionShape3D4" type="CollisionShape3D" parent="BossRoom/SecretRoom/bookcase_single_decoratedA2/Area3D" unique_id=55157117]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.19999981, -0.30000007, 0)
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="BossRoom/SecretRoom/bookcase_single_decoratedA/Area3D" unique_id=879895449]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.19999981, -0.30000007, 0.013282776)
 shape = SubResource("BoxShape3D_fs7r4")
 
-[node name="CollisionShape3D5" type="CollisionShape3D" parent="BossRoom/SecretRoom/bookcase_single_decoratedA2/Area3D" unique_id=804271338]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.95, 0)
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="BossRoom/SecretRoom/bookcase_single_decoratedA/Area3D" unique_id=569060702]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.95, 0.0073623657)
 shape = SubResource("BoxShape3D_qmktk")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="BossRoom/SecretRoom/bookcase_single_decoratedA2/Area3D" unique_id=845148555]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4000001, 0.35000002, 0)
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="BossRoom/SecretRoom/bookcase_single_decoratedA/Area3D" unique_id=67895516]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3944826, 0.35000002, 0.005531311)
 shape = SubResource("BoxShape3D_ilrwh")
 
-[node name="CollisionShape3D3" type="CollisionShape3D" parent="BossRoom/SecretRoom/bookcase_single_decoratedA2/Area3D" unique_id=1113826819]
-transform = Transform3D(0.9396926, 0, -0.34202012, 0, 1, 0, 0.34202012, 0, 0.9396926, 0.34698248, 0.30000007, 0.017101288)
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="BossRoom/SecretRoom/bookcase_single_decoratedA/Area3D" unique_id=2028179959]
+transform = Transform3D(0.9396926, 0, -0.34202012, 0, 1, 0, 0.34202012, 0, 0.9396926, 0.34463072, 0.30000007, 0.02355957)
 shape = SubResource("BoxShape3D_7d0x2")
 
-[node name="description" type="Node" parent="BossRoom/SecretRoom/bookcase_single_decoratedA2" unique_id=238166765]
+[node name="description" type="Node" parent="BossRoom/SecretRoom/bookcase_single_decoratedA" unique_id=1499642896]
 script = ExtResource("11_tbvcw")
 text = "Tout un tas de livres traitant de magie, d'alchimie et de nécromancie."
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="BossRoom/SecretRoom/bookcase_single_decoratedA" unique_id=522494970]
+stream = ExtResource("31_7d0x2")
+
+[node name="wall_open_scaffold" parent="BossRoom/SecretRoom" unique_id=1038886442 instance=ExtResource("42_qmktk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+visible = false
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="BossRoom/SecretRoom" unique_id=1894905574]
+stream = ExtResource("43_lbhkl")
 
 [node name="bar_straight_C2" parent="BossRoom" unique_id=1918491113 instance=ExtResource("11_eig52")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3, 0, 2)
@@ -802,6 +836,9 @@ text = "[i]Whisperia : Les Chroniques de Tortuga[/i]
 Ce livre semble inachevé."
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="BossRoom/bar_straight_C2/bartop_A_medium2/book_brown2" unique_id=1506229486]
+stream = ExtResource("31_7d0x2")
+
 [node name="book_grey2" parent="BossRoom/bar_straight_C2/bartop_A_medium2" unique_id=528015338 instance=ExtResource("47_3jgwx")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.6999998, 1.3500001, -0.20000076)
 script = ExtResource("10_we3ui")
@@ -817,6 +854,9 @@ metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0032975674, 0.025001526)
 shape = SubResource("BoxShape3D_tdnme")
 
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="BossRoom/bar_straight_C2/bartop_A_medium2/book_grey2" unique_id=1045902156]
+stream = ExtResource("31_7d0x2")
+
 [node name="book_tan2" parent="BossRoom/bar_straight_C2/bartop_A_medium2" unique_id=2114145603 instance=ExtResource("37_45lrj")]
 transform = Transform3D(-0.9659258, 0, -0.25881913, 0, 1, 0, 0.25881913, 0, -0.9659258, 0.5999999, 0.25000024, -0.20000076)
 script = ExtResource("10_we3ui")
@@ -831,6 +871,9 @@ metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 [node name="CollisionShape3D" type="CollisionShape3D" parent="BossRoom/bar_straight_C2/bartop_A_medium2/book_tan2/Area3D" unique_id=492313039]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0032975674, 0.025001526)
 shape = SubResource("BoxShape3D_tdnme")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="BossRoom/bar_straight_C2/bartop_A_medium2/book_tan2" unique_id=1406618034]
+stream = ExtResource("31_7d0x2")
 
 [node name="candle_melted2" parent="BossRoom/bar_straight_C2/bartop_A_medium2" unique_id=1772980734 instance=ExtResource("38_w53v0")]
 transform = Transform3D(0.7071068, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, 0.7071068, -0.5, 1.0999999, -0.20000076)
@@ -977,6 +1020,9 @@ shape = SubResource("BoxShape3D_gt8m5")
 script = ExtResource("11_tbvcw")
 text = "Tout un tas de livres traitant de magie, d'alchimie et de nécromancie."
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="BossRoom/wall_shelves3/Books" unique_id=1259141945]
+stream = ExtResource("31_7d0x2")
 
 [node name="Potions" type="Node3D" parent="BossRoom/wall_shelves3" unique_id=80244081]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0.6000004)
@@ -1455,9 +1501,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 10)
 
 [node name="wall_arched4" parent="Walls" unique_id=209221158 instance=ExtResource("22_puq8f")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 10)
-
-[node name="wall_arched5" parent="Walls" unique_id=1344025320 instance=ExtResource("22_puq8f")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, 0, -2)
 
 [node name="wall_arched6" parent="Walls" unique_id=594980834 instance=ExtResource("22_puq8f")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, -18)

@@ -126,4 +126,6 @@ func _on_timer_timeout() -> void:
 
 
 func _on_audio_timer_timeout() -> void:
+	var nb_atk = Dices.d6(2,4)
+	_attacked_monster.receive_atk(nb_atk)
 	$Swing3.play()

@@ -8,6 +8,7 @@ enum Action { ACTIVATE, LOOK }
 @onready var _bag := $/root/World/Player/Bag as Bag
 @onready var _area := $Area3D as Area3D
 @onready var _bagGui := $/root/World/Gui/Bag as BagGui
+@onready var _audio := $AudioStreamPlayer3D
 
 @export var action : Action = Action.ACTIVATE
 @export var interactDistance : float = 3
@@ -27,6 +28,7 @@ func _ready() -> void:
 	_lootable = loot_gold > 0 or loot_obj
 
 func on_interact() -> void: 
+	if _audio : _audio.play()
 	if $description :
 		_gui.openDialog($description)
 	elif _lootable :

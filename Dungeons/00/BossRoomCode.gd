@@ -14,6 +14,13 @@ func _on_action_2_activate() -> void:
 
 func _on_action_3_activate() -> void:
 	_toggle(_slot3, _slot4)
+	
+func _check() -> bool :
+	var a = _slot1.get_children().get(0).name
+	var b = _slot2.get_children().get(0).name
+	var c = _slot3.get_children().get(0).name
+	var d = _slot4.get_children().get(0).name
+	return a == "orange" and b == "green" and c == "red" and d == "blue"
 
 func _toggle(pos1:Node3D, pos2: Node3D) -> void :
 	var a = pos1.get_children().get(0)
@@ -23,4 +30,6 @@ func _toggle(pos1:Node3D, pos2: Node3D) -> void :
 	pos1.add_child(b)
 	pos2.add_child(a)
 	_audio.play()
+	if _check() :
+		$"../../SecretRoom".open()
 	
