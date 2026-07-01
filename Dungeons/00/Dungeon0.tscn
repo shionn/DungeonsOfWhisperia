@@ -66,7 +66,6 @@
 [ext_resource type="AudioStream" uid="uid://ce7drpk5sjkcm" path="res://Audio/KenneyRpgAudio/metalClick.ogg" id="43_1qi0c"]
 [ext_resource type="PackedScene" uid="uid://d1eaddharejqv" path="res://Assets/Characters/AdventurersAccessoires/potion_huge_green.gltf" id="46_onncu"]
 [ext_resource type="PackedScene" uid="uid://b6vicjv5yemah" path="res://Assets/Dungeons/Book/book_grey.gltf" id="47_3jgwx"]
-[ext_resource type="PackedScene" uid="uid://clio315eelfyl" path="res://Assets/Dungeons/Bar/bar_straight_C_short.gltf" id="48_rd2kg"]
 [ext_resource type="PackedScene" uid="uid://bysoel76lf8pw" path="res://Assets/Dungeons/Bar/bar_straight_A.gltf" id="49_onncu"]
 [ext_resource type="PackedScene" uid="uid://d0d62rw45klnc" path="res://Assets/Dungeons/Chair/chair.gltf" id="51_ckfqj"]
 [ext_resource type="PackedScene" uid="uid://dt83bove5us53" path="res://Assets/Dungeons/Book/bookcase_single_decoratedB.gltf" id="53_efvkj"]
@@ -127,6 +126,13 @@ height = 2.3000002
 height = 1.2166992
 radius = 0.14013672
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_2pi1h"]
+size = Vector3(0.8357666, 0.6, 0.14765625)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_pq73c"]
+height = 1.2
+radius = 0.13183594
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_oow84"]
 size = Vector3(0.57322997, 0.4, 0.4305664)
 
@@ -134,7 +140,7 @@ size = Vector3(0.57322997, 0.4, 0.4305664)
 size = Vector3(0.58447266, 0.5056305, 0.38345337)
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_v5y75"]
-height = 0.2959957
+height = 0.35353994
 radius = 0.18701172
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_ilrwh"]
@@ -153,22 +159,26 @@ radius = 0.25634766
 size = Vector3(0.68331146, 0.49697265, 0.60024416)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_3gcn8"]
-size = Vector3(1, 0.5, 0.4)
+size = Vector3(1, 0.5, 0.41875)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_fs7r4"]
-size = Vector3(1, 0.5, 0.4)
+size = Vector3(1, 0.5, 0.4265625)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_qmktk"]
-size = Vector3(1.4, 0.5, 0.4)
+size = Vector3(1.4, 0.5, 0.41472167)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ilrwh"]
-size = Vector3(0.6, 0.5, 0.4)
+size = Vector3(0.61103517, 0.5, 0.41105956)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7d0x2"]
-size = Vector3(0.5, 0.4, 0.4)
+size = Vector3(0.5, 0.4, 0.4137451)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_tdnme"]
-size = Vector3(0.2, 0.5, 0.4)
+size = Vector3(0.20986328, 0.5, 0.4)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_2pi1h"]
+height = 0.4035675
+radius = 0.18701172
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_oej0p"]
 height = 0.40000004
@@ -185,6 +195,10 @@ size = Vector3(0.22576141, 0.5107279, 0.3495121)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_gt8m5"]
 size = Vector3(0.51571465, 0.21514177, 0.37819862)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_fs7r4"]
+height = 0.32932281
+radius = 0.18701172
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_b02ke"]
 size = Vector3(3.4, 4.8, 0.7)
@@ -575,23 +589,48 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, 4)
 [node name="Desk" type="Node3D" parent="BossRoom" unique_id=1645702767]
 transform = Transform3D(0.8660254, 0, -0.5, 0, 1, 0, 0.5, 0, 0.8660254, -0.9000015, 0, 2.6000004)
 
-[node name="bar_straight_C_short" parent="BossRoom/Desk" unique_id=425060421 instance=ExtResource("48_rd2kg")]
-transform = Transform3D(-5.9604645e-08, 0, 1, 0, 1, 0, -1, 0, -5.9604645e-08, 0, 0, -0.5)
-
 [node name="bar_straight_A2" parent="BossRoom/Desk" unique_id=1098727258 instance=ExtResource("49_onncu")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 1)
 
 [node name="spellbook_open2" parent="BossRoom/Desk/bar_straight_A2" unique_id=1529236413 instance=ExtResource("31_ilrwh")]
 transform = Transform3D(0.9659257, -0.25881898, -1.1313332e-08, 0, -4.371139e-08, 1, -0.25881898, -0.9659257, -4.2221938e-08, -0.1732049, 0.9975792, 0.10000038)
+script = ExtResource("10_we3ui")
+
+[node name="Area3D" type="Area3D" parent="BossRoom/Desk/bar_straight_A2/spellbook_open2" unique_id=66346982]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BossRoom/Desk/bar_straight_A2/spellbook_open2/Area3D" unique_id=481453003]
+transform = Transform3D(1.0000012, 0, 9.769963e-15, 0, 1.0000012, 1.9984014e-15, 7.212009e-13, 1.7541524e-14, 1, 0.0013532639, 1.335144e-05, 0.0738278)
+shape = SubResource("BoxShape3D_2pi1h")
+
+[node name="description" type="Node" parent="BossRoom/Desk/bar_straight_A2/spellbook_open2" unique_id=774727900]
+script = ExtResource("11_tbvcw")
+text = "[i]Les Donjon de Whisperia[/i]
+Ce livre aussi semble inachevé."
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
 [node name="map_rolled2" parent="BossRoom/Desk/bar_straight_A2" unique_id=1916968847 instance=ExtResource("29_8g2oi")]
 transform = Transform3D(0.7071066, 0, 0.7071066, 0, 1, 0, -0.7071066, 0, 0.7071066, 0.85621643, 1.0828708, 0.08301926)
+script = ExtResource("10_we3ui")
 
-[node name="candle_thin2" parent="BossRoom/Desk/bar_straight_A2/map_rolled2" unique_id=767218740 instance=ExtResource("32_7d0x2")]
-transform = Transform3D(-0.25881922, 0, -0.9659264, 0, 1, 0, 0.9659264, 0, -0.25881922, 0.78475857, -0.38287085, 0.41732788)
+[node name="Area3D" type="Area3D" parent="BossRoom/Desk/bar_straight_A2/map_rolled2" unique_id=803626539]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BossRoom/Desk/bar_straight_A2/map_rolled2/Area3D" unique_id=1223345106]
+transform = Transform3D(0.96592784, -9.3079336e-07, 0.2588116, -0.2588116, 1.7380346e-07, 0.96592784, -9.440615e-07, -1, -7.3018505e-08, 0, 0, 0)
+shape = SubResource("CylinderShape3D_pq73c")
+
+[node name="description" type="Node" parent="BossRoom/Desk/bar_straight_A2/map_rolled2" unique_id=2037155761]
+script = ExtResource("11_tbvcw")
+text = "Il est vierge."
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="candle_thin2" parent="BossRoom/Desk/bar_straight_A2" unique_id=767218740 instance=ExtResource("32_7d0x2")]
+transform = Transform3D(0.5000001, 0, -0.8660257, 0, 1, 0, 0.8660257, 0, 0.5000001, 1.7062206, 0.7, -0.17679405)
 
 [node name="chair2" parent="BossRoom/Desk" unique_id=2112622686 instance=ExtResource("51_ckfqj")]
 transform = Transform3D(0.8660254, 0, -0.5, 0, 1, 0, 0.5, 0, 0.8660254, 1.4232044, 0, 0.98660326)
+
+[node name="bar_straight_C_short2" parent="BossRoom/Desk" unique_id=627129351 instance=ExtResource("11_u0nfn")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, -0.5)
 
 [node name="bookcase_single_decoratedB" parent="BossRoom" unique_id=1833562646 instance=ExtResource("53_efvkj")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 2.0999985, 0, 5.3)
@@ -675,23 +714,23 @@ script = ExtResource("10_we3ui")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="BossRoom/bookcase_single_decoratedA/Area3D" unique_id=1802092189]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0.009376526)
 shape = SubResource("BoxShape3D_3gcn8")
 
 [node name="CollisionShape3D4" type="CollisionShape3D" parent="BossRoom/bookcase_single_decoratedA/Area3D" unique_id=2117873508]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.19999981, -0.30000007, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.19999981, -0.30000007, 0.013282776)
 shape = SubResource("BoxShape3D_fs7r4")
 
 [node name="CollisionShape3D5" type="CollisionShape3D" parent="BossRoom/bookcase_single_decoratedA/Area3D" unique_id=976150054]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.95, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.95, 0.0073623657)
 shape = SubResource("BoxShape3D_qmktk")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="BossRoom/bookcase_single_decoratedA/Area3D" unique_id=1640358714]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4000001, 0.35000002, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3944826, 0.35000002, 0.005531311)
 shape = SubResource("BoxShape3D_ilrwh")
 
 [node name="CollisionShape3D3" type="CollisionShape3D" parent="BossRoom/bookcase_single_decoratedA/Area3D" unique_id=605433386]
-transform = Transform3D(0.9396926, 0, -0.34202012, 0, 1, 0, 0.34202012, 0, 0.9396926, 0.34698248, 0.30000007, 0.017101288)
+transform = Transform3D(0.9396926, 0, -0.34202012, 0, 1, 0, 0.34202012, 0, 0.9396926, 0.34463072, 0.30000007, 0.02355957)
 shape = SubResource("BoxShape3D_7d0x2")
 
 [node name="description" type="Node" parent="BossRoom/bookcase_single_decoratedA" unique_id=1321568585]
@@ -754,7 +793,7 @@ script = ExtResource("10_we3ui")
 [node name="Area3D" type="Area3D" parent="BossRoom/bar_straight_C2/bartop_A_medium2/book_brown2" unique_id=12635063]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="BossRoom/bar_straight_C2/bartop_A_medium2/book_brown2/Area3D" unique_id=356642265]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0032975674, 0.025001526)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0049324036, 0.0032975674, 0.025001526)
 shape = SubResource("BoxShape3D_tdnme")
 
 [node name="description" type="Node" parent="BossRoom/bar_straight_C2/bartop_A_medium2/book_brown2" unique_id=1096763882]
@@ -780,6 +819,7 @@ shape = SubResource("BoxShape3D_tdnme")
 
 [node name="book_tan2" parent="BossRoom/bar_straight_C2/bartop_A_medium2" unique_id=2114145603 instance=ExtResource("37_45lrj")]
 transform = Transform3D(-0.9659258, 0, -0.25881913, 0, 1, 0, 0.25881913, 0, -0.9659258, 0.5999999, 0.25000024, -0.20000076)
+script = ExtResource("10_we3ui")
 
 [node name="description" type="Node" parent="BossRoom/bar_straight_C2/bartop_A_medium2/book_tan2" unique_id=1621822421]
 script = ExtResource("11_tbvcw")
@@ -814,8 +854,8 @@ script = ExtResource("10_we3ui")
 [node name="Area3D" type="Area3D" parent="BossRoom/bar_straight_C2/bartop_A_medium2/potion_medium_blue2" unique_id=152125554]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="BossRoom/bar_straight_C2/bartop_A_medium2/potion_medium_blue2/Area3D" unique_id=1626064483]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.09765816, 0)
-shape = SubResource("CylinderShape3D_v5y75")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.10141635, 0)
+shape = SubResource("CylinderShape3D_2pi1h")
 
 [node name="description" type="Node" parent="BossRoom/bar_straight_C2/bartop_A_medium2/potion_medium_blue2" unique_id=1900412462]
 script = ExtResource("11_tbvcw")
@@ -945,8 +985,8 @@ script = ExtResource("10_we3ui")
 [node name="Area3D" type="Area3D" parent="BossRoom/wall_shelves3/Potions" unique_id=1781116167]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="BossRoom/wall_shelves3/Potions/Area3D" unique_id=1351286691]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.55444145, 1.0473845, -0.12214661)
-shape = SubResource("CylinderShape3D_v5y75")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.55444145, 1.0594928, -0.12214661)
+shape = SubResource("CylinderShape3D_fs7r4")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="BossRoom/wall_shelves3/Potions/Area3D" unique_id=706436324]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.04112816, 0.92180014, -0.12007332)
