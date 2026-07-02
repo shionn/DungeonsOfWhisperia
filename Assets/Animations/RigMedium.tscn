@@ -10,6 +10,7 @@
 [ext_resource type="Animation" uid="uid://b4j81750lhpro" path="res://Assets/Animations/Rig_Medium/Melee_2H_Attack_Chop.res" id="6_saede"]
 [ext_resource type="Animation" uid="uid://bv3m1buwqa4tg" path="res://Assets/Animations/Rig_Medium/Melee_1H_Attack_Slice_Horizontal.res" id="7_uou3c"]
 [ext_resource type="Animation" uid="uid://c558nyhpsikkn" path="res://Assets/Animations/Rig_Medium/Melee_Dualwield_Attack_Chop.res" id="9_5vv6p"]
+[ext_resource type="Animation" uid="uid://egxhud0lgm3q" path="res://Assets/Animations/Rig_Medium/Skeletons_Death_Pose.res" id="10_uou3c"]
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_t7iaf"]
 _data = {
@@ -22,6 +23,7 @@ _data = {
 &"Melee_1H_Attack_Slice_Horizontal": ExtResource("7_uou3c"),
 &"Melee_2H_Attack_Chop": ExtResource("6_saede"),
 &"Melee_Dualwield_Attack_Chop": ExtResource("9_5vv6p"),
+&"Skeletons_Death_Pose": ExtResource("10_uou3c"),
 &"Walking_A": ExtResource("4_7lhfs")
 }
 

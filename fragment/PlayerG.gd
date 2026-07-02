@@ -41,8 +41,8 @@ func _physics_process(_delta: float) -> void:
 						_start_atk()
 			else : 
 				_handle_move_input()
-		State.HIT:
-			velocity = Vector3.ZERO
+		State.HIT: velocity = Vector3.ZERO
+		State.DEATH: velocity = Vector3.ZERO
 	
 	move_and_slide()
 

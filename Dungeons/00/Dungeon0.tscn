@@ -44,6 +44,7 @@
 [ext_resource type="PackedScene" uid="uid://bmdvn7w6kv12i" path="res://Assets/Dungeons/Bar/bartop_A_medium.gltf" id="29_eig52"]
 [ext_resource type="AudioStream" uid="uid://d3sex1te7mnxm" path="res://Audio/80-CC0-RPG-SFX/book_02.ogg" id="31_7d0x2"]
 [ext_resource type="PackedScene" uid="uid://bn8u3hkxao6jh" path="res://Assets/Characters/AdventurersAccessoires/spellbook_open.gltf" id="31_ilrwh"]
+[ext_resource type="Script" uid="uid://civlxmv82jda5" path="res://Dungeons/00/SkeletonPrisoner.gd" id="31_sgkit"]
 [ext_resource type="PackedScene" uid="uid://ddltg2208h6ta" path="res://Assets/Characters/SkeletonAccessoires/Skeleton_Axe.gltf" id="31_uyrh4"]
 [ext_resource type="PackedScene" uid="uid://lhqqwnqs4xcc" path="res://Assets/Dungeons/Candle/candle_thin.gltf" id="32_7d0x2"]
 [ext_resource type="AudioStream" uid="uid://dkn80nhtqetgu" path="res://Audio/80-CC0-RPG-SFX/book_01.ogg" id="32_fs7r4"]
@@ -73,6 +74,7 @@
 [ext_resource type="PackedScene" uid="uid://bysoel76lf8pw" path="res://Assets/Dungeons/Bar/bar_straight_A.gltf" id="49_onncu"]
 [ext_resource type="PackedScene" uid="uid://d0d62rw45klnc" path="res://Assets/Dungeons/Chair/chair.gltf" id="51_ckfqj"]
 [ext_resource type="PackedScene" uid="uid://dt83bove5us53" path="res://Assets/Dungeons/Book/bookcase_single_decoratedB.gltf" id="53_efvkj"]
+[ext_resource type="PackedScene" uid="uid://bnfbv5ibu103e" path="res://Assets/Dungeons/Floor/floor_tile_big_grate.gltf" id="69_gt8m5"]
 [ext_resource type="AudioStream" uid="uid://61hk6iwxjiwe" path="res://Audio/DungeonThemes/dungeon.ogg" id="74_lbhkl"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_78w8x"]
@@ -85,8 +87,35 @@ height = 0.17500001
 height = 0.9
 radius = 0.2
 
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_pnbth"]
+height = 1.5999999
+radius = 0.7
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_gt8m5"]
+height = 1.025
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_yeiry"]
+height = 0.9125
+radius = 0.2
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_lolfs"]
+height = 0.9125
+radius = 0.4
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_78w8x"]
 size = Vector3(0.75, 0.5, 0.55)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pq73c"]
+size = Vector3(0.5998047, 0.5, 0.9448242)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lolfs"]
+size = Vector3(0.5587891, 0.21191406, 0.40161133)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yp05k"]
+size = Vector3(0.43078613, 0.5114258, 0.42773438)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pnbth"]
+size = Vector3(0.2234375, 0.5185547, 0.39294434)
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_b02ke"]
 radius = 0.2
@@ -122,6 +151,9 @@ radius = 0.4428711
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_brlmy"]
 radius = 0.2
 height = 1.3
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4qmnm"]
+size = Vector3(1.3562744, 0.36699218, 0.8266541)
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_78w8x"]
 radius = 0.6
@@ -337,6 +369,7 @@ metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
 [node name="table_long_decorated_C2" parent="DinerRoom" unique_id=1030142129 instance=ExtResource("7_a7nm6")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, -6.6000004)
+script = ExtResource("10_we3ui")
 
 [node name="bottle_A_labeled_green3" parent="DinerRoom/table_long_decorated_C2" unique_id=839839246 instance=ExtResource("23_cvi8s")]
 transform = Transform3D(0.4226183, 0, -0.9063079, 0, 1, 0, 0.9063079, 0, 0.4226183, -0.60000515, 1, -1.5)
@@ -349,6 +382,37 @@ hide_on_loot = true
 [node name="CollisionShape3D" type="CollisionShape3D" parent="DinerRoom/table_long_decorated_C2/bottle_A_labeled_green3/Area3D" unique_id=1730131114]
 transform = Transform3D(1.0000012, 0, -5.9604645e-08, 0, 1, 0, 5.9604645e-08, 0, 1.0000012, 0, 0.45000005, 0)
 shape = SubResource("CylinderShape3D_3gcn8")
+
+[node name="Area3D" type="Area3D" parent="DinerRoom/table_long_decorated_C2" unique_id=1890030103]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DinerRoom/table_long_decorated_C2/Area3D" unique_id=40164030]
+transform = Transform3D(-4.3711385e-08, -1, -4.371139e-08, 1, -4.371139e-08, 4.371139e-08, -4.371139e-08, -4.371139e-08, 1, 0, 1.9, 0.5)
+shape = SubResource("CylinderShape3D_pnbth")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="DinerRoom/table_long_decorated_C2/Area3D" unique_id=215800594]
+transform = Transform3D(-4.3711385e-08, -1, -4.371139e-08, 1, -4.371139e-08, 4.371139e-08, -4.371139e-08, -4.371139e-08, 1, 0.51249886, 2.3, -1.1000004)
+shape = SubResource("CylinderShape3D_gt8m5")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="DinerRoom/table_long_decorated_C2/Area3D" unique_id=208330707]
+transform = Transform3D(-4.3711385e-08, -1, -4.371139e-08, 1, -4.371139e-08, 4.371139e-08, -4.371139e-08, -4.371139e-08, 1, 0.51249886, 1.5, -0.6000004)
+shape = SubResource("CylinderShape3D_gt8m5")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="DinerRoom/table_long_decorated_C2/Area3D" unique_id=790513338]
+transform = Transform3D(1, 1.5529405e-22, 3.5527137e-15, -1.6420282e-15, 1, -3.5527137e-15, 3.5527137e-15, -3.5527137e-15, 1, -0.39999962, 1.44375, -0.5)
+shape = SubResource("CylinderShape3D_yeiry")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="DinerRoom/table_long_decorated_C2/Area3D" unique_id=1017011771]
+transform = Transform3D(1, 1.5529405e-22, 3.5527137e-15, -1.6420282e-15, 1, -3.5527137e-15, 3.5527137e-15, -3.5527137e-15, 1, 0.5, 1.44375, 1.5)
+shape = SubResource("CylinderShape3D_lolfs")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="DinerRoom/table_long_decorated_C2/Area3D" unique_id=920061660]
+transform = Transform3D(-4.3711385e-08, -1, -4.371139e-08, 1, -4.371139e-08, 4.371139e-08, -4.371139e-08, -4.371139e-08, 1, 0.51249886, 1.5, -1.6000004)
+shape = SubResource("CylinderShape3D_gt8m5")
+
+[node name="description" type="Node" parent="DinerRoom/table_long_decorated_C2" unique_id=1997962783]
+script = ExtResource("11_tbvcw")
+text = "Tous me semblent vides ou avariés."
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
 [node name="Wall_Doorway2" parent="DinerRoom" unique_id=1579196868 instance=ExtResource("22_5puas")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -4, 0, -4)
@@ -368,6 +432,33 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6999998, 1.4, 0.39999962)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="DinerRoom/wall_shelves2/Area3D" unique_id=1187826935]
 transform = Transform3D(0.98480785, 0, 0.17364822, 0, 1, 0, -0.17364822, 0, 0.98480785, 0.0082941055, 0.049999952, 0.04703331)
 shape = SubResource("BoxShape3D_78w8x")
+
+[node name="Books" type="Node3D" parent="DinerRoom/wall_shelves2" unique_id=1058413147]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+script = ExtResource("10_we3ui")
+
+[node name="Area3D" type="Area3D" parent="DinerRoom/wall_shelves2/Books" unique_id=1669196582]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DinerRoom/wall_shelves2/Books/Area3D" unique_id=2138598841]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6315441, 1.9500003, 0.17241287)
+shape = SubResource("BoxShape3D_pq73c")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="DinerRoom/wall_shelves2/Books/Area3D" unique_id=1919555902]
+transform = Transform3D(0.93167835, 0, 0.36328444, 0, 1, 0, -0.36328444, 0, 0.93167835, 0.5862322, 1.8059573, 0.518013)
+shape = SubResource("BoxShape3D_lolfs")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="DinerRoom/wall_shelves2/Books/Area3D" unique_id=1150082256]
+transform = Transform3D(0.9659258, 0, 0.25881904, 0, 1, 0, -0.25881904, 0, 0.9659258, 0.64196205, 0.46870136, 0.5423908)
+shape = SubResource("BoxShape3D_yp05k")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="DinerRoom/wall_shelves2/Books/Area3D" unique_id=616531792]
+transform = Transform3D(0.90630776, -0.42261827, 4.095419e-09, 0.42261827, 0.90630776, -1.8473232e-08, 4.095419e-09, 1.8473232e-08, 1, -0.10069561, 0.4535439, 0.4068241)
+shape = SubResource("BoxShape3D_pnbth")
+
+[node name="description" type="Node" parent="DinerRoom/wall_shelves2/Books" unique_id=448645790]
+script = ExtResource("11_tbvcw")
+text = "Ces livres tombent en poussière."
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
 [node name="Armurerie" type="Node3D" parent="." unique_id=1040656146]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -16)
@@ -556,9 +647,20 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7.79
 
 [node name="bed_floor3" parent="Prison" unique_id=593162292 instance=ExtResource("22_pq4tf")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -8.6, 0, 1.8999996)
+script = ExtResource("10_we3ui")
+loot_gold = 2
+
+[node name="Area3D" type="Area3D" parent="Prison/bed_floor3" unique_id=134047239]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Prison/bed_floor3/Area3D" unique_id=757452547]
+transform = Transform3D(0.989324, 0, 0.14573292, 0, 1, 0, -0.14573292, 0, 0.989324, 0.010769367, 0.3834961, -0.8214798)
+shape = SubResource("BoxShape3D_4qmnm")
 
 [node name="torch_mounted2" parent="Prison" unique_id=393295990 instance=ExtResource("3_we3ui")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 4)
+
+[node name="torch_mounted3" parent="Prison" unique_id=1921366767 instance=ExtResource("3_we3ui")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, -4, 0, -8)
 
 [node name="Prisonnier" parent="Prison" unique_id=1073651002 instance=ExtResource("27_x05a3")]
 transform = Transform3D(-0.24321546, 0.08583165, 0.9661673, 0.18965057, 0.9810603, -0.039413538, -0.9512514, 0.1736482, -0.25488707, 6.8999996, 0.1, -2)
@@ -595,6 +697,10 @@ metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Prison/Parchemin" unique_id=1328469988]
 stream = ExtResource("32_fs7r4")
 bus = &"Effet"
+
+[node name="PrisonnerSkeleton" parent="Prison" unique_id=1366271086 instance=ExtResource("2_my37s")]
+transform = Transform3D(0.8660253, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660253, -6.7, 0, -0.29999924)
+script = ExtResource("31_sgkit")
 
 [node name="BossRoom" type="Node3D" parent="." unique_id=453869497]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, 4)
@@ -1093,7 +1199,7 @@ _model_file = "res://fragment/monsters/SkeletonMinion1.json"
 loot_obj = 1
 loot_gold = 1
 
-[node name="Character" parent="Entrance/Minion 1" unique_id=1366271086 instance=ExtResource("2_my37s")]
+[node name="Character" parent="Entrance/Minion 1" unique_id=196485447 instance=ExtResource("2_my37s")]
 
 [node name="Minion 2" parent="Entrance" unique_id=617207210 instance=ExtResource("18_5ip2l")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 20, 0, 13)
@@ -1386,7 +1492,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 20)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 20)
 
 [node name="floor_dirt_large6" parent="Floor" unique_id=841241661 instance=ExtResource("21_a7nm6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 16)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 16)
 
 [node name="floor_dirt_large7" parent="Floor" unique_id=1410674406 instance=ExtResource("21_a7nm6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 16)
@@ -1401,7 +1507,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 20)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 20)
 
 [node name="floor_dirt_large_rocky2" parent="Floor" unique_id=1153102787 instance=ExtResource("22_we3ui")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 16)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 16)
 
 [node name="floor_tile_large2" parent="Floor" unique_id=1175036877 instance=ExtResource("23_tbvcw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 0)
@@ -1433,17 +1539,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 12)
 [node name="floor_tile_large16" parent="Floor" unique_id=1198018192 instance=ExtResource("23_tbvcw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 12)
 
-[node name="floor_tile_large19" parent="Floor" unique_id=317272426 instance=ExtResource("23_tbvcw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 12)
-
 [node name="floor_tile_large20" parent="Floor" unique_id=1619772694 instance=ExtResource("23_tbvcw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 12)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 20)
 
 [node name="floor_tile_large17" parent="Floor" unique_id=1663567079 instance=ExtResource("23_tbvcw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 16)
-
-[node name="floor_tile_large18" parent="Floor" unique_id=446446817 instance=ExtResource("23_tbvcw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 20)
 
 [node name="floor_tile_large3" parent="Floor" unique_id=636249518 instance=ExtResource("23_tbvcw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -4)
@@ -1501,6 +1601,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, -16)
 
 [node name="floor_wood_large9" parent="Floor" unique_id=2139395970 instance=ExtResource("9_we3ui")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -16)
+
+[node name="floor_tile_big_grate2" parent="Floor" unique_id=462553173 instance=ExtResource("69_gt8m5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 12)
 
 [node name="Walls" type="Node3D" parent="." unique_id=30849686]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
