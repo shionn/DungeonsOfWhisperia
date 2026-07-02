@@ -33,16 +33,14 @@ func loot(container:Object) -> void:
 func _loot_item(item:Item, button:TextureButton, container:Object) -> void:
 	_bag.loot(item.item_name)
 	container.loot_obj = Items.ItemName.None
-	if container is Interactable and container.hide_on_loot :
-		container.queue_free()
 	button.queue_free()
-	if _container.get_child_count() == 0 :
-		hide()
+	if container is Interactable and container.hide_on_loot : container.queue_free()
+	if _container.get_child_count() == 1 : hide()
 
 func _loot_gold(button:TextureButton, container:Object) -> void:
 	_bag.gold = _bag.gold + container.loot_gold
 	container.loot_gold = 0
 	button.queue_free()
-	if _container.get_child_count() == 0 :
-		hide()
+	if container is Interactable and container.hide_on_loot : container.queue_free()
+	if _container.get_child_count() == 1 : hide()
 	

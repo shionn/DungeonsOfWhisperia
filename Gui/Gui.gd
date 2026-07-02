@@ -44,3 +44,7 @@ func _close() -> void :
 	$Introduction.hide()
 	$DialogGui.hide()
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+
+
+func _on_loot_visibility_changed() -> void:
+	if $Loot.visible == false : _close()

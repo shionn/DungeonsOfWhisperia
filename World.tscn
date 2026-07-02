@@ -43,16 +43,24 @@ metadata/_custom_type_script = "uid://bjbab3ep2gfn2"
 script = ExtResource("5_p1v5b")
 item_name = 2
 icon = ExtResource("8_bah7m")
-description = "Cette clef à une inscription 
-en forme de bouclier et d'épée"
+description = "Cette clef semble spéciale, elle a un bouclier et une épée gravée sur sa base."
 metadata/_custom_type_script = "uid://bjbab3ep2gfn2"
 
 [node name="Boisson Raffinée" type="Node" parent="Items" unique_id=1863142575]
 script = ExtResource("5_p1v5b")
 item_name = 3
 icon = ExtResource("9_fv4w7")
-description = "Rend 2 pv"
+description = "Un des meilleurs crus de la region à boire avec modération.
+[i]Rend 2 pv[/i]"
 conssommable = true
+metadata/_custom_type_script = "uid://bjbab3ep2gfn2"
+
+[node name="Clef Coffre" type="Node" parent="Items" unique_id=179232204]
+script = ExtResource("5_p1v5b")
+item_name = 4
+icon = ExtResource("8_bah7m")
+description = "Cette clef porte une gravure à sa base, on dirait une sorte de coffre.
+"
 metadata/_custom_type_script = "uid://bjbab3ep2gfn2"
 
 [connection signal="_action" from="Items/Potion" to="Items/Potion" method="_give_back_1d3_pv"]

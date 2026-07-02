@@ -18,6 +18,7 @@ enum Action { ACTIVATE, LOOK }
 @export var hide_on_loot: bool = false
 
 signal activate() 
+signal item_drop(_item : Item)
 
 var _lootable = false
 
@@ -55,7 +56,9 @@ func _on_mouse_exited() -> void:
 	_bagGui.on_exit(self)
 
 func on_item_drop(_item : Item)-> void:
-	_gui.consoleLog("Aucun effet.")
+	item_drop.emit(_item)
+	# TODO remettre ca en place.
+	# _gui.consoleLog("Aucun effet.")
 	
 
 func _on_input_event(_camera: Node, event: InputEvent, _event_position: Vector3, _normal: Vector3, _shape_idx: int) -> void:

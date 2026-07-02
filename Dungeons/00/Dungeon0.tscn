@@ -50,7 +50,6 @@
 [ext_resource type="PackedScene" uid="uid://k1idxjl5napw" path="res://Assets/Dungeons/Banner/banner_thin_brown.gltf" id="32_pklik"]
 [ext_resource type="PackedScene" uid="uid://cx81jxahw60nm" path="res://Assets/Characters/SkeletonAccessoires/Skeleton_Blade.gltf" id="32_wlvsb"]
 [ext_resource type="PackedScene" uid="uid://wj4kthwrxw47" path="res://Assets/Characters/SkeletonAccessoires/Skeleton_Crossbow.gltf" id="33_w4mcl"]
-[ext_resource type="PackedScene" uid="uid://exxu6xqil5ms" path="res://Assets/Dungeons/Chest/chest_large.gltf" id="34_bunir"]
 [ext_resource type="PackedScene" uid="uid://c740w1gfrmupy" path="res://Assets/Dungeons/Book/book_brown.gltf" id="35_cjfn2"]
 [ext_resource type="PackedScene" uid="uid://dtu7oee4qcolx" path="res://Assets/Dungeons/Coin/coin_stack_large.gltf" id="35_efvkj"]
 [ext_resource type="PackedScene" uid="uid://bdb2tkwvqixia" path="res://Assets/Dungeons/Book/book_tan.gltf" id="37_45lrj"]
@@ -59,6 +58,7 @@
 [ext_resource type="PackedScene" uid="uid://ch3qca6f0r8yr" path="res://Assets/Characters/AdventurersAccessoires/potion_medium_blue.gltf" id="38_r3u65"]
 [ext_resource type="PackedScene" uid="uid://b1dvxk4po0ale" path="res://Assets/Dungeons/Candle/candle_melted.gltf" id="38_w53v0"]
 [ext_resource type="PackedScene" uid="uid://dgc6r0o5rxge4" path="res://Assets/Characters/AdventurersAccessoires/potion_small_blue.gltf" id="39_1qi0c"]
+[ext_resource type="PackedScene" uid="uid://dgb0ngh53yuev" path="res://Assets/Scenes/Chest_Large.tscn" id="39_lbhkl"]
 [ext_resource type="PackedScene" uid="uid://lloiny58xuo1" path="res://Assets/Dungeons/Book/bookcase_single_decoratedA.gltf" id="40_pjm1s"]
 [ext_resource type="PackedScene" uid="uid://d4ie8loh7o3k0" path="res://Assets/Characters/AdventurersAccessoires/potion_small_green.gltf" id="40_w53v0"]
 [ext_resource type="PackedScene" uid="uid://d2s6ulp6b5oe" path="res://Assets/Characters/AdventurersAccessoires/potion_small_orange.gltf" id="41_1qi0c"]
@@ -356,7 +356,7 @@ revert = true
 [node name="wall_shelves2" parent="DinerRoom" unique_id=1481565781 instance=ExtResource("15_a7nm6")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4, 0, -4)
 script = ExtResource("10_we3ui")
-loot_gold = 15
+loot_gold = 12
 
 [node name="Area3D" type="Area3D" parent="DinerRoom/wall_shelves2" unique_id=1982860981]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6999998, 1.4, 0.39999962)
@@ -585,7 +585,7 @@ shape = SubResource("CylinderShape3D_oow84")
 
 [node name="description" type="Node" parent="Prison/Parchemin" unique_id=1322060037]
 script = ExtResource("11_tbvcw")
-text = "Orange, Vert, Rouge, Bleu"
+text = "Il ya un texte griffoné dessus [i]Orange, Vert, Rouge, Bleu[/i]."
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Prison/Parchemin" unique_id=1328469988]
@@ -645,6 +645,8 @@ transform = Transform3D(0.8660254, 0, -0.5, 0, 1, 0, 0.5, 0, 0.8660254, 1.423204
 
 [node name="bar_straight_C_short2" parent="BossRoom/Desk" unique_id=627129351 instance=ExtResource("11_u0nfn")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, -0.5)
+loot_obj = 4
+loot_gold = 1
 
 [node name="bookcase_single_decoratedB" parent="BossRoom" unique_id=1833562646 instance=ExtResource("53_efvkj")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 2.0999985, 0, 5.3)
@@ -762,8 +764,8 @@ stream = ExtResource("31_7d0x2")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8)
 script = ExtResource("38_fs7r4")
 
-[node name="chest_large2" parent="BossRoom/SecretRoom" unique_id=418662175 instance=ExtResource("34_bunir")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2.3000011, 0, 0)
+[node name="chest_large" parent="BossRoom/SecretRoom" unique_id=1347016859 instance=ExtResource("39_lbhkl")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2.6000004, 0, 0)
 
 [node name="coin_stack_large2" parent="BossRoom/SecretRoom" unique_id=1441510366 instance=ExtResource("35_efvkj")]
 transform = Transform3D(0.8660254, 0, -0.5, 0, 1, 0, 0.5, 0, 0.8660254, 2, 0, -1)
@@ -823,6 +825,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 [node name="book_brown2" parent="BossRoom/bar_straight_C2/bartop_A_medium2" unique_id=26829577 instance=ExtResource("35_cjfn2")]
 transform = Transform3D(-0.9659258, 0, 0.25881895, 0, 1, 0, -0.25881895, 0, -0.9659258, 0.4000001, 1.3500001, -0.20000076)
 script = ExtResource("10_we3ui")
+interactDistance = 4.0
 
 [node name="Area3D" type="Area3D" parent="BossRoom/bar_straight_C2/bartop_A_medium2/book_brown2" unique_id=12635063]
 
@@ -842,6 +845,7 @@ stream = ExtResource("31_7d0x2")
 [node name="book_grey2" parent="BossRoom/bar_straight_C2/bartop_A_medium2" unique_id=528015338 instance=ExtResource("47_3jgwx")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.6999998, 1.3500001, -0.20000076)
 script = ExtResource("10_we3ui")
+interactDistance = 4.0
 
 [node name="description" type="Node" parent="BossRoom/bar_straight_C2/bartop_A_medium2/book_grey2" unique_id=243834870]
 script = ExtResource("11_tbvcw")
@@ -893,6 +897,7 @@ shape = SubResource("BoxShape3D_v5y75")
 [node name="potion_medium_blue2" parent="BossRoom/bar_straight_C2/bartop_A_medium2" unique_id=51621893 instance=ExtResource("38_r3u65")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4, -0.2)
 script = ExtResource("10_we3ui")
+interactDistance = 4.0
 
 [node name="Area3D" type="Area3D" parent="BossRoom/bar_straight_C2/bartop_A_medium2/potion_medium_blue2" unique_id=152125554]
 
@@ -968,6 +973,7 @@ stream = ExtResource("43_1qi0c")
 [node name="Golem" parent="BossRoom" unique_id=1300054986 instance=ExtResource("28_8seev")]
 transform = Transform3D(0.49999997, 0, 0.8660253, 0, 1, 0, -0.8660253, 0, 0.49999997, -2.2000008, 0, -3.9)
 _model_file = "res://fragment/monsters/SkeletonGolem1.json"
+loot_gold = 4
 
 [node name="Character" parent="BossRoom/Golem" unique_id=1568710970 instance=ExtResource("28_le4on")]
 
@@ -981,6 +987,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4, 
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -6, 0, 0)
 revert = true
 locked = true
+unlock_item = 2
 
 [node name="wall_shelves3" parent="BossRoom" unique_id=332301194 instance=ExtResource("15_a7nm6")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, 6)
@@ -1061,14 +1068,14 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4, 0
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 11, 0, -4)
 _model_file = "res://fragment/monsters/SkeletonMinion1.json"
 loot_obj = 1
-loot_gold = 3
+loot_gold = 1
 
 [node name="Character" parent="Entrance/Minion 1" unique_id=1366271086 instance=ExtResource("2_my37s")]
 
 [node name="Minion 2" parent="Entrance" unique_id=617207210 instance=ExtResource("18_5ip2l")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 20, 0, 13)
 _model_file = "res://fragment/monsters/SkeletonMinion1.json"
-loot_gold = 3
+loot_gold = 2
 
 [node name="Character" parent="Entrance/Minion 2" unique_id=1064022696 instance=ExtResource("2_my37s")]
 

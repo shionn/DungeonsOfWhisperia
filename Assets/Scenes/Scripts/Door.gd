@@ -12,6 +12,7 @@ const SPEED = 3
 @export var open = false
 @export var revert = false
 @export var locked = false
+@export var unlock_item : Items.ItemName
 
 func on_interact() -> void:
 	if locked :
@@ -25,7 +26,7 @@ func on_interact() -> void:
 			audioClose.play()
 
 func on_item_drop(item : Item)-> void:
-	if item.item_name == Items.ItemName.ClefBouclierEpee:
+	if item.item_name == unlock_item:
 		$AudioLocked.play()
 		locked = false
 		_bag.unloot(item.item_name)

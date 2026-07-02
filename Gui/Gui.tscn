@@ -749,6 +749,7 @@ libraries/ = SubResource("AnimationLibrary_7xgee")
 
 [connection signal="visibility_changed" from="Bag" to="Bag" method="_on_visibility_changed"]
 [connection signal="pressed" from="Bag/PanelContainer/MarginContainer/VBoxContainer/CloseButton" to="." method="_close"]
+[connection signal="visibility_changed" from="Loot" to="." method="_on_loot_visibility_changed"]
 [connection signal="pressed" from="Loot/PanelContainer/MarginContainer/VBoxContainer/CloseButton" to="." method="_close"]
 [connection signal="pressed" from="Introduction/PanelContainer/MarginContainer/VBoxContainer/CloseButton" to="." method="_close"]
 [connection signal="pressed" from="DialogGui/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/CloseButton" to="." method="_close"]
