@@ -20,10 +20,12 @@
 [ext_resource type="Texture2D" uid="uid://coc4mm1g1nlkp" path="res://Gui/Assets/kenney/ui-adventure/panel_brown_SE.png" id="18_w65rx"]
 [ext_resource type="Script" uid="uid://c56odaje3xl6x" path="res://Gui/LootGui.gd" id="19_s1663"]
 [ext_resource type="AudioStream" uid="uid://rc5hdthh3pa2" path="res://Audio/KenneyRpgAudio/handleCoins2.ogg" id="20_cq4r1"]
+[ext_resource type="Texture2D" uid="uid://dhtjf317oy7br" path="res://Gui/Assets/kenney/cursor-pack/tracking_horizontal_down.png" id="21_c4ovl"]
 [ext_resource type="Texture2D" uid="uid://dstsbh4f6k4j5" path="res://Gui/Assets/kenney/cursor-pack/door_exit.png" id="21_f4re5"]
 [ext_resource type="Texture2D" uid="uid://bxmq2jm6psefk" path="res://Gui/Assets/kenney/cursor-pack/resize_d_cross_diagonal.png" id="21_wbke4"]
 [ext_resource type="Script" uid="uid://b5u38rsuiglhp" path="res://Gui/MenuGui.gd" id="22_mnphl"]
 [ext_resource type="Script" uid="uid://cstky8dpig813" path="res://Gui/DialogGui.gd" id="23_2m3pn"]
+[ext_resource type="Texture2D" uid="uid://d136lgd35s1xx" path="res://Gui/Assets/kenney/cursor-pack/mark_question.png" id="23_883rq"]
 [ext_resource type="Script" uid="uid://o6q2ok64i8cs" path="res://Gui/Options.gd" id="24_7xgee"]
 [ext_resource type="Script" uid="uid://bc4y4enkrwodc" path="res://Gui/ConsoleLog.gd" id="24_xkmul"]
 [ext_resource type="Script" uid="uid://bcc2j6w4n4yqq" path="res://Gui/Transition.gd" id="25_60sjt"]
@@ -463,16 +465,20 @@ layout_mode = 1
 offset_right = 40.0
 offset_bottom = 8.0
 text = "Menu"
-item_count = 3
+item_count = 4
 popup/item_0/text = "Sauvegarder"
+popup/item_0/icon = ExtResource("21_c4ovl")
 popup/item_0/id = 1
 popup/item_0/disabled = true
 popup/item_1/text = "Option"
 popup/item_1/icon = ExtResource("21_wbke4")
 popup/item_1/id = 2
-popup/item_2/text = "Quitter"
-popup/item_2/icon = ExtResource("21_f4re5")
-popup/item_2/id = 0
+popup/item_2/text = "Aide"
+popup/item_2/icon = ExtResource("23_883rq")
+popup/item_2/id = 3
+popup/item_3/text = "Quitter"
+popup/item_3/icon = ExtResource("21_f4re5")
+popup/item_3/id = 0
 script = ExtResource("22_mnphl")
 
 [node name="Introduction" type="GridContainer" parent="." unique_id=415794769]

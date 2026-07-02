@@ -662,6 +662,7 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 2.09
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.39999962, 1.7290374, -0.100001335)
 script = ExtResource("10_we3ui")
 loot_obj = 6
+hide_on_loot = true
 
 [node name="Area3D" type="Area3D" parent="BossRoom/bookcase_single_decoratedB/potion_huge_green2" unique_id=458799823]
 
