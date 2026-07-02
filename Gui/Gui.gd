@@ -47,4 +47,4 @@ func _close() -> void :
 
 
 func _on_loot_visibility_changed() -> void:
-	if $Loot.visible == false : _close()
+	if $Loot.visible == false and not $Introduction.visible : _close()

@@ -51,7 +51,6 @@
 [ext_resource type="PackedScene" uid="uid://cx81jxahw60nm" path="res://Assets/Characters/SkeletonAccessoires/Skeleton_Blade.gltf" id="32_wlvsb"]
 [ext_resource type="PackedScene" uid="uid://wj4kthwrxw47" path="res://Assets/Characters/SkeletonAccessoires/Skeleton_Crossbow.gltf" id="33_w4mcl"]
 [ext_resource type="PackedScene" uid="uid://c740w1gfrmupy" path="res://Assets/Dungeons/Book/book_brown.gltf" id="35_cjfn2"]
-[ext_resource type="PackedScene" uid="uid://dtu7oee4qcolx" path="res://Assets/Dungeons/Coin/coin_stack_large.gltf" id="35_efvkj"]
 [ext_resource type="PackedScene" uid="uid://bdb2tkwvqixia" path="res://Assets/Dungeons/Book/book_tan.gltf" id="37_45lrj"]
 [ext_resource type="Script" uid="uid://y4tahlhuoy6j" path="res://Dungeons/00/BossRoomCode.gd" id="38_1qi0c"]
 [ext_resource type="Script" uid="uid://cv8fowtnl0rq1" path="res://Dungeons/00/secret_room.gd" id="38_fs7r4"]
@@ -74,6 +73,7 @@
 [ext_resource type="PackedScene" uid="uid://bysoel76lf8pw" path="res://Assets/Dungeons/Bar/bar_straight_A.gltf" id="49_onncu"]
 [ext_resource type="PackedScene" uid="uid://d0d62rw45klnc" path="res://Assets/Dungeons/Chair/chair.gltf" id="51_ckfqj"]
 [ext_resource type="PackedScene" uid="uid://dt83bove5us53" path="res://Assets/Dungeons/Book/bookcase_single_decoratedB.gltf" id="53_efvkj"]
+[ext_resource type="AudioStream" uid="uid://61hk6iwxjiwe" path="res://Audio/DungeonThemes/dungeon.ogg" id="74_lbhkl"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_78w8x"]
 height = 0.75
@@ -766,9 +766,6 @@ script = ExtResource("38_fs7r4")
 
 [node name="chest_large" parent="BossRoom/SecretRoom" unique_id=1347016859 instance=ExtResource("39_lbhkl")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2.6000004, 0, 0)
-
-[node name="coin_stack_large2" parent="BossRoom/SecretRoom" unique_id=1441510366 instance=ExtResource("35_efvkj")]
-transform = Transform3D(0.8660254, 0, -0.5, 0, 1, 0, 0.5, 0, 0.8660254, 2, 0, -1)
 
 [node name="wall" parent="BossRoom/SecretRoom" unique_id=1344025320 instance=ExtResource("22_puq8f")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
@@ -1658,6 +1655,12 @@ transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 6, 0
 
 [node name="wall9" parent="Walls" unique_id=706346975 instance=ExtResource("22_eig52")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -2, 0, 2)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1060218325]
+stream = ExtResource("74_lbhkl")
+volume_db = -20.0
+autoplay = true
+parameters/looping = true
 
 [connection signal="activate" from="BossRoom/bar_straight_C2/Code/Action1" to="BossRoom/bar_straight_C2/Code" method="_on_action_1_activate"]
 [connection signal="activate" from="BossRoom/bar_straight_C2/Code/Action2" to="BossRoom/bar_straight_C2/Code" method="_on_action_2_activate"]

@@ -4,7 +4,6 @@ extends Interactable
 @onready var door = $wall_doorway/wall_doorway_door
 @onready var audioOpen = $AudioOpen
 @onready var audioClose = $AudioClose
-@onready var audioLocked = $AudioClose
 
 const PI_2 = PI / 2
 const SPEED = 3
@@ -16,7 +15,7 @@ const SPEED = 3
 
 func on_interact() -> void:
 	if locked :
-		$AudioLocked.play()
+		$LockAudio.play()
 		_gui.consoleLog("C'est fermé")
 	else :
 		open = not open
@@ -27,7 +26,7 @@ func on_interact() -> void:
 
 func on_item_drop(item : Item)-> void:
 	if item.item_name == unlock_item:
-		$AudioLocked.play()
+		$UnLockAudio.play()
 		locked = false
 		_bag.unloot(item.item_name)
 	else :
