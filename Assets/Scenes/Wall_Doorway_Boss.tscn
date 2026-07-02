@@ -14,10 +14,10 @@ radius = 0.45
 [node name="Wall_Doorway" unique_id=812446971 instance=ExtResource("1_n7vb2")]
 script = ExtResource("2_t4tr4")
 
-[node name="sword_shield2" parent="wall_doorway/wall_doorway_door" parent_id_path=PackedInt32Array(548643448) index="1" unique_id=1419880763 instance=ExtResource("3_t4tr4")]
+[node name="sword_shield2" parent="wall_doorway/wall_doorway_door" parent_id_path=PackedInt32Array(1186919055) index="1" unique_id=1419880763 instance=ExtResource("3_t4tr4")]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0.8, 1.9, 0.1)
 
-[node name="sword_shield3" parent="wall_doorway/wall_doorway_door" parent_id_path=PackedInt32Array(548643448) index="2" unique_id=288236470 instance=ExtResource("3_t4tr4")]
+[node name="sword_shield3" parent="wall_doorway/wall_doorway_door" parent_id_path=PackedInt32Array(1186919055) index="2" unique_id=288236470 instance=ExtResource("3_t4tr4")]
 transform = Transform3D(-0.8, 0, -6.9938224e-08, 0, 0.8, 0, 6.9938224e-08, 0, -0.8, 0.8, 1.9, -0.1)
 
 [node name="Area3D" type="Area3D" parent="." index="1" unique_id=1967343378]
@@ -29,12 +29,16 @@ shape = SubResource("SphereShape3D_fhw0n")
 
 [node name="AudioOpen" type="AudioStreamPlayer3D" parent="." index="2" unique_id=1645843262]
 stream = ExtResource("4_u084j")
+bus = &"Effet"
 
 [node name="AudioClose" type="AudioStreamPlayer3D" parent="." index="3" unique_id=1649709914]
 stream = ExtResource("5_qqj0o")
+bus = &"Effet"
 
 [node name="LockAudio" type="AudioStreamPlayer3D" parent="." index="4" unique_id=1656191675]
 stream = ExtResource("6_v1qfb")
+bus = &"Effet"
 
 [node name="UnLockAudio" type="AudioStreamPlayer3D" parent="." index="5" unique_id=1766405352]
 stream = ExtResource("7_x5syk")
+bus = &"Effet"

@@ -21,9 +21,12 @@ shape = SubResource("SphereShape3D_fhw0n")
 
 [node name="AudioOpen" type="AudioStreamPlayer3D" parent="." index="2" unique_id=512343961]
 stream = ExtResource("3_1bm64")
+bus = &"Effet"
 
 [node name="AudioClose" type="AudioStreamPlayer3D" parent="." index="3" unique_id=274891422]
 stream = ExtResource("4_tku4e")
+bus = &"Effet"
 
 [node name="AudioLocked" type="AudioStreamPlayer3D" parent="." index="4" unique_id=1550218465]
 stream = ExtResource("5_tku4e")
+bus = &"Effet"

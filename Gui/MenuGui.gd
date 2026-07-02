@@ -7,3 +7,4 @@ func _ready() -> void:
 func _on_id_pressed(id: int) -> void:
 	match id :
 		0: get_tree().quit()
+		2: $"../Options".show()

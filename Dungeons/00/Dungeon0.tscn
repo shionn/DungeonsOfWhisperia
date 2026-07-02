@@ -594,6 +594,7 @@ metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Prison/Parchemin" unique_id=1328469988]
 stream = ExtResource("32_fs7r4")
+bus = &"Effet"
 
 [node name="BossRoom" type="Node3D" parent="." unique_id=453869497]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, 4)
@@ -622,6 +623,7 @@ metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="BossRoom/Desk/bar_straight_A2/spellbook_open2" unique_id=1666991161]
 stream = ExtResource("31_7d0x2")
+bus = &"Effet"
 
 [node name="map_rolled2" parent="BossRoom/Desk/bar_straight_A2" unique_id=1916968847 instance=ExtResource("29_8g2oi")]
 transform = Transform3D(0.7071066, 0, 0.7071066, 0, 1, 0, -0.7071066, 0, 0.7071066, 0.85621643, 1.0828708, 0.08301926)
@@ -640,6 +642,7 @@ metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="BossRoom/Desk/bar_straight_A2/map_rolled2" unique_id=1933985912]
 stream = ExtResource("32_fs7r4")
+bus = &"Effet"
 
 [node name="candle_thin2" parent="BossRoom/Desk/bar_straight_A2" unique_id=767218740 instance=ExtResource("32_7d0x2")]
 transform = Transform3D(0.5000001, 0, -0.8660257, 0, 1, 0, 0.8660257, 0, 0.5000001, 1.7062206, 0.7, -0.17679405)
@@ -687,6 +690,7 @@ metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="BossRoom/bookcase_single_decoratedB/Books" unique_id=1176882679]
 stream = ExtResource("31_7d0x2")
+bus = &"Effet"
 
 [node name="Potions" type="Node3D" parent="BossRoom/bookcase_single_decoratedB" unique_id=1049938344]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
@@ -771,6 +775,7 @@ metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="BossRoom/bookcase_single_decoratedA" unique_id=928379796]
 stream = ExtResource("31_7d0x2")
+bus = &"Effet"
 
 [node name="SecretRoom" type="Node3D" parent="BossRoom" unique_id=668072580]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8)
@@ -816,6 +821,7 @@ metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="BossRoom/SecretRoom/bookcase_single_decoratedA" unique_id=522494970]
 stream = ExtResource("31_7d0x2")
+bus = &"Effet"
 
 [node name="wall_open_scaffold" parent="BossRoom/SecretRoom" unique_id=1038886442 instance=ExtResource("42_qmktk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
@@ -823,6 +829,7 @@ visible = false
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="BossRoom/SecretRoom" unique_id=1894905574]
 stream = ExtResource("43_lbhkl")
+bus = &"Effet"
 
 [node name="bar_straight_C2" parent="BossRoom" unique_id=1918491113 instance=ExtResource("11_eig52")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3, 0, 2)
@@ -850,6 +857,7 @@ metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="BossRoom/bar_straight_C2/bartop_A_medium2/book_brown2" unique_id=1506229486]
 stream = ExtResource("31_7d0x2")
+bus = &"Effet"
 
 [node name="book_grey2" parent="BossRoom/bar_straight_C2/bartop_A_medium2" unique_id=528015338 instance=ExtResource("47_3jgwx")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.6999998, 1.3500001, -0.20000076)
@@ -869,6 +877,7 @@ shape = SubResource("BoxShape3D_tdnme")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="BossRoom/bar_straight_C2/bartop_A_medium2/book_grey2" unique_id=1045902156]
 stream = ExtResource("31_7d0x2")
+bus = &"Effet"
 
 [node name="book_tan2" parent="BossRoom/bar_straight_C2/bartop_A_medium2" unique_id=2114145603 instance=ExtResource("37_45lrj")]
 transform = Transform3D(-0.9659258, 0, -0.25881913, 0, 1, 0, 0.25881913, 0, -0.9659258, 0.5999999, 0.25000024, -0.20000076)
@@ -887,6 +896,7 @@ shape = SubResource("BoxShape3D_tdnme")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="BossRoom/bar_straight_C2/bartop_A_medium2/book_tan2" unique_id=1406618034]
 stream = ExtResource("31_7d0x2")
+bus = &"Effet"
 
 [node name="candle_melted2" parent="BossRoom/bar_straight_C2/bartop_A_medium2" unique_id=1772980734 instance=ExtResource("38_w53v0")]
 transform = Transform3D(0.7071068, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, 0.7071068, -0.5, 1.0999999, -0.20000076)
@@ -978,6 +988,7 @@ transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 8.351872e-23, 0, -3.552
 
 [node name="Audio" type="AudioStreamPlayer3D" parent="BossRoom/bar_straight_C2/Code" unique_id=1501163227]
 stream = ExtResource("43_1qi0c")
+bus = &"Effet"
 
 [node name="Golem" parent="BossRoom" unique_id=1300054986 instance=ExtResource("28_8seev")]
 transform = Transform3D(0.49999997, 0, 0.8660253, 0, 1, 0, -0.8660253, 0, 0.49999997, -2.2000008, 0, -3.9)
@@ -1040,6 +1051,7 @@ metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="BossRoom/wall_shelves3/Books" unique_id=1259141945]
 stream = ExtResource("31_7d0x2")
+bus = &"Effet"
 
 [node name="Potions" type="Node3D" parent="BossRoom/wall_shelves3" unique_id=80244081]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0.6000004)

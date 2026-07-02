@@ -43,6 +43,7 @@ func _close() -> void :
 	$Menu.hide()
 	$Introduction.hide()
 	$DialogGui.hide()
+	$Options.hide()
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
 

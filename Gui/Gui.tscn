@@ -21,8 +21,10 @@
 [ext_resource type="Script" uid="uid://c56odaje3xl6x" path="res://Gui/LootGui.gd" id="19_s1663"]
 [ext_resource type="AudioStream" uid="uid://rc5hdthh3pa2" path="res://Audio/KenneyRpgAudio/handleCoins2.ogg" id="20_cq4r1"]
 [ext_resource type="Texture2D" uid="uid://dstsbh4f6k4j5" path="res://Gui/Assets/kenney/cursor-pack/door_exit.png" id="21_f4re5"]
+[ext_resource type="Texture2D" uid="uid://bxmq2jm6psefk" path="res://Gui/Assets/kenney/cursor-pack/resize_d_cross_diagonal.png" id="21_wbke4"]
 [ext_resource type="Script" uid="uid://b5u38rsuiglhp" path="res://Gui/MenuGui.gd" id="22_mnphl"]
 [ext_resource type="Script" uid="uid://cstky8dpig813" path="res://Gui/DialogGui.gd" id="23_2m3pn"]
+[ext_resource type="Script" uid="uid://o6q2ok64i8cs" path="res://Gui/Options.gd" id="24_7xgee"]
 [ext_resource type="Script" uid="uid://bc4y4enkrwodc" path="res://Gui/ConsoleLog.gd" id="24_xkmul"]
 [ext_resource type="Script" uid="uid://bcc2j6w4n4yqq" path="res://Gui/Transition.gd" id="25_60sjt"]
 
@@ -454,21 +456,26 @@ texture = ExtResource("18_w65rx")
 
 [node name="AudioOpen" type="AudioStreamPlayer" parent="Loot" unique_id=500088659]
 stream = ExtResource("20_cq4r1")
+bus = &"Effet"
 
 [node name="Menu" type="MenuButton" parent="." unique_id=436163507]
 layout_mode = 1
 offset_right = 40.0
 offset_bottom = 8.0
 text = "Menu"
-item_count = 2
+item_count = 3
 popup/item_0/text = "Sauvegarder"
 popup/item_0/id = 1
-popup/item_1/text = "Quitter"
-popup/item_1/icon = ExtResource("21_f4re5")
-popup/item_1/id = 0
+popup/item_0/disabled = true
+popup/item_1/text = "Option"
+popup/item_1/icon = ExtResource("21_wbke4")
+popup/item_1/id = 2
+popup/item_2/text = "Quitter"
+popup/item_2/icon = ExtResource("21_f4re5")
+popup/item_2/id = 0
 script = ExtResource("22_mnphl")
 
-[node name="Introduction" type="GridContainer" parent="." unique_id=139407599]
+[node name="Introduction" type="GridContainer" parent="." unique_id=415794769]
 z_index = 10
 layout_mode = 1
 anchors_preset = 8
@@ -486,31 +493,31 @@ theme_override_constants/h_separation = 0
 theme_override_constants/v_separation = 0
 columns = 3
 
-[node name="NW" type="TextureRect" parent="Introduction" unique_id=1184850325]
+[node name="NW" type="TextureRect" parent="Introduction" unique_id=697210235]
 layout_mode = 2
 texture = ExtResource("11_883rq")
 
-[node name="N" type="TextureRect" parent="Introduction" unique_id=382315284]
+[node name="N" type="TextureRect" parent="Introduction" unique_id=1977706419]
 layout_mode = 2
 size_flags_horizontal = 3
 texture = ExtResource("12_m2wub")
 stretch_mode = 1
 
-[node name="NE" type="TextureRect" parent="Introduction" unique_id=613438406]
+[node name="NE" type="TextureRect" parent="Introduction" unique_id=1751618215]
 layout_mode = 2
 texture = ExtResource("13_irpma")
 
-[node name="W" type="TextureRect" parent="Introduction" unique_id=1838260426]
+[node name="W" type="TextureRect" parent="Introduction" unique_id=1837788968]
 layout_mode = 2
 size_flags_vertical = 3
 texture = ExtResource("14_3yfkq")
 stretch_mode = 1
 
-[node name="PanelContainer" type="PanelContainer" parent="Introduction" unique_id=857109422]
+[node name="PanelContainer" type="PanelContainer" parent="Introduction" unique_id=1802058934]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_8rxp0")
 
-[node name="MarginContainer" type="MarginContainer" parent="Introduction/PanelContainer" unique_id=326523103]
+[node name="MarginContainer" type="MarginContainer" parent="Introduction/PanelContainer" unique_id=786201156]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/margin_left = 2
@@ -518,19 +525,19 @@ theme_override_constants/margin_top = 2
 theme_override_constants/margin_right = 2
 theme_override_constants/margin_bottom = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Introduction/PanelContainer/MarginContainer" unique_id=936644291]
+[node name="VBoxContainer" type="VBoxContainer" parent="Introduction/PanelContainer/MarginContainer" unique_id=38400204]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 0
 
-[node name="Label" type="Label" parent="Introduction/PanelContainer/MarginContainer/VBoxContainer" unique_id=759920468]
+[node name="Label" type="Label" parent="Introduction/PanelContainer/MarginContainer/VBoxContainer" unique_id=661859485]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 24
 text = "Dungeon of Whisperia"
 horizontal_alignment = 1
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Introduction/PanelContainer/MarginContainer/VBoxContainer" unique_id=1475428818]
+[node name="RichTextLabel" type="RichTextLabel" parent="Introduction/PanelContainer/MarginContainer/VBoxContainer" unique_id=934426654]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/default_color = Color(0, 0, 0, 1)
@@ -545,38 +552,168 @@ Se déplacer avec ZQSD
 Orienter la vue avec la souris
 Action avec le clic gauche (Attaquer/Ramasser/Actionner)
 Ouvrir/Fermer l’interface avec Échap (Sac/Menu/Quitter/Sauvegarder)
-Utiliser un objet :
+Un objet dans le Sac :
 [ul]
-Clic droit depuis votre sac (Potion par exemple)
-Clic gauche et déplacer sur l’interaction (Clef sur Porte par exemple)s
+Clic droit depuis votre sac pour l'utiliser (Potion par exemple)
+Clic gauche pour voir la description de l'objet
+Clic gauche et déplacer sur l’interaction pour combiner (Clef sur Porte par exemple)
 [/ul]
 [/ul]
 
 Ce jeu est développé en open source sur le discord de la communauté de whisp. "
 
-[node name="CloseButton" type="Button" parent="Introduction/PanelContainer/MarginContainer/VBoxContainer" unique_id=121370059]
+[node name="CloseButton" type="Button" parent="Introduction/PanelContainer/MarginContainer/VBoxContainer" unique_id=1618956886]
 layout_mode = 2
 size_flags_horizontal = 3
 tooltip_text = "Fermer"
 text = "Fermer"
 
-[node name="E" type="TextureRect" parent="Introduction" unique_id=1691465736]
+[node name="E" type="TextureRect" parent="Introduction" unique_id=1667435885]
 layout_mode = 2
 size_flags_vertical = 3
 texture = ExtResource("15_ji1eb")
 stretch_mode = 1
 
-[node name="SW" type="TextureRect" parent="Introduction" unique_id=740020344]
+[node name="SW" type="TextureRect" parent="Introduction" unique_id=371867158]
 layout_mode = 2
 texture = ExtResource("16_8pck7")
 
-[node name="S" type="TextureRect" parent="Introduction" unique_id=1387285435]
+[node name="S" type="TextureRect" parent="Introduction" unique_id=413676214]
 layout_mode = 2
 size_flags_horizontal = 3
 texture = ExtResource("17_el8jn")
 stretch_mode = 1
 
-[node name="SE" type="TextureRect" parent="Introduction" unique_id=252100647]
+[node name="SE" type="TextureRect" parent="Introduction" unique_id=1560275318]
+layout_mode = 2
+texture = ExtResource("18_w65rx")
+
+[node name="Options" type="GridContainer" parent="." unique_id=139407599]
+z_index = 10
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -350.0
+offset_top = -250.0
+offset_right = 350.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 3
+script = ExtResource("24_7xgee")
+
+[node name="NW" type="TextureRect" parent="Options" unique_id=1184850325]
+layout_mode = 2
+texture = ExtResource("11_883rq")
+
+[node name="N" type="TextureRect" parent="Options" unique_id=382315284]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("12_m2wub")
+stretch_mode = 1
+
+[node name="NE" type="TextureRect" parent="Options" unique_id=613438406]
+layout_mode = 2
+texture = ExtResource("13_irpma")
+
+[node name="W" type="TextureRect" parent="Options" unique_id=1838260426]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("14_3yfkq")
+stretch_mode = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="Options" unique_id=857109422]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8rxp0")
+
+[node name="MarginContainer" type="MarginContainer" parent="Options/PanelContainer" unique_id=326523103]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Options/PanelContainer/MarginContainer" unique_id=936644291]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 0
+
+[node name="Label" type="Label" parent="Options/PanelContainer/MarginContainer/VBoxContainer" unique_id=759920468]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "Options"
+horizontal_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="Options/PanelContainer/MarginContainer/VBoxContainer" unique_id=558236384]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 5
+
+[node name="GridContainer" type="GridContainer" parent="Options/PanelContainer/MarginContainer/VBoxContainer/MarginContainer" unique_id=861830191]
+layout_mode = 2
+size_flags_vertical = 3
+columns = 2
+
+[node name="Volume Music" type="Label" parent="Options/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer" unique_id=2027116726]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Volume Musique"
+
+[node name="HSliderMusic" type="HSlider" parent="Options/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer" unique_id=1616776521]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+min_value = -72.0
+max_value = 0.0
+value = -24.0
+scrollable = false
+
+[node name="Volume Son" type="Label" parent="Options/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer" unique_id=1596451124]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Volume Son"
+
+[node name="HSliderSon" type="HSlider" parent="Options/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer" unique_id=2094957936]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+min_value = -72.0
+max_value = 0.0
+scrollable = false
+
+[node name="CloseButton" type="Button" parent="Options/PanelContainer/MarginContainer/VBoxContainer" unique_id=121370059]
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "Fermer"
+text = "Fermer"
+
+[node name="E" type="TextureRect" parent="Options" unique_id=1691465736]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("15_ji1eb")
+stretch_mode = 1
+
+[node name="SW" type="TextureRect" parent="Options" unique_id=740020344]
+layout_mode = 2
+texture = ExtResource("16_8pck7")
+
+[node name="S" type="TextureRect" parent="Options" unique_id=1387285435]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("17_el8jn")
+stretch_mode = 1
+
+[node name="SE" type="TextureRect" parent="Options" unique_id=252100647]
 layout_mode = 2
 texture = ExtResource("18_w65rx")
 
@@ -754,5 +891,8 @@ libraries/ = SubResource("AnimationLibrary_7xgee")
 [connection signal="visibility_changed" from="Loot" to="." method="_on_loot_visibility_changed"]
 [connection signal="pressed" from="Loot/PanelContainer/MarginContainer/VBoxContainer/CloseButton" to="." method="_close"]
 [connection signal="pressed" from="Introduction/PanelContainer/MarginContainer/VBoxContainer/CloseButton" to="." method="_close"]
+[connection signal="value_changed" from="Options/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer/HSliderMusic" to="Options" method="_on_music_value_changed"]
+[connection signal="value_changed" from="Options/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer/HSliderSon" to="Options" method="_on_son_value_changed"]
+[connection signal="pressed" from="Options/PanelContainer/MarginContainer/VBoxContainer/CloseButton" to="." method="_close"]
 [connection signal="pressed" from="DialogGui/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/CloseButton" to="." method="_close"]
 [connection signal="animation_finished" from="Transition/AnimationPlayer" to="Transition" method="_on_animation_finished"]
