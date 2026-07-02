@@ -13,6 +13,7 @@
 
 ## Icons
 - https://opengameart.org/content/free-rpg-icons-2
+- https://opengameart.org/content/epic-collection-potion
 
 # Audio
 - https://www.kenney.nl/
@@ -25,3 +26,4 @@
 ## peut etre : 
 - https://opengameart.org/content/gemmed-items
 - https://opengameart.org/content/handpainted-rpg-icons
+- https://opengameart.org/content/pixel-potions-pack-free-samples

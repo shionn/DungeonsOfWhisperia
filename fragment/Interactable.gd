@@ -1,14 +1,11 @@
-extends Node3D
+extends GameBase3D
 class_name Interactable
 
 enum Action { ACTIVATE, LOOK }
 
-@onready var _gui := $/root/World/Gui as Gui
-@onready var _player := $/root/World/Player as PlayerG
-@onready var _bag := $/root/World/Player/Bag as Bag
 @onready var _area := $Area3D as Area3D
 @onready var _bagGui := $/root/World/Gui/Bag as BagGui
-@onready var _audio := $AudioStreamPlayer3D
+@onready var _audio := $AudioStreamPlayer3D as AudioStreamPlayer3D
 
 @export var action : Action = Action.ACTIVATE
 @export var interactDistance : float = 3
@@ -31,18 +28,18 @@ func _ready() -> void:
 func on_interact() -> void: 
 	if _audio : _audio.play()
 	if $description :
-		_gui.openDialog($description)
+		gui.openDialog($description)
 	elif _lootable :
-		_gui.openLoot(self)
+		gui.openLoot(self)
 	else : 
 		activate.emit()
 
 func open_description() -> void:
 	if $description :
-		_gui.openDialog($description)
+		gui.openDialog($description)
 
 func open_loot() -> void:
-	_gui.openLoot(self)
+	gui.openLoot(self)
 
 func isInRange(target: Node3D) -> bool:
 	return global_position.distance_to(target.global_position) <= interactDistance
@@ -61,7 +58,7 @@ func on_item_drop(_item : Item)-> void:
 	# _gui.consoleLog("Aucun effet.")
 	
 
-func _on_input_event(_camera: Node, event: InputEvent, _event_position: Vector3, _normal: Vector3, _shape_idx: int) -> void:
+func _on_input_event(_camera: Node, _event: InputEvent, _event_position: Vector3, _normal: Vector3, _shape_idx: int) -> void:
 	#if event is InputEventMouseButton and Input.is_action_just_pressed("interact"): 
 #		if player :
 #			if player.global_position.distance_to(self.global_position) < interactable_distance :

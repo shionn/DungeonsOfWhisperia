@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://dve5cabnc5o2x" path="res://Gui/Assets/fanatisy-magic-set/potion-2-48.png" id="6_wygdx"]
 [ext_resource type="Texture2D" uid="uid://crhvjkxucw0xb" path="res://Gui/Assets/free-rpg-icons-2/48x48/key.png" id="8_bah7m"]
 [ext_resource type="Texture2D" uid="uid://bho5wu36vyxai" path="res://Gui/Assets/fanatisy-magic-set/potion-1-48.png" id="9_fv4w7"]
+[ext_resource type="Texture2D" uid="uid://bupuw0rpecyfv" path="res://Gui/Assets/resources-pack-1/Skull-48.png" id="10_fvag4"]
 
 [sub_resource type="Environment" id="Environment_js7pq"]
 background_energy_multiplier = 0.7
@@ -35,7 +36,9 @@ script = ExtResource("5_wygdx")
 script = ExtResource("5_p1v5b")
 item_name = 1
 icon = ExtResource("6_wygdx")
-description = "Rend 1D3 pv"
+description = "Potion de vie mineur. 
+[i]Rend 1D3 pv[/i]."
+tooltip = "Rend 1D3 pv"
 conssommable = true
 metadata/_custom_type_script = "uid://bjbab3ep2gfn2"
 
@@ -44,6 +47,7 @@ script = ExtResource("5_p1v5b")
 item_name = 2
 icon = ExtResource("8_bah7m")
 description = "Cette clef semble spéciale, elle a un bouclier et une épée gravée sur sa base."
+tooltip = "Clef"
 metadata/_custom_type_script = "uid://bjbab3ep2gfn2"
 
 [node name="Boisson Raffinée" type="Node" parent="Items" unique_id=1863142575]
@@ -52,6 +56,7 @@ item_name = 3
 icon = ExtResource("9_fv4w7")
 description = "Un des meilleurs crus de la region à boire avec modération.
 [i]Rend 2 pv[/i]"
+tooltip = "Boisson Rafinée"
 conssommable = true
 metadata/_custom_type_script = "uid://bjbab3ep2gfn2"
 
@@ -61,7 +66,22 @@ item_name = 4
 icon = ExtResource("8_bah7m")
 description = "Cette clef porte une gravure à sa base, on dirait une sorte de coffre.
 "
+tooltip = "Clef"
+metadata/_custom_type_script = "uid://bjbab3ep2gfn2"
+
+[node name="Crane" type="Node" parent="Items" unique_id=616656790]
+script = ExtResource("5_p1v5b")
+item_name = 5
+icon = ExtResource("10_fvag4")
+description = "Ceci est la preuve que j'ai accompli ma mission.
+
+[i]Félicitations ! Vous avez accompli votre première quête, donnez le mot de passe [b]Crâne de golem[/b] et le montant d'or possédé à Shionn (Rurick) dans un message privé sur Discord.
+Mais avez-vous tous fouillé ? Avez-vous trouvé toute la quantité d'or possible également ?
+
+Merci sincèrement d’avoir participé à cette alpha. Shionn[/i]"
+tooltip = "Crâne"
 metadata/_custom_type_script = "uid://bjbab3ep2gfn2"
 
 [connection signal="_action" from="Items/Potion" to="Items/Potion" method="_give_back_1d3_pv"]
 [connection signal="_action" from="Items/Boisson Raffinée" to="Items/Boisson Raffinée" method="_give_back_2_pv"]
+[connection signal="_action" from="Items/Crane" to="Items/Crane" method="open_description"]

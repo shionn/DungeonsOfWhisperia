@@ -537,17 +537,19 @@ theme_override_colors/default_color = Color(0, 0, 0, 1)
 bbcode_enabled = true
 text = "Bienvenue dans [color=red]Dungeon of Whisperia[/color].
 
-Ceci est une version [color=red]alpha[/color] pour tester et montrer le concept. Dans ce donjon vous devez vaincre le maître du donjon et trouver son trésor.
+Ceci est une version [color=red]alpha[/color] pour tester et montrer le concept. Dans ce donjon, vous devez vaincre le maître du donjon et trouver son trésor.
 
 [u]Contrôle :[/u]
 [ul]
 Se déplacer avec ZQSD
 Orienter la vue avec la souris
 Action avec le clic gauche (Attaquer/Ramasser/Actionner)
-Ouvrir/Fermer l’interface avec Echap (Sac/Menu/Quitter/Sauvegarder)
-Utiliser un objet : 
-[ul]Clic droit depuis votre sac (Potion par exemple)
-Clic gauche et déplacer sur l’interaction (Clef sur Porte par exemple)[/ul]
+Ouvrir/Fermer l’interface avec Échap (Sac/Menu/Quitter/Sauvegarder)
+Utiliser un objet :
+[ul]
+Clic droit depuis votre sac (Potion par exemple)
+Clic gauche et déplacer sur l’interaction (Clef sur Porte par exemple)s
+[/ul]
 [/ul]
 
 Ce jeu est développé en open source sur le discord de la communauté de whisp. "

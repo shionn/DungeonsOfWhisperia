@@ -9,7 +9,6 @@ enum State { ATTACK, MOVE, IDLE, HIT, DEATH }
 @onready var _gui = $/root/World/Gui as Gui
 @onready var _atkTimer = $AtkTimer as Timer
 @onready var _audioTimer = $AudioTimer as Timer
-@onready var _animationTimer = $AnimationTimer as Timer
 
 const _movement_speed: float = 4.0
 const _max_range: float = 20
@@ -27,7 +26,7 @@ func _ready() -> void:
 	#$"Rogue_Hooded/Rig/Skeleton3D/handslot_r/2H_Crossbow".hide()
 	$Rogue_Hooded/Rig_Medium/Skeleton3D/RogueHooded_Head.hide()
 	$Rogue_Hooded/Rig_Medium/Skeleton3D/RogueHooded_Mask.hide()
-	pass
+	_animation.animation_finished.connect(_on_animation_finished)
 	
 func _physics_process(_delta: float) -> void:
 	match _state :
@@ -42,6 +41,8 @@ func _physics_process(_delta: float) -> void:
 						_start_atk()
 			else : 
 				_handle_move_input()
+		State.HIT:
+			velocity = Vector3.ZERO
 	
 	move_and_slide()
 
@@ -75,17 +76,14 @@ func receive_atk(nb_atk: int, monster:Monster) -> void:
 	if deg > 0 :
 		pv = max(pv - deg, 0)
 		if pv > 0:
-			_start_animation("Hit_A", true)
+			_start_animation("Hit_A")
 			_state = State.HIT
 		else :
 			_start_animation("Death_A")
 			_state = State.DEATH
 
 func _start_atk() -> void:
-	var animation =  "RigMedium/" + "Melee_Dualwield_Attack_Chop"
-	var duration = _animation.get_animation(animation).length
-	_animation.play(animation)
-	_animationTimer.start(duration)
+	var duration = _start_animation("Melee_Dualwield_Attack_Chop")
 	_atkTimer.start(duration*.7)
 	_audioTimer.start(duration*.4)
 	_character.rotation.y = get_viewport().get_camera_3d().rotation.y+deg_to_rad(180)
@@ -97,33 +95,18 @@ func _on_atk_timer_timeout() -> void:
 	_attacked_monster.receive_atk(nb_atk)
 	$Swing3.play()
 
-func _start_animation(anim:String, timer:bool=false) -> void:
-	const _animation_prefix = "RigMedium/"
-	_animation.play(_animation_prefix+anim)
-	if timer : 
-		_animationTimer.start(_animation.get_animation(_animation_prefix+anim).length)
-	
-func _on_animation_timer_timeout() -> void:
+func _start_animation(anim_name:String) -> float:
+	var animation =  "RigMedium/"  + anim_name
+	var duration = _animation.get_animation(animation).length
+	_animation.play(animation)
+	return duration
+
+func _on_animation_finished(_anim_name : String) -> void:
 	match _state :
 		State.ATTACK:
-			#var nb_atk = Dices.d6(2,4)
-			#_attacked_monster.receive_atk(nb_atk)
 			_state = State.MOVE
 		State.HIT :
 			_state = State.MOVE
-
-# old one
-func _on_timer_timeout() -> void:
-	match _state :
-		State.ATTACK:
-			var nb_atk = Dices.d6(2,4)
-			_attacked_monster.receive_atk(nb_atk)
-			nb_atk = Dices.d6(2,4)
-			_attacked_monster.receive_atk(nb_atk)
-			_state = State.MOVE
-		State.HIT :
-			_state = State.MOVE
-
 
 func _on_audio_timer_timeout() -> void:
 	var nb_atk = Dices.d6(2,4)

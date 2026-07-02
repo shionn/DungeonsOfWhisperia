@@ -16,7 +16,7 @@ const SPEED = 3
 func on_interact() -> void:
 	if locked :
 		$LockAudio.play()
-		_gui.consoleLog("C'est fermé")
+		gui.consoleLog("C'est fermé")
 	else :
 		open = not open
 		if open : 
@@ -28,7 +28,7 @@ func on_item_drop(item : Item)-> void:
 	if item.item_name == unlock_item:
 		$UnLockAudio.play()
 		locked = false
-		_bag.unloot(item.item_name)
+		bag.unloot(item.item_name)
 	else :
 		super.on_item_drop(item)
 

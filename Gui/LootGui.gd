@@ -23,7 +23,7 @@ func loot(container:Object) -> void:
 	if item :
 		var button = TextureButton.new();
 		button.texture_normal =  item.icon
-		button.tooltip_text = item.name+"\n"+item.description
+		button.tooltip_text = item.tooltip
 		button.pressed.connect(func(): self._loot_item(item, button, container))
 		_container.add_child(button)
 	self.visible = true

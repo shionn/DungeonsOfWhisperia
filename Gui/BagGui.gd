@@ -36,7 +36,7 @@ func _refresh() -> void:
 		if item : 
 			var button = TextureButton.new();
 			button.texture_normal =  item.icon
-			button.tooltip_text = item.name+"\n"+item.description
+			button.tooltip_text = item.tooltip
 			button.button_mask = MOUSE_BUTTON_MASK_RIGHT | MOUSE_BUTTON_MASK_LEFT
 			button.pressed.connect(func(): self._activate(item))
 			button.button_down.connect(func(): self._start_drag(button, item))
@@ -69,7 +69,9 @@ func on_exit(interactable : Node3D) -> void :
 		self._interactable = null
 
 func _activate(item : Item) -> void :
-	if not Input.is_action_just_released("interact"):
+	if Input.is_action_just_released("interact"):
+		item.open_description()
+	else :
 		item._action.emit()
 		if item.conssommable :
 			_bag.unloot(item.item_name)

@@ -137,7 +137,8 @@ func receive_atk(nb_atk: int) -> void:
 	if state == State.DEATH : return
 	var nb_def = Dices.d6(_model.def, 6)
 	var deg = nb_atk - nb_def
-	_gui.consoleLog("Vous obtenez %d 💀, %s obtient %d 🛡" % [nb_atk, name, nb_def])
+	if nb_atk > 0 : _gui.consoleLog("Vous obtenez %d 💀, %s obtient %d 🛡" % [nb_atk, name, nb_def])
+	else :          _gui.consoleLog("Vous obtenez %d 💀" % [nb_atk])
 	if deg > 0 :
 		_model.pv = _model.pv - deg
 		if _model.pv <= 0 :

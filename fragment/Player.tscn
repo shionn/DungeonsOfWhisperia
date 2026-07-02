@@ -34,9 +34,5 @@ one_shot = true
 [node name="AudioTimer" type="Timer" parent="." unique_id=1351551849]
 one_shot = true
 
-[node name="AnimationTimer" type="Timer" parent="." unique_id=1319163541]
-one_shot = true
-
 [connection signal="timeout" from="AtkTimer" to="." method="_on_atk_timer_timeout"]
 [connection signal="timeout" from="AudioTimer" to="." method="_on_audio_timer_timeout"]
-[connection signal="timeout" from="AnimationTimer" to="." method="_on_animation_timer_timeout"]

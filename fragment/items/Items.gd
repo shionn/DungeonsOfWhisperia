@@ -6,7 +6,8 @@ enum ItemName {
 	Potion,
 	ClefBouclierEpee,
 	BoissonRaffinee,
-	ClefCoffre
+	ClefCoffre,
+	SkullHead
 }
 
 func from(item_name : ItemName) -> Item :
