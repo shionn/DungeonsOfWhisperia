@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://crhvjkxucw0xb" path="res://Gui/Assets/free-rpg-icons-2/48x48/key.png" id="8_bah7m"]
 [ext_resource type="Texture2D" uid="uid://bho5wu36vyxai" path="res://Gui/Assets/fanatisy-magic-set/potion-1-48.png" id="9_fv4w7"]
 [ext_resource type="Texture2D" uid="uid://bupuw0rpecyfv" path="res://Gui/Assets/resources-pack-1/Skull-48.png" id="10_fvag4"]
+[ext_resource type="Texture2D" uid="uid://02ojrntdtkch" path="res://Gui/Assets/epic-collection-potion/potion-green.png" id="11_kva58"]
 
 [sub_resource type="Environment" id="Environment_js7pq"]
 background_energy_multiplier = 0.7
@@ -32,7 +33,7 @@ environment = SubResource("Environment_js7pq")
 [node name="Items" type="Node" parent="." unique_id=1550606035]
 script = ExtResource("5_wygdx")
 
-[node name="Potion" type="Node" parent="Items" unique_id=411360577]
+[node name="Potion Vie Mineur" type="Node" parent="Items" unique_id=411360577]
 script = ExtResource("5_p1v5b")
 item_name = 1
 icon = ExtResource("6_wygdx")
@@ -82,6 +83,17 @@ Merci sincèrement d’avoir participé à cette alpha. Shionn[/i]"
 tooltip = "Crâne"
 metadata/_custom_type_script = "uid://bjbab3ep2gfn2"
 
-[connection signal="_action" from="Items/Potion" to="Items/Potion" method="_give_back_1d3_pv"]
+[node name="Necrolis Attivae" type="Node" parent="Items" unique_id=1341189445]
+script = ExtResource("5_p1v5b")
+item_name = 6
+icon = ExtResource("11_kva58")
+description = "Sur l'étiquette il est écris [i]Necrolis Attivae[/i]. 
+
+Je n'ai jamais vu ni jamais entendu parler d'une telle potion. Elle est forcément importante."
+tooltip = "Necrolis Attivae"
+metadata/_custom_type_script = "uid://bjbab3ep2gfn2"
+
+[connection signal="_action" from="Items/Potion Vie Mineur" to="Items/Potion Vie Mineur" method="_give_back_1d3_pv"]
 [connection signal="_action" from="Items/Boisson Raffinée" to="Items/Boisson Raffinée" method="_give_back_2_pv"]
 [connection signal="_action" from="Items/Crane" to="Items/Crane" method="open_description"]
+[connection signal="_action" from="Items/Necrolis Attivae" to="Items/Necrolis Attivae" method="open_description"]

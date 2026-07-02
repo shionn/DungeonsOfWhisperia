@@ -138,6 +138,10 @@ size = Vector3(0.8357666, 0.6, 0.14765625)
 height = 1.2
 radius = 0.13183594
 
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_yp05k"]
+height = 0.55
+radius = 0.27929688
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_oow84"]
 size = Vector3(0.57322997, 0.4, 0.4305664)
 
@@ -653,6 +657,14 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 2.09
 
 [node name="potion_huge_green2" parent="BossRoom/bookcase_single_decoratedB" unique_id=6158810 instance=ExtResource("46_onncu")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.39999962, 1.7290374, -0.100001335)
+script = ExtResource("10_we3ui")
+loot_obj = 6
+
+[node name="Area3D" type="Area3D" parent="BossRoom/bookcase_single_decoratedB/potion_huge_green2" unique_id=458799823]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BossRoom/bookcase_single_decoratedB/potion_huge_green2/Area3D" unique_id=1564668115]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.125, 0)
+shape = SubResource("CylinderShape3D_yp05k")
 
 [node name="Books" type="Node3D" parent="BossRoom/bookcase_single_decoratedB" unique_id=1809949081]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
