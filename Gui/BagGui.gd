@@ -1,9 +1,8 @@
 class_name BagGui
-extends Control
+extends GameBaseControl
 
 @onready var _grid = $PanelContainer/MarginContainer/VBoxContainer/Container as Container
 @onready var _container = $PanelContainer/MarginContainer/VBoxContainer/Container as Container
-@onready var _bag = $"/root/World/Player/Bag" as Bag
 @onready var _items = $"/root/World/Items" as Items
 
 var _goldRessource = load("res://Gui/Assets/resources-pack-1/Coin-48.png")
@@ -13,25 +12,22 @@ var _interactable : Interactable
 #var drag : Item = null
 func _ready() -> void:
 	visible = false
-	_bag.on_item_change.connect(self._refresh)
+	bag.on_item_change.connect(self._refresh)
 
 func _process(_delta: float) -> void:
 	if _dragButton:
 		_dragButton.global_position = get_viewport().get_mouse_position() + Vector2(5,5)
-	#if drag != null :
-	#	drag.global_position = get_viewport().get_mouse_position() + Vector2(5,5)
-	pass
 
 func _refresh() -> void:
 	for child in _container.get_children() : child.queue_free()
-	if _bag.gold > 0:
+	if bag.gold > 0:
 		var button = TextureButton.new();
 		button.texture_normal = _goldRessource
-		button.tooltip_text = "OR: "+str(_bag.gold)
+		button.tooltip_text = "OR: "+str(bag.gold)
 		button.button_mask = MOUSE_BUTTON_MASK_LEFT | MOUSE_BUTTON_MASK_RIGHT
 		_container.add_child(button)
 
-	for item_name in _bag.items :
+	for item_name in bag.items :
 		var item : Item  = _items.from(item_name)
 		if item : 
 			var button = TextureButton.new();
@@ -69,12 +65,13 @@ func on_exit(interactable : Node3D) -> void :
 		self._interactable = null
 
 func _activate(item : Item) -> void :
+	if player.isDead() : return
 	if Input.is_action_just_released("interact"):
 		item.open_description()
 	else :
 		item._action.emit()
 		if item.conssommable :
-			_bag.unloot(item.item_name)
+			bag.unloot(item.item_name)
 
 func _on_close_button_pressed() -> void:
 	hide()

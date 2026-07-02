@@ -1,5 +1,5 @@
-extends Node
-class_name GameBase
+extends Control
+class_name GameBaseControl
 
 
 @onready var gui := $/root/World/Gui as Gui
