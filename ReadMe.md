@@ -19,6 +19,8 @@
 - https://www.kenney.nl/
 - https://opengameart.org/content/80-cc0-rpg-sfx
 - https://opengameart.org/content/rpg-sound-pack
+- https://opengameart.org/content/zombie-skeleton-monster-voice-effects
+- https://opengameart.org/content/swishes-sound-pack ?
 
 # Music
 - https://opengameart.org/content/dungeon-themes

@@ -10,6 +10,7 @@ var min_atk_range : float = 100
 var global_cold_down: float
 var large: bool
 var rig: String
+var hit_sound : AudioStreamPlayer3D
 
 var _random = RandomNumberGenerator.new()
 
@@ -23,6 +24,7 @@ func _init(model_file, g:Monster):
 	rig = "RigLarge/" if large else "RigMedium/"
 	chase_distance = json.get("chase_distance", 1.5)
 	global_cold_down = json.get("global_cold_down",2)
+	hit_sound = g.get_node(json.get("hit_sound", "ZombieYell9"))
 	for jsonAtk in json["atks"]:
 		var atk = MonsterModelAtk.new(jsonAtk, g)
 		atks.append(atk)

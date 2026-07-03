@@ -24,7 +24,7 @@ var state : State = State.IDLE
 
 func _ready() -> void:
 	_model = MonsterModel.new(_model_file, self)
-	_navigation_agent.target_desired_distance = _model.chase_distance
+	_navigation_agent.target_desired_distance = 0 #_model.chase_distance
 	start_animation("Idle_A")
 	_atk = _model.get_atk()
 
@@ -129,7 +129,7 @@ func _start_atk() -> void:
 
 func _on_atk_timer_timeout() -> void:
 	if state != State.DEATH :
-		$Swing2.play()
+		_atk.sound.play()
 		_player.receive_atk(_atk.damage(), self)
 		_atk = null
 		
@@ -142,6 +142,7 @@ func receive_atk(nb_atk: int) -> void:
 	else :          _gui.consoleLog("Vous obtenez %d 💀" % [nb_atk])
 	if deg > 0 :
 		_model.pv = _model.pv - deg
+		_model.hit_sound.play()
 		if _model.pv <= 0 :
 			start_animation("Death_A", true)
 			state = State.DEATH

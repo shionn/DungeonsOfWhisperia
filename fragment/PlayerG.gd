@@ -74,6 +74,7 @@ func receive_atk(nb_atk: int, monster:Monster) -> void:
 		_gui.consoleLog("%s obtient %d 💀" % [monster.name, nb_atk])
 		
 	if deg > 0 :
+		$HumanYell3.play()
 		pv = max(pv - deg, 0)
 		if pv > 0:
 			_start_animation("Hit_A")
