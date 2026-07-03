@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://l4ocv1r3b2jl"]
+
+[sub_resource type="Environment" id="Environment_js7pq"]
+background_energy_multiplier = 0.7
+ssao_enabled = true
+adjustment_brightness = 0.81
+adjustment_contrast = 1.025
+
+[node name="WorldEnvironment" type="WorldEnvironment" unique_id=485933020]
+environment = SubResource("Environment_js7pq")

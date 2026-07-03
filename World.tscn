@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://biry1imi3i5lg" path="res://Dungeons/00/Dungeon0.tscn" id="1_c6gwx"]
 [ext_resource type="PackedScene" uid="uid://dpbieqlycbivt" path="res://Gui/Gui.tscn" id="2_2dftf"]
 [ext_resource type="PackedScene" uid="uid://ddvg2rw2bunm2" path="res://fragment/Player.tscn" id="2_js7pq"]
+[ext_resource type="PackedScene" uid="uid://l4ocv1r3b2jl" path="res://fragment/Environment.tscn" id="5_f5c0m"]
 [ext_resource type="Script" uid="uid://bjbab3ep2gfn2" path="res://fragment/items/Item.gd" id="5_p1v5b"]
 [ext_resource type="Script" uid="uid://ccps0bdr1ahel" path="res://fragment/items/Items.gd" id="5_wygdx"]
 [ext_resource type="Texture2D" uid="uid://dve5cabnc5o2x" path="res://Gui/Assets/fanatisy-magic-set/potion-2-48.png" id="6_wygdx"]
@@ -11,12 +12,6 @@
 [ext_resource type="Texture2D" uid="uid://bho5wu36vyxai" path="res://Gui/Assets/fanatisy-magic-set/potion-1-48.png" id="9_fv4w7"]
 [ext_resource type="Texture2D" uid="uid://bupuw0rpecyfv" path="res://Gui/Assets/resources-pack-1/Skull-48.png" id="10_fvag4"]
 [ext_resource type="Texture2D" uid="uid://02ojrntdtkch" path="res://Gui/Assets/epic-collection-potion/potion-green.png" id="11_kva58"]
-
-[sub_resource type="Environment" id="Environment_js7pq"]
-background_energy_multiplier = 0.7
-ssao_enabled = true
-adjustment_brightness = 0.81
-adjustment_contrast = 1.025
 
 [node name="World" type="Node3D" unique_id=1017407997]
 script = ExtResource("1_bcbcq")
@@ -27,8 +22,7 @@ script = ExtResource("1_bcbcq")
 
 [node name="Gui" parent="." unique_id=679884730 instance=ExtResource("2_2dftf")]
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=464023489]
-environment = SubResource("Environment_js7pq")
+[node name="WorldEnvironment" parent="." unique_id=485933020 instance=ExtResource("5_f5c0m")]
 
 [node name="Items" type="Node" parent="." unique_id=1550606035]
 script = ExtResource("5_wygdx")

@@ -1,0 +1,209 @@
+[gd_scene format=3 uid="uid://crjcixt17r8b2"]
+
+[ext_resource type="PackedScene" uid="uid://b3w65ugrkoyx4" path="res://Assets/Dungeons/Floor/Large/floor_tile_large.gltf" id="1_7hbvu"]
+[ext_resource type="PackedScene" uid="uid://devkrtutcqnyx" path="res://Assets/Scenes/Ranger.tscn" id="1_fmli0"]
+[ext_resource type="PackedScene" uid="uid://croyspihojfyp" path="res://Assets/Scenes/Rogue_Hooded.tscn" id="1_wx6wp"]
+[ext_resource type="PackedScene" uid="uid://0fn6al4q3iav" path="res://Assets/Dungeons/Wall/Corner/wall_corner.gltf" id="2_bwt3i"]
+[ext_resource type="PackedScene" uid="uid://bjfrjb5gr6a3k" path="res://Assets/Dungeons/Wall/wall_arched.gltf" id="3_e64xq"]
+[ext_resource type="PackedScene" uid="uid://lmccymxaj0hd" path="res://Assets/Scenes/Barbarian.tscn" id="3_mfd5o"]
+[ext_resource type="PackedScene" uid="uid://tmyp1hgkyjfh" path="res://Assets/Scenes/Engineer.tscn" id="4_dwykc"]
+[ext_resource type="PackedScene" uid="uid://l4ocv1r3b2jl" path="res://fragment/Environment.tscn" id="4_mfh1e"]
+[ext_resource type="PackedScene" uid="uid://b8yjt6ifs5miv" path="res://Assets/Scenes/Knight.tscn" id="4_r85o0"]
+[ext_resource type="PackedScene" uid="uid://klr1d6x5mt0l" path="res://Assets/Dungeons/Wall/wall_cracked.gltf" id="5_ccr7y"]
+[ext_resource type="PackedScene" uid="uid://chh33810xheeu" path="res://Assets/Scenes/Mage.tscn" id="5_r85o0"]
+[ext_resource type="PackedScene" uid="uid://y38wo3hdhqtq" path="res://Assets/Dungeons/Wall/wall_shelves.gltf" id="6_ypfxp"]
+[ext_resource type="PackedScene" uid="uid://7em3lt4lnfwr" path="res://Assets/Dungeons/Wall/wall.gltf" id="7_fmli0"]
+[ext_resource type="PackedScene" uid="uid://cl36lcn4lo2eq" path="res://Assets/Scenes/Torch_Mounted.tscn" id="8_mfh1e"]
+[ext_resource type="Script" uid="uid://dexpl21rteomv" path="res://fragment/Roof.gd" id="8_ypfxp"]
+[ext_resource type="PackedScene" uid="uid://kwbu30ltyyru" path="res://Assets/Dungeons/Floor/Large/floor_dirt_large.gltf" id="9_fmli0"]
+
+[node name="GameStart" type="Node" unique_id=1194037428]
+
+[node name="Node3D" type="Node3D" parent="." unique_id=1576004130]
+
+[node name="Characters" type="Node3D" parent="Node3D" unique_id=675361834]
+
+[node name="Node3D" type="Node3D" parent="Node3D/Characters" unique_id=1164197709]
+transform = Transform3D(0.9848077, 0, 0.17364818, 0, 1, 0, -0.17364818, 0, 0.9848077, 0, 0, 0)
+
+[node name="Barbarian" parent="Node3D/Characters/Node3D" unique_id=496203564 instance=ExtResource("3_mfd5o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
+
+[node name="Node3D2" type="Node3D" parent="Node3D/Characters" unique_id=445603615]
+transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, 0, 0, 0)
+
+[node name="Engineer" parent="Node3D/Characters/Node3D2" unique_id=1703605445 instance=ExtResource("4_dwykc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
+
+[node name="Node3D3" type="Node3D" parent="Node3D/Characters" unique_id=1282010697]
+transform = Transform3D(0.9848077, 0, -0.17364818, 0, 1, 0, 0.17364818, 0, 0.9848077, 0, 0, 0)
+
+[node name="Mage" parent="Node3D/Characters/Node3D3" unique_id=1229200088 instance=ExtResource("5_r85o0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
+
+[node name="Node3D4" type="Node3D" parent="Node3D/Characters" unique_id=1268133987]
+transform = Transform3D(0.8660254, 0, -0.5, 0, 1, 0, 0.5, 0, 0.8660254, 0, 0, 0)
+
+[node name="Knight" parent="Node3D/Characters/Node3D4" unique_id=432149207 instance=ExtResource("4_r85o0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
+
+[node name="Node3D5" type="Node3D" parent="Node3D/Characters" unique_id=980995739]
+transform = Transform3D(0.64278764, 0, 0.76604444, 0, 1, 0, -0.76604444, 0, 0.64278764, 0, 0, 0)
+
+[node name="Rogue_Hooded" parent="Node3D/Characters/Node3D5" unique_id=1671600261 instance=ExtResource("1_wx6wp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
+
+[node name="Node3D6" type="Node3D" parent="Node3D/Characters" unique_id=633433352]
+transform = Transform3D(0.64278764, 0, -0.76604444, 0, 1, 0, 0.76604444, 0, 0.64278764, 0, 0, 0)
+
+[node name="Ranger" parent="Node3D/Characters/Node3D6" unique_id=1073651002 instance=ExtResource("1_fmli0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
+
+[node name="Floors" type="Node3D" parent="Node3D" unique_id=743103960]
+
+[node name="floor_tile_large2" parent="Node3D/Floors" unique_id=1987533528 instance=ExtResource("1_7hbvu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -2)
+
+[node name="floor_tile_large3" parent="Node3D/Floors" unique_id=1749067503 instance=ExtResource("1_7hbvu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -2)
+
+[node name="floor_tile_large4" parent="Node3D/Floors" unique_id=276511027 instance=ExtResource("1_7hbvu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -2)
+
+[node name="floor_tile_large5" parent="Node3D/Floors" unique_id=1684141537 instance=ExtResource("1_7hbvu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -6)
+
+[node name="floor_tile_large6" parent="Node3D/Floors" unique_id=782351240 instance=ExtResource("1_7hbvu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -6)
+
+[node name="floor_tile_large7" parent="Node3D/Floors" unique_id=407636585 instance=ExtResource("1_7hbvu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -6)
+
+[node name="floor_tile_large8" parent="Node3D/Floors" unique_id=1816953082 instance=ExtResource("1_7hbvu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -6)
+
+[node name="floor_tile_large9" parent="Node3D/Floors" unique_id=1962068476 instance=ExtResource("1_7hbvu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -2)
+
+[node name="Walls" type="Node3D" parent="Node3D" unique_id=1216804352]
+
+[node name="wall_corner2" parent="Node3D/Walls" unique_id=17662683 instance=ExtResource("2_bwt3i")]
+transform = Transform3D(1.1924881e-08, 0, 1, 0, 1, 0, -1, 0, 1.1924881e-08, -8, 0, -8)
+
+[node name="wall_corner3" parent="Node3D/Walls" unique_id=394027484 instance=ExtResource("2_bwt3i")]
+transform = Transform3D(1, 0, -5.563627e-08, 0, 1, 0, 5.563627e-08, 0, 1, 8, 0, -8)
+
+[node name="wall_cracked2" parent="Node3D/Walls" unique_id=697784206 instance=ExtResource("5_ccr7y")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -8, 0, -4)
+
+[node name="wall_shelves2" parent="Node3D/Walls" unique_id=1433735441 instance=ExtResource("6_ypfxp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -8)
+
+[node name="wall2" parent="Node3D/Walls" unique_id=1452889366 instance=ExtResource("7_fmli0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8)
+
+[node name="wall3" parent="Node3D/Walls" unique_id=361660308 instance=ExtResource("7_fmli0")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 8, 0, -4)
+
+[node name="wall4" parent="Node3D/Walls" unique_id=14473983 instance=ExtResource("7_fmli0")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 8, 0, 0)
+
+[node name="wall5" parent="Node3D/Walls" unique_id=1434022453 instance=ExtResource("7_fmli0")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -8, 0, 0)
+
+[node name="wall_arched2" parent="Node3D/Walls" unique_id=627598600 instance=ExtResource("3_e64xq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -8)
+
+[node name="Torched" type="Node3D" parent="Node3D" unique_id=1998714448]
+
+[node name="torch_mounted" parent="Node3D/Torched" unique_id=1245216849 instance=ExtResource("8_mfh1e")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -8, 0, -4)
+
+[node name="torch_mounted2" parent="Node3D/Torched" unique_id=1403020142 instance=ExtResource("8_mfh1e")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 8, 0, -4)
+
+[node name="torch_mounted3" parent="Node3D/Torched" unique_id=1260046631 instance=ExtResource("8_mfh1e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8)
+
+[node name="Roof" type="Node3D" parent="Node3D" unique_id=1765718618]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
+script = ExtResource("8_ypfxp")
+
+[node name="floor_dirt_large2" parent="Node3D/Roof" unique_id=1977319220 instance=ExtResource("9_fmli0")]
+transform = Transform3D(1, 0, 0, 0, -1, -8.742278e-08, 0, 8.742278e-08, -1, 2, 0, -2)
+
+[node name="floor_dirt_large3" parent="Node3D/Roof" unique_id=1178082301 instance=ExtResource("9_fmli0")]
+transform = Transform3D(1, 0, 0, 0, -1, -8.742278e-08, 0, 8.742278e-08, -1, 6, 0, -2)
+
+[node name="floor_dirt_large4" parent="Node3D/Roof" unique_id=828575536 instance=ExtResource("9_fmli0")]
+transform = Transform3D(1, 0, 0, 0, -1, -8.742278e-08, 0, 8.742278e-08, -1, -6, 0, -2)
+
+[node name="floor_dirt_large5" parent="Node3D/Roof" unique_id=503583287 instance=ExtResource("9_fmli0")]
+transform = Transform3D(1, 0, 0, 0, -1, -8.742278e-08, 0, 8.742278e-08, -1, -2, 0, -2)
+
+[node name="floor_dirt_large6" parent="Node3D/Roof" unique_id=1440697498 instance=ExtResource("9_fmli0")]
+transform = Transform3D(1, 0, 0, 0, -1, -8.742278e-08, 0, 8.742278e-08, -1, 2, 0, -6)
+
+[node name="floor_dirt_large7" parent="Node3D/Roof" unique_id=1631169513 instance=ExtResource("9_fmli0")]
+transform = Transform3D(1, 0, 0, 0, -1, -8.742278e-08, 0, 8.742278e-08, -1, 6, 0, -6)
+
+[node name="floor_dirt_large8" parent="Node3D/Roof" unique_id=388054377 instance=ExtResource("9_fmli0")]
+transform = Transform3D(1, 0, 0, 0, -1, -8.742278e-08, 0, 8.742278e-08, -1, -6, 0, -6)
+
+[node name="floor_dirt_large9" parent="Node3D/Roof" unique_id=114171761 instance=ExtResource("9_fmli0")]
+transform = Transform3D(1, 0, 0, 0, -1, -8.742278e-08, 0, 8.742278e-08, -1, -2, 0, -6)
+
+[node name="Camera3D" type="Camera3D" parent="Node3D" unique_id=1777243198]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 2)
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Node3D" unique_id=1062170810]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 1)
+light_color = Color(1, 0.53333336, 0.13333334, 1)
+light_energy = 2.0
+light_size = 0.5
+light_specular = 0.0
+shadow_enabled = true
+shadow_blur = 0.5
+shadow_caster_mask = 4294967293
+omni_range = 8.0
+
+[node name="GameStartGui" type="Control" parent="." unique_id=2144820890]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="GameStartGui" unique_id=648074831]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GameStartGui/MarginContainer" unique_id=1834957593]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="GameStartGui/MarginContainer/VBoxContainer" unique_id=1970367014]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Dungeon of Whisperia"
+horizontal_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="GameStartGui/MarginContainer/VBoxContainer" unique_id=400710292]
+layout_mode = 2
+size_flags_vertical = 3
+columns = 3
+
+[node name="Label2" type="Label" parent="GameStartGui/MarginContainer/VBoxContainer" unique_id=913242858]
+layout_mode = 2
+text = "Choissisez votre Personnage"
+horizontal_alignment = 1
+
+[node name="WorldEnvironment" parent="." unique_id=485933020 instance=ExtResource("4_mfh1e")]

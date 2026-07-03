@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://brhvdimkifj8x"
-path.s3tc="res://.godot/imported/Rogue_rogue_texture.png-56d8f3e15dfa110c6ed811cfb737f59d.s3tc.ctex"
+uid="uid://djfio5gnbg5jl"
+path.s3tc="res://.godot/imported/Mage_mage_texture.png-b6ef7db12bcedd576e24c3a48696575f.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "e24a3d2f6e39f79ab8c3dab2f3ab950f"
+"md5": "b1207aa319eb415e8237eb1997986ef5"
 }
 
 [deps]
 
-source_file="res://Assets/Characters/Adventurers/Rogue_rogue_texture.png"
-dest_files=["res://.godot/imported/Rogue_rogue_texture.png-56d8f3e15dfa110c6ed811cfb737f59d.s3tc.ctex"]
+source_file="res://Assets/Characters/Adventurers/Mage_mage_texture.png"
+dest_files=["res://.godot/imported/Mage_mage_texture.png-b6ef7db12bcedd576e24c3a48696575f.s3tc.ctex"]
 
 [params]
 

@@ -1,12 +1,12 @@
-[gd_scene format=3 uid="uid://croyspihojfyp"]
+[gd_scene format=3 uid="uid://tmyp1hgkyjfh"]
 
-[ext_resource type="PackedScene" uid="uid://1504xbq0cc18" path="res://Assets/Characters/Adventurers/Rogue_Hooded.glb" id="1_qt1yg"]
-[ext_resource type="PackedScene" uid="uid://bkqfestk1m036" path="res://Assets/Characters/AdventurersAccessoires/dagger.gltf" id="2_7hy7o"]
-[ext_resource type="PackedScene" uid="uid://pa16u3bxw2jq" path="res://Assets/Animations/RigMedium.tscn" id="3_cnuxd"]
+[ext_resource type="PackedScene" uid="uid://cra12rboysbac" path="res://Assets/Characters/Adventurers/Engineer.glb" id="1_n1ew3"]
+[ext_resource type="PackedScene" uid="uid://pa16u3bxw2jq" path="res://Assets/Animations/RigMedium.tscn" id="2_80q34"]
+[ext_resource type="PackedScene" uid="uid://bkrr6i8gahxeq" path="res://Assets/Characters/AdventurersAccessoires/engineer_Wrench.gltf" id="2_387ra"]
 
-[node name="Rogue_Hooded" unique_id=1671600261 instance=ExtResource("1_qt1yg")]
+[node name="Engineer" unique_id=1703605445 instance=ExtResource("1_n1ew3")]
 
-[node name="Skeleton3D" parent="Rig_Medium" parent_id_path=PackedInt32Array(149338558) index="0" unique_id=2055039661]
+[node name="Skeleton3D" parent="Rig_Medium" parent_id_path=PackedInt32Array(2018661913) index="0" unique_id=1646387656]
 bones/1/position = Vector3(0, 0.39206383, 0)
 bones/1/rotation = Quaternion(-1.11122625e-10, 0.043157753, 2.5724098e-09, 0.9990683)
 bones/1/scale = Vector3(0.99999994, 1, 0.99999994)
@@ -59,19 +59,16 @@ bones/22/position = Vector3(-1.541501e-08, 0.096125126, -0.057499975)
 bones/22/rotation = Quaternion(-9.53579e-10, -4.3147743e-09, 0.7071068, 0.7071067)
 bones/22/scale = Vector3(1, 1.0000001, 1.0000001)
 
-[node name="LeftHand" type="BoneAttachment3D" parent="Rig_Medium/Skeleton3D" index="8" unique_id=70731003]
+[node name="LeftHand" type="BoneAttachment3D" parent="Rig_Medium/Skeleton3D" index="8" unique_id=1209846622]
 transform = Transform3D(3.8131046e-07, 0.26286283, 0.9648327, 0.9999987, 1.1920917e-07, 6.604046e-07, 4.673778e-07, 0.9648324, -0.26286322, 0.5077679, 0.6367053, -0.018521149)
 bone_name = "handslot.l"
 bone_idx = 17
 
-[node name="dagger" parent="Rig_Medium/Skeleton3D/LeftHand" index="0" unique_id=1209626012 instance=ExtResource("2_7hy7o")]
-
-[node name="RightHand" type="BoneAttachment3D" parent="Rig_Medium/Skeleton3D" index="9" unique_id=520403253]
+[node name="RightHand" type="BoneAttachment3D" parent="Rig_Medium/Skeleton3D" index="9" unique_id=1086964375]
 transform = Transform3D(6.0328017e-07, -0.14989421, -0.9887017, -0.99999887, 2.0861614e-07, 9.416043e-08, -3.5968725e-07, 0.9887013, -0.1498949, -0.4910608, 0.64102995, 0.10659543)
 bone_name = "handslot.r"
 bone_idx = 22
 
-[node name="dagger" parent="Rig_Medium/Skeleton3D/RightHand" index="0" unique_id=2096338628 instance=ExtResource("2_7hy7o")]
-transform = Transform3D(-1, 4.5250465e-07, 8.742286e-08, 4.525047e-07, 1, 3.565093e-07, -8.742273e-08, 3.5650936e-07, -1, 0, 0, 0)
+[node name="engineer_Wrench2" parent="Rig_Medium/Skeleton3D/RightHand" index="0" unique_id=392190012 instance=ExtResource("2_387ra")]
 
-[node name="AnimationPlayer" parent="." index="1" unique_id=1430341502 instance=ExtResource("3_cnuxd")]
+[node name="AnimationPlayer" parent="." index="1" unique_id=1430341502 instance=ExtResource("2_80q34")]

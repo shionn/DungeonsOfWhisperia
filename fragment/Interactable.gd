@@ -5,7 +5,6 @@ enum Action { ACTIVATE, LOOK }
 
 @onready var _area := $Area3D as Area3D
 @onready var _bagGui := $/root/World/Gui/Bag as BagGui
-@onready var _audio := $AudioStreamPlayer3D as AudioStreamPlayer3D
 
 @export var action : Action = Action.ACTIVATE
 @export var interactDistance : float = 3
@@ -18,11 +17,13 @@ signal activate()
 signal item_drop(_item : Item)
 
 var _lootable = false
+var _audio : AudioStreamPlayer3D
 
 func _ready() -> void:
 	_area.connect("mouse_entered", _on_mouse_entered)
 	_area.connect("mouse_exited", _on_mouse_exited)
 	_area.connect("input_event", _on_input_event)
+	_audio = get_node_or_null("AudioStreamPlayer3D")
 	_lootable = loot_gold > 0 or loot_obj
 
 func on_interact() -> void: 
