@@ -13,7 +13,7 @@ func get_def() -> int: 		return 3
 func get_max_pv() -> int:	return 7
 func get_atk_range()-> int:						return 2
 func get_atk_animation() -> String: 
-	_atk = Dices._random.randi_range(0, 3) as AttackMode
+	_atk = Dices._random.randi_range(0, 2) as AttackMode
 	match _atk :
 		AttackMode.CHOP : return "Melee_1H_Attack_Chop"
 		AttackMode.HORIZONTAL : return "Melee_1H_Attack_Slice_Horizontal"
@@ -27,5 +27,5 @@ func get_atk_main_hand_timer_factor() -> float:
 		AttackMode.HORIZONTAL : return .2
 		AttackMode.DIAGONAL : return .4
 		_ : return .6
-func get_atk_off_hand() -> int: 				return Dices.d6(3, 5)
+func get_atk_off_hand() -> int: 				return 0
 func get_atk_off_hand_timer_factor() -> float:	return 0

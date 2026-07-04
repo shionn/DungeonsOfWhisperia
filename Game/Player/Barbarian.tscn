@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://d3rdwrwg6d610"]
+
+[ext_resource type="PackedScene" uid="uid://ddvg2rw2bunm2" path="res://Game/Player/Player.tscn" id="1_jipi2"]
+[ext_resource type="Script" uid="uid://dr56oy5qoqu8u" path="res://Game/Player/Barbarian.gd" id="2_hlpfu"]
+[ext_resource type="PackedScene" uid="uid://lmccymxaj0hd" path="res://Assets/Scenes/Barbarian.tscn" id="2_hnhai"]
+
+[node name="Player" unique_id=384338158 instance=ExtResource("1_jipi2")]
+script = ExtResource("2_hlpfu")
+
+[node name="Character" parent="." index="7" unique_id=496203564 instance=ExtResource("2_hnhai")]
