@@ -7,8 +7,8 @@ enum State { ATTACK, MOVE, IDLE, HIT, DEATH }
 @onready var _animation = $Character/AnimationPlayer as AnimationPlayer
 @onready var _world = $/root/World as World
 @onready var _gui = $/root/World/Gui as Gui
-@onready var _atkTimer = $AtkTimer as Timer
-@onready var _audioTimer = $AudioTimer as Timer
+@onready var _mainHandAtkTimer = $MainHandAtkTimer as Timer
+@onready var _offHandAtkTimer = $OffHandAtkTimer as Timer
 
 const _movement_speed: float = 4.0
 const _max_range: float = 20
@@ -18,11 +18,12 @@ var _state : State = State.MOVE
 var _attacked_monster : Monster
 
 var lvl = 1
-var pv = 6
-var maxpv = 6
+var pv = get_max_pv()
 
 func _ready() -> void:
 	_animation.animation_finished.connect(_on_animation_finished)
+	_mainHandAtkTimer.timeout.connect(_on_main_hand_atk_timer)
+	_offHandAtkTimer.timeout.connect(_on_off_hand_atk_timer)
 	
 func _physics_process(_delta: float) -> void:
 	match _state :
@@ -32,7 +33,7 @@ func _physics_process(_delta: float) -> void:
 					pass # do loot
 				if _world.target_monster and _world.target_monster.state != Monster.State.DEATH :
 					_attacked_monster = _world.target_monster
-					var _range = _atk_range + 1  if _attacked_monster.isLarge() else _atk_range
+					var _range = get_atk_range() + 1  if _attacked_monster.isLarge() else get_atk_range()
 					if self.global_position.distance_to(_attacked_monster.global_position) < _range  :
 						_start_atk()
 			else : 
@@ -80,15 +81,20 @@ func receive_atk(nb_atk: int, monster:Monster) -> void:
 			_state = State.DEATH
 
 func _start_atk() -> void:
-	var duration = _start_animation("Melee_Dualwield_Attack_Chop")
-	_atkTimer.start(duration*.7)
-	_audioTimer.start(duration*.4)
+	var duration = _start_animation(get_atk_animation())
+	_mainHandAtkTimer.start(duration*get_atk_main_hand_timer_factor())
+	_offHandAtkTimer.start(duration*get_atk_off_hand_timer_factor())
 	_character.rotation.y = get_viewport().get_camera_3d().rotation.y+deg_to_rad(180)
 	_state = State.ATTACK
 	velocity = Vector3.ZERO
-	
-func _on_atk_timer_timeout() -> void:
-	var nb_atk = Dices.d6(2,4)
+
+func _on_main_hand_atk_timer() -> void:
+	var nb_atk = Dices.d6(get_atk_main_hand(),4)
+	_attacked_monster.receive_atk(nb_atk)
+	$Swing3.play()
+
+func _on_off_hand_atk_timer() -> void:
+	var nb_atk = Dices.d6(get_atk_main_hand(),4)
 	_attacked_monster.receive_atk(nb_atk)
 	$Swing3.play()
 
@@ -105,11 +111,13 @@ func _on_animation_finished(_anim_name : String) -> void:
 		State.HIT :
 			_state = State.MOVE
 
-func _on_audio_timer_timeout() -> void:
-	var nb_atk = Dices.d6(2,4)
-	_attacked_monster.receive_atk(nb_atk)
-	$Swing3.play()
-
 func isDead() -> bool: return _state == State.DEATH or pv <= 0
 
-@abstract func get_def()
+@abstract func get_def() -> int
+@abstract func get_max_pv() -> int
+@abstract func get_atk_range() -> int
+@abstract func get_atk_animation() -> String
+@abstract func get_atk_main_hand() -> int
+@abstract func get_atk_main_hand_timer_factor() -> float
+@abstract func get_atk_off_hand() -> int
+@abstract func get_atk_off_hand_timer_factor() -> float
