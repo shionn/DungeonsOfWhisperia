@@ -2,9 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://ddvg2rw2bunm2" path="res://Game/Player/Player.tscn" id="1_bopnr"]
 [ext_resource type="Script" uid="uid://bcaqrmgt1rjo" path="res://Game/Player/Rogue.gd" id="2_5ega3"]
-[ext_resource type="PackedScene" uid="uid://croyspihojfyp" path="res://Assets/Scenes/Rogue_Hooded.tscn" id="2_amhrt"]
+[ext_resource type="PackedScene" uid="uid://nspubd405fcp" path="res://Assets/Scenes/Rogue.tscn" id="3_5ega3"]
 
 [node name="Player" unique_id=384338158 instance=ExtResource("1_bopnr")]
 script = ExtResource("2_5ega3")
 
-[node name="Character" parent="." index="7" unique_id=1671600261 instance=ExtResource("2_amhrt")]
+[node name="Character" parent="." index="7" unique_id=1982882119 instance=ExtResource("3_5ega3")]

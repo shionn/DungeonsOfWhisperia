@@ -16,7 +16,7 @@ func _ready() -> void:
 
 func _on_character_select(model: String) -> void:
 	# unique pour l'instant
-	model = "Rogue"
+	# model = "Rogue"
 	var world = preload("res://World.tscn").instantiate()
 	var dungeon = preload("res://Dungeons/01/Dungeon01.tscn").instantiate()
 	var player = load("res://Game/Player/%s.tscn"%model).instantiate()

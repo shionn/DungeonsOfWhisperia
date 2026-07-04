@@ -83,7 +83,7 @@ func receive_atk(nb_atk: int, monster:Monster) -> void:
 func _start_atk() -> void:
 	var duration = _start_animation(get_atk_animation())
 	_mainHandAtkTimer.start(duration*get_atk_main_hand_timer_factor())
-	_offHandAtkTimer.start(duration*get_atk_off_hand_timer_factor())
+	if is_atk_dual_Hand() : _offHandAtkTimer.start(duration*get_atk_off_hand_timer_factor())
 	_character.rotation.y = get_viewport().get_camera_3d().rotation.y+PI
 	_state = State.ATTACK
 	velocity = Vector3.ZERO
@@ -117,6 +117,7 @@ func isDead() -> bool: return _state == State.DEATH or pv <= 0
 @abstract func get_max_pv() -> int
 @abstract func get_atk_range() -> int
 @abstract func get_atk_animation() -> String
+@abstract func is_atk_dual_Hand() -> bool
 @abstract func get_atk_main_hand() -> int
 @abstract func get_atk_main_hand_timer_factor() -> float
 @abstract func get_atk_off_hand() -> int

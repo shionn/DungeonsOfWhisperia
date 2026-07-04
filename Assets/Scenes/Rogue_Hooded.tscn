@@ -6,7 +6,7 @@
 
 [node name="Rogue_Hooded" unique_id=1671600261 instance=ExtResource("1_qt1yg")]
 
-[node name="Skeleton3D" parent="Rig_Medium" parent_id_path=PackedInt32Array(149338558) index="0" unique_id=2055039661]
+[node name="Skeleton3D" parent="Rig_Medium" parent_id_path=PackedInt32Array(498316375) index="0" unique_id=591758707]
 bones/1/position = Vector3(0, 0.39206383, 0)
 bones/1/rotation = Quaternion(-1.11122625e-10, 0.043157753, 2.5724098e-09, 0.9990683)
 bones/1/scale = Vector3(0.99999994, 1, 0.99999994)
