@@ -2,10 +2,11 @@
 
 [ext_resource type="PackedScene" uid="uid://b3w65ugrkoyx4" path="res://Assets/Dungeons/Floor/Large/floor_tile_large.gltf" id="1_7hbvu"]
 [ext_resource type="PackedScene" uid="uid://devkrtutcqnyx" path="res://Assets/Scenes/Ranger.tscn" id="1_fmli0"]
+[ext_resource type="Script" uid="uid://bcn8m5aubrcpb" path="res://Game/GameStart.gd" id="1_khsc5"]
 [ext_resource type="PackedScene" uid="uid://croyspihojfyp" path="res://Assets/Scenes/Rogue_Hooded.tscn" id="1_wx6wp"]
 [ext_resource type="PackedScene" uid="uid://0fn6al4q3iav" path="res://Assets/Dungeons/Wall/Corner/wall_corner.gltf" id="2_bwt3i"]
-[ext_resource type="Script" uid="uid://bpgb3pwbq61mh" path="res://Game/Interactable.gd" id="2_r85o0"]
 [ext_resource type="PackedScene" uid="uid://bjfrjb5gr6a3k" path="res://Assets/Dungeons/Wall/wall_arched.gltf" id="3_e64xq"]
+[ext_resource type="Script" uid="uid://cn1ymbl8wokfn" path="res://Game/GameStart/CharacterSelection.gd" id="3_khsc5"]
 [ext_resource type="PackedScene" uid="uid://lmccymxaj0hd" path="res://Assets/Scenes/Barbarian.tscn" id="3_mfd5o"]
 [ext_resource type="PackedScene" uid="uid://tmyp1hgkyjfh" path="res://Assets/Scenes/Engineer.tscn" id="4_dwykc"]
 [ext_resource type="PackedScene" uid="uid://l4ocv1r3b2jl" path="res://Game/Environment.tscn" id="4_mfh1e"]
@@ -23,6 +24,7 @@ height = 2.4
 radius = 0.8
 
 [node name="GameStart" type="Node" unique_id=1194037428]
+script = ExtResource("1_khsc5")
 
 [node name="Node3D" type="Node3D" parent="." unique_id=1576004130]
 
@@ -33,7 +35,7 @@ transform = Transform3D(0.9848077, 0, 0.17364818, 0, 1, 0, -0.17364818, 0, 0.984
 
 [node name="Barbarian" parent="Node3D/Characters/Node3D" unique_id=496203564 instance=ExtResource("3_mfd5o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
-script = ExtResource("2_r85o0")
+script = ExtResource("3_khsc5")
 
 [node name="Area3D" type="Area3D" parent="Node3D/Characters/Node3D/Barbarian" unique_id=672690255]
 
