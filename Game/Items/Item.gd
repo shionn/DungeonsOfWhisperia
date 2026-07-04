@@ -22,8 +22,8 @@ func open_description() -> void:
 		gui.openDialog(desc)
 
 func _give_back_2_pv() -> void:
-	$"../../Player".pv = min($"../../Player".pv+2, $"../../Player".maxpv)
+	player.pv = min(player.pv+2, player.get_max_pv())
 	
 func _give_back_1d3_pv() -> void:
 	var pv = Dices.d3()
-	$"../../Player".pv = min($"../../Player".pv+pv, $"../../Player".maxpv)
+	player.pv = min(player.pv+pv, player.get_max_pv())

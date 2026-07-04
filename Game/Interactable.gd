@@ -55,8 +55,9 @@ func _on_mouse_exited() -> void:
 
 func on_item_drop(_item : Item)-> void:
 	item_drop.emit(_item)
+	if item_drop.get_connections().is_empty() :
+		gui.consoleLog("Aucun effet.")
 	# TODO remettre ca en place.
-	# _gui.consoleLog("Aucun effet.")
 	
 
 func _on_input_event(_camera: Node, _event: InputEvent, _event_position: Vector3, _normal: Vector3, _shape_idx: int) -> void:

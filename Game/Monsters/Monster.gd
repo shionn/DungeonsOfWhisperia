@@ -21,6 +21,7 @@ var _model : MonsterModel
 var _atk : MonsterModelAtk
 var _on_gcd : bool = false
 var state : State = State.IDLE
+var see_player = false
 
 func _ready() -> void:
 	_model = MonsterModel.new(_model_file, self)
@@ -29,7 +30,8 @@ func _ready() -> void:
 	_atk = _model.get_atk()
 
 func _physics_process(_delta: float) -> void:
-	if _see_player() :
+	see_player = _see_player()
+	if see_player :
 		_navigation_agent.set_target_position(_player.global_position)
 	match state: 
 		State.CHASE:
@@ -56,7 +58,7 @@ func _physics_process(_delta: float) -> void:
 		State.IDLE:
 			velocity = Vector3.ZERO
 			start_animation("Idle_A")
-			if _see_player():
+			if see_player:
 				state = State.CHASE
 		State.HIT, State.DEATH:
 			pass
@@ -90,7 +92,7 @@ func _move_to_player() -> void :
 	start_animation("Walking_A")
 
 func _update_navigation() -> bool :
-	if _see_player() :
+	if see_player :
 		self._navigation_agent.set_target_position(_player.global_position)
 	return self._navigation_agent.is_navigation_finished()
 

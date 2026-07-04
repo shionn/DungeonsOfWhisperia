@@ -84,17 +84,17 @@ func _start_atk() -> void:
 	var duration = _start_animation(get_atk_animation())
 	_mainHandAtkTimer.start(duration*get_atk_main_hand_timer_factor())
 	_offHandAtkTimer.start(duration*get_atk_off_hand_timer_factor())
-	_character.rotation.y = get_viewport().get_camera_3d().rotation.y+deg_to_rad(180)
+	_character.rotation.y = get_viewport().get_camera_3d().rotation.y+PI
 	_state = State.ATTACK
 	velocity = Vector3.ZERO
 
 func _on_main_hand_atk_timer() -> void:
-	var nb_atk = Dices.d6(get_atk_main_hand(),4)
+	var nb_atk = get_atk_main_hand()
 	_attacked_monster.receive_atk(nb_atk)
 	$Swing3.play()
 
 func _on_off_hand_atk_timer() -> void:
-	var nb_atk = Dices.d6(get_atk_main_hand(),4)
+	var nb_atk = get_atk_off_hand()
 	_attacked_monster.receive_atk(nb_atk)
 	$Swing3.play()
 

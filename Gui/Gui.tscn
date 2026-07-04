@@ -550,7 +550,7 @@ theme_override_colors/default_color = Color(0, 0, 0, 1)
 bbcode_enabled = true
 text = "Bienvenue dans [color=red]Dungeon of Whisperia[/color].
 
-Ceci est une version [color=red]alpha[/color] pour tester et montrer le concept. Dans ce donjon, vous devez vaincre le maître du donjon et trouver son trésor.
+Ceci est une version [color=red]alpha[/color] pour tester et montrer le concept. Dans ce donjon, vous devez [color=red]vaincre le maître du donjon[/color] et trouver son [color=red]trésor[/color].
 
 [u]Contrôle :[/u]
 [ul]
