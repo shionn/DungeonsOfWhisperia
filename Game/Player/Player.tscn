@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ddvg2rw2bunm2"]
 
-[ext_resource type="Script" uid="uid://crpe0nst55m8b" path="res://Game/PlayerG.gd" id="1_cxpn3"]
+[ext_resource type="Script" uid="uid://crpe0nst55m8b" path="res://Game/Player/PlayerG.gd" id="1_cxpn3"]
 [ext_resource type="Script" uid="uid://cy4qabbfkxrfk" path="res://Game/Items/Bag.gd" id="2_vgjmx"]
 [ext_resource type="PackedScene" uid="uid://croyspihojfyp" path="res://Assets/Scenes/Rogue_Hooded.tscn" id="3_1b1aa"]
 [ext_resource type="AudioStream" uid="uid://c80u2hnal510o" path="res://Audio/RPG Sound Pack/battle/swing3.wav" id="4_wv757"]
