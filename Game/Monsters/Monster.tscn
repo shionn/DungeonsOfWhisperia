@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dvd4uuprholj6"]
 
-[ext_resource type="Script" uid="uid://bb8mw3r2v2qsn" path="res://fragment/monsters/Monster.gd" id="1_lqdau"]
+[ext_resource type="Script" uid="uid://bb8mw3r2v2qsn" path="res://Game/Monsters/Monster.gd" id="1_lqdau"]
 [ext_resource type="AudioStream" uid="uid://drho02f6ompf0" path="res://Audio/RPG Sound Pack/battle/swing2.wav" id="2_bbjhc"]
 [ext_resource type="AudioStream" uid="uid://b70orjd3ah858" path="res://Audio/ZombieSkeletonMonsterVoiceEffects/zombieYell9.wav" id="4_221vi"]
 

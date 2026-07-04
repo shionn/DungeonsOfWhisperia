@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dgb0ngh53yuev"]
 
 [ext_resource type="PackedScene" uid="uid://exxu6xqil5ms" path="res://Assets/Dungeons/Chest/chest_large.gltf" id="1_x5kk7"]
-[ext_resource type="Script" uid="uid://bpgb3pwbq61mh" path="res://fragment/Interactable.gd" id="2_gfekg"]
+[ext_resource type="Script" uid="uid://bpgb3pwbq61mh" path="res://Game/Interactable.gd" id="2_gfekg"]
 [ext_resource type="Script" uid="uid://byilev6r7i67y" path="res://Assets/Scenes/Scripts/Chest_Large.gd" id="2_piqbm"]
 [ext_resource type="PackedScene" uid="uid://dtu7oee4qcolx" path="res://Assets/Dungeons/Coin/coin_stack_large.gltf" id="3_dalx3"]
 [ext_resource type="AudioStream" uid="uid://c70td8wvxgkj6" path="res://Audio/80-CC0-RPG-SFX/lock_01.ogg" id="4_mxkoy"]

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dj0modsh7x76o"]
 
 [ext_resource type="PackedScene" uid="uid://bta2mvfkcul0j" path="res://Assets/Dungeons/Bar/bar_straight_C.gltf" id="1_dasjt"]
-[ext_resource type="Script" uid="uid://bpgb3pwbq61mh" path="res://fragment/Interactable.gd" id="2_fav1t"]
+[ext_resource type="Script" uid="uid://bpgb3pwbq61mh" path="res://Game/Interactable.gd" id="2_fav1t"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_b02ke"]
 radius = 0.2
