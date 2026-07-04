@@ -1,7 +1,6 @@
-extends Control
+extends GameBaseControl
 
 @onready var _world = $"/root/World" as World
-@onready var _player = $/root/World/Player as PlayerG
 
 @onready var _cross = $Cross as Control
 @onready var _sword = $Sword as Control
@@ -14,15 +13,20 @@ const _mouse_sensitivity = 0.01
 const _max_range: float = 20
 
 func _physics_process(_delta: float) -> void:
-	visible = Input.mouse_mode == Input.MOUSE_MODE_CAPTURED and _player.pv > 0
+	visible = Input.mouse_mode == Input.MOUSE_MODE_CAPTURED and player.pv > 0
 	_cross.visible =     _world.target_monster == null and _world.target_interactable == null
 	_sword.visible =     _world.target_monster != null and _world.target_monster.state != Monster.State.DEATH
 	_magnifier.visible = (
-		_world.target_monster != null and _world.target_monster.state == Monster.State.DEATH 
-		or _world.target_interactable != null and _world.target_interactable.action == Interactable.Action.LOOK and _world.target_interactable.isInRange(_player)
+		_world.target_monster      and _world.target_monster.state       == Monster.State.DEATH      and player.distance_to(_world.target_monster) <= LOOT_RANGE
+		or 
+		_world.target_interactable and _world.target_interactable.action == Interactable.Action.LOOK and _world.target_interactable.isInRange(player)
 		)
-	_hand.visible = _world.target_interactable != null and _world.target_interactable.action == Interactable.Action.ACTIVATE and _world.target_interactable.isInRange(_player)
-	_disable.visible = _world.target_interactable != null and not _world.target_interactable.isInRange(_player)
+	_hand.visible = _world.target_interactable != null and _world.target_interactable.action == Interactable.Action.ACTIVATE and _world.target_interactable.isInRange(player)
+	_disable.visible = (
+		_world.target_interactable != null and not _world.target_interactable.isInRange(player)
+		or 
+		_world.target_monster      and _world.target_monster.state       == Monster.State.DEATH      and player.distance_to(_world.target_monster) > LOOT_RANGE
+		)
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED :

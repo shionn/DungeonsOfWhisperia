@@ -112,6 +112,8 @@ func _on_animation_finished(_anim_name : String) -> void:
 			_state = State.MOVE
 
 func isDead() -> bool: return _state == State.DEATH or pv <= 0
+func distance_to(target:Node3D) -> float :
+	return global_position.distance_to(target.global_position)
 
 @abstract func get_def() -> int
 @abstract func get_max_pv() -> int
