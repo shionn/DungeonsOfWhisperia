@@ -1,4 +1,4 @@
-extends Control
+extends GameBaseControl
 class_name Gui
 
 @onready var cursor = load("res://Gui/Assets/kenney/cursor-pack/pointer_c.png")
@@ -16,10 +16,17 @@ func _ready() -> void:
 
 func _physics_process(_delta: float) -> void:
 	if Input.is_action_just_pressed("menu") :
-		if $Bag.visible or $DialogGui.visible or $Introduction.visible : 
+		if $Options.visible :
+			$Options.hide()
+		elif $Introduction.visible :
+			$Introduction.hide()
+		elif $DialogGui.visible :
+			$DialogGui.hide()
+		elif $Bag.visible or $DialogGui.visible or $Introduction.visible : 
 			_close()
 		else :
 			_open()
+	if player.velocity != Vector3.ZERO : _close()
 
 func openLoot(container: Object) -> void :
 	$Loot.loot(container)
@@ -46,6 +53,11 @@ func _close() -> void :
 	$Options.hide()
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
-
 func _on_loot_visibility_changed() -> void:
-	if $Loot.visible == false and not $Introduction.visible : _close()
+	if not $Loot.visible and not $Introduction.visible : _close()
+
+func _on_introduction_visibility_changed() -> void:
+	if not $Introduction.visible and not $Bag.visible : _close()
+
+func _on_dialog_gui_visibility_changed() -> void:
+	if not $DialogGui.visible and not $Bag.visible : _close()

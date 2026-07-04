@@ -29,6 +29,7 @@
 [ext_resource type="Script" uid="uid://o6q2ok64i8cs" path="res://Gui/Options.gd" id="24_7xgee"]
 [ext_resource type="Script" uid="uid://bc4y4enkrwodc" path="res://Gui/ConsoleLog.gd" id="24_xkmul"]
 [ext_resource type="Script" uid="uid://bcc2j6w4n4yqq" path="res://Gui/Transition.gd" id="25_60sjt"]
+[ext_resource type="Script" uid="uid://b57hjgf2uu7ly" path="res://Gui/Introduction.gd" id="26_m2wub"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8rxp0"]
 bg_color = Color(1, 0.94509804, 0.8235294, 1)
@@ -498,6 +499,7 @@ grow_vertical = 2
 theme_override_constants/h_separation = 0
 theme_override_constants/v_separation = 0
 columns = 3
+script = ExtResource("26_m2wub")
 
 [node name="NW" type="TextureRect" parent="Introduction" unique_id=697210235]
 layout_mode = 2
@@ -896,9 +898,11 @@ libraries/ = SubResource("AnimationLibrary_7xgee")
 [connection signal="pressed" from="Bag/PanelContainer/MarginContainer/VBoxContainer/CloseButton" to="." method="_close"]
 [connection signal="visibility_changed" from="Loot" to="." method="_on_loot_visibility_changed"]
 [connection signal="pressed" from="Loot/PanelContainer/MarginContainer/VBoxContainer/CloseButton" to="." method="_close"]
-[connection signal="pressed" from="Introduction/PanelContainer/MarginContainer/VBoxContainer/CloseButton" to="." method="_close"]
+[connection signal="visibility_changed" from="Introduction" to="." method="_on_introduction_visibility_changed"]
+[connection signal="pressed" from="Introduction/PanelContainer/MarginContainer/VBoxContainer/CloseButton" to="Introduction" method="_on_close_button_pressed"]
 [connection signal="value_changed" from="Options/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer/HSliderMusic" to="Options" method="_on_music_value_changed"]
 [connection signal="value_changed" from="Options/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer/HSliderSon" to="Options" method="_on_son_value_changed"]
-[connection signal="pressed" from="Options/PanelContainer/MarginContainer/VBoxContainer/CloseButton" to="." method="_close"]
-[connection signal="pressed" from="DialogGui/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/CloseButton" to="." method="_close"]
+[connection signal="pressed" from="Options/PanelContainer/MarginContainer/VBoxContainer/CloseButton" to="Options" method="_on_close_button_pressed"]
+[connection signal="visibility_changed" from="DialogGui" to="." method="_on_dialog_gui_visibility_changed"]
+[connection signal="pressed" from="DialogGui/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/CloseButton" to="DialogGui" method="_on_close_button_pressed"]
 [connection signal="animation_finished" from="Transition/AnimationPlayer" to="Transition" method="_on_animation_finished"]

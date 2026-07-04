@@ -40,7 +40,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
 script = ExtResource("3_khsc5")
 
 [node name="Area3D" type="Area3D" parent="Node3D/Characters/Node3D5/Rogue" unique_id=1933930093]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/Characters/Node3D5/Rogue/Area3D" unique_id=483957959]
 transform = Transform3D(1.0000031, 0, 4.917383e-07, 0, 1, 0, -4.917383e-07, 0, 1.0000031, 0, 1.2, 0)
