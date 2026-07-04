@@ -691,7 +691,7 @@ shape = SubResource("CylinderShape3D_oow84")
 
 [node name="description" type="Node" parent="Prison/Parchemin" unique_id=1322060037]
 script = ExtResource("7_v4w5c")
-text = "Il ya un texte griffoné dessus [i]Orange, Vert, Rouge, Bleu[/i]."
+text = "Il y a un texte griffonné dessus [i]Orange, Vert, Rouge, Bleu[/i]."
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Prison/Parchemin" unique_id=1328469988]
