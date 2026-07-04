@@ -1,5 +1,7 @@
 extends Node3D
 
+@export var _anim = "Melee_1H_Attack_Slice_Diagonal"
+
 signal select(model:String)
 
 func _ready() -> void:
@@ -9,7 +11,7 @@ func _ready() -> void:
 	$AnimationPlayer.play("RigMedium/Idle_A")
 	
 func _mouse_entered() -> void :
-	$AnimationPlayer.play("RigMedium/Melee_1H_Attack_Slice_Diagonal")
+	$AnimationPlayer.play("RigMedium/"+_anim)
 	Input.set_default_cursor_shape(Input.CURSOR_POINTING_HAND)
 
 func _mouse_exit() -> void :

@@ -20,6 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://kwbu30ltyyru" path="res://Assets/Dungeons/Floor/Large/floor_dirt_large.gltf" id="9_fmli0"]
 [ext_resource type="Texture2D" uid="uid://dstsbh4f6k4j5" path="res://Gui/Assets/kenney/cursor-pack/door_exit.png" id="19_ra1xl"]
 [ext_resource type="Script" uid="uid://b0twnfs43umv7" path="res://Game/GameStart/ExitButton.gd" id="20_g4cbf"]
+[ext_resource type="AudioStream" uid="uid://c6v7ff6x8p5pt" path="res://Audio/RpgTitle1/RPG_Title_1.ogg" id="21_v7141"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_b02ke"]
 height = 2.4
@@ -38,6 +39,7 @@ transform = Transform3D(0.64278764, 0, 0.76604444, 0, 1, 0, -0.76604444, 0, 0.64
 [node name="Rogue" parent="Node3D/Characters/Node3D5" unique_id=1982882119 instance=ExtResource("4_v7141")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
 script = ExtResource("3_khsc5")
+_anim = "Melee_Dualwield_Attack_Chop"
 
 [node name="Area3D" type="Area3D" parent="Node3D/Characters/Node3D5/Rogue" unique_id=1933930093]
 
@@ -51,6 +53,7 @@ transform = Transform3D(0.9848077, 0, 0.17364818, 0, 1, 0, -0.17364818, 0, 0.984
 [node name="Barbarian" parent="Node3D/Characters/Node3D" unique_id=496203564 instance=ExtResource("3_mfd5o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
 script = ExtResource("3_khsc5")
+_anim = "Melee_2H_Attack_Slice"
 
 [node name="Area3D" type="Area3D" parent="Node3D/Characters/Node3D/Barbarian" unique_id=672690255]
 
@@ -272,6 +275,12 @@ text = "Quitter"
 icon = ExtResource("19_ra1xl")
 flat = true
 script = ExtResource("20_g4cbf")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1730294210]
+stream = ExtResource("21_v7141")
+autoplay = true
+bus = &"Background"
+parameters/looping = true
 
 [connection signal="select" from="Node3D/Characters/Node3D5/Rogue" to="." method="_on_character_select"]
 [connection signal="select" from="Node3D/Characters/Node3D/Barbarian" to="." method="_on_character_select"]
