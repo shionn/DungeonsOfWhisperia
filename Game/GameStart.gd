@@ -12,3 +12,8 @@ func _ready() -> void:
 	Input.set_custom_mouse_cursor(point_hand, Input.CURSOR_POINTING_HAND)
 	Input.set_custom_mouse_cursor(drag,       Input.CURSOR_DRAG)
 	Input.set_custom_mouse_cursor(can_drop,   Input.CURSOR_CAN_DROP)
+
+
+func _on_character_select(model: String) -> void:
+	print(model)
+	get_tree().change_scene_to_file("res://World.tscn")

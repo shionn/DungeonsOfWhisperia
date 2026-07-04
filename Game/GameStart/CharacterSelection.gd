@@ -1,12 +1,22 @@
 extends Node3D
 
+signal select(model:String)
+
 func _ready() -> void:
-	$Area3D.connect("mouse_enter",_mouse_enter)
+	$Area3D.connect("mouse_entered",_mouse_entered)
 	$Area3D.connect("mouse_exited",_mouse_exit)
+	$Area3D.connect("input_event",_on_input_event)
+	$AnimationPlayer.play("RigMedium/Idle_A")
 	
-	
-func _mouse_enter() -> void :
+func _mouse_entered() -> void :
+	$AnimationPlayer.play("RigMedium/Melee_1H_Attack_Slice_Diagonal")
 	Input.set_default_cursor_shape(Input.CURSOR_POINTING_HAND)
 
 func _mouse_exit() -> void :
-	Input.set_default_cursor_shape(Input.CURSOR_POINTING_HAND)
+	$AnimationPlayer.play("RigMedium/Idle_A")
+	Input.set_default_cursor_shape(Input.CURSOR_ARROW)
+
+
+func _on_input_event(_camera: Node, event: InputEvent, _event_position: Vector3, _normal: Vector3, _shape_idx: int) -> void:
+	if event is InputEventMouseButton and Input.is_action_just_pressed("interact"): 
+		select.emit(name)

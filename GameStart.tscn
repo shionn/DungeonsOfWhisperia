@@ -18,6 +18,8 @@
 [ext_resource type="PackedScene" uid="uid://cl36lcn4lo2eq" path="res://Assets/Scenes/Torch_Mounted.tscn" id="8_mfh1e"]
 [ext_resource type="Script" uid="uid://dexpl21rteomv" path="res://Game/Roof.gd" id="8_ypfxp"]
 [ext_resource type="PackedScene" uid="uid://kwbu30ltyyru" path="res://Assets/Dungeons/Floor/Large/floor_dirt_large.gltf" id="9_fmli0"]
+[ext_resource type="Texture2D" uid="uid://dstsbh4f6k4j5" path="res://Gui/Assets/kenney/cursor-pack/door_exit.png" id="19_ra1xl"]
+[ext_resource type="Script" uid="uid://b0twnfs43umv7" path="res://Game/GameStart/ExitButton.gd" id="20_g4cbf"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_b02ke"]
 height = 2.4
@@ -48,6 +50,7 @@ transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, 0, 0, 0)
 
 [node name="Engineer" parent="Node3D/Characters/Node3D2" unique_id=1703605445 instance=ExtResource("4_dwykc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
+script = ExtResource("3_khsc5")
 
 [node name="Area3D" type="Area3D" parent="Node3D/Characters/Node3D2/Engineer" unique_id=756693837]
 
@@ -60,6 +63,7 @@ transform = Transform3D(0.9848077, 0, -0.17364818, 0, 1, 0, 0.17364818, 0, 0.984
 
 [node name="Mage" parent="Node3D/Characters/Node3D3" unique_id=1229200088 instance=ExtResource("5_r85o0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
+script = ExtResource("3_khsc5")
 
 [node name="Area3D" type="Area3D" parent="Node3D/Characters/Node3D3/Mage" unique_id=1650824414]
 
@@ -72,6 +76,7 @@ transform = Transform3D(0.8660254, 0, -0.5, 0, 1, 0, 0.5, 0, 0.8660254, 0, 0, 0)
 
 [node name="Knight" parent="Node3D/Characters/Node3D4" unique_id=432149207 instance=ExtResource("4_r85o0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
+script = ExtResource("3_khsc5")
 
 [node name="Area3D" type="Area3D" parent="Node3D/Characters/Node3D4/Knight" unique_id=1499626837]
 
@@ -82,12 +87,13 @@ shape = SubResource("CylinderShape3D_b02ke")
 [node name="Node3D5" type="Node3D" parent="Node3D/Characters" unique_id=980995739]
 transform = Transform3D(0.64278764, 0, 0.76604444, 0, 1, 0, -0.76604444, 0, 0.64278764, 0, 0, 0)
 
-[node name="Rogue_Hooded" parent="Node3D/Characters/Node3D5" unique_id=1671600261 instance=ExtResource("1_wx6wp")]
+[node name="Rogue" parent="Node3D/Characters/Node3D5" unique_id=1671600261 instance=ExtResource("1_wx6wp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
+script = ExtResource("3_khsc5")
 
-[node name="Area3D" type="Area3D" parent="Node3D/Characters/Node3D5/Rogue_Hooded" unique_id=1933930093]
+[node name="Area3D" type="Area3D" parent="Node3D/Characters/Node3D5/Rogue" unique_id=1933930093]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/Characters/Node3D5/Rogue_Hooded/Area3D" unique_id=483957959]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/Characters/Node3D5/Rogue/Area3D" unique_id=483957959]
 transform = Transform3D(1.0000031, 0, 4.917383e-07, 0, 1, 0, -4.917383e-07, 0, 1.0000031, 0, 1.2, 0)
 shape = SubResource("CylinderShape3D_b02ke")
 
@@ -96,6 +102,7 @@ transform = Transform3D(0.64278764, 0, -0.76604444, 0, 1, 0, 0.76604444, 0, 0.64
 
 [node name="Ranger" parent="Node3D/Characters/Node3D6" unique_id=1073651002 instance=ExtResource("1_fmli0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
+script = ExtResource("3_khsc5")
 
 [node name="Area3D" type="Area3D" parent="Node3D/Characters/Node3D6/Ranger" unique_id=1113056427]
 
@@ -211,43 +218,65 @@ shadow_blur = 0.5
 shadow_caster_mask = 4294967293
 omni_range = 8.0
 
-[node name="GameStartGui" type="Control" parent="." unique_id=2144820890]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="WorldEnvironment" parent="." unique_id=485933020 instance=ExtResource("4_mfh1e")]
 
-[node name="MarginContainer" type="MarginContainer" parent="GameStartGui" unique_id=648074831]
-layout_mode = 1
+[node name="GameStartGui" type="MarginContainer" parent="." unique_id=1748543078]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="VBoxContainer" type="VBoxContainer" parent="GameStartGui/MarginContainer" unique_id=1834957593]
+[node name="Control" type="Control" parent="GameStartGui" unique_id=2144820890]
 layout_mode = 2
+mouse_filter = 2
 
-[node name="Label" type="Label" parent="GameStartGui/MarginContainer/VBoxContainer" unique_id=1970367014]
-layout_mode = 2
+[node name="Title" type="Label" parent="GameStartGui/Control" unique_id=1970367014]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -128.5
+offset_right = 128.5
+offset_bottom = 34.0
+grow_horizontal = 2
 theme_override_font_sizes/font_size = 24
 text = "Dungeon of Whisperia"
 horizontal_alignment = 1
 
-[node name="GridContainer" type="GridContainer" parent="GameStartGui/MarginContainer/VBoxContainer" unique_id=400710292]
-layout_mode = 2
-size_flags_vertical = 3
-columns = 3
-
-[node name="Label2" type="Label" parent="GameStartGui/MarginContainer/VBoxContainer" unique_id=913242858]
-layout_mode = 2
+[node name="PlayerChoose" type="Label" parent="GameStartGui/Control" unique_id=913242858]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -556.0
+offset_top = -23.0
+offset_right = 556.0
+grow_horizontal = 2
+grow_vertical = 0
 text = "Choissisez votre Personnage"
 horizontal_alignment = 1
 
-[node name="WorldEnvironment" parent="." unique_id=485933020 instance=ExtResource("4_mfh1e")]
+[node name="Exit" type="Button" parent="GameStartGui/Control" unique_id=1690805234]
+layout_mode = 1
+offset_right = 101.0
+offset_bottom = 40.0
+text = "Quitter"
+icon = ExtResource("19_ra1xl")
+flat = true
+script = ExtResource("20_g4cbf")
+
+[connection signal="select" from="Node3D/Characters/Node3D/Barbarian" to="." method="_on_character_select"]
+[connection signal="select" from="Node3D/Characters/Node3D2/Engineer" to="." method="_on_character_select"]
+[connection signal="select" from="Node3D/Characters/Node3D3/Mage" to="." method="_on_character_select"]
+[connection signal="select" from="Node3D/Characters/Node3D4/Knight" to="." method="_on_character_select"]
+[connection signal="select" from="Node3D/Characters/Node3D5/Rogue" to="." method="_on_character_select"]
+[connection signal="select" from="Node3D/Characters/Node3D6/Ranger" to="." method="_on_character_select"]
+[connection signal="pressed" from="GameStartGui/Control/Exit" to="GameStartGui/Control/Exit" method="_on_pressed"]
