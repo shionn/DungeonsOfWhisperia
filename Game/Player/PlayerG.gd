@@ -1,4 +1,4 @@
-class_name PlayerG
+@abstract class_name PlayerG
 extends CharacterBody3D
 
 enum State { ATTACK, MOVE, IDLE, HIT, DEATH }
@@ -17,13 +17,11 @@ const _atk_range: float = 2
 var _state : State = State.MOVE
 var _attacked_monster : Monster
 
+var lvl = 1
 var pv = 6
 var maxpv = 6
 
 func _ready() -> void:
-	#$"Rogue_Hooded/Rig/Skeleton3D/handslot_r/Throwable".hide()
-	#$"Rogue_Hooded/Rig/Skeleton3D/handslot_r/1H_Crossbow".hide()
-	#$"Rogue_Hooded/Rig/Skeleton3D/handslot_r/2H_Crossbow".hide()
 	_animation.animation_finished.connect(_on_animation_finished)
 	
 func _physics_process(_delta: float) -> void:
@@ -64,7 +62,7 @@ func _handle_move_input() -> void:
 		_start_animation("Idle_A")
 
 func receive_atk(nb_atk: int, monster:Monster) -> void:
-	var nb_def = Dices.d6(2, 5)
+	var nb_def = Dices.d6(get_def(), 5)
 	var deg = nb_atk - nb_def
 	if nb_atk > 0 :
 		_gui.consoleLog("%s obtient %d 💀, vous obtenez %d 🛡" % [monster.name, nb_atk, nb_def])
@@ -113,3 +111,5 @@ func _on_audio_timer_timeout() -> void:
 	$Swing3.play()
 
 func isDead() -> bool: return _state == State.DEATH or pv <= 0
+
+@abstract func get_def()
