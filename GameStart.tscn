@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://devkrtutcqnyx" path="res://Assets/Scenes/Ranger.tscn" id="1_fmli0"]
 [ext_resource type="PackedScene" uid="uid://croyspihojfyp" path="res://Assets/Scenes/Rogue_Hooded.tscn" id="1_wx6wp"]
 [ext_resource type="PackedScene" uid="uid://0fn6al4q3iav" path="res://Assets/Dungeons/Wall/Corner/wall_corner.gltf" id="2_bwt3i"]
+[ext_resource type="Script" uid="uid://bpgb3pwbq61mh" path="res://fragment/Interactable.gd" id="2_r85o0"]
 [ext_resource type="PackedScene" uid="uid://bjfrjb5gr6a3k" path="res://Assets/Dungeons/Wall/wall_arched.gltf" id="3_e64xq"]
 [ext_resource type="PackedScene" uid="uid://lmccymxaj0hd" path="res://Assets/Scenes/Barbarian.tscn" id="3_mfd5o"]
 [ext_resource type="PackedScene" uid="uid://tmyp1hgkyjfh" path="res://Assets/Scenes/Engineer.tscn" id="4_dwykc"]
@@ -17,6 +18,10 @@
 [ext_resource type="Script" uid="uid://dexpl21rteomv" path="res://fragment/Roof.gd" id="8_ypfxp"]
 [ext_resource type="PackedScene" uid="uid://kwbu30ltyyru" path="res://Assets/Dungeons/Floor/Large/floor_dirt_large.gltf" id="9_fmli0"]
 
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_b02ke"]
+height = 2.4
+radius = 0.8
+
 [node name="GameStart" type="Node" unique_id=1194037428]
 
 [node name="Node3D" type="Node3D" parent="." unique_id=1576004130]
@@ -28,6 +33,13 @@ transform = Transform3D(0.9848077, 0, 0.17364818, 0, 1, 0, -0.17364818, 0, 0.984
 
 [node name="Barbarian" parent="Node3D/Characters/Node3D" unique_id=496203564 instance=ExtResource("3_mfd5o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
+script = ExtResource("2_r85o0")
+
+[node name="Area3D" type="Area3D" parent="Node3D/Characters/Node3D/Barbarian" unique_id=672690255]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/Characters/Node3D/Barbarian/Area3D" unique_id=54835880]
+transform = Transform3D(1.0000031, 0, 4.917383e-07, 0, 1, 0, -4.917383e-07, 0, 1.0000031, 0, 1.2, 0)
+shape = SubResource("CylinderShape3D_b02ke")
 
 [node name="Node3D2" type="Node3D" parent="Node3D/Characters" unique_id=445603615]
 transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, 0, 0, 0)
@@ -35,11 +47,23 @@ transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, 0, 0, 0)
 [node name="Engineer" parent="Node3D/Characters/Node3D2" unique_id=1703605445 instance=ExtResource("4_dwykc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
 
+[node name="Area3D" type="Area3D" parent="Node3D/Characters/Node3D2/Engineer" unique_id=756693837]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/Characters/Node3D2/Engineer/Area3D" unique_id=820840520]
+transform = Transform3D(1.0000031, 0, 4.917383e-07, 0, 1, 0, -4.917383e-07, 0, 1.0000031, 0, 1.2, 0)
+shape = SubResource("CylinderShape3D_b02ke")
+
 [node name="Node3D3" type="Node3D" parent="Node3D/Characters" unique_id=1282010697]
 transform = Transform3D(0.9848077, 0, -0.17364818, 0, 1, 0, 0.17364818, 0, 0.9848077, 0, 0, 0)
 
 [node name="Mage" parent="Node3D/Characters/Node3D3" unique_id=1229200088 instance=ExtResource("5_r85o0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
+
+[node name="Area3D" type="Area3D" parent="Node3D/Characters/Node3D3/Mage" unique_id=1650824414]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/Characters/Node3D3/Mage/Area3D" unique_id=1807745801]
+transform = Transform3D(1.0000031, 0, 4.917383e-07, 0, 1, 0, -4.917383e-07, 0, 1.0000031, 0, 1.2, 0)
+shape = SubResource("CylinderShape3D_b02ke")
 
 [node name="Node3D4" type="Node3D" parent="Node3D/Characters" unique_id=1268133987]
 transform = Transform3D(0.8660254, 0, -0.5, 0, 1, 0, 0.5, 0, 0.8660254, 0, 0, 0)
@@ -47,17 +71,35 @@ transform = Transform3D(0.8660254, 0, -0.5, 0, 1, 0, 0.5, 0, 0.8660254, 0, 0, 0)
 [node name="Knight" parent="Node3D/Characters/Node3D4" unique_id=432149207 instance=ExtResource("4_r85o0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
 
+[node name="Area3D" type="Area3D" parent="Node3D/Characters/Node3D4/Knight" unique_id=1499626837]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/Characters/Node3D4/Knight/Area3D" unique_id=1656790130]
+transform = Transform3D(1.0000031, 0, 4.917383e-07, 0, 1, 0, -4.917383e-07, 0, 1.0000031, 0, 1.2, 0)
+shape = SubResource("CylinderShape3D_b02ke")
+
 [node name="Node3D5" type="Node3D" parent="Node3D/Characters" unique_id=980995739]
 transform = Transform3D(0.64278764, 0, 0.76604444, 0, 1, 0, -0.76604444, 0, 0.64278764, 0, 0, 0)
 
 [node name="Rogue_Hooded" parent="Node3D/Characters/Node3D5" unique_id=1671600261 instance=ExtResource("1_wx6wp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
 
+[node name="Area3D" type="Area3D" parent="Node3D/Characters/Node3D5/Rogue_Hooded" unique_id=1933930093]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/Characters/Node3D5/Rogue_Hooded/Area3D" unique_id=483957959]
+transform = Transform3D(1.0000031, 0, 4.917383e-07, 0, 1, 0, -4.917383e-07, 0, 1.0000031, 0, 1.2, 0)
+shape = SubResource("CylinderShape3D_b02ke")
+
 [node name="Node3D6" type="Node3D" parent="Node3D/Characters" unique_id=633433352]
 transform = Transform3D(0.64278764, 0, -0.76604444, 0, 1, 0, 0.76604444, 0, 0.64278764, 0, 0, 0)
 
 [node name="Ranger" parent="Node3D/Characters/Node3D6" unique_id=1073651002 instance=ExtResource("1_fmli0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
+
+[node name="Area3D" type="Area3D" parent="Node3D/Characters/Node3D6/Ranger" unique_id=1113056427]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/Characters/Node3D6/Ranger/Area3D" unique_id=1558895622]
+transform = Transform3D(1.0000031, 0, 4.917383e-07, 0, 1, 0, -4.917383e-07, 0, 1.0000031, 0, 1.2, 0)
+shape = SubResource("CylinderShape3D_b02ke")
 
 [node name="Floors" type="Node3D" parent="Node3D" unique_id=743103960]
 

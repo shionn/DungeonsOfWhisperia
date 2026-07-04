@@ -57,7 +57,6 @@ func on_enter(interactable : Node3D) -> void :
 	if _dragButton :
 		self._interactable = interactable
 		_dragButton.set_default_cursor_shape(Control.CURSOR_CAN_DROP)
-		#set_default_cursor_shape(Control.CURSOR_CAN_DROP)
 
 func on_exit(interactable : Node3D) -> void :
 	if self._interactable == interactable and _dragButton:
