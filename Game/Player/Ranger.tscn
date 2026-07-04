@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://shtylq2e27j2"]
+
+[ext_resource type="PackedScene" uid="uid://ddvg2rw2bunm2" path="res://Game/Player/Player.tscn" id="1_8vf0j"]
+[ext_resource type="Script" uid="uid://cvftrhvrain3j" path="res://Game/Player/Ranger.gd" id="2_8vf0j"]
+[ext_resource type="PackedScene" uid="uid://devkrtutcqnyx" path="res://Assets/Scenes/Ranger.tscn" id="3_8vf0j"]
+
+[node name="Player" unique_id=384338158 instance=ExtResource("1_8vf0j")]
+script = ExtResource("2_8vf0j")
+
+[node name="Character" parent="." index="7" unique_id=1073651002 instance=ExtResource("3_8vf0j")]

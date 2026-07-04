@@ -18,26 +18,28 @@ signal item_drop(_item : Item)
 
 var _lootable = false
 var _audio : AudioStreamPlayer3D
+var _description : Dialog
 
 func _ready() -> void:
 	_area.connect("mouse_entered", _on_mouse_entered)
 	_area.connect("mouse_exited", _on_mouse_exited)
 	_area.connect("input_event", _on_input_event)
 	_audio = get_node_or_null("AudioStreamPlayer3D")
+	_description = get_node_or_null("description")
 	_lootable = loot_gold > 0 or loot_obj
 
 func on_interact() -> void: 
 	if _audio : _audio.play()
-	if $description :
-		gui.openDialog($description)
+	if _description :
+		gui.openDialog(_description)
 	elif _lootable :
 		gui.openLoot(self)
 	else : 
 		activate.emit()
 
 func open_description() -> void:
-	if $description :
-		gui.openDialog($description)
+	if _description :
+		gui.openDialog(_description)
 
 func open_loot() -> void:
 	gui.openLoot(self)

@@ -19,6 +19,7 @@ func _on_character_select(model: String) -> void:
 	# model = "Rogue"
 	var world = preload("res://World.tscn").instantiate()
 	var dungeon = preload("res://Dungeons/01/Dungeon01.tscn").instantiate()
+	dungeon.name = "Dungeon"
 	var player = load("res://Game/Player/%s.tscn"%model).instantiate()
 	world.add_child(player);
 	world.add_child(dungeon);

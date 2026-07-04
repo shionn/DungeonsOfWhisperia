@@ -63,6 +63,7 @@ func _physics_process(_delta: float) -> void:
 			if see_player:
 				state = State.CHASE
 		State.HIT, State.DEATH:
+			velocity = Vector3.ZERO
 			pass
 		_:
 			velocity = Vector3.ZERO
