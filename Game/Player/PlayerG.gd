@@ -3,8 +3,8 @@ extends CharacterBody3D
 
 enum State { ATTACK, MOVE, IDLE, HIT, DEATH }
 
-@onready var _character = $Rogue_Hooded as Node3D
-@onready var _animation = $Rogue_Hooded/AnimationPlayer as AnimationPlayer
+@onready var _character = $Character as Node3D
+@onready var _animation = $Character/AnimationPlayer as AnimationPlayer
 @onready var _world = $/root/World as World
 @onready var _gui = $/root/World/Gui as Gui
 @onready var _atkTimer = $AtkTimer as Timer
@@ -24,8 +24,6 @@ func _ready() -> void:
 	#$"Rogue_Hooded/Rig/Skeleton3D/handslot_r/Throwable".hide()
 	#$"Rogue_Hooded/Rig/Skeleton3D/handslot_r/1H_Crossbow".hide()
 	#$"Rogue_Hooded/Rig/Skeleton3D/handslot_r/2H_Crossbow".hide()
-	$Rogue_Hooded/Rig_Medium/Skeleton3D/RogueHooded_Head.hide()
-	$Rogue_Hooded/Rig_Medium/Skeleton3D/RogueHooded_Mask.hide()
 	_animation.animation_finished.connect(_on_animation_finished)
 	
 func _physics_process(_delta: float) -> void:

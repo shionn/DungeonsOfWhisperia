@@ -1,9 +1,7 @@
 [gd_scene format=3 uid="uid://chj6or7vh11ry"]
 
 [ext_resource type="Script" uid="uid://cudoi1kpvpwh0" path="res://Game/World.gd" id="1_bcbcq"]
-[ext_resource type="PackedScene" uid="uid://biry1imi3i5lg" path="res://Dungeons/00/Dungeon0.tscn" id="1_c6gwx"]
 [ext_resource type="PackedScene" uid="uid://dpbieqlycbivt" path="res://Gui/Gui.tscn" id="2_2dftf"]
-[ext_resource type="PackedScene" uid="uid://ddvg2rw2bunm2" path="res://Game/Player/Player.tscn" id="2_js7pq"]
 [ext_resource type="PackedScene" uid="uid://l4ocv1r3b2jl" path="res://Game/Environment.tscn" id="5_f5c0m"]
 [ext_resource type="Script" uid="uid://bjbab3ep2gfn2" path="res://Game/Items/Item.gd" id="5_p1v5b"]
 [ext_resource type="Script" uid="uid://ccps0bdr1ahel" path="res://Game/Items/Items.gd" id="5_wygdx"]
@@ -15,10 +13,6 @@
 
 [node name="World" type="Node3D" unique_id=1017407997]
 script = ExtResource("1_bcbcq")
-
-[node name="Player" parent="." unique_id=384338158 instance=ExtResource("2_js7pq")]
-
-[node name="Dungeon00" parent="." unique_id=266448183 instance=ExtResource("1_c6gwx")]
 
 [node name="Gui" parent="." unique_id=679884730 instance=ExtResource("2_2dftf")]
 
