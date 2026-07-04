@@ -1,5 +1,5 @@
 class_name World
-extends Node3D
+extends GameBase3D
 
 
 var target_monster: Monster = null
@@ -11,12 +11,12 @@ func _physics_process(_delta: float) -> void:
 	_updateRayCast()
 	#if Input.is_action_just_released("quit"):
 	#	get_tree().quit()
-	if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED and Input.is_action_just_pressed("interact"):
+	if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED and Input.is_action_just_pressed("interact") and not player.isDead():
 		if ( target_interactable and 
-				$Player.global_position.distance_to(target_interactable.global_position) < target_interactable.interactDistance ):
+				player.global_position.distance_to(target_interactable.global_position) < target_interactable.interactDistance ):
 			target_interactable.on_interact()
 		if target_monster and target_monster.state == Monster.State.DEATH:
-			$Gui.openLoot(target_monster)
+			gui.openLoot(target_monster)
 	
 func _updateRayCast() -> void : 
 	var camera = get_viewport().get_camera_3d()

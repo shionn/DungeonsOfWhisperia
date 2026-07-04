@@ -1,6 +1,5 @@
-extends Label
-
-@onready var _player = $/root/World/Player as PlayerG
+extends GameBaseControl
 
 func _physics_process(_delta: float) -> void:
-	visible = _player.pv <= 0
+	visible = player.isDead()
+	

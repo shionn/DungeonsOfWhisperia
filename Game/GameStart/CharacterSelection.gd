@@ -1,6 +1,7 @@
 extends Node3D
 
 @export var _anim = "Melee_1H_Attack_Slice_Diagonal"
+@export_multiline var _description: String
 
 signal select(model:String)
 

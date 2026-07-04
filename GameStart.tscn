@@ -40,10 +40,24 @@ transform = Transform3D(0.64278764, 0, 0.76604444, 0, 1, 0, -0.76604444, 0, 0.64
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
 script = ExtResource("3_khsc5")
 _anim = "Melee_Dualwield_Attack_Chop"
+_description = "Equipée d'une dague dans chaque main, elle inflige deux attaque à chaque attaque. Si elle est hors de vision de son advbersaire alors"
 
 [node name="Area3D" type="Area3D" parent="Node3D/Characters/Node3D5/Rogue" unique_id=1933930093]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/Characters/Node3D5/Rogue/Area3D" unique_id=483957959]
+transform = Transform3D(1.0000031, 0, 4.917383e-07, 0, 1, 0, -4.917383e-07, 0, 1.0000031, 0, 1.2, 0)
+shape = SubResource("CylinderShape3D_b02ke")
+
+[node name="Node3D2" type="Node3D" parent="Node3D/Characters" unique_id=445603615]
+transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, 0, 0, 0)
+
+[node name="Engineer" parent="Node3D/Characters/Node3D2" unique_id=1703605445 instance=ExtResource("4_dwykc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
+script = ExtResource("3_khsc5")
+
+[node name="Area3D" type="Area3D" parent="Node3D/Characters/Node3D2/Engineer" unique_id=756693837]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/Characters/Node3D2/Engineer/Area3D" unique_id=820840520]
 transform = Transform3D(1.0000031, 0, 4.917383e-07, 0, 1, 0, -4.917383e-07, 0, 1.0000031, 0, 1.2, 0)
 shape = SubResource("CylinderShape3D_b02ke")
 
@@ -58,19 +72,6 @@ _anim = "Melee_2H_Attack_Slice"
 [node name="Area3D" type="Area3D" parent="Node3D/Characters/Node3D/Barbarian" unique_id=672690255]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/Characters/Node3D/Barbarian/Area3D" unique_id=54835880]
-transform = Transform3D(1.0000031, 0, 4.917383e-07, 0, 1, 0, -4.917383e-07, 0, 1.0000031, 0, 1.2, 0)
-shape = SubResource("CylinderShape3D_b02ke")
-
-[node name="Node3D2" type="Node3D" parent="Node3D/Characters" unique_id=445603615]
-transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, 0, 0, 0)
-
-[node name="Engineer" parent="Node3D/Characters/Node3D2" unique_id=1703605445 instance=ExtResource("4_dwykc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
-script = ExtResource("3_khsc5")
-
-[node name="Area3D" type="Area3D" parent="Node3D/Characters/Node3D2/Engineer" unique_id=756693837]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/Characters/Node3D2/Engineer/Area3D" unique_id=820840520]
 transform = Transform3D(1.0000031, 0, 4.917383e-07, 0, 1, 0, -4.917383e-07, 0, 1.0000031, 0, 1.2, 0)
 shape = SubResource("CylinderShape3D_b02ke")
 
@@ -283,8 +284,8 @@ bus = &"Background"
 parameters/looping = true
 
 [connection signal="select" from="Node3D/Characters/Node3D5/Rogue" to="." method="_on_character_select"]
-[connection signal="select" from="Node3D/Characters/Node3D/Barbarian" to="." method="_on_character_select"]
 [connection signal="select" from="Node3D/Characters/Node3D2/Engineer" to="." method="_on_character_select"]
+[connection signal="select" from="Node3D/Characters/Node3D/Barbarian" to="." method="_on_character_select"]
 [connection signal="select" from="Node3D/Characters/Node3D3/Mage" to="." method="_on_character_select"]
 [connection signal="select" from="Node3D/Characters/Node3D4/Knight" to="." method="_on_character_select"]
 [connection signal="select" from="Node3D/Characters/Node3D6/Ranger" to="." method="_on_character_select"]

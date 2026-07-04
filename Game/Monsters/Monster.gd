@@ -31,12 +31,14 @@ func _ready() -> void:
 
 func _physics_process(_delta: float) -> void:
 	see_player = _see_player()
-	if see_player :
+	if _player.isDead() : 
+		state = State.IDLE
+	elif see_player :
 		_navigation_agent.set_target_position(_player.global_position)
 	match state: 
 		State.CHASE:
 			var distance = (_player.global_position-global_position).length()
-			if _atk && distance < _atk.atk_range or distance < _model.min_atk_range and not _player.isDead() :
+			if _atk && distance < _atk.atk_range or distance < _model.min_atk_range :
 				state = State.ATTACK
 			elif _navigation_agent.is_navigation_finished() : 
 				state = State.IDLE
@@ -72,7 +74,6 @@ func _look_player() -> void :
 	self.rotation.x = 0
 
 func _see_player() -> bool :
-	if _player.isDead() : return false
 	var start = global_position+Vector3.UP
 	var end = _player.global_position+Vector3.UP
 	var direction = (end-start).normalized()
