@@ -11,7 +11,7 @@ var on_cold_down = false
 var sound : AudioStreamPlayer3D
 var _cold_down_timer : Timer = Timer.new()
 
-func _init(json, g:Monster) -> void:
+func _init(json, g:MonsterOld) -> void:
 	animation = json["animation"]
 	cold_down = json.get("cold_down",0)
 	cold_down_factor =  json.get("cold_down_factor",0)

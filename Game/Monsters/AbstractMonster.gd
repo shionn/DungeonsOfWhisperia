@@ -1,4 +1,4 @@
-class_name MonsterOld
+@abstract class_name Monster
 extends CharacterBody3D 
 
 enum State { IDLE, CHASE, ATTACK, ATTACKING, HIT, DEATH }
@@ -11,23 +11,23 @@ enum State { IDLE, CHASE, ATTACK, ATTACKING, HIT, DEATH }
 @onready var _gcdTimer = $GcdTimer as Timer
 @onready var _gui = $/root/World/Gui as Gui
 
-@export_file("*.json") var _model_file
+#@export_file("*.json") var _model_file
 @export var loot_obj : Items.ItemName = Items.ItemName.None
 @export var loot_gold: int = 0
 
 const _movement_speed: float = 4.0
 
-var _model : MonsterModel
-var _atk : MonsterModelAtk
+#var _model : MonsterModel
+var _atk : MonsterAtk
 var _on_gcd : bool = false
 var state : State = State.IDLE
 var see_player = false
+var pv = get_max_pv()
 
 func _ready() -> void:
-	_model = MonsterModel.new(_model_file, self)
 	_navigation_agent.target_desired_distance = 0 #_model.chase_distance
 	start_animation("Idle_A")
-	_atk = _model.get_atk()
+	_atk = _find_atk()
 
 func _physics_process(_delta: float) -> void:
 	see_player = _see_player()
@@ -37,8 +37,9 @@ func _physics_process(_delta: float) -> void:
 		_navigation_agent.set_target_position(_player.global_position)
 	match state: 
 		State.CHASE:
-			var distance = (_player.global_position-global_position).length()
-			if _atk && distance < _atk.atk_range or distance < _model.min_atk_range :
+			var distance = _player.distance_to(self) # (_player.global_position-global_position).length()
+			# TODO jump to idle si aucune atk disponible
+			if _atk and distance < _atk.atk_range  or distance < get_min_atk_range() : # and _atk TODO
 				state = State.ATTACK
 			elif _navigation_agent.is_navigation_finished() : 
 				state = State.IDLE
@@ -51,7 +52,7 @@ func _physics_process(_delta: float) -> void:
 				if _atk :
 					_start_atk()
 				else :
-					_atk = _model.get_atk()
+					_atk = _find_atk()
 					state = State.IDLE
 			velocity = Vector3.ZERO
 		State.ATTACKING:
@@ -79,7 +80,7 @@ func _see_player() -> bool :
 	var end = _player.global_position+Vector3.UP
 	var direction = (end-start).normalized()
 	var orientation = self.basis * Vector3.BACK
-	if rad_to_deg(orientation.angle_to(direction)) <= _model.fov :
+	if rad_to_deg(orientation.angle_to(direction)) <= get_fov() :
 		var query = PhysicsRayQueryParameters3D.create(start, end)
 		var result = get_world_3d().direct_space_state.intersect_ray(query)
 		if (result && result.collider == _player):
@@ -99,12 +100,12 @@ func _update_navigation() -> bool :
 	return self._navigation_agent.is_navigation_finished()
 
 func start_animation(anim:String, time:bool=false, timer:Timer=null, timerFactor:float = 1.0) -> void:
-	_animation.play(_model.rig+anim)
+	_animation.play(get_rig()+anim)
 	if time : 
 		if timer :
-			timer.start(_animation.get_animation(_model.rig+anim).length*timerFactor)
+			timer.start(_animation.get_animation(get_rig()+anim).length*timerFactor)
 		else :
-			_animationTimer.start(_animation.get_animation(_model.rig+anim).length*timerFactor)
+			_animationTimer.start(_animation.get_animation(get_rig()+anim).length*timerFactor)
 
 func _on_animationTimer_timeout() -> void:
 	match state:
@@ -120,34 +121,41 @@ func _on_animationTimer_timeout() -> void:
 		_: 
 			state = State.IDLE
 
+func _find_atk() -> MonsterAtk :
+	var _atks = list_atks()
+	var atk = _atks[Dices._random.randi_range(0,_atks.size()-1)]
+	if not atk.on_cold_down:
+		return atk
+	return null
+
 func _start_atk() -> void:
-	var anim_name = _model.rig + _atk.animation
+	var anim_name = get_rig() + _atk.animation
 	var length = _animation.get_animation(anim_name).length
 	_animation.play(anim_name)
 	_animationTimer.start(length)
 	_atk.start()
 	_atkTimer.start(length*_atk.animation_to_hit_factor)
-	_gcdTimer.start(_model.global_cold_down)
+	_gcdTimer.start(get_global_colddown())
 	_on_gcd = true
 	state = State.ATTACKING
 
 func _on_atk_timer_timeout() -> void:
 	if state != State.DEATH :
 		_atk.sound.play()
-		#_player.receive_atk(_atk.damage(), self)
+		_player.receive_atk(_atk.damage(), self)
 		_atk = null
 		
 
 func receive_atk(nb_atk: int) -> void:
 	if state == State.DEATH : return
-	var nb_def = Dices.d6(_model.def, 6)
+	var nb_def = Dices.d6(get_def(), 6)
 	var deg = nb_atk - nb_def
 	if nb_atk > 0 : _gui.consoleLog("Vous obtenez %d 💀, %s obtient %d 🛡" % [nb_atk, name, nb_def])
 	else :          _gui.consoleLog("Vous obtenez %d 💀" % [nb_atk])
 	if deg > 0 :
-		_model.pv = _model.pv - deg
-		_model.hit_sound.play()
-		if _model.pv <= 0 :
+		pv = pv - deg
+		get_hit_sound().play()
+		if pv <= 0 :
 			start_animation("Death_A", true)
 			state = State.DEATH
 		elif state != State.ATTACKING :
@@ -160,5 +168,12 @@ func receive_atk(nb_atk: int) -> void:
 func _on_gcd_timer_timeout() -> void:
 	_on_gcd = false
 
-func isLarge() -> bool: return _model.large
-	
+@abstract func get_fov() -> float
+@abstract func get_rig() -> String
+@abstract func get_def() -> int
+@abstract func get_hit_sound() -> AudioStreamPlayer3D
+@abstract func get_max_pv() -> int
+@abstract func is_large() -> bool
+@abstract func get_global_colddown() -> float
+@abstract func list_atks() -> Array[MonsterAtk]
+@abstract func get_min_atk_range() -> int

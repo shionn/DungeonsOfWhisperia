@@ -14,7 +14,7 @@ var hit_sound : AudioStreamPlayer3D
 
 var _random = RandomNumberGenerator.new()
 
-func _init(model_file, g:Monster):
+func _init(model_file, g:MonsterOld):
 	var file = FileAccess.open(model_file, FileAccess.READ)
 	var json = JSON.parse_string(file.get_as_text())
 	fov = json.get("fov",140)

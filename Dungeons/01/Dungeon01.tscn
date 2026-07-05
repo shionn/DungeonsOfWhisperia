@@ -63,6 +63,7 @@
 [ext_resource type="PackedScene" uid="uid://b6lorylhdtgtv" path="res://Assets/Dungeons/Shelves/shelf_small_candles.gltf" id="61_gpb47"]
 [ext_resource type="PackedScene" uid="uid://c2eo4fhjbw8kj" path="res://Assets/Dungeons/Banner/banner_brown.gltf" id="62_rswyo"]
 [ext_resource type="PackedScene" uid="uid://b4guesmjn6ju0" path="res://Assets/Dungeons/Stairs/stairs_walled.gltf" id="63_2s4c4"]
+[ext_resource type="PackedScene" uid="uid://nvl7qu3464h4" path="res://Game/Monsters/SkeletonMinion.tscn" id="63_u21oi"]
 [ext_resource type="Script" uid="uid://dexpl21rteomv" path="res://Game/Roof.gd" id="64_6f0aj"]
 [ext_resource type="PackedScene" uid="uid://kwbu30ltyyru" path="res://Assets/Dungeons/Floor/Large/floor_dirt_large.gltf" id="65_wj3qx"]
 [ext_resource type="PackedScene" uid="uid://dfqu824ryf85i" path="res://Assets/Dungeons/Floor/Large/floor_dirt_large_rocky.gltf" id="66_glvpf"]
@@ -1193,20 +1194,14 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4, 0
 
 [node name="Entrance" type="Node3D" parent="." unique_id=1411471295]
 
-[node name="Minion 1" parent="Entrance" unique_id=299606108 instance=ExtResource("1_8lm3v")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 11, 0, -4)
-_model_file = "res://Game/Monsters/SkeletonMinion1.json"
+[node name="Skeleton Minion 1" parent="Entrance" unique_id=719577197 instance=ExtResource("63_u21oi")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 11, 0, -6)
 loot_obj = 1
 loot_gold = 1
 
-[node name="Character" parent="Entrance/Minion 1" unique_id=196485447 instance=ExtResource("30_gthlv")]
-
-[node name="Minion 2" parent="Entrance" unique_id=617207210 instance=ExtResource("1_8lm3v")]
+[node name="Skeleton Minion 2" parent="Entrance" unique_id=160983968 instance=ExtResource("63_u21oi")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 20, 0, 13)
-_model_file = "res://Game/Monsters/SkeletonMinion1.json"
 loot_gold = 2
-
-[node name="Character" parent="Entrance/Minion 2" unique_id=1064022696 instance=ExtResource("30_gthlv")]
 
 [node name="stairs_walled2" parent="Entrance" unique_id=464899705 instance=ExtResource("63_2s4c4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8)

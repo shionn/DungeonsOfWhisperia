@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://nvl7qu3464h4"]
+
+[ext_resource type="PackedScene" uid="uid://dvd4uuprholj6" path="res://Game/Monsters/Monster.tscn" id="1_46yaf"]
+[ext_resource type="Script" uid="uid://bjwyh6ydpbr73" path="res://Game/Monsters/SekeletonMinion.gd" id="2_unf0s"]
+[ext_resource type="Script" uid="uid://beivecuks870r" path="res://Game/Monsters/MonsterAtk.gd" id="3_1qcao"]
+[ext_resource type="PackedScene" uid="uid://duyv10q0hqy0g" path="res://Assets/Scenes/Skeleton_Minion.tscn" id="4_behvp"]
+
+[node name="Monster" unique_id=706438754 instance=ExtResource("1_46yaf")]
+script = ExtResource("2_unf0s")
+
+[node name="Chop" type="Node" parent="." index="8" unique_id=431445880 node_paths=PackedStringArray("sound")]
+script = ExtResource("3_1qcao")
+animation = "Melee_1H_Attack_Chop"
+animation_to_hit_factor = 0.7
+cold_down = 2.0
+sound = NodePath("../Swing2")
+metadata/_custom_type_script = "uid://beivecuks870r"
+
+[node name="Chop2H" type="Node" parent="." index="9" unique_id=1501550697 node_paths=PackedStringArray("sound")]
+script = ExtResource("3_1qcao")
+animation = "Melee_2H_Attack_Chop"
+animation_to_hit_factor = 0.6
+cold_down = 5.0
+atk_range = 3.0
+sound = NodePath("../Swing2")
+metadata/_custom_type_script = "uid://beivecuks870r"
+
+[node name="Character" parent="." index="10" unique_id=1366271086 instance=ExtResource("4_behvp")]
