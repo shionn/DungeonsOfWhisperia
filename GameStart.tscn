@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://l4ocv1r3b2jl" path="res://Game/Environment.tscn" id="4_mfh1e"]
 [ext_resource type="PackedScene" uid="uid://b8yjt6ifs5miv" path="res://Assets/Scenes/Knight.tscn" id="4_r85o0"]
 [ext_resource type="PackedScene" uid="uid://nspubd405fcp" path="res://Assets/Scenes/Rogue.tscn" id="4_v7141"]
+[ext_resource type="PackedScene" uid="uid://belo0gsitrwsq" path="res://Assets/Scenes/Cleric.tscn" id="4_w3npw"]
 [ext_resource type="PackedScene" uid="uid://klr1d6x5mt0l" path="res://Assets/Dungeons/Wall/wall_cracked.gltf" id="5_ccr7y"]
 [ext_resource type="PackedScene" uid="uid://chh33810xheeu" path="res://Assets/Scenes/Mage.tscn" id="5_r85o0"]
 [ext_resource type="PackedScene" uid="uid://y38wo3hdhqtq" path="res://Assets/Dungeons/Wall/wall_shelves.gltf" id="6_ypfxp"]
@@ -21,10 +22,22 @@
 [ext_resource type="Texture2D" uid="uid://dstsbh4f6k4j5" path="res://Gui/Assets/kenney/cursor-pack/door_exit.png" id="19_ra1xl"]
 [ext_resource type="Script" uid="uid://b0twnfs43umv7" path="res://Game/GameStart/ExitButton.gd" id="20_g4cbf"]
 [ext_resource type="AudioStream" uid="uid://c6v7ff6x8p5pt" path="res://Audio/RpgTitle1/RPG_Title_1.ogg" id="21_v7141"]
+[ext_resource type="Script" uid="uid://k0nqdo8abkmv" path="res://Game/GameStart/CharacterDescription.gd" id="22_oaxys"]
+[ext_resource type="Texture2D" uid="uid://ckgd4l0t7srqr" path="res://Gui/Assets/kenney/ui-adventure/panel_brown_NW.png" id="22_ryb6l"]
+[ext_resource type="Texture2D" uid="uid://ccnqmwmalslbh" path="res://Gui/Assets/kenney/ui-adventure/panel_brown_N.png" id="23_oaxys"]
+[ext_resource type="Texture2D" uid="uid://8nho6rc3y7h0" path="res://Gui/Assets/kenney/ui-adventure/panel_brown_NE.png" id="24_r00ar"]
+[ext_resource type="Texture2D" uid="uid://byxfedvd3rio8" path="res://Gui/Assets/kenney/ui-adventure/panel_brown_W.png" id="25_tfnpi"]
+[ext_resource type="Texture2D" uid="uid://dtw1cmhurrgp1" path="res://Gui/Assets/kenney/ui-adventure/panel_brown_E.png" id="26_2yfej"]
+[ext_resource type="Texture2D" uid="uid://bj22r3dqrlgrh" path="res://Gui/Assets/kenney/ui-adventure/panel_brown_SW.png" id="27_qpj4n"]
+[ext_resource type="Texture2D" uid="uid://f4bn5pgi4ls3" path="res://Gui/Assets/kenney/ui-adventure/panel_brown_S.png" id="28_g3ndm"]
+[ext_resource type="Texture2D" uid="uid://coc4mm1g1nlkp" path="res://Gui/Assets/kenney/ui-adventure/panel_brown_SE.png" id="29_hef1t"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_b02ke"]
 height = 2.4
 radius = 0.8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_drch7"]
+bg_color = Color(1, 0.94509804, 0.8235294, 1)
 
 [node name="GameStart" type="Node" unique_id=1194037428]
 script = ExtResource("1_khsc5")
@@ -33,41 +46,21 @@ script = ExtResource("1_khsc5")
 
 [node name="Characters" type="Node3D" parent="Node3D" unique_id=675361834]
 
-[node name="Node3D5" type="Node3D" parent="Node3D/Characters" unique_id=980995739]
-transform = Transform3D(0.64278764, 0, 0.76604444, 0, 1, 0, -0.76604444, 0, 0.64278764, 0, 0, 0)
-
-[node name="Rogue" parent="Node3D/Characters/Node3D5" unique_id=1982882119 instance=ExtResource("4_v7141")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
-script = ExtResource("3_khsc5")
-_anim = "Melee_Dualwield_Attack_Chop"
-_description = "Equipée d'une dague dans chaque main, elle inflige deux attaque à chaque attaque. Si elle est hors de vision de son advbersaire alors"
-
-[node name="Area3D" type="Area3D" parent="Node3D/Characters/Node3D5/Rogue" unique_id=1933930093]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/Characters/Node3D5/Rogue/Area3D" unique_id=483957959]
-transform = Transform3D(1.0000031, 0, 4.917383e-07, 0, 1, 0, -4.917383e-07, 0, 1.0000031, 0, 1.2, 0)
-shape = SubResource("CylinderShape3D_b02ke")
-
-[node name="Node3D2" type="Node3D" parent="Node3D/Characters" unique_id=445603615]
-transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, 0, 0, 0)
-
-[node name="Engineer" parent="Node3D/Characters/Node3D2" unique_id=1703605445 instance=ExtResource("4_dwykc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
-script = ExtResource("3_khsc5")
-
-[node name="Area3D" type="Area3D" parent="Node3D/Characters/Node3D2/Engineer" unique_id=756693837]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/Characters/Node3D2/Engineer/Area3D" unique_id=820840520]
-transform = Transform3D(1.0000031, 0, 4.917383e-07, 0, 1, 0, -4.917383e-07, 0, 1.0000031, 0, 1.2, 0)
-shape = SubResource("CylinderShape3D_b02ke")
-
 [node name="Node3D" type="Node3D" parent="Node3D/Characters" unique_id=1164197709]
-transform = Transform3D(0.9848077, 0, 0.17364818, 0, 1, 0, -0.17364818, 0, 0.9848077, 0, 0, 0)
+transform = Transform3D(0.49999994, 0, 0.8660254, 0, 1, 0, -0.8660254, 0, 0.49999994, 0, 0, 0)
 
 [node name="Barbarian" parent="Node3D/Characters/Node3D" unique_id=496203564 instance=ExtResource("3_mfd5o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
 script = ExtResource("3_khsc5")
 _anim = "Melee_2H_Attack_Slice"
+_description = "Le Barbare
+Equipé d'une Hache à 2 mains il possede une forte vitalitée. Il a une attaque solide, ces critiques sont dévastateur et une defense moyenne.
+[ul]
+Attaque : 3 (+1 sur critique)
+Défense : 2
+PV : 9
+Difficulté : Moyenne
+[/ul]"
 
 [node name="Area3D" type="Area3D" parent="Node3D/Characters/Node3D/Barbarian" unique_id=672690255]
 
@@ -75,25 +68,49 @@ _anim = "Melee_2H_Attack_Slice"
 transform = Transform3D(1.0000031, 0, 4.917383e-07, 0, 1, 0, -4.917383e-07, 0, 1.0000031, 0, 1.2, 0)
 shape = SubResource("CylinderShape3D_b02ke")
 
-[node name="Node3D3" type="Node3D" parent="Node3D/Characters" unique_id=1282010697]
-transform = Transform3D(0.9848077, 0, -0.17364818, 0, 1, 0, 0.17364818, 0, 0.9848077, 0, 0, 0)
+[node name="Node3D7" type="Node3D" parent="Node3D/Characters" unique_id=688181003]
+transform = Transform3D(0.7660444, 0, 0.6427875, 0, 1, 0, -0.6427875, 0, 0.7660444, 0, 0, 0)
 
-[node name="Mage" parent="Node3D/Characters/Node3D3" unique_id=1229200088 instance=ExtResource("5_r85o0")]
+[node name="Cleric" parent="Node3D/Characters/Node3D7" unique_id=1597451643 instance=ExtResource("4_w3npw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
 script = ExtResource("3_khsc5")
+_description = "Pas Encore disponible"
+enable = false
 
-[node name="Area3D" type="Area3D" parent="Node3D/Characters/Node3D3/Mage" unique_id=1650824414]
+[node name="Area3D" type="Area3D" parent="Node3D/Characters/Node3D7/Cleric" unique_id=744463791]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/Characters/Node3D3/Mage/Area3D" unique_id=1807745801]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/Characters/Node3D7/Cleric/Area3D" unique_id=625969767]
+transform = Transform3D(1.0000031, 0, 4.917383e-07, 0, 1, 0, -4.917383e-07, 0, 1.0000031, 0, 1.2, 0)
+shape = SubResource("CylinderShape3D_b02ke")
+
+[node name="Node3D2" type="Node3D" parent="Node3D/Characters" unique_id=445603615]
+transform = Transform3D(0.93969256, 0, 0.3420201, 0, 1, 0, -0.3420201, 0, 0.93969256, 0, 0, 0)
+
+[node name="Engineer" parent="Node3D/Characters/Node3D2" unique_id=1703605445 instance=ExtResource("4_dwykc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
+script = ExtResource("3_khsc5")
+_description = "Pas encore disponible"
+enable = false
+
+[node name="Area3D" type="Area3D" parent="Node3D/Characters/Node3D2/Engineer" unique_id=756693837]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/Characters/Node3D2/Engineer/Area3D" unique_id=820840520]
 transform = Transform3D(1.0000031, 0, 4.917383e-07, 0, 1, 0, -4.917383e-07, 0, 1.0000031, 0, 1.2, 0)
 shape = SubResource("CylinderShape3D_b02ke")
 
 [node name="Node3D4" type="Node3D" parent="Node3D/Characters" unique_id=1268133987]
-transform = Transform3D(0.8660254, 0, -0.5, 0, 1, 0, 0.5, 0, 0.8660254, 0, 0, 0)
 
 [node name="Knight" parent="Node3D/Characters/Node3D4" unique_id=432149207 instance=ExtResource("4_r85o0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
 script = ExtResource("3_khsc5")
+_description = "Le Chevalier
+Equipée d'une épée et d'une solide Armure, il as une attaque solide et une defence solide. Mais il ne possede aucune capacité spéciale.   
+[ul]
+Attaque : 3
+Défense : 3
+PV : 7
+Difficulté : Facile
+[/ul]"
 
 [node name="Area3D" type="Area3D" parent="Node3D/Characters/Node3D4/Knight" unique_id=1499626837]
 
@@ -101,16 +118,62 @@ script = ExtResource("3_khsc5")
 transform = Transform3D(1.0000031, 0, 4.917383e-07, 0, 1, 0, -4.917383e-07, 0, 1.0000031, 0, 1.2, 0)
 shape = SubResource("CylinderShape3D_b02ke")
 
+[node name="Node3D3" type="Node3D" parent="Node3D/Characters" unique_id=1282010697]
+transform = Transform3D(0.93969256, 0, -0.3420201, 0, 1, 0, 0.3420201, 0, 0.93969256, 0, 0, 0)
+
+[node name="Mage" parent="Node3D/Characters/Node3D3" unique_id=1229200088 instance=ExtResource("5_r85o0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
+script = ExtResource("3_khsc5")
+_description = "Pas encore disponible"
+enable = false
+
+[node name="Area3D" type="Area3D" parent="Node3D/Characters/Node3D3/Mage" unique_id=1650824414]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/Characters/Node3D3/Mage/Area3D" unique_id=1807745801]
+transform = Transform3D(1.0000031, 0, 4.917383e-07, 0, 1, 0, -4.917383e-07, 0, 1.0000031, 0, 1.2, 0)
+shape = SubResource("CylinderShape3D_b02ke")
+
 [node name="Node3D6" type="Node3D" parent="Node3D/Characters" unique_id=633433352]
-transform = Transform3D(0.64278764, 0, -0.76604444, 0, 1, 0, 0.76604444, 0, 0.64278764, 0, 0, 0)
+transform = Transform3D(0.76604444, 0, -0.6427876, 0, 1, 0, 0.6427876, 0, 0.76604444, 0, 0, 0)
 
 [node name="Ranger" parent="Node3D/Characters/Node3D6" unique_id=1073651002 instance=ExtResource("1_fmli0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
 script = ExtResource("3_khsc5")
+_anim = "Ranged_Bow_Draw"
+_description = "Le Ranger
+Equipée d'une dague et d'un arc, il est capable d'attaqué à distance et au corp à corp. Son arc est redoutable mais il est trés fragile au corp à corp.  
+[ul]
+Attaque : Arc 3, Dague 2
+Défense : 2
+PV : 6
+Difficulté : Difficile
+[/ul]"
 
 [node name="Area3D" type="Area3D" parent="Node3D/Characters/Node3D6/Ranger" unique_id=1113056427]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/Characters/Node3D6/Ranger/Area3D" unique_id=1558895622]
+transform = Transform3D(1.0000031, 0, 4.917383e-07, 0, 1, 0, -4.917383e-07, 0, 1.0000031, 0, 1.2, 0)
+shape = SubResource("CylinderShape3D_b02ke")
+
+[node name="Node3D5" type="Node3D" parent="Node3D/Characters" unique_id=980995739]
+transform = Transform3D(0.49999997, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, 0.49999997, 0, 0, 0)
+
+[node name="Rogue" parent="Node3D/Characters/Node3D5" unique_id=1982882119 instance=ExtResource("4_v7141")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
+script = ExtResource("3_khsc5")
+_anim = "Melee_Dualwield_Attack_Chop"
+_description = "La Voleuse
+Equipée d'une dague dans chaque main, elle inflige deux attaque à chaque frappe. De plus si elle est hors de vision de son adversaire elle inflige des dégats supplémentaires. 
+[ul]
+Attaque : 2x2 (3+2 dans le dos)
+Défense : 2
+PV : 6
+Difficulté : Moyenne
+[/ul]"
+
+[node name="Area3D" type="Area3D" parent="Node3D/Characters/Node3D5/Rogue" unique_id=1933930093]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/Characters/Node3D5/Rogue/Area3D" unique_id=483957959]
 transform = Transform3D(1.0000031, 0, 4.917383e-07, 0, 1, 0, -4.917383e-07, 0, 1.0000031, 0, 1.2, 0)
 shape = SubResource("CylinderShape3D_b02ke")
 
@@ -277,16 +340,101 @@ icon = ExtResource("19_ra1xl")
 flat = true
 script = ExtResource("20_g4cbf")
 
+[node name="Description" type="GridContainer" parent="GameStartGui/Control" unique_id=41949533]
+z_index = 10
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -400.0
+offset_top = -200.0
+offset_right = 400.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 3
+script = ExtResource("22_oaxys")
+
+[node name="NW" type="TextureRect" parent="GameStartGui/Control/Description" unique_id=1174927989]
+layout_mode = 2
+texture = ExtResource("22_ryb6l")
+
+[node name="N" type="TextureRect" parent="GameStartGui/Control/Description" unique_id=947124578]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("23_oaxys")
+stretch_mode = 1
+
+[node name="NE" type="TextureRect" parent="GameStartGui/Control/Description" unique_id=1913125308]
+layout_mode = 2
+texture = ExtResource("24_r00ar")
+
+[node name="W" type="TextureRect" parent="GameStartGui/Control/Description" unique_id=1289711108]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("25_tfnpi")
+stretch_mode = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="GameStartGui/Control/Description" unique_id=2034664802]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_drch7")
+
+[node name="MarginContainer" type="MarginContainer" parent="GameStartGui/Control/Description/PanelContainer" unique_id=2068182230]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="GameStartGui/Control/Description/PanelContainer/MarginContainer" unique_id=421745373]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Ceci est un test d'exemple
+Ceci est un test d'exemple
+Ceci est un test d'exemple
+Ceci est un test d'exemple
+Ceci est un test d'exemple
+Ceci est un test d'exemple
+Ceci est un test d'exemple
+"
+
+[node name="E" type="TextureRect" parent="GameStartGui/Control/Description" unique_id=311224408]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("26_2yfej")
+stretch_mode = 1
+
+[node name="SW" type="TextureRect" parent="GameStartGui/Control/Description" unique_id=348211843]
+layout_mode = 2
+texture = ExtResource("27_qpj4n")
+
+[node name="S" type="TextureRect" parent="GameStartGui/Control/Description" unique_id=1927077159]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("28_g3ndm")
+stretch_mode = 1
+
+[node name="SE" type="TextureRect" parent="GameStartGui/Control/Description" unique_id=1087990470]
+layout_mode = 2
+texture = ExtResource("29_hef1t")
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1730294210]
 stream = ExtResource("21_v7141")
 autoplay = true
 bus = &"Background"
 parameters/looping = true
 
-[connection signal="select" from="Node3D/Characters/Node3D5/Rogue" to="." method="_on_character_select"]
-[connection signal="select" from="Node3D/Characters/Node3D2/Engineer" to="." method="_on_character_select"]
 [connection signal="select" from="Node3D/Characters/Node3D/Barbarian" to="." method="_on_character_select"]
-[connection signal="select" from="Node3D/Characters/Node3D3/Mage" to="." method="_on_character_select"]
+[connection signal="select" from="Node3D/Characters/Node3D7/Cleric" to="." method="_on_character_select"]
+[connection signal="select" from="Node3D/Characters/Node3D2/Engineer" to="." method="_on_character_select"]
 [connection signal="select" from="Node3D/Characters/Node3D4/Knight" to="." method="_on_character_select"]
+[connection signal="select" from="Node3D/Characters/Node3D3/Mage" to="." method="_on_character_select"]
 [connection signal="select" from="Node3D/Characters/Node3D6/Ranger" to="." method="_on_character_select"]
+[connection signal="select" from="Node3D/Characters/Node3D5/Rogue" to="." method="_on_character_select"]
 [connection signal="pressed" from="GameStartGui/Control/Exit" to="GameStartGui/Control/Exit" method="_on_pressed"]

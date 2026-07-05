@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://0r102lq54vq1" path="res://Assets/Characters/AdventurersAccessoires/bow_withString.gltf" id="2_bgkbh"]
 [ext_resource type="PackedScene" uid="uid://pa16u3bxw2jq" path="res://Assets/Animations/RigMedium.tscn" id="2_f7d1w"]
 [ext_resource type="PackedScene" uid="uid://bkqfestk1m036" path="res://Assets/Characters/AdventurersAccessoires/dagger.gltf" id="3_bgkbh"]
+[ext_resource type="PackedScene" uid="uid://h1r8oaweijx8" path="res://Assets/Characters/AdventurersAccessoires/arrow_bow.gltf" id="4_gqmsp"]
 
 [node name="Ranger" unique_id=1073651002 instance=ExtResource("1_p4j1h")]
 
@@ -65,7 +66,7 @@ transform = Transform3D(3.8131046e-07, 0.26286283, 0.9648327, 0.9999987, 1.19209
 bone_name = "handslot.l"
 bone_idx = 22
 
-[node name="bow_withString2" parent="Rig_Medium/Skeleton3D/LeftHand" index="0" unique_id=506035107 instance=ExtResource("2_bgkbh")]
+[node name="Bow" parent="Rig_Medium/Skeleton3D/LeftHand" index="0" unique_id=506035107 instance=ExtResource("2_bgkbh")]
 transform = Transform3D(-0.99999976, 2.5312153e-07, -8.8387725e-07, 7.8425455e-07, -0.26690283, -0.9637236, -4.798487e-07, -0.9637234, 0.2669029, 0, 0, 0)
 
 [node name="RightHand" type="BoneAttachment3D" parent="Rig_Medium/Skeleton3D" index="9" unique_id=260503142]
@@ -73,7 +74,10 @@ transform = Transform3D(6.0328017e-07, -0.14989421, -0.9887017, -0.99999887, 2.0
 bone_name = "handslot.r"
 bone_idx = 17
 
-[node name="dagger2" parent="Rig_Medium/Skeleton3D/RightHand" index="0" unique_id=700892726 instance=ExtResource("3_bgkbh")]
+[node name="Dagger" parent="Rig_Medium/Skeleton3D/RightHand" index="0" unique_id=700892726 instance=ExtResource("3_bgkbh")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+
+[node name="Arrow" parent="Rig_Medium/Skeleton3D/RightHand" index="1" unique_id=811738083 instance=ExtResource("4_gqmsp")]
+transform = Transform3D(1, -3.0277695e-07, 1.1445584e-07, -1.1445593e-07, -4.4703484e-08, 1.0000002, -3.0277687e-07, -1.0000002, -5.9604645e-08, 1.1920929e-07, 0.39548108, -0.059957743)
 
 [node name="AnimationPlayer" parent="." index="1" unique_id=1430341502 instance=ExtResource("2_f7d1w")]
