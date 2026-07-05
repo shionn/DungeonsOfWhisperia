@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://d23yaul05bd2c"]
 
-[ext_resource type="Script" uid="uid://bb8mw3r2v2qsn" path="res://Game/Monsters/Monster.gd" id="1_cegur"]
 [ext_resource type="AudioStream" uid="uid://cboxwfe5vonpp" path="res://Audio/ZombieSkeletonMonsterVoiceEffects/zombieYell8.wav" id="3_1px78"]
 [ext_resource type="AudioStream" uid="uid://c3kmcc5um850h" path="res://Audio/SwishesSoundPack/swish-9.wav" id="4_ci5jw"]
 
@@ -11,7 +10,6 @@ height = 3.9499998
 [node name="MonsterLarge" type="CharacterBody3D" unique_id=706438754]
 collision_layer = 257
 collision_mask = 0
-script = ExtResource("1_cegur")
 
 [node name="CollisionDefault" type="CollisionShape3D" parent="." unique_id=1253204839]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9749999, 0)

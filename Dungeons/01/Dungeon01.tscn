@@ -1,7 +1,5 @@
 [gd_scene format=3 uid="uid://biry1imi3i5lg"]
 
-[ext_resource type="PackedScene" uid="uid://dvd4uuprholj6" path="res://Game/Monsters/Monster.tscn" id="1_8lm3v"]
-[ext_resource type="PackedScene" uid="uid://ciu823c3rw73b" path="res://Assets/Scenes/Skeleton_Warrior.tscn" id="2_ok53l"]
 [ext_resource type="PackedScene" uid="uid://cl36lcn4lo2eq" path="res://Assets/Scenes/Torch_Mounted.tscn" id="3_yra1b"]
 [ext_resource type="PackedScene" uid="uid://bqbfybidqqw6b" path="res://Assets/Dungeons/Tables/table_long_decorated_A.gltf" id="4_ei311"]
 [ext_resource type="Script" uid="uid://bpgb3pwbq61mh" path="res://Game/Interactable.gd" id="5_fv305"]
@@ -9,6 +7,7 @@
 [ext_resource type="Script" uid="uid://cxe0hpd6pnr8q" path="res://Gui/Dialog.gd" id="7_v4w5c"]
 [ext_resource type="PackedScene" uid="uid://cd70tnt7fd2v6" path="res://Assets/Dungeons/Tables/table_long_decorated_C.gltf" id="8_kmn0o"]
 [ext_resource type="PackedScene" uid="uid://umb3bjiok44i" path="res://Assets/Dungeons/Bottle/bottle_A_labeled_green.gltf" id="9_ax3ef"]
+[ext_resource type="PackedScene" uid="uid://csg4ffnbxbal1" path="res://Game/Monsters/SkeletonWarrior.tscn" id="10_5koau"]
 [ext_resource type="PackedScene" uid="uid://dnj0c0ut1hd35" path="res://Assets/Scenes/Wall_Doorway.tscn" id="10_drij7"]
 [ext_resource type="PackedScene" uid="uid://y38wo3hdhqtq" path="res://Assets/Dungeons/Wall/wall_shelves.gltf" id="11_mt1ed"]
 [ext_resource type="PackedScene" uid="uid://dj0modsh7x76o" path="res://Assets/Scenes/Bar_Straight_C.tscn" id="12_xd8xc"]
@@ -31,6 +30,7 @@
 [ext_resource type="AudioStream" uid="uid://dkn80nhtqetgu" path="res://Audio/80-CC0-RPG-SFX/book_01.ogg" id="29_mja3c"]
 [ext_resource type="PackedScene" uid="uid://duyv10q0hqy0g" path="res://Assets/Scenes/Skeleton_Minion.tscn" id="30_gthlv"]
 [ext_resource type="Script" uid="uid://civlxmv82jda5" path="res://Dungeons/01/SkeletonPrisoner.gd" id="31_eduyo"]
+[ext_resource type="PackedScene" uid="uid://ccpi60vfgxxjo" path="res://Game/Monsters/SkeletonGolem.tscn" id="31_u21oi"]
 [ext_resource type="PackedScene" uid="uid://bysoel76lf8pw" path="res://Assets/Dungeons/Bar/bar_straight_A.gltf" id="32_3n75t"]
 [ext_resource type="PackedScene" uid="uid://bn8u3hkxao6jh" path="res://Assets/Characters/AdventurersAccessoires/spellbook_open.gltf" id="33_787tb"]
 [ext_resource type="AudioStream" uid="uid://d3sex1te7mnxm" path="res://Audio/80-CC0-RPG-SFX/book_02.ogg" id="34_sf1ur"]
@@ -56,8 +56,6 @@
 [ext_resource type="PackedScene" uid="uid://d2s6ulp6b5oe" path="res://Assets/Characters/AdventurersAccessoires/potion_small_orange.gltf" id="54_u4m8x"]
 [ext_resource type="PackedScene" uid="uid://bifqjl5vbnrgq" path="res://Assets/Characters/AdventurersAccessoires/potion_small_red.gltf" id="55_tbbi6"]
 [ext_resource type="AudioStream" uid="uid://ce7drpk5sjkcm" path="res://Audio/KenneyRpgAudio/metalClick.ogg" id="56_c7r8k"]
-[ext_resource type="PackedScene" uid="uid://d23yaul05bd2c" path="res://Game/Monsters/MonsterLarge.tscn" id="57_2teph"]
-[ext_resource type="PackedScene" uid="uid://blvuvv445i0ai" path="res://Assets/Scenes/Skeleton_Golem.tscn" id="58_ygsoc"]
 [ext_resource type="PackedScene" uid="uid://cpt65wpacxuj1" path="res://Assets/Scenes/Wall_Doorway_Boss.tscn" id="59_oqh7g"]
 [ext_resource type="PackedScene" uid="uid://k1idxjl5napw" path="res://Assets/Dungeons/Banner/banner_thin_brown.gltf" id="60_m1nss"]
 [ext_resource type="PackedScene" uid="uid://b6lorylhdtgtv" path="res://Assets/Dungeons/Shelves/shelf_small_candles.gltf" id="61_gpb47"]
@@ -314,19 +312,13 @@ polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(1, 3, 2)]
 [node name="DinerRoom" type="Node3D" parent="." unique_id=1116056566]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, -10)
 
-[node name="Guerrier 1" parent="DinerRoom" unique_id=706438754 instance=ExtResource("1_8lm3v")]
-transform = Transform3D(-0.50000006, 0, -0.8660254, 0, 1, 0, 0.8660254, 0, -0.50000006, 2.3999996, 0, 4)
-_model_file = "res://Game/Monsters/SkeletonWarrior1.json"
+[node name="Skeleton Warrior 1" parent="DinerRoom" unique_id=706438754 instance=ExtResource("10_5koau")]
+transform = Transform3D(0.8660254, 0, -0.5, 0, 1, 0, 0.5, 0, 0.8660254, 1.8000011, 0, -4.5)
 loot_gold = 2
 
-[node name="Character" parent="DinerRoom/Guerrier 1" unique_id=1197270133 instance=ExtResource("2_ok53l")]
-
-[node name="Guerrier 2" parent="DinerRoom" unique_id=299569849 instance=ExtResource("1_8lm3v")]
-transform = Transform3D(0.86602545, 0, -0.5, 0, 1, 0, 0.5, 0, 0.86602545, 1.7999992, 0, -4.500001)
-_model_file = "res://Game/Monsters/SkeletonWarrior1.json"
+[node name="Skeleton Warrior 2" parent="DinerRoom" unique_id=1711035780 instance=ExtResource("10_5koau")]
+transform = Transform3D(-0.50000006, 0, -0.8660254, 0, 1, 0, 0.8660254, 0, -0.50000006, 2.3999996, 0, 4)
 loot_gold = 3
-
-[node name="Character" parent="DinerRoom/Guerrier 2" unique_id=1318792153 instance=ExtResource("2_ok53l")]
 
 [node name="torch_mounted" parent="DinerRoom" unique_id=1245216849 instance=ExtResource("3_yra1b")]
 transform = Transform3D(0, 0, 1.0000001, 0, 1, 0, -1.0000001, 0, 0, -4, 0, -2)
@@ -705,6 +697,9 @@ script = ExtResource("31_eduyo")
 
 [node name="BossRoom" type="Node3D" parent="." unique_id=453869497]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, 4)
+
+[node name="Skeleton Golem" parent="BossRoom" unique_id=527358216 instance=ExtResource("31_u21oi")]
+transform = Transform3D(0.49999997, 0, 0.8660253, 0, 1, 0, -0.8660253, 0, 0.49999997, -2.2000008, 0, -3.9)
 
 [node name="Desk" type="Node3D" parent="BossRoom" unique_id=1645702767]
 transform = Transform3D(0.8660254, 0, -0.5, 0, 1, 0, 0.5, 0, 0.8660254, -0.9000015, 0, 2.6000004)
@@ -1097,14 +1092,6 @@ transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 8.351872e-23, 0, -3.552
 [node name="Audio" type="AudioStreamPlayer3D" parent="BossRoom/bar_straight_C2/Code" unique_id=1501163227]
 stream = ExtResource("56_c7r8k")
 bus = &"Effet"
-
-[node name="Golem" parent="BossRoom" unique_id=1300054986 instance=ExtResource("57_2teph")]
-transform = Transform3D(0.49999997, 0, 0.8660253, 0, 1, 0, -0.8660253, 0, 0.49999997, -2.2000008, 0, -3.9)
-_model_file = "res://Game/Monsters/SkeletonGolem1.json"
-loot_obj = 5
-loot_gold = 4
-
-[node name="Character" parent="BossRoom/Golem" unique_id=1568710970 instance=ExtResource("58_ygsoc")]
 
 [node name="torch_mounted2" parent="BossRoom" unique_id=1436209982 instance=ExtResource("3_yra1b")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4, 0, 2.2000003)

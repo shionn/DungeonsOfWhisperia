@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://csg4ffnbxbal1"]
+
+[ext_resource type="PackedScene" uid="uid://dvd4uuprholj6" path="res://Game/Monsters/Monster.tscn" id="1_j6ivi"]
+[ext_resource type="PackedScene" uid="uid://ciu823c3rw73b" path="res://Assets/Scenes/Skeleton_Warrior.tscn" id="2_o2uaq"]
+[ext_resource type="Script" uid="uid://jc48o2pjdmpq" path="res://Game/Monsters/SkeletonWarrior.gd" id="2_o76cw"]
+[ext_resource type="Script" uid="uid://beivecuks870r" path="res://Game/Monsters/MonsterAtk.gd" id="3_o2uaq"]
+
+[node name="SkeletonWarrior" unique_id=706438754 instance=ExtResource("1_j6ivi")]
+script = ExtResource("2_o76cw")
+
+[node name="Character" parent="." index="8" unique_id=1197270133 instance=ExtResource("2_o2uaq")]
+
+[node name="Chop" type="Node" parent="." index="9" unique_id=1604398760 node_paths=PackedStringArray("sound")]
+script = ExtResource("3_o2uaq")
+animation = "Melee_1H_Attack_Chop"
+animation_to_hit_factor = 0.6
+cold_down = 2.0
+atk_dice = 3
+sound = NodePath("../Swing2")
+metadata/_custom_type_script = "uid://beivecuks870r"
+
+[node name="SliceDiagonal" type="Node" parent="." index="10" unique_id=33146268 node_paths=PackedStringArray("sound")]
+script = ExtResource("3_o2uaq")
+animation = "Melee_1H_Attack_Slice_Diagonal"
+animation_to_hit_factor = 0.5
+cold_down = 15.0
+atk_dice = 4
+sound = NodePath("../Swing2")
+metadata/_custom_type_script = "uid://beivecuks870r"
+
+[node name="SliceHorizontal" type="Node" parent="." index="11" unique_id=1036993632 node_paths=PackedStringArray("sound")]
+script = ExtResource("3_o2uaq")
+animation = "Melee_1H_Attack_Slice_Horizontal"
+animation_to_hit_factor = 0.3
+cold_down = 2.0
+atk_dice = 3
+sound = NodePath("../Swing2")
+metadata/_custom_type_script = "uid://beivecuks870r"

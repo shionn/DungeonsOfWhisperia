@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://nvl7qu3464h4"]
 
 [ext_resource type="PackedScene" uid="uid://dvd4uuprholj6" path="res://Game/Monsters/Monster.tscn" id="1_46yaf"]
-[ext_resource type="Script" uid="uid://bjwyh6ydpbr73" path="res://Game/Monsters/SekeletonMinion.gd" id="2_unf0s"]
+[ext_resource type="Script" uid="uid://bjwyh6ydpbr73" path="res://Game/Monsters/SkeletonMinion.gd" id="2_unf0s"]
 [ext_resource type="Script" uid="uid://beivecuks870r" path="res://Game/Monsters/MonsterAtk.gd" id="3_1qcao"]
 [ext_resource type="PackedScene" uid="uid://duyv10q0hqy0g" path="res://Assets/Scenes/Skeleton_Minion.tscn" id="4_behvp"]
 
-[node name="Monster" unique_id=706438754 instance=ExtResource("1_46yaf")]
+[node name="SkeletonMinion" unique_id=706438754 instance=ExtResource("1_46yaf")]
 script = ExtResource("2_unf0s")
 
 [node name="Chop" type="Node" parent="." index="8" unique_id=431445880 node_paths=PackedStringArray("sound")]
