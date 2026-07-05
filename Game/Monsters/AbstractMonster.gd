@@ -23,6 +23,7 @@ var _on_gcd : bool = false
 var state : State = State.IDLE
 var see_player = false
 var pv = get_max_pv()
+var _hit_take = 0
 
 func _ready() -> void:
 	_navigation_agent.target_desired_distance = 0 #_model.chase_distance
@@ -33,7 +34,7 @@ func _physics_process(_delta: float) -> void:
 	see_player = _see_player()
 	if _player.isDead() : 
 		state = State.IDLE
-	elif see_player :
+	elif see_player or _hit_take>=2:
 		_navigation_agent.set_target_position(_player.global_position)
 	match state: 
 		State.CHASE:
@@ -148,6 +149,7 @@ func _on_atk_timer_timeout() -> void:
 
 func receive_atk(nb_atk: int) -> void:
 	if state == State.DEATH : return
+	_hit_take = _hit_take + 1
 	var nb_def = Dices.d6(get_def(), 6)
 	var deg = nb_atk - nb_def
 	if nb_atk > 0 : _gui.consoleLog("Vous obtenez %d 💀, %s obtient %d 🛡" % [nb_atk, name, nb_def])
