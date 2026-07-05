@@ -11,10 +11,10 @@ enum State { IDLE, CHASE, ATTACK, ATTACKING, HIT, DEATH }
 
 @export var loot_obj : Items.ItemName = Items.ItemName.None
 @export var loot_gold: int = 0
+@export var lvl : int = 1
 
 const _movement_speed: float = 4.0
 
-#var _model : MonsterModel
 var _atk : MonsterAtk
 var _on_gcd : bool = false
 var state : State = State.IDLE
@@ -154,6 +154,7 @@ func receive_atk(nb_atk: int) -> void:
 		get_hit_sound().play()
 		if pv <= 0 :
 			start_animation("Death_A", true)
+			player.xp = player.xp+compute_xp()
 			state = State.DEATH
 		elif state != State.ATTACKING :
 			start_animation("Hit_A", true)
@@ -164,6 +165,10 @@ func receive_atk(nb_atk: int) -> void:
 
 func _on_gcd_timer_timeout() -> void:
 	_on_gcd = false
+
+func compute_xp() -> int:
+	var large = 1 if is_large() else 0
+	return get_def()+get_max_pv()+list_atks().get(0).atk_dice+lvl+large
 
 @abstract func get_fov() -> float
 @abstract func get_rig() -> String

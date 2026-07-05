@@ -17,6 +17,7 @@ var _attacked_monster : Monster
 
 var lvl = 1
 var pv = get_max_pv()
+var xp = 0
 
 func _ready() -> void:
 	_animation.animation_finished.connect(_on_animation_finished)
