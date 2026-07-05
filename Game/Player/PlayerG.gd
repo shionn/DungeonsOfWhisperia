@@ -1,12 +1,10 @@
 @abstract class_name PlayerG
-extends CharacterBody3D
+extends GameBaseCharacterBody3D
 
 enum State { ATTACK, MOVE, IDLE, HIT, DEATH }
 
 @onready var _character = $Character as Node3D
 @onready var _animation = $Character/AnimationPlayer as AnimationPlayer
-@onready var _world = $/root/World as World
-@onready var _gui = $/root/World/Gui as Gui
 @onready var _mainHandAtkTimer = $MainHandAtkTimer as Timer
 @onready var _offHandAtkTimer = $OffHandAtkTimer as Timer
 
@@ -29,12 +27,12 @@ func _physics_process(_delta: float) -> void:
 	match _state :
 		State.MOVE:
 			if Input.is_action_just_released("interact") :
-				if _world.target_monster and _world.target_monster.state == Monster.State.DEATH :
+				if world.target_monster and world.target_monster.state == Monster.State.DEATH :
 					pass # do loot
-				if _world.target_monster and _world.target_monster.state != Monster.State.DEATH :
-					_attacked_monster = _world.target_monster
+				if world.target_monster and world.target_monster.state != Monster.State.DEATH :
+					_attacked_monster = world.target_monster
 					var _range = get_atk_range() + 1  if _attacked_monster.is_large() else get_atk_range()
-					if self.global_position.distance_to(_attacked_monster.global_position) < _range  :
+					if distance_to(_attacked_monster) < _range  :
 						_start_atk()
 			else : 
 				_handle_move_input()
@@ -66,9 +64,9 @@ func receive_atk(nb_atk: int, monster:Monster) -> void:
 	var nb_def = Dices.d6(get_def(), 5)
 	var deg = nb_atk - nb_def
 	if nb_atk > 0 :
-		_gui.consoleLog("%s obtient %d 💀, vous obtenez %d 🛡" % [monster.name, nb_atk, nb_def])
+		gui.consoleLog("%s obtient %d 💀, vous obtenez %d 🛡" % [monster.name, nb_atk, nb_def])
 	else :
-		_gui.consoleLog("%s obtient %d 💀" % [monster.name, nb_atk])
+		gui.consoleLog("%s obtient %d 💀" % [monster.name, nb_atk])
 		
 	if deg > 0 :
 		$HumanYell3.play()
@@ -112,8 +110,6 @@ func _on_animation_finished(_anim_name : String) -> void:
 			_state = State.MOVE
 
 func isDead() -> bool: return _state == State.DEATH or pv <= 0
-func distance_to(target:Node3D) -> float :
-	return global_position.distance_to(target.global_position)
 
 @abstract func get_def() -> int
 @abstract func get_max_pv() -> int
