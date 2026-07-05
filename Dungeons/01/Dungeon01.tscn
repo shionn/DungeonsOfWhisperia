@@ -700,6 +700,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, 4)
 
 [node name="Skeleton Golem" parent="BossRoom" unique_id=527358216 instance=ExtResource("31_u21oi")]
 transform = Transform3D(0.49999997, 0, 0.8660253, 0, 1, 0, -0.8660253, 0, 0.49999997, -2.2000008, 0, -3.9)
+loot_obj = 5
+loot_gold = 4
 
 [node name="Desk" type="Node3D" parent="BossRoom" unique_id=1645702767]
 transform = Transform3D(0.8660254, 0, -0.5, 0, 1, 0, 0.5, 0, 0.8660254, -0.9000015, 0, 2.6000004)
