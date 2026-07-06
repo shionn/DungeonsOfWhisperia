@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://dmkiq7rpokduw"]
 
-[ext_resource type="PackedScene" uid="uid://l4ocv1r3b2jl" path="res://Game/Environment.tscn" id="1_oi5bp"]
 [ext_resource type="PackedScene" uid="uid://b0n3wa8ptu8li" path="res://Assets/Dungeons/Floor/Large/floor_wood_large.gltf" id="1_yp4s1"]
 [ext_resource type="PackedScene" uid="uid://mlpr7au8pmas" path="res://Assets/Dungeons/Floor/Large/floor_wood_large_dark.gltf" id="2_hdq2o"]
 [ext_resource type="PackedScene" uid="uid://dnj0c0ut1hd35" path="res://Assets/Scenes/Wall_Doorway.tscn" id="4_68h1y"]
@@ -9,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cl36lcn4lo2eq" path="res://Assets/Scenes/Torch_Mounted.tscn" id="7_68h1y"]
 [ext_resource type="PackedScene" uid="uid://c6i85c8iqhfgd" path="res://Assets/Dungeons/Wall/TSplit/wall_Tsplit.gltf" id="7_yel37"]
 [ext_resource type="PackedScene" uid="uid://csnc3setmi12j" path="res://Assets/Dungeons/Stairs/stairs_wall_left.gltf" id="8_28n2i"]
+[ext_resource type="Texture2D" uid="uid://dw7dieeqqesdv" path="res://Assets/Textures/Dungeon/alt_texture_5_NightA.png" id="9_2aq5y"]
 [ext_resource type="PackedScene" uid="uid://seduh2e3emxb" path="res://Assets/Dungeons/Bar/bar_straight_B.gltf" id="10_5on6j"]
 [ext_resource type="PackedScene" uid="uid://bta2mvfkcul0j" path="res://Assets/Dungeons/Bar/bar_straight_C.gltf" id="11_3w82h"]
 [ext_resource type="PackedScene" uid="uid://cbbuf33qge7bs" path="res://Assets/Dungeons/Bar/bar_straight_A_short.gltf" id="12_bshfy"]
@@ -50,8 +50,6 @@ transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 16.5
 
 [node name="bar_straight_A2" parent="Bar" unique_id=984168504 instance=ExtResource("14_w87p1")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 10.5, 0, -13)
-
-[node name="WorldEnvironment" parent="." unique_id=485933020 instance=ExtResource("1_oi5bp")]
 
 [node name="Floors" type="Node3D" parent="." unique_id=221041026]
 
@@ -127,6 +125,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, -16)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -16)
 
 [node name="Walls" type="Node3D" parent="." unique_id=1610977315]
+script = ExtResource("14_2aq5y")
+_enable = false
+_texture = ExtResource("9_2aq5y")
 
 [node name="Wall_Doorway" parent="Walls" unique_id=812446971 instance=ExtResource("4_68h1y")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -2, 0, 0)
@@ -166,7 +167,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -18)
 
 [node name="stairs_wall_left2" parent="Walls" unique_id=368500310 instance=ExtResource("8_28n2i")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 14, 0, 6)
-script = ExtResource("14_2aq5y")
 
 [node name="Wall_Doorway2" parent="Walls" unique_id=467545128 instance=ExtResource("4_68h1y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, -14)
