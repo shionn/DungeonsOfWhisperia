@@ -22,7 +22,10 @@
 [ext_resource type="AudioStream" uid="uid://rc5hdthh3pa2" path="res://Audio/KenneyRpgAudio/handleCoins2.ogg" id="20_cq4r1"]
 [ext_resource type="Texture2D" uid="uid://dhtjf317oy7br" path="res://Gui/Assets/kenney/cursor-pack/tracking_horizontal_down.png" id="21_c4ovl"]
 [ext_resource type="Texture2D" uid="uid://dstsbh4f6k4j5" path="res://Gui/Assets/kenney/cursor-pack/door_exit.png" id="21_f4re5"]
+[ext_resource type="Texture2D" uid="uid://bkbrcpwq01672" path="res://Gui/Assets/kenney/cursor-pack/door.png" id="21_irpma"]
+[ext_resource type="Script" uid="uid://85rjankja22n" path="res://Gui/AubergeExit.gd" id="21_ji1eb"]
 [ext_resource type="Texture2D" uid="uid://bxmq2jm6psefk" path="res://Gui/Assets/kenney/cursor-pack/resize_d_cross_diagonal.png" id="21_wbke4"]
+[ext_resource type="Texture2D" uid="uid://dno5jamv0r03y" path="res://Gui/Assets/kenney/cursor-pack/door_disabled.png" id="22_3yfkq"]
 [ext_resource type="Script" uid="uid://b5u38rsuiglhp" path="res://Gui/MenuGui.gd" id="22_mnphl"]
 [ext_resource type="Script" uid="uid://cstky8dpig813" path="res://Gui/DialogGui.gd" id="23_2m3pn"]
 [ext_resource type="Texture2D" uid="uid://d136lgd35s1xx" path="res://Gui/Assets/kenney/cursor-pack/mark_question.png" id="23_883rq"]
@@ -597,6 +600,7 @@ layout_mode = 2
 texture = ExtResource("18_w65rx")
 
 [node name="Options" type="GridContainer" parent="." unique_id=139407599]
+visible = false
 z_index = 10
 layout_mode = 1
 anchors_preset = 8
@@ -879,6 +883,99 @@ script = ExtResource("24_xkmul")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="ConsoleLog" unique_id=2077119084]
 libraries/ = SubResource("AnimationLibrary_mya5i")
 
+[node name="ExitAuberge" type="GridContainer" parent="." unique_id=1762395580]
+z_index = 10
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -143.0
+offset_top = -74.5
+offset_right = 143.0
+offset_bottom = 74.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 3
+script = ExtResource("21_ji1eb")
+
+[node name="NW" type="TextureRect" parent="ExitAuberge" unique_id=1237305548]
+layout_mode = 2
+texture = ExtResource("11_883rq")
+
+[node name="N" type="TextureRect" parent="ExitAuberge" unique_id=1141183674]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("12_m2wub")
+stretch_mode = 1
+
+[node name="NE" type="TextureRect" parent="ExitAuberge" unique_id=1584354105]
+layout_mode = 2
+texture = ExtResource("13_irpma")
+
+[node name="W" type="TextureRect" parent="ExitAuberge" unique_id=1005525290]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("14_3yfkq")
+stretch_mode = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="ExitAuberge" unique_id=477715106]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_fucts")
+
+[node name="MarginContainer" type="MarginContainer" parent="ExitAuberge/PanelContainer" unique_id=2123638410]
+layout_mode = 2
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ExitAuberge/PanelContainer/MarginContainer" unique_id=1748911284]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="Label" type="Label" parent="ExitAuberge/PanelContainer/MarginContainer/VBoxContainer" unique_id=1775208989]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Aller ou ?"
+horizontal_alignment = 1
+
+[node name="Dungeon01" type="Button" parent="ExitAuberge/PanelContainer/MarginContainer/VBoxContainer" unique_id=932495963]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+text = "Mausolet"
+icon = ExtResource("21_irpma")
+
+[node name="CloseButton" type="Button" parent="ExitAuberge/PanelContainer/MarginContainer/VBoxContainer" unique_id=1231563995]
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "Fermer"
+text = "Rester"
+icon = ExtResource("22_3yfkq")
+
+[node name="E" type="TextureRect" parent="ExitAuberge" unique_id=531721656]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("15_ji1eb")
+stretch_mode = 1
+
+[node name="SW" type="TextureRect" parent="ExitAuberge" unique_id=468341041]
+layout_mode = 2
+texture = ExtResource("16_8pck7")
+
+[node name="S" type="TextureRect" parent="ExitAuberge" unique_id=75448019]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("17_el8jn")
+stretch_mode = 1
+
+[node name="SE" type="TextureRect" parent="ExitAuberge" unique_id=197564385]
+layout_mode = 2
+texture = ExtResource("18_w65rx")
+
 [node name="Transition" type="ColorRect" parent="." unique_id=1423279180]
 visible = false
 layout_mode = 1
@@ -905,4 +1002,6 @@ libraries/ = SubResource("AnimationLibrary_7xgee")
 [connection signal="pressed" from="Options/PanelContainer/MarginContainer/VBoxContainer/CloseButton" to="Options" method="_on_close_button_pressed"]
 [connection signal="visibility_changed" from="DialogGui" to="." method="_on_dialog_gui_visibility_changed"]
 [connection signal="pressed" from="DialogGui/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/CloseButton" to="DialogGui" method="_on_close_button_pressed"]
+[connection signal="pressed" from="ExitAuberge/PanelContainer/MarginContainer/VBoxContainer/Dungeon01" to="ExitAuberge" method="_on_dungeon_01_pressed"]
+[connection signal="pressed" from="ExitAuberge/PanelContainer/MarginContainer/VBoxContainer/CloseButton" to="." method="_close"]
 [connection signal="animation_finished" from="Transition/AnimationPlayer" to="Transition" method="_on_animation_finished"]

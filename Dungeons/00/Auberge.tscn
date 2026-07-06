@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://dmkiq7rpokduw"]
 
+[ext_resource type="PackedScene" uid="uid://budb61il707se" path="res://Assets/Dungeons/Wall/Doorway/wall_doorway.gltf" id="1_264vq"]
 [ext_resource type="PackedScene" uid="uid://b0n3wa8ptu8li" path="res://Assets/Dungeons/Floor/Large/floor_wood_large.gltf" id="1_yp4s1"]
+[ext_resource type="Script" uid="uid://c1bupys5fsua" path="res://Dungeons/00/ExitDoor.gd" id="2_cvv45"]
 [ext_resource type="PackedScene" uid="uid://mlpr7au8pmas" path="res://Assets/Dungeons/Floor/Large/floor_wood_large_dark.gltf" id="2_hdq2o"]
 [ext_resource type="PackedScene" uid="uid://xxwvvhvlk5e1" path="res://Assets/Dungeons/Bar/bar_innercorner.gltf" id="2_uiibc"]
 [ext_resource type="PackedScene" uid="uid://dnj0c0ut1hd35" path="res://Assets/Scenes/Wall_Doorway.tscn" id="4_68h1y"]
@@ -26,9 +28,22 @@
 [ext_resource type="PackedScene" uid="uid://b4peav3v7nax7" path="res://Assets/Dungeons/Pillar/pillar.gltf" id="19_v2by8"]
 [ext_resource type="Script" uid="uid://dexpl21rteomv" path="res://Game/Roof.gd" id="21_16ran"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_b02ke"]
+size = Vector3(2, 2.6000001, 0.8)
+
 [node name="Auberge" type="Node3D" unique_id=1682341964]
 
 [node name="RDC" type="Node3D" parent="." unique_id=1604559993]
+
+[node name="ExitDoor" parent="RDC" unique_id=232793091 instance=ExtResource("1_264vq")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -2, 0, 0)
+script = ExtResource("2_cvv45")
+
+[node name="Area3D" type="Area3D" parent="RDC/ExitDoor" unique_id=2114187268]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RDC/ExitDoor/Area3D" unique_id=290936535]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4, 0)
+shape = SubResource("BoxShape3D_b02ke")
 
 [node name="Lights" type="Node3D" parent="RDC" unique_id=1071039568]
 
@@ -86,9 +101,6 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 16.8
 script = ExtResource("14_2aq5y")
 _enable = false
 _texture = ExtResource("9_2aq5y")
-
-[node name="Wall_Doorway" parent="RDC/Walls" unique_id=1938487086 instance=ExtResource("4_68h1y")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -2, 0, 0)
 
 [node name="wall_corner2" parent="RDC/Walls" unique_id=17662683 instance=ExtResource("5_yel37")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2, 0, -2)
@@ -184,10 +196,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, -18)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -18)
 
 [node name="wall_half_endcap2" parent="RDC/Walls" unique_id=1582122285 instance=ExtResource("16_kcjse")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -2, 0, -2)
 
 [node name="wall_half_endcap3" parent="RDC/Walls" unique_id=700296464 instance=ExtResource("16_kcjse")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -2, 0, 2)
 
 [node name="stairs_wall_left" parent="RDC/Walls" unique_id=748339832 instance=ExtResource("17_2aq5y")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 14, 0, 6)
@@ -317,6 +329,7 @@ transform = Transform3D(0.70710695, 0, 0.7071067, 0, 1, 0, -0.7071067, 0, 0.7071
 transform = Transform3D(-0.70710695, 0, -0.7071068, 0, 1, 0, 0.7071068, 0, -0.70710695, -0.21213198, 3, -0.21213245)
 
 [node name="Stair" type="Node3D" parent="." unique_id=1140349430]
+visible = false
 script = ExtResource("21_16ran")
 
 [node name="Floor" type="Node3D" parent="Stair" unique_id=348887855]

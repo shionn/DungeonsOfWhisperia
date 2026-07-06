@@ -117,6 +117,11 @@ func _on_animation_finished(_anim_name : String) -> void:
 		State.HIT :
 			_state = State.MOVE
 
+func reset_orientation() -> void:
+	_character.rotation.y = PI/2
+	$Camera3D.rotation.y = -PI/2
+	$Camera3D.rotation.x = 0
+
 func isDead() -> bool: return _state == State.DEATH or pv <= 0
 
 @abstract func get_def() -> int
