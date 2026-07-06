@@ -37,8 +37,11 @@ func _physics_process(_delta: float) -> void:
 						_start_atk()
 			else : 
 				_handle_move_input()
-		State.HIT: velocity = Vector3.ZERO
-		State.DEATH: velocity = Vector3.ZERO
+		State.HIT: _stop_move()
+		State.DEATH: _stop_move()
+
+	if is_on_floor() : velocity.y = 0
+	else : velocity += get_gravity() * _delta
 	
 	move_and_slide()
 
@@ -55,11 +58,15 @@ func _handle_move_input() -> void:
 			_character.rotation.y = atan2(direction.x,direction.z)
 			_start_animation("Walking_A")
 		else:
-			velocity = Vector3.ZERO
+			_stop_move()
 			_start_animation("Idle_A")
 	else:
-		velocity = Vector3.ZERO
+		_stop_move()
 		_start_animation("Idle_A")
+
+func _stop_move() -> void :
+	velocity.x = 0
+	velocity.z = 0
 
 func receive_atk(nb_atk: int, monster:Monster) -> void:
 	var nb_def = Dices.d6(get_def(), 5)
@@ -85,7 +92,7 @@ func _start_atk() -> void:
 	if is_atk_dual_Hand() : _offHandAtkTimer.start(duration*get_atk_off_hand_timer_factor())
 	_character.rotation.y = get_viewport().get_camera_3d().rotation.y+PI
 	_state = State.ATTACK
-	velocity = Vector3.ZERO
+	_stop_move()
 
 func _on_main_hand_atk_timer() -> void:
 	var nb_atk = get_atk_main_hand()

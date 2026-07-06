@@ -13,7 +13,6 @@ func apply_to_node(elem :Node3D) -> void :
 			var i = 0
 			var mat = mesh.get_active_material(i) as StandardMaterial3D
 			while mat != null :
-				print(mat.albedo_texture)
 				mat.albedo_texture = _texture
 				i = i+1
 				mat = mesh.get_active_material(i) as StandardMaterial3D

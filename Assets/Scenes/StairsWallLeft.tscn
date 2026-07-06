@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://inewpyqb2si0"]
+
+[ext_resource type="PackedScene" uid="uid://csnc3setmi12j" path="res://Assets/Dungeons/Stairs/stairs_wall_left.gltf" id="1_md2id"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_b02ke"]
+size = Vector3(0.8, 5.6, 3.4)
+
+[node name="stairs_wall_left" unique_id=748339832 instance=ExtResource("1_md2id")]
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="stairs_wall_left/StaticBody3D" parent_id_path=PackedInt32Array(1465522098) index="0" unique_id=1375154184]
+transform = Transform3D(0.70710677, -0.7071067, 0, 0.7071067, 0.70710677, 0, 0, 0, 1, 0.20710653, 1.6996603, 1.9999999)
+shape = SubResource("BoxShape3D_b02ke")
