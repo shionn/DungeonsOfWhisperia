@@ -6,32 +6,65 @@
 [ext_resource type="PackedScene" uid="uid://mlpr7au8pmas" path="res://Assets/Dungeons/Floor/Large/floor_wood_large_dark.gltf" id="2_hdq2o"]
 [ext_resource type="PackedScene" uid="uid://xxwvvhvlk5e1" path="res://Assets/Dungeons/Bar/bar_innercorner.gltf" id="2_uiibc"]
 [ext_resource type="PackedScene" uid="uid://dnj0c0ut1hd35" path="res://Assets/Scenes/Wall_Doorway.tscn" id="4_68h1y"]
+[ext_resource type="PackedScene" uid="uid://dhflr6qrk1e1d" path="res://Assets/Dungeons/Coin/coin_stack_small.gltf" id="4_p7u67"]
+[ext_resource type="PackedScene" uid="uid://bmsswkb24hlcs" path="res://Assets/Dungeons/Coin/coin.gltf" id="5_rr5s8"]
 [ext_resource type="PackedScene" uid="uid://0fn6al4q3iav" path="res://Assets/Dungeons/Wall/Corner/wall_corner.gltf" id="5_yel37"]
 [ext_resource type="PackedScene" uid="uid://dovakj2rku7yl" path="res://Assets/Dungeons/Wall/wall_window_open.gltf" id="6_hdq2o"]
 [ext_resource type="PackedScene" uid="uid://cl36lcn4lo2eq" path="res://Assets/Scenes/Torch_Mounted.tscn" id="7_68h1y"]
 [ext_resource type="PackedScene" uid="uid://c6i85c8iqhfgd" path="res://Assets/Dungeons/Wall/TSplit/wall_Tsplit.gltf" id="7_yel37"]
-[ext_resource type="PackedScene" uid="uid://bcpilxt3dmp07" path="res://Assets/Dungeons/Bar/bartop_B_large.gltf" id="8_26ie4"]
 [ext_resource type="PackedScene" uid="uid://drxqh8hppf4fg" path="res://Assets/Dungeons/Barrier/barrier_corner.gltf" id="8_ewcw7"]
+[ext_resource type="PackedScene" uid="uid://umb3bjiok44i" path="res://Assets/Dungeons/Bottle/bottle_A_labeled_green.gltf" id="8_ifxis"]
 [ext_resource type="Texture2D" uid="uid://dw7dieeqqesdv" path="res://Assets/Textures/Dungeon/alt_texture_5_NightA.png" id="9_2aq5y"]
 [ext_resource type="PackedScene" uid="uid://chff1sr5jalwq" path="res://Assets/Dungeons/Barrier/barrier.gltf" id="9_37dca"]
 [ext_resource type="PackedScene" uid="uid://d17shvcpj3oew" path="res://Assets/Dungeons/Barrel/barrel_small_stack.gltf" id="9_sv8nb"]
 [ext_resource type="PackedScene" uid="uid://f52lhsysbtf7" path="res://Assets/Dungeons/Barrier/barrier_half.gltf" id="10_0ska8"]
 [ext_resource type="PackedScene" uid="uid://seduh2e3emxb" path="res://Assets/Dungeons/Bar/bar_straight_B.gltf" id="10_5on6j"]
+[ext_resource type="PackedScene" uid="uid://cci3nonvs2qm3" path="res://Assets/Dungeons/Bottle/bottle_A_labeled_brown.gltf" id="10_7cisn"]
 [ext_resource type="PackedScene" uid="uid://bta2mvfkcul0j" path="res://Assets/Dungeons/Bar/bar_straight_C.gltf" id="11_3w82h"]
 [ext_resource type="PackedScene" uid="uid://cbbuf33qge7bs" path="res://Assets/Dungeons/Bar/bar_straight_A_short.gltf" id="12_bshfy"]
 [ext_resource type="Script" uid="uid://cux3ba4bcmj4r" path="res://Dungeons/ChangeTexture.gd" id="14_2aq5y"]
 [ext_resource type="PackedScene" uid="uid://7em3lt4lnfwr" path="res://Assets/Dungeons/Wall/wall.gltf" id="14_3w82h"]
+[ext_resource type="PackedScene" uid="uid://duou4wlxhj2jj" path="res://Assets/Dungeons/Bottle/bottle_B_brown.gltf" id="14_fpiy1"]
 [ext_resource type="PackedScene" uid="uid://6va0jlkenwta" path="res://Assets/Dungeons/Pillar/pillar_decorated.gltf" id="15_bshfy"]
+[ext_resource type="PackedScene" uid="uid://cpxbxsa88w1au" path="res://Assets/Dungeons/Bottle/bottle_B_green.gltf" id="15_nx0cc"]
 [ext_resource type="PackedScene" uid="uid://bb3fm1t7c54di" path="res://Assets/Dungeons/Wall/End/wall_half_endcap.gltf" id="16_kcjse"]
 [ext_resource type="PackedScene" uid="uid://bjfrjb5gr6a3k" path="res://Assets/Dungeons/Wall/wall_arched.gltf" id="16_w87p1"]
+[ext_resource type="PackedScene" uid="uid://dtbeiqnbxjtah" path="res://Assets/Dungeons/Bottle/bottle_C_brown.gltf" id="16_x11bk"]
 [ext_resource type="PackedScene" uid="uid://inewpyqb2si0" path="res://Assets/Scenes/StairsWallLeft.tscn" id="17_2aq5y"]
+[ext_resource type="PackedScene" uid="uid://dwp1aw2ohbybl" path="res://Assets/Dungeons/Bottle/bottle_C_green.gltf" id="17_jf8wf"]
 [ext_resource type="PackedScene" uid="uid://gv22cmuit7gu" path="res://Assets/Dungeons/Banner/banner_blue.gltf" id="18_e7c1w"]
+[ext_resource type="PackedScene" uid="uid://btt55eik1mr7w" path="res://Assets/Dungeons/Crate/crate_large_decorated.gltf" id="18_qyrih"]
 [ext_resource type="PackedScene" uid="uid://diu8tw2qy424f" path="res://Assets/Dungeons/Floor/Small/floor_wood_small.gltf" id="19_kcjse"]
+[ext_resource type="PackedScene" uid="uid://bn8dfnfq6hysb" path="res://Assets/Dungeons/Key/keyring.gltf" id="19_nl4f0"]
 [ext_resource type="PackedScene" uid="uid://b4peav3v7nax7" path="res://Assets/Dungeons/Pillar/pillar.gltf" id="19_v2by8"]
+[ext_resource type="PackedScene" uid="uid://bpu05mij5jnkt" path="res://Assets/Dungeons/Plates/plate_stack.gltf" id="20_lv1qi"]
 [ext_resource type="Script" uid="uid://dexpl21rteomv" path="res://Game/Roof.gd" id="21_16ran"]
+[ext_resource type="PackedScene" uid="uid://b8oewjyhbwdaq" path="res://Assets/Dungeons/Plates/plate_food_A.gltf" id="21_yxyjh"]
+[ext_resource type="PackedScene" uid="uid://c0nmih5nyesvy" path="res://Assets/Dungeons/Trunk/trunk_small_A.gltf" id="22_l4ilv"]
+[ext_resource type="PackedScene" uid="uid://dg16k84dtvwob" path="res://Assets/Dungeons/Bar/bartop_A_large.gltf" id="22_p7u67"]
 [ext_resource type="PackedScene" uid="uid://pr25veao6k8m" path="res://Assets/Dungeons/Banner/banner_yellow.gltf" id="25_26ie4"]
+[ext_resource type="PackedScene" uid="uid://c30lsc5ig88xe" path="res://Assets/Dungeons/Bed/bed_A_stacked.gltf" id="27_pll3x"]
 [ext_resource type="AudioStream" uid="uid://db7lwuontm64n" path="res://Audio/RpgNeverGoFullBard/RPG_Never_Go_Full_Bard.ogg" id="28_6cvm0"]
+[ext_resource type="PackedScene" uid="uid://bobt23yvv8hdr" path="res://Assets/Dungeons/Bed/bed_A_single.gltf" id="28_l5bnf"]
+[ext_resource type="PackedScene" uid="uid://cno0c1joodtym" path="res://Assets/Dungeons/Bed/bed_B_double.gltf" id="29_pm82x"]
+[ext_resource type="PackedScene" uid="uid://ci8abno7ya78x" path="res://Assets/Dungeons/Banner/banner_triple_yellow.gltf" id="30_df0jl"]
+[ext_resource type="PackedScene" uid="uid://dctptn7sxm10s" path="res://Assets/Dungeons/Bed/bed_B_single.gltf" id="30_gy2ll"]
+[ext_resource type="PackedScene" uid="uid://qv2dm02eh64" path="res://Assets/Dungeons/Wall/wall_inset_shelves_decoratedA.gltf" id="30_rr5s8"]
 [ext_resource type="PackedScene" uid="uid://bmj1m3g818shm" path="res://Assets/Dungeons/Barrel/barrel_large_decorated.gltf" id="31_hoab0"]
+[ext_resource type="PackedScene" uid="uid://lloiny58xuo1" path="res://Assets/Dungeons/Book/bookcase_single_decoratedA.gltf" id="31_hs5f0"]
+[ext_resource type="PackedScene" uid="uid://b6is0dowm6vx5" path="res://Assets/Dungeons/Book/bookcase_double_decoratedA.gltf" id="32_l5bnf"]
+[ext_resource type="PackedScene" uid="uid://dt83bove5us53" path="res://Assets/Dungeons/Book/bookcase_single_decoratedB.gltf" id="33_pm82x"]
+[ext_resource type="PackedScene" uid="uid://cbjrk02rg0au6" path="res://Assets/Dungeons/Box/box_stacked.gltf" id="40_wji3q"]
+[ext_resource type="PackedScene" uid="uid://c5uhn6xvyk1wt" path="res://Assets/Dungeons/Box/box_small_decorated.gltf" id="41_488ss"]
+[ext_resource type="PackedScene" uid="uid://d0d62rw45klnc" path="res://Assets/Dungeons/Chair/chair.gltf" id="42_fq3ns"]
+[ext_resource type="PackedScene" uid="uid://lkdece1ud37e" path="res://Assets/Dungeons/Crate/crates_stacked.gltf" id="43_52cfg"]
+[ext_resource type="PackedScene" uid="uid://btqa3ldkn43uq" path="res://Assets/Dungeons/Tables/stool.gltf" id="45_ddkp2"]
+[ext_resource type="PackedScene" uid="uid://dtkqe34k0hfda" path="res://Assets/Dungeons/Tables/stool_round.gltf" id="46_od4xh"]
+[ext_resource type="PackedScene" uid="uid://bqbfybidqqw6b" path="res://Assets/Dungeons/Tables/table_long_decorated_A.gltf" id="47_o35sb"]
+[ext_resource type="PackedScene" uid="uid://benoj54dmovyq" path="res://Assets/Dungeons/Tables/table_long_decorated_B.gltf" id="48_6hlga"]
+[ext_resource type="PackedScene" uid="uid://cd70tnt7fd2v6" path="res://Assets/Dungeons/Tables/table_long_decorated_C.gltf" id="49_ntc8q"]
+[ext_resource type="PackedScene" uid="uid://beewm24j3envo" path="res://Assets/Dungeons/Tables/table_long.gltf" id="50_doy55"]
+[ext_resource type="PackedScene" uid="uid://bmk1gkynr64n1" path="res://Assets/Dungeons/Tables/table_small_decorated_C.gltf" id="59_em8p4"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_b02ke"]
 size = Vector3(2, 2.6000001, 0.8)
@@ -58,20 +91,11 @@ transform = Transform3D(1.1920929e-07, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, 1
 [node name="torch_mounted3" parent="RDC/Lights" unique_id=853243303 instance=ExtResource("7_68h1y")]
 transform = Transform3D(0.9999999, 0, -1.6292066e-07, 0, 1, 0, 1.6292066e-07, 0, 0.9999999, 10.7, 0, -13.9)
 
-[node name="torch_mounted4" parent="RDC/Lights" unique_id=1929238561 instance=ExtResource("7_68h1y")]
-transform = Transform3D(-2.0663202e-07, 0, -0.9999999, 0, 1, 0, 0.9999999, 0, -2.0663202e-07, 18, 4, -9.9)
-
 [node name="torch_mounted5" parent="RDC/Lights" unique_id=1646486250 instance=ExtResource("7_68h1y")]
 transform = Transform3D(1.1920927e-07, 0, 0.9999999, 0, 1, 0, -0.9999999, 0, 1.1920927e-07, 2, 4, -7.8999996)
 
 [node name="torch_mounted6" parent="RDC/Lights" unique_id=1093218368 instance=ExtResource("7_68h1y")]
 transform = Transform3D(0.9999999, 0, -1.6292066e-07, 0, 1, 0, 1.6292066e-07, 0, 0.9999999, 20.1, 4, -1.8999996)
-
-[node name="torch_mounted7" parent="RDC/Lights" unique_id=1852506342 instance=ExtResource("7_68h1y")]
-transform = Transform3D(1.1920926e-07, 0, 0.9999999, 0, 1, 0, -0.9999999, 0, 1.1920926e-07, 18, 4, -3.8999994)
-
-[node name="torch_mounted8" parent="RDC/Lights" unique_id=941006376 instance=ExtResource("7_68h1y")]
-transform = Transform3D(1.1920926e-07, 0, 0.9999999, 0, 1, 0, -0.9999999, 0, 1.1920926e-07, 18, 4, -11.9)
 
 [node name="torch_mounted2" parent="RDC/Lights" unique_id=1678202322 instance=ExtResource("7_68h1y")]
 transform = Transform3D(1.1920929e-07, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, 1.1920929e-07, 1.9999999, 0, 4)
@@ -79,11 +103,20 @@ transform = Transform3D(1.1920929e-07, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, 1
 [node name="Bar" type="Node3D" parent="RDC" unique_id=311502028]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, -8)
 
+[node name="coin_stack_small2" parent="RDC/Bar" unique_id=1666666879 instance=ExtResource("4_p7u67")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1, 0)
+
+[node name="coin2" parent="RDC/Bar" unique_id=1945699380 instance=ExtResource("5_rr5s8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1999998, 1, 1.5)
+
 [node name="bar_innercorner2" parent="RDC/Bar" unique_id=1863945209 instance=ExtResource("2_uiibc")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -3, 0, 5.8)
 
 [node name="bar_straight_B2" parent="RDC/Bar" unique_id=2077739216 instance=ExtResource("10_5on6j")]
 transform = Transform3D(0, 0, 1.0000001, 0, 1, 0, -1.0000001, 0, 0, -3.5, 0, 3.3000002)
+
+[node name="bottle_A_labeled_green2" parent="RDC/Bar/bar_straight_B2" unique_id=98470999 instance=ExtResource("8_ifxis")]
+transform = Transform3D(0.2588191, 0, 0.9659257, 0, 1, 0, -0.9659257, 0, 0.2588191, -0.70000005, 1, 0)
 
 [node name="bar_straight_B3" parent="RDC/Bar" unique_id=563538757 instance=ExtResource("10_5on6j")]
 transform = Transform3D(0, 0, 1.0000001, 0, 1, 0, -1.0000001, 0, 0, -3.5, 0, -2.6999998)
@@ -94,6 +127,9 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3.5
 [node name="bar_straight_C3" parent="RDC/Bar" unique_id=402344754 instance=ExtResource("11_3w82h")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3.5, 0, -0.6999998)
 
+[node name="bottle_A_labeled_brown2" parent="RDC/Bar/bar_straight_C3" unique_id=1475999548 instance=ExtResource("10_7cisn")]
+transform = Transform3D(0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, 0.70710677, 0.6000004, 1, 0)
+
 [node name="bar_straight_A_short2" parent="RDC/Bar" unique_id=2052239505 instance=ExtResource("12_bshfy")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -1.5, 0, 5.8)
 
@@ -102,9 +138,6 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3.20
 
 [node name="bar_straight_B5" parent="RDC/Bar" unique_id=1067825972 instance=ExtResource("10_5on6j")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3.2000008, 0, 1.3000002)
-
-[node name="bar_innercorner3" parent="RDC/Bar" unique_id=10122335 instance=ExtResource("2_uiibc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7000008, 0, -5.2)
 
 [node name="bar_innercorner4" parent="RDC/Bar" unique_id=1676488182 instance=ExtResource("2_uiibc")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3.1999989, 0, 5.3)
@@ -118,14 +151,62 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3.20
 [node name="bar_straight_C5" parent="RDC/Bar" unique_id=1109810340 instance=ExtResource("11_3w82h")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3.2000008, 0, 3.3000002)
 
-[node name="bartop_B_large2" parent="RDC/Bar" unique_id=1778058900 instance=ExtResource("8_26ie4")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3.2000008, 1, 4.3)
-
-[node name="bartop_B_large4" parent="RDC/Bar" unique_id=442264492 instance=ExtResource("8_26ie4")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3.2000008, 1, 0.3000002)
-
 [node name="barrel_small_stack2" parent="RDC/Bar" unique_id=773314741 instance=ExtResource("9_sv8nb")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3.2000008, 1, -2.8999996)
+
+[node name="bottle_A_labeled_brown2" parent="RDC/Bar" unique_id=2132093533 instance=ExtResource("10_7cisn")]
+transform = Transform3D(-0.25881904, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, -0.25881904, 3.2000008, 2.1, -0.10000038)
+
+[node name="bottle_A_labeled_green2" parent="RDC/Bar" unique_id=359504392 instance=ExtResource("8_ifxis")]
+transform = Transform3D(0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, 0.70710677, 3.2000008, 2.1, 1)
+
+[node name="bottle_B_brown2" parent="RDC/Bar" unique_id=1768387110 instance=ExtResource("14_fpiy1")]
+transform = Transform3D(5.9604645e-08, 0, 1, 0, 1, 0, -1, 0, 5.9604645e-08, 3.2000008, 2.1, 1.6999998)
+
+[node name="bottle_B_green2" parent="RDC/Bar" unique_id=1239953552 instance=ExtResource("15_nx0cc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1999989, 2.1000001, -1)
+
+[node name="bottle_A_labeled_brown3" parent="RDC/Bar" unique_id=1526083542 instance=ExtResource("10_7cisn")]
+transform = Transform3D(-0.25881904, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, -0.25881904, 3.2000008, 2.1, 4.9999995)
+
+[node name="bottle_A_labeled_brown4" parent="RDC/Bar" unique_id=1074386467 instance=ExtResource("10_7cisn")]
+transform = Transform3D(-0.7071068, 0, -0.7071068, 0, 1, 0, 0.7071068, 0, -0.7071068, 3.2000008, 2.1, 3.6999993)
+
+[node name="bottle_A_labeled_green3" parent="RDC/Bar" unique_id=2116976157 instance=ExtResource("8_ifxis")]
+transform = Transform3D(0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, 0.70710677, 3.2000008, 2.1, 4.4)
+
+[node name="bottle_B_brown3" parent="RDC/Bar" unique_id=1586632565 instance=ExtResource("14_fpiy1")]
+transform = Transform3D(5.9604645e-08, 0, 1, 0, 1, 0, -1, 0, 5.9604645e-08, 3.2000008, 2.1, 5.7)
+
+[node name="bottle_B_green3" parent="RDC/Bar" unique_id=2036327868 instance=ExtResource("15_nx0cc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1999989, 2.1000001, 3)
+
+[node name="bottle_C_brown2" parent="RDC/Bar" unique_id=557312889 instance=ExtResource("16_x11bk")]
+transform = Transform3D(-0.25881904, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, -0.25881904, 3, 1, -1)
+
+[node name="bottle_C_green2" parent="RDC/Bar" unique_id=1941582594 instance=ExtResource("17_jf8wf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1, 1.5999999)
+
+[node name="crate_large_decorated2" parent="RDC/Bar" unique_id=1170771902 instance=ExtResource("18_qyrih")]
+transform = Transform3D(0.9848077, 0, -0.17364818, 0, 1, 0, 0.17364818, 0, 0.9848077, 2.500002, 0, -4.5999994)
+
+[node name="keyring2" parent="RDC/Bar" unique_id=583484804 instance=ExtResource("19_nl4f0")]
+transform = Transform3D(0.49999997, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, 0.49999997, 2.3999996, 1, 5.7)
+
+[node name="plate_stack2" parent="RDC/Bar" unique_id=1896923943 instance=ExtResource("20_lv1qi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1, 4.1)
+
+[node name="plate_food_A2" parent="RDC/Bar" unique_id=1100407257 instance=ExtResource("21_yxyjh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3999996, 1, -3)
+
+[node name="trunk_small_A2" parent="RDC/Bar" unique_id=1928163772 instance=ExtResource("22_l4ilv")]
+transform = Transform3D(-0.50000006, 0, -0.8660254, 0, 1, 0, 0.8660254, 0, -0.50000006, 3, 1, 3)
+
+[node name="bartop_A_large2" parent="RDC/Bar" unique_id=1710636080 instance=ExtResource("22_p7u67")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3, 1, 0.3000002)
+
+[node name="bartop_A_large3" parent="RDC/Bar" unique_id=607665173 instance=ExtResource("22_p7u67")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3, 1, 4.3)
 
 [node name="Walls" type="Node3D" parent="RDC" unique_id=1610977315]
 script = ExtResource("14_2aq5y")
@@ -188,6 +269,7 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 26, 
 
 [node name="Wall_Doorway2" parent="RDC/Walls" unique_id=467545128 instance=ExtResource("4_68h1y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, -14)
+locked = true
 
 [node name="Wall_Doorway3" parent="RDC/Walls" unique_id=812446971 instance=ExtResource("4_68h1y")]
 transform = Transform3D(0.99999964, -0.00087639317, 1.6768344e-07, 0.0008763931, 0.9999994, -0.0007071352, 4.5204513e-07, 0.000707135, 0.99999976, 22, 0, -6)
@@ -213,11 +295,14 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 18, 
 [node name="wall12" parent="RDC/Walls" unique_id=1949048905 instance=ExtResource("14_3w82h")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 6)
 
-[node name="wall5" parent="RDC/Walls" unique_id=1347340777 instance=ExtResource("14_3w82h")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2, 0, -14)
+[node name="wall_inset_shelves_decoratedA2" parent="RDC/Walls" unique_id=1152533883 instance=ExtResource("30_rr5s8")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2, 0, -14)
 
 [node name="wall7" parent="RDC/Walls" unique_id=43255243 instance=ExtResource("14_3w82h")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 6)
+
+[node name="banner_triple_yellow2" parent="RDC/Walls/wall7" unique_id=2097338327 instance=ExtResource("30_df0jl")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, 0)
 
 [node name="wall8" parent="RDC/Walls" unique_id=751443147 instance=ExtResource("14_3w82h")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, -18)
@@ -362,11 +447,111 @@ transform = Transform3D(0.70710695, 0, 0.7071067, 0, 1, 0, -0.7071067, 0, 0.7071
 transform = Transform3D(-0.70710695, 0, -0.7071068, 0, 1, 0, 0.7071068, 0, -0.70710695, -0.21213198, 3, -0.21213245)
 
 [node name="barrel_large_decorated2" parent="RDC" unique_id=1911598696 instance=ExtResource("31_hoab0")]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 16.699999, 0, 0.7)
+transform = Transform3D(0.5000001, 0, 0.8660253, 0, 1, 0, -0.8660253, 0, 0.5000001, 3.4999988, 0, 4.3999996)
+
+[node name="box_stacked2" parent="RDC" unique_id=1649656929 instance=ExtResource("40_wji3q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23, 0, -14)
+
+[node name="box_small_decorated2" parent="RDC" unique_id=759910916 instance=ExtResource("41_488ss")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 21.7, 0, -10.300001)
+
+[node name="chair2" parent="RDC" unique_id=1989809996 instance=ExtResource("42_fq3ns")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5.3, 0, -11)
+
+[node name="chair3" parent="RDC" unique_id=1272114967 instance=ExtResource("42_fq3ns")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3.5000002, 0, -11)
+
+[node name="chair4" parent="RDC" unique_id=913633766 instance=ExtResource("42_fq3ns")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5.3, 0, -6.9999995)
+
+[node name="chair5" parent="RDC" unique_id=1644816230 instance=ExtResource("42_fq3ns")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3.5000002, 0, -6.9999995)
+
+[node name="chair8" parent="RDC" unique_id=552323078 instance=ExtResource("42_fq3ns")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 3.5, 0, -4.9999995)
+
+[node name="chair9" parent="RDC" unique_id=100337857 instance=ExtResource("42_fq3ns")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 5.3, 0, -4.9999995)
+
+[node name="chair6" parent="RDC" unique_id=72652020 instance=ExtResource("42_fq3ns")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 3.5, 0, -9)
+
+[node name="chair7" parent="RDC" unique_id=146574782 instance=ExtResource("42_fq3ns")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 5.3, 0, -9)
+
+[node name="crates_stacked2" parent="RDC" unique_id=1671493113 instance=ExtResource("43_52cfg")]
+transform = Transform3D(0.25881907, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, 0.25881907, 16, 0, 0)
+
+[node name="stool2" parent="RDC" unique_id=6751558 instance=ExtResource("45_ddkp2")]
+
+[node name="stool_round2" parent="RDC" unique_id=9916792 instance=ExtResource("46_od4xh")]
+transform = Transform3D(-0.25881904, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, -0.25881904, 9.1, 0, -11.3)
+
+[node name="stool_round3" parent="RDC" unique_id=1601667229 instance=ExtResource("46_od4xh")]
+transform = Transform3D(0.9659258, 0, -0.25881904, 0, 1, 0, 0.25881904, 0, 0.9659258, 9.1, 0, -6.3)
+
+[node name="stool_round5" parent="RDC" unique_id=1545252985 instance=ExtResource("46_od4xh")]
+transform = Transform3D(0.9659258, 0, 0.25881904, 0, 1, 0, -0.25881904, 0, 0.9659258, 9.1, 0, -8.3)
+
+[node name="stool_round4" parent="RDC" unique_id=1411150424 instance=ExtResource("46_od4xh")]
+transform = Transform3D(0.49999997, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.49999997, 9.1, 0, -4.3)
+
+[node name="table_long_decorated_A2" parent="RDC" unique_id=1425766908 instance=ExtResource("47_o35sb")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4.4, 0, -10)
+
+[node name="table_long_decorated_B2" parent="RDC" unique_id=968905533 instance=ExtResource("48_6hlga")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.4, 0, -6)
+
+[node name="table_long_decorated_C2" parent="RDC" unique_id=1040177809 instance=ExtResource("49_ntc8q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.6, 0, -15.4)
+
+[node name="table_long2" parent="RDC" unique_id=828272801 instance=ExtResource("50_doy55")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 3.6)
 
 [node name="Stair" type="Node3D" parent="." unique_id=1140349430]
 visible = false
 script = ExtResource("21_16ran")
+
+[node name="BedRooms" type="Node3D" parent="Stair" unique_id=2052522005]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 4, -10)
+
+[node name="torch_mounted4" parent="Stair/BedRooms" unique_id=1929238561 instance=ExtResource("7_68h1y")]
+transform = Transform3D(-2.0663202e-07, 0, -0.9999999, 0, 1, 0, 0.9999999, 0, -2.0663202e-07, -4, 0, 0.10000038)
+
+[node name="torch_mounted7" parent="Stair/BedRooms" unique_id=1852506342 instance=ExtResource("7_68h1y")]
+transform = Transform3D(1.1920926e-07, 0, 0.9999999, 0, 1, 0, -0.9999999, 0, 1.1920926e-07, -4, 0, 6.1000004)
+
+[node name="torch_mounted8" parent="Stair/BedRooms" unique_id=941006376 instance=ExtResource("7_68h1y")]
+transform = Transform3D(1.1920926e-07, 0, 0.9999999, 0, 1, 0, -0.9999999, 0, 1.1920926e-07, -4, 0, -1.8999996)
+
+[node name="bed_A_stacked2" parent="Stair/BedRooms" unique_id=1965914773 instance=ExtResource("27_pll3x")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2, 0, -6.5)
+
+[node name="bed_A_stacked3" parent="Stair/BedRooms" unique_id=811241592 instance=ExtResource("27_pll3x")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2, 0, -1.5)
+
+[node name="bed_A_single2" parent="Stair/BedRooms" unique_id=1218530388 instance=ExtResource("28_l5bnf")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2, 0, -1.6000004)
+
+[node name="bed_B_double2" parent="Stair/BedRooms" unique_id=1969874189 instance=ExtResource("29_pm82x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="bed_B_single2" parent="Stair/BedRooms" unique_id=1106737640 instance=ExtResource("30_gy2ll")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 2, 0, 6.5)
+
+[node name="bookcase_single_decoratedA2" parent="Stair/BedRooms" unique_id=1046676734 instance=ExtResource("31_hs5f0")]
+transform = Transform3D(-2.9802322e-08, 0, -1.0000001, 0, 1, 0, 1.0000001, 0, -2.9802322e-08, 3.2000008, 0, 1.5)
+
+[node name="bookcase_double_decoratedA2" parent="Stair/BedRooms" unique_id=1412246455 instance=ExtResource("32_l5bnf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, -7.1000004)
+
+[node name="banner_blue3" parent="Stair/BedRooms" unique_id=1686878171 instance=ExtResource("18_e7c1w")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -4, 0, 2)
+
+[node name="bookcase_single_decoratedB2" parent="Stair/BedRooms" unique_id=1711106129 instance=ExtResource("33_pm82x")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -1.6000004, 0, 7.2)
+
+[node name="table_small_decorated_C2" parent="Stair/BedRooms" unique_id=20759775 instance=ExtResource("59_em8p4")]
 
 [node name="Floor" type="Node3D" parent="Stair" unique_id=348887855]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
@@ -667,7 +852,8 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 26, 
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 22, 4, 6)
 
 [node name="Wall_Doorway" parent="Stair/Walls" unique_id=1636096253 instance=ExtResource("4_68h1y")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 18, 4, -6)
+transform = Transform3D(5.9604645e-08, 0, 1, 0, 1, 0, -1, 0, 5.9604645e-08, 18, 4, -6)
+revert = true
 
 [node name="Wall_Doorway2" parent="Stair/Walls" unique_id=1846794512 instance=ExtResource("4_68h1y")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 18, 4, -14)
