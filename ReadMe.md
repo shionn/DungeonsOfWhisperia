@@ -25,6 +25,7 @@
 # Music
 - https://opengameart.org/content/rpg-title-1
 - https://opengameart.org/content/dungeon-themes
+- https://opengameart.org/content/rpg-never-go-full-bard
 
 ## peut etre : 
 - https://opengameart.org/content/gemmed-items
