@@ -3,6 +3,9 @@
 1/ Physique
 9/ Monstre
 
+# TODO
+- remplacer le curseur d'hors porté
+
 
 # Assets
 ## 3D and characters

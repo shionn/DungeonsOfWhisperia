@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://15mxl02khodu"
-path="res://.godot/imported/Cleric.fbx-6439da213a22e5a8ab56f8b88510dba7.scn"
+uid="uid://by3rscenw5c8u"
+path="res://.godot/imported/Gem_Medium.gltf-7f4fe48a0a8a31d6bfd310e5587a79ef.scn"
 
 [deps]
 
-source_file="res://Assets/Characters/MonthlySeries6/Cleric.fbx"
-dest_files=["res://.godot/imported/Cleric.fbx-6439da213a22e5a8ab56f8b88510dba7.scn"]
+source_file="res://Assets/Characters/MonthlySeries5/Accessoires/Gem_Medium.gltf"
+dest_files=["res://.godot/imported/Gem_Medium.gltf-7f4fe48a0a8a31d6bfd310e5587a79ef.scn"]
 
 [params]
 
@@ -32,7 +32,7 @@ meshes/force_disable_compression=false
 skins/use_named_skins=true
 animation/import=true
 animation/fps=30
-animation/trimming=true
+animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
@@ -40,7 +40,6 @@ materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
 _subresources={}
-fbx/importer=0
-fbx/allow_geometry_helper_nodes=false
-fbx/embedded_image_handling=1
-fbx/naming_version=2
+gltf/naming_version=2
+gltf/embedded_image_handling=1
+gltf/texture_map_mode=1
