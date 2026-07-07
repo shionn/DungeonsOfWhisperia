@@ -5,7 +5,8 @@
 [ext_resource type="AudioStream" uid="uid://cgpic01ptsq6v" path="res://Audio/KenneyRpgAudio/doorOpen_1.ogg" id="3_1bm64"]
 [ext_resource type="Script" uid="uid://bpgb3pwbq61mh" path="res://Game/Interactable.gd" id="3_akee4"]
 [ext_resource type="AudioStream" uid="uid://dqgw1abk4jd2c" path="res://Audio/KenneyRpgAudio/doorClose_1.ogg" id="4_tku4e"]
-[ext_resource type="AudioStream" uid="uid://ce7drpk5sjkcm" path="res://Audio/KenneyRpgAudio/metalClick.ogg" id="5_tku4e"]
+[ext_resource type="AudioStream" uid="uid://c70td8wvxgkj6" path="res://Audio/80-CC0-RPG-SFX/lock_01.ogg" id="7_6qb25"]
+[ext_resource type="AudioStream" uid="uid://b4uycjqyw7yeb" path="res://Audio/80-CC0-RPG-SFX/lock_03.ogg" id="7_wxjb5"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_fhw0n"]
 radius = 0.45
@@ -30,8 +31,12 @@ bus = &"Effet"
 stream = ExtResource("4_tku4e")
 bus = &"Effet"
 
-[node name="AudioLocked" type="AudioStreamPlayer3D" parent="." index="3" unique_id=1550218465]
-stream = ExtResource("5_tku4e")
+[node name="LockAudio" type="AudioStreamPlayer3D" parent="." index="3" unique_id=849658476]
+stream = ExtResource("7_6qb25")
+bus = &"Effet"
+
+[node name="UnLockAudio" type="AudioStreamPlayer3D" parent="." index="4" unique_id=906564280]
+stream = ExtResource("7_wxjb5")
 bus = &"Effet"
 
 [connection signal="activate" from="wall_doorway/wall_doorway_door/Knob" to="." method="_on_knob_activate"]
