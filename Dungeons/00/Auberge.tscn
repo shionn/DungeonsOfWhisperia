@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://dhflr6qrk1e1d" path="res://Assets/Dungeons/Coin/coin_stack_small.gltf" id="4_p7u67"]
 [ext_resource type="PackedScene" uid="uid://bmsswkb24hlcs" path="res://Assets/Dungeons/Coin/coin.gltf" id="5_rr5s8"]
 [ext_resource type="PackedScene" uid="uid://0fn6al4q3iav" path="res://Assets/Dungeons/Wall/Corner/wall_corner.gltf" id="5_yel37"]
+[ext_resource type="Script" uid="uid://dct30rgluq8x4" path="res://Game/PNJ.gd" id="6_488ss"]
 [ext_resource type="PackedScene" uid="uid://dovakj2rku7yl" path="res://Assets/Dungeons/Wall/wall_window_open.gltf" id="6_hdq2o"]
 [ext_resource type="PackedScene" uid="uid://cl36lcn4lo2eq" path="res://Assets/Scenes/Torch_Mounted.tscn" id="7_68h1y"]
 [ext_resource type="PackedScene" uid="uid://c6i85c8iqhfgd" path="res://Assets/Dungeons/Wall/TSplit/wall_Tsplit.gltf" id="7_yel37"]
@@ -99,6 +100,7 @@ transform = Transform3D(-0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, -0.
 
 [node name="MagicalGirl" parent="." unique_id=917570229 instance=ExtResource("4_fq3ns")]
 transform = Transform3D(0.25881913, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, 0.25881913, 13, 0, 0)
+script = ExtResource("6_488ss")
 
 [node name="RDC" type="Node3D" parent="." unique_id=1604559993]
 
