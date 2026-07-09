@@ -747,6 +747,7 @@ layout_mode = 2
 texture = ExtResource("18_w65rx")
 
 [node name="DialogGui" type="GridContainer" parent="." unique_id=1189208125]
+visible = false
 z_index = 10
 layout_mode = 1
 anchors_preset = 7
@@ -824,7 +825,9 @@ Ceci est un test d'exemple
 layout_mode = 2
 
 [node name="SubViewport" type="SubViewport" parent="DialogGui/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer2/SubViewportContainer" unique_id=884384498]
+handle_input_locally = false
 size = Vector2i(170, 170)
+render_target_update_mode = 0
 
 [node name="Camera3D" type="Camera3D" parent="DialogGui/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer2/SubViewportContainer/SubViewport" unique_id=527148964]
 
@@ -1033,6 +1036,7 @@ libraries/ = SubResource("AnimationLibrary_7xgee")
 [connection signal="value_changed" from="Options/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer/HSliderSon" to="Options" method="_on_son_value_changed"]
 [connection signal="pressed" from="Options/PanelContainer/MarginContainer/VBoxContainer/CloseButton" to="Options" method="_on_close_button_pressed"]
 [connection signal="visibility_changed" from="DialogGui" to="." method="_on_dialog_gui_visibility_changed"]
+[connection signal="pressed" from="DialogGui/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/OptionButton1" to="DialogGui" method="_on_option_button_1_pressed"]
 [connection signal="pressed" from="DialogGui/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/CloseButton" to="DialogGui" method="_on_close_button_pressed"]
 [connection signal="pressed" from="ExitAuberge/PanelContainer/MarginContainer/VBoxContainer/Dungeon01" to="ExitAuberge" method="_on_dungeon_01_pressed"]
 [connection signal="pressed" from="ExitAuberge/PanelContainer/MarginContainer/VBoxContainer/CloseButton" to="." method="_close"]

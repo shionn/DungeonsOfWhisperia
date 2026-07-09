@@ -73,3 +73,4 @@ func _on_introduction_visibility_changed() -> void:
 
 func _on_dialog_gui_visibility_changed() -> void:
 	if not $DialogGui.visible and not $Bag.visible : _close()
+	#if $DialogGui.visible : Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
