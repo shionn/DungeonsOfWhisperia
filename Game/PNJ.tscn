@@ -1,13 +1,10 @@
 [gd_scene format=3 uid="uid://q200penx1kxw"]
 
-[ext_resource type="Script" uid="uid://dct30rgluq8x4" path="res://Game/PNJ.gd" id="1_13dl3"]
-
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_x1hi5"]
 radius = 0.6
 height = 2.2
 
 [node name="PNJ" type="CharacterBody3D" unique_id=957068427]
-script = ExtResource("1_13dl3")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1123411737]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1, 0)

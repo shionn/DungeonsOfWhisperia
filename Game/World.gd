@@ -4,6 +4,7 @@ extends GameBase3D
 
 var target_monster: Monster = null
 var target_interactable: Interactable = null
+var target_pnj: PNJ = null
 
 const _max_range: float = 20
 
@@ -12,10 +13,12 @@ func _physics_process(_delta: float) -> void:
 	#if Input.is_action_just_released("quit"):
 	#	get_tree().quit()
 	if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED and Input.is_action_just_pressed("interact") and not player.isDead():
-		if ( target_interactable and player.distance_to(target_interactable) < target_interactable.interactDistance ):
+		if target_interactable and target_interactable.is_in_range():
 			target_interactable.on_interact()
-		if target_monster and target_monster.state == Monster.State.DEATH and player.distance_to(target_monster) <= LOOT_RANGE :
+		if target_monster and target_monster.is_dead() and target_monster.is_in_loot_range() :
 			gui.openLoot(target_monster)
+		if target_pnj and target_pnj.is_in_range():
+			target_pnj.interact()
 	
 func _updateRayCast() -> void : 
 	var camera = get_viewport().get_camera_3d()
@@ -31,3 +34,6 @@ func _updateRayCast() -> void :
 	if result and result["collider"] is Area3D and result["collider"].get_parent() is Interactable : 
 		target_interactable = result["collider"].get_parent()
 	else : target_interactable = null
+	if result and result["collider"] is PNJ: 
+		target_pnj = result["collider"]
+	else : target_pnj = null

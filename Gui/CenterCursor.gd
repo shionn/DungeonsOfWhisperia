@@ -5,6 +5,7 @@ extends GameBaseControl
 @onready var _magnifier = $Manifier as Control
 @onready var _hand = $Hand as Control
 @onready var _disable = $Disabled as Control
+@onready var _speak = $Speak as Control
 
 const _tilt_limit = deg_to_rad(50)
 const _mouse_sensitivity = 0.01
@@ -13,8 +14,9 @@ const _max_range: float = 20
 func _physics_process(_delta: float) -> void:
 	visible = Input.mouse_mode == Input.MOUSE_MODE_CAPTURED and not player.isDead()
 	
-	_cross.visible = world.target_monster == null and world.target_interactable == null
-	_sword.visible = world.target_monster != null and not world.target_monster.is_dead()
+	_cross.visible = world.target_monster == null and world.target_interactable == null and world.target_pnj == null
+	_sword.visible = world.target_monster and not world.target_monster.is_dead()
+	_speak.visible = world.target_pnj != null and world.target_pnj.is_in_range()  
 	
 	_magnifier.visible = (
 			world.target_monster      and world.target_monster.is_in_loot_range() and world.target_monster.is_dead()
@@ -28,6 +30,8 @@ func _physics_process(_delta: float) -> void:
 			world.target_interactable and not world.target_interactable.is_in_range()
 		or 
 			world.target_monster      and not world.target_monster.is_in_loot_range()      and world.target_monster.is_dead() 
+		or 
+			world.target_pnj          and not world.target_pnj.is_in_range()
 		)
 
 func _unhandled_input(event: InputEvent) -> void:

@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bttyvn7xoe6wl" path="res://Gui/Assets/kenney/cursor-pack/hand_open.png" id="5_wbke4"]
 [ext_resource type="Texture2D" uid="uid://va0lo41y8273" path="res://Gui/Assets/kenney/cursor-pack/zoom.png" id="6_7xgee"]
 [ext_resource type="Texture2D" uid="uid://5u5b1flxfb1r" path="res://Gui/Assets/kenney/cursor-pack/disabled.png" id="7_c4ovl"]
+[ext_resource type="Texture2D" uid="uid://dibbdg2gw22sw" path="res://Gui/Assets/kenney/cursor-pack/message_round.png" id="8_8pck7"]
 [ext_resource type="Script" uid="uid://fc4p1gee0wmr" path="res://Gui/StatGui.gd" id="8_irpma"]
 [ext_resource type="Script" uid="uid://t5ana3e5k724" path="res://Gui/GameOverGui.gd" id="9_3yfkq"]
 [ext_resource type="Script" uid="uid://co00yowhdp11c" path="res://Gui/BagGui.gd" id="10_ji1eb"]
@@ -241,6 +242,22 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 texture = ExtResource("7_c4ovl")
+
+[node name="Speak" type="TextureRect" parent="CenterCursor" unique_id=1757925956]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("8_8pck7")
 
 [node name="Stat" type="Control" parent="." unique_id=312672475]
 layout_mode = 1
@@ -730,7 +747,6 @@ layout_mode = 2
 texture = ExtResource("18_w65rx")
 
 [node name="DialogGui" type="GridContainer" parent="." unique_id=1189208125]
-visible = false
 z_index = 10
 layout_mode = 1
 anchors_preset = 7
@@ -786,7 +802,11 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 0
 
-[node name="RichTextLabel" type="RichTextLabel" parent="DialogGui/PanelContainer/MarginContainer/VBoxContainer" unique_id=772490081]
+[node name="HBoxContainer2" type="HBoxContainer" parent="DialogGui/PanelContainer/MarginContainer/VBoxContainer" unique_id=288841190]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="DialogGui/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=772490081]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -800,45 +820,57 @@ Ceci est un test d'exemple
 Ceci est un test d'exemple
 "
 
-[node name="HBoxContainer" type="HBoxContainer" parent="DialogGui/PanelContainer/MarginContainer/VBoxContainer" unique_id=1449786005]
+[node name="SubViewportContainer" type="SubViewportContainer" parent="DialogGui/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=589396236]
 layout_mode = 2
 
-[node name="OptionButton1" type="Button" parent="DialogGui/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1608557154]
+[node name="SubViewport" type="SubViewport" parent="DialogGui/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer2/SubViewportContainer" unique_id=884384498]
+size = Vector2i(170, 170)
+
+[node name="Camera3D" type="Camera3D" parent="DialogGui/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer2/SubViewportContainer/SubViewport" unique_id=527148964]
+
+[node name="MarginContainer" type="MarginContainer" parent="DialogGui/PanelContainer/MarginContainer/VBoxContainer" unique_id=1666077963]
+layout_mode = 2
+theme_override_constants/margin_top = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="DialogGui/PanelContainer/MarginContainer/VBoxContainer/MarginContainer" unique_id=1449786005]
+layout_mode = 2
+
+[node name="OptionButton1" type="Button" parent="DialogGui/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer" unique_id=1608557154]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 tooltip_text = "Option"
 text = "Option"
 
-[node name="OptionButton2" type="Button" parent="DialogGui/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1857374092]
+[node name="OptionButton2" type="Button" parent="DialogGui/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer" unique_id=1857374092]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 tooltip_text = "Option"
 text = "Option"
 
-[node name="OptionButton3" type="Button" parent="DialogGui/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1747482232]
+[node name="OptionButton3" type="Button" parent="DialogGui/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer" unique_id=1747482232]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 tooltip_text = "Option"
 text = "Option"
 
-[node name="OptionButton4" type="Button" parent="DialogGui/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1779051247]
+[node name="OptionButton4" type="Button" parent="DialogGui/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer" unique_id=1779051247]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 tooltip_text = "Option"
 text = "Option"
 
-[node name="OptionButton5" type="Button" parent="DialogGui/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=748938204]
+[node name="OptionButton5" type="Button" parent="DialogGui/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer" unique_id=748938204]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 tooltip_text = "Option"
 text = "Option"
 
-[node name="CloseButton" type="Button" parent="DialogGui/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=699872883]
+[node name="CloseButton" type="Button" parent="DialogGui/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer" unique_id=699872883]
 layout_mode = 2
 size_flags_horizontal = 3
 tooltip_text = "Fermer"
@@ -1001,7 +1033,7 @@ libraries/ = SubResource("AnimationLibrary_7xgee")
 [connection signal="value_changed" from="Options/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer/HSliderSon" to="Options" method="_on_son_value_changed"]
 [connection signal="pressed" from="Options/PanelContainer/MarginContainer/VBoxContainer/CloseButton" to="Options" method="_on_close_button_pressed"]
 [connection signal="visibility_changed" from="DialogGui" to="." method="_on_dialog_gui_visibility_changed"]
-[connection signal="pressed" from="DialogGui/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/CloseButton" to="DialogGui" method="_on_close_button_pressed"]
+[connection signal="pressed" from="DialogGui/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/CloseButton" to="DialogGui" method="_on_close_button_pressed"]
 [connection signal="pressed" from="ExitAuberge/PanelContainer/MarginContainer/VBoxContainer/Dungeon01" to="ExitAuberge" method="_on_dungeon_01_pressed"]
 [connection signal="pressed" from="ExitAuberge/PanelContainer/MarginContainer/VBoxContainer/CloseButton" to="." method="_close"]
 [connection signal="animation_finished" from="Transition/AnimationPlayer" to="Transition" method="_on_animation_finished"]

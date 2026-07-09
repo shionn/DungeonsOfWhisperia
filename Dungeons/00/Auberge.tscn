@@ -5,11 +5,13 @@
 [ext_resource type="PackedScene" uid="uid://q200penx1kxw" path="res://Game/PNJ.tscn" id="1_fq3ns"]
 [ext_resource type="PackedScene" uid="uid://cprg1on0x47sl" path="res://Assets/Scenes/FarmerA.tscn" id="1_wji3q"]
 [ext_resource type="PackedScene" uid="uid://b0n3wa8ptu8li" path="res://Assets/Dungeons/Floor/Large/floor_wood_large.gltf" id="1_yp4s1"]
+[ext_resource type="Script" uid="uid://d2a4w47b4u6ff" path="res://Dungeons/00/Serveuse.gd" id="2_52cfg"]
 [ext_resource type="Script" uid="uid://c1bupys5fsua" path="res://Dungeons/00/ExitDoor.gd" id="2_cvv45"]
 [ext_resource type="PackedScene" uid="uid://mlpr7au8pmas" path="res://Assets/Dungeons/Floor/Large/floor_wood_large_dark.gltf" id="2_hdq2o"]
 [ext_resource type="PackedScene" uid="uid://xxwvvhvlk5e1" path="res://Assets/Dungeons/Bar/bar_innercorner.gltf" id="2_uiibc"]
 [ext_resource type="PackedScene" uid="uid://beaviy55itkfp" path="res://Assets/Scenes/Lorekeeper.tscn" id="2_wji3q"]
 [ext_resource type="PackedScene" uid="uid://bsb7c8ma201ct" path="res://Assets/Scenes/Witch.tscn" id="3_488ss"]
+[ext_resource type="Script" uid="uid://cxe0hpd6pnr8q" path="res://Gui/Dialog.gd" id="3_fq3ns"]
 [ext_resource type="PackedScene" uid="uid://dnj0c0ut1hd35" path="res://Assets/Scenes/Wall_Doorway.tscn" id="4_68h1y"]
 [ext_resource type="PackedScene" uid="uid://dy6ropirebyy0" path="res://Assets/Scenes/MagicalGirl.tscn" id="4_fq3ns"]
 [ext_resource type="PackedScene" uid="uid://dhflr6qrk1e1d" path="res://Assets/Dungeons/Coin/coin_stack_small.gltf" id="4_p7u67"]
@@ -88,9 +90,17 @@ size = Vector3(2, 2.6000001, 0.8)
 
 [node name="Serveuse" parent="." unique_id=957068427 instance=ExtResource("1_fq3ns")]
 transform = Transform3D(0.49999997, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, 0.49999997, 13, 0, 0)
+script = ExtResource("2_52cfg")
 
 [node name="Character" parent="Serveuse" unique_id=917570229 instance=ExtResource("4_fq3ns")]
 transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0, 0, 0)
+
+[node name="Bienvenue" type="Node" parent="Serveuse" unique_id=1214666615 node_paths=PackedStringArray("pnj")]
+script = ExtResource("3_fq3ns")
+text = "Bienvenue aventurier à la taverne du pins tordu. 
+Vous avez l'air fatigué. Prener donc le temps de vous reposer."
+pnj = NodePath("..")
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
 [node name="Farmer_A" parent="." unique_id=1194096177 instance=ExtResource("1_wji3q")]
 transform = Transform3D(-0.25881904, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, -0.25881904, 11.9, 0, -7)
