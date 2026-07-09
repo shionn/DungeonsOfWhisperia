@@ -44,8 +44,8 @@ func open_description() -> void:
 func open_loot() -> void:
 	gui.openLoot(self)
 
-func isInRange(target: Node3D) -> bool:
-	return global_position.distance_to(target.global_position) <= interactDistance
+func is_in_range() -> bool:
+	return player.distance_to(self) <= interactDistance
 
 func _on_mouse_entered() -> void:
 	#print("_on_mouse_entered")

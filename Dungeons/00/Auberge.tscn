@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://budb61il707se" path="res://Assets/Dungeons/Wall/Doorway/wall_doorway.gltf" id="1_264vq"]
 [ext_resource type="PackedScene" uid="uid://ccig3mv7ciiqs" path="res://Assets/Scenes/Hoarder.tscn" id="1_df0jl"]
+[ext_resource type="PackedScene" uid="uid://q200penx1kxw" path="res://Game/PNJ.tscn" id="1_fq3ns"]
 [ext_resource type="PackedScene" uid="uid://cprg1on0x47sl" path="res://Assets/Scenes/FarmerA.tscn" id="1_wji3q"]
 [ext_resource type="PackedScene" uid="uid://b0n3wa8ptu8li" path="res://Assets/Dungeons/Floor/Large/floor_wood_large.gltf" id="1_yp4s1"]
 [ext_resource type="Script" uid="uid://c1bupys5fsua" path="res://Dungeons/00/ExitDoor.gd" id="2_cvv45"]
@@ -14,7 +15,6 @@
 [ext_resource type="PackedScene" uid="uid://dhflr6qrk1e1d" path="res://Assets/Dungeons/Coin/coin_stack_small.gltf" id="4_p7u67"]
 [ext_resource type="PackedScene" uid="uid://bmsswkb24hlcs" path="res://Assets/Dungeons/Coin/coin.gltf" id="5_rr5s8"]
 [ext_resource type="PackedScene" uid="uid://0fn6al4q3iav" path="res://Assets/Dungeons/Wall/Corner/wall_corner.gltf" id="5_yel37"]
-[ext_resource type="Script" uid="uid://dct30rgluq8x4" path="res://Game/PNJ.gd" id="6_488ss"]
 [ext_resource type="PackedScene" uid="uid://dovakj2rku7yl" path="res://Assets/Dungeons/Wall/wall_window_open.gltf" id="6_hdq2o"]
 [ext_resource type="PackedScene" uid="uid://cl36lcn4lo2eq" path="res://Assets/Scenes/Torch_Mounted.tscn" id="7_68h1y"]
 [ext_resource type="PackedScene" uid="uid://c6i85c8iqhfgd" path="res://Assets/Dungeons/Wall/TSplit/wall_Tsplit.gltf" id="7_yel37"]
@@ -86,6 +86,12 @@ size = Vector3(2, 2.6000001, 0.8)
 
 [node name="Auberge" type="Node3D" unique_id=1682341964]
 
+[node name="Serveuse" parent="." unique_id=957068427 instance=ExtResource("1_fq3ns")]
+transform = Transform3D(0.49999997, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, 0.49999997, 13, 0, 0)
+
+[node name="Character" parent="Serveuse" unique_id=917570229 instance=ExtResource("4_fq3ns")]
+transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0, 0, 0)
+
 [node name="Farmer_A" parent="." unique_id=1194096177 instance=ExtResource("1_wji3q")]
 transform = Transform3D(-0.25881904, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, -0.25881904, 11.9, 0, -7)
 
@@ -97,10 +103,6 @@ transform = Transform3D(0.76604444, 0, 0.6427876, 0, 1, 0, -0.6427876, 0, 0.7660
 
 [node name="Witch" parent="." unique_id=870540674 instance=ExtResource("3_488ss")]
 transform = Transform3D(-0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, -0.70710677, 22.4, 4, 4.5)
-
-[node name="MagicalGirl" parent="." unique_id=917570229 instance=ExtResource("4_fq3ns")]
-transform = Transform3D(0.25881913, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, 0.25881913, 13, 0, 0)
-script = ExtResource("6_488ss")
 
 [node name="RDC" type="Node3D" parent="." unique_id=1604559993]
 

@@ -170,6 +170,9 @@ func compute_xp() -> int:
 	var large = 1 if is_large() else 0
 	return get_def()+get_max_pv()+list_atks().get(0).atk_dice+lvl+large
 
+func is_in_loot_range() -> bool : return distance_to(player) <= LOOT_RANGE 
+func is_dead() -> bool : return state == Monster.State.DEATH
+
 @abstract func get_fov() -> float
 @abstract func get_rig() -> String
 @abstract func get_def() -> int
