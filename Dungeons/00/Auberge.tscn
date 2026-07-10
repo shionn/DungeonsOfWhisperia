@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://ccig3mv7ciiqs" path="res://Assets/Scenes/Hoarder.tscn" id="1_df0jl"]
 [ext_resource type="PackedScene" uid="uid://q200penx1kxw" path="res://Game/PNJ.tscn" id="1_fq3ns"]
 [ext_resource type="PackedScene" uid="uid://cprg1on0x47sl" path="res://Assets/Scenes/FarmerA.tscn" id="1_wji3q"]
+[ext_resource type="Script" uid="uid://b1e6ax2vliiya" path="res://Dungeons/00/AubergeEntrance.gd" id="1_y7s6b"]
 [ext_resource type="PackedScene" uid="uid://b0n3wa8ptu8li" path="res://Assets/Dungeons/Floor/Large/floor_wood_large.gltf" id="1_yp4s1"]
 [ext_resource type="Script" uid="uid://d2a4w47b4u6ff" path="res://Dungeons/00/Serveuse.gd" id="2_52cfg"]
 [ext_resource type="Script" uid="uid://c1bupys5fsua" path="res://Dungeons/00/ExitDoor.gd" id="2_cvv45"]
@@ -87,6 +88,7 @@
 size = Vector3(2, 2.6000001, 0.8)
 
 [node name="Auberge" type="Node3D" unique_id=1682341964]
+script = ExtResource("1_y7s6b")
 
 [node name="Serveuse" parent="." unique_id=957068427 instance=ExtResource("1_fq3ns")]
 transform = Transform3D(0.49999997, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, 0.49999997, 13, 0, 0)
@@ -1576,3 +1578,12 @@ stream = ExtResource("28_6cvm0")
 autoplay = true
 bus = &"Background"
 parameters/looping = true
+
+[node name="Quest0" type="Node" parent="." unique_id=1580217648]
+script = ExtResource("3_fq3ns")
+text = "Vous avez traversé des forêts inconnues, fuyant les bandits qui vous ont traqué. Vos jambes tremblent, votre corps est secoué par la fatigue. La nuit est tombée, et le froid s’est insinué dans vos os. Vous vous êtes effondré, épuisé, sous un arbre. Vous ne savez plus combien de temps vous avez dormi. Quand vous vous êtes réveillé, le ciel était noir, et une lueur vacillante filtrait à travers les branches. Intrigué par cette lueur, vous vous êtes approché, découvrant alors une auberge perdue au cœur de cette forêt maudite.
+
+Vous vous êtes retrouvé devant la porte. Une porte en bois pourri, entourée de mousse. Un toit de chaume, comme oublié par le temps. Vous n’avez jamais entendu parler de cet endroit. Et pourtant… vous avez frappé.
+
+Une fois dans l’auberge, vous découvrez avec étonnement qu’elle est étrangement animée et fréquentée, malgré sa localisation isolée."
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"

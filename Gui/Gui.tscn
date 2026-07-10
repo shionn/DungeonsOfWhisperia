@@ -41,6 +41,8 @@ bg_color = Color(1, 0.94509804, 0.8235294, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fucts"]
 bg_color = Color(1, 0.94509804, 0.8235294, 1)
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8pck7"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m586l"]
 bg_color = Color(1, 0.94509804, 0.8235294, 1)
 
@@ -285,6 +287,7 @@ theme_override_constants/margin_top = 10
 layout_mode = 2
 
 [node name="GameOver" type="Label" parent="." unique_id=464855485]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -302,6 +305,7 @@ text = "Game Over"
 script = ExtResource("9_3yfkq")
 
 [node name="Bag" type="GridContainer" parent="." unique_id=1113810662]
+visible = false
 z_index = 10
 layout_mode = 1
 anchors_preset = 6
@@ -390,6 +394,7 @@ layout_mode = 2
 texture = ExtResource("18_w65rx")
 
 [node name="Loot" type="GridContainer" parent="." unique_id=1947795742]
+visible = false
 z_index = 10
 layout_mode = 1
 anchors_preset = 8
@@ -482,6 +487,7 @@ stream = ExtResource("20_cq4r1")
 bus = &"Effet"
 
 [node name="Menu" type="MenuButton" parent="." unique_id=436163507]
+visible = false
 layout_mode = 1
 offset_right = 40.0
 offset_bottom = 8.0
@@ -503,6 +509,7 @@ popup/item_3/id = 0
 script = ExtResource("22_mnphl")
 
 [node name="Introduction" type="GridContainer" parent="." unique_id=415794769]
+visible = false
 z_index = 10
 layout_mode = 1
 anchors_preset = 8
@@ -565,14 +572,26 @@ theme_override_font_sizes/font_size = 24
 text = "Dungeon of Whisperia"
 horizontal_alignment = 1
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Introduction/PanelContainer/MarginContainer/VBoxContainer" unique_id=934426654]
+[node name="TabContainer" type="TabContainer" parent="Introduction/PanelContainer/MarginContainer/VBoxContainer" unique_id=1738273311]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxEmpty_8pck7")
+current_tab = 0
+
+[node name="Context" type="RichTextLabel" parent="Introduction/PanelContainer/MarginContainer/VBoxContainer/TabContainer" unique_id=934426654]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 bbcode_enabled = true
-text = "Bienvenue dans [color=red]Dungeon of Whisperia[/color].
+metadata/_tab_index = 0
 
-Ceci est une version [color=red]alpha[/color] pour tester et montrer le concept. Dans ce donjon, vous devez [color=red]vaincre le maître du donjon[/color] et trouver son [color=red]trésor[/color].
+[node name="Aide" type="RichTextLabel" parent="Introduction/PanelContainer/MarginContainer/VBoxContainer/TabContainer" unique_id=1096971895]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+bbcode_enabled = true
+text = "Ceci est une version [color=red]alpha[/color] pour tester et montrer le concept. 
 
 [u]Contrôle :[/u]
 [ul]
@@ -589,6 +608,7 @@ Clic gauche et déplacer sur l’interaction pour combiner (Clef sur Porte par e
 [/ul]
 
 Ce jeu est développé en open source sur le discord de la communauté de whisp. "
+metadata/_tab_index = 1
 
 [node name="CloseButton" type="Button" parent="Introduction/PanelContainer/MarginContainer/VBoxContainer" unique_id=1618956886]
 layout_mode = 2
@@ -919,6 +939,7 @@ script = ExtResource("24_xkmul")
 libraries/ = SubResource("AnimationLibrary_mya5i")
 
 [node name="ExitAuberge" type="GridContainer" parent="." unique_id=1762395580]
+visible = false
 z_index = 10
 layout_mode = 1
 anchors_preset = 8

@@ -8,7 +8,7 @@ class_name Gui
 
 func _ready() -> void:
 	Input.warp_mouse(get_viewport().get_visible_rect().size/2)
-	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	Input.mouse_mode = Input.MOUSE_MODE_CONFINED_HIDDEN
 	Input.set_custom_mouse_cursor(cursor,     Input.CURSOR_ARROW)
 	Input.set_custom_mouse_cursor(point_hand, Input.CURSOR_POINTING_HAND)
 	Input.set_custom_mouse_cursor(drag,       Input.CURSOR_DRAG)
@@ -29,6 +29,9 @@ func _physics_process(_delta: float) -> void:
 			_open()
 	if player.velocity.x or player.velocity.z : 
 		_close()
+
+func openHelp(description: Dialog)  -> void :
+	$Introduction.open(description)
 
 func openLoot(container: Object) -> void :
 	$Loot.loot(container)
