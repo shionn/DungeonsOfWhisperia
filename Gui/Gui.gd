@@ -16,7 +16,6 @@ func _ready() -> void:
 
 func _physics_process(_delta: float) -> void:
 	if Input.is_action_just_pressed("menu") :
-		print("menu")
 		if $Options.visible :
 			$Options.hide()
 		elif $Introduction.visible :
@@ -26,16 +25,30 @@ func _physics_process(_delta: float) -> void:
 		elif $Bag.visible or $DialogGui.visible or $ExitAuberge.visible : 
 			_close()
 		else :
-			_open()
+			$Bag.show()
+			$Menu.show()
+			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	if player.velocity.x or player.velocity.z : 
 		_close()
 
+func update_mouse_mode() -> void:
+	if ($Options.visible or $Bag.visible 
+			or $Loot.visible or $Introduction.visible 
+			or $Options.visible or $DialogGui.visible
+			or $ExitAuberge.visible) :
+		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	else :
+		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+
 func openHelp(description: Dialog)  -> void :
 	$Introduction.open(description)
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
 func openLoot(container: Object) -> void :
 	$Loot.loot(container)
-	_open()
+	$Bag.show()
+	$Menu.show()
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
 func openDialog(dialog: Dialog) -> void:
 	$DialogGui.open(dialog)
@@ -51,11 +64,6 @@ func openTransition(onMiddle : Callable) -> void:
 func consoleLog(text: String) -> void:
 	$ConsoleLog.log(text)
 
-func _open() -> void : 
-	$Bag.show()
-	$Menu.show()
-	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-
 func _close() -> void :
 	$Bag.hide()
 	$Loot.hide()
@@ -66,14 +74,13 @@ func _close() -> void :
 	$ExitAuberge.hide()
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
+func _on_bag_visibility_changed() -> void:
+	if not $Bag.visible : 
+		$Loot.hide()
+		update_mouse_mode()
+
+
 func _on_loot_visibility_changed() -> void:
-	if not $Loot.visible and not $Introduction.visible : _close()
-
-func _on_introduction_visibility_changed() -> void:
-	print($Introduction.visible)
-	if not $Introduction.visible and not $Bag.visible : 
-		_close()
-
-func _on_dialog_gui_visibility_changed() -> void:
-	if not $DialogGui.visible and not $Bag.visible : _close()
-	#if $DialogGui.visible : Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	if not $Loot.visible : 
+		$Bag.hide()
+		update_mouse_mode()
