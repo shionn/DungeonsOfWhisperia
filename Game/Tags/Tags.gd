@@ -1,7 +1,8 @@
 class_name Tags
 extends Node
 
-const AUBERGE_RESTORED = "auberge_restored"
+const AUBERGE_PLAYER_RESTORED = "AUBERGE_PLAYER_RESTORED"
+const DUNGEON_01_ENABLE = "DUNGEON_01_ENABLE"
 
 var _tags : Array[String] = []
 

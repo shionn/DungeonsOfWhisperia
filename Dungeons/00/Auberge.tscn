@@ -34,7 +34,7 @@
 [ext_resource type="PackedScene" uid="uid://d20qpul5ulp0y" path="res://Assets/Bits/RpgTools/map_empty.gltf" id="11_o35sb"]
 [ext_resource type="PackedScene" uid="uid://bmurq8gfdf5sq" path="res://Assets/Bits/RpgTools/nail.gltf" id="12_6hlga"]
 [ext_resource type="PackedScene" uid="uid://cbbuf33qge7bs" path="res://Assets/Dungeons/Bar/bar_straight_A_short.gltf" id="12_bshfy"]
-[ext_resource type="Script" uid="uid://bpgb3pwbq61mh" path="res://Game/Interactable.gd" id="12_ntc8q"]
+[ext_resource type="Script" uid="uid://b3dhqvmx6f1a4" path="res://Dungeons/00/PanneauDaffichage.gd" id="12_ntc8q"]
 [ext_resource type="Script" uid="uid://cux3ba4bcmj4r" path="res://Dungeons/ChangeTexture.gd" id="14_2aq5y"]
 [ext_resource type="PackedScene" uid="uid://7em3lt4lnfwr" path="res://Assets/Dungeons/Wall/wall.gltf" id="14_3w82h"]
 [ext_resource type="PackedScene" uid="uid://duou4wlxhj2jj" path="res://Assets/Dungeons/Bottle/bottle_B_brown.gltf" id="14_fpiy1"]
@@ -173,18 +173,20 @@ script = ExtResource("3_fq3ns")
 text = "Merci, j’accepte avec joie votre proposition."
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
-[node name="ApportFood" type="Node" parent="Aigle Jaune/Bienvenue" unique_id=1368761772]
+[node name="ApportFood" type="Node" parent="Aigle Jaune/Bienvenue" unique_id=1368761772 node_paths=PackedStringArray("pnj")]
 script = ExtResource("3_fq3ns")
 text = "Votre repas est prêt. Il est sur le bar à gauche. J’ai préparé un ragoût de viande et de légumes, cuisiné avec des ingrédients locaux, accompagné d’un pain de campagne. Cela devrait vous redonner un peu d’énergie.
 
 Vous semblez jeune. Si vous êtes à la recherche de travail, vous trouverez les annonces des missions sur le panneau près de l’entrée."
+pnj = NodePath("../..")
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
-[node name="LookingForQuest" type="Node" parent="Aigle Jaune/Bienvenue" unique_id=1344520848]
+[node name="LookingForQuest" type="Node" parent="Aigle Jaune/Bienvenue" unique_id=1344520848 node_paths=PackedStringArray("pnj")]
 script = ExtResource("3_fq3ns")
 text = "Vous semblez aller mieux. 
 
 Si vous cherchez un travail, jetez un œil au panneau d’affichage près de l’entrée. Il y a des missions qui pourraient vous intéresser."
+pnj = NodePath("../..")
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
 [node name="Hoarder" parent="." unique_id=1031378864 instance=ExtResource("1_df0jl")]
@@ -199,6 +201,23 @@ transform = Transform3D(-0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, -0.
 [node name="PanneauDAffichage" parent="." unique_id=1099766786 instance=ExtResource("11_o35sb")]
 transform = Transform3D(1.2, 0, 0, 0, -5.2453668e-08, -1.2, 0, 1.2, -5.2453668e-08, 0.4, 2, -1.6999999)
 script = ExtResource("12_ntc8q")
+action = 1
+
+[node name="Description" type="Node" parent="PanneauDAffichage" unique_id=59974181]
+script = ExtResource("3_fq3ns")
+text = "Ca ressemble à un panneau d’affichage pour des petites annonces de travail. Les primes semblent assez basse. 
+
+Mais je suis bien trop épuissé pour repartir à l’aventure pour l’instant."
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Mission 1" type="Node" parent="PanneauDAffichage" unique_id=673003918]
+script = ExtResource("3_fq3ns")
+text = "[i]Une note attire votre attention :[/i] 
+Débarrasser les morts-vivants errant près du mausolée, non loin au nord-est de l’auberge. 
+Ces créatures sont de plus en plus nombreuses… et certaines s’approchent même de l’auberge. Cela ne peut plus continuer.
+
+Récompense : 10 Pièces d'or"
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
 [node name="nail2" parent="PanneauDAffichage" unique_id=67840259 instance=ExtResource("12_6hlga")]
 transform = Transform3D(0.5950345, 0.6424018, -0.48296282, -0.67707694, 0.7244439, 0.12940949, 0.4330125, 0.24999997, 0.86602503, -0.7499999, 0.08333337, -0.41666687)
@@ -1688,3 +1707,4 @@ Une fois dans l’auberge, vous découvrez avec étonnement qu’elle est étran
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
 [connection signal="close" from="Aigle Jaune/Bienvenue/Next/Next/Next/Next/Next" to="Aigle Jaune" method="_on_Bienvenue_close"]
+[connection signal="close" from="PanneauDAffichage/Mission 1" to="PanneauDAffichage" method="_on_mission_1_close"]

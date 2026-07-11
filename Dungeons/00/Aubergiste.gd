@@ -8,7 +8,7 @@ func _ready() -> void:
 
 func interact() -> void:
 	look_at_player()
-	if tags.have(Tags.AUBERGE_RESTORED) :
+	if tags.have(Tags.AUBERGE_PLAYER_RESTORED) :
 		gui.openDialog($Bienvenue/LookingForQuest)
 	elif _food.visible :
 		gui.openDialog($Bienvenue/ApportFood)

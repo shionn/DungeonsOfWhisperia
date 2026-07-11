@@ -985,6 +985,7 @@ texture = ExtResource("14_3yfkq")
 stretch_mode = 1
 
 [node name="PanelContainer" type="PanelContainer" parent="ExitAuberge" unique_id=477715106]
+propagate_maximum_size = false
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_fucts")
 
@@ -1067,6 +1068,7 @@ libraries/ = SubResource("AnimationLibrary_7xgee")
 [connection signal="pressed" from="DialogGui/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/NextButton" to="DialogGui" method="_on_next_button_pressed"]
 [connection signal="pressed" from="DialogGui/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/CloseButton" to="DialogGui" method="_on_close_button_pressed"]
 [connection signal="visibility_changed" from="ExitAuberge" to="." method="update_mouse_mode"]
+[connection signal="visibility_changed" from="ExitAuberge" to="ExitAuberge" method="_on_visibility_changed"]
 [connection signal="pressed" from="ExitAuberge/PanelContainer/MarginContainer/VBoxContainer/Dungeon01" to="ExitAuberge" method="_on_dungeon_01_pressed"]
 [connection signal="pressed" from="ExitAuberge/PanelContainer/MarginContainer/VBoxContainer/CloseButton" to="ExitAuberge" method="hide"]
 [connection signal="animation_finished" from="Transition/AnimationPlayer" to="Transition" method="_on_animation_finished"]

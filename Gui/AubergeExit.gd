@@ -1,6 +1,6 @@
 extends GameBaseControl
 
-func _init() -> void:
+func _ready() -> void:
 	hide()
 
 func _on_dungeon_01_pressed() -> void:
@@ -16,4 +16,7 @@ func _goTo(path : String) -> void :
 	dungeon.name = "Dungeon"
 	world.add_child(dungeon)
 	player.reset_orientation()
+
+func _on_visibility_changed() -> void:
+	$PanelContainer/MarginContainer/VBoxContainer/Dungeon01.visible = tags.have(Tags.DUNGEON_01_ENABLE)
 	

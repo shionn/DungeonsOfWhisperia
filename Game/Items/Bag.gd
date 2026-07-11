@@ -20,7 +20,7 @@ func loot(item : Items.ItemName) -> void :
 	_gui.consoleLog("Vous obtenez %s." % _items.from(item).name)
 
 func unloot(item : Items.ItemName) -> void : 
-	var index = _items.find(item)
+	var index = items.find(item)
 	if index >=0 :
 		_gui.consoleLog("Vous utilisez %s." % _items.from(item).name)
 		items.remove_at(index)
