@@ -3,7 +3,6 @@
 [ext_resource type="PackedScene" uid="uid://budb61il707se" path="res://Assets/Dungeons/Wall/Doorway/wall_doorway.gltf" id="1_264vq"]
 [ext_resource type="PackedScene" uid="uid://ccig3mv7ciiqs" path="res://Assets/Scenes/Hoarder.tscn" id="1_df0jl"]
 [ext_resource type="PackedScene" uid="uid://q200penx1kxw" path="res://Game/PNJ.tscn" id="1_fq3ns"]
-[ext_resource type="PackedScene" uid="uid://cprg1on0x47sl" path="res://Assets/Scenes/FarmerA.tscn" id="1_wji3q"]
 [ext_resource type="Script" uid="uid://b1e6ax2vliiya" path="res://Dungeons/00/AubergeEntrance.gd" id="1_y7s6b"]
 [ext_resource type="PackedScene" uid="uid://b0n3wa8ptu8li" path="res://Assets/Dungeons/Floor/Large/floor_wood_large.gltf" id="1_yp4s1"]
 [ext_resource type="Script" uid="uid://d2a4w47b4u6ff" path="res://Dungeons/00/Serveuse.gd" id="2_52cfg"]
@@ -19,10 +18,12 @@
 [ext_resource type="PackedScene" uid="uid://bmsswkb24hlcs" path="res://Assets/Dungeons/Coin/coin.gltf" id="5_rr5s8"]
 [ext_resource type="PackedScene" uid="uid://0fn6al4q3iav" path="res://Assets/Dungeons/Wall/Corner/wall_corner.gltf" id="5_yel37"]
 [ext_resource type="PackedScene" uid="uid://dovakj2rku7yl" path="res://Assets/Dungeons/Wall/wall_window_open.gltf" id="6_hdq2o"]
+[ext_resource type="PackedScene" uid="uid://cgl150hsir7vc" path="res://Assets/Scenes/AvianSwordsman.tscn" id="6_od4xh"]
 [ext_resource type="PackedScene" uid="uid://cl36lcn4lo2eq" path="res://Assets/Scenes/Torch_Mounted.tscn" id="7_68h1y"]
 [ext_resource type="PackedScene" uid="uid://c6i85c8iqhfgd" path="res://Assets/Dungeons/Wall/TSplit/wall_Tsplit.gltf" id="7_yel37"]
 [ext_resource type="PackedScene" uid="uid://drxqh8hppf4fg" path="res://Assets/Dungeons/Barrier/barrier_corner.gltf" id="8_ewcw7"]
 [ext_resource type="PackedScene" uid="uid://umb3bjiok44i" path="res://Assets/Dungeons/Bottle/bottle_A_labeled_green.gltf" id="8_ifxis"]
+[ext_resource type="Script" uid="uid://d0hspqdvbkog3" path="res://Dungeons/00/Aubergiste.gd" id="8_o35sb"]
 [ext_resource type="Texture2D" uid="uid://dw7dieeqqesdv" path="res://Assets/Textures/Dungeon/alt_texture_5_NightA.png" id="9_2aq5y"]
 [ext_resource type="PackedScene" uid="uid://chff1sr5jalwq" path="res://Assets/Dungeons/Barrier/barrier.gltf" id="9_37dca"]
 [ext_resource type="PackedScene" uid="uid://d17shvcpj3oew" path="res://Assets/Dungeons/Barrel/barrel_small_stack.gltf" id="9_sv8nb"]
@@ -99,24 +100,67 @@ transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0, 0, 0)
 
 [node name="Bienvenue" type="Node" parent="Luna Honey" unique_id=1214666615 node_paths=PackedStringArray("pnj")]
 script = ExtResource("3_fq3ns")
-text = "Bienvenue aventurier à la taverne du pin tordu.
-Vous avez l'air fatigué. Prenez donc le temps de vous reposer."
+text = "Bienvenue, aventurier ! Vous semblez épuisé… Restez, prenez le temps de vous ressourcer."
 pnj = NodePath("..")
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
 [node name="Next" type="Node" parent="Luna Honey/Bienvenue" unique_id=2123317625]
 script = ExtResource("3_fq3ns")
-text = "Je suis épuisé, j'ai fait une longue route, je n'ai plus rien, pas même un sou. Ce qui me reste, c'est tout ce que je porte."
+text = "Bonjour, je vous avoue être épuisé. J’ai subi une attaque d’une bande de voleurs. J’ai réussi à les semer en fuyant dans la forêt.
+
+Je n’ai plus rien, pas un sous. Tout ce que j’ai, c’est ce que je porte. J’ai erré des jours avant d’arriver ici. Où suis-je ?"
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
 [node name="Next" type="Node" parent="Luna Honey/Bienvenue/Next" unique_id=1285238277 node_paths=PackedStringArray("pnj")]
 script = ExtResource("3_fq3ns")
-text = "Mon pauvre, parlez donc au patron qui se tient derrière le bar. Peut-être qu'il pourra trouver quelque chose pour vous."
+text = "Effectivement, on voit bien que vous avez souffert. Vous êtes ici, à l’Auberge du Pigeon Perdu ! [i](elle sourit avec un mélange de compassion et d’amusement)[/i]
+Vous savez, cette auberge a une réputation… un peu particulière. On dit qu’elle attire les voyageurs perdus, les aventuriers épuisés, et même les oiseaux qui ont perdu leur chemin. Mais ici, personne ne reste longtemps seul.
+Le patron, lui, est un homme bienveillant. Il pourra sans doute vous aider. Vous le trouverez derrière le bar."
 pnj = NodePath("../../..")
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
-[node name="Farmer_A" parent="." unique_id=1194096177 instance=ExtResource("1_wji3q")]
-transform = Transform3D(-0.25881904, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, -0.25881904, 11.9, 0, -7)
+[node name="Aigle Jaune" parent="." unique_id=1882476485 instance=ExtResource("1_fq3ns")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 12, 0, -7.4)
+script = ExtResource("8_o35sb")
+
+[node name="Character" parent="Aigle Jaune" unique_id=1674546116 instance=ExtResource("6_od4xh")]
+
+[node name="Bienvenue" type="Node" parent="Aigle Jaune" unique_id=1900171295 node_paths=PackedStringArray("pnj")]
+script = ExtResource("3_fq3ns")
+text = "Bonjour, aventurier. 
+
+Bienvenue à l’« Auberge du Pigeon Perdu ». Vous semblez épuisé… Que vous est-il arrivé ?"
+pnj = NodePath("..")
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Next" type="Node" parent="Aigle Jaune/Bienvenue" unique_id=1011414265]
+script = ExtResource("3_fq3ns")
+text = "J’ai été attaqué par des voleurs. J’ai fui dans la forêt, je me suis perdu… J’ai erré pendant des jours. 
+
+C’est la lumière de votre auberge qui m’a guidé jusqu’ici. Je n’ai plus un sous. Et je suis totalement épuisé."
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Next" type="Node" parent="Aigle Jaune/Bienvenue/Next" unique_id=1734174409 node_paths=PackedStringArray("pnj")]
+script = ExtResource("3_fq3ns")
+text = "Mon pauvre, cette histoire me semble familière. Vous n’êtes pas le premier ni le dernier à traverser de tels épreuves. Je vous propose un repas, et vous me rembourserez quand vous pourrez."
+pnj = NodePath("../../..")
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Next" type="Node" parent="Aigle Jaune/Bienvenue/Next/Next" unique_id=512778115]
+script = ExtResource("3_fq3ns")
+text = "Mais comment pourrai-je gagner de l’argent ici ? Nous sommes au cœur de nulle part."
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Next" type="Node" parent="Aigle Jaune/Bienvenue/Next/Next/Next" unique_id=435261389 node_paths=PackedStringArray("pnj")]
+script = ExtResource("3_fq3ns")
+text = "Vous semblez bien équipé. Ne vous fiez pas à l’apparence : à première vue, cette auberge est isolée, mais le danger rôde autour de nous. Les missions ne rapportent pas beaucoup, mais je suis sûr que vous y trouverez des trésors."
+pnj = NodePath("../../../../..")
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Next" type="Node" parent="Aigle Jaune/Bienvenue/Next/Next/Next/Next" unique_id=902466358]
+script = ExtResource("3_fq3ns")
+text = "Merci, j’accepte avec joie votre proposition."
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
 [node name="Hoarder" parent="." unique_id=1031378864 instance=ExtResource("1_df0jl")]
 transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, 4, 0, -4)

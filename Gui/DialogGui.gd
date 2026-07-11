@@ -17,8 +17,8 @@ func open(dialog: Dialog)->void :
 	_option_button1.hide()
 	
 	_text.clear()
-	if dialog.pnj : _text.append_text("[color=gray]%s : [/color]"%dialog.pnj.name)
-	else : _text.append_text("[color=gray]Vous : [/color]")
+	if dialog.pnj : _text.append_text("[color=darkgray]%s : [/color]"%dialog.pnj.name)
+	else : _text.append_text("[color=darkgray]Vous : [/color]")
 	_text.append_text(dialog.text)
 	if dialog.pnj : 
 		_pnj_view.show()
@@ -32,10 +32,6 @@ func open(dialog: Dialog)->void :
 		_option_button1.show()
 		_option_button1.text = "Suite"
 		_option1 = func() : open(dialog.next)
-		
-		
-	
-		
 	show()
 
 
