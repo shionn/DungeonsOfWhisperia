@@ -31,12 +31,16 @@
 [ext_resource type="PackedScene" uid="uid://seduh2e3emxb" path="res://Assets/Dungeons/Bar/bar_straight_B.gltf" id="10_5on6j"]
 [ext_resource type="PackedScene" uid="uid://cci3nonvs2qm3" path="res://Assets/Dungeons/Bottle/bottle_A_labeled_brown.gltf" id="10_7cisn"]
 [ext_resource type="PackedScene" uid="uid://bta2mvfkcul0j" path="res://Assets/Dungeons/Bar/bar_straight_C.gltf" id="11_3w82h"]
+[ext_resource type="PackedScene" uid="uid://d20qpul5ulp0y" path="res://Assets/Bits/RpgTools/map_empty.gltf" id="11_o35sb"]
+[ext_resource type="PackedScene" uid="uid://bmurq8gfdf5sq" path="res://Assets/Bits/RpgTools/nail.gltf" id="12_6hlga"]
 [ext_resource type="PackedScene" uid="uid://cbbuf33qge7bs" path="res://Assets/Dungeons/Bar/bar_straight_A_short.gltf" id="12_bshfy"]
+[ext_resource type="Script" uid="uid://bpgb3pwbq61mh" path="res://Game/Interactable.gd" id="12_ntc8q"]
 [ext_resource type="Script" uid="uid://cux3ba4bcmj4r" path="res://Dungeons/ChangeTexture.gd" id="14_2aq5y"]
 [ext_resource type="PackedScene" uid="uid://7em3lt4lnfwr" path="res://Assets/Dungeons/Wall/wall.gltf" id="14_3w82h"]
 [ext_resource type="PackedScene" uid="uid://duou4wlxhj2jj" path="res://Assets/Dungeons/Bottle/bottle_B_brown.gltf" id="14_fpiy1"]
 [ext_resource type="PackedScene" uid="uid://6va0jlkenwta" path="res://Assets/Dungeons/Pillar/pillar_decorated.gltf" id="15_bshfy"]
 [ext_resource type="PackedScene" uid="uid://cpxbxsa88w1au" path="res://Assets/Dungeons/Bottle/bottle_B_green.gltf" id="15_nx0cc"]
+[ext_resource type="Script" uid="uid://bjc76th2obumq" path="res://Dungeons/00/PlateFood.gd" id="15_od4xh"]
 [ext_resource type="PackedScene" uid="uid://bb3fm1t7c54di" path="res://Assets/Dungeons/Wall/End/wall_half_endcap.gltf" id="16_kcjse"]
 [ext_resource type="PackedScene" uid="uid://bjfrjb5gr6a3k" path="res://Assets/Dungeons/Wall/wall_arched.gltf" id="16_w87p1"]
 [ext_resource type="PackedScene" uid="uid://dtbeiqnbxjtah" path="res://Assets/Dungeons/Bottle/bottle_C_brown.gltf" id="16_x11bk"]
@@ -85,8 +89,15 @@
 [ext_resource type="PackedScene" uid="uid://bqco8q8yxudyo" path="res://Assets/MedievalHexagon/decoration/nature/trees_A_large.gltf" id="71_lv1qi"]
 [ext_resource type="PackedScene" uid="uid://cjnne0knj2qsw" path="res://Assets/MedievalHexagon/decoration/nature/trees_B_small.gltf" id="75_wji3q"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_brlmy"]
+size = Vector3(1.7, 0.2, 1)
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_b02ke"]
 size = Vector3(2, 2.6000001, 0.8)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_o35sb"]
+radius = 0.525
+height = 1.4124999
 
 [node name="Auberge" type="Node3D" unique_id=1682341964]
 script = ExtResource("1_y7s6b")
@@ -162,6 +173,20 @@ script = ExtResource("3_fq3ns")
 text = "Merci, j’accepte avec joie votre proposition."
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
+[node name="ApportFood" type="Node" parent="Aigle Jaune/Bienvenue" unique_id=1368761772]
+script = ExtResource("3_fq3ns")
+text = "Votre repas est prêt. Il est sur le bar à gauche. J’ai préparé un ragoût de viande et de légumes, cuisiné avec des ingrédients locaux, accompagné d’un pain de campagne. Cela devrait vous redonner un peu d’énergie.
+
+Vous semblez jeune. Si vous êtes à la recherche de travail, vous trouverez les annonces des missions sur le panneau près de l’entrée."
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="LookingForQuest" type="Node" parent="Aigle Jaune/Bienvenue" unique_id=1344520848]
+script = ExtResource("3_fq3ns")
+text = "Vous semblez aller mieux. 
+
+Si vous cherchez un travail, jetez un œil au panneau d’affichage près de l’entrée. Il y a des missions qui pourraient vous intéresser."
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
 [node name="Hoarder" parent="." unique_id=1031378864 instance=ExtResource("1_df0jl")]
 transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, 4, 0, -4)
 
@@ -170,6 +195,28 @@ transform = Transform3D(0.76604444, 0, 0.6427876, 0, 1, 0, -0.6427876, 0, 0.7660
 
 [node name="Witch" parent="." unique_id=870540674 instance=ExtResource("3_488ss")]
 transform = Transform3D(-0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, -0.70710677, 22.4, 4, 4.5)
+
+[node name="PanneauDAffichage" parent="." unique_id=1099766786 instance=ExtResource("11_o35sb")]
+transform = Transform3D(1.2, 0, 0, 0, -5.2453668e-08, -1.2, 0, 1.2, -5.2453668e-08, 0.4, 2, -1.6999999)
+script = ExtResource("12_ntc8q")
+
+[node name="nail2" parent="PanneauDAffichage" unique_id=67840259 instance=ExtResource("12_6hlga")]
+transform = Transform3D(0.5950345, 0.6424018, -0.48296282, -0.67707694, 0.7244439, 0.12940949, 0.4330125, 0.24999997, 0.86602503, -0.7499999, 0.08333337, -0.41666687)
+
+[node name="nail4" parent="PanneauDAffichage" unique_id=303748065 instance=ExtResource("12_6hlga")]
+transform = Transform3D(0.86602503, 0.49999988, -2.1855682e-08, -0.49999988, 0.86602503, 5.8562257e-09, 2.1855689e-08, 5.856208e-09, 0.99999976, -0.7499999, 0.08333373, 0.41666603)
+
+[node name="nail3" parent="PanneauDAffichage" unique_id=479342081 instance=ExtResource("12_6hlga")]
+transform = Transform3D(0.8660251, -0.49999988, 2.185568e-08, 0.49999988, 0.8660251, 5.8562293e-09, -2.1855689e-08, 5.8561973e-09, 0.99999976, 0.8333331, 0.08333337, -0.5000001)
+
+[node name="nail5" parent="PanneauDAffichage" unique_id=1303860234 instance=ExtResource("12_6hlga")]
+transform = Transform3D(0.49999988, -0.49999988, -0.70710665, 0.70710665, 0.70710665, 2.1316282e-14, 0.4999998, -0.4999998, 0.7071066, 0.8333331, 0.08333385, 0.41666603)
+
+[node name="Area3D" type="Area3D" parent="PanneauDAffichage" unique_id=2087567546]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PanneauDAffichage/Area3D" unique_id=2106621469]
+transform = Transform3D(0.99999976, 0, 0, 0, 0.99999976, 1.3962165e-12, 0, -1.3962165e-12, 0.99999976, 0.049999952, 0.10000014, -3.5762787e-07)
+shape = SubResource("BoxShape3D_brlmy")
 
 [node name="RDC" type="Node3D" parent="." unique_id=1604559993]
 
@@ -199,6 +246,17 @@ transform = Transform3D(1.1920929e-07, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, 1
 
 [node name="Bar" type="Node3D" parent="RDC" unique_id=311502028]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, -8)
+
+[node name="Food" parent="RDC/Bar" unique_id=1075019808 instance=ExtResource("21_yxyjh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3999996, 1, -3)
+visible = false
+script = ExtResource("15_od4xh")
+
+[node name="Area3D" type="Area3D" parent="RDC/Bar/Food" unique_id=1527686673]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RDC/Bar/Food/Area3D" unique_id=369999227]
+transform = Transform3D(0.7912402, -0.21201219, -0.5735765, 0.25881907, 0.96592593, 0, 0.5540323, -0.1484525, 0.81915206, -0.073085785, 0.1716665, -0.09907246)
+shape = SubResource("CapsuleShape3D_o35sb")
 
 [node name="coin_stack_small2" parent="RDC/Bar" unique_id=1666666879 instance=ExtResource("4_p7u67")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1, 0)
@@ -293,9 +351,6 @@ transform = Transform3D(0.49999997, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, 0.49
 [node name="plate_stack2" parent="RDC/Bar" unique_id=1896923943 instance=ExtResource("20_lv1qi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1, 4.1)
 
-[node name="plate_food_A3" parent="RDC/Bar" unique_id=1075019808 instance=ExtResource("21_yxyjh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3999996, 1, -3)
-
 [node name="trunk_small_A2" parent="RDC/Bar" unique_id=1928163772 instance=ExtResource("22_l4ilv")]
 transform = Transform3D(-0.50000006, 0, -0.8660254, 0, 1, 0, 0.8660254, 0, -0.50000006, 3, 1, 3)
 
@@ -304,6 +359,18 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3, 1
 
 [node name="bartop_A_large3" parent="RDC/Bar" unique_id=607665173 instance=ExtResource("22_p7u67")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3, 1, 4.3)
+
+[node name="stool_round2" parent="RDC/Bar" unique_id=9916792 instance=ExtResource("46_od4xh")]
+transform = Transform3D(-0.25881904, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, -0.25881904, -4.8999996, 0, -3.6000004)
+
+[node name="stool_round3" parent="RDC/Bar" unique_id=1601667229 instance=ExtResource("46_od4xh")]
+transform = Transform3D(0.9659258, 0, -0.25881904, 0, 1, 0, 0.25881904, 0, 0.9659258, -4.8999996, 0, 1.6999998)
+
+[node name="stool_round5" parent="RDC/Bar" unique_id=1545252985 instance=ExtResource("46_od4xh")]
+transform = Transform3D(0.9659258, 0, 0.25881904, 0, 1, 0, -0.25881904, 0, 0.9659258, -4.8999996, 0, -0.6000004)
+
+[node name="stool_round4" parent="RDC/Bar" unique_id=1411150424 instance=ExtResource("46_od4xh")]
+transform = Transform3D(0.49999997, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.49999997, -4.8999996, 0, 4.1)
 
 [node name="Walls" type="Node3D" parent="RDC" unique_id=1610977315]
 script = ExtResource("14_2aq5y")
@@ -554,18 +621,6 @@ transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 21.7
 
 [node name="crates_stacked2" parent="RDC" unique_id=1671493113 instance=ExtResource("43_52cfg")]
 transform = Transform3D(0.25881907, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, 0.25881907, 16, 0, 0)
-
-[node name="stool_round2" parent="RDC" unique_id=9916792 instance=ExtResource("46_od4xh")]
-transform = Transform3D(-0.25881904, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, -0.25881904, 9.1, 0, -11.6)
-
-[node name="stool_round3" parent="RDC" unique_id=1601667229 instance=ExtResource("46_od4xh")]
-transform = Transform3D(0.9659258, 0, -0.25881904, 0, 1, 0, 0.25881904, 0, 0.9659258, 9.1, 0, -6.3)
-
-[node name="stool_round5" parent="RDC" unique_id=1545252985 instance=ExtResource("46_od4xh")]
-transform = Transform3D(0.9659258, 0, 0.25881904, 0, 1, 0, -0.25881904, 0, 0.9659258, 9.1, 0, -8.6)
-
-[node name="stool_round4" parent="RDC" unique_id=1411150424 instance=ExtResource("46_od4xh")]
-transform = Transform3D(0.49999997, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.49999997, 9.1, 0, -3.9)
 
 [node name="table_long_decorated_A2" parent="RDC" unique_id=1425766908 instance=ExtResource("47_o35sb")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4.4, 0, -10)
@@ -1631,3 +1686,5 @@ Vous vous êtes retrouvé devant la porte. Une porte en bois pourri, entourée d
 
 Une fois dans l’auberge, vous découvrez avec étonnement qu’elle est étrangement animée et fréquentée, malgré sa localisation isolée."
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[connection signal="close" from="Aigle Jaune/Bienvenue/Next/Next/Next/Next/Next" to="Aigle Jaune" method="_on_Bienvenue_close"]

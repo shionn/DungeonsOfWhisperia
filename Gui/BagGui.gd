@@ -12,7 +12,7 @@ var _interactable : Interactable
 #var drag : Item = null
 func _ready() -> void:
 	visible = false
-	bag.on_item_change.connect(self._refresh)
+	bag.item_change.connect(self._refresh)
 
 func _process(_delta: float) -> void:
 	if _dragButton:

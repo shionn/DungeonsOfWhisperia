@@ -1,5 +1,6 @@
 extends PNJ
 
+@onready var _food = $"../RDC/Bar/Food"
 
 func _ready() -> void:
 	$Character/Rig_Medium/Skeleton3D/AvianSwordsman_Cloak.hide()
@@ -7,4 +8,17 @@ func _ready() -> void:
 
 func interact() -> void:
 	look_at_player()
-	gui.openDialog($Bienvenue)
+	if tags.have(Tags.AUBERGE_RESTORED) :
+		gui.openDialog($Bienvenue/LookingForQuest)
+	elif _food.visible :
+		gui.openDialog($Bienvenue/ApportFood)
+	else :
+		gui.openDialog($Bienvenue)
+
+
+func _on_Bienvenue_close() -> void:
+	gui.openTransition(_on_Bienvenue_close_transition_callback)
+
+func _on_Bienvenue_close_transition_callback() -> void:
+	_food.show()
+	gui.openDialog($Bienvenue/ApportFood)

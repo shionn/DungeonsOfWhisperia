@@ -4,5 +4,6 @@ class_name GameBase3D
 @onready var gui := $/root/World/Gui as Gui
 @onready var player := $/root/World/Player as PlayerG
 @onready var bag := $/root/World/Player/Bag as Bag
+@onready var tags := $/root/World/Player/Tags as Tags
 
 const LOOT_RANGE: float = 3

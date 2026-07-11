@@ -6,15 +6,18 @@ extends GridContainer
 @onready var _pnj_camera = $PanelContainer/MarginContainer/VBoxContainer/HBoxContainer2/SubViewportContainer/SubViewport/Camera3D as Camera3D
 @onready var _close_button = $PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/CloseButton as Button
 @onready var _option_button1 = $PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/OptionButton1 as Button
+@onready var _next_button = $PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/NextButton as Button
 
-var _option1 : Callable
+var _current : Dialog
 
 func _ready() -> void:
 	hide()
 
 func open(dialog: Dialog)->void :
+	_current = dialog
 	_close_button.show()
 	_option_button1.hide()
+	_next_button.hide()
 	
 	_text.clear()
 	if dialog.pnj : _text.append_text("[color=darkgray]%s : [/color]"%dialog.pnj.name)
@@ -29,15 +32,17 @@ func open(dialog: Dialog)->void :
 	
 	if dialog.next :
 		_close_button.hide()
-		_option_button1.show()
-		_option_button1.text = "Suite"
-		_option1 = func() : open(dialog.next)
+		_next_button.show()
 	show()
 
 
 func _on_close_button_pressed() -> void:
+	_current.close.emit()
 	hide()
 
+func _on_next_button_pressed() -> void:
+	_current.close.emit()
+	open(_current.next)
 
 func _on_option_button_1_pressed() -> void:
-	_option1.call()
+	pass

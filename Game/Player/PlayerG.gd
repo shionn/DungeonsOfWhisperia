@@ -16,7 +16,7 @@ var _state : State = State.MOVE
 var _attacked_monster : Monster
 
 var lvl = 1
-var pv = get_max_pv()
+var pv = 1
 var xp = 0
 
 func _ready() -> void:

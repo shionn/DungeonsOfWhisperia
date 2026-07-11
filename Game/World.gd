@@ -31,7 +31,7 @@ func _updateRayCast() -> void :
 	if result and result["collider"] is Monster: 
 		target_monster = result["collider"]
 	else : target_monster = null
-	if result and result["collider"] is Area3D and result["collider"].get_parent() is Interactable : 
+	if result and result["collider"] is Area3D and result["collider"].get_parent() is Interactable and result["collider"].get_parent().visible: 
 		target_interactable = result["collider"].get_parent()
 	else : target_interactable = null
 	if result and result["collider"] is PNJ: 
