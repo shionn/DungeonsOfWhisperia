@@ -1173,6 +1173,7 @@ spell_id = 3
 [connection signal="visibility_changed" from="ExitAuberge" to="ExitAuberge" method="_on_visibility_changed"]
 [connection signal="pressed" from="ExitAuberge/PanelContainer/MarginContainer/VBoxContainer/Dungeon01" to="ExitAuberge" method="_on_dungeon_01_pressed"]
 [connection signal="pressed" from="ExitAuberge/PanelContainer/MarginContainer/VBoxContainer/CloseButton" to="ExitAuberge" method="hide"]
+[connection signal="visibility_changed" from="Transition" to="." method="update_mouse_mode"]
 [connection signal="animation_finished" from="Transition/AnimationPlayer" to="Transition" method="_on_animation_finished"]
 [connection signal="pressed" from="Spells/Button1" to="Spells/Button1" method="_on_pressed"]
 [connection signal="pressed" from="Spells/Button2" to="Spells/Button2" method="_on_pressed"]
