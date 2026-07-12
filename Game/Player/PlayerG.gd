@@ -23,6 +23,7 @@ func _ready() -> void:
 	_animation.animation_finished.connect(_on_animation_finished)
 	_mainHandAtkTimer.timeout.connect(_on_main_hand_atk_timer)
 	_offHandAtkTimer.timeout.connect(_on_off_hand_atk_timer)
+	load_game()
 	
 func _physics_process(_delta: float) -> void:
 	match _state :
@@ -121,6 +122,37 @@ func reset_orientation() -> void:
 	_character.rotation.y = PI/2
 	$Camera3D.rotation.y = -PI/2
 	$Camera3D.rotation.x = 0
+	global_position.x = 0
+	global_position.z = 0
+
+func save_game() -> void : 
+	var save_data = {
+		"lvl" : lvl,
+		"pv" : pv,
+		"xp" : xp,
+		"tags" : tags._tags,
+		"bag": bag.items
+	}
+	var json_string = JSON.stringify(save_data, "\t")
+	var file = FileAccess.open("user://%s.save"%[get_player_classe()], FileAccess.WRITE)
+	file.store_line(json_string)
+	file.close()
+	gui.consoleLog("Partie sauvegardée")
+
+func load_game() -> void : 
+	var file_name = "user://%s.save"%[get_player_classe()]
+	if FileAccess.file_exists(file_name) :
+		var file = FileAccess.open(file_name, FileAccess.READ)
+		var save_data = JSON.parse_string(file.get_as_text())
+		lvl = save_data["lvl"]
+		pv = save_data["pv"]
+		xp = save_data["xp"]
+		for tag in save_data["tags"] : tags._tags.append(tag)
+		for item in save_data["bag"] : bag.items.append(item)
+		gui.consoleLog("Partie chargée")
+
+
+
 
 func isDead() -> bool: return _state == State.DEATH or pv <= 0
 
@@ -133,3 +165,4 @@ func isDead() -> bool: return _state == State.DEATH or pv <= 0
 @abstract func get_atk_main_hand_timer_factor() -> float
 @abstract func get_atk_off_hand() -> int
 @abstract func get_atk_off_hand_timer_factor() -> float
+@abstract func get_player_classe() -> String

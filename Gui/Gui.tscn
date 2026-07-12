@@ -43,6 +43,16 @@ bg_color = Color(1, 0.94509804, 0.8235294, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8pck7"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5koau"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u21oi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2pnra"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l4ar5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_owfy6"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m586l"]
 bg_color = Color(1, 0.94509804, 0.8235294, 1)
 
@@ -496,7 +506,6 @@ item_count = 4
 popup/item_0/text = "Sauvegarder"
 popup/item_0/icon = ExtResource("21_c4ovl")
 popup/item_0/id = 1
-popup/item_0/disabled = true
 popup/item_1/text = "Option"
 popup/item_1/icon = ExtResource("21_wbke4")
 popup/item_1/id = 2
@@ -575,8 +584,17 @@ horizontal_alignment = 1
 [node name="TabContainer" type="TabContainer" parent="Introduction/PanelContainer/MarginContainer/VBoxContainer" unique_id=1738273311]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_colors/font_selected_color = Color(0, 0, 0, 1)
+theme_override_constants/tab_separation = 32
 theme_override_styles/panel = SubResource("StyleBoxEmpty_8pck7")
+theme_override_styles/tab_unselected = SubResource("StyleBoxEmpty_5koau")
+theme_override_styles/tab_hovered = SubResource("StyleBoxEmpty_u21oi")
+theme_override_styles/tab_selected = SubResource("StyleBoxEmpty_2pnra")
+theme_override_styles/tab_disabled = SubResource("StyleBoxEmpty_l4ar5")
+theme_override_styles/tab_focus = SubResource("StyleBoxEmpty_owfy6")
 current_tab = 0
+tab_0/icon = ExtResource("8_8pck7")
+tab_1/icon = ExtResource("23_883rq")
 
 [node name="Context" type="RichTextLabel" parent="Introduction/PanelContainer/MarginContainer/VBoxContainer/TabContainer" unique_id=934426654]
 layout_mode = 2
@@ -1055,6 +1073,7 @@ script = ExtResource("25_60sjt")
 libraries/ = SubResource("AnimationLibrary_7xgee")
 
 [connection signal="visibility_changed" from="Bag" to="." method="_on_bag_visibility_changed"]
+[connection signal="visibility_changed" from="Bag" to="Bag" method="_on_visibility_changed"]
 [connection signal="pressed" from="Bag/PanelContainer/MarginContainer/VBoxContainer/CloseButton" to="Bag" method="hide"]
 [connection signal="visibility_changed" from="Loot" to="." method="_on_loot_visibility_changed"]
 [connection signal="pressed" from="Loot/PanelContainer/MarginContainer/VBoxContainer/CloseButton" to="." method="_close"]

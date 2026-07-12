@@ -60,3 +60,4 @@ func get_atk_main_hand_timer_factor() -> float:
 		_ : return .55
 func get_atk_off_hand() -> int: return 0
 func get_atk_off_hand_timer_factor() -> float: return 0
+func get_player_classe(): return "Ranger"
