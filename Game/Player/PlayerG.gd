@@ -169,4 +169,5 @@ func isDead() -> bool: return _state == State.DEATH or pv <= 0
 @abstract func get_atk_main_hand_timer_factor() -> float
 @abstract func get_atk_off_hand() -> int
 @abstract func get_atk_off_hand_timer_factor() -> float
+@abstract func get_spells() -> Array[Spell]
 @abstract func get_player_classe() -> String

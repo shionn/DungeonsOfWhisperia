@@ -34,7 +34,8 @@
 [ext_resource type="Script" uid="uid://bc4y4enkrwodc" path="res://Gui/ConsoleLog.gd" id="24_xkmul"]
 [ext_resource type="Script" uid="uid://bcc2j6w4n4yqq" path="res://Gui/Transition.gd" id="25_60sjt"]
 [ext_resource type="Script" uid="uid://b57hjgf2uu7ly" path="res://Gui/Introduction.gd" id="26_m2wub"]
-[ext_resource type="PackedScene" uid="uid://b16kntmj78gaa" path="res://Assets/Characters/AdventurersAccessoires/turret_base.gltf" id="35_el8jn"]
+[ext_resource type="Texture2D" uid="uid://hkndps07tngd" path="res://Gui/Assets/kaykit/Turret.png" id="35_el8jn"]
+[ext_resource type="Script" uid="uid://cbpdlo58gok7v" path="res://Gui/SpellButton.gd" id="37_f4re5"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8rxp0"]
 bg_color = Color(1, 0.94509804, 0.8235294, 1)
@@ -150,6 +151,38 @@ _data = {
 &"fade_in": SubResource("Animation_60sjt"),
 &"fade_out": SubResource("Animation_wbke4")
 }
+
+[sub_resource type="InputEventKey" id="InputEventKey_w65rx"]
+device = -1
+keycode = 38
+unicode = 38
+
+[sub_resource type="Shortcut" id="Shortcut_w65rx"]
+events = [SubResource("InputEventKey_w65rx")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_f4re5"]
+device = -1
+keycode = 50
+unicode = 233
+
+[sub_resource type="Shortcut" id="Shortcut_86xcp"]
+events = [SubResource("InputEventKey_f4re5")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_86xcp"]
+device = -1
+keycode = 34
+unicode = 34
+
+[sub_resource type="Shortcut" id="Shortcut_5npq8"]
+events = [SubResource("InputEventKey_86xcp")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_5npq8"]
+device = -1
+keycode = 39
+unicode = 39
+
+[sub_resource type="Shortcut" id="Shortcut_6qw7v"]
+events = [SubResource("InputEventKey_5npq8")]
 
 [node name="Gui" type="Control" unique_id=679884730]
 layout_mode = 3
@@ -786,6 +819,7 @@ layout_mode = 2
 texture = ExtResource("18_w65rx")
 
 [node name="DialogGui" type="GridContainer" parent="." unique_id=1189208125]
+visible = false
 z_index = 10
 layout_mode = 1
 anchors_preset = 7
@@ -865,7 +899,7 @@ layout_mode = 2
 [node name="SubViewport" type="SubViewport" parent="DialogGui/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer2/SubViewportContainer" unique_id=884384498]
 handle_input_locally = false
 size = Vector2i(170, 170)
-render_target_update_mode = 4
+render_target_update_mode = 0
 
 [node name="Camera3D" type="Camera3D" parent="DialogGui/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer2/SubViewportContainer/SubViewport" unique_id=527148964]
 
@@ -1074,7 +1108,6 @@ script = ExtResource("25_60sjt")
 libraries/ = SubResource("AnimationLibrary_7xgee")
 
 [node name="Spells" type="HBoxContainer" parent="." unique_id=521908582]
-visible = false
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -1087,19 +1120,44 @@ offset_right = 24.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="SubViewportContainer" type="SubViewportContainer" parent="Spells" unique_id=1077341266]
+[node name="Button1" type="Button" parent="Spells" unique_id=2092480838]
 layout_mode = 2
+shortcut = SubResource("Shortcut_w65rx")
+text = "1"
+icon = ExtResource("35_el8jn")
+alignment = 0
+icon_alignment = 1
+script = ExtResource("37_f4re5")
 
-[node name="SubViewport" type="SubViewport" parent="Spells/SubViewportContainer" unique_id=1467766397]
-transparent_bg = true
-handle_input_locally = false
-size = Vector2i(64, 64)
-render_target_update_mode = 0
+[node name="Button2" type="Button" parent="Spells" unique_id=152583694]
+layout_mode = 2
+shortcut = SubResource("Shortcut_86xcp")
+text = "2"
+icon = ExtResource("35_el8jn")
+alignment = 0
+icon_alignment = 1
+script = ExtResource("37_f4re5")
+spell_id = 1
 
-[node name="Camera3D" type="Camera3D" parent="Spells/SubViewportContainer/SubViewport" unique_id=2107263753]
+[node name="Button3" type="Button" parent="Spells" unique_id=23533590]
+layout_mode = 2
+shortcut = SubResource("Shortcut_5npq8")
+text = "2"
+icon = ExtResource("35_el8jn")
+alignment = 0
+icon_alignment = 1
+script = ExtResource("37_f4re5")
+spell_id = 2
 
-[node name="turret_base2" parent="Spells/SubViewportContainer/SubViewport" unique_id=1608128847 instance=ExtResource("35_el8jn")]
-transform = Transform3D(0.8660254, 0, -0.5, 0, 1, 0, 0.5, 0, 0.8660254, 0, -0.2, -1.3)
+[node name="Button4" type="Button" parent="Spells" unique_id=899232034]
+layout_mode = 2
+shortcut = SubResource("Shortcut_6qw7v")
+text = "2"
+icon = ExtResource("35_el8jn")
+alignment = 0
+icon_alignment = 1
+script = ExtResource("37_f4re5")
+spell_id = 3
 
 [connection signal="visibility_changed" from="Bag" to="." method="_on_bag_visibility_changed"]
 [connection signal="visibility_changed" from="Bag" to="Bag" method="_on_visibility_changed"]
@@ -1120,3 +1178,7 @@ transform = Transform3D(0.8660254, 0, -0.5, 0, 1, 0, 0.5, 0, 0.8660254, 0, -0.2,
 [connection signal="pressed" from="ExitAuberge/PanelContainer/MarginContainer/VBoxContainer/Dungeon01" to="ExitAuberge" method="_on_dungeon_01_pressed"]
 [connection signal="pressed" from="ExitAuberge/PanelContainer/MarginContainer/VBoxContainer/CloseButton" to="ExitAuberge" method="hide"]
 [connection signal="animation_finished" from="Transition/AnimationPlayer" to="Transition" method="_on_animation_finished"]
+[connection signal="pressed" from="Spells/Button1" to="Spells/Button1" method="_on_pressed"]
+[connection signal="pressed" from="Spells/Button2" to="Spells/Button2" method="_on_pressed"]
+[connection signal="pressed" from="Spells/Button3" to="Spells/Button3" method="_on_pressed"]
+[connection signal="pressed" from="Spells/Button4" to="Spells/Button4" method="_on_pressed"]

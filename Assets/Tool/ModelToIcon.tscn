@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://bmkeaeoesa56i"]
+
+[ext_resource type="Script" uid="uid://bf5ig5y636dy7" path="res://Assets/Tool/ModelToIcon.gd" id="1_80iu8"]
+[ext_resource type="PackedScene" uid="uid://b16kntmj78gaa" path="res://Assets/Characters/AdventurersAccessoires/turret_base.gltf" id="2_1bos0"]
+
+[sub_resource type="Environment" id="Environment_b02ke"]
+background_energy_multiplier = 0.0
+ambient_light_source = 2
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_energy = 0.5
+ssao_enabled = true
+ssil_enabled = true
+
+[node name="ModelToIcon" type="Node3D" unique_id=1468492041]
+script = ExtResource("1_80iu8")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=979525193]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 2, 0)
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=345691508]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.20000002, 1.4)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=799984259]
+environment = SubResource("Environment_b02ke")
+
+[node name="Turret" parent="." unique_id=1608128847 instance=ExtResource("2_1bos0")]
+transform = Transform3D(0.7071067, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, 0.7071067, 0, 0, 0)

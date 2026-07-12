@@ -38,3 +38,4 @@ func get_atk_off_hand_timer_factor() -> float:
 		AttackMode.STAB : return .3
 		_ : return .4
 func get_player_classe(): return "Rogue"
+func get_spells(): return []
