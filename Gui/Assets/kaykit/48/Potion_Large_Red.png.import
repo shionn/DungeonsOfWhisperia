@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://hkndps07tngd"
-path="res://.godot/imported/Turret.png-9e3e7363fcdee415933ed0a13ae27c4f.ctex"
+uid="uid://ou1ete3hk5t5"
+path="res://.godot/imported/Potion_Large_Red.png-b7d0b9ae9a740ed9d8f9da80be2e4708.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Gui/Assets/kaykit/Turret.png"
-dest_files=["res://.godot/imported/Turret.png-9e3e7363fcdee415933ed0a13ae27c4f.ctex"]
+source_file="res://Gui/Assets/kaykit/48/Potion_Large_Red.png"
+dest_files=["res://.godot/imported/Potion_Large_Red.png-b7d0b9ae9a740ed9d8f9da80be2e4708.ctex"]
 
 [params]
 

@@ -1,6 +1,14 @@
 extends Node3D
 
-
+func _ready() -> void:
+	#$Skeleton_Minion/Rig_Medium/Skeleton3D/Skeleton_Minion_ArmLeft.hide()
+	#$Skeleton_Minion/Rig_Medium/Skeleton3D/Skeleton_Minion_ArmRight.hide()
+	#$Skeleton_Minion/Rig_Medium/Skeleton3D/Skeleton_Minion_Body.hide()
+	#$Skeleton_Minion/Rig_Medium/Skeleton3D/Skeleton_Minion_Cloak.hide()
+	#$Skeleton_Minion/Rig_Medium/Skeleton3D/Skeleton_Minion_Jaw.hide()
+	#$Skeleton_Minion/Rig_Medium/Skeleton3D/Skeleton_Minion_LegLeft.hide()
+	#$Skeleton_Minion/Rig_Medium/Skeleton3D/Skeleton_Minion_LegRight.hide()
+	pass
 	
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventKey : 
@@ -13,7 +21,6 @@ func _unhandled_input(event: InputEvent) -> void:
 		if e.keycode == KEY_T :
 			var img = get_viewport().get_texture().get_image()
 			var node = get_children().get(get_children().size()-1)
-			# Gui/Assets/kaykit/
-			img.save_png("%s.png"%[node.name])
+			img.save_png("Gui/Assets/kaykit/%s.png"%[node.name])
 			print("done")
 			

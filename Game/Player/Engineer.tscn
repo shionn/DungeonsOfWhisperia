@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://dhtis16eclp2o" path="res://Game/Player/Engineer.gd" id="2_660tw"]
 [ext_resource type="PackedScene" uid="uid://tmyp1hgkyjfh" path="res://Assets/Scenes/Engineer.tscn" id="2_ju78e"]
 [ext_resource type="Script" uid="uid://chilcihl71dnl" path="res://Game/Player/Spell.gd" id="4_660tw"]
-[ext_resource type="Texture2D" uid="uid://hkndps07tngd" path="res://Gui/Assets/kaykit/Turret.png" id="5_ik8na"]
+[ext_resource type="Texture2D" uid="uid://b7hbhws77vahq" path="res://Gui/Assets/kaykit/64/Turret.png" id="5_ik8na"]
 
 [node name="Player" unique_id=384338158 instance=ExtResource("1_ne0qu")]
 script = ExtResource("2_660tw")

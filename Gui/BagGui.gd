@@ -5,7 +5,7 @@ extends GameBaseControl
 @onready var _container = $PanelContainer/MarginContainer/VBoxContainer/Container as Container
 @onready var _items = $"/root/World/Items" as Items
 
-var _goldRessource = load("res://Gui/Assets/resources-pack-1/Coin-48.png")
+var _goldRessource = load("res://Gui/Assets/kaykit/48/Coin_Stack_Small.png")
 var _dragButton : TextureButton
 var _interactable : Interactable
 

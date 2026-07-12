@@ -34,7 +34,6 @@
 [ext_resource type="Script" uid="uid://bc4y4enkrwodc" path="res://Gui/ConsoleLog.gd" id="24_xkmul"]
 [ext_resource type="Script" uid="uid://bcc2j6w4n4yqq" path="res://Gui/Transition.gd" id="25_60sjt"]
 [ext_resource type="Script" uid="uid://b57hjgf2uu7ly" path="res://Gui/Introduction.gd" id="26_m2wub"]
-[ext_resource type="Texture2D" uid="uid://hkndps07tngd" path="res://Gui/Assets/kaykit/Turret.png" id="35_el8jn"]
 [ext_resource type="Script" uid="uid://cbpdlo58gok7v" path="res://Gui/SpellButton.gd" id="37_f4re5"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8rxp0"]
@@ -1124,7 +1123,6 @@ grow_vertical = 0
 layout_mode = 2
 shortcut = SubResource("Shortcut_w65rx")
 text = "1"
-icon = ExtResource("35_el8jn")
 alignment = 0
 icon_alignment = 1
 script = ExtResource("37_f4re5")
@@ -1133,7 +1131,6 @@ script = ExtResource("37_f4re5")
 layout_mode = 2
 shortcut = SubResource("Shortcut_86xcp")
 text = "2"
-icon = ExtResource("35_el8jn")
 alignment = 0
 icon_alignment = 1
 script = ExtResource("37_f4re5")
@@ -1143,7 +1140,6 @@ spell_id = 1
 layout_mode = 2
 shortcut = SubResource("Shortcut_5npq8")
 text = "2"
-icon = ExtResource("35_el8jn")
 alignment = 0
 icon_alignment = 1
 script = ExtResource("37_f4re5")
@@ -1153,7 +1149,6 @@ spell_id = 2
 layout_mode = 2
 shortcut = SubResource("Shortcut_6qw7v")
 text = "2"
-icon = ExtResource("35_el8jn")
 alignment = 0
 icon_alignment = 1
 script = ExtResource("37_f4re5")
