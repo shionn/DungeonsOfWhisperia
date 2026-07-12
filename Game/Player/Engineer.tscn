@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://c5i027hc2soy0"]
+
+[ext_resource type="PackedScene" uid="uid://ddvg2rw2bunm2" path="res://Game/Player/Player.tscn" id="1_ne0qu"]
+[ext_resource type="Script" uid="uid://dhtis16eclp2o" path="res://Game/Player/Engineer.gd" id="2_660tw"]
+[ext_resource type="PackedScene" uid="uid://tmyp1hgkyjfh" path="res://Assets/Scenes/Engineer.tscn" id="2_ju78e"]
+
+[node name="Player" unique_id=384338158 instance=ExtResource("1_ne0qu")]
+script = ExtResource("2_660tw")
+
+[node name="Character" parent="." index="8" unique_id=1703605445 instance=ExtResource("2_ju78e")]

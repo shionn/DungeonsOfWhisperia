@@ -34,6 +34,7 @@
 [ext_resource type="Script" uid="uid://bc4y4enkrwodc" path="res://Gui/ConsoleLog.gd" id="24_xkmul"]
 [ext_resource type="Script" uid="uid://bcc2j6w4n4yqq" path="res://Gui/Transition.gd" id="25_60sjt"]
 [ext_resource type="Script" uid="uid://b57hjgf2uu7ly" path="res://Gui/Introduction.gd" id="26_m2wub"]
+[ext_resource type="PackedScene" uid="uid://b16kntmj78gaa" path="res://Assets/Characters/AdventurersAccessoires/turret_base.gltf" id="35_el8jn"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8rxp0"]
 bg_color = Color(1, 0.94509804, 0.8235294, 1)
@@ -1071,6 +1072,34 @@ script = ExtResource("25_60sjt")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Transition" unique_id=187822661]
 libraries/ = SubResource("AnimationLibrary_7xgee")
+
+[node name="Spells" type="HBoxContainer" parent="." unique_id=521908582]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -24.0
+offset_top = -48.0
+offset_right = 24.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Spells" unique_id=1077341266]
+layout_mode = 2
+
+[node name="SubViewport" type="SubViewport" parent="Spells/SubViewportContainer" unique_id=1467766397]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(64, 64)
+render_target_update_mode = 0
+
+[node name="Camera3D" type="Camera3D" parent="Spells/SubViewportContainer/SubViewport" unique_id=2107263753]
+
+[node name="turret_base2" parent="Spells/SubViewportContainer/SubViewport" unique_id=1608128847 instance=ExtResource("35_el8jn")]
+transform = Transform3D(0.8660254, 0, -0.5, 0, 1, 0, 0.5, 0, 0.8660254, 0, -0.2, -1.3)
 
 [connection signal="visibility_changed" from="Bag" to="." method="_on_bag_visibility_changed"]
 [connection signal="visibility_changed" from="Bag" to="Bag" method="_on_visibility_changed"]
