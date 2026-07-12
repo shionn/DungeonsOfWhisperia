@@ -946,6 +946,7 @@ text = "Option"
 
 [node name="NextButton" type="Button" parent="DialogGui/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer" unique_id=1128545319]
 visible = false
+z_index = 10
 layout_mode = 2
 size_flags_horizontal = 3
 tooltip_text = "Option"
@@ -1113,9 +1114,9 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -24.0
+offset_left = -42.0
 offset_top = -48.0
-offset_right = 24.0
+offset_right = 42.0
 grow_horizontal = 2
 grow_vertical = 0
 

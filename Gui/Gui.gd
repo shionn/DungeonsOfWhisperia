@@ -37,8 +37,10 @@ func update_mouse_mode() -> void:
 			or $Options.visible or $DialogGui.visible
 			or $ExitAuberge.visible) :
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+		$Spells.hide()
 	else :
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+		$Spells.visible = not player.get_spells().is_empty()
 
 func openHelp(description: Dialog)  -> void :
 	$Introduction.open(description)

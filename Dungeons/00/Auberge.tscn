@@ -130,6 +130,14 @@ Le patron, lui, est un homme bienveillant. Il pourra sans doute vous aider. Vous
 pnj = NodePath("../../..")
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
+[node name="Bievenue_Restored" type="Node" parent="Luna Honey" unique_id=175022393]
+script = ExtResource("3_fq3ns")
+text = "Oh ! Vous semblez aller beaucoup mieux, maintenant !
+Le chef a vraiment fait un travail remarquable… Il a préparé son fameux ragout de viande de bœuf et d’herbes sauvages. C’est une de ses spécialités, vous savez. On dit que cette recette donne des forces à quiconque la goûte…  
+
+Puisque vous avez une dette envers le chef dorénavant, pourquoi ne pas accomplir l’une des missions qu’il propose sur le panneau d’affichage, à côté de l’entrée ?"
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
 [node name="Aigle Jaune" parent="." unique_id=1882476485 instance=ExtResource("1_fq3ns")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 12, 0, -7.4)
 script = ExtResource("8_o35sb")

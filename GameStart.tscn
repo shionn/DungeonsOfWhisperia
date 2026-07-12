@@ -56,7 +56,7 @@ _anim = "Melee_2H_Attack_Slice"
 _description = "Le Barbare
 Equipé d'une Hache à 2 mains il possede une forte vitalitée. Il a une attaque solide, ces critiques sont dévastateur et une defense moyenne.
 [ul]
-Attaque : 3 (+1 sur critique)
+Attaque : 3 (+1 sur critique) [color=red]Non terminé[/color]
 Défense : 2
 PV : 9
 Difficulté : Moyenne
@@ -171,7 +171,7 @@ _anim = "Melee_Dualwield_Attack_Chop"
 _description = "La Voleuse
 Equipée d'une dague dans chaque main, elle inflige deux attaque à chaque frappe. De plus si elle est hors de vision de son adversaire elle inflige des dégats supplémentaires. 
 [ul]
-Attaque : 2x2 (3+2 dans le dos)
+Attaque : 2+2 (3+2 dans le dos)
 Défense : 2
 PV : 6
 Difficulté : Moyenne
