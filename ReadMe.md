@@ -11,6 +11,9 @@
 ## 3D and characters
 - https://kaylousberg.itch.io/kaykit-complete
 
+## VFX 
+- https://binbun3d.itch.io/magic-projectiles-vfx
+
 ## UI 
 - https://www.kenney.nl/
 
