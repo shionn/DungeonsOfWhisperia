@@ -2,7 +2,7 @@ class_name Bag
 extends Node
 
 @onready var _gui = $/root/World/Gui as Gui
-@onready var _items = $/root/World/Items as Items
+@onready var _all_items = $/root/World/Items as Items
 
 var items : Array[Items.ItemName] = []
 var gold: int = 0:
@@ -17,11 +17,18 @@ signal item_change()
 func loot(item : Items.ItemName) -> void : 
 	items.append(item)
 	item_change.emit()
-	_gui.consoleLog("Vous obtenez %s." % _items.from(item).name)
+	_gui.consoleLog("Vous obtenez %s." % _all_items.from(item).name)
 
 func unloot(item : Items.ItemName) -> void : 
 	var index = items.find(item)
 	if index >=0 :
-		_gui.consoleLog("Vous utilisez %s." % _items.from(item).name)
+		_gui.consoleLog("Vous utilisez %s." % _all_items.from(item).name)
 		items.remove_at(index)
 	item_change.emit()
+	
+func to_save() -> Array[Items.ItemName] : 
+	var saveable_items : Array[Items.ItemName] = []
+	for item_name in items :
+		if _all_items.from(item_name).global :
+			saveable_items.append(item_name)
+	return saveable_items

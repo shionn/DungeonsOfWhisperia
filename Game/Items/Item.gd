@@ -6,6 +6,7 @@ extends GameBase
 @export_multiline() var description : String
 @export var tooltip : String
 @export var conssommable : bool = false
+@export var global : bool = true
 
 signal _action()
 
@@ -18,6 +19,8 @@ func open_description() -> void:
 		var desc = Dialog.new()
 		desc.name = "description"
 		desc.text = description
+		if global : desc.text = description
+		else : desc.text = description +"\n\n[i]Cet objet est lié au donjon, on ne pas le garder en sortant.[/i]"
 		add_child(desc)
 		gui.openDialog(desc)
 

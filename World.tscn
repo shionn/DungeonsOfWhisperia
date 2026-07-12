@@ -37,6 +37,7 @@ item_name = 2
 icon = ExtResource("8_bah7m")
 description = "Cette clef semble spéciale, elle a un bouclier et une épée gravée sur sa base."
 tooltip = "Clef"
+global = false
 metadata/_custom_type_script = "uid://bjbab3ep2gfn2"
 
 [node name="Boisson Raffinée" type="Node" parent="Items" unique_id=1863142575]
@@ -56,6 +57,7 @@ icon = ExtResource("8_bah7m")
 description = "Cette clef porte une gravure à sa base, on dirait une sorte de coffre.
 "
 tooltip = "Clef"
+global = false
 metadata/_custom_type_script = "uid://bjbab3ep2gfn2"
 
 [node name="Crane" type="Node" parent="Items" unique_id=616656790]

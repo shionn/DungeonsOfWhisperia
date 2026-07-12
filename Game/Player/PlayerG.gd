@@ -130,8 +130,9 @@ func save_game() -> void :
 		"lvl" : lvl,
 		"pv" : pv,
 		"xp" : xp,
+		"gold" : bag.gold,
 		"tags" : tags._tags,
-		"bag": bag.items
+		"bag": bag.to_save()
 	}
 	var json_string = JSON.stringify(save_data, "\t")
 	var file = FileAccess.open("user://%s.save"%[get_player_classe()], FileAccess.WRITE)
@@ -147,8 +148,11 @@ func load_game() -> void :
 		lvl = save_data["lvl"]
 		pv = save_data["pv"]
 		xp = save_data["xp"]
+		bag.gold = save_data.get("gold", 0)
 		for tag in save_data["tags"] : tags._tags.append(tag)
-		for item in save_data["bag"] : bag.items.append(item)
+		for item in save_data["bag"] : 
+			
+			bag.items.append(item)
 		gui.consoleLog("Partie chargée")
 
 
