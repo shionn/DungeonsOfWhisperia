@@ -33,6 +33,11 @@ func open(dialog: Dialog)->void :
 	if dialog.next :
 		_close_button.hide()
 		_next_button.show()
+	else :
+		if dialog.options.size() >= 1: 
+			_option_button1.text = dialog.options[0].name
+			_option_button1.show()
+			
 	show()
 
 
@@ -45,4 +50,6 @@ func _on_next_button_pressed() -> void:
 	open(_current.next)
 
 func _on_option_button_1_pressed() -> void:
+	_current.close.emit()
+	open(_current.options[0])
 	pass

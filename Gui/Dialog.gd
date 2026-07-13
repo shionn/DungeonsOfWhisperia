@@ -5,7 +5,11 @@ extends Node
 @export var pnj: PNJ = null
 
 var next : Dialog
+var options : Array[Dialog] = []
 signal close()
 
 func _ready() -> void:
 	next = get_node_or_null("Next")
+	for child in get_children() :
+		if child is Dialog and child.name != "Next" :
+			options.append(child)

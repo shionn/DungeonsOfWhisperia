@@ -21,6 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://cgl150hsir7vc" path="res://Assets/Scenes/AvianSwordsman.tscn" id="6_od4xh"]
 [ext_resource type="PackedScene" uid="uid://cl36lcn4lo2eq" path="res://Assets/Scenes/Torch_Mounted.tscn" id="7_68h1y"]
 [ext_resource type="PackedScene" uid="uid://c6i85c8iqhfgd" path="res://Assets/Dungeons/Wall/TSplit/wall_Tsplit.gltf" id="7_yel37"]
+[ext_resource type="Script" uid="uid://dwr5wngkm8oxl" path="res://Dungeons/00/AlaricDuclair.gd" id="8_doy55"]
 [ext_resource type="PackedScene" uid="uid://drxqh8hppf4fg" path="res://Assets/Dungeons/Barrier/barrier_corner.gltf" id="8_ewcw7"]
 [ext_resource type="PackedScene" uid="uid://umb3bjiok44i" path="res://Assets/Dungeons/Bottle/bottle_A_labeled_green.gltf" id="8_ifxis"]
 [ext_resource type="Script" uid="uid://d0hspqdvbkog3" path="res://Dungeons/00/Aubergiste.gd" id="8_o35sb"]
@@ -102,42 +103,6 @@ height = 1.4124999
 [node name="Auberge" type="Node3D" unique_id=1682341964]
 script = ExtResource("1_y7s6b")
 
-[node name="Luna Honey" parent="." unique_id=957068427 instance=ExtResource("1_fq3ns")]
-transform = Transform3D(0.49999997, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, 0.49999997, 13, 0, 0)
-script = ExtResource("2_52cfg")
-
-[node name="Character" parent="Luna Honey" unique_id=917570229 instance=ExtResource("4_fq3ns")]
-transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0, 0, 0)
-
-[node name="Bienvenue" type="Node" parent="Luna Honey" unique_id=1214666615 node_paths=PackedStringArray("pnj")]
-script = ExtResource("3_fq3ns")
-text = "Bienvenue, aventurier ! Vous semblez épuisé… Restez, prenez le temps de vous ressourcer."
-pnj = NodePath("..")
-metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
-
-[node name="Next" type="Node" parent="Luna Honey/Bienvenue" unique_id=2123317625]
-script = ExtResource("3_fq3ns")
-text = "Bonjour, je vous avoue être épuisé. J’ai subi une attaque d’une bande de voleurs. J’ai réussi à les semer en fuyant dans la forêt.
-
-Je n’ai plus rien, pas un sous. Tout ce que j’ai, c’est ce que je porte. J’ai erré des jours avant d’arriver ici. Où suis-je ?"
-metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
-
-[node name="Next" type="Node" parent="Luna Honey/Bienvenue/Next" unique_id=1285238277 node_paths=PackedStringArray("pnj")]
-script = ExtResource("3_fq3ns")
-text = "Effectivement, on voit bien que vous avez souffert. Vous êtes ici, à l’Auberge du Pigeon Perdu ! [i](elle sourit avec un mélange de compassion et d’amusement)[/i]
-Vous savez, cette auberge a une réputation… un peu particulière. On dit qu’elle attire les voyageurs perdus, les aventuriers épuisés, et même les oiseaux qui ont perdu leur chemin. Mais ici, personne ne reste longtemps seul.
-Le patron, lui, est un homme bienveillant. Il pourra sans doute vous aider. Vous le trouverez derrière le bar."
-pnj = NodePath("../../..")
-metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
-
-[node name="Bievenue_Restored" type="Node" parent="Luna Honey" unique_id=175022393]
-script = ExtResource("3_fq3ns")
-text = "Oh ! Vous semblez aller beaucoup mieux, maintenant !
-Le chef a vraiment fait un travail remarquable… Il a préparé son fameux ragout de viande de bœuf et d’herbes sauvages. C’est une de ses spécialités, vous savez. On dit que cette recette donne des forces à quiconque la goûte…  
-
-Puisque vous avez une dette envers le chef dorénavant, pourquoi ne pas accomplir l’une des missions qu’il propose sur le panneau d’affichage, à côté de l’entrée ?"
-metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
-
 [node name="Aigle Jaune" parent="." unique_id=1882476485 instance=ExtResource("1_fq3ns")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 12, 0, -7.4)
 script = ExtResource("8_o35sb")
@@ -197,11 +162,94 @@ Si vous cherchez un travail, jetez un œil au panneau d’affichage près de l�
 pnj = NodePath("../..")
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
+[node name="Luna Honey" parent="." unique_id=957068427 instance=ExtResource("1_fq3ns")]
+transform = Transform3D(0.49999997, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, 0.49999997, 13, 0, 0)
+script = ExtResource("2_52cfg")
+
+[node name="Character" parent="Luna Honey" unique_id=917570229 instance=ExtResource("4_fq3ns")]
+transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0, 0, 0)
+
+[node name="Bienvenue" type="Node" parent="Luna Honey" unique_id=1214666615 node_paths=PackedStringArray("pnj")]
+script = ExtResource("3_fq3ns")
+text = "Bienvenue, aventurier ! Vous semblez épuisé… Restez, prenez le temps de vous ressourcer."
+pnj = NodePath("..")
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Next" type="Node" parent="Luna Honey/Bienvenue" unique_id=2123317625]
+script = ExtResource("3_fq3ns")
+text = "Bonjour, je vous avoue être épuisé. J’ai subi une attaque d’une bande de voleurs. J’ai réussi à les semer en fuyant dans la forêt.
+
+Je n’ai plus rien, pas un sous. Tout ce que j’ai, c’est ce que je porte. J’ai erré des jours avant d’arriver ici. Où suis-je ?"
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Next" type="Node" parent="Luna Honey/Bienvenue/Next" unique_id=1285238277 node_paths=PackedStringArray("pnj")]
+script = ExtResource("3_fq3ns")
+text = "Effectivement, on voit bien que vous avez souffert. Vous êtes ici, à l’Auberge du Pigeon Perdu ! [i](elle sourit avec un mélange de compassion et d’amusement)[/i]
+Vous savez, cette auberge a une réputation… un peu particulière. On dit qu’elle attire les voyageurs perdus, les aventuriers épuisés, et même les oiseaux qui ont perdu leur chemin. Mais ici, personne ne reste longtemps seul.
+Le patron, lui, est un homme bienveillant. Il pourra sans doute vous aider. Vous le trouverez derrière le bar."
+pnj = NodePath("../../..")
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Bievenue_Restored" type="Node" parent="Luna Honey" unique_id=175022393]
+script = ExtResource("3_fq3ns")
+text = "Oh ! Vous semblez aller beaucoup mieux, maintenant !
+Le chef a vraiment fait un travail remarquable… Il a préparé son fameux ragout de viande de bœuf et d’herbes sauvages. C’est une de ses spécialités, vous savez. On dit que cette recette donne des forces à quiconque la goûte…  
+
+Puisque vous avez une dette envers le chef dorénavant, pourquoi ne pas accomplir l’une des missions qu’il propose sur le panneau d’affichage, à côté de l’entrée ?"
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Alaric Duclair" parent="." unique_id=1224900324 instance=ExtResource("1_fq3ns")]
+transform = Transform3D(0.76604456, 0, 0.64278764, 0, 1, 0, -0.64278764, 0, 0.76604456, 3.5999994, 0, -14.4)
+script = ExtResource("8_doy55")
+
+[node name="Character" parent="Alaric Duclair" unique_id=1328927383 instance=ExtResource("2_wji3q")]
+transform = Transform3D(0.99999994, 0, 8.940697e-08, 0, 1, 0, -8.940697e-08, 0, 0.99999994, 0, 0, 0)
+
+[node name="Présentation" type="Node" parent="Alaric Duclair" unique_id=623573044 node_paths=PackedStringArray("pnj")]
+script = ExtResource("3_fq3ns")
+text = "Vous êtes donc ici. Et pourtant, je vous connais déjà. Je ne sais pas comment, ni pourquoi. Mais les histoires de cette auberge sont plus anciennes que les hommes, et moi, Alaric Duclair, j’en suis le témoin, comme le temps l’a voulu.
+
+Ces livres et ces parchemins. Ils racontent l’histoire de l’auberge, de ses maîtres, de ses ombres. Chaque récit, chaque légende, chaque mensonge, je les ai recueillis. Archivés. Ils sont ici, dans ce chaos, dans ces pages jaunies."
+pnj = NodePath("..")
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Next" type="Node" parent="Alaric Duclair/Présentation" unique_id=1744113509 node_paths=PackedStringArray("pnj")]
+script = ExtResource("3_fq3ns")
+text = "Si vous cherchez des vérités, ou des mensonges, je suis votre guide. Mais attention : ici, les histoires sont plus vieilles que les hommes. Et parfois, elles ont faim.
+
+Alors, que cherchez-vous, étranger ? Une histoire ? Ou l’oubli ?"
+pnj = NodePath("../..")
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Nom de l\'Auberge ?" type="Node" parent="Alaric Duclair/Présentation/Next" unique_id=1196803019]
+script = ExtResource("3_fq3ns")
+text = "Pourquoi l’auberge s’appelle-t-elle « Au Pigeon Perdu » ?"
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Next" type="Node" parent="Alaric Duclair/Présentation/Next/Nom de l\'Auberge ?" unique_id=1869022292 node_paths=PackedStringArray("pnj")]
+script = ExtResource("3_fq3ns")
+text = "L’auberge a changé de nom de nombreuses fois au fil des années.
+
+Chaque nouveau propriétaire a choisi un nom différent. Parfois, pour honorer un souvenir. Parfois, juste pour se distinguer. Aigle Jaune, le propriétaire actuel, a choisi « Au Pigeon Perdu » il y a une vingtaine d’années. Il disait que c’était un nom simple, qui évoquait un refuge pour ceux qui s’y perdaient. Quelqu’un qui s’arrête ici, qu’il soit perdu ou non, trouve un peu de paix, ici.
+Aujourd’hui, c’est juste un nom. Comme les autres. Rien de plus."
+pnj = NodePath("../../../..")
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Next" type="Node" parent="Alaric Duclair/Présentation/Next/Nom de l\'Auberge ?/Next" unique_id=342711095]
+script = ExtResource("3_fq3ns")
+text = "Donc le pigeon, ce n’est pas l’Aigle Jaune ?"
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Next" type="Node" parent="Alaric Duclair/Présentation/Next/Nom de l\'Auberge ?/Next/Next" unique_id=925172339 node_paths=PackedStringArray("pnj")]
+script = ExtResource("3_fq3ns")
+text = "Non. Le pigeon n’a rien à voir avec lui. L’Aigle Jaune a choisi ce nom pour une raison personnelle. Il disait que le pigeon représentait l’idée de « se perdre », de se retrouver, ou peut-être même de fuir. 
+
+Ce n’était pas un animal, ni une personne. Juste une image."
+pnj = NodePath("../../../../../..")
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
 [node name="Hoarder" parent="." unique_id=1031378864 instance=ExtResource("1_df0jl")]
 transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, 4, 0, -4)
-
-[node name="Lorekeeper" parent="." unique_id=1328927383 instance=ExtResource("2_wji3q")]
-transform = Transform3D(0.76604444, 0, 0.6427876, 0, 1, 0, -0.6427876, 0, 0.76604444, 3.6, 0, -14.4)
 
 [node name="Witch" parent="." unique_id=870540674 instance=ExtResource("3_488ss")]
 transform = Transform3D(-0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, -0.70710677, 22.4, 4, 4.5)
