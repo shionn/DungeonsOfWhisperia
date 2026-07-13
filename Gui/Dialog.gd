@@ -7,6 +7,7 @@ extends Node
 var next : Dialog
 var options : Array[Dialog] = []
 signal close()
+signal activate()
 
 func _ready() -> void:
 	next = get_node_or_null("Next")

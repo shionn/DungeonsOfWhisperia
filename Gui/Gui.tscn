@@ -1268,6 +1268,8 @@ spell_id = 3
 [connection signal="pressed" from="Options/PanelContainer/MarginContainer/VBoxContainer/CloseButton" to="Options" method="_on_close_button_pressed"]
 [connection signal="visibility_changed" from="DialogGui" to="." method="update_mouse_mode"]
 [connection signal="pressed" from="DialogGui/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/OptionButton1" to="DialogGui" method="_on_option_button_1_pressed"]
+[connection signal="pressed" from="DialogGui/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/OptionButton2" to="DialogGui" method="_on_option_button_2_pressed"]
+[connection signal="pressed" from="DialogGui/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/OptionButton3" to="DialogGui" method="_on_option_button_3_pressed"]
 [connection signal="pressed" from="DialogGui/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/NextButton" to="DialogGui" method="_on_next_button_pressed"]
 [connection signal="pressed" from="DialogGui/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/CloseButton" to="DialogGui" method="_on_close_button_pressed"]
 [connection signal="visibility_changed" from="ExitAuberge" to="." method="update_mouse_mode"]

@@ -33,6 +33,7 @@
 [ext_resource type="PackedScene" uid="uid://cci3nonvs2qm3" path="res://Assets/Dungeons/Bottle/bottle_A_labeled_brown.gltf" id="10_7cisn"]
 [ext_resource type="PackedScene" uid="uid://bta2mvfkcul0j" path="res://Assets/Dungeons/Bar/bar_straight_C.gltf" id="11_3w82h"]
 [ext_resource type="PackedScene" uid="uid://d20qpul5ulp0y" path="res://Assets/Bits/RpgTools/map_empty.gltf" id="11_o35sb"]
+[ext_resource type="Script" uid="uid://ccrvldbs0rtke" path="res://Dungeons/00/PipetteLaLoupe.gd" id="11_oipk7"]
 [ext_resource type="PackedScene" uid="uid://bmurq8gfdf5sq" path="res://Assets/Bits/RpgTools/nail.gltf" id="12_6hlga"]
 [ext_resource type="PackedScene" uid="uid://cbbuf33qge7bs" path="res://Assets/Dungeons/Bar/bar_straight_A_short.gltf" id="12_bshfy"]
 [ext_resource type="Script" uid="uid://b3dhqvmx6f1a4" path="res://Dungeons/00/PanneauDaffichage.gd" id="12_ntc8q"]
@@ -89,6 +90,17 @@
 [ext_resource type="PackedScene" uid="uid://ck76hsbmyppqb" path="res://Assets/NatureForest/Color1/Hill_12x12x8_Color1.gltf" id="70_nx0cc"]
 [ext_resource type="PackedScene" uid="uid://bqco8q8yxudyo" path="res://Assets/MedievalHexagon/decoration/nature/trees_A_large.gltf" id="71_lv1qi"]
 [ext_resource type="PackedScene" uid="uid://cjnne0knj2qsw" path="res://Assets/MedievalHexagon/decoration/nature/trees_B_small.gltf" id="75_wji3q"]
+[ext_resource type="PackedScene" uid="uid://5h3nagtolsm2" path="res://Assets/Characters/AdventurersAccessoires/potion_huge_blue.gltf" id="82_8skfw"]
+[ext_resource type="PackedScene" uid="uid://c4nq6wvr8mcoi" path="res://Assets/Characters/AdventurersAccessoires/potion_large_blue.gltf" id="83_trlst"]
+[ext_resource type="PackedScene" uid="uid://dec71vx0a6bhb" path="res://Assets/Characters/AdventurersAccessoires/potion_large_green.gltf" id="84_ar0ji"]
+[ext_resource type="PackedScene" uid="uid://c5mvi70vdnuwv" path="res://Assets/Characters/AdventurersAccessoires/potion_large_orange.gltf" id="85_t7ldk"]
+[ext_resource type="PackedScene" uid="uid://bw6jn21gj1y51" path="res://Assets/Characters/AdventurersAccessoires/potion_large_red.gltf" id="86_61q07"]
+[ext_resource type="PackedScene" uid="uid://c3o8553j8n8rw" path="res://Assets/Characters/AdventurersAccessoires/potion_medium_green.gltf" id="87_psk7j"]
+[ext_resource type="PackedScene" uid="uid://i1isspc4jgp2" path="res://Assets/Characters/AdventurersAccessoires/potion_medium_orange.gltf" id="88_wad6c"]
+[ext_resource type="PackedScene" uid="uid://d2s6ulp6b5oe" path="res://Assets/Characters/AdventurersAccessoires/potion_small_orange.gltf" id="89_oci04"]
+[ext_resource type="PackedScene" uid="uid://bn8u3hkxao6jh" path="res://Assets/Characters/AdventurersAccessoires/spellbook_open.gltf" id="90_wk518"]
+[ext_resource type="PackedScene" uid="uid://csmm8kqy73otx" path="res://Assets/Characters/MonthlySeries6/Accessoires/Cleric_Tome.gltf" id="91_rcg8d"]
+[ext_resource type="PackedScene" uid="uid://bifqjl5vbnrgq" path="res://Assets/Characters/AdventurersAccessoires/potion_small_red.gltf" id="92_my2qj"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_brlmy"]
 size = Vector3(1.7, 0.2, 1)
@@ -251,8 +263,68 @@ metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 [node name="Hoarder" parent="." unique_id=1031378864 instance=ExtResource("1_df0jl")]
 transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, 4, 0, -4)
 
-[node name="Witch" parent="." unique_id=870540674 instance=ExtResource("3_488ss")]
+[node name="Pipette la Loupe" parent="." unique_id=529852479 instance=ExtResource("1_fq3ns")]
 transform = Transform3D(-0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, -0.70710677, 22.4, 4, 4.5)
+script = ExtResource("11_oipk7")
+
+[node name="Character" parent="Pipette la Loupe" unique_id=870540674 instance=ExtResource("3_488ss")]
+
+[node name="Bienvenue" type="Node" parent="Pipette la Loupe" unique_id=1170814936 node_paths=PackedStringArray("pnj")]
+script = ExtResource("3_fq3ns")
+text = "Bonjour, cher client ! Je suis Pipette la Loupe, alchimiste en herbe… et oui, mes potions ont tendance à exploser, mais cela fait partie du processus ! 
+
+Je peux te faire pratiquement n’importe quelle potion, du moment que tu es prêt à y mettre le prix. Si tu as peur de t’empoisonner, je peux identifier une potion. "
+pnj = NodePath("..")
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Acheter" type="Node" parent="Pipette la Loupe/Bienvenue" unique_id=1496968005]
+script = ExtResource("3_fq3ns")
+text = "Je voudrais t’acheter une potion."
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Next" type="Node" parent="Pipette la Loupe/Bienvenue/Acheter" unique_id=321676059 node_paths=PackedStringArray("pnj")]
+script = ExtResource("3_fq3ns")
+text = "Ah ! Vraiment ? Je t’écoute, je t’écoute. Que cherches tu ? 
+[ul]
+Une potion de Répulsion de la Belle-Mère ? 
+Une potion de Résistance aux Blagues Foireuses ? 
+Une potion de Résolution des Mots-Croisés ? 
+Une potion de Résonance des Tasses à Café ? 
+[/ul]
+Hein ? dis moi ? dis moi ? "
+pnj = NodePath("../../..")
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Potion de Soin" type="Node" parent="Pipette la Loupe/Bienvenue/Acheter/Next" unique_id=547566977 node_paths=PackedStringArray("pnj")]
+script = ExtResource("3_fq3ns")
+text = "Ah. Une simple potion de soin. Je te propose : 
+[ul]
+Potion de soin mineur à 50 PO. [i]Rend 1-3 PV[/i]
+Potion de soin moyenne à 100 PO. [i]Rend 4-6 PV[/i]
+Potion de soin majeur à 150 PO. [i]Rend 7-9 PV[/i]
+[/ul]"
+pnj = NodePath("../../../..")
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Potion de Soin Mineur" type="Node" parent="Pipette la Loupe/Bienvenue/Acheter/Next/Potion de Soin" unique_id=423288815]
+script = ExtResource("3_fq3ns")
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Potion de Soin Moyenne" type="Node" parent="Pipette la Loupe/Bienvenue/Acheter/Next/Potion de Soin" unique_id=1195247487]
+script = ExtResource("3_fq3ns")
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Potion de Soin Majeur" type="Node" parent="Pipette la Loupe/Bienvenue/Acheter/Next/Potion de Soin" unique_id=819786563]
+script = ExtResource("3_fq3ns")
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="ManquePo" type="Node" parent="Pipette la Loupe" unique_id=1270482438 node_paths=PackedStringArray("pnj")]
+script = ExtResource("3_fq3ns")
+text = "Tu veux une potion ? Je suis une alchimiste, mais ce n’est pas un jeu. Les ingrédients sont rares, le processus long. Chaque goutte d’or que tu donnes est un sacrifice. Sans pièces, pas de potion.
+
+[i]Shionn n'as pas encore fait l'achat[/i]"
+pnj = NodePath("..")
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
 [node name="PanneauDAffichage" parent="." unique_id=1099766786 instance=ExtResource("11_o35sb")]
 transform = Transform3D(1.2, 0, 0, 0, -5.2453668e-08, -1.2, 0, 1.2, -5.2453668e-08, 0.4, 2, -1.6999999)
@@ -752,7 +824,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9000001, 0, 0)
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.8999996, 0, 0)
 
 [node name="Stair" type="Node3D" parent="." unique_id=1140349430]
-visible = false
 script = ExtResource("21_16ran")
 
 [node name="BedRooms" type="Node3D" parent="Stair" unique_id=2052522005]
@@ -1140,41 +1211,59 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 4, -14)
 [node name="barrier_half3" parent="Stair/Walls" unique_id=893660233 instance=ExtResource("10_0ska8")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4, 4, 6)
 
-[node name="table_long_decorated_B3" parent="Stair" unique_id=191034937 instance=ExtResource("48_6hlga")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 23.5, 4, 2)
-
-[node name="chair4" parent="Stair/table_long_decorated_B3" unique_id=1450195375 instance=ExtResource("42_fq3ns")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9999995, 0, 0.9000001)
-
-[node name="chair5" parent="Stair/table_long_decorated_B3" unique_id=802674830 instance=ExtResource("42_fq3ns")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9999995, 0, -0.9000001)
-
-[node name="chair8" parent="Stair/table_long_decorated_B3" unique_id=1964629585 instance=ExtResource("42_fq3ns")]
-transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, -1.0000005, 0, -0.90000033)
-
-[node name="chair9" parent="Stair/table_long_decorated_B3" unique_id=1889232270 instance=ExtResource("42_fq3ns")]
-transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, -1.0000005, 0, 0.8999996)
-
 [node name="Mezanine" type="Node3D" parent="Stair" unique_id=1951748772]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 4, 2)
 
-[node name="bookcase_single_decoratedA3" parent="Stair/Mezanine" unique_id=450196520 instance=ExtResource("31_hs5f0")]
+[node name="bookcase_single_decoratedB2" parent="Stair/Mezanine" unique_id=928871035 instance=ExtResource("33_pm82x")]
 transform = Transform3D(-1.0000001, 0, 7.351372e-08, 0, 1, 0, -7.351372e-08, 0, -1.0000001, -2.2999992, 0, 3.2000003)
 
-[node name="table_long_decorated_B4" parent="Stair/Mezanine" unique_id=849528962 instance=ExtResource("48_6hlga")]
+[node name="table_long2" parent="Stair/Mezanine" unique_id=1460588807 instance=ExtResource("50_doy55")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.5, 0, 0)
 
-[node name="chair4" parent="Stair/Mezanine/table_long_decorated_B4" unique_id=432882592 instance=ExtResource("42_fq3ns")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9999995, 0, 0.9000001)
+[node name="potion_huge_blue2" parent="Stair/Mezanine/table_long2" unique_id=1381343480 instance=ExtResource("82_8skfw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6, 1.15, 1.6)
 
-[node name="chair5" parent="Stair/Mezanine/table_long_decorated_B4" unique_id=1761878321 instance=ExtResource("42_fq3ns")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9999995, 0, -0.9000001)
+[node name="chair4" parent="Stair/Mezanine/table_long2" unique_id=432882592 instance=ExtResource("42_fq3ns")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9999994, 0, 0.8999996)
 
-[node name="chair8" parent="Stair/Mezanine/table_long_decorated_B4" unique_id=2089672352 instance=ExtResource("42_fq3ns")]
-transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, -1.0000005, 0, -0.90000033)
+[node name="chair5" parent="Stair/Mezanine/table_long2" unique_id=1761878321 instance=ExtResource("42_fq3ns")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9999995, 0, -0.8999996)
 
-[node name="chair9" parent="Stair/Mezanine/table_long_decorated_B4" unique_id=145233088 instance=ExtResource("42_fq3ns")]
+[node name="chair8" parent="Stair/Mezanine/table_long2" unique_id=2089672352 instance=ExtResource("42_fq3ns")]
+transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, -1.0000005, 0, -0.8999996)
+
+[node name="chair9" parent="Stair/Mezanine/table_long2" unique_id=145233088 instance=ExtResource("42_fq3ns")]
 transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, -1.0000005, 0, 0.8999996)
+
+[node name="potion_large_blue2" parent="Stair/Mezanine/table_long2" unique_id=1319248819 instance=ExtResource("83_trlst")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1.3499999, -1.5)
+
+[node name="potion_large_green2" parent="Stair/Mezanine/table_long2" unique_id=1343248386 instance=ExtResource("84_ar0ji")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 1.35, 1)
+
+[node name="potion_large_orange2" parent="Stair/Mezanine/table_long2" unique_id=1766866349 instance=ExtResource("85_t7ldk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7, 1.35, 0)
+
+[node name="potion_large_red2" parent="Stair/Mezanine/table_long2" unique_id=1871446320 instance=ExtResource("86_61q07")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6, 1.32, -1.5)
+
+[node name="potion_medium_green2" parent="Stair/Mezanine/table_long2" unique_id=241403980 instance=ExtResource("87_psk7j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.10000014, 1.3000002, -1.2000008)
+
+[node name="potion_medium_orange2" parent="Stair/Mezanine/table_long2" unique_id=1710607617 instance=ExtResource("88_wad6c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.49999988, 1.3000002, 0.5)
+
+[node name="potion_small_orange2" parent="Stair/Mezanine/table_long2" unique_id=975049330 instance=ExtResource("89_oci04")]
+transform = Transform3D(0.7071068, 0.7071067, -8.5059663e-16, 4.371139e-08, -4.371139e-08, -1, -0.7071067, 0.7071068, -6.181723e-08, 0.4000001, 1.0999999, 1.4000015)
+
+[node name="spellbook_open2" parent="Stair/Mezanine/table_long2" unique_id=1529236413 instance=ExtResource("90_wk518")]
+transform = Transform3D(-0.50000006, 0.83651626, -0.22414382, -2.6645353e-15, 0.25881898, 0.9659258, 0.8660254, 0.48296294, -0.1294095, -0.4000001, 1.0999999, 0.39999962)
+
+[node name="Cleric_Tome2" parent="Stair/Mezanine/table_long2" unique_id=2114233935 instance=ExtResource("91_rcg8d")]
+transform = Transform3D(-0.70710677, 0.7071067, -3.0908616e-08, 0, -4.3711385e-08, -0.99999994, -0.70710677, -0.7071067, 3.0908616e-08, -0.6, 1.05, -0.6)
+
+[node name="potion_small_red2" parent="Stair/Mezanine/table_long2" unique_id=1798733911 instance=ExtResource("92_my2qj")]
+transform = Transform3D(-6.1582e-08, 0.6427877, 0.7660444, -1, -4.371139e-08, -4.371139e-08, 5.3877214e-09, -0.7660444, 0.6427877, 0, 1.0799999, 0.10000038)
 
 [node name="sword_shield_gold2" parent="Stair/Mezanine" unique_id=798147546 instance=ExtResource("66_lv1qi")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -23.5, 2, -2)
@@ -1763,4 +1852,8 @@ Une fois dans l’auberge, vous découvrez avec étonnement qu’elle est étran
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
 [connection signal="close" from="Aigle Jaune/Bienvenue/Next/Next/Next/Next/Next" to="Aigle Jaune" method="_on_Bienvenue_close"]
+[connection signal="activate" from="Pipette la Loupe/Bienvenue/Acheter/Next" to="Pipette la Loupe" method="_on_acheter_next_activate"]
+[connection signal="activate" from="Pipette la Loupe/Bienvenue/Acheter/Next/Potion de Soin/Potion de Soin Mineur" to="Pipette la Loupe" method="_on_potion_de_soin_mineur_activate"]
+[connection signal="activate" from="Pipette la Loupe/Bienvenue/Acheter/Next/Potion de Soin/Potion de Soin Moyenne" to="Pipette la Loupe" method="_on_potion_de_soin_moyenne_activate"]
+[connection signal="activate" from="Pipette la Loupe/Bienvenue/Acheter/Next/Potion de Soin/Potion de Soin Majeur" to="Pipette la Loupe" method="_on_potion_de_soin_majeur_activate"]
 [connection signal="close" from="PanneauDAffichage/Mission 1" to="PanneauDAffichage" method="_on_mission_1_close"]

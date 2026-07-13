@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://pa16u3bxw2jq"]
 
 [ext_resource type="Animation" uid="uid://dw1jusmaoovc1" path="res://Assets/Animations/Rig_Medium/Death_A.res" id="1_aq4jw"]
+[ext_resource type="Animation" uid="uid://c111iiuu3buu1" path="res://Assets/Animations/Rig_Medium/Cheering.res" id="1_u7ta3"]
 [ext_resource type="Animation" uid="uid://cbiq87g8ktu1i" path="res://Assets/Animations/Rig_Medium/Hit_A.res" id="2_5cmk5"]
 [ext_resource type="Animation" uid="uid://cohtdcjpjijtq" path="res://Assets/Animations/Rig_Medium/Idle_A.res" id="3_hfgcc"]
 [ext_resource type="Animation" uid="uid://de6w5ytd0lld5" path="res://Assets/Animations/Rig_Medium/Death_B_Pose.res" id="3_uou3c"]
@@ -21,6 +22,7 @@
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_t7iaf"]
 _data = {
+&"Cheering": ExtResource("1_u7ta3"),
 &"Death_A": ExtResource("1_aq4jw"),
 &"Death_B_Pose": ExtResource("3_uou3c"),
 &"Hit_A": ExtResource("2_5cmk5"),
