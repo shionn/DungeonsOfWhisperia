@@ -6,9 +6,12 @@ class_name Gui
 @onready var drag = load("res://Gui/Assets/kenney/cursor-pack/hand_closed.png")
 @onready var can_drop = load("res://Gui/Assets/kenney/cursor-pack/hand_open.png")
 
+var _previous_mouse_pos: Vector2
+
 func _ready() -> void:
 	Input.warp_mouse(get_viewport().get_visible_rect().size/2)
-	Input.mouse_mode = Input.MOUSE_MODE_CONFINED_HIDDEN
+	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	_previous_mouse_pos = get_viewport().get_visible_rect().size/2
 	Input.set_custom_mouse_cursor(cursor,     Input.CURSOR_ARROW)
 	Input.set_custom_mouse_cursor(point_hand, Input.CURSOR_POINTING_HAND)
 	Input.set_custom_mouse_cursor(drag,       Input.CURSOR_DRAG)
@@ -27,7 +30,7 @@ func _physics_process(_delta: float) -> void:
 		else :
 			$Bag.show()
 			$Menu.show()
-			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+			_show_mouse()
 	if player.velocity.x or player.velocity.z : 
 		_close()
 
@@ -36,33 +39,44 @@ func update_mouse_mode() -> void:
 			or $Loot.visible or $Introduction.visible 
 			or $Options.visible or $DialogGui.visible
 			or $ExitAuberge.visible or $ExitDungeon.visible) :
-		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+		_show_mouse()
 		$Spells.hide()
 	else :
-		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+		_hide_mouse()
 		$Spells.visible = not player.get_spells().is_empty()
+
+func _show_mouse() -> void :
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	Input.warp_mouse(_previous_mouse_pos)
+
+func _hide_mouse() -> void :
+	if Input.mouse_mode == Input.MOUSE_MODE_VISIBLE :
+		_previous_mouse_pos = get_viewport().get_mouse_position()
+		print(_previous_mouse_pos)
+		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	
 
 func openHelp(description: Dialog)  -> void :
 	$Introduction.open(description)
-	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	_show_mouse()
 
 func openLoot(container: Object) -> void :
 	$Loot.loot(container)
 	$Bag.show()
 	$Menu.show()
-	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	_show_mouse()
 
 func openDialog(dialog: Dialog) -> void:
 	$DialogGui.open(dialog)
-	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	_show_mouse()
 
 func openAubergeExit() -> void:
 	$ExitAuberge.show()
-	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	_show_mouse()
 
 func openDungeonExit() -> void:
 	$ExitDungeon.show()
-	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	_show_mouse()
 
 func openTransition(onMiddle : Callable) -> void:
 	$Transition.doIt(onMiddle)
@@ -71,15 +85,16 @@ func consoleLog(text: String) -> void:
 	$ConsoleLog.log(text)
 
 func _close() -> void :
-	$Bag.hide()
-	$Loot.hide()
-	$Menu.hide()
-	$Introduction.hide()
-	$DialogGui.hide()
-	$Options.hide()
-	$ExitAuberge.hide()
-	$ExitDungeon.hide()
-	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	if Input.mouse_mode == Input.MOUSE_MODE_VISIBLE :
+		$Bag.hide()
+		$Loot.hide()
+		$Menu.hide()
+		$Introduction.hide()
+		$DialogGui.hide()
+		$Options.hide()
+		$ExitAuberge.hide()
+		$ExitDungeon.hide()
+		_hide_mouse()
 
 func _on_bag_visibility_changed() -> void:
 	if not $Bag.visible : 

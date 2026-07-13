@@ -44,7 +44,6 @@
 [ext_resource type="PackedScene" uid="uid://cpxbxsa88w1au" path="res://Assets/Dungeons/Bottle/bottle_B_green.gltf" id="15_nx0cc"]
 [ext_resource type="Script" uid="uid://bjc76th2obumq" path="res://Dungeons/00/PlateFood.gd" id="15_od4xh"]
 [ext_resource type="PackedScene" uid="uid://bb3fm1t7c54di" path="res://Assets/Dungeons/Wall/End/wall_half_endcap.gltf" id="16_kcjse"]
-[ext_resource type="PackedScene" uid="uid://bjfrjb5gr6a3k" path="res://Assets/Dungeons/Wall/wall_arched.gltf" id="16_w87p1"]
 [ext_resource type="PackedScene" uid="uid://dtbeiqnbxjtah" path="res://Assets/Dungeons/Bottle/bottle_C_brown.gltf" id="16_x11bk"]
 [ext_resource type="PackedScene" uid="uid://inewpyqb2si0" path="res://Assets/Scenes/StairsWallLeft.tscn" id="17_2aq5y"]
 [ext_resource type="PackedScene" uid="uid://dwp1aw2ohbybl" path="res://Assets/Dungeons/Bottle/bottle_C_green.gltf" id="17_jf8wf"]
@@ -85,6 +84,7 @@
 [ext_resource type="PackedScene" uid="uid://kwbu30ltyyru" path="res://Assets/Dungeons/Floor/Large/floor_dirt_large.gltf" id="66_fpiy1"]
 [ext_resource type="PackedScene" uid="uid://b0ap676pqxq1o" path="res://Assets/Dungeons/Weapons/sword_shield_gold.gltf" id="66_lv1qi"]
 [ext_resource type="PackedScene" uid="uid://bsjemn7gxjp11" path="res://Assets/NatureForest/Color1/Hill_Top_E_Center_Color1.gltf" id="67_nx0cc"]
+[ext_resource type="PackedScene" uid="uid://ds1umuqbncwso" path="res://Assets/Characters/MonthlySeries6/Accessoires/Lorekeeper_Tome.gltf" id="68_8skfw"]
 [ext_resource type="PackedScene" uid="uid://3a34mpeb0dy7" path="res://Assets/NatureForest/Color1/Hill_Top_F_Side_Color1.gltf" id="68_x11bk"]
 [ext_resource type="PackedScene" uid="uid://1dsaxq7icuau" path="res://Assets/NatureForest/Color1/Hill_Top_C_InnerCorner_Color1.gltf" id="69_jf8wf"]
 [ext_resource type="PackedScene" uid="uid://ck76hsbmyppqb" path="res://Assets/NatureForest/Color1/Hill_12x12x8_Color1.gltf" id="70_nx0cc"]
@@ -202,12 +202,27 @@ Le patron, lui, est un homme bienveillant. Il pourra sans doute vous aider. Vous
 pnj = NodePath("../../..")
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
-[node name="Bievenue_Restored" type="Node" parent="Luna Honey" unique_id=175022393]
+[node name="Bievenue_Restored" type="Node" parent="Luna Honey" unique_id=175022393 node_paths=PackedStringArray("pnj")]
 script = ExtResource("3_fq3ns")
 text = "Oh ! Vous semblez aller beaucoup mieux, maintenant !
 Le chef a vraiment fait un travail remarquable… Il a préparé son fameux ragout de viande de bœuf et d’herbes sauvages. C’est une de ses spécialités, vous savez. On dit que cette recette donne des forces à quiconque la goûte…  
 
 Puisque vous avez une dette envers le chef dorénavant, pourquoi ne pas accomplir l’une des missions qu’il propose sur le panneau d’affichage, à côté de l’entrée ?"
+pnj = NodePath("..")
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Fréquentation" type="Node" parent="Luna Honey/Bievenue_Restored" unique_id=752681740]
+script = ExtResource("3_fq3ns")
+text = "Qui fréquente cet endroit ?"
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Next" type="Node" parent="Luna Honey/Bievenue_Restored/Fréquentation" unique_id=1866309077 node_paths=PackedStringArray("pnj")]
+script = ExtResource("3_fq3ns")
+text = "Le coin est tranquille, mais on a quelques réguliers. 
+Alaric Duclair, par exemple. On dis qu’il est la depuis aussi longtemps que ces murs. Il écrit, relit, note tout ce qui se passe. Comme si le monde allait s’effondrer demain. 
+
+Et puis, il y a Pipette la Loupe. On l’appelle ainsi à cause de ses lunettes. Elle prétend que ses potions sont [i]quasi-parfaites[/i], mais à chaque fois, quelque chose se gâte. Un jour, elle a fait exploser la cheminée. Depuis, on lui réserve une table à l’écart."
+pnj = NodePath("../../..")
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
 [node name="Alaric Duclair" parent="." unique_id=1224900324 instance=ExtResource("1_fq3ns")]
@@ -609,6 +624,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 6)
 [node name="wall_inset_shelves_decoratedA2" parent="RDC/Walls" unique_id=1152533883 instance=ExtResource("30_rr5s8")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2, 0, -14)
 
+[node name="wall_inset_shelves_decoratedA3" parent="RDC/Walls" unique_id=152733338 instance=ExtResource("30_rr5s8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -18)
+
 [node name="wall7" parent="RDC/Walls" unique_id=43255243 instance=ExtResource("14_3w82h")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 6)
 
@@ -617,9 +635,6 @@ transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0
 
 [node name="wall8" parent="RDC/Walls" unique_id=751443147 instance=ExtResource("14_3w82h")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, -18)
-
-[node name="wall_arched2" parent="RDC/Walls" unique_id=627598600 instance=ExtResource("16_w87p1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -18)
 
 [node name="wall_half_endcap2" parent="RDC/Walls" unique_id=1582122285 instance=ExtResource("16_kcjse")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -2, 0, -2)
@@ -745,83 +760,85 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, -16)
 [node name="floor_wood_large_dark15" parent="RDC/Floors" unique_id=293915325 instance=ExtResource("2_hdq2o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, -16)
 
-[node name="pillar_decorated2" parent="RDC" unique_id=1462927631 instance=ExtResource("15_bshfy")]
+[node name="Decoration" type="Node3D" parent="RDC" unique_id=1261893826]
+
+[node name="pillar_decorated2" parent="RDC/Decoration" unique_id=1462927631 instance=ExtResource("15_bshfy")]
 transform = Transform3D(0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, 0.70710677, 10.1, 0, -2.2)
 
-[node name="pillar2" parent="RDC/pillar_decorated2" unique_id=590828952 instance=ExtResource("19_v2by8")]
+[node name="pillar2" parent="RDC/Decoration/pillar_decorated2" unique_id=590828952 instance=ExtResource("19_v2by8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
 
-[node name="torch_mounted3" parent="RDC/pillar_decorated2" unique_id=1711296331 instance=ExtResource("7_68h1y")]
+[node name="torch_mounted3" parent="RDC/Decoration/pillar_decorated2" unique_id=1711296331 instance=ExtResource("7_68h1y")]
 transform = Transform3D(0.70710695, 0, 0.7071067, 0, 1, 0, -0.7071067, 0, 0.70710695, 0.21213198, 3, 0.2121315)
 
-[node name="torch_mounted4" parent="RDC/pillar_decorated2" unique_id=637109710 instance=ExtResource("7_68h1y")]
+[node name="torch_mounted4" parent="RDC/Decoration/pillar_decorated2" unique_id=637109710 instance=ExtResource("7_68h1y")]
 transform = Transform3D(-0.70710695, 0, -0.7071068, 0, 1, 0, 0.7071068, 0, -0.70710695, -0.21213198, 3, -0.21213245)
 
-[node name="barrel_large_decorated2" parent="RDC" unique_id=1911598696 instance=ExtResource("31_hoab0")]
+[node name="barrel_large_decorated2" parent="RDC/Decoration" unique_id=1911598696 instance=ExtResource("31_hoab0")]
 transform = Transform3D(0.5000001, 0, 0.8660253, 0, 1, 0, -0.8660253, 0, 0.5000001, 3.4999988, 0, 4.3999996)
 
-[node name="box_stacked2" parent="RDC" unique_id=1649656929 instance=ExtResource("40_wji3q")]
+[node name="box_stacked2" parent="RDC/Decoration" unique_id=1649656929 instance=ExtResource("40_wji3q")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23, 0, -14)
 
-[node name="box_small_decorated2" parent="RDC" unique_id=759910916 instance=ExtResource("41_488ss")]
+[node name="box_small_decorated2" parent="RDC/Decoration" unique_id=759910916 instance=ExtResource("41_488ss")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 21.7, 0, -10.300001)
 
-[node name="crates_stacked2" parent="RDC" unique_id=1671493113 instance=ExtResource("43_52cfg")]
+[node name="crates_stacked2" parent="RDC/Decoration" unique_id=1671493113 instance=ExtResource("43_52cfg")]
 transform = Transform3D(0.25881907, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, 0.25881907, 16, 0, 0)
 
-[node name="table_long_decorated_A2" parent="RDC" unique_id=1425766908 instance=ExtResource("47_o35sb")]
+[node name="table_long_decorated_A2" parent="RDC/Decoration" unique_id=1425766908 instance=ExtResource("47_o35sb")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4.4, 0, -10)
 
-[node name="chair2" parent="RDC/table_long_decorated_A2" unique_id=1989809996 instance=ExtResource("42_fq3ns")]
+[node name="chair2" parent="RDC/Decoration/table_long_decorated_A2" unique_id=1989809996 instance=ExtResource("42_fq3ns")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -1, 0, -0.9000001)
 
-[node name="chair3" parent="RDC/table_long_decorated_A2" unique_id=1272114967 instance=ExtResource("42_fq3ns")]
+[node name="chair3" parent="RDC/Decoration/table_long_decorated_A2" unique_id=1272114967 instance=ExtResource("42_fq3ns")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -1, 0, 0.89999986)
 
-[node name="chair6" parent="RDC/table_long_decorated_A2" unique_id=72652020 instance=ExtResource("42_fq3ns")]
+[node name="chair6" parent="RDC/Decoration/table_long_decorated_A2" unique_id=72652020 instance=ExtResource("42_fq3ns")]
 transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 1, 0, 0.9000001)
 
-[node name="chair7" parent="RDC/table_long_decorated_A2" unique_id=146574782 instance=ExtResource("42_fq3ns")]
+[node name="chair7" parent="RDC/Decoration/table_long_decorated_A2" unique_id=146574782 instance=ExtResource("42_fq3ns")]
 transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 1, 0, -0.9000001)
 
-[node name="table_long_decorated_B2" parent="RDC" unique_id=968905533 instance=ExtResource("48_6hlga")]
+[node name="table_long_decorated_B2" parent="RDC/Decoration" unique_id=968905533 instance=ExtResource("48_6hlga")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.4, 0, -6)
 
-[node name="chair4" parent="RDC/table_long_decorated_B2" unique_id=913633766 instance=ExtResource("42_fq3ns")]
+[node name="chair4" parent="RDC/Decoration/table_long_decorated_B2" unique_id=913633766 instance=ExtResource("42_fq3ns")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9999995, 0, 0.9000001)
 
-[node name="chair5" parent="RDC/table_long_decorated_B2" unique_id=1644816230 instance=ExtResource("42_fq3ns")]
+[node name="chair5" parent="RDC/Decoration/table_long_decorated_B2" unique_id=1644816230 instance=ExtResource("42_fq3ns")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9999995, 0, -0.9000001)
 
-[node name="chair8" parent="RDC/table_long_decorated_B2" unique_id=552323078 instance=ExtResource("42_fq3ns")]
+[node name="chair8" parent="RDC/Decoration/table_long_decorated_B2" unique_id=552323078 instance=ExtResource("42_fq3ns")]
 transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, -1.0000005, 0, -0.90000033)
 
-[node name="chair9" parent="RDC/table_long_decorated_B2" unique_id=100337857 instance=ExtResource("42_fq3ns")]
+[node name="chair9" parent="RDC/Decoration/table_long_decorated_B2" unique_id=100337857 instance=ExtResource("42_fq3ns")]
 transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, -1.0000005, 0, 0.8999996)
 
-[node name="table_long_decorated_C2" parent="RDC" unique_id=1040177809 instance=ExtResource("49_ntc8q")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.6, 0, -15.4)
+[node name="table_long_decorated_C2" parent="RDC/Decoration" unique_id=1040177809 instance=ExtResource("49_ntc8q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.800001, 0, -15.7)
 
-[node name="table_long2" parent="RDC" unique_id=828272801 instance=ExtResource("50_doy55")]
+[node name="table_long2" parent="RDC/Decoration" unique_id=828272801 instance=ExtResource("50_doy55")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 3.6)
 
-[node name="chair10" parent="RDC/table_long2" unique_id=1139680674 instance=ExtResource("42_fq3ns")]
+[node name="chair10" parent="RDC/Decoration/table_long2" unique_id=1139680674 instance=ExtResource("42_fq3ns")]
 transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 0.9999995, 0, 0.90000105)
 
-[node name="chair11" parent="RDC/table_long2" unique_id=500762270 instance=ExtResource("42_fq3ns")]
+[node name="chair11" parent="RDC/Decoration/table_long2" unique_id=500762270 instance=ExtResource("42_fq3ns")]
 transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 0.9999995, 0, -0.89999914)
 
-[node name="table_medium2" parent="RDC" unique_id=904972754 instance=ExtResource("50_jf8wf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -16.3)
+[node name="table_medium2" parent="RDC/Decoration" unique_id=904972754 instance=ExtResource("50_jf8wf")]
+transform = Transform3D(1, 0, -1.0331603e-07, 0, 1, 0, 1.0331603e-07, 0, 1, 6, 0, -16.4)
 
-[node name="plate_food_B2" parent="RDC/table_medium2" unique_id=1000918605 instance=ExtResource("51_nl4f0")]
+[node name="plate_food_B2" parent="RDC/Decoration/table_medium2" unique_id=1000918605 instance=ExtResource("51_nl4f0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3000002, 1, -0.39999962)
 
-[node name="chair4" parent="RDC/table_medium2" unique_id=483772340 instance=ExtResource("42_fq3ns")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9000001, 0, 0)
-
-[node name="chair5" parent="RDC/table_medium2" unique_id=948432204 instance=ExtResource("42_fq3ns")]
+[node name="chair5" parent="RDC/Decoration/table_medium2" unique_id=948432204 instance=ExtResource("42_fq3ns")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.8999996, 0, 0)
+
+[node name="Lorekeeper_Tome2" parent="RDC/Decoration" unique_id=727173911 instance=ExtResource("68_8skfw")]
+transform = Transform3D(0.76604444, 0, 0.6427876, 0, 1, 0, -0.6427876, 0, 0.76604444, 3, 0, -16.900002)
 
 [node name="Stair" type="Node3D" parent="." unique_id=1140349430]
 script = ExtResource("21_16ran")
