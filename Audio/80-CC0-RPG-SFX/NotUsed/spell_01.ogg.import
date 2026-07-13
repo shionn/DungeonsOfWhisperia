@@ -13,7 +13,7 @@ dest_files=["res://.godot/imported/spell_01.ogg-b47ccb42d6fa2fa55b1be99fbaf122c5
 [params]
 
 loop=false
-loop_offset=0
-bpm=0
+loop_offset=0.0
+bpm=0.0
 beat_count=0
 bar_beats=4

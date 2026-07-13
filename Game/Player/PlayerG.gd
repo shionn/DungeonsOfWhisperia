@@ -1,7 +1,7 @@
 @abstract class_name PlayerG
 extends GameBaseCharacterBody3D
 
-enum State { ATTACK, MOVE, IDLE, HIT, DEATH }
+enum State { ATTACK, SPELL, MOVE, IDLE, HIT, DEATH }
 
 @onready var _character = $Character as Node3D
 @onready var _animation = $Character/AnimationPlayer as AnimationPlayer
@@ -14,6 +14,7 @@ const _atk_range: float = 2
 
 var _state : State = State.MOVE
 var _attacked_monster : Monster
+var _current_spell : Spell
 
 var lvl = 1
 var pv = 1
@@ -104,6 +105,12 @@ func _on_off_hand_atk_timer() -> void:
 	_attacked_monster.receive_atk(nb_atk)
 	$Swing3.play()
 
+func start_spell(spell : Spell) -> void:
+	if not spell.on_cold_down : 
+		_state = State.SPELL
+		_start_animation(spell.animation)
+		_current_spell = spell
+
 func _start_animation(anim_name:String) -> float:
 	var animation =  "RigMedium/"  + anim_name
 	var duration = _animation.get_animation(animation).length
@@ -111,7 +118,11 @@ func _start_animation(anim_name:String) -> float:
 	return duration
 
 func _on_animation_finished(_anim_name : String) -> void:
+	#print("animation end %s %d"%[_anim_name, _state])
 	match _state :
+		State.SPELL :
+			_current_spell.activate()
+			_state = State.MOVE
 		State.ATTACK:
 			_state = State.MOVE
 		State.HIT :
@@ -125,6 +136,9 @@ func reset_orientation() -> void:
 	global_position.z = 0
 
 func save_game() -> void : 
+	if isDead() : 
+		gui.consoleLog("Sauvegarde impossible")
+		return
 	var save_data = {
 		"lvl" : lvl,
 		"pv" : pv,

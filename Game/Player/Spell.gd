@@ -3,8 +3,9 @@ extends Node
 
 @export var icon : Resource
 @export var cold_down : int
+@export var animation : String
 
-signal cast(spell : Spell)
+signal cast()
 signal cold_down_change(value : bool)
 
 var _cold_down_timer : Timer = Timer.new()
@@ -19,10 +20,12 @@ func _init() -> void:
 	_cold_down_timer.timeout.connect(self._on_cold_down_timer_timeout)
 
 func activate() -> void:
-	if not on_cold_down :
-		cast.emit(self)
-		on_cold_down = true
-		_cold_down_timer.start(cold_down)
+	_cold_down_timer.start(cold_down)
+	cast.emit()
+	on_cold_down = true
+
+func get_time_left() -> int:
+	return _cold_down_timer.time_left
 		
 func _on_cold_down_timer_timeout() -> void :
 	on_cold_down = false
