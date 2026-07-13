@@ -17,9 +17,8 @@ func _ready() -> void:
 		hide()
 
 func _physics_process(_delta: float) -> void:
-	if button.disabled :
-		button.text ="%d:%d"%[ spell.get_time_left()/60, spell.get_time_left()%60]
-	else : button.text = "%d"%[spell_id+1]
+	if button.disabled : button.text ="%d:%d" % [ spell.get_time_left()/60, spell.get_time_left()%60 ]
+	else : button.text = "%d" % [ spell_id+1 ]
 
 func _on_pressed() -> void:
 	player.start_spell(spell)

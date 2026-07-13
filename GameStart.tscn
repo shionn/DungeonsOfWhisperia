@@ -74,7 +74,8 @@ transform = Transform3D(0.7660444, 0, 0.6427875, 0, 1, 0, -0.6427875, 0, 0.76604
 [node name="Cleric" parent="Node3D/Characters/Node3D7" unique_id=1597451643 instance=ExtResource("4_w3npw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
 script = ExtResource("3_khsc5")
-_description = "Pas Encore disponible"
+_description = "La Cléresse
+[color=red]Pas encore disponible[/color]"
 enable = false
 
 [node name="Area3D" type="Area3D" parent="Node3D/Characters/Node3D7/Cleric" unique_id=744463791]
@@ -89,13 +90,13 @@ transform = Transform3D(0.93969256, 0, 0.3420201, 0, 1, 0, -0.3420201, 0, 0.9396
 [node name="Engineer" parent="Node3D/Characters/Node3D2" unique_id=1703605445 instance=ExtResource("4_dwykc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
 script = ExtResource("3_khsc5")
-_description = "L'Ingénieur [color=red]Non terminé[/color]
+_description = "L'Ingénieur
 Armé de sa clef, il est capable de créer une tourelle automatique tirant sur tous ce qui est hostile qui rentre dans sa ligne de vue.
 [ul]
-Attaque : 2
+Attaque : 1 (2 pour la Tourelle)
 Défense : 2
 PV : 6
-Difficulté : Moyenne
+Difficulté : Difficile
 [/ul]"
 
 [node name="Area3D" type="Area3D" parent="Node3D/Characters/Node3D2/Engineer" unique_id=756693837]
@@ -130,7 +131,8 @@ transform = Transform3D(0.93969256, 0, -0.3420201, 0, 1, 0, 0.3420201, 0, 0.9396
 [node name="Mage" parent="Node3D/Characters/Node3D3" unique_id=1229200088 instance=ExtResource("5_r85o0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
 script = ExtResource("3_khsc5")
-_description = "Pas encore disponible"
+_description = "La Sorcière
+[color=red]Pas encore disponible[/color]"
 enable = false
 
 [node name="Area3D" type="Area3D" parent="Node3D/Characters/Node3D3/Mage" unique_id=1650824414]
@@ -152,7 +154,7 @@ Equipée d'une dague et d'un arc, il est capable d'attaqué à distance et au co
 Attaque : Arc 3, Dague 2
 Défense : 2
 PV : 6
-Difficulté : Difficile
+Difficulté : Moyenne
 [/ul]"
 
 [node name="Area3D" type="Area3D" parent="Node3D/Characters/Node3D6/Ranger" unique_id=1113056427]

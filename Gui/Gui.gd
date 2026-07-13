@@ -35,7 +35,7 @@ func update_mouse_mode() -> void:
 	if ($Options.visible or $Bag.visible 
 			or $Loot.visible or $Introduction.visible 
 			or $Options.visible or $DialogGui.visible
-			or $ExitAuberge.visible) :
+			or $ExitAuberge.visible or $ExitDungeon.visible) :
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 		$Spells.hide()
 	else :
@@ -60,6 +60,10 @@ func openAubergeExit() -> void:
 	$ExitAuberge.show()
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
+func openDungeonExit() -> void:
+	$ExitDungeon.show()
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+
 func openTransition(onMiddle : Callable) -> void:
 	$Transition.doIt(onMiddle)
 
@@ -74,6 +78,7 @@ func _close() -> void :
 	$DialogGui.hide()
 	$Options.hide()
 	$ExitAuberge.hide()
+	$ExitDungeon.hide()
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
 func _on_bag_visibility_changed() -> void:

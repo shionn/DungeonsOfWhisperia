@@ -23,7 +23,6 @@
 [ext_resource type="AudioStream" uid="uid://rc5hdthh3pa2" path="res://Audio/KenneyRpgAudio/handleCoins2.ogg" id="20_cq4r1"]
 [ext_resource type="Texture2D" uid="uid://dhtjf317oy7br" path="res://Gui/Assets/kenney/cursor-pack/tracking_horizontal_down.png" id="21_c4ovl"]
 [ext_resource type="Texture2D" uid="uid://dstsbh4f6k4j5" path="res://Gui/Assets/kenney/cursor-pack/door_exit.png" id="21_f4re5"]
-[ext_resource type="Texture2D" uid="uid://bkbrcpwq01672" path="res://Gui/Assets/kenney/cursor-pack/door.png" id="21_irpma"]
 [ext_resource type="Script" uid="uid://85rjankja22n" path="res://Gui/AubergeExit.gd" id="21_ji1eb"]
 [ext_resource type="Texture2D" uid="uid://bxmq2jm6psefk" path="res://Gui/Assets/kenney/cursor-pack/resize_d_cross_diagonal.png" id="21_wbke4"]
 [ext_resource type="Texture2D" uid="uid://dno5jamv0r03y" path="res://Gui/Assets/kenney/cursor-pack/door_disabled.png" id="22_3yfkq"]
@@ -34,6 +33,8 @@
 [ext_resource type="Script" uid="uid://bc4y4enkrwodc" path="res://Gui/ConsoleLog.gd" id="24_xkmul"]
 [ext_resource type="Script" uid="uid://bcc2j6w4n4yqq" path="res://Gui/Transition.gd" id="25_60sjt"]
 [ext_resource type="Script" uid="uid://b57hjgf2uu7ly" path="res://Gui/Introduction.gd" id="26_m2wub"]
+[ext_resource type="Script" uid="uid://c47eb21su127s" path="res://Gui/DungeonExit.gd" id="34_f4re5"]
+[ext_resource type="Texture2D" uid="uid://ctgwsk6s31p4p" path="res://Gui/Assets/kenney/cursor-pack/door_enter.png" id="34_w65rx"]
 [ext_resource type="Script" uid="uid://cbpdlo58gok7v" path="res://Gui/SpellButton.gd" id="37_f4re5"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8rxp0"]
@@ -1063,7 +1064,7 @@ horizontal_alignment = 1
 custom_minimum_size = Vector2(250, 0)
 layout_mode = 2
 text = "Mausolet"
-icon = ExtResource("21_irpma")
+icon = ExtResource("34_w65rx")
 
 [node name="CloseButton" type="Button" parent="ExitAuberge/PanelContainer/MarginContainer/VBoxContainer" unique_id=1231563995]
 layout_mode = 2
@@ -1089,6 +1090,106 @@ texture = ExtResource("17_el8jn")
 stretch_mode = 1
 
 [node name="SE" type="TextureRect" parent="ExitAuberge" unique_id=197564385]
+layout_mode = 2
+texture = ExtResource("18_w65rx")
+
+[node name="ExitDungeon" type="GridContainer" parent="." unique_id=1408221102]
+visible = false
+z_index = 10
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -143.0
+offset_top = -74.5
+offset_right = 143.0
+offset_bottom = 74.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 3
+script = ExtResource("34_f4re5")
+
+[node name="NW" type="TextureRect" parent="ExitDungeon" unique_id=32662880]
+layout_mode = 2
+texture = ExtResource("11_883rq")
+
+[node name="N" type="TextureRect" parent="ExitDungeon" unique_id=1098555813]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("12_m2wub")
+stretch_mode = 1
+
+[node name="NE" type="TextureRect" parent="ExitDungeon" unique_id=1744418738]
+layout_mode = 2
+texture = ExtResource("13_irpma")
+
+[node name="W" type="TextureRect" parent="ExitDungeon" unique_id=1447072424]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("14_3yfkq")
+stretch_mode = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="ExitDungeon" unique_id=641042288]
+propagate_maximum_size = false
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_fucts")
+
+[node name="MarginContainer" type="MarginContainer" parent="ExitDungeon/PanelContainer" unique_id=1386889154]
+layout_mode = 2
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ExitDungeon/PanelContainer/MarginContainer" unique_id=1034500673]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="Label" type="Label" parent="ExitDungeon/PanelContainer/MarginContainer/VBoxContainer" unique_id=192767972]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Voulez vous quitter le donjon pour retourner à l'auberge ?
+Une partie de votre progression pourrai être perdu. "
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ExitDungeon/PanelContainer/MarginContainer/VBoxContainer" unique_id=795151106]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_constants/separation = 20
+
+[node name="Auberge" type="Button" parent="ExitDungeon/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=348653783]
+layout_mode = 2
+text = "Partir"
+icon = ExtResource("34_w65rx")
+
+[node name="CloseButton" type="Button" parent="ExitDungeon/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1343102454]
+layout_mode = 2
+tooltip_text = "Fermer"
+text = "Rester"
+icon = ExtResource("22_3yfkq")
+
+[node name="E" type="TextureRect" parent="ExitDungeon" unique_id=613235778]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("15_ji1eb")
+stretch_mode = 1
+
+[node name="SW" type="TextureRect" parent="ExitDungeon" unique_id=699811116]
+layout_mode = 2
+texture = ExtResource("16_8pck7")
+
+[node name="S" type="TextureRect" parent="ExitDungeon" unique_id=856954854]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("17_el8jn")
+stretch_mode = 1
+
+[node name="SE" type="TextureRect" parent="ExitDungeon" unique_id=2023106506]
 layout_mode = 2
 texture = ExtResource("18_w65rx")
 
@@ -1173,6 +1274,9 @@ spell_id = 3
 [connection signal="visibility_changed" from="ExitAuberge" to="ExitAuberge" method="_on_visibility_changed"]
 [connection signal="pressed" from="ExitAuberge/PanelContainer/MarginContainer/VBoxContainer/Dungeon01" to="ExitAuberge" method="_on_dungeon_01_pressed"]
 [connection signal="pressed" from="ExitAuberge/PanelContainer/MarginContainer/VBoxContainer/CloseButton" to="ExitAuberge" method="hide"]
+[connection signal="visibility_changed" from="ExitDungeon" to="." method="update_mouse_mode"]
+[connection signal="pressed" from="ExitDungeon/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/Auberge" to="ExitDungeon" method="_on_auberge_pressed"]
+[connection signal="pressed" from="ExitDungeon/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/CloseButton" to="ExitDungeon" method="hide"]
 [connection signal="visibility_changed" from="Transition" to="." method="update_mouse_mode"]
 [connection signal="animation_finished" from="Transition/AnimationPlayer" to="Transition" method="_on_animation_finished"]
 [connection signal="pressed" from="Spells/Button1" to="Spells/Button1" method="_on_pressed"]

@@ -64,6 +64,7 @@
 [ext_resource type="PackedScene" uid="uid://b4guesmjn6ju0" path="res://Assets/Dungeons/Stairs/stairs_walled.gltf" id="63_2s4c4"]
 [ext_resource type="PackedScene" uid="uid://nvl7qu3464h4" path="res://Game/Monsters/SkeletonMinion.tscn" id="63_u21oi"]
 [ext_resource type="Script" uid="uid://dexpl21rteomv" path="res://Game/Roof.gd" id="64_6f0aj"]
+[ext_resource type="Script" uid="uid://d33jku8bou3tu" path="res://Game/DungeonExit.gd" id="64_u21oi"]
 [ext_resource type="PackedScene" uid="uid://kwbu30ltyyru" path="res://Assets/Dungeons/Floor/Large/floor_dirt_large.gltf" id="65_wj3qx"]
 [ext_resource type="PackedScene" uid="uid://dfqu824ryf85i" path="res://Assets/Dungeons/Floor/Large/floor_dirt_large_rocky.gltf" id="66_glvpf"]
 [ext_resource type="PackedScene" uid="uid://b3w65ugrkoyx4" path="res://Assets/Dungeons/Floor/Large/floor_tile_large.gltf" id="67_1i08k"]
@@ -1197,8 +1198,7 @@ loot_gold = 2
 
 [node name="stairs_walled2" parent="Entrance" unique_id=464899705 instance=ExtResource("63_2s4c4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8)
-script = ExtResource("5_fv305")
-action = 1
+script = ExtResource("64_u21oi")
 interactDistance = 5.0
 
 [node name="Area3D" type="Area3D" parent="Entrance/stairs_walled2" unique_id=1911576458]
@@ -1206,13 +1206,6 @@ interactDistance = 5.0
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Entrance/stairs_walled2/Area3D" unique_id=1258115370]
 transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.7071068, 0, -0.7071068, 0.70710677, 0, 1.8902106, 2.2146444)
 shape = SubResource("BoxShape3D_b02ke")
-
-[node name="description" type="Node" parent="Entrance/stairs_walled2" unique_id=1605374156]
-script = ExtResource("7_v4w5c")
-text = "Ceci est l'entrée du donjon. 
-
-Dans les futures versions du jeu, cela permettra de sortir du donjon. Mais pour l'instant, ça sert à rien."
-metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
 [node name="torch_mounted" parent="Entrance" unique_id=342053045 instance=ExtResource("3_yra1b")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 18, 0, 6)

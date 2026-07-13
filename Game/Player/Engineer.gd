@@ -1,10 +1,11 @@
 extends PlayerG
 
-enum AttackMode {CHOP, HORIZONTAL, DIAGONAL}
-var _atk : AttackMode = AttackMode.DIAGONAL
-
 const _turret_model = preload("res://Game/Player/EngineerTurret.tscn")
 
+enum AttackMode {CHOP, HORIZONTAL, DIAGONAL}
+
+var _atk : AttackMode = AttackMode.DIAGONAL
+var _turret : Node3D
 
 func _ready() -> void:
 	$Character/Rig_Medium/Skeleton3D/Engineer_Head.hide()
@@ -22,7 +23,7 @@ func get_atk_animation() -> String:
 		AttackMode.DIAGONAL : return "Melee_1H_Attack_Slice_Diagonal"
 		_ : return "Melee_1H_Attack_Chop"
 func is_atk_dual_Hand() -> bool:				return false
-func get_atk_main_hand() -> int:				return Dices.d6(2, 4)
+func get_atk_main_hand() -> int:				return Dices.d6(1, 4)
 func get_atk_main_hand_timer_factor() -> float: 
 	match _atk :
 		AttackMode.CHOP : return .55
@@ -36,7 +37,8 @@ func get_spells(): return [$"Invoquer Tourelle"]
 
 
 func _on_invoquer_tourelle_cast() -> void:
-	var turret : Node3D = _turret_model.instantiate()
-	$/root/World/Dungeon.add_child(turret)
-	turret.position   = self.global_position +_character.global_basis * Vector3.BACK
+	if _turret : _turret.queue_free()
+	_turret =  _turret_model.instantiate()
+	$/root/World/Dungeon.add_child(_turret)
+	_turret.position   = self.global_position +_character.global_basis * Vector3.BACK
 	#turret.rotation.y = _character.rotation.y

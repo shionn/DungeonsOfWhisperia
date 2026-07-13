@@ -52,8 +52,7 @@ func _fire(monster : Monster) -> void :
 	$Fire.play()
 
 func _hit(monster : Monster) -> void : 
-	#monster.receive_atk(Dices.d6(1,4))
-	pass
+	monster.receive_atk(Dices.d6(2,4))
 
 func _on_cold_down_timer_timeout() -> void:
 	_on_atk_cold_down = false
