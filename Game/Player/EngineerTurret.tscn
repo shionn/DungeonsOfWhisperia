@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://6o64k5gfut8a"]
+
+[ext_resource type="PackedScene" uid="uid://b16kntmj78gaa" path="res://Assets/Characters/AdventurersAccessoires/turret_base.gltf" id="1_knakc"]
+[ext_resource type="Script" uid="uid://b1h31afm7jbab" path="res://Game/Player/EngineerTurret.gd" id="2_aarbv"]
+
+[node name="EngineerTurret" unique_id=1608128847 instance=ExtResource("1_knakc")]
+script = ExtResource("2_aarbv")
+
+[node name="turret_base" parent="." index="0" unique_id=974317114]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
+
+[node name="AtkTimer" type="Timer" parent="." index="1" unique_id=304318200]
+one_shot = true
+
+[connection signal="timeout" from="AtkTimer" to="." method="_on_atk_timer_timeout"]

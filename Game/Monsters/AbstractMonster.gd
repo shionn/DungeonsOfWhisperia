@@ -26,6 +26,7 @@ func _ready() -> void:
 	_navigation_agent.target_desired_distance = 0 #_model.chase_distance
 	start_animation("Idle_A")
 	_atk = _find_atk()
+	add_to_group("Monsters")
 
 func _physics_process(_delta: float) -> void:
 	see_player = _see_player()

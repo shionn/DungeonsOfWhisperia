@@ -5,6 +5,7 @@
 [ext_resource type="Animation" uid="uid://cohtdcjpjijtq" path="res://Assets/Animations/Rig_Medium/Idle_A.res" id="3_hfgcc"]
 [ext_resource type="Animation" uid="uid://de6w5ytd0lld5" path="res://Assets/Animations/Rig_Medium/Death_B_Pose.res" id="3_uou3c"]
 [ext_resource type="Animation" uid="uid://c6ux2eryuoqn2" path="res://Assets/Animations/Rig_Medium/Walking_A.res" id="4_7lhfs"]
+[ext_resource type="Animation" uid="uid://jlfry1wrq72o" path="res://Assets/Animations/Rig_Medium/Lockpick.res" id="5_7041h"]
 [ext_resource type="Animation" uid="uid://dkwsk5htays2b" path="res://Assets/Animations/Rig_Medium/Melee_1H_Attack_Chop.res" id="5_t7iaf"]
 [ext_resource type="Animation" uid="uid://hm7fytvld1kq" path="res://Assets/Animations/Rig_Medium/Melee_1H_Attack_Slice_Diagonal.res" id="6_5vv6p"]
 [ext_resource type="Animation" uid="uid://b4j81750lhpro" path="res://Assets/Animations/Rig_Medium/Melee_2H_Attack_Chop.res" id="6_saede"]
@@ -24,6 +25,7 @@ _data = {
 &"Death_B_Pose": ExtResource("3_uou3c"),
 &"Hit_A": ExtResource("2_5cmk5"),
 &"Idle_A": ExtResource("3_hfgcc"),
+&"Lockpick": ExtResource("5_7041h"),
 &"Melee_1H_Attack_Chop": ExtResource("5_t7iaf"),
 &"Melee_1H_Attack_Slice_Diagonal": ExtResource("6_5vv6p"),
 &"Melee_1H_Attack_Slice_Horizontal": ExtResource("7_uou3c"),

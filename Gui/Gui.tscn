@@ -1140,7 +1140,7 @@ spell_id = 1
 [node name="Button3" type="Button" parent="Spells" unique_id=23533590]
 layout_mode = 2
 shortcut = SubResource("Shortcut_5npq8")
-text = "2"
+text = "3"
 alignment = 0
 icon_alignment = 1
 script = ExtResource("37_f4re5")
@@ -1149,7 +1149,7 @@ spell_id = 2
 [node name="Button4" type="Button" parent="Spells" unique_id=899232034]
 layout_mode = 2
 shortcut = SubResource("Shortcut_6qw7v")
-text = "2"
+text = "4"
 alignment = 0
 icon_alignment = 1
 script = ExtResource("37_f4re5")

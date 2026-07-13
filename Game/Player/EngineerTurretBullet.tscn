@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://cpo210htr5ql0"]
+
+[ext_resource type="PackedScene" uid="uid://b7jw20eo0o7st" path="res://Assets/BinbunVFX/magic_projectiles/effects/mprojectile_wave/mprojectile_wave_vfx_03.tscn" id="1_5tabs"]
+[ext_resource type="Script" uid="uid://b5td1mg5usnvw" path="res://Game/Player/EngineerTurretBullet.gd" id="1_wi2p8"]
+
+[sub_resource type="Animation" id="Animation_5tabs"]
+resource_name = "Fire"
+markers = [{
+"color": Color(1, 1, 1, 1),
+"name": &"end",
+"time": 1.0
+}]
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MProjectileWaveVFX_03")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0.5, 0, 0, 1, 1, 20.5, 0, 0)
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_wi2p8"]
+length = 0.001
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MProjectileWaveVFX_03")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0)
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_k3hsc"]
+_data = {
+&"Fire": SubResource("Animation_5tabs"),
+&"RESET": SubResource("Animation_wi2p8")
+}
+
+[node name="EngineerTurretBullet" type="Node3D" unique_id=1811848091]
+script = ExtResource("1_wi2p8")
+
+[node name="MProjectileWaveVFX_03" parent="." unique_id=2043561906 instance=ExtResource("1_5tabs")]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1449122940]
+libraries/ = SubResource("AnimationLibrary_k3hsc")
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
