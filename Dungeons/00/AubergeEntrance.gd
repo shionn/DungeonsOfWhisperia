@@ -1,4 +1,4 @@
 extends GameBase3D
 
 func _ready() -> void:
-	gui.openHelp($Quest0)
+	if not tags.have(Tags.AUBERGE_PLAYER_RESTORED): gui.openHelp($Quest0)

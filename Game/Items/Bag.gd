@@ -25,6 +25,10 @@ func unloot(item : Items.ItemName) -> void :
 		_gui.consoleLog("Vous utilisez %s." % _all_items.from(item).name)
 		items.remove_at(index)
 	item_change.emit()
+
+func have(item : Items.ItemName) -> bool:
+	return items.find(item) >= 0
+	
 	
 func to_save() -> Array[Items.ItemName] : 
 	var saveable_items : Array[Items.ItemName] = []

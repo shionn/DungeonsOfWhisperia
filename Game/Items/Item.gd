@@ -7,6 +7,7 @@ extends GameBase
 @export var tooltip : String
 @export var conssommable : bool = false
 @export var global : bool = true
+@export var unique : bool = false
 
 signal _action()
 
