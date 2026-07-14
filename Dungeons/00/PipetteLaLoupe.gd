@@ -2,6 +2,7 @@ extends PNJ
 
 func interact() -> void:
 	look_at_player()
+	$Bienvenue/Identifier.enable = bag.have(Items.ItemName.FioleNecrolisAttivae)
 	gui.openDialog($Bienvenue)
 
 func _buy(price : int, item : Items.ItemName ) -> void :
@@ -24,3 +25,8 @@ func _on_potion_de_soin_moyenne_activate() -> void:
 
 func _on_potion_de_soin_majeur_activate() -> void:
 	_buy(150, Items.ItemName.PotionVieMajeur )
+
+func _on_identification_necro_last_activate() -> void:
+	tags.add(Tags.AUBERGE_PLAYER_KNOW_VALTHORION)
+	bag.unloot(Items.ItemName.FioleNecrolisAttivae)
+	bag.gold = bag.gold + 100

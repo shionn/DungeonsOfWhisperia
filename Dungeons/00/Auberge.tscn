@@ -463,6 +463,46 @@ metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 script = ExtResource("3_fq3ns")
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
+[node name="Identifier" type="Node" parent="Pipette la Loupe/Bienvenue" unique_id=1762886707]
+script = ExtResource("3_fq3ns")
+text = "Je souhaite identifier une potion."
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Next" type="Node" parent="Pipette la Loupe/Bienvenue/Identifier" unique_id=1764303081 node_paths=PackedStringArray("pnj")]
+script = ExtResource("3_fq3ns")
+text = "Super, j’adore ! C’est quoi ? Montre, montre !
+
+Hooo, j’espère que c’est un truc qui explose ! Rien de trop… dramatique, bien sûr. Juste un petit pouf pour faire joli !"
+pnj = NodePath("../../..")
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Necrolis Attivae" type="Node" parent="Pipette la Loupe/Bienvenue/Identifier/Next" unique_id=1170704030]
+script = ExtResource("3_fq3ns")
+text = "J'ai trouvé cette potion. 
+
+Dessus c'est marqué Necrolis Attivae. Je n'en ai jamais entendu parler. Et elle émet une lumière verte. "
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Next" type="Node" parent="Pipette la Loupe/Bienvenue/Identifier/Next/Necrolis Attivae" unique_id=612219082]
+script = ExtResource("3_fq3ns")
+text = "Necrolis Attivae…
+
+C’est un nom qui vient du passé… très lointain. Cette potion, si je ne me trompe pas, a été conçue par Valthorion, un nécromancien légendaire. On dis qu’il avait réussi à enfermer l’essence de la vie après la mort dans une fiole. Et qu’un seul gouttelet suffisait à faire renaître les morts, sous son contrôle."
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Next" type="Node" parent="Pipette la Loupe/Bienvenue/Identifier/Next/Necrolis Attivae/Next" unique_id=78683615 node_paths=PackedStringArray("pnj")]
+script = ExtResource("3_fq3ns")
+text = "Mais… cette lumière verte… Cela prouve qu’elle a été créée récemment. Valthorion est mort il y a des siècles, emportant avec lui le secret de sa fabrication.
+
+Et pourtant, elle est là, entre vos mains. Tu veux bien me la donner, pour que j’étudie sa composition ? Je… je dois comprendre pourquoi elle brille. Je t'en donne 100 pièces d'or. "
+pnj = NodePath("../../../../../..")
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Next" type="Node" parent="Pipette la Loupe/Bienvenue/Identifier/Next/Necrolis Attivae/Next/Next" unique_id=464387190]
+script = ExtResource("3_fq3ns")
+text = "Cette potion, je ne vois pas en quoi elle pourrait m’aider. Je n’ai pas besoin de ça. Prends-la."
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
 [node name="ManquePo" type="Node" parent="Pipette la Loupe" unique_id=1270482438 node_paths=PackedStringArray("pnj")]
 script = ExtResource("3_fq3ns")
 text = "Tu veux une potion ? Je suis une alchimiste, mais ce n’est pas un jeu. Les ingrédients sont rares, le processus long. Chaque goutte d’or que tu donnes est un sacrifice. Sans pièces, pas de potion."
@@ -2058,6 +2098,7 @@ metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 [connection signal="activate" from="Pipette la Loupe/Bienvenue/Acheter/Next/Potion de Soin/Potion de Soin Mineur" to="Pipette la Loupe" method="_on_potion_de_soin_mineur_activate"]
 [connection signal="activate" from="Pipette la Loupe/Bienvenue/Acheter/Next/Potion de Soin/Potion de Soin Moyenne" to="Pipette la Loupe" method="_on_potion_de_soin_moyenne_activate"]
 [connection signal="activate" from="Pipette la Loupe/Bienvenue/Acheter/Next/Potion de Soin/Potion de Soin Majeur" to="Pipette la Loupe" method="_on_potion_de_soin_majeur_activate"]
+[connection signal="activate" from="Pipette la Loupe/Bienvenue/Identifier/Next/Necrolis Attivae/Next/Next/Next" to="Pipette la Loupe" method="_on_identification_necro_last_activate"]
 [connection signal="close" from="Cliente/Dialog" to="Cliente" method="drink"]
 [connection signal="activate" from="Cliente/Dialog/Mine Fermée ?/Next" to="Cliente" method="player_know_about_mine"]
 [connection signal="close" from="Cliente/Dialog/Mine Fermée ?/Next" to="Cliente" method="drink"]
