@@ -41,18 +41,16 @@ func open(dialog: Dialog)->void :
 			_close_button.hide()
 			_next_button.show()
 		else :
-			if dialog.options.size() >= 1: 
-				_option_button1.text = dialog.options[0].name
-				_option_button1.show()
-			if dialog.options.size() >= 2: 
-				_option_button2.text = dialog.options[1].name
-				_option_button2.show()
-			if dialog.options.size() >= 3: 
-				_option_button3.text = dialog.options[2].name
-				_option_button3.show()
-				
+			_add_option(dialog, _option_button1, 0)
+			_add_option(dialog, _option_button2, 1)
+			_add_option(dialog, _option_button3, 2)
 		show()
 
+func _add_option(dialog:Dialog, button : Button, id:int) -> void :
+	if dialog.options.size() > id and dialog.options[id].enable : 
+		button.text = dialog.options[id].name
+		button.show()
+	
 
 func _on_close_button_pressed() -> void:
 	_current.close.emit()
@@ -72,12 +70,12 @@ func _on_option_button_1_pressed() -> void:
 
 func _on_option_button_2_pressed() -> void:
 	_current.close.emit()
-	var next = _current.options[0]
+	var next = _current.options[1]
 	open(next)
 	next.activate.emit()
 
 func _on_option_button_3_pressed() -> void:
 	_current.close.emit()
-	var next = _current.options[0]
+	var next = _current.options[2]
 	open(next)
 	next.activate.emit()

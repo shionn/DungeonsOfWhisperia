@@ -19,6 +19,8 @@
 [ext_resource type="Animation" uid="uid://b48p320s4ape" path="res://Assets/Animations/Rig_Medium/Ranged_Bow_Draw.res" id="13_aee20"]
 [ext_resource type="Animation" uid="uid://dafecr1csd801" path="res://Assets/Animations/Rig_Medium/Ranged_Bow_Release.res" id="14_lso78"]
 [ext_resource type="Animation" uid="uid://uuuuvcnefldc" path="res://Assets/Animations/Rig_Medium/Sit_Chair_Idle.res" id="15_lso78"]
+[ext_resource type="Animation" uid="uid://he3ybmqrvq2q" path="res://Assets/Animations/Rig_Medium/Use_Item.res" id="19_v47we"]
+[ext_resource type="Animation" uid="uid://b68vngw6wetgg" path="res://Assets/Animations/Rig_Medium/Waving.res" id="20_r6tup"]
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_t7iaf"]
 _data = {
@@ -40,7 +42,9 @@ _data = {
 &"Ranged_Bow_Release": ExtResource("14_lso78"),
 &"Sit_Chair_Idle": ExtResource("15_lso78"),
 &"Skeletons_Death_Pose": ExtResource("10_uou3c"),
-&"Walking_A": ExtResource("4_7lhfs")
+&"Use_Item": ExtResource("19_v47we"),
+&"Walking_A": ExtResource("4_7lhfs"),
+&"Waving": ExtResource("20_r6tup")
 }
 
 [node name="RigMedium" type="AnimationPlayer" unique_id=1430341502]

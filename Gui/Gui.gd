@@ -52,7 +52,6 @@ func _show_mouse() -> void :
 func _hide_mouse() -> void :
 	if Input.mouse_mode == Input.MOUSE_MODE_VISIBLE :
 		_previous_mouse_pos = get_viewport().get_mouse_position()
-		print(_previous_mouse_pos)
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	
 

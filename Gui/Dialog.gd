@@ -3,6 +3,8 @@ extends Node
 
 @export_multiline var text: String
 @export var pnj: PNJ = null
+@export var enable:bool = true
+@export var close_enable = true
 
 var next : Dialog
 var options : Array[Dialog] = []

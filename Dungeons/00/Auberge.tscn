@@ -35,6 +35,7 @@
 [ext_resource type="PackedScene" uid="uid://d20qpul5ulp0y" path="res://Assets/Bits/RpgTools/map_empty.gltf" id="11_o35sb"]
 [ext_resource type="Script" uid="uid://ccrvldbs0rtke" path="res://Dungeons/00/PipetteLaLoupe.gd" id="11_oipk7"]
 [ext_resource type="PackedScene" uid="uid://bmurq8gfdf5sq" path="res://Assets/Bits/RpgTools/nail.gltf" id="12_6hlga"]
+[ext_resource type="Script" uid="uid://ce1g0pq2t71mk" path="res://Dungeons/00/Cliente.gd" id="12_8skfw"]
 [ext_resource type="PackedScene" uid="uid://cbbuf33qge7bs" path="res://Assets/Dungeons/Bar/bar_straight_A_short.gltf" id="12_bshfy"]
 [ext_resource type="Script" uid="uid://b3dhqvmx6f1a4" path="res://Dungeons/00/PanneauDaffichage.gd" id="12_ntc8q"]
 [ext_resource type="Script" uid="uid://cux3ba4bcmj4r" path="res://Dungeons/ChangeTexture.gd" id="14_2aq5y"]
@@ -118,6 +119,7 @@ script = ExtResource("1_y7s6b")
 [node name="Aigle Jaune" parent="." unique_id=1882476485 instance=ExtResource("1_fq3ns")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 12, 0, -7.4)
 script = ExtResource("8_o35sb")
+interact_distance = 4.0
 
 [node name="Character" parent="Aigle Jaune" unique_id=1674546116 instance=ExtResource("6_od4xh")]
 
@@ -166,16 +168,91 @@ Vous semblez jeune. Si vous êtes à la recherche de travail, vous trouverez les
 pnj = NodePath("../..")
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
-[node name="LookingForQuest" type="Node" parent="Aigle Jaune/Bienvenue" unique_id=1344520848 node_paths=PackedStringArray("pnj")]
+[node name="LookingForQuest" type="Node" parent="Aigle Jaune" unique_id=1344520848 node_paths=PackedStringArray("pnj")]
 script = ExtResource("3_fq3ns")
 text = "Vous semblez aller mieux. 
 
 Si vous cherchez un travail, jetez un œil au panneau d’affichage près de l’entrée. Il y a des missions qui pourraient vous intéresser."
-pnj = NodePath("../..")
+pnj = NodePath("..")
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Mine Infestée" type="Node" parent="Aigle Jaune/LookingForQuest" unique_id=1410289639]
+script = ExtResource("3_fq3ns")
+text = "J’ai entendu dire que vous cherchez quelqu’un pour débarrasser la mine des morts-vivants ?"
+enable = false
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Next" type="Node" parent="Aigle Jaune/LookingForQuest/Mine Infestée" unique_id=1190841167 node_paths=PackedStringArray("pnj")]
+script = ExtResource("3_fq3ns")
+text = "Tu as des oreilles, hein ? Oui, on cherche quelqu’un. Mais pas n’importe qui. Tu crois que combattre des morts-vivants, c’est comme déterrer un lapin ? 
+Deux aventuriers ont déjà essayé il y a trois jours. Ils ne sont toujours pas revenus. Probablement qu'ils ont rejoint les rangs des morts-vivants. 
+Si tu veux tenter ta chance, il faut me prouver ta valeur. Une autre mission plus simple t’attend sur le panneau d’affichage à l’entrée."
+pnj = NodePath("../../..")
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Mission Accomplie" type="Node" parent="Aigle Jaune/LookingForQuest" unique_id=48408100]
+script = ExtResource("3_fq3ns")
+text = "J'ai terrassé tous les mort-vivants de ce mausolée !"
+enable = false
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Next" type="Node" parent="Aigle Jaune/LookingForQuest/Mission Accomplie" unique_id=2000115723 node_paths=PackedStringArray("pnj")]
+script = ExtResource("3_fq3ns")
+text = "Tu semblais avoir bavé dans les profondeurs. 
+
+Tu as accompli la mission ? Montre-moi une preuve."
+pnj = NodePath("../../..")
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Next" type="Node" parent="Aigle Jaune/LookingForQuest/Mission Accomplie/Next" unique_id=162401651]
+script = ExtResource("3_fq3ns")
+text = "Voilà : le crâne du golem squelette qui gardait l’étude. 
+
+Mais… il n’y avait que des squelettes. Aucun nécromancien, aucun signe de magie.
+
+[i]Vous posez le crâne sur la table.[/i]
+"
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Next" type="Node" parent="Aigle Jaune/LookingForQuest/Mission Accomplie/Next/Next" unique_id=1188886598 node_paths=PackedStringArray("pnj")]
+script = ExtResource("3_fq3ns")
+text = "Des squelettes ? Seuls ? C’est étrange. 
+
+Les squelettes ne bougent pas sans un nécromancien. Normalement, ils ne peuvent rester animés que si le nécromancien est toujours dans les parages. 
+
+Leur esprit est vide… à moins qu’un sort ne les ait animés. Tu es certain d’avoir fouillé le mausoléum ?"
+pnj = NodePath("../../../../..")
+close_enable = false
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="La potion étrange" type="Node" parent="Aigle Jaune/LookingForQuest/Mission Accomplie/Next/Next/Next" unique_id=328269447]
+script = ExtResource("3_fq3ns")
+text = "Oui… 
+
+Mais j’ai trouvé quelque chose d’étrange. Une potion, Necrolis Attivae. Elle brille d’une lumière verte…"
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Next" type="Node" parent="Aigle Jaune/LookingForQuest/Mission Accomplie/Next/Next/Next/La potion étrange" unique_id=150297420]
+script = ExtResource("3_fq3ns")
+text = "Neropolis Atire ? Je ne connais pas ce nom… C’est Pipette, l’alchimiste, qui doit savoir. Elle a des livres anciens. Tu devrais lui montrer cette potion.
+
+Prends ceci. 10 pièces d’or. Moins les 2 pour ton repas."
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Je n\'ai rien trouvé" type="Node" parent="Aigle Jaune/LookingForQuest/Mission Accomplie/Next/Next/Next" unique_id=1829865040]
+script = ExtResource("3_fq3ns")
+text = "Non absolument rien. "
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Next" type="Node" parent="Aigle Jaune/LookingForQuest/Mission Accomplie/Next/Next/Next/Je n\'ai rien trouvé" unique_id=938166655]
+script = ExtResource("3_fq3ns")
+text = "Si tu n’as rien trouvé… alors peut-être que la vérité est ailleurs. Parle à Alaric, l’historien. Il connaît l’histoire de cette région. 
+
+Même sans indice, tu as risqué ta vie. Prends cela. 10 pièces d’or… moins les 2 pour ton repas."
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
 [node name="Luna Honey" parent="." unique_id=957068427 instance=ExtResource("1_fq3ns")]
-transform = Transform3D(0.49999997, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, 0.49999997, 13, 0, 0)
+transform = Transform3D(-0.5000001, 0, -0.8660254, 0, 1, 0, 0.8660254, 0, -0.5000001, 11.4, 0, 1.7)
 script = ExtResource("2_52cfg")
 
 [node name="Character" parent="Luna Honey" unique_id=917570229 instance=ExtResource("4_fq3ns")]
@@ -222,6 +299,18 @@ text = "Le coin est tranquille, mais on a quelques réguliers.
 Alaric Duclair, par exemple. On dis qu’il est la depuis aussi longtemps que ces murs. Il écrit, relit, note tout ce qui se passe. Comme si le monde allait s’effondrer demain. 
 
 Et puis, il y a Pipette la Loupe. On l’appelle ainsi à cause de ses lunettes. Elle prétend que ses potions sont [i]quasi-parfaites[/i], mais à chaque fois, quelque chose se gâte. Un jour, elle a fait exploser la cheminée. Depuis, on lui réserve une table à l’écart."
+pnj = NodePath("../../..")
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Mission Accomplie" type="Node" parent="Luna Honey/Bievenue_Restored" unique_id=591486330]
+script = ExtResource("3_fq3ns")
+text = "J'ai terrassé tous les mort-vivants de ce mausolée !"
+enable = false
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Next" type="Node" parent="Luna Honey/Bievenue_Restored/Mission Accomplie" unique_id=2119219576 node_paths=PackedStringArray("pnj")]
+script = ExtResource("3_fq3ns")
+text = "Tu semblais avoir bavé dans les profondeurs, mais ce n'est pas à moi que tu dois en parler. Parle-en au patron pour recevoir ta récompense. "
 pnj = NodePath("../../..")
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
@@ -274,9 +363,6 @@ text = "Non. Le pigeon n’a rien à voir avec lui. L’Aigle Jaune a choisi ce 
 Ce n’était pas un animal, ni une personne. Juste une image."
 pnj = NodePath("../../../../../..")
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
-
-[node name="Hoarder" parent="." unique_id=1031378864 instance=ExtResource("1_df0jl")]
-transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, 4, 0, -4)
 
 [node name="Pipette la Loupe" parent="." unique_id=529852479 instance=ExtResource("1_fq3ns")]
 transform = Transform3D(-0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, -0.70710677, 22.4, 4, 4.5)
@@ -341,6 +427,41 @@ text = "Tu veux une potion ? Je suis une alchimiste, mais ce n’est pas un jeu.
 pnj = NodePath("..")
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
+[node name="Cliente" parent="." unique_id=1913799793 instance=ExtResource("1_fq3ns")]
+transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, 3.999998, 0, -4.000001)
+script = ExtResource("12_8skfw")
+
+[node name="Dialog" type="Node" parent="Cliente" unique_id=566341026 node_paths=PackedStringArray("pnj")]
+script = ExtResource("3_fq3ns")
+text = "Les routes sont longues. Les auberges, plus longues encore.
+
+Je suis ici pour dépenser mon argent gagné à la mine. Laisse-moi tranquille… la mine étant fermée, je ne vais pas pouvoir en profiter bien longtemps.
+
+Le temps est contre moi. Et toi, tu ferais mieux de t’occuper de tes affaires."
+pnj = NodePath("..")
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Mine Fermée ?" type="Node" parent="Cliente/Dialog" unique_id=661287398]
+script = ExtResource("3_fq3ns")
+text = "Pourquoi la mine est fermée ? Les gisements sont épuisés ?"
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Next" type="Node" parent="Cliente/Dialog/Mine Fermée ?" unique_id=959936653 node_paths=PackedStringArray("pnj")]
+script = ExtResource("3_fq3ns")
+text = "Non, les gisements ne sont pas épuisés. La mine est encore pleine de minerai et de pierres précieuses. Mais elle est infestée de morts-vivants. Trop dangereux. Le patron a entendu parler de ça, il cherche quelqu’un pour nettoyer les galeries. A toi de voir si tu veux tenter ta chance ?
+
+Va lui parler. Moi, ma spécialité, c’est la pioche et lever le coude. "
+pnj = NodePath("../../..")
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Character" parent="Cliente" unique_id=1031378864 instance=ExtResource("1_df0jl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.536743e-07, 0, 2.1457672e-06)
+
+[node name="DrinkTimer" type="Timer" parent="Cliente" unique_id=1765129022]
+wait_time = 10.0
+one_shot = true
+autostart = true
+
 [node name="PanneauDAffichage" parent="." unique_id=1099766786 instance=ExtResource("11_o35sb")]
 transform = Transform3D(1.2, 0, 0, 0, -5.2453668e-08, -1.2, 0, 1.2, -5.2453668e-08, 0.4, 2, -1.6999999)
 script = ExtResource("12_ntc8q")
@@ -360,6 +481,11 @@ Débarrasser les morts-vivants errant près du mausolée, non loin au nord-est d
 Ces créatures sont de plus en plus nombreuses… et certaines s’approchent même de l’auberge. Cela ne peut plus continuer.
 
 Récompense : 10 Pièces d'or"
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Next" type="Node" parent="PanneauDAffichage/Mission 1" unique_id=1451691828]
+script = ExtResource("3_fq3ns")
+text = "J’ai déjà fait cette mission, je devrais peut-être en parler avec le patron."
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
 [node name="nail2" parent="PanneauDAffichage" unique_id=67840259 instance=ExtResource("12_6hlga")]
@@ -1869,8 +1995,15 @@ Une fois dans l’auberge, vous découvrez avec étonnement qu’elle est étran
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
 [connection signal="close" from="Aigle Jaune/Bienvenue/Next/Next/Next/Next/Next" to="Aigle Jaune" method="_on_Bienvenue_close"]
+[connection signal="activate" from="Aigle Jaune/LookingForQuest/Mine Infestée/Next" to="Cliente" method="player_know_about_mine"]
+[connection signal="close" from="Aigle Jaune/LookingForQuest/Mission Accomplie/Next/Next/Next/La potion étrange/Next" to="Aigle Jaune" method="_on_end_mission1_close"]
+[connection signal="close" from="Aigle Jaune/LookingForQuest/Mission Accomplie/Next/Next/Next/Je n\'ai rien trouvé/Next" to="Aigle Jaune" method="_on_end_mission1_close"]
 [connection signal="activate" from="Pipette la Loupe/Bienvenue/Acheter/Next" to="Pipette la Loupe" method="_on_acheter_next_activate"]
 [connection signal="activate" from="Pipette la Loupe/Bienvenue/Acheter/Next/Potion de Soin/Potion de Soin Mineur" to="Pipette la Loupe" method="_on_potion_de_soin_mineur_activate"]
 [connection signal="activate" from="Pipette la Loupe/Bienvenue/Acheter/Next/Potion de Soin/Potion de Soin Moyenne" to="Pipette la Loupe" method="_on_potion_de_soin_moyenne_activate"]
 [connection signal="activate" from="Pipette la Loupe/Bienvenue/Acheter/Next/Potion de Soin/Potion de Soin Majeur" to="Pipette la Loupe" method="_on_potion_de_soin_majeur_activate"]
+[connection signal="close" from="Cliente/Dialog" to="Cliente" method="drink"]
+[connection signal="activate" from="Cliente/Dialog/Mine Fermée ?/Next" to="Cliente" method="player_know_about_mine"]
+[connection signal="close" from="Cliente/Dialog/Mine Fermée ?/Next" to="Cliente" method="drink"]
+[connection signal="timeout" from="Cliente/DrinkTimer" to="Cliente" method="_on_drink_timer_timeout"]
 [connection signal="close" from="PanneauDAffichage/Mission 1" to="PanneauDAffichage" method="_on_mission_1_close"]
