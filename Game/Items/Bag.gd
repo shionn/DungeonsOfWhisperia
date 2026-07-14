@@ -7,12 +7,12 @@ extends Node
 var items : Array[Items.ItemName] = []
 var gold: int = 0:
 	set(value) :
-		_gui.consoleLog("Vous obtenez %d 💰." % [value-gold])
+		if value > gold : _gui.consoleLog("Vous obtenez %d 💰." % [value-gold])
+		elif value < gold : _gui.consoleLog("Vous perdez %d 💰." % [gold-value])
 		gold = value
 		item_change.emit()
 
 signal item_change()
-	
 
 func loot(item : Items.ItemName) -> void : 
 	items.append(item)

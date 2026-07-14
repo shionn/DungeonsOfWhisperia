@@ -9,7 +9,12 @@ func _ready() -> void:
 func interact() -> void:
 	look_at_player()
 	if tags.have(Tags.AUBERGE_PLAYER_RESTORED) :
-		$"LookingForQuest/Mine Infestée".enable = tags.have(Tags.AUBERGE_PLAYER_KNOW_MINE_UNDEAD)
+		$"LookingForQuest/Service de l'auberge".enable = bag.gold >= 5
+
+		$"LookingForQuest/Mine Infestée".enable = tags.have(Tags.AUBERGE_PLAYER_KNOW_MINE_UNDEAD) and not tags.have(Tags.DUNGEON_02_ENABLE)
+		$"LookingForQuest/Mine Infestée/Next/Next".enable = tags.have(Tags.DUNGEON_01_FINISHED)
+
+		$"LookingForQuest/Mission Accomplie".enable = bag.have(Items.ItemName.SkullHead)
 		$"LookingForQuest/Mission Accomplie/Next/Next/Next/La potion étrange".enable = bag.have(Items.ItemName.FioleNecrolisAttivae)
 		gui.openDialog($LookingForQuest)
 	elif _food.visible :
@@ -19,15 +24,18 @@ func interact() -> void:
 
 
 func _on_Bienvenue_close() -> void:
-	gui.openTransition(_on_Bienvenue_close_transition_callback)
-
-func _on_Bienvenue_close_transition_callback() -> void:
-	_food.show()
-	gui.openDialog($Bienvenue/ApportFood)
-
+	gui.openTransition(func(): _food.show(), func(): gui.openDialog($Bienvenue/ApportFood))
 
 func _on_end_mission1_close() -> void:
-	# TODO : retirer le crâne,
-	# ajouter le tag
-	# donner 8 pieces d'or
-	pass # Replace with function body.
+	bag.unloot(Items.ItemName.SkullHead)
+	tags.add(Tags.DUNGEON_01_FINISHED)
+	bag.gold = bag.gold+8
+
+func _on_manger_activate() -> void:
+	var middle = func() : 
+		bag.gold = bag.gold - 5
+		_food.show()
+	gui.openTransition(middle, func() : gui.openDialog($"LookingForQuest/Service de l'auberge/Manger/Next/Next/ApportFood"))
+
+func _on_mine_infestee_next_activate() -> void:
+	tags.add(Tags.DUNGEON_02_ENABLE)

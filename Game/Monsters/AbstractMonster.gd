@@ -73,12 +73,12 @@ func _look_player() -> void :
 	self.rotation.x = 0
 
 func _see_player() -> bool :
-	var start = global_position+Vector3.UP
-	var end = player.global_position+Vector3.UP
+	var start = global_position+Vector3.UP*2
+	var end = player.global_position+Vector3.UP*2
 	var direction = (end-start).normalized()
 	var orientation = self.basis * Vector3.BACK
 	if rad_to_deg(orientation.angle_to(direction)) <= get_fov() :
-		var query = PhysicsRayQueryParameters3D.create(start, end)
+		var query = PhysicsRayQueryParameters3D.create(start, end, 1)
 		var result = get_world_3d().direct_space_state.intersect_ray(query)
 		if (result && result.collider == player):
 			return true

@@ -1,5 +1,5 @@
 class_name DialogGui
-extends GridContainer
+extends GameBaseControl
 
 @onready var _text = $PanelContainer/MarginContainer/VBoxContainer/HBoxContainer2/RichTextLabel as RichTextLabel
 @onready var _pnj_view = $PanelContainer/MarginContainer/VBoxContainer/HBoxContainer2/SubViewportContainer as SubViewportContainer
@@ -18,7 +18,9 @@ func _ready() -> void:
 func open(dialog: Dialog)->void :
 	if dialog.text.is_empty() : 
 		hide()
+		dialog.activate.emit()
 	else : 
+		dialog.activate.emit()
 		_current = dialog
 		_close_button.show()
 		_option_button1.hide()
@@ -37,7 +39,7 @@ func open(dialog: Dialog)->void :
 		else :
 			_pnj_view.hide()
 		
-		if dialog.next :
+		if dialog.next and dialog.next.enable :
 			_close_button.hide()
 			_next_button.show()
 		else :
@@ -60,22 +62,18 @@ func _on_next_button_pressed() -> void:
 	_current.close.emit()
 	var next = _current.next
 	open(next)
-	next.activate.emit()
 
 func _on_option_button_1_pressed() -> void:
 	_current.close.emit()
 	var next = _current.options[0]
 	open(next)
-	next.activate.emit()
 
 func _on_option_button_2_pressed() -> void:
 	_current.close.emit()
 	var next = _current.options[1]
 	open(next)
-	next.activate.emit()
 
 func _on_option_button_3_pressed() -> void:
 	_current.close.emit()
 	var next = _current.options[2]
 	open(next)
-	next.activate.emit()

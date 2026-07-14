@@ -31,3 +31,11 @@ func _give_back_2_pv() -> void:
 func _give_back_1d3_pv() -> void:
 	var pv = Dices.d3()
 	player.pv = min(player.pv+pv, player.get_max_pv())
+
+func _give_back_4_6_pv() -> void:
+	var pv = Dices.d3()+3
+	player.pv = min(player.pv+pv, player.get_max_pv())
+
+func _give_back_7_9_pv() -> void:
+	var pv = Dices.d3()+6
+	player.pv = min(player.pv+pv, player.get_max_pv())

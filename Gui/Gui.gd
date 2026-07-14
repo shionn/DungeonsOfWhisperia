@@ -77,8 +77,8 @@ func openDungeonExit() -> void:
 	$ExitDungeon.show()
 	_show_mouse()
 
-func openTransition(onMiddle : Callable) -> void:
-	$Transition.doIt(onMiddle)
+func openTransition(onMiddle : Callable, onEnd : Callable = func():pass) -> void:
+	$Transition.doIt(onMiddle, onEnd)
 
 func consoleLog(text: String) -> void:
 	$ConsoleLog.log(text)

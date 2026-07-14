@@ -176,6 +176,37 @@ Si vous cherchez un travail, jetez un œil au panneau d’affichage près de l�
 pnj = NodePath("..")
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
+[node name="Service de l\'auberge" type="Node" parent="Aigle Jaune/LookingForQuest" unique_id=655522223 node_paths=PackedStringArray("pnj")]
+script = ExtResource("3_fq3ns")
+text = "Que souhaites tu ? 
+[ul]
+Manger pour 5 PO ? [i]Cela restaure les points de vie[/i]
+Dormir pour 5 PO ? [i]Cela reposera ton corp et d'accordera un bonus temporaire de défence[/i] (non disponible pour l'instant)
+[/ul]"
+pnj = NodePath("../..")
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Manger" type="Node" parent="Aigle Jaune/LookingForQuest/Service de l\'auberge" unique_id=1322950200]
+script = ExtResource("3_fq3ns")
+text = "Je voudrais manger quelque chose."
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Next" type="Node" parent="Aigle Jaune/LookingForQuest/Service de l\'auberge/Manger" unique_id=1824915166]
+script = ExtResource("3_fq3ns")
+text = "Je t'apporte quelque chose tous de suite. "
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Next" type="Node" parent="Aigle Jaune/LookingForQuest/Service de l\'auberge/Manger/Next" unique_id=557037624 node_paths=PackedStringArray("pnj")]
+script = ExtResource("3_fq3ns")
+pnj = NodePath("../../../../..")
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="ApportFood" type="Node" parent="Aigle Jaune/LookingForQuest/Service de l\'auberge/Manger/Next/Next" unique_id=182969767]
+script = ExtResource("3_fq3ns")
+text = "Votre repas est prêt. Il est sur le bar à gauche. J’ai préparé un ragoût de viande et de légumes, cuisiné avec des ingrédients locaux, accompagné d’un pain de campagne. Cela devrait vous redonner un peu d’énergie."
+enable = false
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
 [node name="Mine Infestée" type="Node" parent="Aigle Jaune/LookingForQuest" unique_id=1410289639]
 script = ExtResource("3_fq3ns")
 text = "J’ai entendu dire que vous cherchez quelqu’un pour débarrasser la mine des morts-vivants ?"
@@ -190,6 +221,20 @@ Si tu veux tenter ta chance, il faut me prouver ta valeur. Une autre mission plu
 pnj = NodePath("../../..")
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
+[node name="Next" type="Node" parent="Aigle Jaune/LookingForQuest/Mine Infestée/Next" unique_id=1540134795]
+script = ExtResource("3_fq3ns")
+text = "Je viens de prouver ma valeur dans le mausoléum. Les morts-vivants ne font pas peur. Et puis ça me donnera peut-être un autre indice sur le nécromancien derrière tout ça."
+enable = false
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Next" type="Node" parent="Aigle Jaune/LookingForQuest/Mine Infestée/Next/Next" unique_id=2013660652 node_paths=PackedStringArray("pnj")]
+script = ExtResource("3_fq3ns")
+text = "Tu sais être convaincant. Très bien… la mine se trouve au sud.
+
+Tu dois t’en débarrasser de tous les morts-vivants, et essayer de trouver un indice sur celui qui est derriere tous ca. Si tu y arrive je te donnerai une petite récompense."
+pnj = NodePath("../../../../..")
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
 [node name="Mission Accomplie" type="Node" parent="Aigle Jaune/LookingForQuest" unique_id=48408100]
 script = ExtResource("3_fq3ns")
 text = "J'ai terrassé tous les mort-vivants de ce mausolée !"
@@ -198,7 +243,7 @@ metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
 [node name="Next" type="Node" parent="Aigle Jaune/LookingForQuest/Mission Accomplie" unique_id=2000115723 node_paths=PackedStringArray("pnj")]
 script = ExtResource("3_fq3ns")
-text = "Tu semblais avoir bavé dans les profondeurs. 
+text = "Tu semble en avoir bavé dans les profondeurs. 
 
 Tu as accompli la mission ? Montre-moi une preuve."
 pnj = NodePath("../../..")
@@ -208,10 +253,9 @@ metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 script = ExtResource("3_fq3ns")
 text = "Voilà : le crâne du golem squelette qui gardait l’étude. 
 
-Mais… il n’y avait que des squelettes. Aucun nécromancien, aucun signe de magie.
-
 [i]Vous posez le crâne sur la table.[/i]
-"
+
+Mais… il n’y avait que des squelettes. Aucun nécromancien, aucun signe de magie."
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
 [node name="Next" type="Node" parent="Aigle Jaune/LookingForQuest/Mission Accomplie/Next/Next" unique_id=1188886598 node_paths=PackedStringArray("pnj")]
@@ -220,7 +264,7 @@ text = "Des squelettes ? Seuls ? C’est étrange.
 
 Les squelettes ne bougent pas sans un nécromancien. Normalement, ils ne peuvent rester animés que si le nécromancien est toujours dans les parages. 
 
-Leur esprit est vide… à moins qu’un sort ne les ait animés. Tu es certain d’avoir fouillé le mausoléum ?"
+Leur esprit est vide… à moins que quelque chose d'inconnu ne les ait animés. Tu es certain d’avoir bien fouillé le mausoléum ?"
 pnj = NodePath("../../../../..")
 close_enable = false
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
@@ -236,7 +280,7 @@ metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 script = ExtResource("3_fq3ns")
 text = "Neropolis Atire ? Je ne connais pas ce nom… C’est Pipette, l’alchimiste, qui doit savoir. Elle a des livres anciens. Tu devrais lui montrer cette potion.
 
-Prends ceci. 10 pièces d’or. Moins les 2 pour ton repas."
+Quoiqu'il en soit, il semble que tu ai accompli ta mission. Prends ceci. 10 pièces d’or. Moins les 2 pour ton repas."
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
 [node name="Je n\'ai rien trouvé" type="Node" parent="Aigle Jaune/LookingForQuest/Mission Accomplie/Next/Next/Next" unique_id=1829865040]
@@ -248,7 +292,7 @@ metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 script = ExtResource("3_fq3ns")
 text = "Si tu n’as rien trouvé… alors peut-être que la vérité est ailleurs. Parle à Alaric, l’historien. Il connaît l’histoire de cette région. 
 
-Même sans indice, tu as risqué ta vie. Prends cela. 10 pièces d’or… moins les 2 pour ton repas."
+Même sans indice, tu as risqué ta vie et accompli ta mission. Prends cela. 10 pièces d’or… moins les 2 pour ton repas."
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
 [node name="Luna Honey" parent="." unique_id=957068427 instance=ExtResource("1_fq3ns")]
@@ -310,7 +354,7 @@ metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
 [node name="Next" type="Node" parent="Luna Honey/Bievenue_Restored/Mission Accomplie" unique_id=2119219576 node_paths=PackedStringArray("pnj")]
 script = ExtResource("3_fq3ns")
-text = "Tu semblais avoir bavé dans les profondeurs, mais ce n'est pas à moi que tu dois en parler. Parle-en au patron pour recevoir ta récompense. "
+text = "Tu semble en avoir bavé dans les profondeurs, mais ce n'est pas à moi que tu dois en parler. Parles-en au patron pour recevoir ta récompense. "
 pnj = NodePath("../../..")
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
@@ -421,9 +465,15 @@ metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
 [node name="ManquePo" type="Node" parent="Pipette la Loupe" unique_id=1270482438 node_paths=PackedStringArray("pnj")]
 script = ExtResource("3_fq3ns")
-text = "Tu veux une potion ? Je suis une alchimiste, mais ce n’est pas un jeu. Les ingrédients sont rares, le processus long. Chaque goutte d’or que tu donnes est un sacrifice. Sans pièces, pas de potion.
+text = "Tu veux une potion ? Je suis une alchimiste, mais ce n’est pas un jeu. Les ingrédients sont rares, le processus long. Chaque goutte d’or que tu donnes est un sacrifice. Sans pièces, pas de potion."
+pnj = NodePath("..")
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
-[i]Shionn n'as pas encore fait l'achat[/i]"
+[node name="Achat validé" type="Node" parent="Pipette la Loupe" unique_id=469405189 node_paths=PackedStringArray("pnj")]
+script = ExtResource("3_fq3ns")
+text = "C'est un plaisir de faire affaire avec vous.
+
+Cependant je décline toute responsabilité en cas d’effet secondaire… comme… euh… une croissance soudaine de vos cheveux, ou… ou une déshydratation."
 pnj = NodePath("..")
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
@@ -472,6 +522,11 @@ script = ExtResource("3_fq3ns")
 text = "Ca ressemble à un panneau d’affichage pour des petites annonces de travail. Les primes semblent assez basse. 
 
 Mais je suis bien trop épuissé pour repartir à l’aventure pour l’instant."
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Rien" type="Node" parent="PanneauDAffichage" unique_id=308382634]
+script = ExtResource("3_fq3ns")
+text = "Il n'y a rien pour l'instant."
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
 [node name="Mission 1" type="Node" parent="PanneauDAffichage" unique_id=673003918]
@@ -1995,7 +2050,8 @@ Une fois dans l’auberge, vous découvrez avec étonnement qu’elle est étran
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
 [connection signal="close" from="Aigle Jaune/Bienvenue/Next/Next/Next/Next/Next" to="Aigle Jaune" method="_on_Bienvenue_close"]
-[connection signal="activate" from="Aigle Jaune/LookingForQuest/Mine Infestée/Next" to="Cliente" method="player_know_about_mine"]
+[connection signal="activate" from="Aigle Jaune/LookingForQuest/Service de l\'auberge/Manger/Next/Next" to="Aigle Jaune" method="_on_manger_activate"]
+[connection signal="activate" from="Aigle Jaune/LookingForQuest/Mine Infestée/Next/Next/Next" to="Aigle Jaune" method="_on_mine_infestee_next_activate"]
 [connection signal="close" from="Aigle Jaune/LookingForQuest/Mission Accomplie/Next/Next/Next/La potion étrange/Next" to="Aigle Jaune" method="_on_end_mission1_close"]
 [connection signal="close" from="Aigle Jaune/LookingForQuest/Mission Accomplie/Next/Next/Next/Je n\'ai rien trouvé/Next" to="Aigle Jaune" method="_on_end_mission1_close"]
 [connection signal="activate" from="Pipette la Loupe/Bienvenue/Acheter/Next" to="Pipette la Loupe" method="_on_acheter_next_activate"]

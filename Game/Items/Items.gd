@@ -3,12 +3,14 @@ extends Node
 
 enum ItemName {
 	None,
-	Potion,
+	PotionVieMineur,
 	ClefBouclierEpee,
 	BoissonRaffinee,
 	ClefCoffre,
 	SkullHead,
-	FioleNecrolisAttivae
+	FioleNecrolisAttivae,
+	PotionVieMoyenne,
+	PotionVieMajeur,
 }
 
 func from(item_name : ItemName) -> Item :

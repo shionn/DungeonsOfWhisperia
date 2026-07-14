@@ -9,6 +9,7 @@ func _ready() -> void:
 	super._ready()
 	
 func interact() -> void:
+	look_at_player()
 	gui.openDialog($Dialog)
 
 func drink() -> void:
