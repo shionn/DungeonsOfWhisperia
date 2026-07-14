@@ -408,6 +408,36 @@ Ce n’était pas un animal, ni une personne. Juste une image."
 pnj = NodePath("../../../../../..")
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
+[node name="Valthorion ?" type="Node" parent="Alaric Duclair/Présentation/Next" unique_id=178631761]
+script = ExtResource("3_fq3ns")
+text = "As tu entendu parler de Valthorion ?"
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Next" type="Node" parent="Alaric Duclair/Présentation/Next/Valthorion ?" unique_id=369303115 node_paths=PackedStringArray("pnj")]
+script = ExtResource("3_fq3ns")
+text = "Ah… Valthorion. 
+
+Un nom qui résonne comme un funeste écho dans les annales de cette terre. Écoute, voyageur, et laisse tes oreilles absorber les vérités que le temps a préservées."
+pnj = NodePath("../../../..")
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Next" type="Node" parent="Alaric Duclair/Présentation/Next/Valthorion ?/Next" unique_id=530284525 node_paths=PackedStringArray("pnj")]
+script = ExtResource("3_fq3ns")
+text = "Valthorion… était un necromancien de talents, mais aussi un alchimiste dont les connaissances atteignaient les étoiles. Il croyait, avec une ferveur dévorante, qu’il pouvait briser la chaîne de la mort elle-même. Pourtant, ses expériences… ses créations… ont fini par le dévorer. On dit qu’il repose maintenant sous la montagne au sud, entouré des reliques de ses échecs… et des âmes qu’il n’a pas su dominer."
+pnj = NodePath("../../../../..")
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Next" type="Node" parent="Alaric Duclair/Présentation/Next/Valthorion ?/Next/Next" unique_id=1552664280]
+script = ExtResource("3_fq3ns")
+text = "La montagne au sud… vous croyez qu’il repose vraiment là-bas ?"
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Next" type="Node" parent="Alaric Duclair/Présentation/Next/Valthorion ?/Next/Next/Next" unique_id=1965494203 node_paths=PackedStringArray("pnj")]
+script = ExtResource("3_fq3ns")
+text = "C'est ce qu'on dit. Toutefois, on n'a jamais trouvé de souterrain y menant. La montagne semble le protéger. Qui sait peut-être que les mineurs ont fini par tomber sur sa dernière demeure."
+pnj = NodePath("../../../../../../..")
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
 [node name="Pipette la Loupe" parent="." unique_id=529852479 instance=ExtResource("1_fq3ns")]
 transform = Transform3D(-0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, -0.70710677, 22.4, 4, 4.5)
 script = ExtResource("11_oipk7")
