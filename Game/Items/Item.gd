@@ -25,6 +25,9 @@ func open_description() -> void:
 		add_child(desc)
 		gui.openDialog(desc)
 
+func lootable() -> bool :
+	return not unique or not bag.have(item_name)
+
 func _give_back_2_pv() -> void:
 	player.pv = min(player.pv+2, player.get_max_pv())
 	

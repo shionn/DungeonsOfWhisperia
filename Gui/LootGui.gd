@@ -20,13 +20,12 @@ func loot(container:Object) -> void:
 		_container.add_child(button)
 
 	var item : Item  = _items.from(container.loot_obj)
-	if item :
-		if not item.unique or not _bag.have(item.item_name) :
-			var button = TextureButton.new();
-			button.texture_normal =  item.icon
-			button.tooltip_text = item.tooltip
-			button.pressed.connect(func(): self._loot_item(item, button, container))
-			_container.add_child(button)
+	if item and item.lootable() :
+		var button = TextureButton.new();
+		button.texture_normal =  item.icon
+		button.tooltip_text = item.tooltip
+		button.pressed.connect(func(): self._loot_item(item, button, container))
+		_container.add_child(button)
 	self.visible = true
 	if _container.get_child_count() > 0:
 		$AudioOpen.play()
