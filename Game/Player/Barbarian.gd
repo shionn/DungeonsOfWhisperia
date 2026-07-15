@@ -10,7 +10,7 @@ func _ready() -> void:
 
 func get_def() -> int: 		return 2
 func get_max_pv() -> int:	return 9
-func get_atk_range()-> int:						return 2
+func get_atk_range()-> int:	return 2.5
 func get_atk_animation() -> String: 
 	_atk = Dices._random.randi_range(0, 1) as AttackMode
 	match _atk :

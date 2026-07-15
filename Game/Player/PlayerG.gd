@@ -18,7 +18,13 @@ var _current_spell : Spell
 
 var lvl = 1
 var pv = 1
-var xp = 0
+var xp = 0 :
+	set(value) :
+		xp = value
+		# 500/1500/3000/5000/7500
+		if xp > lvl * (lvl+1) * 250 :
+			lvl = lvl + 1
+			gui.consoleLog("Vous passer lvl %d"%lvl)
 
 func _ready() -> void:
 	_animation.animation_finished.connect(_on_animation_finished)
