@@ -10,10 +10,8 @@ const _ROTATE_SPEED = .5
 const _ATK_COLD_DOWN_TIME = 2
 
 var _on_atk_cold_down = false
+var lvl = 1
 
-func _ready() -> void:
-	pass
-	
 func _physics_process(delta: float) -> void:
 	var monster = _find_monster_to_atk()
 	if monster : 

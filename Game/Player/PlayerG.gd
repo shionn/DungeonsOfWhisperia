@@ -181,7 +181,7 @@ func isDead() -> bool: return _state == State.DEATH or pv <= 0
 
 @abstract func get_def() -> int
 @abstract func get_max_pv() -> int
-@abstract func get_atk_range() -> int
+@abstract func get_atk_range() -> float
 @abstract func get_atk_animation() -> String
 @abstract func is_atk_dual_Hand() -> bool
 @abstract func get_atk_main_hand() -> int

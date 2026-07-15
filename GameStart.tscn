@@ -56,9 +56,9 @@ _anim = "Melee_2H_Attack_Slice"
 _description = "Le Barbare
 Equipé d'une Hache à 2 mains il possede une forte vitalitée. Il a une attaque solide, ces critiques sont dévastateur et une defense moyenne.
 [ul]
-Attaque : 3 (+1 sur critique) [color=red]Non terminé[/color]
-Défense : 2
-PV : 9
+Attaque : 2+lvl (+1 sur critique) [color=red]Non terminé[/color]
+Défense : 1+lvl
+PV : 8+lvl*1.5
 Difficulté : Moyenne
 [/ul]"
 
@@ -93,9 +93,9 @@ script = ExtResource("3_khsc5")
 _description = "L'Ingénieur
 Armé de sa clef, il est capable de créer une tourelle automatique tirant sur tous ce qui est hostile qui rentre dans sa ligne de vue.
 [ul]
-Attaque : 1 (2 pour la Tourelle)
-Défense : 2
-PV : 6
+Attaque : 1 + lvl/2 (1+lvl pour la Tourelle)
+Défense : 1 + lvl
+PV : 5 + lvl
 Difficulté : Difficile
 [/ul]"
 
