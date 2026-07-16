@@ -1066,6 +1066,12 @@ layout_mode = 2
 text = "Mausolet"
 icon = ExtResource("34_w65rx")
 
+[node name="Dungeon02" type="Button" parent="ExitAuberge/PanelContainer/MarginContainer/VBoxContainer" unique_id=1618128841]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+text = "Gouffre des Ombres"
+icon = ExtResource("34_w65rx")
+
 [node name="CloseButton" type="Button" parent="ExitAuberge/PanelContainer/MarginContainer/VBoxContainer" unique_id=1231563995]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -1275,6 +1281,7 @@ spell_id = 3
 [connection signal="visibility_changed" from="ExitAuberge" to="." method="update_mouse_mode"]
 [connection signal="visibility_changed" from="ExitAuberge" to="ExitAuberge" method="_on_visibility_changed"]
 [connection signal="pressed" from="ExitAuberge/PanelContainer/MarginContainer/VBoxContainer/Dungeon01" to="ExitAuberge" method="_on_dungeon_01_pressed"]
+[connection signal="pressed" from="ExitAuberge/PanelContainer/MarginContainer/VBoxContainer/Dungeon02" to="ExitAuberge" method="_on_dungeon_02_pressed"]
 [connection signal="pressed" from="ExitAuberge/PanelContainer/MarginContainer/VBoxContainer/CloseButton" to="ExitAuberge" method="hide"]
 [connection signal="visibility_changed" from="ExitDungeon" to="." method="update_mouse_mode"]
 [connection signal="pressed" from="ExitDungeon/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/Auberge" to="ExitDungeon" method="_on_auberge_pressed"]

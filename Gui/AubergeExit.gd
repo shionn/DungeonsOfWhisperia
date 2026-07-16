@@ -7,6 +7,9 @@ func _on_dungeon_01_pressed() -> void:
 	gui._close()
 	gui.openTransition(func():_goTo("res://Dungeons/01/Dungeon01.tscn"))
 
+func _on_dungeon_02_pressed() -> void:
+	gui._close()
+	gui.openTransition(func():_goTo("res://Dungeons/02/Dungeon02.tscn"))
 
 func _goTo(path : String) -> void : 
 	var dungeon = $/root/World/Dungeon as Node3D
@@ -19,4 +22,5 @@ func _goTo(path : String) -> void :
 
 func _on_visibility_changed() -> void:
 	$PanelContainer/MarginContainer/VBoxContainer/Dungeon01.visible = tags.have(Tags.DUNGEON_01_ENABLE)
+	$PanelContainer/MarginContainer/VBoxContainer/Dungeon02.visible = tags.have(Tags.DUNGEON_02_ENABLE)
 	
