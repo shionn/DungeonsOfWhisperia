@@ -22,9 +22,9 @@ func _on_animation_finished(_anim_name : String) -> void:
 		_arrow.hide()
 	super._on_animation_finished(_anim_name)
 
-func get_def() -> int: 		return 2
-func get_max_pv() -> int:	return 6
-func get_atk_range()-> int: return 20
+func get_def() -> int: 		return 2+floori(lvl/2)
+func get_max_pv() -> int:	return 5+lvl
+func get_atk_range()-> float: return 20
 func get_atk_animation() -> String: 
 	_atk = Dices._random.randi_range(0,2) as AttackMode if _attacked_monster.global_position.distance_to(global_position) <=2 else AttackMode.BOW
 	match _atk :
@@ -48,9 +48,9 @@ func get_atk_animation() -> String:
 		
 func is_atk_dual_Hand() -> bool: return false
 func get_atk_main_hand() -> int:
-	var deg = Dices.d6(2, 4) 
-	if _atk == AttackMode.BOW : deg = deg + 1
-	return deg
+	if _atk == AttackMode.BOW : 
+		return Dices.d6(lvl+1, 4) + 1
+	return Dices.d6(1 + floori(lvl/2), 4) + 1
 func get_atk_main_hand_timer_factor() -> float: 
 	match _atk :
 		AttackMode.CHOP : return .55

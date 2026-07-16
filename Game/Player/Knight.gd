@@ -9,9 +9,9 @@ func _ready() -> void:
 	$Character/Rig_Medium/Skeleton3D/Knight_HelmetVisor.hide()
 	super._ready()
 
-func get_def() -> int: 		return 3
-func get_max_pv() -> int:	return 7
-func get_atk_range()-> int:						return 2
+func get_def() -> int: 		return 2+lvl
+func get_max_pv() -> int:	return 6+lvl
+func get_atk_range()-> float:						return 2
 func get_atk_animation() -> String: 
 	_atk = Dices._random.randi_range(0, 2) as AttackMode
 	match _atk :
@@ -20,7 +20,7 @@ func get_atk_animation() -> String:
 		AttackMode.DIAGONAL : return "Melee_1H_Attack_Slice_Diagonal"
 		_ : return "Melee_1H_Attack_Chop"
 func is_atk_dual_Hand() -> bool:				return false
-func get_atk_main_hand() -> int:				return Dices.d6(3, 4)
+func get_atk_main_hand() -> int:				return Dices.d6(2+lvl, 4)
 func get_atk_main_hand_timer_factor() -> float: 
 	match _atk :
 		AttackMode.CHOP : return .55

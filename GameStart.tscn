@@ -113,9 +113,9 @@ script = ExtResource("3_khsc5")
 _description = "Le Chevalier
 Equipée d'une épée et d'une solide Armure, il as une attaque solide et une defence solide. Mais il ne possede aucune capacité spéciale.   
 [ul]
-Attaque : 3
-Défense : 3
-PV : 7
+Attaque : 2+lvl
+Défense : 2+lvl
+PV : 6+lvl
 Difficulté : Facile
 [/ul]"
 
@@ -151,9 +151,9 @@ _anim = "Ranged_Bow_Draw"
 _description = "Le Ranger
 Equipée d'une dague et d'un arc, il est capable d'attaqué à distance et au corp à corp. Son arc est redoutable mais il est trés fragile au corp à corp.  
 [ul]
-Attaque : Arc 3, Dague 2
-Défense : 2
-PV : 6
+Attaque : Arc 2+lvl (dont une automatique), Dague 1+lvl/2
+Défense : 2+lvl/2
+PV : 5+lvl
 Difficulté : Moyenne
 [/ul]"
 
@@ -173,9 +173,9 @@ _anim = "Melee_Dualwield_Attack_Chop"
 _description = "La Voleuse
 Equipée d'une dague dans chaque main, elle inflige deux attaque à chaque frappe. De plus si elle est hors de vision de son adversaire elle inflige des dégats supplémentaires. 
 [ul]
-Attaque : 2+2 (3+2 dans le dos)
-Défense : 2
-PV : 6
+Attaque : droite 1+lvl (+1 dans le dos), gauche : 2
+Défense : 2+lvl/2
+PV : 5+lvl
 Difficulté : Moyenne
 [/ul]"
 
