@@ -430,7 +430,7 @@ metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
 [node name="Next" type="Node" parent="Alaric Duclair/Présentation/Next/Valthorion ?/Next/Next/Next" unique_id=1965494203 node_paths=PackedStringArray("pnj")]
 script = ExtResource("3_fq3ns")
-text = "C'est ce qu'on dit. Toutefois, on n'a jamais trouvé de souterrain y menant. La montagne semble le protéger. Qui sait peut-être que les mineurs ont fini par tomber sur sa dernière demeure."
+text = "C'est ce qu'on dit. Toutefois, on n'a jamais trouvé de souterrain y menant. La montagne semble le protéger."
 pnj = NodePath("../../../../../../..")
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
