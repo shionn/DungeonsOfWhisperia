@@ -56,7 +56,7 @@ _anim = "Melee_2H_Attack_Slice"
 _description = "Le Barbare
 Equipé d'une Hache à 2 mains il possede une forte vitalitée. Il a une attaque solide, ces critiques sont dévastateur et une defense moyenne.
 [ul]
-Attaque : 2+lvl (+1 sur critique) [color=red]Non terminé[/color]
+Hache à deux main : 2+lvl (+1 sur critique) [color=red]Non terminé[/color]
 Défense : 1+lvl
 PV : 8+lvl*1.5
 Difficulté : Moyenne
@@ -93,7 +93,7 @@ script = ExtResource("3_khsc5")
 _description = "L'Ingénieur
 Armé de sa clef, il est capable de créer une tourelle automatique tirant sur tous ce qui est hostile qui rentre dans sa ligne de vue.
 [ul]
-Attaque : 1 + lvl/2 (1+lvl pour la Tourelle)
+Clef à Molette : 1 + lvl/2, Tourelle : 1+lvl
 Défense : 1 + lvl
 PV : 5 + lvl
 Difficulté : Difficile
@@ -111,9 +111,9 @@ shape = SubResource("CylinderShape3D_b02ke")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
 script = ExtResource("3_khsc5")
 _description = "Le Chevalier
-Equipée d'une épée et d'une solide Armure, il as une attaque solide et une defence solide. Mais il ne possede aucune capacité spéciale.   
+Equipée d'une épée et d'une solide Armure, il as une attaque solide et une défense solide. Mais il ne possede aucune capacité spéciale.   
 [ul]
-Attaque : 2+lvl
+Epée : 2+lvl
 Défense : 2+lvl
 PV : 6+lvl
 Difficulté : Facile
@@ -151,7 +151,7 @@ _anim = "Ranged_Bow_Draw"
 _description = "Le Ranger
 Equipée d'une dague et d'un arc, il est capable d'attaqué à distance et au corp à corp. Son arc est redoutable mais il est trés fragile au corp à corp.  
 [ul]
-Attaque : Arc 2+lvl (dont une automatique), Dague 1+lvl/2
+Arc : 2+lvl (dont une automatique), Dague 1+lvl/2
 Défense : 2+lvl/2
 PV : 5+lvl
 Difficulté : Moyenne
@@ -173,7 +173,7 @@ _anim = "Melee_Dualwield_Attack_Chop"
 _description = "La Voleuse
 Equipée d'une dague dans chaque main, elle inflige deux attaque à chaque frappe. De plus si elle est hors de vision de son adversaire elle inflige des dégats supplémentaires. 
 [ul]
-Attaque : droite 1+lvl (+1 dans le dos), gauche : 2
+Main droite : droite 1+lvl (+1 automatique dans le dos), main gauche : 2
 Défense : 2+lvl/2
 PV : 5+lvl
 Difficulté : Moyenne

@@ -17,7 +17,7 @@ func drink() -> void:
 	_animation.queue("RigMedium/Idle_A")
 
 func player_know_about_mine() -> void:
-	tags.add(Tags.AUBERGE_PLAYER_KNOW_MINE_UNDEAD)
+	tags.add(Tags.AUBERGE_PLAYER_KNOW_SHADOW_CHASM)
 
 
 func _on_drink_timer_timeout() -> void:
