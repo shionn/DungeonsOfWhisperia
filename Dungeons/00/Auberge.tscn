@@ -207,31 +207,27 @@ text = "Votre repas est prêt. Il est sur le bar à gauche. J’ai préparé un 
 enable = false
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
-[node name="Mine Infestée" type="Node" parent="Aigle Jaune/LookingForQuest" unique_id=1410289639]
+[node name="Le Gouffre des Ombres" type="Node" parent="Aigle Jaune/LookingForQuest" unique_id=1410289639]
 script = ExtResource("3_fq3ns")
-text = "J’ai entendu dire que vous cherchez quelqu’un pour débarrasser la mine des morts-vivants ?"
+text = "J’ai entendu dire que vous cherchez quelqu’un pour débarrasser [i]Le Gouffre des Ombres[/i] des morts-vivants ?"
 enable = false
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
-[node name="Next" type="Node" parent="Aigle Jaune/LookingForQuest/Mine Infestée" unique_id=1190841167 node_paths=PackedStringArray("pnj")]
+[node name="Next" type="Node" parent="Aigle Jaune/LookingForQuest/Le Gouffre des Ombres" unique_id=1190841167 node_paths=PackedStringArray("pnj")]
 script = ExtResource("3_fq3ns")
-text = "Tu as des oreilles, hein ? Oui, on cherche quelqu’un. Mais pas n’importe qui. Tu crois que combattre des morts-vivants, c’est comme déterrer un lapin ? 
-Deux aventuriers ont déjà essayé il y a trois jours. Ils ne sont toujours pas revenus. Probablement qu'ils ont rejoint les rangs des morts-vivants. 
-Si tu veux tenter ta chance, il faut me prouver ta valeur. Une autre mission plus simple t’attend sur le panneau d’affichage à l’entrée."
+text = "Tu as des oreilles, hein ? Oui, on cherche quelqu’un. Mais pas n’importe qui. Tu crois que combattre des morts-vivants, c’est comme déterrer un lapin ? Deux aventuriers ont déjà essayé il y a trois jours. Ils ne sont toujours pas revenus. Probablement qu'ils ont rejoint les rangs des morts-vivants. Si tu veux tenter ta chance, il faut me prouver ta valeur. Une autre mission plus simple t’attend sur le panneau d’affichage à l’entrée."
 pnj = NodePath("../../..")
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
-[node name="Next" type="Node" parent="Aigle Jaune/LookingForQuest/Mine Infestée/Next" unique_id=1540134795]
+[node name="Next" type="Node" parent="Aigle Jaune/LookingForQuest/Le Gouffre des Ombres/Next" unique_id=1540134795]
 script = ExtResource("3_fq3ns")
-text = "Je viens de prouver ma valeur dans le mausoléum. Les morts-vivants ne font pas peur. Et puis ça me donnera peut-être un autre indice sur le nécromancien derrière tout ça."
+text = "Je viens de prouver ma valeur dans le mausolé. Les morts-vivants ne font pas peur. Et puis, peut être que cela à un lien avec les morts-vivants qui sont apapru il y a peu de temps au mausolé."
 enable = false
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
-[node name="Next" type="Node" parent="Aigle Jaune/LookingForQuest/Mine Infestée/Next/Next" unique_id=2013660652 node_paths=PackedStringArray("pnj")]
+[node name="Next" type="Node" parent="Aigle Jaune/LookingForQuest/Le Gouffre des Ombres/Next/Next" unique_id=2013660652 node_paths=PackedStringArray("pnj")]
 script = ExtResource("3_fq3ns")
-text = "Tu sais être convaincant. Très bien… la mine se trouve au sud.
-
-Tu dois t’en débarrasser de tous les morts-vivants, et essayer de trouver un indice sur celui qui est derriere tous ca. Si tu y arrive je te donnerai une petite récompense."
+text = "Tu sais être convaincant. Très bien… le donjon se trouve au sud. Pour le rejoindre, prends la direction du sud. Tu tomberas sur un petit lac. L’entrée se trouve sur la rive est du lac. Tu dois te débarrasser de tous les morts-vivants, et essayer de trouver un indice sur celui qui est derrière tout ça. Si tu y arrives, je te donnerai une petite récompense."
 pnj = NodePath("../../../../..")
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
@@ -2119,7 +2115,7 @@ metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
 [connection signal="close" from="Aigle Jaune/Bienvenue/Next/Next/Next/Next/Next" to="Aigle Jaune" method="_on_Bienvenue_close"]
 [connection signal="activate" from="Aigle Jaune/LookingForQuest/Service de l\'auberge/Manger/Next/Next" to="Aigle Jaune" method="_on_manger_activate"]
-[connection signal="activate" from="Aigle Jaune/LookingForQuest/Mine Infestée/Next/Next/Next" to="Aigle Jaune" method="_on_mine_infestee_next_activate"]
+[connection signal="activate" from="Aigle Jaune/LookingForQuest/Le Gouffre des Ombres/Next/Next/Next" to="Aigle Jaune" method="_on_mine_infestee_next_activate"]
 [connection signal="close" from="Aigle Jaune/LookingForQuest/Mission Accomplie/Next/Next/Next/La potion étrange/Next" to="Aigle Jaune" method="_on_end_mission1_close"]
 [connection signal="close" from="Aigle Jaune/LookingForQuest/Mission Accomplie/Next/Next/Next/Je n\'ai rien trouvé/Next" to="Aigle Jaune" method="_on_end_mission1_close"]
 [connection signal="activate" from="Pipette la Loupe/Bienvenue/Acheter/Next" to="Pipette la Loupe" method="_on_acheter_next_activate"]

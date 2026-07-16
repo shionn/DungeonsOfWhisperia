@@ -11,8 +11,8 @@ func interact() -> void:
 	if tags.have(Tags.AUBERGE_PLAYER_RESTORED) :
 		$"LookingForQuest/Service de l'auberge".enable = bag.gold >= 5
 
-		$"LookingForQuest/Mine Infestée".enable = tags.have(Tags.AUBERGE_PLAYER_KNOW_MINE_UNDEAD) and not tags.have(Tags.DUNGEON_02_ENABLE)
-		$"LookingForQuest/Mine Infestée/Next/Next".enable = tags.have(Tags.DUNGEON_01_FINISHED)
+		$"LookingForQuest/Le Gouffre des Ombres".enable = tags.have(Tags.AUBERGE_PLAYER_KNOW_SHADOW_CHASM) and not tags.have(Tags.DUNGEON_02_ENABLE)
+		$"LookingForQuest/Le Gouffre des Ombres/Next/Next".enable = tags.have(Tags.DUNGEON_01_FINISHED)
 
 		$"LookingForQuest/Mission Accomplie".enable = bag.have(Items.ItemName.SkullHead)
 		$"LookingForQuest/Mission Accomplie/Next/Next/Next/La potion étrange".enable = bag.have(Items.ItemName.FioleNecrolisAttivae)
