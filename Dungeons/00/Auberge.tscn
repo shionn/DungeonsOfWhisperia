@@ -553,24 +553,22 @@ script = ExtResource("12_8skfw")
 
 [node name="Dialog" type="Node" parent="Cliente" unique_id=566341026 node_paths=PackedStringArray("pnj")]
 script = ExtResource("3_fq3ns")
-text = "Les routes sont longues. Les auberges, plus longues encore.
-
-Je suis ici pour dépenser mon argent gagné à la mine. Laisse-moi tranquille… la mine étant fermée, je ne vais pas pouvoir en profiter bien longtemps.
-
-Le temps est contre moi. Et toi, tu ferais mieux de t’occuper de tes affaires."
+text = "Les routes sont longues. L’aventure, plus longue encore. Mais pour moi, l’aventure s’achève.
+Mon compagnon et moi, nous explorions un donjon dans les montagnes au sud. Je crois que les habitants de la région l’appellent [i]« Le Gouffre des Ombres »[/i]. Nous avons découvert un passage secret caché dans une alcôve. En l’explorant, nous sommes tombés sur des morts-vivants, sortis de nulle part. Il a tenté de me protéger. Il est… parti. Ces dernières paroles m’ont ordonné de fuir. Je suis partie en pleurant.
+Mais j’aimerais récupérer son alliance. Un souvenir. Elle est restée là-bas, dans le donjon."
 pnj = NodePath("..")
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
 [node name="Mine Fermée ?" type="Node" parent="Cliente/Dialog" unique_id=661287398]
 script = ExtResource("3_fq3ns")
-text = "Pourquoi la mine est fermée ? Les gisements sont épuisés ?"
+text = "Pourquoi les morts-vivants sont-ils si nombreux dans le donjon ?  "
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
 [node name="Next" type="Node" parent="Cliente/Dialog/Mine Fermée ?" unique_id=959936653 node_paths=PackedStringArray("pnj")]
 script = ExtResource("3_fq3ns")
-text = "Non, les gisements ne sont pas épuisés. La mine est encore pleine de minerai et de pierres précieuses. Mais elle est infestée de morts-vivants. Trop dangereux. Le patron a entendu parler de ça, il cherche quelqu’un pour nettoyer les galeries. A toi de voir si tu veux tenter ta chance ?
-
-Va lui parler. Moi, ma spécialité, c’est la pioche et lever le coude. "
+text = "Le passage secret… il était enfermé. On pensait que rien ne pouvait sortir. Mais les morts-vivants, ils sont libres maintenant. Le donjon est devenu leur prison… et leur champ de chasse.
+Le patron de l’auberge a entendu parler de ça. Il cherche quelqu’un pour nettoyer les galeries. Car les morts-vivants commencent à sortir du donjon. Mais moi… je n’ai plus envie de me battre.  
+Tu veux tenter ta chance ? Je ne sais pas si tu en as la force, mais si tu trouves mon alliance, ramène-la-moi.  "
 pnj = NodePath("../../..")
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 

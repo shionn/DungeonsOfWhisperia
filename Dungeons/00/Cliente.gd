@@ -22,4 +22,4 @@ func player_know_about_mine() -> void:
 
 func _on_drink_timer_timeout() -> void:
 	drink()
-	$DrinkTimer.start(Dices._random.randi_range(10,80))
+	$DrinkTimer.start(Dices._random.randi_range(10,35))
