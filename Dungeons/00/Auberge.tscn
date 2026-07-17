@@ -555,12 +555,12 @@ Mais j’aimerais récupérer son alliance. Un souvenir. Elle est restée là-ba
 pnj = NodePath("..")
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
-[node name="Mine Fermée ?" type="Node" parent="Cliente/Dialog" unique_id=661287398]
+[node name="Des morts-vivants ?" type="Node" parent="Cliente/Dialog" unique_id=661287398]
 script = ExtResource("3_fq3ns")
 text = "Pourquoi les morts-vivants sont-ils si nombreux dans le donjon ?  "
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
-[node name="Next" type="Node" parent="Cliente/Dialog/Mine Fermée ?" unique_id=959936653 node_paths=PackedStringArray("pnj")]
+[node name="Next" type="Node" parent="Cliente/Dialog/Des morts-vivants ?" unique_id=959936653 node_paths=PackedStringArray("pnj")]
 script = ExtResource("3_fq3ns")
 text = "Le passage secret… il était enfermé. On pensait que rien ne pouvait sortir. Mais les morts-vivants, ils sont libres maintenant. Le donjon est devenu leur prison… et leur champ de chasse.
 Le patron de l’auberge a entendu parler de ça. Il cherche quelqu’un pour nettoyer les galeries. Car les morts-vivants commencent à sortir du donjon. Mais moi… je n’ai plus envie de me battre.  
@@ -2124,7 +2124,7 @@ metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 [connection signal="activate" from="Pipette la Loupe/Bienvenue/Acheter/Next/Potion de Soin/Potion de Soin Majeur" to="Pipette la Loupe" method="_on_potion_de_soin_majeur_activate"]
 [connection signal="activate" from="Pipette la Loupe/Bienvenue/Identifier/Next/Necrolis Attivae/Next/Next/Next" to="Pipette la Loupe" method="_on_identification_necro_last_activate"]
 [connection signal="close" from="Cliente/Dialog" to="Cliente" method="drink"]
-[connection signal="activate" from="Cliente/Dialog/Mine Fermée ?/Next" to="Cliente" method="player_know_about_mine"]
-[connection signal="close" from="Cliente/Dialog/Mine Fermée ?/Next" to="Cliente" method="drink"]
+[connection signal="activate" from="Cliente/Dialog/Des morts-vivants ?/Next" to="Cliente" method="player_know_about_mine"]
+[connection signal="close" from="Cliente/Dialog/Des morts-vivants ?/Next" to="Cliente" method="drink"]
 [connection signal="timeout" from="Cliente/DrinkTimer" to="Cliente" method="_on_drink_timer_timeout"]
 [connection signal="close" from="PanneauDAffichage/Mission 1" to="PanneauDAffichage" method="_on_mission_1_close"]
