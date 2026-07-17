@@ -12,8 +12,11 @@
 [ext_resource type="PackedScene" uid="uid://dn8xlfijthmhj" path="res://Assets/Dungeons/Wall/wall_archedwindow_gated.gltf" id="8_3p481"]
 [ext_resource type="PackedScene" uid="uid://bsa57j4bdejj5" path="res://Assets/Dungeons/Wall/TSplit/wall_Tsplit_sloped.gltf" id="9_q0od2"]
 [ext_resource type="PackedScene" uid="uid://cv1l0hoks5jen" path="res://Assets/Dungeons/Wall/wall_pillar.gltf" id="10_5dcro"]
+[ext_resource type="PackedScene" uid="uid://s24f2qnimaan" path="res://Assets/Dungeons/Barrel/barrel_small.gltf" id="10_8ceck"]
 [ext_resource type="PackedScene" uid="uid://mxs3nwfqfjmx" path="res://Assets/Dungeons/Wall/wall_inset_shelves_broken.gltf" id="11_0jkld"]
+[ext_resource type="PackedScene" uid="uid://nq87m86hxcwd" path="res://Assets/Dungeons/Tables/table_long_broken.gltf" id="12_7fary"]
 [ext_resource type="PackedScene" uid="uid://7em3lt4lnfwr" path="res://Assets/Dungeons/Wall/wall.gltf" id="12_rtwjv"]
+[ext_resource type="PackedScene" uid="uid://ou26vngabxxy" path="res://Assets/Dungeons/Barrel/barrel_large.gltf" id="13_opbu4"]
 [ext_resource type="PackedScene" uid="uid://c8kltwisq87l5" path="res://Assets/Dungeons/Banner/banner_red.gltf" id="13_q0od2"]
 [ext_resource type="PackedScene" uid="uid://klr1d6x5mt0l" path="res://Assets/Dungeons/Wall/wall_cracked.gltf" id="13_r72vg"]
 [ext_resource type="PackedScene" uid="uid://hh61qm11e8u0" path="res://Assets/Dungeons/Banner/banner_green.gltf" id="14_5dcro"]
@@ -110,6 +113,9 @@ transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0
 [node name="BlueRoom" type="Node3D" parent="." unique_id=347525843]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36, 0, 14)
 
+[node name="barrel_small2" parent="BlueRoom" unique_id=26698089 instance=ExtResource("10_8ceck")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -4.9000006)
+
 [node name="wall_corner37" parent="BlueRoom" unique_id=374748025 instance=ExtResource("4_ra21l")]
 transform = Transform3D(1, 0, -5.563627e-08, 0, 1, 0, 5.563627e-08, 0, 1, -6, 0, 0)
 
@@ -130,6 +136,15 @@ transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0
 
 [node name="Wall_Doorway4" parent="BlueRoom" unique_id=230273518 instance=ExtResource("17_c4tja")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -8, 0, -2)
+
+[node name="table_long_broken2" parent="BlueRoom" unique_id=2012811723 instance=ExtResource("12_7fary")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 4)
+
+[node name="table_long_broken3" parent="BlueRoom" unique_id=1273209451 instance=ExtResource("12_7fary")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -3, 0, 4)
+
+[node name="barrel_large2" parent="BlueRoom" unique_id=1183584337 instance=ExtResource("13_opbu4")]
+transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, 4.4000015, 0, -6.3)
 
 [node name="Floor" type="Node3D" parent="." unique_id=1024839097]
 
