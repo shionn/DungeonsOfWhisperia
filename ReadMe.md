@@ -5,7 +5,14 @@
 
 # TODO
 - remplacer le curseur d'hors porté
-
+- ajouter une fenetre de statistique. 
+- ajouter des option graphique
+  - definition ?
+  - fullscreen ?
+  - effet de flamme ?
+  - ombre ssao
+- ajouter des options d'input
+  - sensibilité souris
 
 # Assets
 ## 3D and characters

@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://djyg2cdin7gyb"]
+
+[ext_resource type="PackedScene" uid="uid://b4guesmjn6ju0" path="res://Assets/Dungeons/Stairs/stairs_walled.gltf" id="1_26tlt"]
+[ext_resource type="Script" uid="uid://d33jku8bou3tu" path="res://Assets/Scenes/Scripts/DungeonExit.gd" id="2_smpm6"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_26tlt"]
+size = Vector3(3.4, 4.8, 0.7)
+
+[node name="DungeonExit" unique_id=714659814 instance=ExtResource("1_26tlt")]
+script = ExtResource("2_smpm6")
+interactDistance = 5.0
+
+[node name="Area3D" type="Area3D" parent="." index="1" unique_id=1147276301]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0" unique_id=1780336251]
+transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.7071068, 0, -0.7071068, 0.70710677, 0, 1.8902106, 2.2146444)
+shape = SubResource("BoxShape3D_26tlt")

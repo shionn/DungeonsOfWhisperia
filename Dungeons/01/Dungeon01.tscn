@@ -60,11 +60,10 @@
 [ext_resource type="PackedScene" uid="uid://cpt65wpacxuj1" path="res://Assets/Scenes/Wall_Doorway_Boss.tscn" id="59_oqh7g"]
 [ext_resource type="PackedScene" uid="uid://k1idxjl5napw" path="res://Assets/Dungeons/Banner/banner_thin_brown.gltf" id="60_m1nss"]
 [ext_resource type="PackedScene" uid="uid://b6lorylhdtgtv" path="res://Assets/Dungeons/Shelves/shelf_small_candles.gltf" id="61_gpb47"]
+[ext_resource type="PackedScene" uid="uid://djyg2cdin7gyb" path="res://Assets/Scenes/DungeonExit.tscn" id="62_5koau"]
 [ext_resource type="PackedScene" uid="uid://c2eo4fhjbw8kj" path="res://Assets/Dungeons/Banner/banner_brown.gltf" id="62_rswyo"]
-[ext_resource type="PackedScene" uid="uid://b4guesmjn6ju0" path="res://Assets/Dungeons/Stairs/stairs_walled.gltf" id="63_2s4c4"]
 [ext_resource type="PackedScene" uid="uid://nvl7qu3464h4" path="res://Game/Monsters/SkeletonMinion.tscn" id="63_u21oi"]
 [ext_resource type="Script" uid="uid://dexpl21rteomv" path="res://Game/Roof.gd" id="64_6f0aj"]
-[ext_resource type="Script" uid="uid://d33jku8bou3tu" path="res://Game/DungeonExit.gd" id="64_u21oi"]
 [ext_resource type="PackedScene" uid="uid://kwbu30ltyyru" path="res://Assets/Dungeons/Floor/Large/floor_dirt_large.gltf" id="65_wj3qx"]
 [ext_resource type="PackedScene" uid="uid://dfqu824ryf85i" path="res://Assets/Dungeons/Floor/Large/floor_dirt_large_rocky.gltf" id="66_glvpf"]
 [ext_resource type="PackedScene" uid="uid://b3w65ugrkoyx4" path="res://Assets/Dungeons/Floor/Large/floor_tile_large.gltf" id="67_1i08k"]
@@ -241,9 +240,6 @@ size = Vector3(0.51571465, 0.21514177, 0.37819862)
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_fs7r4"]
 height = 0.32932281
 radius = 0.18701172
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_b02ke"]
-size = Vector3(3.4, 4.8, 0.7)
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_qs2cd"]
 vertices = PackedVector3Array(10, 0, 1, -10, 0, 1, 10, 0, -1, -10, 0, -1)
@@ -1187,6 +1183,9 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4, 0
 
 [node name="Entrance" type="Node3D" parent="." unique_id=1411471295]
 
+[node name="DungeonExit" parent="Entrance" unique_id=714659814 instance=ExtResource("62_5koau")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8)
+
 [node name="Skeleton Minion 1" parent="Entrance" unique_id=719577197 instance=ExtResource("63_u21oi")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 11, 0, -6)
 loot_obj = 1
@@ -1195,17 +1194,6 @@ loot_gold = 1
 [node name="Skeleton Minion 2" parent="Entrance" unique_id=160983968 instance=ExtResource("63_u21oi")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 20, 0, 13)
 loot_gold = 2
-
-[node name="stairs_walled2" parent="Entrance" unique_id=464899705 instance=ExtResource("63_2s4c4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8)
-script = ExtResource("64_u21oi")
-interactDistance = 5.0
-
-[node name="Area3D" type="Area3D" parent="Entrance/stairs_walled2" unique_id=1911576458]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Entrance/stairs_walled2/Area3D" unique_id=1258115370]
-transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.7071068, 0, -0.7071068, 0.70710677, 0, 1.8902106, 2.2146444)
-shape = SubResource("BoxShape3D_b02ke")
 
 [node name="torch_mounted" parent="Entrance" unique_id=342053045 instance=ExtResource("3_yra1b")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 18, 0, 6)
