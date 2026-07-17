@@ -13,6 +13,10 @@
   - ombre ssao
 - ajouter des options d'input
   - sensibilité souris
+- gameover
+  - Ajouter un bouton pour retourner à l'auberge à la derniere sauvegarde
+- combat
+  - Ajouter un systeme d'aggro
 
 # Assets
 ## 3D and characters
