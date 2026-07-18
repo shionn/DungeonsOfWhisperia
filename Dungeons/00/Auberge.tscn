@@ -102,6 +102,8 @@
 [ext_resource type="PackedScene" uid="uid://bn8u3hkxao6jh" path="res://Assets/Characters/AdventurersAccessoires/spellbook_open.gltf" id="90_wk518"]
 [ext_resource type="PackedScene" uid="uid://csmm8kqy73otx" path="res://Assets/Characters/MonthlySeries6/Accessoires/Cleric_Tome.gltf" id="91_rcg8d"]
 [ext_resource type="PackedScene" uid="uid://bifqjl5vbnrgq" path="res://Assets/Characters/AdventurersAccessoires/potion_small_red.gltf" id="92_my2qj"]
+[ext_resource type="PackedScene" uid="uid://l2ef3kyhit8a" path="res://Assets/Characters/MonthlySeries5/Accessoires/Cauldron.gltf" id="95_ar0ji"]
+[ext_resource type="PackedScene" uid="uid://chdn2mnom0h4x" path="res://Assets/Characters/MonthlySeries5/Accessoires/Potionstation_decorated.gltf" id="96_t7ldk"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_brlmy"]
 size = Vector3(1.7, 0.2, 1)
@@ -1480,16 +1482,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 4, 2)
 transform = Transform3D(-1.0000001, 0, 7.351372e-08, 0, 1, 0, -7.351372e-08, 0, -1.0000001, -2.2999992, 0, 3.2000003)
 
 [node name="table_long2" parent="Stair/Mezanine" unique_id=1460588807 instance=ExtResource("50_doy55")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.5, 0, 0)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.5, 0, -2.6)
 
 [node name="potion_huge_blue2" parent="Stair/Mezanine/table_long2" unique_id=1381343480 instance=ExtResource("82_8skfw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6, 1.15, 1.6)
-
-[node name="chair4" parent="Stair/Mezanine/table_long2" unique_id=432882592 instance=ExtResource("42_fq3ns")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9999994, 0, 0.8999996)
-
-[node name="chair5" parent="Stair/Mezanine/table_long2" unique_id=1761878321 instance=ExtResource("42_fq3ns")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9999995, 0, -0.8999996)
 
 [node name="chair8" parent="Stair/Mezanine/table_long2" unique_id=2089672352 instance=ExtResource("42_fq3ns")]
 transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, -1.0000005, 0, -0.8999996)
@@ -1535,6 +1531,12 @@ transform = Transform3D(0.70710665, 0, -0.7071069, 0, 1, 0, 0.7071069, 0, 0.7071
 
 [node name="torch_mounted6" parent="Stair/Mezanine" unique_id=1093218368 instance=ExtResource("7_68h1y")]
 transform = Transform3D(0.9999999, 0, -1.6292066e-07, 0, 1, 0, 1.6292066e-07, 0, 0.9999999, -1.8999996, 0, -3.8999996)
+
+[node name="Cauldron2" parent="Stair/Mezanine" unique_id=2073098707 instance=ExtResource("95_ar0ji")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6000004, 0, -2.3999999)
+
+[node name="Potionstation_decorated2" parent="Stair/Mezanine" unique_id=504975822 instance=ExtResource("96_t7ldk")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2.7999992, 0, 2.1)
 
 [node name="Roof" type="Node3D" parent="." unique_id=1475638778]
 visible = false
