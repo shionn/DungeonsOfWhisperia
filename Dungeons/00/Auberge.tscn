@@ -1538,6 +1538,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6000004, 0, -2.3999999)
 [node name="Potionstation_decorated2" parent="Stair/Mezanine" unique_id=504975822 instance=ExtResource("96_t7ldk")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2.7999992, 0, 2.1)
 
+[node name="chair10" parent="Stair/Mezanine/Potionstation_decorated2" unique_id=1046018242 instance=ExtResource("42_fq3ns")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 0, 0, 0.79999924)
+
 [node name="Roof" type="Node3D" parent="." unique_id=1475638778]
 visible = false
 script = ExtResource("21_16ran")
