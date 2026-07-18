@@ -582,6 +582,30 @@ Tu veux tenter ta chance ? Je ne sais pas si tu en as la force, mais si tu trouv
 pnj = NodePath("../../..")
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
+[node name="Enigme passage Secret ?" type="Node" parent="Cliente/Dialog" unique_id=1297120073]
+script = ExtResource("3_fq3ns")
+text = "Pourrais-tu me dire comment le passage secret a été activé ?  "
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Next" type="Node" parent="Cliente/Dialog/Enigme passage Secret ?" unique_id=1304804565 node_paths=PackedStringArray("pnj")]
+script = ExtResource("3_fq3ns")
+text = "Ce n’était pas moi qui ai résolu l’énigme. Mon compagnon… il était à côté d’un des crânes. Et soudain… le mur s’est ouvert. Puis, les morts-vivants sont sortis.  "
+pnj = NodePath("../../..")
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Alliance" type="Node" parent="Cliente/Dialog" unique_id=1815455193]
+script = ExtResource("3_fq3ns")
+text = "Voici l’alliance de ton compagnon. Je l’ai trouvée sur son cadavre.  "
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Next" type="Node" parent="Cliente/Dialog/Alliance" unique_id=1424562081 node_paths=PackedStringArray("pnj")]
+script = ExtResource("3_fq3ns")
+text = "Merci… merci, je ne sais pas comment te remercier.  Il était si… si brave.  
+
+Attends… avant qu’on ne résolve l’énigme… il est sorti de la salle. Puis il est revenu… et il a crié : « Le secret, c’est les fanions, c’est les couleurs ! »  "
+pnj = NodePath("../../..")
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
 [node name="Character" parent="Cliente" unique_id=1031378864 instance=ExtResource("1_df0jl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.536743e-07, 0, 2.1457672e-06)
 
@@ -2140,5 +2164,6 @@ metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 [connection signal="close" from="Cliente/Dialog" to="Cliente" method="drink"]
 [connection signal="activate" from="Cliente/Dialog/Des morts-vivants ?/Next" to="Cliente" method="player_know_about_mine"]
 [connection signal="close" from="Cliente/Dialog/Des morts-vivants ?/Next" to="Cliente" method="drink"]
+[connection signal="activate" from="Cliente/Dialog/Alliance/Next" to="Cliente" method="_on_alliance_next_activate"]
 [connection signal="timeout" from="Cliente/DrinkTimer" to="Cliente" method="_on_drink_timer_timeout"]
 [connection signal="close" from="PanneauDAffichage/Mission 1" to="PanneauDAffichage" method="_on_mission_1_close"]

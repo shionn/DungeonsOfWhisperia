@@ -114,8 +114,14 @@ radius = 0.35
 [sub_resource type="SphereShape3D" id="SphereShape3D_m2ftf"]
 radius = 0.3
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_b02ke"]
+size = Vector3(1, 0.4, 0.8)
+
 [sub_resource type="SphereShape3D" id="SphereShape3D_brlmy"]
 radius = 0.6
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_brlmy"]
+size = Vector3(15, 5, 19)
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_b02ke"]
 radius = 0.1
@@ -397,6 +403,23 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0
 
 [node name="Lorekeeper_Tome2" parent="RitualRoom/Decoration" unique_id=1309289027 instance=ExtResource("7_gonng")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2, 0, 0)
+script = ExtResource("23_ml8gv")
+action = 1
+
+[node name="Area3D" type="Area3D" parent="RitualRoom/Decoration/Lorekeeper_Tome2" unique_id=617507039]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RitualRoom/Decoration/Lorekeeper_Tome2/Area3D" unique_id=552065913]
+transform = Transform3D(1, -2.1855694e-08, 5.856215e-09, 2.1855694e-08, 0.8660254, -0.5, 5.856215e-09, 0.5, 0.8660254, -2.1857431e-09, 1.0866026, 0.049999237)
+shape = SubResource("BoxShape3D_b02ke")
+
+[node name="description" type="Node" parent="RitualRoom/Decoration/Lorekeeper_Tome2" unique_id=1028790992]
+script = ExtResource("13_iikjq")
+text = "C'est un livre de prière à la déesse Veyrath. Mais un paragraphe me semble étrange :
+
+[i]Dans le droit des os, les couleurs s’ordonnent.
+Les profondeurs cachées, vers l’origine de leur propre direction.
+Le passage se dévoile, et la mort guette.[/i]"
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
 [node name="grave_A2" parent="RitualRoom/Decoration" unique_id=1909198475 instance=ExtResource("8_iwmo4")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7, 0, 6)
@@ -581,6 +604,12 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -8, 
 
 [node name="banner_white3" parent="RitualRoom" unique_id=1793492921 instance=ExtResource("12_gheph")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -8, 0, -6)
+
+[node name="Area3D" type="Area3D" parent="RitualRoom" unique_id=912248097]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RitualRoom/Area3D" unique_id=1334545276]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+shape = SubResource("BoxShape3D_brlmy")
 
 [node name="Entrance" type="Node3D" parent="." unique_id=986900549]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 0)
@@ -2416,3 +2445,4 @@ metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 [connection signal="state_change" from="RitualRoom/wall_inset4/Skull" to="RitualRoom" method="_on_skull_state_change"]
 [connection signal="state_change" from="RitualRoom/wall_inset5/Skull" to="RitualRoom" method="_on_skull_state_change"]
 [connection signal="state_change" from="RitualRoom/wall_inset6/Skull" to="RitualRoom" method="_on_skull_state_change"]
+[connection signal="body_entered" from="RitualRoom/Area3D" to="RitualRoom" method="_on_area_3d_body_entered"]

@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://xh4id0a8h8u5" path="res://Gui/Assets/kaykit/48/Jewel_Blue.png" id="19_cvq6i"]
 [ext_resource type="Texture2D" uid="uid://ebx8aa8ddqnm" path="res://Gui/Assets/kaykit/48/Gold_Gem_Ring_3.png" id="20_6tx0c"]
 [ext_resource type="Texture2D" uid="uid://bbbfyt8fxs1hn" path="res://Gui/Assets/kaykit/48/Gold_Ring_1.png" id="21_0to5b"]
+[ext_resource type="Script" uid="uid://lh3isd8ids61" path="res://Game/Items/Alliance.gd" id="21_5j71u"]
 
 [node name="World" type="Node3D" unique_id=1017407997]
 script = ExtResource("1_bcbcq")
@@ -162,7 +163,7 @@ unique = true
 metadata/_custom_type_script = "uid://bjbab3ep2gfn2"
 
 [node name="Alliance" type="Node" parent="Items" unique_id=556752775]
-script = ExtResource("5_p1v5b")
+script = ExtResource("21_5j71u")
 item_name = 14
 icon = ExtResource("21_0to5b")
 description = "C'est une alliance"

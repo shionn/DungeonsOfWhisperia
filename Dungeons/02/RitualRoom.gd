@@ -7,7 +7,6 @@ extends GameBase3D
 
 
 func _on_skull_state_change() -> void:
-	print("Truc")
 	if _skull1.state and _skull2.state and _skull3.state and _skull4.state and $Secret/Closed.visible:
 		gui.openTransition(_openSecret)
 		gui._close()
@@ -16,4 +15,6 @@ func _openSecret() -> void:
 	$Secret/Closed.queue_free()
 	$Secret/Open.show()
 	$Secret/AudioStreamPlayer3D.play()
-	
+
+func _on_area_3d_body_entered(body: Node3D) -> void:
+	if body is PlayerG : tags.add(Tags.DUNGEON_02_VISIT_CULT_ROOM)

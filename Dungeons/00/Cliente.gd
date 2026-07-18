@@ -10,6 +10,8 @@ func _ready() -> void:
 	
 func interact() -> void:
 	look_at_player()
+	$"Dialog/Enigme passage Secret ?".enable = tags.have(Tags.DUNGEON_02_VISIT_CULT_ROOM)
+	$Dialog/Alliance.enable = bag.have(Items.ItemName.Alliance)
 	gui.openDialog($Dialog)
 
 func drink() -> void:
@@ -23,3 +25,7 @@ func player_know_about_mine() -> void:
 func _on_drink_timer_timeout() -> void:
 	drink()
 	$DrinkTimer.start(Dices._random.randi_range(10,35))
+
+func _on_alliance_next_activate() -> void:
+	bag.unloot(Items.ItemName.Alliance)
+	tags.add(Tags.AUBERGE_ALLIANCE_RETURNED)
