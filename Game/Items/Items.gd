@@ -11,6 +11,10 @@ enum ItemName {
 	FioleNecrolisAttivae,
 	PotionVieMoyenne,
 	PotionVieMajeur,
+	GemmeRouge,
+	GemmeVert,
+	GemmeJaune,
+	GemmeBleu,
 }
 
 func from(item_name : ItemName) -> Item :

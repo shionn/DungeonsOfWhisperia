@@ -15,6 +15,10 @@
 [ext_resource type="Texture2D" uid="uid://dh8v3r3g8v72t" path="res://Gui/Assets/kaykit/48/Potion_Huge_Green.png" id="11_kva58"]
 [ext_resource type="Script" uid="uid://cwcriu0ksq7ip" path="res://Game/Items/Crane.gd" id="12_ee7l0"]
 [ext_resource type="Script" uid="uid://cdilelkdijjx2" path="res://Game/Items/NecrolisAttivae.gd" id="14_gn8l5"]
+[ext_resource type="Texture2D" uid="uid://wtnragxwbeo1" path="res://Gui/Assets/kaykit/48/Jewel_Red.png" id="16_6w02q"]
+[ext_resource type="Texture2D" uid="uid://tshe7v1i7wsg" path="res://Gui/Assets/kaykit/48/Jewel_Green.png" id="17_1fphk"]
+[ext_resource type="Texture2D" uid="uid://5b37qc2lu48j" path="res://Gui/Assets/kaykit/48/Jewel_Orange.png" id="18_sjtuv"]
+[ext_resource type="Texture2D" uid="uid://xh4id0a8h8u5" path="res://Gui/Assets/kaykit/48/Jewel_Blue.png" id="19_cvq6i"]
 
 [node name="World" type="Node3D" unique_id=1017407997]
 script = ExtResource("1_bcbcq")
@@ -108,6 +112,38 @@ description = "Sur l'étiquette il est écris [i]Necrolis Attivae[/i].
 Je n'ai jamais vu ni jamais entendu parler d'une telle potion. Elle est forcément importante."
 tooltip = "Necrolis Attivae"
 unique = true
+metadata/_custom_type_script = "uid://bjbab3ep2gfn2"
+
+[node name="Gemme Rouge" type="Node" parent="Items" unique_id=1337000464]
+script = ExtResource("5_p1v5b")
+item_name = 9
+icon = ExtResource("16_6w02q")
+description = "C'est une gemme rouge, probablement un rubi. Elle semble taillée pour s'insérer dans un objet."
+global = false
+metadata/_custom_type_script = "uid://bjbab3ep2gfn2"
+
+[node name="Gemme Verte" type="Node" parent="Items" unique_id=354231414]
+script = ExtResource("5_p1v5b")
+item_name = 10
+icon = ExtResource("17_1fphk")
+description = "C'est une gemme verte, probablement une emeraude. Elle semble taillée pour s'insérer dans un objet."
+global = false
+metadata/_custom_type_script = "uid://bjbab3ep2gfn2"
+
+[node name="Gemme Jaune" type="Node" parent="Items" unique_id=217133743]
+script = ExtResource("5_p1v5b")
+item_name = 11
+icon = ExtResource("18_sjtuv")
+description = "C'est une gemme jaune, probablement une topaze. Elle semble taillée pour s'insérer dans un objet."
+global = false
+metadata/_custom_type_script = "uid://bjbab3ep2gfn2"
+
+[node name="Gemme Bleu" type="Node" parent="Items" unique_id=2060773946]
+script = ExtResource("5_p1v5b")
+item_name = 12
+icon = ExtResource("19_cvq6i")
+description = "C'est une gemme bleu, probablement une agate. Elle semble taillée pour s'insérer dans un objet."
+global = false
 metadata/_custom_type_script = "uid://bjbab3ep2gfn2"
 
 [connection signal="_action" from="Items/Potion Vie Mineur" to="Items/Potion Vie Mineur" method="_give_back_1d3_pv"]

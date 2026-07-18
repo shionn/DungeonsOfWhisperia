@@ -11,6 +11,9 @@
 [ext_resource type="PackedScene" uid="uid://d1eaddharejqv" path="res://Assets/Characters/AdventurersAccessoires/potion_huge_green.gltf" id="9_jyjuw"]
 [ext_resource type="PackedScene" uid="uid://c4nq6wvr8mcoi" path="res://Assets/Characters/AdventurersAccessoires/potion_large_blue.gltf" id="10_ycnrh"]
 [ext_resource type="PackedScene" uid="uid://dhflr6qrk1e1d" path="res://Assets/Dungeons/Coin/coin_stack_small.gltf" id="11_gb0rn"]
+[ext_resource type="PackedScene" uid="uid://d2s6ulp6b5oe" path="res://Assets/Characters/AdventurersAccessoires/potion_small_orange.gltf" id="12_11lau"]
+[ext_resource type="PackedScene" uid="uid://d4ie8loh7o3k0" path="res://Assets/Characters/AdventurersAccessoires/potion_small_green.gltf" id="13_h6exc"]
+[ext_resource type="PackedScene" uid="uid://dgc6r0o5rxge4" path="res://Assets/Characters/AdventurersAccessoires/potion_small_blue.gltf" id="14_1n2eg"]
 
 [sub_resource type="Environment" id="Environment_b02ke"]
 background_energy_multiplier = 0.0
@@ -55,6 +58,18 @@ transform = Transform3D(0.75, 0.4330127, -0.5, -0.5, 0.8660254, 0, 0.4330127, 0.
 
 [node name="coin_stack_small2" parent="Old" unique_id=173932505 instance=ExtResource("11_gb0rn")]
 transform = Transform3D(1, 0, 0, 0, 0.9396927, -0.34202015, 0, 0.34202015, 0.9396927, 0, -0.2, 0)
+
+[node name="potion_small_red3" parent="Old" unique_id=683219606 instance=ExtResource("8_gb0rn")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+
+[node name="potion_small_orange2" parent="Old" unique_id=975049330 instance=ExtResource("12_11lau")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+
+[node name="potion_small_green2" parent="Old" unique_id=980597776 instance=ExtResource("13_h6exc")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+
+[node name="potion_small_blue2" parent="Old" unique_id=1972663799 instance=ExtResource("14_1n2eg")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=979525193]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 2, 0)
