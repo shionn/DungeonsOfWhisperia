@@ -14,13 +14,17 @@
 [ext_resource type="PackedScene" uid="uid://ds1umuqbncwso" path="res://Assets/Characters/MonthlySeries6/Accessoires/Lorekeeper_Tome.gltf" id="7_gonng"]
 [ext_resource type="PackedScene" uid="uid://dn8xlfijthmhj" path="res://Assets/Dungeons/Wall/wall_archedwindow_gated.gltf" id="8_3p481"]
 [ext_resource type="PackedScene" uid="uid://xxwvvhvlk5e1" path="res://Assets/Dungeons/Bar/bar_innercorner.gltf" id="8_352hu"]
+[ext_resource type="PackedScene" uid="uid://oukei8y88dd2" path="res://Assets/Halloween/Grave/grave_A.gltf" id="8_iwmo4"]
+[ext_resource type="PackedScene" uid="uid://dfo44w1ffqu8w" path="res://Assets/Halloween/Grave/grave_A_destroyed.gltf" id="9_18hwo"]
 [ext_resource type="PackedScene" uid="uid://bsa57j4bdejj5" path="res://Assets/Dungeons/Wall/TSplit/wall_Tsplit_sloped.gltf" id="9_q0od2"]
 [ext_resource type="PackedScene" uid="uid://cv1l0hoks5jen" path="res://Assets/Dungeons/Wall/wall_pillar.gltf" id="10_5dcro"]
 [ext_resource type="PackedScene" uid="uid://s24f2qnimaan" path="res://Assets/Dungeons/Barrel/barrel_small.gltf" id="10_8ceck"]
 [ext_resource type="PackedScene" uid="uid://bc0c4x5rj731i" path="res://Assets/Scenes/Bar_Straight_C_short.tscn" id="10_nsqvi"]
 [ext_resource type="PackedScene" uid="uid://btt55eik1mr7w" path="res://Assets/Dungeons/Crate/crate_large_decorated.gltf" id="10_xec7q"]
 [ext_resource type="PackedScene" uid="uid://mxs3nwfqfjmx" path="res://Assets/Dungeons/Wall/wall_inset_shelves_broken.gltf" id="11_0jkld"]
+[ext_resource type="PackedScene" uid="uid://b1pornh7valq3" path="res://Assets/Halloween/Skull/skull.gltf" id="11_vgs0b"]
 [ext_resource type="PackedScene" uid="uid://nq87m86hxcwd" path="res://Assets/Dungeons/Tables/table_long_broken.gltf" id="12_7fary"]
+[ext_resource type="PackedScene" uid="uid://dojlveaaakuvh" path="res://Assets/Dungeons/Banner/banner_white.gltf" id="12_gheph"]
 [ext_resource type="PackedScene" uid="uid://ck8jhnerogudh" path="res://Assets/Dungeons/Rocks/rubble_large.gltf" id="12_j4w0s"]
 [ext_resource type="PackedScene" uid="uid://7em3lt4lnfwr" path="res://Assets/Dungeons/Wall/wall.gltf" id="12_rtwjv"]
 [ext_resource type="PackedScene" uid="uid://ou26vngabxxy" path="res://Assets/Dungeons/Barrel/barrel_large.gltf" id="13_opbu4"]
@@ -34,17 +38,21 @@
 [ext_resource type="PackedScene" uid="uid://yand4djtdef5" path="res://Assets/Dungeons/Wall/wall_inset_candles.gltf" id="15_gs1cg"]
 [ext_resource type="PackedScene" uid="uid://dj0modsh7x76o" path="res://Assets/Scenes/Bar_Straight_C.tscn" id="16_nlict"]
 [ext_resource type="PackedScene" uid="uid://gv22cmuit7gu" path="res://Assets/Dungeons/Banner/banner_blue.gltf" id="16_rtwjv"]
+[ext_resource type="PackedScene" uid="uid://bmdvn7w6kv12i" path="res://Assets/Dungeons/Bar/bartop_A_medium.gltf" id="17_a5mn1"]
 [ext_resource type="PackedScene" uid="uid://dnj0c0ut1hd35" path="res://Assets/Scenes/Wall_Doorway.tscn" id="17_c4tja"]
 [ext_resource type="PackedScene" uid="uid://bpu05mij5jnkt" path="res://Assets/Dungeons/Plates/plate_stack.gltf" id="17_qarta"]
 [ext_resource type="PackedScene" uid="uid://dg16k84dtvwob" path="res://Assets/Dungeons/Bar/bartop_A_large.gltf" id="18_nsqvi"]
 [ext_resource type="PackedScene" uid="uid://d17shvcpj3oew" path="res://Assets/Dungeons/Barrel/barrel_small_stack.gltf" id="18_pecol"]
+[ext_resource type="PackedScene" uid="uid://dbaa76cyf7r3p" path="res://Assets/Bits/RpgTools/lantern.gltf" id="19_a5mn1"]
 [ext_resource type="PackedScene" uid="uid://dgrs5abapqwq0" path="res://Assets/Dungeons/Bottle/bottle_A_brown.gltf" id="19_j4w0s"]
 [ext_resource type="PackedScene" uid="uid://cpxbxsa88w1au" path="res://Assets/Dungeons/Bottle/bottle_B_green.gltf" id="20_41n8b"]
 [ext_resource type="PackedScene" uid="uid://dtbeiqnbxjtah" path="res://Assets/Dungeons/Bottle/bottle_C_brown.gltf" id="21_qvsi7"]
+[ext_resource type="PackedScene" uid="uid://lkdece1ud37e" path="res://Assets/Dungeons/Crate/crates_stacked.gltf" id="22_eijaf"]
 [ext_resource type="PackedScene" uid="uid://umb3bjiok44i" path="res://Assets/Dungeons/Bottle/bottle_A_labeled_green.gltf" id="22_m1hbu"]
 [ext_resource type="Script" uid="uid://dexpl21rteomv" path="res://Game/Roof.gd" id="23_0jkld"]
 [ext_resource type="PackedScene" uid="uid://dgqd2f36m3dsa" path="res://Assets/Dungeons/Rocks/rocks_gold.gltf" id="23_r72vg"]
 [ext_resource type="PackedScene" uid="uid://cd5xcrg5gpsaj" path="res://Assets/Dungeons/Rocks/rubble_half.gltf" id="24_7lip4"]
+[ext_resource type="PackedScene" uid="uid://faxw718wtx6r" path="res://Assets/Bits/RpgTools/shovel.gltf" id="25_52jne"]
 [ext_resource type="PackedScene" uid="uid://bj2yg7f3e8tc0" path="res://Assets/Dungeons/Tables/bench.gltf" id="27_41n8b"]
 [ext_resource type="PackedScene" uid="uid://ccbdbtpi2ehj5" path="res://Assets/Dungeons/Floor/Small/floor_tile_small.gltf" id="31_qvsi7"]
 [ext_resource type="PackedScene" uid="uid://dfqu824ryf85i" path="res://Assets/Dungeons/Floor/Large/floor_dirt_large_rocky.gltf" id="32_m1hbu"]
@@ -93,6 +101,42 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0
 [node name="Lorekeeper_Tome2" parent="RitualRoom" unique_id=1309289027 instance=ExtResource("7_gonng")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2, 0, 0)
 
+[node name="grave_A2" parent="RitualRoom" unique_id=1909198475 instance=ExtResource("8_iwmo4")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7, 0, 6)
+
+[node name="grave_A_destroyed2" parent="RitualRoom" unique_id=1853739350 instance=ExtResource("9_18hwo")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7, 0, -6)
+
+[node name="wall_inset3" parent="RitualRoom" unique_id=103094456 instance=ExtResource("6_c4tja")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -10)
+
+[node name="skull2" parent="RitualRoom/wall_inset3" unique_id=138238082 instance=ExtResource("11_vgs0b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.59999996, 0)
+
+[node name="wall_inset4" parent="RitualRoom" unique_id=488697972 instance=ExtResource("6_c4tja")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -10)
+
+[node name="skull2" parent="RitualRoom/wall_inset4" unique_id=602530252 instance=ExtResource("11_vgs0b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.59999996, 0)
+
+[node name="wall_inset5" parent="RitualRoom" unique_id=665012225 instance=ExtResource("6_c4tja")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -4, 0, 10)
+
+[node name="skull2" parent="RitualRoom/wall_inset5" unique_id=1912352477 instance=ExtResource("11_vgs0b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.59999996, 0)
+
+[node name="wall_inset6" parent="RitualRoom" unique_id=798272793 instance=ExtResource("6_c4tja")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 4, 0, 10)
+
+[node name="skull2" parent="RitualRoom/wall_inset6" unique_id=1659538690 instance=ExtResource("11_vgs0b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.59999996, 0)
+
+[node name="banner_white2" parent="RitualRoom" unique_id=134994424 instance=ExtResource("12_gheph")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -8, 0, 6)
+
+[node name="banner_white3" parent="RitualRoom" unique_id=1793492921 instance=ExtResource("12_gheph")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -8, 0, -6)
+
 [node name="Entrance" type="Node3D" parent="." unique_id=986900549]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 0)
 
@@ -128,11 +172,20 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
 [node name="bar_straight_C2" parent="GreenRoom" unique_id=946520791 instance=ExtResource("16_nlict")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -5, 0, 2)
 
+[node name="bartop_A_medium2" parent="GreenRoom/bar_straight_C2" unique_id=1166037996 instance=ExtResource("17_a5mn1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
 [node name="bar_straight_C3" parent="GreenRoom" unique_id=24224270 instance=ExtResource("16_nlict")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -5, 0, 0)
 
+[node name="bartop_A_medium2" parent="GreenRoom/bar_straight_C3" unique_id=1095069935 instance=ExtResource("17_a5mn1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
 [node name="bar_straight_C4" parent="GreenRoom" unique_id=764924936 instance=ExtResource("16_nlict")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -5, 0, -2)
+
+[node name="bartop_A_medium2" parent="GreenRoom/bar_straight_C4" unique_id=1707230434 instance=ExtResource("17_a5mn1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 
 [node name="bar_innercorner2" parent="GreenRoom" unique_id=1863945209 instance=ExtResource("8_352hu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, -3)
@@ -143,8 +196,14 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 5, 0
 [node name="bar_straight_C5" parent="GreenRoom" unique_id=304514423 instance=ExtResource("16_nlict")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0, -3)
 
+[node name="bartop_A_large2" parent="GreenRoom/bar_straight_C5" unique_id=292816299 instance=ExtResource("18_nsqvi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0)
+
 [node name="RedRoom" type="Node3D" parent="." unique_id=1809626829]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36, 0, -14)
+
+[node name="lantern2" parent="RedRoom" unique_id=416189999 instance=ExtResource("19_a5mn1")]
+transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, -0.099998474, 1.5, -6.1000004)
 
 [node name="wall_corner44" parent="RedRoom" unique_id=17662683 instance=ExtResource("4_ra21l")]
 transform = Transform3D(1, 0, -5.563627e-08, 0, 1, 0, 5.563627e-08, 0, 1, -6, 0, 4)
@@ -197,6 +256,9 @@ transform = Transform3D(-0.7071068, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, -0.707
 [node name="rocks_gold2" parent="RedRoom" unique_id=1718575430 instance=ExtResource("23_r72vg")]
 transform = Transform3D(-0.7071068, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, -0.7071068, 0, 0, -6)
 
+[node name="shovel2" parent="RedRoom" unique_id=1887715603 instance=ExtResource("25_52jne")]
+transform = Transform3D(-3.7855173e-08, -0.49999997, 0.8660253, -2.1855694e-08, 0.8660253, 0.49999997, -1, -2.1175824e-22, -4.3711385e-08, 4.6000023, 1.5999999, -5)
+
 [node name="YellowRoom" type="Node3D" parent="." unique_id=2027608995]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 14)
 
@@ -221,6 +283,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.3999996, 0, 0)
 
 [node name="barrel_small_stack2" parent="YellowRoom/table_long_broken2" unique_id=773314741 instance=ExtResource("18_pecol")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.40000057, 1, -0.8999996)
+
+[node name="crates_stacked2" parent="YellowRoom" unique_id=463964757 instance=ExtResource("22_eijaf")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4, 0, 2.2999992)
 
 [node name="BlueRoom" type="Node3D" parent="." unique_id=347525843]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36, 0, 14)
@@ -275,7 +340,7 @@ loot_gold = 3
 [node name="plate_stack2" parent="BlueRoom/bar_straight_C3" unique_id=154144263 instance=ExtResource("17_qarta")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 
-[node name="bartop_A_large2" parent="BlueRoom" unique_id=292816299 instance=ExtResource("18_nsqvi")]
+[node name="bartop_A_large2" parent="BlueRoom" unique_id=1062220783 instance=ExtResource("18_nsqvi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -7)
 
 [node name="bottle_A_brown2" parent="BlueRoom/bartop_A_large2" unique_id=2066352518 instance=ExtResource("19_j4w0s")]
@@ -689,29 +754,17 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 42, 
 [node name="wall_Tsplit4" parent="Wall" unique_id=1851628087 instance=ExtResource("5_3p481")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 42, 0, -10)
 
-[node name="wall_inset2" parent="Wall" unique_id=508807475 instance=ExtResource("6_c4tja")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46, 0, -10)
-
-[node name="wall_inset3" parent="Wall" unique_id=103094456 instance=ExtResource("6_c4tja")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54, 0, -10)
-
 [node name="wall_inset6" parent="Wall" unique_id=1270901346 instance=ExtResource("6_c4tja")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -2)
 
 [node name="wall_inset7" parent="Wall" unique_id=1526667954 instance=ExtResource("6_c4tja")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 14, 0, 6)
 
-[node name="wall_inset4" parent="Wall" unique_id=1700640289 instance=ExtResource("6_c4tja")]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 54, 0, 10)
-
 [node name="wall_broken2" parent="Wall" unique_id=1289530528 instance=ExtResource("7_ehe8n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34, 0, -2)
 
 [node name="wall_archedwindow_gated2" parent="Wall" unique_id=889430051 instance=ExtResource("8_3p481")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38, 0, -6)
-
-[node name="wall_inset5" parent="Wall" unique_id=1447291801 instance=ExtResource("6_c4tja")]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 46, 0, 10)
 
 [node name="wall_Tsplit5" parent="Wall" unique_id=385316087 instance=ExtResource("5_3p481")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 42, 0, 10)
