@@ -7,8 +7,11 @@
 [ext_resource type="PackedScene" uid="uid://b3w65ugrkoyx4" path="res://Assets/Dungeons/Floor/Large/floor_tile_large.gltf" id="3_3ri71"]
 [ext_resource type="PackedScene" uid="uid://0fn6al4q3iav" path="res://Assets/Dungeons/Wall/Corner/wall_corner.gltf" id="4_ra21l"]
 [ext_resource type="PackedScene" uid="uid://c6i85c8iqhfgd" path="res://Assets/Dungeons/Wall/TSplit/wall_Tsplit.gltf" id="5_3p481"]
+[ext_resource type="PackedScene" uid="uid://cv1on6sxo61uc" path="res://Assets/Halloween/Bench/bench.gltf" id="5_sxs5t"]
 [ext_resource type="PackedScene" uid="uid://xqftme4a1q27" path="res://Assets/Dungeons/Wall/wall_inset.gltf" id="6_c4tja"]
+[ext_resource type="PackedScene" uid="uid://dn0yqbvgem56e" path="res://Assets/Halloween/Bench/bench_decorated.gltf" id="6_gonng"]
 [ext_resource type="PackedScene" uid="uid://dlo1eot4wd5ay" path="res://Assets/Dungeons/Wall/wall_broken.gltf" id="7_ehe8n"]
+[ext_resource type="PackedScene" uid="uid://ds1umuqbncwso" path="res://Assets/Characters/MonthlySeries6/Accessoires/Lorekeeper_Tome.gltf" id="7_gonng"]
 [ext_resource type="PackedScene" uid="uid://dn8xlfijthmhj" path="res://Assets/Dungeons/Wall/wall_archedwindow_gated.gltf" id="8_3p481"]
 [ext_resource type="PackedScene" uid="uid://xxwvvhvlk5e1" path="res://Assets/Dungeons/Bar/bar_innercorner.gltf" id="8_352hu"]
 [ext_resource type="PackedScene" uid="uid://bsa57j4bdejj5" path="res://Assets/Dungeons/Wall/TSplit/wall_Tsplit_sloped.gltf" id="9_q0od2"]
@@ -34,6 +37,7 @@
 [ext_resource type="PackedScene" uid="uid://dnj0c0ut1hd35" path="res://Assets/Scenes/Wall_Doorway.tscn" id="17_c4tja"]
 [ext_resource type="PackedScene" uid="uid://bpu05mij5jnkt" path="res://Assets/Dungeons/Plates/plate_stack.gltf" id="17_qarta"]
 [ext_resource type="PackedScene" uid="uid://dg16k84dtvwob" path="res://Assets/Dungeons/Bar/bartop_A_large.gltf" id="18_nsqvi"]
+[ext_resource type="PackedScene" uid="uid://d17shvcpj3oew" path="res://Assets/Dungeons/Barrel/barrel_small_stack.gltf" id="18_pecol"]
 [ext_resource type="PackedScene" uid="uid://dgrs5abapqwq0" path="res://Assets/Dungeons/Bottle/bottle_A_brown.gltf" id="19_j4w0s"]
 [ext_resource type="PackedScene" uid="uid://cpxbxsa88w1au" path="res://Assets/Dungeons/Bottle/bottle_B_green.gltf" id="20_41n8b"]
 [ext_resource type="PackedScene" uid="uid://dtbeiqnbxjtah" path="res://Assets/Dungeons/Bottle/bottle_C_brown.gltf" id="21_qvsi7"]
@@ -48,28 +52,59 @@
 
 [node name="Dungeon02" type="Node3D" unique_id=879788223]
 
+[node name="RitualRoom" type="Node3D" parent="." unique_id=649690424]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50, 0, 0)
+
+[node name="pillar" parent="RitualRoom" unique_id=1805134489 instance=ExtResource("1_2up2q")]
+
+[node name="torch_mounted" parent="RitualRoom/pillar" unique_id=758274 instance=ExtResource("2_5dcro")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.3)
+
+[node name="torch_mounted2" parent="RitualRoom/pillar" unique_id=1675565178 instance=ExtResource("2_5dcro")]
+transform = Transform3D(-0.99999994, 0, 8.742277e-08, 0, 1, 0, -8.742277e-08, 0, -0.99999994, 0, 0, -0.3)
+
+[node name="Secret" type="Node3D" parent="RitualRoom" unique_id=1028306703]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 0)
+
+[node name="wall_corner2" parent="RitualRoom/Secret" unique_id=83316422 instance=ExtResource("4_ra21l")]
+transform = Transform3D(1.1924881e-08, 0, 1, 0, 1, 0, -1, 0, 1.1924881e-08, 0, 0, 2)
+
+[node name="wall_corner3" parent="RitualRoom/Secret" unique_id=1683936099 instance=ExtResource("4_ra21l")]
+transform = Transform3D(-1, 0, -3.1786506e-08, 0, 1, 0, 3.1786506e-08, 0, -1, 0, 0, -2)
+
+[node name="wall15" parent="RitualRoom/Secret" unique_id=112963386 instance=ExtResource("12_rtwjv")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, -2)
+
+[node name="wall16" parent="RitualRoom/Secret" unique_id=523139311 instance=ExtResource("12_rtwjv")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 2)
+
+[node name="bench2" parent="RitualRoom" unique_id=248207596 instance=ExtResource("5_sxs5t")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, -2)
+
+[node name="bench4" parent="RitualRoom" unique_id=418545984 instance=ExtResource("5_sxs5t")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -2, 0, -2)
+
+[node name="bench5" parent="RitualRoom" unique_id=1128101826 instance=ExtResource("5_sxs5t")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -2, 0, 2)
+
+[node name="bench_decorated3" parent="RitualRoom" unique_id=2117704139 instance=ExtResource("6_gonng")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 2)
+
+[node name="Lorekeeper_Tome2" parent="RitualRoom" unique_id=1309289027 instance=ExtResource("7_gonng")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2, 0, 0)
+
 [node name="Entrance" type="Node3D" parent="." unique_id=986900549]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 0)
 
 [node name="DungeonExit" parent="Entrance" unique_id=714659814 instance=ExtResource("1_0jkld")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -42, 0, 0)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -26, 0, 0)
 
 [node name="pillar3" parent="Entrance" unique_id=533968336 instance=ExtResource("1_2up2q")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 0, 0)
 
 [node name="torch_mounted" parent="Entrance/pillar3" unique_id=1245216849 instance=ExtResource("2_5dcro")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.3)
 
 [node name="torch_mounted2" parent="Entrance/pillar3" unique_id=533681193 instance=ExtResource("2_5dcro")]
-transform = Transform3D(-0.99999994, 0, 8.742277e-08, 0, 1, 0, -8.742277e-08, 0, -0.99999994, 0, 0, -0.3)
-
-[node name="pillar4" parent="Entrance" unique_id=1805134489 instance=ExtResource("1_2up2q")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 0)
-
-[node name="torch_mounted" parent="Entrance/pillar4" unique_id=758274 instance=ExtResource("2_5dcro")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.3)
-
-[node name="torch_mounted2" parent="Entrance/pillar4" unique_id=1675565178 instance=ExtResource("2_5dcro")]
 transform = Transform3D(-0.99999994, 0, 8.742277e-08, 0, 1, 0, -8.742277e-08, 0, -0.99999994, 0, 0, -0.3)
 
 [node name="GreenRoom" type="Node3D" parent="." unique_id=969225279]
@@ -181,6 +216,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 4)
 [node name="banner_yellow2" parent="YellowRoom/wall11" unique_id=1919847942 instance=ExtResource("15_0jkld")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, 0)
 
+[node name="table_long_broken2" parent="YellowRoom" unique_id=2012811723 instance=ExtResource("12_7fary")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.3999996, 0, 0)
+
+[node name="barrel_small_stack2" parent="YellowRoom/table_long_broken2" unique_id=773314741 instance=ExtResource("18_pecol")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.40000057, 1, -0.8999996)
+
 [node name="BlueRoom" type="Node3D" parent="." unique_id=347525843]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36, 0, 14)
 
@@ -211,7 +252,7 @@ transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0
 [node name="Wall_Doorway4" parent="BlueRoom" unique_id=230273518 instance=ExtResource("17_c4tja")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -8, 0, -2)
 
-[node name="table_long_broken2" parent="BlueRoom" unique_id=2012811723 instance=ExtResource("12_7fary")]
+[node name="table_long_broken2" parent="BlueRoom" unique_id=151494785 instance=ExtResource("12_7fary")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 4)
 
 [node name="table_long_broken3" parent="BlueRoom" unique_id=1273209451 instance=ExtResource("12_7fary")]
@@ -225,9 +266,11 @@ transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70
 
 [node name="bar_straight_C2" parent="BlueRoom" unique_id=2056931620 instance=ExtResource("16_nlict")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -7)
+loot_gold = 2
 
 [node name="bar_straight_C3" parent="BlueRoom" unique_id=1077466124 instance=ExtResource("16_nlict")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -7)
+loot_gold = 3
 
 [node name="plate_stack2" parent="BlueRoom/bar_straight_C3" unique_id=154144263 instance=ExtResource("17_qarta")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
@@ -532,17 +575,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, -4)
 
 [node name="Wall" type="Node3D" parent="." unique_id=2006528251]
 
-[node name="wall_corner2" parent="Wall" unique_id=83316422 instance=ExtResource("4_ra21l")]
-transform = Transform3D(1.1924881e-08, 0, 1, 0, 1, 0, -1, 0, 1.1924881e-08, 58, 0, 2)
-
 [node name="wall_corner42" parent="Wall" unique_id=1540855416 instance=ExtResource("4_ra21l")]
 transform = Transform3D(1, 0, -5.563627e-08, 0, 1, 0, 5.563627e-08, 0, 1, 62, 0, 2)
 
 [node name="wall_corner43" parent="Wall" unique_id=1089524728 instance=ExtResource("4_ra21l")]
 transform = Transform3D(-9.934766e-08, 0, -1, 0, 1, 0, 1, 0, -9.934766e-08, 62, 0, -2)
-
-[node name="wall_corner3" parent="Wall" unique_id=1683936099 instance=ExtResource("4_ra21l")]
-transform = Transform3D(-1, 0, -3.1786506e-08, 0, 1, 0, 3.1786506e-08, 0, -1, 58, 0, -2)
 
 [node name="wall_corner4" parent="Wall" unique_id=91452062 instance=ExtResource("4_ra21l")]
 transform = Transform3D(1.1924882e-08, 0, 1, 0, 1, 0, -1, 0, 1.1924882e-08, 22, 0, 6)
@@ -720,12 +757,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -2)
 
 [node name="wall14" parent="Wall" unique_id=849651302 instance=ExtResource("12_rtwjv")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 58, 0, 6)
-
-[node name="wall15" parent="Wall" unique_id=112963386 instance=ExtResource("12_rtwjv")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 58, 0, -2)
-
-[node name="wall16" parent="Wall" unique_id=523139311 instance=ExtResource("12_rtwjv")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 58, 0, 2)
 
 [node name="wall8" parent="Wall" unique_id=1856687396 instance=ExtResource("12_rtwjv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34, 0, 6)
