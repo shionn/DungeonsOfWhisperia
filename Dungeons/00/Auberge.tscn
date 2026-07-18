@@ -406,6 +406,18 @@ Ce n’était pas un animal, ni une personne. Juste une image."
 pnj = NodePath("../../../../../..")
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
+[node name="Gouffre des Ombres ?" type="Node" parent="Alaric Duclair/Présentation/Next" unique_id=1561556844]
+script = ExtResource("3_fq3ns")
+text = "Que savez-vous sur le Gouffre des Ombres ?"
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Next" type="Node" parent="Alaric Duclair/Présentation/Next/Gouffre des Ombres ?" unique_id=1296070086 node_paths=PackedStringArray("pnj")]
+script = ExtResource("3_fq3ns")
+text = "Autrefois, c’était une place forte creusée dans la montagne au sud, un bastion de pierre et de pierres précieuses. Juste à côté du [i]Lac d’Argent[/i], dont les eaux scintillent comme des diamants sous la lune. C’était un havre de paix et de culte pour la Déesse [i]Veyrath[/i], [i]Gardienne des Âmes Perdues et Reine des Ombres Éternelles[/i]. 
+Mais il y a très longtemps, les habitants ont été touchés par une malédiction qui ravagea leurs corps et leurs esprits, et ils ont tous péri. Personne n’a jamais voulu s’y installer après cela. Depuis, les monstres errants — gobelins, orcs, et autres joyeusté — occupent ces lieux à tour de rôles.  "
+pnj = NodePath("../../../..")
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
 [node name="Valthorion ?" type="Node" parent="Alaric Duclair/Présentation/Next" unique_id=178631761]
 script = ExtResource("3_fq3ns")
 text = "As tu entendu parler de Valthorion ?"

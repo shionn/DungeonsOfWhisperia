@@ -19,6 +19,8 @@
 [ext_resource type="Texture2D" uid="uid://tshe7v1i7wsg" path="res://Gui/Assets/kaykit/48/Jewel_Green.png" id="17_1fphk"]
 [ext_resource type="Texture2D" uid="uid://5b37qc2lu48j" path="res://Gui/Assets/kaykit/48/Jewel_Orange.png" id="18_sjtuv"]
 [ext_resource type="Texture2D" uid="uid://xh4id0a8h8u5" path="res://Gui/Assets/kaykit/48/Jewel_Blue.png" id="19_cvq6i"]
+[ext_resource type="Texture2D" uid="uid://ebx8aa8ddqnm" path="res://Gui/Assets/kaykit/48/Gold_Gem_Ring_3.png" id="20_6tx0c"]
+[ext_resource type="Texture2D" uid="uid://bbbfyt8fxs1hn" path="res://Gui/Assets/kaykit/48/Gold_Ring_1.png" id="21_0to5b"]
 
 [node name="World" type="Node3D" unique_id=1017407997]
 script = ExtResource("1_bcbcq")
@@ -148,6 +150,23 @@ icon = ExtResource("19_cvq6i")
 description = "C'est une gemme bleu, probablement une agate. Elle semble taillée pour s'insérer dans un objet."
 global = false
 gemme = true
+metadata/_custom_type_script = "uid://bjbab3ep2gfn2"
+
+[node name="Anneau Valthorion" type="Node" parent="Items" unique_id=1911520983]
+script = ExtResource("5_p1v5b")
+item_name = 13
+icon = ExtResource("20_6tx0c")
+description = "Cet anneau est magnifique. 
+À l'intérieur, je peux y lire [i]Valthorion[/i]."
+unique = true
+metadata/_custom_type_script = "uid://bjbab3ep2gfn2"
+
+[node name="Alliance" type="Node" parent="Items" unique_id=556752775]
+script = ExtResource("5_p1v5b")
+item_name = 14
+icon = ExtResource("21_0to5b")
+description = "C'est une alliance"
+unique = true
 metadata/_custom_type_script = "uid://bjbab3ep2gfn2"
 
 [connection signal="_action" from="Items/Potion Vie Mineur" to="Items/Potion Vie Mineur" method="_give_back_1d3_pv"]

@@ -14,6 +14,8 @@
 [ext_resource type="PackedScene" uid="uid://d2s6ulp6b5oe" path="res://Assets/Characters/AdventurersAccessoires/potion_small_orange.gltf" id="12_11lau"]
 [ext_resource type="PackedScene" uid="uid://d4ie8loh7o3k0" path="res://Assets/Characters/AdventurersAccessoires/potion_small_green.gltf" id="13_h6exc"]
 [ext_resource type="PackedScene" uid="uid://dgc6r0o5rxge4" path="res://Assets/Characters/AdventurersAccessoires/potion_small_blue.gltf" id="14_1n2eg"]
+[ext_resource type="PackedScene" uid="uid://dvelexyha7wyc" path="res://Assets/BinbunVFX/Treasure_Pro/Jewelry/Gold_Gem_Ring/Gold_Gem_Ring_03.glb" id="15_p0vbx"]
+[ext_resource type="PackedScene" uid="uid://dtpdw646dslny" path="res://Assets/BinbunVFX/Treasure_Pro/Jewelry/Gold_Ring/Gold_Ring_01.glb" id="16_q2n8a"]
 
 [sub_resource type="Environment" id="Environment_b02ke"]
 background_energy_multiplier = 0.0
@@ -70,6 +72,12 @@ transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0
 
 [node name="potion_small_blue2" parent="Old" unique_id=1972663799 instance=ExtResource("14_1n2eg")]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+
+[node name="Gold_Gem_Ring_032" parent="Old" unique_id=94392524 instance=ExtResource("15_p0vbx")]
+transform = Transform3D(0.7071067, 0.35355338, 0.6123724, 0, 0.8660254, -0.5, -0.70710677, 0.35355335, 0.61237246, 0, 0, 0)
+
+[node name="Gold_Ring_012" parent="Old" unique_id=1854425511 instance=ExtResource("16_q2n8a")]
+transform = Transform3D(0.7071067, 0.35355338, 0.6123724, 0, 0.8660254, -0.5, -0.70710677, 0.35355335, 0.61237246, 0, 0, 0)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=979525193]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 2, 0)

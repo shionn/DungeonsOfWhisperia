@@ -15,6 +15,8 @@ enum ItemName {
 	GemmeVert,
 	GemmeJaune,
 	GemmeBleu,
+	AnneauValthorion,
+	Alliance
 }
 
 func from(item_name : ItemName) -> Item :

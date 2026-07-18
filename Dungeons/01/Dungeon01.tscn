@@ -1764,7 +1764,11 @@ parameters/looping = true
 script = ExtResource("7_v4w5c")
 text = "Lorsque vous arrivez près du mausolée, vous ne croisez d’abord aucun mort-vivant… Mais les bruits étouffés de grognements et les ombres qui s’échappent de ses ruines vous mettent aussitôt en garde. Les créatures semblent sortir du mausolée lui-même, comme si leur présence était inscrite dans ses murs. Vous hésitez un instant, puis vous décidez de pénétrer à l’intérieur, déterminé à découvrir ce qui se cache derrière cette menace.
 
-[i]Objectif : Vous devez vaincre le maître des lieux et rapporter une preuve de votre réussite[/i]."
+[i]Objectif :[i]
+[ul]
+Vaincre le maître des lieux.
+Rapporter une preuve de votre réussite.
+[/ul]"
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
 [connection signal="activate" from="BossRoom/bar_straight_C2/Code/Action1" to="BossRoom/bar_straight_C2/Code" method="_on_action_1_activate"]
