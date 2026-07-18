@@ -8,6 +8,7 @@ extends GameBase
 @export var conssommable : bool = false
 @export var global : bool = true
 @export var unique : bool = false
+@export var gemme : bool = false
 
 signal _action()
 

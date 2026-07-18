@@ -9,7 +9,11 @@ enum Action { ACTIVATE, LOOK }
 @export var action : Action = Action.ACTIVATE
 @export var interactDistance : float = 3
 
-@export var loot_obj : Items.ItemName = Items.ItemName.None
+@export var loot_obj : Items.ItemName = Items.ItemName.None :
+	set(value) :
+		loot_obj = value
+		on_loot_obj_change()
+		
 @export var loot_gold: int = 0
 @export var hide_on_loot: bool = false
 
@@ -59,7 +63,8 @@ func on_item_drop(_item : Item)-> void:
 	item_drop.emit(_item)
 	if item_drop.get_connections().is_empty() :
 		gui.consoleLog("Aucun effet.")
-	
+
+func on_loot_obj_change() -> void : pass
 
 func _on_input_event(_camera: Node, _event: InputEvent, _event_position: Vector3, _normal: Vector3, _shape_idx: int) -> void:
 	#if event is InputEventMouseButton and Input.is_action_just_pressed("interact"): 

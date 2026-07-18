@@ -120,6 +120,7 @@ item_name = 9
 icon = ExtResource("16_6w02q")
 description = "C'est une gemme rouge, probablement un rubi. Elle semble taillée pour s'insérer dans un objet."
 global = false
+gemme = true
 metadata/_custom_type_script = "uid://bjbab3ep2gfn2"
 
 [node name="Gemme Verte" type="Node" parent="Items" unique_id=354231414]
@@ -128,6 +129,7 @@ item_name = 10
 icon = ExtResource("17_1fphk")
 description = "C'est une gemme verte, probablement une emeraude. Elle semble taillée pour s'insérer dans un objet."
 global = false
+gemme = true
 metadata/_custom_type_script = "uid://bjbab3ep2gfn2"
 
 [node name="Gemme Jaune" type="Node" parent="Items" unique_id=217133743]
@@ -136,6 +138,7 @@ item_name = 11
 icon = ExtResource("18_sjtuv")
 description = "C'est une gemme jaune, probablement une topaze. Elle semble taillée pour s'insérer dans un objet."
 global = false
+gemme = true
 metadata/_custom_type_script = "uid://bjbab3ep2gfn2"
 
 [node name="Gemme Bleu" type="Node" parent="Items" unique_id=2060773946]
@@ -144,6 +147,7 @@ item_name = 12
 icon = ExtResource("19_cvq6i")
 description = "C'est une gemme bleu, probablement une agate. Elle semble taillée pour s'insérer dans un objet."
 global = false
+gemme = true
 metadata/_custom_type_script = "uid://bjbab3ep2gfn2"
 
 [connection signal="_action" from="Items/Potion Vie Mineur" to="Items/Potion Vie Mineur" method="_give_back_1d3_pv"]

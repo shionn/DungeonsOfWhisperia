@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://djyg2cdin7gyb" path="res://Assets/Scenes/DungeonExit.tscn" id="1_0jkld"]
 [ext_resource type="PackedScene" uid="uid://b4peav3v7nax7" path="res://Assets/Dungeons/Pillar/pillar.gltf" id="1_2up2q"]
+[ext_resource type="Script" uid="uid://b1cg6be1cssev" path="res://Dungeons/02/RitualRoom.gd" id="1_o1k2d"]
 [ext_resource type="PackedScene" uid="uid://cl36lcn4lo2eq" path="res://Assets/Scenes/Torch_Mounted.tscn" id="2_5dcro"]
 [ext_resource type="PackedScene" uid="uid://kwbu30ltyyru" path="res://Assets/Dungeons/Floor/Large/floor_dirt_large.gltf" id="2_ra21l"]
 [ext_resource type="PackedScene" uid="uid://b3w65ugrkoyx4" path="res://Assets/Dungeons/Floor/Large/floor_tile_large.gltf" id="3_3ri71"]
@@ -10,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://cv1on6sxo61uc" path="res://Assets/Halloween/Bench/bench.gltf" id="5_sxs5t"]
 [ext_resource type="PackedScene" uid="uid://xqftme4a1q27" path="res://Assets/Dungeons/Wall/wall_inset.gltf" id="6_c4tja"]
 [ext_resource type="PackedScene" uid="uid://dn0yqbvgem56e" path="res://Assets/Halloween/Bench/bench_decorated.gltf" id="6_gonng"]
+[ext_resource type="AudioStream" uid="uid://bcafx5mkymm12" path="res://Audio/RPG Sound Pack/interface/interface3.wav" id="6_rmard"]
 [ext_resource type="PackedScene" uid="uid://dlo1eot4wd5ay" path="res://Assets/Dungeons/Wall/wall_broken.gltf" id="7_ehe8n"]
 [ext_resource type="PackedScene" uid="uid://ds1umuqbncwso" path="res://Assets/Characters/MonthlySeries6/Accessoires/Lorekeeper_Tome.gltf" id="7_gonng"]
 [ext_resource type="PackedScene" uid="uid://dn8xlfijthmhj" path="res://Assets/Dungeons/Wall/wall_archedwindow_gated.gltf" id="8_3p481"]
@@ -47,6 +49,7 @@
 [ext_resource type="PackedScene" uid="uid://bmdvn7w6kv12i" path="res://Assets/Dungeons/Bar/bartop_A_medium.gltf" id="17_a5mn1"]
 [ext_resource type="PackedScene" uid="uid://dnj0c0ut1hd35" path="res://Assets/Scenes/Wall_Doorway.tscn" id="17_c4tja"]
 [ext_resource type="PackedScene" uid="uid://bpu05mij5jnkt" path="res://Assets/Dungeons/Plates/plate_stack.gltf" id="17_qarta"]
+[ext_resource type="AudioStream" uid="uid://bj74tsrk725df" path="res://Audio/80-CC0-RPG-SFX/lock_02.ogg" id="18_eg26f"]
 [ext_resource type="PackedScene" uid="uid://dg16k84dtvwob" path="res://Assets/Dungeons/Bar/bartop_A_large.gltf" id="18_nsqvi"]
 [ext_resource type="PackedScene" uid="uid://d17shvcpj3oew" path="res://Assets/Dungeons/Barrel/barrel_small_stack.gltf" id="18_pecol"]
 [ext_resource type="PackedScene" uid="uid://dbaa76cyf7r3p" path="res://Assets/Bits/RpgTools/lantern.gltf" id="19_a5mn1"]
@@ -68,6 +71,7 @@
 [ext_resource type="PackedScene" uid="uid://dgmd57ii43q2v" path="res://Assets/Dungeons/Floor/Small/floor_tile_small_corner.gltf" id="33_pecol"]
 [ext_resource type="PackedScene" uid="uid://d2s6ulp6b5oe" path="res://Assets/Characters/AdventurersAccessoires/potion_small_orange.gltf" id="36_r2s6b"]
 [ext_resource type="PackedScene" uid="uid://dgc6r0o5rxge4" path="res://Assets/Characters/AdventurersAccessoires/potion_small_blue.gltf" id="47_ml8gv"]
+[ext_resource type="AudioStream" uid="uid://61hk6iwxjiwe" path="res://Audio/DungeonThemes/dungeon.ogg" id="69_gcmxt"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_brlmy"]
 radius = 0.6
@@ -79,29 +83,39 @@ radius = 0.1
 
 [node name="RitualRoom" type="Node3D" parent="." unique_id=649690424]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50, 0, 0)
+script = ExtResource("1_o1k2d")
 
 [node name="pillar" parent="RitualRoom" unique_id=1805134489 instance=ExtResource("1_2up2q")]
 
 [node name="torch_mounted" parent="RitualRoom/pillar" unique_id=758274 instance=ExtResource("2_5dcro")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.35)
 
 [node name="torch_mounted2" parent="RitualRoom/pillar" unique_id=1675565178 instance=ExtResource("2_5dcro")]
-transform = Transform3D(-0.99999994, 0, 8.742277e-08, 0, 1, 0, -8.742277e-08, 0, -0.99999994, 0, 0, -0.3)
+transform = Transform3D(-0.99999994, 0, 8.742277e-08, 0, 1, 0, -8.742277e-08, 0, -0.99999994, 0, 0, -0.35)
 
 [node name="Secret" type="Node3D" parent="RitualRoom" unique_id=1028306703]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 0)
 
-[node name="wall_corner2" parent="RitualRoom/Secret" unique_id=83316422 instance=ExtResource("4_ra21l")]
-transform = Transform3D(1.1924881e-08, 0, 1, 0, 1, 0, -1, 0, 1.1924881e-08, 0, 0, 2)
+[node name="Closed" type="Node3D" parent="RitualRoom/Secret" unique_id=1533201276]
 
-[node name="wall_corner3" parent="RitualRoom/Secret" unique_id=1683936099 instance=ExtResource("4_ra21l")]
-transform = Transform3D(-1, 0, -3.1786506e-08, 0, 1, 0, 3.1786506e-08, 0, -1, 0, 0, -2)
-
-[node name="wall15" parent="RitualRoom/Secret" unique_id=112963386 instance=ExtResource("12_rtwjv")]
+[node name="wall15" parent="RitualRoom/Secret/Closed" unique_id=112963386 instance=ExtResource("12_rtwjv")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, -2)
 
-[node name="wall16" parent="RitualRoom/Secret" unique_id=523139311 instance=ExtResource("12_rtwjv")]
+[node name="wall16" parent="RitualRoom/Secret/Closed" unique_id=523139311 instance=ExtResource("12_rtwjv")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 2)
+
+[node name="Open" type="Node3D" parent="RitualRoom/Secret" unique_id=13052749]
+visible = false
+
+[node name="wall_corner2" parent="RitualRoom/Secret/Open" unique_id=83316422 instance=ExtResource("4_ra21l")]
+transform = Transform3D(1.1924881e-08, 0, 1, 0, 1, 0, -1, 0, 1.1924881e-08, 0, 0, 2)
+
+[node name="wall_corner3" parent="RitualRoom/Secret/Open" unique_id=1683936099 instance=ExtResource("4_ra21l")]
+transform = Transform3D(-1, 0, -3.1786506e-08, 0, 1, 0, 3.1786506e-08, 0, -1, 0, 0, -2)
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RitualRoom/Secret" unique_id=229163469]
+stream = ExtResource("6_rmard")
+bus = &"Effet"
 
 [node name="bench2" parent="RitualRoom" unique_id=248207596 instance=ExtResource("5_sxs5t")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, -2)
@@ -137,6 +151,11 @@ script = ExtResource("13_iikjq")
 text = "L'œil droit du crâne semble usé comme si quelque chose avait été inséré à l'intérieur."
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
+[node name="already_sloted" type="Node" parent="RitualRoom/wall_inset3/Skull" unique_id=161501106]
+script = ExtResource("13_iikjq")
+text = "Il y a déjà une gemme insérée. Je devrais l’enlever d’abord pour la changer."
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
 [node name="blue" parent="RitualRoom/wall_inset3/Skull" unique_id=51621893 instance=ExtResource("12_xegty")]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -0.20000076, 0.39999992, 0)
 visible = false
@@ -159,23 +178,137 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.39999992, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RitualRoom/wall_inset3/Skull/Area3D" unique_id=836964904]
 shape = SubResource("SphereShape3D_brlmy")
 
+[node name="Lock02" type="AudioStreamPlayer3D" parent="RitualRoom/wall_inset3/Skull" unique_id=846731440]
+stream = ExtResource("18_eg26f")
+
 [node name="wall_inset4" parent="RitualRoom" unique_id=488697972 instance=ExtResource("6_c4tja")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -10)
 
-[node name="skull2" parent="RitualRoom/wall_inset4" unique_id=602530252 instance=ExtResource("11_vgs0b")]
+[node name="Skull" parent="RitualRoom/wall_inset4" unique_id=2123561740 instance=ExtResource("11_vgs0b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.59999996, 0)
+script = ExtResource("12_rmpyj")
+expected_obj = 10
+
+[node name="description" type="Node" parent="RitualRoom/wall_inset4/Skull" unique_id=1590318077]
+script = ExtResource("13_iikjq")
+text = "L'œil droit du crâne semble usé comme si quelque chose avait été inséré à l'intérieur."
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="already_sloted" type="Node" parent="RitualRoom/wall_inset4/Skull" unique_id=1692785573]
+script = ExtResource("13_iikjq")
+text = "Il y a déjà une gemme insérée. Je devrais l’enlever d’abord pour la changer."
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="blue" parent="RitualRoom/wall_inset4/Skull" unique_id=297703352 instance=ExtResource("12_xegty")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -0.20000076, 0.39999992, 0)
+visible = false
+
+[node name="green" parent="RitualRoom/wall_inset4/Skull" unique_id=69655530 instance=ExtResource("13_rmpyj")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -0.20000076, 0.39999992, 0)
+visible = false
+
+[node name="orange" parent="RitualRoom/wall_inset4/Skull" unique_id=61642795 instance=ExtResource("14_iikjq")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -0.20000076, 0.39999992, 0)
+visible = false
+
+[node name="red" parent="RitualRoom/wall_inset4/Skull" unique_id=1525575446 instance=ExtResource("15_gcmxt")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -0.20000076, 0.39999992, 0)
+visible = false
+
+[node name="Area3D" type="Area3D" parent="RitualRoom/wall_inset4/Skull" unique_id=1127202382]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.39999992, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RitualRoom/wall_inset4/Skull/Area3D" unique_id=366786919]
+shape = SubResource("SphereShape3D_brlmy")
+
+[node name="Lock02" type="AudioStreamPlayer3D" parent="RitualRoom/wall_inset4/Skull" unique_id=278668194]
+stream = ExtResource("18_eg26f")
 
 [node name="wall_inset5" parent="RitualRoom" unique_id=665012225 instance=ExtResource("6_c4tja")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -4, 0, 10)
 
-[node name="skull2" parent="RitualRoom/wall_inset5" unique_id=1912352477 instance=ExtResource("11_vgs0b")]
+[node name="Skull" parent="RitualRoom/wall_inset5" unique_id=610174726 instance=ExtResource("11_vgs0b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.59999996, 0)
+script = ExtResource("12_rmpyj")
+expected_obj = 11
+
+[node name="description" type="Node" parent="RitualRoom/wall_inset5/Skull" unique_id=1245345406]
+script = ExtResource("13_iikjq")
+text = "L'œil droit du crâne semble usé comme si quelque chose avait été inséré à l'intérieur."
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="already_sloted" type="Node" parent="RitualRoom/wall_inset5/Skull" unique_id=364081335]
+script = ExtResource("13_iikjq")
+text = "Il y a déjà une gemme insérée. Je devrais l’enlever d’abord pour la changer."
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="blue" parent="RitualRoom/wall_inset5/Skull" unique_id=1929077476 instance=ExtResource("12_xegty")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -0.20000076, 0.39999992, 0)
+visible = false
+
+[node name="green" parent="RitualRoom/wall_inset5/Skull" unique_id=734617994 instance=ExtResource("13_rmpyj")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -0.20000076, 0.39999992, 0)
+visible = false
+
+[node name="orange" parent="RitualRoom/wall_inset5/Skull" unique_id=1588541308 instance=ExtResource("14_iikjq")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -0.20000076, 0.39999992, 0)
+visible = false
+
+[node name="red" parent="RitualRoom/wall_inset5/Skull" unique_id=606464536 instance=ExtResource("15_gcmxt")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -0.20000076, 0.39999992, 0)
+visible = false
+
+[node name="Area3D" type="Area3D" parent="RitualRoom/wall_inset5/Skull" unique_id=472793259]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.39999992, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RitualRoom/wall_inset5/Skull/Area3D" unique_id=1840606546]
+shape = SubResource("SphereShape3D_brlmy")
+
+[node name="Lock02" type="AudioStreamPlayer3D" parent="RitualRoom/wall_inset5/Skull" unique_id=1576421745]
+stream = ExtResource("18_eg26f")
 
 [node name="wall_inset6" parent="RitualRoom" unique_id=798272793 instance=ExtResource("6_c4tja")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 4, 0, 10)
 
-[node name="skull2" parent="RitualRoom/wall_inset6" unique_id=1659538690 instance=ExtResource("11_vgs0b")]
+[node name="Skull" parent="RitualRoom/wall_inset6" unique_id=633617227 instance=ExtResource("11_vgs0b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.59999996, 0)
+script = ExtResource("12_rmpyj")
+expected_obj = 12
+
+[node name="description" type="Node" parent="RitualRoom/wall_inset6/Skull" unique_id=1817686335]
+script = ExtResource("13_iikjq")
+text = "L'œil droit du crâne semble usé comme si quelque chose avait été inséré à l'intérieur."
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="already_sloted" type="Node" parent="RitualRoom/wall_inset6/Skull" unique_id=728750987]
+script = ExtResource("13_iikjq")
+text = "Il y a déjà une gemme insérée. Je devrais l’enlever d’abord pour la changer."
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="blue" parent="RitualRoom/wall_inset6/Skull" unique_id=1647879462 instance=ExtResource("12_xegty")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -0.20000076, 0.39999992, 0)
+visible = false
+
+[node name="green" parent="RitualRoom/wall_inset6/Skull" unique_id=305536172 instance=ExtResource("13_rmpyj")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -0.20000076, 0.39999992, 0)
+visible = false
+
+[node name="orange" parent="RitualRoom/wall_inset6/Skull" unique_id=753388821 instance=ExtResource("14_iikjq")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -0.20000076, 0.39999992, 0)
+visible = false
+
+[node name="red" parent="RitualRoom/wall_inset6/Skull" unique_id=912520638 instance=ExtResource("15_gcmxt")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -0.20000076, 0.39999992, 0)
+visible = false
+
+[node name="Area3D" type="Area3D" parent="RitualRoom/wall_inset6/Skull" unique_id=1206068886]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.39999992, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RitualRoom/wall_inset6/Skull/Area3D" unique_id=686467956]
+shape = SubResource("SphereShape3D_brlmy")
+
+[node name="Lock02" type="AudioStreamPlayer3D" parent="RitualRoom/wall_inset6/Skull" unique_id=2023405618]
+stream = ExtResource("18_eg26f")
 
 [node name="banner_white2" parent="RitualRoom" unique_id=134994424 instance=ExtResource("12_gheph")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -8, 0, 6)
@@ -1245,3 +1378,14 @@ transform = Transform3D(1, 0, 0, 0, -1, 8.742278e-08, 0, -8.742278e-08, -1, 20, 
 
 [node name="floor_dirt_large16" parent="Roof" unique_id=551975322 instance=ExtResource("2_ra21l")]
 transform = Transform3D(1, 0, 0, 0, -1, 8.742278e-08, 0, -8.742278e-08, -1, 12, 0, -4)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1699497070]
+stream = ExtResource("69_gcmxt")
+autoplay = true
+bus = &"Background"
+parameters/looping = true
+
+[connection signal="state_change" from="RitualRoom/wall_inset3/Skull" to="RitualRoom" method="_on_skull_state_change"]
+[connection signal="state_change" from="RitualRoom/wall_inset4/Skull" to="RitualRoom" method="_on_skull_state_change"]
+[connection signal="state_change" from="RitualRoom/wall_inset5/Skull" to="RitualRoom" method="_on_skull_state_change"]
+[connection signal="state_change" from="RitualRoom/wall_inset6/Skull" to="RitualRoom" method="_on_skull_state_change"]
