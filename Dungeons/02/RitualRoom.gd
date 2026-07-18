@@ -13,7 +13,7 @@ func _on_skull_state_change() -> void:
 		gui._close()
 
 func _openSecret() -> void:
-	$Secret/Closed.hide()
+	$Secret/Closed.queue_free()
 	$Secret/Open.show()
 	$Secret/AudioStreamPlayer3D.play()
 	
