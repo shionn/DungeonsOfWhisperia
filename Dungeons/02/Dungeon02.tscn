@@ -57,6 +57,7 @@
 [ext_resource type="PackedScene" uid="uid://yand4djtdef5" path="res://Assets/Dungeons/Wall/wall_inset_candles.gltf" id="15_gs1cg"]
 [ext_resource type="PackedScene" uid="uid://dj0modsh7x76o" path="res://Assets/Scenes/Bar_Straight_C.tscn" id="16_nlict"]
 [ext_resource type="PackedScene" uid="uid://gv22cmuit7gu" path="res://Assets/Dungeons/Banner/banner_blue.gltf" id="16_rtwjv"]
+[ext_resource type="PackedScene" uid="uid://bojxodbjjxr2s" path="res://Assets/BinbunVFX/portal_vfx/effects/oval/oval_portal_vfx_06.tscn" id="16_t7qvu"]
 [ext_resource type="PackedScene" uid="uid://bmdvn7w6kv12i" path="res://Assets/Dungeons/Bar/bartop_A_medium.gltf" id="17_a5mn1"]
 [ext_resource type="PackedScene" uid="uid://dnj0c0ut1hd35" path="res://Assets/Scenes/Wall_Doorway.tscn" id="17_c4tja"]
 [ext_resource type="PackedScene" uid="uid://bpu05mij5jnkt" path="res://Assets/Dungeons/Plates/plate_stack.gltf" id="17_qarta"]
@@ -81,6 +82,14 @@
 [ext_resource type="PackedScene" uid="uid://dfqu824ryf85i" path="res://Assets/Dungeons/Floor/Large/floor_dirt_large_rocky.gltf" id="32_m1hbu"]
 [ext_resource type="PackedScene" uid="uid://dgmd57ii43q2v" path="res://Assets/Dungeons/Floor/Small/floor_tile_small_corner.gltf" id="33_pecol"]
 [ext_resource type="PackedScene" uid="uid://d2s6ulp6b5oe" path="res://Assets/Characters/AdventurersAccessoires/potion_small_orange.gltf" id="36_r2s6b"]
+[ext_resource type="PackedScene" uid="uid://fthfvfhxyc3h" path="res://Assets/Characters/SkeletonAccessoires/Skeleton_Golem_Axe_Large.gltf" id="40_xkagc"]
+[ext_resource type="PackedScene" uid="uid://ddltg2208h6ta" path="res://Assets/Characters/SkeletonAccessoires/Skeleton_Axe.gltf" id="41_t7qvu"]
+[ext_resource type="PackedScene" uid="uid://cx81jxahw60nm" path="res://Assets/Characters/SkeletonAccessoires/Skeleton_Blade.gltf" id="42_574a7"]
+[ext_resource type="PackedScene" uid="uid://wj4kthwrxw47" path="res://Assets/Characters/SkeletonAccessoires/Skeleton_Crossbow.gltf" id="43_pgid5"]
+[ext_resource type="PackedScene" uid="uid://df2xxj6eg1r2h" path="res://Assets/Characters/SkeletonAccessoires/Skeleton_Quiver.gltf" id="44_nxb0p"]
+[ext_resource type="PackedScene" uid="uid://cmgcb36g7vtfc" path="res://Assets/Characters/SkeletonAccessoires/Skeleton_Shield_Large_A.gltf" id="45_bf3pl"]
+[ext_resource type="PackedScene" uid="uid://4asvis6f4ftv" path="res://Assets/Characters/SkeletonAccessoires/Skeleton_Shield_Small_A.gltf" id="46_eswb4"]
+[ext_resource type="PackedScene" uid="uid://dpek8oj8ussjy" path="res://Assets/Characters/SkeletonAccessoires/Skeleton_Dagger.gltf" id="47_letkk"]
 [ext_resource type="PackedScene" uid="uid://dgc6r0o5rxge4" path="res://Assets/Characters/AdventurersAccessoires/potion_small_blue.gltf" id="47_ml8gv"]
 [ext_resource type="AudioStream" uid="uid://61hk6iwxjiwe" path="res://Audio/DungeonThemes/dungeon.ogg" id="69_gcmxt"]
 [ext_resource type="PackedScene" uid="uid://qv2dm02eh64" path="res://Assets/Dungeons/Wall/wall_inset_shelves_decoratedA.gltf" id="73_5ea61"]
@@ -95,6 +104,41 @@ radius = 0.6
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_b02ke"]
 radius = 0.1
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ei0w7"]
+radius = 0.2
+height = 2.65
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_m2ftf"]
+size = Vector3(1, 0.7, 0.2)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_l7dob"]
+radius = 0.2
+height = 1.15
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_2iht2"]
+radius = 0.2
+height = 1.55
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_pfj0w"]
+radius = 0.2
+height = 1.35
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_q0806"]
+radius = 0.2
+height = 0.95
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_oaa28"]
+height = 0.3
+radius = 0.6
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_a4cxk"]
+height = 0.17500001
+radius = 0.4428711
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_it32w"]
+radius = 0.2
+height = 1.3
 
 [node name="Dungeon02" type="Node3D" unique_id=879788223]
 
@@ -227,8 +271,18 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.100006, 0, -5.200001)
 [node name="bookcase_double_decoratedB2" parent="BossRoom" unique_id=1026479706 instance=ExtResource("14_13ejr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -5.2)
 
+[node name="bookcase_double_decoratedA3" parent="BossRoom" unique_id=1861614156 instance=ExtResource("13_3uwpk")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -5, 0, 5.199999)
+
+[node name="bookcase_double_decoratedB3" parent="BossRoom" unique_id=730767151 instance=ExtResource("14_13ejr")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 5.100006, 0, 5.199999)
+
 [node name="arch2" parent="BossRoom" unique_id=1949722278 instance=ExtResource("15_13ejr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.1000004)
+
+[node name="OvalPortalVFX_06" parent="BossRoom/arch2" unique_id=531895884 instance=ExtResource("16_t7qvu")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 1.7, 0)
+size = Vector2(3, 4)
 
 [node name="RitualRoom" type="Node3D" parent="." unique_id=649690424]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50, 0, 0)
@@ -501,36 +555,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
 [node name="Wall_Doorway" parent="GreenRoom" unique_id=1404395131 instance=ExtResource("17_c4tja")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
 
-[node name="bar_straight_C2" parent="GreenRoom" unique_id=946520791 instance=ExtResource("16_nlict")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -5, 0, 2)
-
-[node name="bartop_A_medium2" parent="GreenRoom/bar_straight_C2" unique_id=1166037996 instance=ExtResource("17_a5mn1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-
-[node name="bar_straight_C3" parent="GreenRoom" unique_id=24224270 instance=ExtResource("16_nlict")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -5, 0, 0)
-
-[node name="bartop_A_medium2" parent="GreenRoom/bar_straight_C3" unique_id=1095069935 instance=ExtResource("17_a5mn1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-
-[node name="bar_straight_C4" parent="GreenRoom" unique_id=764924936 instance=ExtResource("16_nlict")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -5, 0, -2)
-
-[node name="bartop_A_medium2" parent="GreenRoom/bar_straight_C4" unique_id=1707230434 instance=ExtResource("17_a5mn1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-
-[node name="bar_innercorner2" parent="GreenRoom" unique_id=1863945209 instance=ExtResource("8_352hu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, -3)
-
-[node name="bar_straight_C_short" parent="GreenRoom" unique_id=1297367655 instance=ExtResource("10_nsqvi")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 5, 0, -1)
-
-[node name="bar_straight_C5" parent="GreenRoom" unique_id=304514423 instance=ExtResource("16_nlict")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0, -3)
-
-[node name="bartop_A_large2" parent="GreenRoom/bar_straight_C5" unique_id=292816299 instance=ExtResource("18_nsqvi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0)
-
 [node name="wall_inset_candles3" parent="GreenRoom" unique_id=566549988 instance=ExtResource("15_gs1cg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -4)
 
@@ -545,6 +569,291 @@ transform = Transform3D(1, 0, 3.5527137e-15, 0, 1, 0, -3.5527137e-15, 0, 1, 0, -
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="GreenRoom/wall_inset_candles3/potion_small_green2/Area3D" unique_id=1676256051]
 shape = SubResource("SphereShape3D_b02ke")
+
+[node name="Weapons" type="Node3D" parent="GreenRoom" unique_id=371264448]
+
+[node name="Skeleton_Golem_Axe_Large2" parent="GreenRoom/Weapons" unique_id=36433896 instance=ExtResource("40_xkagc")]
+transform = Transform3D(-0.9659262, -0.25881916, 2.9802326e-08, -0.2578342, 0.9622504, 0.08715576, -0.022557748, 0.08418596, -0.99619484, -3.2999992, 0.8, 3.2000008)
+script = ExtResource("23_ml8gv")
+action = 1
+
+[node name="Area3D" type="Area3D" parent="GreenRoom/Weapons/Skeleton_Golem_Axe_Large2" unique_id=1571813406]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GreenRoom/Weapons/Skeleton_Golem_Axe_Large2/Area3D" unique_id=1896883040]
+transform = Transform3D(1.0000012, 0, 0, 0, 1.0000012, 0, -3.4106051e-12, 8.56204e-13, 1, -1.5258789e-05, 0.57500124, 0)
+shape = SubResource("CapsuleShape3D_ei0w7")
+
+[node name="description" type="Node" parent="GreenRoom/Weapons/Skeleton_Golem_Axe_Large2" unique_id=2114101768]
+script = ExtResource("13_iikjq")
+text = "J'ai déjà vu ca..."
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Skeleton_Axe2" parent="GreenRoom/Weapons" unique_id=1468644244 instance=ExtResource("41_t7qvu")]
+transform = Transform3D(-4.371139e-08, -1, -4.371139e-08, 0, -4.371139e-08, 1, -1, 4.371139e-08, 1.9106855e-15, 3, 1.1, -2.8000011)
+script = ExtResource("23_ml8gv")
+
+[node name="Area3D" type="Area3D" parent="GreenRoom/Weapons/Skeleton_Axe2" unique_id=1492255802]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GreenRoom/Weapons/Skeleton_Axe2/Area3D" unique_id=558049688]
+transform = Transform3D(1, 0, 0, 0, 1, 8.351872e-23, 0, 8.351872e-23, 1, 0, 0.6500006, 1.1920929e-07)
+shape = SubResource("BoxShape3D_m2ftf")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="GreenRoom/Weapons/Skeleton_Axe2/Area3D" unique_id=614497952]
+transform = Transform3D(1, 0, 0, 0, 1, 8.351872e-23, 0, 8.351872e-23, 1, 0, 0.32500076, 1.1920929e-07)
+shape = SubResource("CapsuleShape3D_l7dob")
+
+[node name="description" type="Node" parent="GreenRoom/Weapons/Skeleton_Axe2" unique_id=1245990446]
+script = ExtResource("13_iikjq")
+text = "C'est en trop mauvais état"
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Skeleton_Axe3" parent="GreenRoom/Weapons" unique_id=1678649445 instance=ExtResource("41_t7qvu")]
+transform = Transform3D(-4.371139e-08, -1, -4.371139e-08, 0, -4.371139e-08, 1, -1, 4.371139e-08, 1.9106855e-15, 4.5, 1.1, -2.8000011)
+script = ExtResource("23_ml8gv")
+
+[node name="Area3D" type="Area3D" parent="GreenRoom/Weapons/Skeleton_Axe3" unique_id=1156443623]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GreenRoom/Weapons/Skeleton_Axe3/Area3D" unique_id=2140585664]
+transform = Transform3D(1, 0, 0, 0, 1, 8.351872e-23, 0, 8.351872e-23, 1, 0, 0.6500006, 1.1920929e-07)
+shape = SubResource("BoxShape3D_m2ftf")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="GreenRoom/Weapons/Skeleton_Axe3/Area3D" unique_id=181307882]
+transform = Transform3D(1, 0, 0, 0, 1, 8.351872e-23, 0, 8.351872e-23, 1, 0, 0.32500076, 1.1920929e-07)
+shape = SubResource("CapsuleShape3D_l7dob")
+
+[node name="description" type="Node" parent="GreenRoom/Weapons/Skeleton_Axe3" unique_id=644351800]
+script = ExtResource("13_iikjq")
+text = "C'est en trop mauvais état"
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Skeleton_Blade2" parent="GreenRoom/Weapons" unique_id=914444647 instance=ExtResource("42_574a7")]
+transform = Transform3D(-0.497521, 0.030153746, 0.8669277, 0.85196626, -0.17101009, 0.4948829, 0.16317599, 0.9848077, 0.05939114, -5.2, 2.3980842, -2.455927)
+script = ExtResource("23_ml8gv")
+interactDistance = 4.0
+
+[node name="Area3D" type="Area3D" parent="GreenRoom/Weapons/Skeleton_Blade2" unique_id=543200701]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GreenRoom/Weapons/Skeleton_Blade2/Area3D" unique_id=909920569]
+transform = Transform3D(1, 1.7695129e-07, 0, 1.9557774e-07, 0.999999, -1.8626451e-09, 1.1920929e-07, -2.7753413e-07, 1, 0, 0.42499447, -1.9073486e-06)
+shape = SubResource("CapsuleShape3D_2iht2")
+
+[node name="description" type="Node" parent="GreenRoom/Weapons/Skeleton_Blade2" unique_id=705178205]
+script = ExtResource("13_iikjq")
+text = "C'est en trop mauvais état"
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Skeleton_Blade3" parent="GreenRoom/Weapons" unique_id=1259995668 instance=ExtResource("42_574a7")]
+transform = Transform3D(-0.497521, 0.030153746, 0.8669277, 0.85196626, -0.17101009, 0.4948829, 0.16317599, 0.9848077, 0.05939114, -5.2, 2.3980842, -0.4559269)
+script = ExtResource("23_ml8gv")
+interactDistance = 4.0
+
+[node name="Area3D" type="Area3D" parent="GreenRoom/Weapons/Skeleton_Blade3" unique_id=1844849098]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GreenRoom/Weapons/Skeleton_Blade3/Area3D" unique_id=1598245090]
+transform = Transform3D(1, 1.7695129e-07, 0, 1.9557774e-07, 0.999999, -1.8626451e-09, 1.1920929e-07, -2.7753413e-07, 1, 0, 0.42499447, -1.9073486e-06)
+shape = SubResource("CapsuleShape3D_2iht2")
+
+[node name="description" type="Node" parent="GreenRoom/Weapons/Skeleton_Blade3" unique_id=938664770]
+script = ExtResource("13_iikjq")
+text = "C'est en trop mauvais état"
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Skeleton_Blade4" parent="GreenRoom/Weapons" unique_id=163154176 instance=ExtResource("42_574a7")]
+transform = Transform3D(-0.497521, 0.030153746, 0.8669277, 0.85196626, -0.17101009, 0.4948829, 0.16317599, 0.9848077, 0.05939114, -5.2, 2.3980842, 1.5440731)
+script = ExtResource("23_ml8gv")
+interactDistance = 4.0
+
+[node name="Area3D" type="Area3D" parent="GreenRoom/Weapons/Skeleton_Blade4" unique_id=404000680]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GreenRoom/Weapons/Skeleton_Blade4/Area3D" unique_id=1434723433]
+transform = Transform3D(1, 1.7695129e-07, 0, 1.9557774e-07, 0.999999, -1.8626451e-09, 1.1920929e-07, -2.7753413e-07, 1, 0, 0.42499447, -1.9073486e-06)
+shape = SubResource("CapsuleShape3D_2iht2")
+
+[node name="description" type="Node" parent="GreenRoom/Weapons/Skeleton_Blade4" unique_id=1410116789]
+script = ExtResource("13_iikjq")
+text = "C'est en trop mauvais état"
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Skeleton_Crossbow2" parent="GreenRoom/Weapons" unique_id=1478390517 instance=ExtResource("43_pgid5")]
+transform = Transform3D(1, -3.6627014e-08, -4.563487e-08, 4.304731e-08, 0.98480767, -0.1736482, 5.1301804e-08, 0.17364816, 0.9848077, -4.8999996, 1.1558551, -2.3999996)
+script = ExtResource("23_ml8gv")
+
+[node name="Area3D" type="Area3D" parent="GreenRoom/Weapons/Skeleton_Crossbow2" unique_id=1386370092]
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="GreenRoom/Weapons/Skeleton_Crossbow2/Area3D" unique_id=1927638924]
+transform = Transform3D(1, 1.4083034e-07, -4.304581e-08, -1.195575e-07, 0.17364822, -0.98480815, 2.563549e-07, 0.98480695, 0.17364775, 0, 0.103287935, 0.3768978)
+shape = SubResource("CapsuleShape3D_pfj0w")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="GreenRoom/Weapons/Skeleton_Crossbow2/Area3D" unique_id=547821796]
+transform = Transform3D(1.8798795e-07, 0.9999992, -5.4968683e-07, -0.17364833, 8.765353e-08, -0.9848081, -0.9848078, -1.9892882e-07, 0.1736481, -0.024999619, 0.19011164, 0.86930275)
+shape = SubResource("CapsuleShape3D_q0806")
+
+[node name="description" type="Node" parent="GreenRoom/Weapons/Skeleton_Crossbow2" unique_id=1023481631]
+script = ExtResource("13_iikjq")
+text = "C'est en trop mauvais état"
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Skeleton_Crossbow3" parent="GreenRoom/Weapons" unique_id=2140600365 instance=ExtResource("43_pgid5")]
+transform = Transform3D(1, -3.6627014e-08, -4.563487e-08, 4.304731e-08, 0.98480767, -0.1736482, 5.1301804e-08, 0.17364816, 0.9848077, -4.8999996, 1.1558551, 1.6000004)
+script = ExtResource("23_ml8gv")
+
+[node name="Area3D" type="Area3D" parent="GreenRoom/Weapons/Skeleton_Crossbow3" unique_id=1123860683]
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="GreenRoom/Weapons/Skeleton_Crossbow3/Area3D" unique_id=962976090]
+transform = Transform3D(1, 1.4083034e-07, -4.304581e-08, -1.195575e-07, 0.17364822, -0.98480815, 2.563549e-07, 0.98480695, 0.17364775, 0, 0.103287935, 0.3768978)
+shape = SubResource("CapsuleShape3D_pfj0w")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="GreenRoom/Weapons/Skeleton_Crossbow3/Area3D" unique_id=1253037492]
+transform = Transform3D(1.8798795e-07, 0.9999992, -5.4968683e-07, -0.17364833, 8.765353e-08, -0.9848081, -0.9848078, -1.9892882e-07, 0.1736481, -0.024999619, 0.19011164, 0.86930275)
+shape = SubResource("CapsuleShape3D_q0806")
+
+[node name="description" type="Node" parent="GreenRoom/Weapons/Skeleton_Crossbow3" unique_id=87908675]
+script = ExtResource("13_iikjq")
+text = "C'est en trop mauvais état"
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Skeleton_Quiver2" parent="GreenRoom/Weapons" unique_id=1531758894 instance=ExtResource("44_nxb0p")]
+transform = Transform3D(1, 0, 0, 0, 0.9659258, 0.25881904, 0, -0.25881904, 0.9659258, 2, 2.4851146, -3.2000008)
+
+[node name="Skeleton_Quiver3" parent="GreenRoom/Weapons" unique_id=1811035387 instance=ExtResource("44_nxb0p")]
+transform = Transform3D(-4.371139e-08, -0.25881904, 0.9659258, 0, 0.96592593, 0.25881907, -1.0000001, 1.13133405e-08, -4.2221963e-08, -4.8999996, 1.3851146, 1)
+
+[node name="Skeleton_Quiver4" parent="GreenRoom/Weapons" unique_id=1786103620 instance=ExtResource("44_nxb0p")]
+transform = Transform3D(-4.371139e-08, -0.25881904, 0.9659258, 0, 0.96592593, 0.25881907, -1.0000001, 1.13133405e-08, -4.2221963e-08, -4.8999996, 1.3851146, -1)
+
+[node name="Skeleton_Shield_Large_A3" parent="GreenRoom/Weapons" unique_id=1734169136 instance=ExtResource("45_bf3pl")]
+transform = Transform3D(1, 4.371139e-08, 4.3711392e-08, -4.371139e-08, -4.371139e-08, 1, 4.3711392e-08, -1, -4.3711385e-08, 4.8999996, 1.0710359, -1.3000011)
+script = ExtResource("23_ml8gv")
+
+[node name="Area3D" type="Area3D" parent="GreenRoom/Weapons/Skeleton_Shield_Large_A3" unique_id=532904984]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GreenRoom/Weapons/Skeleton_Shield_Large_A3/Area3D" unique_id=1570301426]
+transform = Transform3D(1, 4.371139e-08, 4.371139e-08, -4.371139e-08, -4.371139e-08, 1, 4.371139e-08, -1, -4.3711385e-08, 0, 0, 0.05000007)
+shape = SubResource("CylinderShape3D_oaa28")
+
+[node name="description" type="Node" parent="GreenRoom/Weapons/Skeleton_Shield_Large_A3" unique_id=2097574719]
+script = ExtResource("13_iikjq")
+text = "C'est en trop mauvais état"
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Skeleton_Shield_Small_A2" parent="GreenRoom/Weapons" unique_id=1757402631 instance=ExtResource("46_eswb4")]
+transform = Transform3D(1, 0, 0, 0, 0.93969274, 0.34202018, 0, -0.34202018, 0.93969274, 4.700001, 2.5, -3.2000008)
+script = ExtResource("23_ml8gv")
+interactDistance = 4.0
+
+[node name="Area3D" type="Area3D" parent="GreenRoom/Weapons/Skeleton_Shield_Small_A2" unique_id=1578091639]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GreenRoom/Weapons/Skeleton_Shield_Small_A2/Area3D" unique_id=741626118]
+transform = Transform3D(1, 0, 0, 0, -2.9802322e-08, 1, 0, -1, -2.9802322e-08, 0, -4.7683716e-06, 0.012509346)
+shape = SubResource("CylinderShape3D_a4cxk")
+
+[node name="description" type="Node" parent="GreenRoom/Weapons/Skeleton_Shield_Small_A2" unique_id=2028657324]
+script = ExtResource("13_iikjq")
+text = "C'est en trop mauvais état"
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Skeleton_Shield_Small_A3" parent="GreenRoom/Weapons" unique_id=449689793 instance=ExtResource("46_eswb4")]
+transform = Transform3D(1, 0, 0, 0, 0.93969274, 0.34202018, 0, -0.34202018, 0.93969274, 3.7000008, 2.5, -3.2000008)
+script = ExtResource("23_ml8gv")
+interactDistance = 4.0
+
+[node name="Area3D" type="Area3D" parent="GreenRoom/Weapons/Skeleton_Shield_Small_A3" unique_id=1268347065]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GreenRoom/Weapons/Skeleton_Shield_Small_A3/Area3D" unique_id=1927603507]
+transform = Transform3D(1, 0, 0, 0, -2.9802322e-08, 1, 0, -1, -2.9802322e-08, 0, -4.7683716e-06, 0.012509346)
+shape = SubResource("CylinderShape3D_a4cxk")
+
+[node name="description" type="Node" parent="GreenRoom/Weapons/Skeleton_Shield_Small_A3" unique_id=1314846551]
+script = ExtResource("13_iikjq")
+text = "C'est en trop mauvais état"
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Skeleton_Shield_Small_A4" parent="GreenRoom/Weapons" unique_id=871406236 instance=ExtResource("46_eswb4")]
+transform = Transform3D(1, 0, 0, 0, 0.93969274, 0.34202018, 0, -0.34202018, 0.93969274, 2.7000008, 2.5, -3.2000008)
+script = ExtResource("23_ml8gv")
+interactDistance = 4.0
+
+[node name="Area3D" type="Area3D" parent="GreenRoom/Weapons/Skeleton_Shield_Small_A4" unique_id=165179210]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GreenRoom/Weapons/Skeleton_Shield_Small_A4/Area3D" unique_id=361082354]
+transform = Transform3D(1, 0, 0, 0, -2.9802322e-08, 1, 0, -1, -2.9802322e-08, 0, -4.7683716e-06, 0.012509346)
+shape = SubResource("CylinderShape3D_a4cxk")
+
+[node name="description" type="Node" parent="GreenRoom/Weapons/Skeleton_Shield_Small_A4" unique_id=869043914]
+script = ExtResource("13_iikjq")
+text = "C'est en trop mauvais état"
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Skeleton_Dagger2" parent="GreenRoom/Weapons" unique_id=456323811 instance=ExtResource("47_letkk")]
+transform = Transform3D(0.7660444, -0.6427876, 2.8097137e-08, 0, -4.371139e-08, -1, 0.6427876, 0.7660444, -3.3484866e-08, -4.5999994, 1.079646, -0.6999998)
+script = ExtResource("23_ml8gv")
+
+[node name="Area3D" type="Area3D" parent="GreenRoom/Weapons/Skeleton_Dagger2" unique_id=1674428513]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GreenRoom/Weapons/Skeleton_Dagger2/Area3D" unique_id=742532481]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.35000038, 0)
+shape = SubResource("CapsuleShape3D_it32w")
+
+[node name="description" type="Node" parent="GreenRoom/Weapons/Skeleton_Dagger2" unique_id=1772767427]
+script = ExtResource("13_iikjq")
+text = "C'est en trop mauvais état"
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Skeleton_Dagger3" parent="GreenRoom/Weapons" unique_id=1579721750 instance=ExtResource("47_letkk")]
+transform = Transform3D(0.7660444, -0.6427876, 2.8097137e-08, 0, -4.371139e-08, -1, 0.6427876, 0.7660444, -3.3484866e-08, -4.5999994, 1.079646, -0.09999943)
+script = ExtResource("23_ml8gv")
+
+[node name="Area3D" type="Area3D" parent="GreenRoom/Weapons/Skeleton_Dagger3" unique_id=1651931606]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GreenRoom/Weapons/Skeleton_Dagger3/Area3D" unique_id=1580851439]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.35000038, 0)
+shape = SubResource("CapsuleShape3D_it32w")
+
+[node name="description" type="Node" parent="GreenRoom/Weapons/Skeleton_Dagger3" unique_id=1368805423]
+script = ExtResource("13_iikjq")
+text = "C'est en trop mauvais état"
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Meuble1" type="Node3D" parent="GreenRoom" unique_id=1924998920]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 0)
+
+[node name="bar_straight_C2" parent="GreenRoom/Meuble1" unique_id=946520791 instance=ExtResource("16_nlict")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 2)
+loot_gold = 2
+
+[node name="bartop_A_medium2" parent="GreenRoom/Meuble1/bar_straight_C2" unique_id=1166037996 instance=ExtResource("17_a5mn1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="bar_straight_C3" parent="GreenRoom/Meuble1" unique_id=24224270 instance=ExtResource("16_nlict")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+loot_gold = 3
+
+[node name="bartop_A_medium2" parent="GreenRoom/Meuble1/bar_straight_C3" unique_id=1095069935 instance=ExtResource("17_a5mn1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="bar_straight_C4" parent="GreenRoom/Meuble1" unique_id=764924936 instance=ExtResource("16_nlict")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, -2)
+loot_gold = 2
+
+[node name="bartop_A_medium2" parent="GreenRoom/Meuble1/bar_straight_C4" unique_id=1707230434 instance=ExtResource("17_a5mn1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="Meuble2" type="Node3D" parent="GreenRoom" unique_id=714509969]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -3)
+
+[node name="bar_innercorner2" parent="GreenRoom/Meuble2" unique_id=1863945209 instance=ExtResource("8_352hu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0)
+
+[node name="bar_straight_C_short" parent="GreenRoom/Meuble2" unique_id=1297367655 instance=ExtResource("10_nsqvi")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 2)
+loot_gold = 2
+
+[node name="bar_straight_C5" parent="GreenRoom/Meuble2" unique_id=304514423 instance=ExtResource("16_nlict")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0, 0)
+loot_gold = 3
+
+[node name="bartop_A_large2" parent="GreenRoom/Meuble2/bar_straight_C5" unique_id=292816299 instance=ExtResource("18_nsqvi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0)
 
 [node name="RedRoom" type="Node3D" parent="." unique_id=1809626829]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36, 0, -14)
@@ -726,7 +1035,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2999992, 1.0999999, -0.199
 [node name="bottle_C_brown2" parent="BlueRoom/bartop_A_large2" unique_id=459298983 instance=ExtResource("21_qvsi7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1000023, 0, 0)
 
-[node name="bottle_A_labeled_green2" parent="BlueRoom/bartop_A_large2" unique_id=423792031 instance=ExtResource("22_m1hbu")]
+[node name="bottle_A_labeled_green2" parent="BlueRoom/bartop_A_large2" unique_id=790674597 instance=ExtResource("22_m1hbu")]
 transform = Transform3D(0.9659258, 0, -0.25881904, 0, 1, 0, 0.25881904, 0, 0.9659258, 1.2999992, 1.0999999, -0.19999981)
 
 [node name="bench2" parent="BlueRoom" unique_id=1510844515 instance=ExtResource("27_41n8b")]
