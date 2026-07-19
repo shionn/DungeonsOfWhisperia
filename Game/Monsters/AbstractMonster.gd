@@ -34,6 +34,7 @@ func _physics_process(_delta: float) -> void:
 		state = State.IDLE
 	elif see_player or _hit_take>=2:
 		_navigation_agent.set_target_position(player.global_position)
+		if state == State.IDLE : state = State.CHASE
 	match state: 
 		State.CHASE:
 			var distance = player.distance_to(self) 

@@ -15,6 +15,7 @@ script = ExtResource("3_g1eft")
 animation = "Melee_2H_Attack_Chop"
 animation_to_hit_factor = 0.6
 cold_down = 2.0
+atk_dice = 0
 atk_range = 3.0
 sound = NodePath("../Swing2")
 metadata/_custom_type_script = "uid://beivecuks870r"
