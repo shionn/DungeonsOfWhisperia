@@ -41,5 +41,6 @@ bone_name = "handslot.r"
 bone_idx = 18
 
 [node name="Skeleton_Scythe2" parent="Rig_Medium/Skeleton3D/RightHand" index="0" unique_id=592368915 instance=ExtResource("2_ntfkl")]
+transform = Transform3D(-1, -4.0348698e-07, 1.4959345e-07, -4.2969543e-07, 0.95506334, -0.29640228, -2.3276705e-08, -0.2964023, -0.9550633, 0, 0, 0)
 
 [node name="AnimationPlayer" parent="." index="1" unique_id=1430341502 instance=ExtResource("3_c1kot")]

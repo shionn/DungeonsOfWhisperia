@@ -1,8 +1,20 @@
 [gd_scene format=3 uid="uid://be86xep67rb3s"]
 
 [ext_resource type="PackedScene" uid="uid://dvd4uuprholj6" path="res://Game/Monsters/Monster.tscn" id="1_jb8ec"]
+[ext_resource type="Script" uid="uid://d24y3hi2ns4r5" path="res://Game/Monsters/Necromancer.gd" id="2_3r55j"]
 [ext_resource type="PackedScene" uid="uid://cmqshf4ki48rt" path="res://Assets/Scenes/Necromancer.tscn" id="2_g1eft"]
+[ext_resource type="Script" uid="uid://beivecuks870r" path="res://Game/Monsters/MonsterAtk.gd" id="3_g1eft"]
 
 [node name="Monster" unique_id=706438754 instance=ExtResource("1_jb8ec")]
+script = ExtResource("2_3r55j")
 
-[node name="Necromancer" parent="." index="8" unique_id=2122947559 instance=ExtResource("2_g1eft")]
+[node name="Character" parent="." index="8" unique_id=2122947559 instance=ExtResource("2_g1eft")]
+
+[node name="Chop2H" type="Node" parent="." index="9" unique_id=837627329 node_paths=PackedStringArray("sound")]
+script = ExtResource("3_g1eft")
+animation = "Melee_2H_Attack_Chop"
+animation_to_hit_factor = 0.6
+cold_down = 2.0
+atk_range = 3.0
+sound = NodePath("../Swing2")
+metadata/_custom_type_script = "uid://beivecuks870r"
