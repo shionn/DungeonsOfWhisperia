@@ -13,12 +13,14 @@
 [ext_resource type="PackedScene" uid="uid://0fn6al4q3iav" path="res://Assets/Dungeons/Wall/Corner/wall_corner.gltf" id="4_ra21l"]
 [ext_resource type="PackedScene" uid="uid://d1eaddharejqv" path="res://Assets/Characters/AdventurersAccessoires/potion_huge_green.gltf" id="4_sn8gp"]
 [ext_resource type="PackedScene" uid="uid://c6i85c8iqhfgd" path="res://Assets/Dungeons/Wall/TSplit/wall_Tsplit.gltf" id="5_3p481"]
+[ext_resource type="PackedScene" uid="uid://b1lcbodxnhyri" path="res://Assets/Dungeons/Banner/banner_triple_brown.gltf" id="5_a4cxk"]
 [ext_resource type="PackedScene" uid="uid://b6vicjv5yemah" path="res://Assets/Dungeons/Book/book_grey.gltf" id="5_sn8gp"]
 [ext_resource type="PackedScene" uid="uid://cv1on6sxo61uc" path="res://Assets/Halloween/Bench/bench.gltf" id="5_sxs5t"]
 [ext_resource type="PackedScene" uid="uid://bdb2tkwvqixia" path="res://Assets/Dungeons/Book/book_tan.gltf" id="6_4uj5q"]
 [ext_resource type="PackedScene" uid="uid://xqftme4a1q27" path="res://Assets/Dungeons/Wall/wall_inset.gltf" id="6_c4tja"]
 [ext_resource type="PackedScene" uid="uid://bslqc8p8h7opc" path="res://Assets/Dungeons/Banner/banner_triple_white.gltf" id="6_d0l6h"]
 [ext_resource type="PackedScene" uid="uid://dn0yqbvgem56e" path="res://Assets/Halloween/Bench/bench_decorated.gltf" id="6_gonng"]
+[ext_resource type="PackedScene" uid="uid://c2eo4fhjbw8kj" path="res://Assets/Dungeons/Banner/banner_brown.gltf" id="6_it32w"]
 [ext_resource type="AudioStream" uid="uid://bcafx5mkymm12" path="res://Audio/RPG Sound Pack/interface/interface3.wav" id="6_rmard"]
 [ext_resource type="PackedScene" uid="uid://c740w1gfrmupy" path="res://Assets/Dungeons/Book/book_brown.gltf" id="7_3uwpk"]
 [ext_resource type="PackedScene" uid="uid://dlo1eot4wd5ay" path="res://Assets/Dungeons/Wall/wall_broken.gltf" id="7_ehe8n"]
@@ -56,11 +58,13 @@
 [ext_resource type="PackedScene" uid="uid://bmj1m3g818shm" path="res://Assets/Dungeons/Barrel/barrel_large_decorated.gltf" id="15_352hu"]
 [ext_resource type="PackedScene" uid="uid://brneq4xqot0lu" path="res://Assets/Characters/AdventurersAccessoires/potion_medium_red.gltf" id="15_gcmxt"]
 [ext_resource type="PackedScene" uid="uid://yand4djtdef5" path="res://Assets/Dungeons/Wall/wall_inset_candles.gltf" id="15_gs1cg"]
+[ext_resource type="PackedScene" uid="uid://cbjrk02rg0au6" path="res://Assets/Dungeons/Box/box_stacked.gltf" id="16_ldjff"]
 [ext_resource type="PackedScene" uid="uid://dj0modsh7x76o" path="res://Assets/Scenes/Bar_Straight_C.tscn" id="16_nlict"]
 [ext_resource type="PackedScene" uid="uid://gv22cmuit7gu" path="res://Assets/Dungeons/Banner/banner_blue.gltf" id="16_rtwjv"]
 [ext_resource type="PackedScene" uid="uid://bojxodbjjxr2s" path="res://Assets/BinbunVFX/portal_vfx/effects/oval/oval_portal_vfx_06.tscn" id="16_t7qvu"]
 [ext_resource type="PackedScene" uid="uid://bmdvn7w6kv12i" path="res://Assets/Dungeons/Bar/bartop_A_medium.gltf" id="17_a5mn1"]
 [ext_resource type="PackedScene" uid="uid://dnj0c0ut1hd35" path="res://Assets/Scenes/Wall_Doorway.tscn" id="17_c4tja"]
+[ext_resource type="PackedScene" uid="uid://b1dvxk4po0ale" path="res://Assets/Dungeons/Candle/candle_melted.gltf" id="17_fo3fv"]
 [ext_resource type="PackedScene" uid="uid://bpu05mij5jnkt" path="res://Assets/Dungeons/Plates/plate_stack.gltf" id="17_qarta"]
 [ext_resource type="AudioStream" uid="uid://bj74tsrk725df" path="res://Audio/80-CC0-RPG-SFX/lock_02.ogg" id="18_eg26f"]
 [ext_resource type="PackedScene" uid="uid://bysoel76lf8pw" path="res://Assets/Dungeons/Bar/bar_straight_A.gltf" id="18_eswb4"]
@@ -99,9 +103,11 @@
 [ext_resource type="PackedScene" uid="uid://4asvis6f4ftv" path="res://Assets/Characters/SkeletonAccessoires/Skeleton_Shield_Small_A.gltf" id="46_eswb4"]
 [ext_resource type="PackedScene" uid="uid://dpek8oj8ussjy" path="res://Assets/Characters/SkeletonAccessoires/Skeleton_Dagger.gltf" id="47_letkk"]
 [ext_resource type="PackedScene" uid="uid://dgc6r0o5rxge4" path="res://Assets/Characters/AdventurersAccessoires/potion_small_blue.gltf" id="47_ml8gv"]
+[ext_resource type="PackedScene" uid="uid://bhig0ujmb131t" path="res://Assets/Dungeons/Crate/crate_small.gltf" id="52_46tpd"]
 [ext_resource type="AudioStream" uid="uid://61hk6iwxjiwe" path="res://Audio/DungeonThemes/dungeon.ogg" id="69_gcmxt"]
 [ext_resource type="PackedScene" uid="uid://qv2dm02eh64" path="res://Assets/Dungeons/Wall/wall_inset_shelves_decoratedA.gltf" id="73_5ea61"]
 [ext_resource type="PackedScene" uid="uid://dholpdwxyyxfv" path="res://Assets/Dungeons/Wall/Crossing/wall_crossing.gltf" id="73_kc6pu"]
+[ext_resource type="PackedScene" uid="uid://bt65i4uo2ym8u" path="res://Assets/Dungeons/Weapons/bucket_pickaxes.gltf" id="77_v3xnv"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_b02ke"]
 radius = 0.3
@@ -166,6 +172,27 @@ script = ExtResource("1_letkk")
 
 [node name="EntranceSecret" type="Node3D" parent="." unique_id=2096229949]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68, 0, 0)
+
+[node name="torch_mounted" parent="EntranceSecret" unique_id=1618852209 instance=ExtResource("2_5dcro")]
+transform = Transform3D(-0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, -0.70710677, 2.050003, 0, 6.05)
+
+[node name="crates_stacked2" parent="EntranceSecret" unique_id=1530162916 instance=ExtResource("22_eijaf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.4000015, 0, -4.3)
+
+[node name="barrel_large_decorated2" parent="EntranceSecret" unique_id=1937505340 instance=ExtResource("15_352hu")]
+transform = Transform3D(-0.2588191, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, -0.2588191, -4.3999977, 0, 4.5)
+
+[node name="banner_triple_brown2" parent="EntranceSecret" unique_id=1161574174 instance=ExtResource("5_a4cxk")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 6, 0, 0)
+
+[node name="torch_mounted2" parent="EntranceSecret" unique_id=1581865129 instance=ExtResource("2_5dcro")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -17.95)
+
+[node name="banner_brown2" parent="EntranceSecret" unique_id=100304499 instance=ExtResource("6_it32w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -18)
+
+[node name="banner_brown3" parent="EntranceSecret" unique_id=974605515 instance=ExtResource("6_it32w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -18)
 
 [node name="MobRoomSecret" type="Node3D" parent="." unique_id=157219292]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68, 0, -29)
@@ -259,6 +286,24 @@ transform = Transform3D(1, 0, -5.563627e-08, 0, 1, 0, 5.563627e-08, 0, 1, 2, 0, 
 
 [node name="torch_mounted" parent="MobRoomSecret/wall_corner57" unique_id=525301833 instance=ExtResource("2_5dcro")]
 transform = Transform3D(-0.7071068, 0, 0.7071067, 0, 1, 0, -0.7071067, 0, -0.7071068, -0.05, 0, 0.05)
+
+[node name="banner_brown2" parent="MobRoomSecret" unique_id=1611924256 instance=ExtResource("6_it32w")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 12, 0, 7)
+
+[node name="banner_brown3" parent="MobRoomSecret" unique_id=1624555735 instance=ExtResource("6_it32w")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -12, 0, 7)
+
+[node name="banner_brown4" parent="MobRoomSecret" unique_id=1756664069 instance=ExtResource("6_it32w")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -4, 0, 7)
+
+[node name="banner_brown5" parent="MobRoomSecret" unique_id=2052554399 instance=ExtResource("6_it32w")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 4, 0, 7)
+
+[node name="box_stacked2" parent="MobRoomSecret" unique_id=1129384404 instance=ExtResource("16_ldjff")]
+transform = Transform3D(-1.0000001, 0, 2.9802322e-08, 0, 1, 0, -2.9802322e-08, 0, -1.0000001, 11.5, 0, 5)
+
+[node name="candle_melted2" parent="MobRoomSecret/box_stacked2" unique_id=1772980734 instance=ExtResource("17_fo3fv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1.8, 0)
 
 [node name="BossRoom" type="Node3D" parent="." unique_id=1755320205]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68, 0, 16)
@@ -624,6 +669,33 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.3)
 
 [node name="torch_mounted2" parent="Entrance/pillar3" unique_id=533681193 instance=ExtResource("2_5dcro")]
 transform = Transform3D(-0.99999994, 0, 8.742277e-08, 0, 1, 0, -8.742277e-08, 0, -0.99999994, 0, 0, -0.3)
+
+[node name="banner_white2" parent="Entrance" unique_id=1444517318 instance=ExtResource("12_gheph")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 8, 0, -4)
+
+[node name="banner_white4" parent="Entrance" unique_id=1121250138 instance=ExtResource("12_gheph")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -6)
+
+[node name="banner_white5" parent="Entrance" unique_id=633865832 instance=ExtResource("12_gheph")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -2, 0, 6)
+
+[node name="banner_white3" parent="Entrance" unique_id=1035325193 instance=ExtResource("12_gheph")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 8, 0, 4)
+
+[node name="crate_small2" parent="Entrance" unique_id=593077887 instance=ExtResource("52_46tpd")]
+transform = Transform3D(-0.9659258, 0, 0.25881895, 0, 1, 0, -0.25881895, 0, -0.9659258, -6.5, 0, 4.7)
+
+[node name="crate_small4" parent="Entrance" unique_id=346875917 instance=ExtResource("52_46tpd")]
+transform = Transform3D(-0.99999994, 0, -8.940697e-08, 0, 1, 0, 8.940697e-08, 0, -0.99999994, -4.8, 0, 4.8999996)
+
+[node name="crate_small5" parent="Entrance" unique_id=1352453207 instance=ExtResource("52_46tpd")]
+transform = Transform3D(-0.17364824, 0, 0.9848077, 0, 1, 0, -0.9848077, 0, -0.17364824, -7, 0.59999996, 3.6999993)
+
+[node name="crate_small6" parent="Entrance" unique_id=1669646016 instance=ExtResource("52_46tpd")]
+transform = Transform3D(-0.98480785, 0, -0.17364831, 0, 1, 0, 0.17364831, 0, -0.98480785, -5.5999994, 0.59999996, 4.8999996)
+
+[node name="crate_small3" parent="Entrance" unique_id=1663272620 instance=ExtResource("52_46tpd")]
+transform = Transform3D(0.17364803, 0, 0.9848076, 0, 1, 0, -0.9848076, 0, 0.17364803, -6.799999, 0, 3.1999996)
 
 [node name="GreenRoom" type="Node3D" parent="." unique_id=969225279]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, -14)
@@ -1018,6 +1090,9 @@ transform = Transform3D(-0.7071068, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, -0.707
 [node name="shovel2" parent="RedRoom" unique_id=1887715603 instance=ExtResource("25_52jne")]
 transform = Transform3D(-3.7855173e-08, -0.49999997, 0.8660253, -2.1855694e-08, 0.8660253, 0.49999997, -1, -2.1175824e-22, -4.3711385e-08, 4.6000023, 1.5999999, -5)
 
+[node name="bucket_pickaxes2" parent="RedRoom" unique_id=372698892 instance=ExtResource("77_v3xnv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5999985, 0, -4.700001)
+
 [node name="YellowRoom" type="Node3D" parent="." unique_id=2027608995]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 14)
 
@@ -1097,7 +1172,7 @@ transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -3, 
 [node name="barrel_large2" parent="BlueRoom" unique_id=1183584337 instance=ExtResource("13_opbu4")]
 transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, 4.4000015, 0, -6.3)
 
-[node name="barrel_large_decorated2" parent="BlueRoom" unique_id=1937505340 instance=ExtResource("15_352hu")]
+[node name="barrel_large_decorated2" parent="BlueRoom" unique_id=973397168 instance=ExtResource("15_352hu")]
 transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, -4.4000015, 0, -6.3999996)
 
 [node name="bar_straight_C2" parent="BlueRoom" unique_id=2056931620 instance=ExtResource("16_nlict")]
@@ -1618,9 +1693,6 @@ transform = Transform3D(1.1924882e-08, 0, 1, 0, 1, 0, -1, 0, 1.1924882e-08, 70, 
 [node name="wall_corner69" parent="Wall" unique_id=690891962 instance=ExtResource("4_ra21l")]
 transform = Transform3D(1.1924882e-08, 0, 1, 0, 1, 0, -1, 0, 1.1924882e-08, 70, 0, 6)
 
-[node name="torch_mounted" parent="Wall/wall_corner69" unique_id=1618852209 instance=ExtResource("2_5dcro")]
-transform = Transform3D(-0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, -0.70710677, -0.05, 0, 0.05)
-
 [node name="wall_corner45" parent="Wall" unique_id=1396458321 instance=ExtResource("4_ra21l")]
 transform = Transform3D(-9.934766e-08, 0, -1, 0, 1, 0, 1, 0, -9.934766e-08, 66, 0, -6)
 
@@ -1917,9 +1989,6 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 66, 
 
 [node name="wall16" parent="Wall" unique_id=136712739 instance=ExtResource("12_rtwjv")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 66, 0, -18)
-
-[node name="torch_mounted" parent="Wall/wall16" unique_id=1581865129 instance=ExtResource("2_5dcro")]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -2, 0, -0.05)
 
 [node name="wall_pillar2" parent="Wall" unique_id=1408426482 instance=ExtResource("10_5dcro")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 70, 0, -18)
