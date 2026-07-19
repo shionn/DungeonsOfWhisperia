@@ -1,7 +1,7 @@
 @abstract class_name Monster
 extends GameBaseCharacterBody3D 
 
-enum State { IDLE, CHASE, ATTACK, ATTACKING, HIT, DEATH }
+enum State { IDLE, CHASE, ATTACK, ATTACKING, HIT, DEATH, PATROL, NAVIGATE }
 
 @onready var _animation = $"Character/AnimationPlayer" as AnimationPlayer
 @onready var _navigation_agent: NavigationAgent3D = $NavigationAgent3D
@@ -9,6 +9,7 @@ enum State { IDLE, CHASE, ATTACK, ATTACKING, HIT, DEATH }
 @onready var _atkTimer = $AtkTimer as Timer
 @onready var _gcdTimer = $GcdTimer as Timer
 
+@export var state : State = State.IDLE
 @export var loot_obj : Items.ItemName = Items.ItemName.None
 @export var loot_gold: int = 0
 @export var lvl : int = 1
@@ -17,13 +18,12 @@ const _movement_speed: float = 4.0
 
 var _atk : MonsterAtk
 var _on_gcd : bool = false
-var state : State = State.IDLE
 var see_player = false
 var pv = get_max_pv()
 var _hit_take = 0
 
 func _ready() -> void:
-	_navigation_agent.target_desired_distance = 0 #_model.chase_distance
+	_navigation_agent.target_desired_distance = 0
 	start_animation("Idle_A")
 	_atk = _find_atk()
 	add_to_group("Monsters")
@@ -32,7 +32,7 @@ func _physics_process(_delta: float) -> void:
 	see_player = _see_player()
 	if player.isDead() : 
 		state = State.IDLE
-	elif see_player or _hit_take>=2:
+	elif state != State.NAVIGATE and (see_player or _hit_take>=2):
 		_navigation_agent.set_target_position(player.global_position)
 		if state == State.IDLE : state = State.CHASE
 	match state: 
@@ -43,7 +43,10 @@ func _physics_process(_delta: float) -> void:
 			elif _navigation_agent.is_navigation_finished() : 
 				state = State.IDLE
 			else :
-				_move_to_player()
+				_move_to_navigation()
+		State.NAVIGATE :
+			if not _navigation_agent.is_navigation_finished() :
+				_move_to_navigation()
 		State.ATTACK:
 			if _on_gcd : 
 				state = State.IDLE
@@ -85,7 +88,7 @@ func _see_player() -> bool :
 			return true
 	return false
 
-func _move_to_player() -> void :
+func _move_to_navigation() -> void :
 	var next_path_position: Vector3 = _navigation_agent.get_next_path_position()
 	self.look_at(next_path_position,Vector3.UP,true)
 	self.rotation.x = 0
@@ -174,6 +177,10 @@ func compute_xp() -> int:
 
 func is_in_loot_range() -> bool : return distance_to(player) <= LOOT_RANGE 
 func is_dead() -> bool : return state == Monster.State.DEATH
+
+func navitage_to(pos: Vector3) -> void:
+	_navigation_agent.set_target_position(pos)
+	state = State.NAVIGATE
 
 @abstract func get_fov() -> float
 @abstract func get_rig() -> String

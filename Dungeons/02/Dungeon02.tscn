@@ -71,6 +71,7 @@
 [ext_resource type="PackedScene" uid="uid://bysoel76lf8pw" path="res://Assets/Dungeons/Bar/bar_straight_A.gltf" id="18_eswb4"]
 [ext_resource type="PackedScene" uid="uid://dg16k84dtvwob" path="res://Assets/Dungeons/Bar/bartop_A_large.gltf" id="18_nsqvi"]
 [ext_resource type="PackedScene" uid="uid://d17shvcpj3oew" path="res://Assets/Dungeons/Barrel/barrel_small_stack.gltf" id="18_pecol"]
+[ext_resource type="Script" uid="uid://drquw2n4fq4e4" path="res://Dungeons/02/BossRoom.gd" id="19_2ybmr"]
 [ext_resource type="PackedScene" uid="uid://dbaa76cyf7r3p" path="res://Assets/Bits/RpgTools/lantern.gltf" id="19_a5mn1"]
 [ext_resource type="PackedScene" uid="uid://dgrs5abapqwq0" path="res://Assets/Dungeons/Bottle/bottle_A_brown.gltf" id="19_j4w0s"]
 [ext_resource type="PackedScene" uid="uid://d0d62rw45klnc" path="res://Assets/Dungeons/Chair/chair.gltf" id="19_letkk"]
@@ -122,6 +123,9 @@ height = 1.25
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_b02ke"]
 height = 0.2
 radius = 0.35
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_78w8x"]
+size = Vector3(3, 4, 2)
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_m2ftf"]
 radius = 0.3
@@ -351,9 +355,6 @@ script = ExtResource("1_letkk")
 [node name="SkeletonMinion" parent="." unique_id=706438754 instance=ExtResource("2_o5uhr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0, -14)
 
-[node name="Necromancer" parent="." unique_id=91916719 instance=ExtResource("113_v3xnv")]
-transform = Transform3D(0.5, 0, -0.8660253, 0, 1, 0, 0.8660253, 0, 0.5, 23.5, 0, -0.19999993)
-
 [node name="EntranceSecret" type="Node3D" parent="." unique_id=2096229949]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68, 0, 0)
 
@@ -491,18 +492,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1.8, 0)
 
 [node name="BossRoom" type="Node3D" parent="." unique_id=1755320205]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68, 0, 16)
+script = ExtResource("19_2ybmr")
+
+[node name="Necromancer" parent="BossRoom" unique_id=91916719 instance=ExtResource("113_v3xnv")]
+transform = Transform3D(-0.8660253, 0, -0.49999997, 0, 1, 0, 0.49999997, 0, -0.8660253, -1.5, 0, 0.79999924)
+state = 7
 
 [node name="Wall_Doorway" parent="BossRoom" unique_id=812446971 instance=ExtResource("1_o78hi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8)
 revert = true
 locked = true
 unlock_item = 2
-
-[node name="wall_corner58" parent="BossRoom" unique_id=1140120738 instance=ExtResource("4_ra21l")]
-transform = Transform3D(-9.934766e-08, 0, -1, 0, 1, 0, 1, 0, -9.934766e-08, -2, 0, -6)
-
-[node name="wall_corner59" parent="BossRoom" unique_id=1679268811 instance=ExtResource("4_ra21l")]
-transform = Transform3D(-1, 0, 1.4305905e-07, 0, 1, 0, -1.4305905e-07, 0, -1, 2, 0, -6)
 
 [node name="pillar4" parent="BossRoom" unique_id=590828952 instance=ExtResource("1_2up2q")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 6, 0, 0)
@@ -516,19 +516,21 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -6, 
 [node name="torch_mounted" parent="BossRoom/pillar5" unique_id=912658691 instance=ExtResource("2_5dcro")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.3)
 
-[node name="bookcase_double_decoratedA2" parent="BossRoom" unique_id=1758756902 instance=ExtResource("13_3uwpk")]
+[node name="BookCases" type="Node3D" parent="BossRoom" unique_id=126088613]
+
+[node name="bookcase_double_decoratedA2" parent="BossRoom/BookCases" unique_id=1758756902 instance=ExtResource("13_3uwpk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.100006, 0, -5.200001)
 
-[node name="bookcase_double_decoratedB2" parent="BossRoom" unique_id=1026479706 instance=ExtResource("14_13ejr")]
+[node name="bookcase_double_decoratedB2" parent="BossRoom/BookCases" unique_id=1026479706 instance=ExtResource("14_13ejr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -5.2)
 
-[node name="bookcase_double_decoratedB4" parent="BossRoom" unique_id=385427132 instance=ExtResource("14_13ejr")]
+[node name="bookcase_double_decoratedB4" parent="BossRoom/BookCases" unique_id=385427132 instance=ExtResource("14_13ejr")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -9.200001, 0, 2)
 
-[node name="bookcase_double_decoratedA3" parent="BossRoom" unique_id=1861614156 instance=ExtResource("13_3uwpk")]
+[node name="bookcase_double_decoratedA3" parent="BossRoom/BookCases" unique_id=1861614156 instance=ExtResource("13_3uwpk")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -5, 0, 5.199999)
 
-[node name="bookcase_double_decoratedB3" parent="BossRoom" unique_id=730767151 instance=ExtResource("14_13ejr")]
+[node name="bookcase_double_decoratedB3" parent="BossRoom/BookCases" unique_id=730767151 instance=ExtResource("14_13ejr")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 5.100006, 0, 5.199999)
 
 [node name="arch2" parent="BossRoom" unique_id=1949722278 instance=ExtResource("15_13ejr")]
@@ -578,6 +580,21 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -10,
 
 [node name="Potionstation_decorated2" parent="BossRoom" unique_id=44712774 instance=ExtResource("31_v3xnv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5999985, 0, -1.1999998)
+
+[node name="Area3D" type="Area3D" parent="BossRoom" unique_id=1924639577]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BossRoom/Area3D" unique_id=1735431384]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0.5)
+shape = SubResource("BoxShape3D_78w8x")
+
+[node name="NecromancerDialog" type="Node" parent="BossRoom" unique_id=1033382364 node_paths=PackedStringArray("monster")]
+script = ExtResource("13_iikjq")
+text = "Hé bien, qu’avons-nous là ? C’était toi, dans le mausolée. N’est-ce pas ? Laisse-moi deviner… C’est l’aigle jaune qui t’envoie, n’est-ce pas ? Il est le portrait craché de son arrière-grand-père. 
+
+Je n’ai pas le temps de jouer avec toi. Je te laisse avec mon ami."
+monster = NodePath("../Necromancer")
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
 [node name="RitualRoom" type="Node3D" parent="." unique_id=649690424]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50, 0, 0)
@@ -2231,6 +2248,12 @@ transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 82, 
 [node name="wall_crossing2" parent="Wall" unique_id=210071418 instance=ExtResource("73_kc6pu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58, 0, 10)
 
+[node name="wall_corner68" parent="Wall" unique_id=1140120738 instance=ExtResource("4_ra21l")]
+transform = Transform3D(-9.934766e-08, 0, -1, 0, 1, 0, 1, 0, -9.934766e-08, 66, 0, 10)
+
+[node name="wall_corner75" parent="Wall" unique_id=1679268811 instance=ExtResource("4_ra21l")]
+transform = Transform3D(-1, 0, 1.4305905e-07, 0, 1, 0, -1.4305905e-07, 0, -1, 70, 0, 10)
+
 [node name="Hole" type="Node3D" parent="." unique_id=1645264406]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34, 0, -4)
 
@@ -2914,6 +2937,8 @@ Trouver un indice la personne se cachant derriere ces événements.
 [/ul]"
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
+[connection signal="body_entered" from="BossRoom/Area3D" to="BossRoom" method="_on_area_3d_body_entered"]
+[connection signal="close" from="BossRoom/NecromancerDialog" to="BossRoom" method="_on_necromancer_dialog_close"]
 [connection signal="state_change" from="RitualRoom/wall_inset3/Skull" to="RitualRoom" method="_on_skull_state_change"]
 [connection signal="state_change" from="RitualRoom/wall_inset4/Skull" to="RitualRoom" method="_on_skull_state_change"]
 [connection signal="state_change" from="RitualRoom/wall_inset5/Skull" to="RitualRoom" method="_on_skull_state_change"]

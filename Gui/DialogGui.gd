@@ -30,12 +30,17 @@ func open(dialog: Dialog)->void :
 		
 		_text.clear()
 		if dialog.pnj : _text.append_text("[color=darkgray]%s : [/color]"%dialog.pnj.name)
+		elif dialog.monster : _text.append_text("[color=darkgray]%s : [/color]"%dialog.monster.name)
 		else : _text.append_text("[color=darkgray]Vous : [/color]")
 		_text.append_text(dialog.text)
 		if dialog.pnj : 
 			_pnj_view.show()
 			_pnj_camera.position = dialog.pnj.global_position + dialog.pnj.global_transform.basis*Vector3(.3,0,1) + Vector3(0,1.7,0)
 			_pnj_camera.look_at(dialog.pnj.global_position + Vector3(0,1.7,0), Vector3.UP, false)
+		elif dialog.monster : 
+			_pnj_view.show()
+			_pnj_camera.position = dialog.monster.global_position + dialog.monster.global_transform.basis*Vector3(.3,0,1) + Vector3(0,1.7,0)
+			_pnj_camera.look_at(dialog.monster.global_position + Vector3(0,1.7,0), Vector3.UP, false)
 		else :
 			_pnj_view.hide()
 		
