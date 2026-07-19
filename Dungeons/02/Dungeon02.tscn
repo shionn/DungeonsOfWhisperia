@@ -90,7 +90,9 @@
 [ext_resource type="PackedScene" uid="uid://devkrtutcqnyx" path="res://Assets/Scenes/Ranger.tscn" id="25_m2ftf"]
 [ext_resource type="Script" uid="uid://dfe0ekqmj7vpg" path="res://Dungeons/02/RangerDead.gd" id="26_l7dob"]
 [ext_resource type="PackedScene" uid="uid://bj2yg7f3e8tc0" path="res://Assets/Dungeons/Tables/bench.gltf" id="27_41n8b"]
+[ext_resource type="PackedScene" uid="uid://y38wo3hdhqtq" path="res://Assets/Dungeons/Wall/wall_shelves.gltf" id="30_46tpd"]
 [ext_resource type="PackedScene" uid="uid://ccbdbtpi2ehj5" path="res://Assets/Dungeons/Floor/Small/floor_tile_small.gltf" id="31_qvsi7"]
+[ext_resource type="PackedScene" uid="uid://chdn2mnom0h4x" path="res://Assets/Characters/MonthlySeries5/Accessoires/Potionstation_decorated.gltf" id="31_v3xnv"]
 [ext_resource type="PackedScene" uid="uid://dfqu824ryf85i" path="res://Assets/Dungeons/Floor/Large/floor_dirt_large_rocky.gltf" id="32_m1hbu"]
 [ext_resource type="PackedScene" uid="uid://dgmd57ii43q2v" path="res://Assets/Dungeons/Floor/Small/floor_tile_small_corner.gltf" id="33_pecol"]
 [ext_resource type="PackedScene" uid="uid://d2s6ulp6b5oe" path="res://Assets/Characters/AdventurersAccessoires/potion_small_orange.gltf" id="36_r2s6b"]
@@ -108,6 +110,8 @@
 [ext_resource type="PackedScene" uid="uid://qv2dm02eh64" path="res://Assets/Dungeons/Wall/wall_inset_shelves_decoratedA.gltf" id="73_5ea61"]
 [ext_resource type="PackedScene" uid="uid://dholpdwxyyxfv" path="res://Assets/Dungeons/Wall/Crossing/wall_crossing.gltf" id="73_kc6pu"]
 [ext_resource type="PackedScene" uid="uid://bt65i4uo2ym8u" path="res://Assets/Dungeons/Weapons/bucket_pickaxes.gltf" id="77_v3xnv"]
+[ext_resource type="PackedScene" uid="uid://bu7hkqv2gmh3m" path="res://Assets/Dungeons/Box/box_large.gltf" id="80_o5uhr"]
+[ext_resource type="PackedScene" uid="uid://x7rqp0xpsk6m" path="res://Assets/Dungeons/Box/box_small.gltf" id="81_2ybmr"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_b02ke"]
 radius = 0.3
@@ -338,6 +342,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.100006, 0, -5.200001)
 [node name="bookcase_double_decoratedB2" parent="BossRoom" unique_id=1026479706 instance=ExtResource("14_13ejr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -5.2)
 
+[node name="bookcase_double_decoratedB4" parent="BossRoom" unique_id=385427132 instance=ExtResource("14_13ejr")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -9.200001, 0, 2)
+
 [node name="bookcase_double_decoratedA3" parent="BossRoom" unique_id=1861614156 instance=ExtResource("13_3uwpk")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -5, 0, 5.199999)
 
@@ -382,6 +389,15 @@ hide_on_loot = true
 [node name="CollisionShape3D" type="CollisionShape3D" parent="BossRoom/Desk/Gold_Gem_Ring_032/Area3D" unique_id=352846961]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, -0.025007248)
 shape = SubResource("CylinderShape3D_b02ke")
+
+[node name="banner_triple_brown2" parent="BossRoom" unique_id=1520401784 instance=ExtResource("5_a4cxk")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 10, 0, 0)
+
+[node name="wall_shelves2" parent="BossRoom" unique_id=2077015686 instance=ExtResource("30_46tpd")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -10, 0, -2)
+
+[node name="Potionstation_decorated2" parent="BossRoom" unique_id=44712774 instance=ExtResource("31_v3xnv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5999985, 0, -1.1999998)
 
 [node name="RitualRoom" type="Node3D" parent="." unique_id=649690424]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50, 0, 0)
@@ -1092,6 +1108,18 @@ transform = Transform3D(-3.7855173e-08, -0.49999997, 0.8660253, -2.1855694e-08, 
 
 [node name="bucket_pickaxes2" parent="RedRoom" unique_id=372698892 instance=ExtResource("77_v3xnv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5999985, 0, -4.700001)
+
+[node name="box_large2" parent="RedRoom" unique_id=1074113903 instance=ExtResource("80_o5uhr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5999985, 0, 6.7)
+
+[node name="box_small2" parent="RedRoom" unique_id=86078598 instance=ExtResource("81_2ybmr")]
+transform = Transform3D(0.90630776, 0, -0.42261827, 0, 1, 0, 0.42261827, 0, 0.90630776, 3.0999985, 0, 6.7000003)
+
+[node name="box_small3" parent="RedRoom" unique_id=226418559 instance=ExtResource("81_2ybmr")]
+transform = Transform3D(0.9396926, 0, 0.34202012, 0, 1, 0, -0.34202012, 0, 0.9396926, 4.699997, 0, 5.200001)
+
+[node name="box_small4" parent="RedRoom" unique_id=41364591 instance=ExtResource("81_2ybmr")]
+transform = Transform3D(0.9063078, 0, -0.42261827, 0, 1, 0, 0.42261827, 0, 0.9063078, 4.999996, 1.5, 7.1000004)
 
 [node name="YellowRoom" type="Node3D" parent="." unique_id=2027608995]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 14)
@@ -1959,9 +1987,6 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 78, 
 
 [node name="wall25" parent="Wall" unique_id=1402083316 instance=ExtResource("12_rtwjv")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 78, 0, 18)
-
-[node name="wall26" parent="Wall" unique_id=454563967 instance=ExtResource("12_rtwjv")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 58, 0, 14)
 
 [node name="wall27" parent="Wall" unique_id=1179453830 instance=ExtResource("12_rtwjv")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 58, 0, 18)
