@@ -32,7 +32,8 @@ func _physics_process(_delta: float) -> void:
 			$Menu.show()
 			_show_mouse()
 	if player.velocity.x or player.velocity.z : 
-		_close()
+		#_close()
+		pass
 
 func update_mouse_mode() -> void:
 	if ($Options.visible or $Bag.visible 
@@ -82,6 +83,9 @@ func openTransition(onMiddle : Callable, onEnd : Callable = func():pass) -> void
 
 func consoleLog(text: String) -> void:
 	$ConsoleLog.log(text)
+
+func is_open() -> bool :
+	return $DialogGui.visible
 
 func _close() -> void :
 	if Input.mouse_mode == Input.MOUSE_MODE_VISIBLE :

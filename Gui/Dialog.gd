@@ -2,8 +2,7 @@ class_name Dialog
 extends Node
 
 @export_multiline var text: String
-@export var pnj: PNJ = null
-@export var monster: Monster = null
+@export var pnj: GameBaseCharacterBody3D = null
 @export var enable:bool = true
 @export var close_enable = true
 

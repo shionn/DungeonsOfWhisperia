@@ -77,6 +77,7 @@
 [ext_resource type="PackedScene" uid="uid://d0d62rw45klnc" path="res://Assets/Dungeons/Chair/chair.gltf" id="19_letkk"]
 [ext_resource type="PackedScene" uid="uid://cpxbxsa88w1au" path="res://Assets/Dungeons/Bottle/bottle_B_green.gltf" id="20_41n8b"]
 [ext_resource type="PackedScene" uid="uid://b80dbn70dnlhg" path="res://Assets/Bits/RpgTools/map_rolled.gltf" id="20_ei0w7"]
+[ext_resource type="PackedScene" uid="uid://ccpi60vfgxxjo" path="res://Game/Monsters/SkeletonGolem.tscn" id="21_bkx1f"]
 [ext_resource type="PackedScene" uid="uid://bn8u3hkxao6jh" path="res://Assets/Characters/AdventurersAccessoires/spellbook_open.gltf" id="21_m2ftf"]
 [ext_resource type="PackedScene" uid="uid://dtbeiqnbxjtah" path="res://Assets/Dungeons/Bottle/bottle_C_brown.gltf" id="21_qvsi7"]
 [ext_resource type="PackedScene" uid="uid://lkdece1ud37e" path="res://Assets/Dungeons/Crate/crates_stacked.gltf" id="22_eijaf"]
@@ -494,9 +495,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1.8, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68, 0, 16)
 script = ExtResource("19_2ybmr")
 
-[node name="Necromancer" parent="BossRoom" unique_id=91916719 instance=ExtResource("113_v3xnv")]
-transform = Transform3D(-0.8660253, 0, -0.49999997, 0, 1, 0, 0.49999997, 0, -0.8660253, -1.5, 0, 0.79999924)
+[node name="Valthorion" parent="BossRoom" unique_id=91916719 instance=ExtResource("113_v3xnv")]
+transform = Transform3D(-0.8660253, 0, -0.49999997, 0, 1, 0, 0.49999997, 0, -0.8660253, -2.5999985, 0, 0.79999924)
 state = 7
+
+[node name="Skeleton Golem" parent="BossRoom" unique_id=1583216697 instance=ExtResource("21_bkx1f")]
+transform = Transform3D(-0.42261827, 0, -0.90630776, 0, 1, 0, 0.90630776, 0, -0.42261827, 5.5000076, 0, 2.7000008)
+state = 7
+loot_obj = 5
+loot_gold = 4
+lvl = 1
 
 [node name="Wall_Doorway" parent="BossRoom" unique_id=812446971 instance=ExtResource("1_o78hi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8)
@@ -583,17 +591,18 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5999985, 0, -1.1999998)
 
 [node name="Area3D" type="Area3D" parent="BossRoom" unique_id=1924639577]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6)
+collision_layer = 0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="BossRoom/Area3D" unique_id=1735431384]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0.5)
 shape = SubResource("BoxShape3D_78w8x")
 
-[node name="NecromancerDialog" type="Node" parent="BossRoom" unique_id=1033382364 node_paths=PackedStringArray("monster")]
+[node name="NecromancerDialog" type="Node" parent="BossRoom" unique_id=1033382364 node_paths=PackedStringArray("pnj")]
 script = ExtResource("13_iikjq")
 text = "Hé bien, qu’avons-nous là ? C’était toi, dans le mausolée. N’est-ce pas ? Laisse-moi deviner… C’est l’aigle jaune qui t’envoie, n’est-ce pas ? Il est le portrait craché de son arrière-grand-père. 
 
 Je n’ai pas le temps de jouer avec toi. Je te laisse avec mon ami."
-monster = NodePath("../Necromancer")
+pnj = NodePath("../Valthorion")
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
 [node name="RitualRoom" type="Node3D" parent="." unique_id=649690424]
@@ -622,6 +631,7 @@ transform = Transform3D(-0.99999994, 0, 8.742277e-08, 0, 1, 0, -8.742277e-08, 0,
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 0)
 
 [node name="Closed" type="Node3D" parent="RitualRoom/Secret" unique_id=1533201276]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
 
 [node name="banner_triple_white2" parent="RitualRoom/Secret/Closed" unique_id=1772313798 instance=ExtResource("6_d0l6h")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)

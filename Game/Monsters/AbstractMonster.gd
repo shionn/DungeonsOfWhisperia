@@ -45,7 +45,9 @@ func _physics_process(_delta: float) -> void:
 			else :
 				_move_to_navigation()
 		State.NAVIGATE :
-			if not _navigation_agent.is_navigation_finished() :
+			if _navigation_agent.is_navigation_finished() :
+				velocity = Vector3.ZERO
+			else :
 				_move_to_navigation()
 		State.ATTACK:
 			if _on_gcd : 

@@ -4,8 +4,8 @@
 [ext_resource type="AudioStream" uid="uid://c3kmcc5um850h" path="res://Audio/SwishesSoundPack/swish-9.wav" id="4_ci5jw"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_qs2cd"]
-radius = 1.0
-height = 3.9499998
+radius = 1.1
+height = 4.0
 
 [node name="MonsterLarge" type="CharacterBody3D" unique_id=706438754]
 collision_layer = 257
