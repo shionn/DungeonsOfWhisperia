@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://3uma11nuvu0l"]
+
+[ext_resource type="PackedScene" uid="uid://dvd4uuprholj6" path="res://Game/Monsters/Monster.tscn" id="1_1ghq8"]
+[ext_resource type="Script" uid="uid://jc48o2pjdmpq" path="res://Game/Monsters/SkeletonWarrior.gd" id="2_or80r"]
+[ext_resource type="PackedScene" uid="uid://dcdudw768rgm4" path="res://Assets/Characters/Skeleton/Skeleton_Rogue.glb" id="3_jdd1k"]
+
+[node name="SkeletonRogue" unique_id=706438754 instance=ExtResource("1_1ghq8")]
+script = ExtResource("2_or80r")
+
+[node name="Character" parent="." index="8" unique_id=2141343393 instance=ExtResource("3_jdd1k")]

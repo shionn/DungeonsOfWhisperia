@@ -115,6 +115,7 @@
 [ext_resource type="PackedScene" uid="uid://bt65i4uo2ym8u" path="res://Assets/Dungeons/Weapons/bucket_pickaxes.gltf" id="77_v3xnv"]
 [ext_resource type="PackedScene" uid="uid://bu7hkqv2gmh3m" path="res://Assets/Dungeons/Box/box_large.gltf" id="80_o5uhr"]
 [ext_resource type="PackedScene" uid="uid://x7rqp0xpsk6m" path="res://Assets/Dungeons/Box/box_small.gltf" id="81_2ybmr"]
+[ext_resource type="PackedScene" uid="uid://csg4ffnbxbal1" path="res://Game/Monsters/SkeletonWarrior.tscn" id="85_87aba"]
 [ext_resource type="PackedScene" uid="uid://be86xep67rb3s" path="res://Game/Monsters/Necromancer.tscn" id="113_v3xnv"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_b02ke"]
@@ -352,9 +353,6 @@ polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(1, 3, 2)]
 
 [node name="Dungeon02" type="Node3D" unique_id=879788223]
 script = ExtResource("1_letkk")
-
-[node name="SkeletonMinion" parent="." unique_id=706438754 instance=ExtResource("2_o5uhr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0, -14)
 
 [node name="EntranceSecret" type="Node3D" parent="." unique_id=2096229949]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68, 0, 0)
@@ -631,7 +629,6 @@ transform = Transform3D(-0.99999994, 0, 8.742277e-08, 0, 1, 0, -8.742277e-08, 0,
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 0)
 
 [node name="Closed" type="Node3D" parent="RitualRoom/Secret" unique_id=1533201276]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
 
 [node name="banner_triple_white2" parent="RitualRoom/Secret/Closed" unique_id=1772313798 instance=ExtResource("6_d0l6h")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
@@ -1328,6 +1325,11 @@ transform = Transform3D(0.9396926, 0, 0.34202012, 0, 1, 0, -0.34202012, 0, 0.939
 [node name="box_small4" parent="RedRoom" unique_id=41364591 instance=ExtResource("81_2ybmr")]
 transform = Transform3D(0.9063078, 0, -0.42261827, 0, 1, 0, 0.42261827, 0, 0.9063078, 4.999996, 1.5, 7.1000004)
 
+[node name="SkeletonWarrior" parent="RedRoom" unique_id=706438754 instance=ExtResource("85_87aba")]
+transform = Transform3D(-0.50000006, 0, 0.8660254, 0, 1, 0, -0.8660254, 0, -0.50000006, 1.7000008, 0, -0.5)
+loot_obj = 1
+loot_gold = 2
+
 [node name="YellowRoom" type="Node3D" parent="." unique_id=2027608995]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 14)
 
@@ -1462,6 +1464,12 @@ transform = Transform3D(1, -1.1540219e-21, 7.1054274e-15, -1.1540219e-21, 1, -8.
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="BlueRoom/wall_inset_candles4/potion_small_blue2/Area3D" unique_id=415173576]
 shape = SubResource("SphereShape3D_b02ke")
+
+[node name="Skeleton Minion 1" parent="BlueRoom" unique_id=1094302665 instance=ExtResource("2_o5uhr")]
+transform = Transform3D(0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, 0.70710677, 2, 0, -5)
+
+[node name="Skeleton Minion 2" parent="BlueRoom" unique_id=1580686768 instance=ExtResource("2_o5uhr")]
+transform = Transform3D(-0.9659258, 0, 0.25881898, 0, 1, 0, -0.25881898, 0, -0.9659258, 0, 0, 6)
 
 [node name="Floor" type="Node3D" parent="." unique_id=1024839097]
 
