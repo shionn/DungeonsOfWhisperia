@@ -28,7 +28,7 @@ func _ready() -> void:
 	start_animation("Idle_A")
 	_atk = _find_atk()
 	add_to_group("Monsters")
-	_offHandAtkTimer.timeout.connect(self._on_off_hand_atk_timers_timeout)
+	#_offHandAtkTimer.timeout.connect(self._on_off_hand_atk_timers_timeout)
 
 func _physics_process(_delta: float) -> void:
 	see_player = _see_player()
@@ -94,7 +94,8 @@ func _see_player() -> bool :
 
 func _move_to_navigation() -> void :
 	var next_path_position: Vector3 = _navigation_agent.get_next_path_position()
-	self.look_at(next_path_position,Vector3.UP,true)
+	if next_path_position != global_position :
+		self.look_at(next_path_position,Vector3.UP,true)
 	self.rotation.x = 0
 	self.velocity = global_position.direction_to(next_path_position) * _movement_speed
 	start_animation("Walking_A")
