@@ -85,7 +85,7 @@ func consoleLog(text: String) -> void:
 	$ConsoleLog.log(text)
 
 func is_open() -> bool :
-	return $DialogGui.visible
+	return not $CenterCursor.visible
 
 func _close() -> void :
 	if Input.mouse_mode == Input.MOUSE_MODE_VISIBLE :

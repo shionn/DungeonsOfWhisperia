@@ -109,6 +109,7 @@
 [ext_resource type="PackedScene" uid="uid://dpek8oj8ussjy" path="res://Assets/Characters/SkeletonAccessoires/Skeleton_Dagger.gltf" id="47_letkk"]
 [ext_resource type="PackedScene" uid="uid://dgc6r0o5rxge4" path="res://Assets/Characters/AdventurersAccessoires/potion_small_blue.gltf" id="47_ml8gv"]
 [ext_resource type="PackedScene" uid="uid://bhig0ujmb131t" path="res://Assets/Dungeons/Crate/crate_small.gltf" id="52_46tpd"]
+[ext_resource type="PackedScene" uid="uid://3uma11nuvu0l" path="res://Game/Monsters/SkeletonRogue.tscn" id="56_dxww1"]
 [ext_resource type="AudioStream" uid="uid://61hk6iwxjiwe" path="res://Audio/DungeonThemes/dungeon.ogg" id="69_gcmxt"]
 [ext_resource type="PackedScene" uid="uid://qv2dm02eh64" path="res://Assets/Dungeons/Wall/wall_inset_shelves_decoratedA.gltf" id="73_5ea61"]
 [ext_resource type="PackedScene" uid="uid://dholpdwxyyxfv" path="res://Assets/Dungeons/Wall/Crossing/wall_crossing.gltf" id="73_kc6pu"]
@@ -879,6 +880,9 @@ shape = SubResource("BoxShape3D_brlmy")
 [node name="Entrance" type="Node3D" parent="." unique_id=986900549]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 0)
 
+[node name="SkeletonRogue" parent="Entrance" unique_id=706438754 instance=ExtResource("56_dxww1")]
+transform = Transform3D(-0.25881904, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, -0.25881904, 5, 0, 3)
+
 [node name="DungeonExit" parent="Entrance" unique_id=714659814 instance=ExtResource("1_0jkld")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -26, 0, 0)
 
@@ -1325,7 +1329,7 @@ transform = Transform3D(0.9396926, 0, 0.34202012, 0, 1, 0, -0.34202012, 0, 0.939
 [node name="box_small4" parent="RedRoom" unique_id=41364591 instance=ExtResource("81_2ybmr")]
 transform = Transform3D(0.9063078, 0, -0.42261827, 0, 1, 0, 0.42261827, 0, 0.9063078, 4.999996, 1.5, 7.1000004)
 
-[node name="SkeletonWarrior" parent="RedRoom" unique_id=706438754 instance=ExtResource("85_87aba")]
+[node name="SkeletonWarrior" parent="RedRoom" unique_id=1574098959 instance=ExtResource("85_87aba")]
 transform = Transform3D(-0.50000006, 0, 0.8660254, 0, 1, 0, -0.8660254, 0, -0.50000006, 1.7000008, 0, -0.5)
 loot_obj = 1
 loot_gold = 2

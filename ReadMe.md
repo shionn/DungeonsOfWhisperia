@@ -10,13 +10,14 @@
   - definition ?
   - fullscreen ?
   - effet de flamme ?
-  - ombre ssao
+  - ombre ssao ?
 - ajouter des options d'input
   - sensibilité souris
 - gameover
   - Ajouter un bouton pour retourner à l'auberge à la derniere sauvegarde
 - combat
   - Ajouter un systeme d'aggro
+- barre de state : lvl pas explicie, ni l'xp, et depalcer le FPS
 
 # Assets
 ## 3D and characters

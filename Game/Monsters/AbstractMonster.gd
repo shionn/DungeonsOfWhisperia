@@ -7,6 +7,7 @@ enum State { IDLE, CHASE, ATTACK, ATTACKING, HIT, DEATH, PATROL, NAVIGATE }
 @onready var _navigation_agent: NavigationAgent3D = $NavigationAgent3D
 @onready var _animationTimer = $AnimationTimer as Timer
 @onready var _atkTimer = $AtkTimer as Timer
+@onready var _offHandAtkTimer = $OffHandAtkTimer as Timer
 @onready var _gcdTimer = $GcdTimer as Timer
 
 @export var state : State = State.IDLE
@@ -27,6 +28,7 @@ func _ready() -> void:
 	start_animation("Idle_A")
 	_atk = _find_atk()
 	add_to_group("Monsters")
+	_offHandAtkTimer.timeout.connect(self._on_off_hand_atk_timers_timeout)
 
 func _physics_process(_delta: float) -> void:
 	see_player = _see_player()
@@ -138,6 +140,7 @@ func _start_atk() -> void:
 	_animationTimer.start(length)
 	_atk.start()
 	_atkTimer.start(length*_atk.animation_to_hit_factor)
+	if _atk.dual_hand : _offHandAtkTimer.start(length*_atk.off_hand_animation_to_hit_factor)
 	_gcdTimer.start(get_global_colddown())
 	_on_gcd = true
 	state = State.ATTACKING
@@ -146,8 +149,15 @@ func _on_atk_timer_timeout() -> void:
 	if state != State.DEATH :
 		_atk.sound.play()
 		player.receive_atk(_atk.damage(), self)
+		if not _atk.dual_hand :
+			_atk = null
+
+func _on_off_hand_atk_timers_timeout() -> void:
+	if state != State.DEATH :
+		_atk.sound.play()
+		player.receive_atk(_atk.off_hand_damage(), self)
 		_atk = null
-		
+
 
 func receive_atk(nb_atk: int) -> void:
 	if state == State.DEATH : return

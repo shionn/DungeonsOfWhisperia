@@ -30,6 +30,9 @@ one_shot = true
 [node name="AtkTimer" type="Timer" parent="." unique_id=1245476828]
 one_shot = true
 
+[node name="OffHandAtkTimer" type="Timer" parent="." unique_id=1579246959]
+one_shot = true
+
 [node name="GcdTimer" type="Timer" parent="." unique_id=953134464]
 one_shot = true
 

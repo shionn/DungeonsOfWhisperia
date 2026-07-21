@@ -1,10 +1,43 @@
 [gd_scene format=3 uid="uid://3uma11nuvu0l"]
 
 [ext_resource type="PackedScene" uid="uid://dvd4uuprholj6" path="res://Game/Monsters/Monster.tscn" id="1_1ghq8"]
-[ext_resource type="Script" uid="uid://jc48o2pjdmpq" path="res://Game/Monsters/SkeletonWarrior.gd" id="2_or80r"]
-[ext_resource type="PackedScene" uid="uid://dcdudw768rgm4" path="res://Assets/Characters/Skeleton/Skeleton_Rogue.glb" id="3_jdd1k"]
+[ext_resource type="Script" uid="uid://b2qk5wvytbdpx" path="res://Game/Monsters/SkeletonRogue.gd" id="2_1ghq8"]
+[ext_resource type="PackedScene" uid="uid://bsmfgl7ta53m2" path="res://Assets/Scenes/Skeleton_Rogue.tscn" id="3_1ghq8"]
+[ext_resource type="Script" uid="uid://beivecuks870r" path="res://Game/Monsters/MonsterAtk.gd" id="4_1ghq8"]
 
 [node name="SkeletonRogue" unique_id=706438754 instance=ExtResource("1_1ghq8")]
-script = ExtResource("2_or80r")
+script = ExtResource("2_1ghq8")
 
-[node name="Character" parent="." index="8" unique_id=2141343393 instance=ExtResource("3_jdd1k")]
+[node name="Character" parent="." index="9" unique_id=2141343393 instance=ExtResource("3_1ghq8")]
+
+[node name="Chop" type="Node" parent="." index="10" unique_id=2032389058 node_paths=PackedStringArray("sound")]
+script = ExtResource("4_1ghq8")
+animation = "Melee_Dualwield_Attack_Chop"
+cold_down = 2.0
+sound = NodePath("../Swing2")
+animation_to_hit_factor = 0.3
+dual_hand = true
+off_hand_animation_to_hit_factor = 0.6
+metadata/_custom_type_script = "uid://beivecuks870r"
+
+[node name="Slice" type="Node" parent="." index="11" unique_id=1682412319 node_paths=PackedStringArray("sound")]
+script = ExtResource("4_1ghq8")
+animation = "Melee_Dualwield_Attack_Slice"
+cold_down = 2.0
+sound = NodePath("../Swing2")
+animation_to_hit_factor = 0.4
+dual_hand = true
+off_hand_animation_to_hit_factor = 0.4
+metadata/_custom_type_script = "uid://beivecuks870r"
+
+[node name="Stab" type="Node" parent="." index="12" unique_id=1795863803 node_paths=PackedStringArray("sound")]
+script = ExtResource("4_1ghq8")
+animation = "Melee_Dualwield_Attack_Stab"
+cold_down = 2.0
+sound = NodePath("../Swing2")
+animation_to_hit_factor = 0.2
+dual_hand = true
+off_hand_animation_to_hit_factor = 0.2
+metadata/_custom_type_script = "uid://beivecuks870r"
+
+[connection signal="timeout" from="OffHandAtkTimer" to="." method="_on_off_hand_atk_timers_timeout"]
