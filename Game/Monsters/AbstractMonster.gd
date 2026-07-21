@@ -11,9 +11,12 @@ enum State { IDLE, CHASE, ATTACK, ATTACKING, HIT, DEATH, PATROL, NAVIGATE }
 @onready var _gcdTimer = $GcdTimer as Timer
 
 @export var state : State = State.IDLE
+@export var lvl : int = 1
+@export_category("loot")
 @export var loot_obj : Items.ItemName = Items.ItemName.None
 @export var loot_gold: int = 0
-@export var lvl : int = 1
+@export_category("patrol")
+@export var patrol_path : Array[Vector3] = []
 
 const _movement_speed: float = 4.0
 
@@ -22,6 +25,7 @@ var _on_gcd : bool = false
 var see_player = false
 var pv = get_max_pv()
 var _hit_take = 0
+var _patrol_target = 0
 
 func _ready() -> void:
 	_navigation_agent.target_desired_distance = 0
@@ -29,6 +33,7 @@ func _ready() -> void:
 	_atk = _find_atk()
 	add_to_group("Monsters")
 	#_offHandAtkTimer.timeout.connect(self._on_off_hand_atk_timers_timeout)
+	if state == State.PATROL : _navigation_agent.set_target_position(patrol_path[0])
 
 func _physics_process(_delta: float) -> void:
 	see_player = _see_player()
@@ -51,6 +56,13 @@ func _physics_process(_delta: float) -> void:
 				velocity = Vector3.ZERO
 			else :
 				_move_to_navigation()
+		State.PATROL :
+			if see_player : state = State.CHASE
+			elif _navigation_agent.is_navigation_finished() :
+				_patrol_target = _patrol_target +1
+				if _patrol_target>=patrol_path.size() : _patrol_target = 0
+				_navigation_agent.set_target_position(patrol_path[_patrol_target])
+			else : _move_to_navigation()
 		State.ATTACK:
 			if _on_gcd : 
 				state = State.IDLE
@@ -85,6 +97,8 @@ func _see_player() -> bool :
 	var end = player.global_position+Vector3.UP*2
 	var direction = (end-start).normalized()
 	var orientation = self.basis * Vector3.BACK
+	var fov = get_fov()
+	if state == State.PATROL : fov = fov-20;
 	if rad_to_deg(orientation.angle_to(direction)) <= get_fov() :
 		var query = PhysicsRayQueryParameters3D.create(start, end, 1)
 		var result = get_world_3d().direct_space_state.intersect_ray(query)
@@ -98,6 +112,7 @@ func _move_to_navigation() -> void :
 		self.look_at(next_path_position,Vector3.UP,true)
 	self.rotation.x = 0
 	self.velocity = global_position.direction_to(next_path_position) * _movement_speed
+	if state == State.PATROL : velocity = velocity /4
 	start_animation("Walking_A")
 
 func _update_navigation() -> bool :

@@ -382,6 +382,19 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -18)
 [node name="MobRoomSecret" type="Node3D" parent="." unique_id=157219292]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68, 0, -29)
 
+[node name="SkeletonRogue" parent="MobRoomSecret" unique_id=253347074 instance=ExtResource("56_dxww1")]
+transform = Transform3D(0, 0, -1.0000001, 0, 1, 0, 1.0000001, 0, 0, 12, 0, -1)
+state = 6
+loot_gold = 3
+patrol_path = Array[Vector3]([Vector3(76, 0, -30), Vector3(60, 0, -30), Vector3(60, 0, -16), Vector3(76, 0, -16)])
+
+[node name="SkeletonWarrior" parent="MobRoomSecret" unique_id=706438754 instance=ExtResource("85_87aba")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, -1)
+state = 6
+loot_obj = 1
+loot_gold = 2
+patrol_path = Array[Vector3]([Vector3(60, 0, -30), Vector3(76, 0, -30), Vector3(76, 0, -16), Vector3(60, 0, -16)])
+
 [node name="wall_inset_shelves_decoratedA2" parent="MobRoomSecret" unique_id=152733338 instance=ExtResource("73_5ea61")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -5)
 
@@ -501,9 +514,9 @@ state = 7
 [node name="Skeleton Golem" parent="BossRoom" unique_id=1583216697 instance=ExtResource("21_bkx1f")]
 transform = Transform3D(-0.42261827, 0, -0.90630776, 0, 1, 0, 0.90630776, 0, -0.42261827, 5.5000076, 0, 2.7000008)
 state = 7
+lvl = 1
 loot_obj = 5
 loot_gold = 4
-lvl = 1
 
 [node name="Wall_Doorway" parent="BossRoom" unique_id=812446971 instance=ExtResource("1_o78hi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8)
@@ -607,6 +620,12 @@ metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 [node name="RitualRoom" type="Node3D" parent="." unique_id=649690424]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50, 0, 0)
 script = ExtResource("1_o1k2d")
+
+[node name="SkeletonRogue" parent="RitualRoom" unique_id=2131449861 instance=ExtResource("56_dxww1")]
+transform = Transform3D(0, 0, -1.0000001, 0, 1, 0, 1.0000001, 0, 0, 5, 0, 6)
+state = 6
+loot_gold = 2
+patrol_path = Array[Vector3]([Vector3(55, 0, -6), Vector3(45, 0, -6), Vector3(45, 0, 6), Vector3(50, 0, 6), Vector3(55, 0, 6)])
 
 [node name="Ranger" parent="RitualRoom" unique_id=1073651002 instance=ExtResource("25_m2ftf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 2)
@@ -872,6 +891,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -8, 
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -8, 0, -6)
 
 [node name="Area3D" type="Area3D" parent="RitualRoom" unique_id=912248097]
+collision_layer = 0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RitualRoom/Area3D" unique_id=1334545276]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
@@ -879,9 +899,6 @@ shape = SubResource("BoxShape3D_brlmy")
 
 [node name="Entrance" type="Node3D" parent="." unique_id=986900549]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 0)
-
-[node name="SkeletonRogue" parent="Entrance" unique_id=706438754 instance=ExtResource("56_dxww1")]
-transform = Transform3D(-0.25881904, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, -0.25881904, 5, 0, 3)
 
 [node name="DungeonExit" parent="Entrance" unique_id=714659814 instance=ExtResource("1_0jkld")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -26, 0, 0)
@@ -2958,6 +2975,10 @@ Rapporter une preuve de votre réussite.
 Trouver un indice la personne se cachant derriere ces événements.
 [/ul]"
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Skeleton Minion 1" parent="." unique_id=1518303726 instance=ExtResource("2_o5uhr")]
+transform = Transform3D(0.4999999, 0, 0.8660253, 0, 1, 0, -0.8660253, 0, 0.4999999, 12.1, 0, -4)
+loot_gold = 1
 
 [connection signal="body_entered" from="BossRoom/Area3D" to="BossRoom" method="_on_area_3d_body_entered"]
 [connection signal="close" from="BossRoom/NecromancerDialog" to="BossRoom" method="_on_necromancer_dialog_close"]
