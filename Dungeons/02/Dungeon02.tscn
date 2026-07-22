@@ -855,6 +855,7 @@ patrol_path = Array[Vector3]([Vector3(55, 0, -6), Vector3(45, 0, -6), Vector3(45
 [node name="Ranger" parent="RitualRoom" unique_id=1073651002 instance=ExtResource("25_m2ftf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 2)
 script = ExtResource("26_l7dob")
+loot_obj = 14
 
 [node name="Area3D" type="Area3D" parent="RitualRoom/Ranger" unique_id=1141440309]
 
