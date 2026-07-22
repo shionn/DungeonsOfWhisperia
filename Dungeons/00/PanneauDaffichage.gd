@@ -5,7 +5,7 @@ func on_interact() -> void:
 	if not tags.have(Tags.AUBERGE_PLAYER_RESTORED) :
 		gui.openDialog($Description)
 	elif not tags.have(Tags.DUNGEON_01_FINISHED): 
-		$"Mission 1/Next".enable = bag.have(Items.ItemName.SkullHead)
+		$"Mission 1/Next".enable = bag.have(Items.ItemName.SkullHead_Dungeon1)
 		gui.openDialog($"Mission 1")
 	else :
 		gui.openDialog($"Rien")

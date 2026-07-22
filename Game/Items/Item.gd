@@ -3,11 +3,15 @@ extends GameBase
 
 @export var item_name : Items.ItemName = Items.ItemName.None
 @export var icon : Resource
-@export_multiline() var description : String
 @export var tooltip : String
+@export_multiline() var description : String
+@export_category("Utilisation")
 @export var conssommable : bool = false
+@export_category("Loot Condition")
 @export var global : bool = true
 @export var unique : bool = false
+@export var tag : String
+@export_category("Item type")
 @export var gemme : bool = false
 
 signal _action()
@@ -27,7 +31,7 @@ func open_description() -> void:
 		gui.openDialog(desc)
 
 func lootable() -> bool :
-	return not unique or not bag.have(item_name)
+	return not unique or tag == "" and not bag.have(item_name) or not tags.have(tag) 
 
 func _give_back_2_pv() -> void:
 	player.pv = min(player.pv+2, player.get_max_pv())

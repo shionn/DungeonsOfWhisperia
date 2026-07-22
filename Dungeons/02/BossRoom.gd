@@ -1,6 +1,6 @@
 extends GameBase3D
 
-@onready var _necromancer = $Valthorion
+@onready var _necromancer : Monster = $Valthorion
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	if body ==  player and _necromancer:

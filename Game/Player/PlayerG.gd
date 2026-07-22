@@ -170,8 +170,7 @@ func load_game() -> void :
 		bag.gold = save_data.get("gold", 0)
 		for tag in save_data["tags"] : tags._tags.append(tag)
 		for item in save_data["bag"] : 
-			
-			bag.items.append(item)
+			bag._items.append(item)
 		gui.consoleLog("Partie chargée")
 
 

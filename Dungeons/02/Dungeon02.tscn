@@ -443,6 +443,7 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 1
 
 [node name="wall_inset_shelves_decoratedA3" parent="MobRoomSecret" unique_id=385657144 instance=ExtResource("73_5ea61")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -5)
+script = ExtResource("23_ml8gv")
 
 [node name="key_C2" parent="MobRoomSecret/wall_inset_shelves_decoratedA3" unique_id=609748300 instance=ExtResource("2_hn4oq")]
 transform = Transform3D(-3.8325827e-09, -0.32139382, 0.38302222, -0.5, 5.9624403e-09, 0, -4.5674944e-09, -0.38302222, -0.32139382, 0.1, 0.95, 0.1)
@@ -1574,12 +1575,11 @@ shape = SubResource("SphereShape3D_b02ke")
 
 [node name="wall_inset_shelves_broken4" parent="BlueRoom" unique_id=243784388 instance=ExtResource("11_0jkld")]
 transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -6, 0, 4)
-script = ExtResource("23_ml8gv")
-loot_gold = 5
-hide_on_loot = true
 
 [node name="coin_stack_small2" parent="BlueRoom/wall_inset_shelves_broken4" unique_id=173932505 instance=ExtResource("105_tvthq")]
 transform = Transform3D(-0.39847788, 0, -0.034862272, 0, 0.39999998, 0, 0.034862272, 0, -0.39847788, -0.10000038, 0.82, 0)
+script = ExtResource("23_ml8gv")
+loot_gold = 5
 
 [node name="Area3D" type="Area3D" parent="BlueRoom/wall_inset_shelves_broken4/coin_stack_small2" unique_id=1519456601]
 

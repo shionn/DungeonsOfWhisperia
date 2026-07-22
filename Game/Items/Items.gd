@@ -7,7 +7,7 @@ enum ItemName {
 	ClefBouclierEpee,
 	BoissonRaffinee,
 	ClefCoffre,
-	SkullHead,
+	SkullHead_Dungeon1,
 	FioleNecrolisAttivae,
 	PotionVieMoyenne,
 	PotionVieMajeur,
@@ -16,7 +16,8 @@ enum ItemName {
 	GemmeJaune,
 	GemmeBleu,
 	AnneauValthorion,
-	Alliance
+	Alliance,
+	SkullHead_Dungeon2,
 }
 
 func from(item_name : ItemName) -> Item :

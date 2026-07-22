@@ -112,7 +112,7 @@ func _move_to_navigation() -> void :
 		self.look_at(next_path_position,Vector3.UP,true)
 	self.rotation.x = 0
 	self.velocity = global_position.direction_to(next_path_position) * _movement_speed
-	if state == State.PATROL : velocity = velocity /4
+	if state == State.PATROL or state == State.NAVIGATE : velocity = velocity /4
 	start_animation("Walking_A")
 
 func _update_navigation() -> bool :

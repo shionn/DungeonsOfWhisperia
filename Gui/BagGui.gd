@@ -27,7 +27,7 @@ func _refresh() -> void:
 		button.button_mask = MOUSE_BUTTON_MASK_LEFT | MOUSE_BUTTON_MASK_RIGHT
 		_container.add_child(button)
 
-	for item_name in bag.items :
+	for item_name in bag.items() :
 		var item : Item  = _items.from(item_name)
 		if item : 
 			var button = TextureButton.new();

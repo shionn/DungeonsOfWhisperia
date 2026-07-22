@@ -30,7 +30,6 @@ func open(dialog: Dialog)->void :
 		
 		_text.clear()
 		if dialog.pnj : _text.append_text("[color=darkgray]%s : [/color]"%dialog.pnj.name)
-		elif dialog.monster : _text.append_text("[color=darkgray]%s : [/color]"%dialog.monster.name)
 		else : _text.append_text("[color=darkgray]Vous : [/color]")
 		_text.append_text(dialog.text)
 		if dialog.pnj : 
