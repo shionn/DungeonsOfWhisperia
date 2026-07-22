@@ -117,11 +117,37 @@
 [ext_resource type="PackedScene" uid="uid://bu7hkqv2gmh3m" path="res://Assets/Dungeons/Box/box_large.gltf" id="80_o5uhr"]
 [ext_resource type="PackedScene" uid="uid://x7rqp0xpsk6m" path="res://Assets/Dungeons/Box/box_small.gltf" id="81_2ybmr"]
 [ext_resource type="PackedScene" uid="uid://csg4ffnbxbal1" path="res://Game/Monsters/SkeletonWarrior.tscn" id="85_87aba"]
+[ext_resource type="PackedScene" uid="uid://dhflr6qrk1e1d" path="res://Assets/Dungeons/Coin/coin_stack_small.gltf" id="105_tvthq"]
 [ext_resource type="PackedScene" uid="uid://be86xep67rb3s" path="res://Game/Monsters/Necromancer.tscn" id="113_v3xnv"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_b02ke"]
 radius = 0.3
 height = 1.25
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tdnme"]
+size = Vector3(0.6, 0.5126953, 0.5)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_2veej"]
+height = 0.51344603
+radius = 0.20947266
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dp1lw"]
+size = Vector3(0.4395752, 0.54003906, 0.5118408)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3ruak"]
+size = Vector3(0.23554687, 0.54003906, 0.43804932)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sg7jx"]
+size = Vector3(0.57197267, 0.23056641, 0.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4lyfw"]
+size = Vector3(0.6260742, 0.54785156, 0.4)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tvthq"]
+size = Vector3(0.43359375, 0.52246094, 0.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_o0ubt"]
+size = Vector3(0.25579834, 0.51904297, 0.4)
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_b02ke"]
 height = 0.2
@@ -179,6 +205,8 @@ radius = 0.4428711
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_it32w"]
 radius = 0.2
 height = 1.3
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_tdnme"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_t6qsb"]
 vertices = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, -1)
@@ -429,13 +457,57 @@ transform = Transform3D(1, -1.1924881e-08, 1.1924881e-08, -1.1924881e-08, 0, 1, 
 shape = SubResource("CapsuleShape3D_b02ke")
 
 [node name="book_brown3" parent="MobRoomSecret/wall_inset_shelves_decoratedA3" unique_id=1526560551 instance=ExtResource("7_3uwpk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.69999695, 1.9, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.69999695, 1.8921138, 0)
 
 [node name="book_brown2" parent="MobRoomSecret/wall_inset_shelves_decoratedA3" unique_id=767917145 instance=ExtResource("7_3uwpk")]
-transform = Transform3D(-0.8660253, 0, 0.5000001, 0, 1, 0, -0.5000001, 0, -0.8660253, 0.80000305, 1.9, 0)
+transform = Transform3D(-0.8660253, 0, 0.5000001, 0, 1, 0, -0.5000001, 0, -0.8660253, 0.80000305, 1.8947213, 0)
 
 [node name="book_tan2" parent="MobRoomSecret/wall_inset_shelves_decoratedA3" unique_id=1039154002 instance=ExtResource("6_4uj5q")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.9000015, 1.9, 0)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.9000015, 1.8921138, 0)
+
+[node name="Area3D" type="Area3D" parent="MobRoomSecret/wall_inset_shelves_decoratedA3" unique_id=1956070202]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MobRoomSecret/wall_inset_shelves_decoratedA3/Area3D" unique_id=687983484]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.21971893, -0.10634768, -0.0037574768)
+shape = SubResource("BoxShape3D_tdnme")
+
+[node name="CollisionShape3D8" type="CollisionShape3D" parent="MobRoomSecret/wall_inset_shelves_decoratedA3/Area3D" unique_id=1681816642]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.33901978, -0.17526853, 0.050441742)
+shape = SubResource("CylinderShape3D_2veej")
+
+[node name="CollisionShape3D9" type="CollisionShape3D" parent="MobRoomSecret/wall_inset_shelves_decoratedA3/Area3D" unique_id=1865040963]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.048851013, 0.6112764, -0.005870819)
+shape = SubResource("CylinderShape3D_2veej")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="MobRoomSecret/wall_inset_shelves_decoratedA3/Area3D" unique_id=761583640]
+transform = Transform3D(0.9848077, 0, 0.17364818, 0, 1, 0, -0.17364818, 0, 0.9848077, -0.45976257, -0.8200195, -0.0013656616)
+shape = SubResource("BoxShape3D_dp1lw")
+
+[node name="CollisionShape3D7" type="CollisionShape3D" parent="MobRoomSecret/wall_inset_shelves_decoratedA3/Area3D" unique_id=1819358131]
+transform = Transform3D(0.9175807, 0.39754915, 0, -0.39754915, 0.91758084, 0, 0, 0, 1, 0.76914215, -0.8253553, -0.038261414)
+shape = SubResource("BoxShape3D_3ruak")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="MobRoomSecret/wall_inset_shelves_decoratedA3/Area3D" unique_id=215552373]
+transform = Transform3D(0.9418807, 0, 0.33594778, 0, 1, 0, -0.33594778, 0, 0.9418807, 0.5732498, 0.4608612, -0.0184021)
+shape = SubResource("BoxShape3D_sg7jx")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="MobRoomSecret/wall_inset_shelves_decoratedA3/Area3D" unique_id=513016333]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5355072, 0.6239257, -0.021823883)
+shape = SubResource("BoxShape3D_4lyfw")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="MobRoomSecret/wall_inset_shelves_decoratedA3/Area3D" unique_id=238365602]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.797081, -0.11123049, -0.043014526)
+shape = SubResource("BoxShape3D_tvthq")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="MobRoomSecret/wall_inset_shelves_decoratedA3/Area3D" unique_id=669341386]
+transform = Transform3D(0.8677651, 0, -0.49697456, 0, 1, 0, 0.49697456, 0, 0.8677651, 0.7983475, -0.10952151, -0.013549805)
+shape = SubResource("BoxShape3D_o0ubt")
+
+[node name="description" type="Node" parent="MobRoomSecret/wall_inset_shelves_decoratedA3" unique_id=1094500807]
+script = ExtResource("13_iikjq")
+text = "Cela ressemble aux livres et aux potions que j’ai vus dans le mausolée… Mais ici, il y a aussi des tomes anciens, qui racontent l’histoire des anciens habitants de ces lieux."
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
 [node name="wall_inset_shelves_decoratedA4" parent="MobRoomSecret" unique_id=669143696 instance=ExtResource("73_5ea61")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -5)
@@ -565,11 +637,13 @@ transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70
 
 [node name="bar_straight_C_short" parent="BossRoom/Desk" unique_id=1297367655 instance=ExtResource("10_nsqvi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 0)
+loot_gold = 3
 
 [node name="bar_straight_A2" parent="BossRoom/Desk" unique_id=2008803939 instance=ExtResource("18_eswb4")]
 
 [node name="bar_straight_C_short2" parent="BossRoom/Desk" unique_id=2137783121 instance=ExtResource("10_nsqvi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 0)
+loot_gold = 2
 
 [node name="chair2" parent="BossRoom/Desk" unique_id=1139680674 instance=ExtResource("19_letkk")]
 transform = Transform3D(-0.7071068, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, -0.7071068, -0.5656853, 0, 1.4142189)
@@ -899,6 +973,10 @@ shape = SubResource("BoxShape3D_brlmy")
 
 [node name="Entrance" type="Node3D" parent="." unique_id=986900549]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 0)
+
+[node name="Skeleton Minion" parent="Entrance" unique_id=1518303726 instance=ExtResource("2_o5uhr")]
+transform = Transform3D(0.4999999, 0, 0.8660253, 0, 1, 0, -0.8660253, 0, 0.4999999, -5.8999996, 0, -4)
+loot_gold = 1
 
 [node name="DungeonExit" parent="Entrance" unique_id=714659814 instance=ExtResource("1_0jkld")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -26, 0, 0)
@@ -1259,6 +1337,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0)
 [node name="RedRoom" type="Node3D" parent="." unique_id=1809626829]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36, 0, -14)
 
+[node name="Skeleton Warrior" parent="RedRoom" unique_id=1574098959 instance=ExtResource("85_87aba")]
+transform = Transform3D(-0.50000006, 0, 0.8660254, 0, 1, 0, -0.8660254, 0, -0.50000006, 1.7000008, 0, -0.5)
+loot_obj = 1
+loot_gold = 2
+
 [node name="wall_inset_candles2" parent="RedRoom" unique_id=1317505179 instance=ExtResource("15_gs1cg")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -6, 0, -4)
 
@@ -1346,11 +1429,6 @@ transform = Transform3D(0.9396926, 0, 0.34202012, 0, 1, 0, -0.34202012, 0, 0.939
 [node name="box_small4" parent="RedRoom" unique_id=41364591 instance=ExtResource("81_2ybmr")]
 transform = Transform3D(0.9063078, 0, -0.42261827, 0, 1, 0, 0.42261827, 0, 0.9063078, 4.999996, 1.5, 7.1000004)
 
-[node name="SkeletonWarrior" parent="RedRoom" unique_id=1574098959 instance=ExtResource("85_87aba")]
-transform = Transform3D(-0.50000006, 0, 0.8660254, 0, 1, 0, -0.8660254, 0, -0.50000006, 1.7000008, 0, -0.5)
-loot_obj = 1
-loot_gold = 2
-
 [node name="YellowRoom" type="Node3D" parent="." unique_id=2027608995]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 14)
 
@@ -1393,6 +1471,14 @@ shape = SubResource("SphereShape3D_b02ke")
 
 [node name="BlueRoom" type="Node3D" parent="." unique_id=347525843]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36, 0, 14)
+
+[node name="Skeleton Minion 1" parent="BlueRoom" unique_id=1094302665 instance=ExtResource("2_o5uhr")]
+transform = Transform3D(0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, 0.70710677, 2, 0, -5)
+loot_gold = 1
+
+[node name="Skeleton Minion 2" parent="BlueRoom" unique_id=1580686768 instance=ExtResource("2_o5uhr")]
+transform = Transform3D(-0.9659258, 0, 0.25881898, 0, 1, 0, -0.25881898, 0, -0.9659258, 0, 0, 6)
+loot_gold = 2
 
 [node name="crate_large_decorated2" parent="BlueRoom" unique_id=1489033680 instance=ExtResource("10_xec7q")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4.799999, 0, -1.8999996)
@@ -1486,11 +1572,20 @@ transform = Transform3D(1, -1.1540219e-21, 7.1054274e-15, -1.1540219e-21, 1, -8.
 [node name="CollisionShape3D" type="CollisionShape3D" parent="BlueRoom/wall_inset_candles4/potion_small_blue2/Area3D" unique_id=415173576]
 shape = SubResource("SphereShape3D_b02ke")
 
-[node name="Skeleton Minion 1" parent="BlueRoom" unique_id=1094302665 instance=ExtResource("2_o5uhr")]
-transform = Transform3D(0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, 0.70710677, 2, 0, -5)
+[node name="wall_inset_shelves_broken4" parent="BlueRoom" unique_id=243784388 instance=ExtResource("11_0jkld")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -6, 0, 4)
+script = ExtResource("23_ml8gv")
+loot_gold = 5
+hide_on_loot = true
 
-[node name="Skeleton Minion 2" parent="BlueRoom" unique_id=1580686768 instance=ExtResource("2_o5uhr")]
-transform = Transform3D(-0.9659258, 0, 0.25881898, 0, 1, 0, -0.25881898, 0, -0.9659258, 0, 0, 6)
+[node name="coin_stack_small2" parent="BlueRoom/wall_inset_shelves_broken4" unique_id=173932505 instance=ExtResource("105_tvthq")]
+transform = Transform3D(-0.39847788, 0, -0.034862272, 0, 0.39999998, 0, 0.034862272, 0, -0.39847788, -0.10000038, 0.82, 0)
+
+[node name="Area3D" type="Area3D" parent="BlueRoom/wall_inset_shelves_broken4/coin_stack_small2" unique_id=1519456601]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BlueRoom/wall_inset_shelves_broken4/coin_stack_small2/Area3D" unique_id=1514098193]
+transform = Transform3D(1, 0, 2.2351742e-08, 0, 0.99999964, 0, -2.2351742e-08, 0, 1, -0.1, 0.2, -0.1)
+shape = SubResource("SphereShape3D_tdnme")
 
 [node name="Floor" type="Node3D" parent="." unique_id=1024839097]
 
@@ -2142,9 +2237,6 @@ transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 50, 
 
 [node name="wall_inset_shelves_broken2" parent="Wall" unique_id=1916854216 instance=ExtResource("11_0jkld")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 34, 0, -6)
-
-[node name="wall_inset_shelves_broken4" parent="Wall" unique_id=243784388 instance=ExtResource("11_0jkld")]
-transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 30, 0, 18)
 
 [node name="wall2" parent="Wall" unique_id=1592562342 instance=ExtResource("12_rtwjv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, 0, -10)
@@ -2975,10 +3067,6 @@ Rapporter une preuve de votre réussite.
 Trouver un indice la personne se cachant derriere ces événements.
 [/ul]"
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
-
-[node name="Skeleton Minion 1" parent="." unique_id=1518303726 instance=ExtResource("2_o5uhr")]
-transform = Transform3D(0.4999999, 0, 0.8660253, 0, 1, 0, -0.8660253, 0, 0.4999999, 12.1, 0, -4)
-loot_gold = 1
 
 [connection signal="body_entered" from="BossRoom/Area3D" to="BossRoom" method="_on_area_3d_body_entered"]
 [connection signal="close" from="BossRoom/NecromancerDialog" to="BossRoom" method="_on_necromancer_dialog_close"]
