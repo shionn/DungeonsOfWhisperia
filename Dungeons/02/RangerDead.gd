@@ -6,4 +6,5 @@ func _ready() -> void:
 	$Rig_Medium/Skeleton3D/Ranger_Quiver.hide()
 	$Rig_Medium/Skeleton3D/RightHand.hide()
 	$Rig_Medium/Skeleton3D/Ranger_Cape.hide()
+	super._ready()
 	

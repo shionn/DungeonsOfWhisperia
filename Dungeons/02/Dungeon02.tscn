@@ -94,6 +94,7 @@
 [ext_resource type="Script" uid="uid://dfe0ekqmj7vpg" path="res://Dungeons/02/RangerDead.gd" id="26_l7dob"]
 [ext_resource type="PackedScene" uid="uid://bj2yg7f3e8tc0" path="res://Assets/Dungeons/Tables/bench.gltf" id="27_41n8b"]
 [ext_resource type="PackedScene" uid="uid://y38wo3hdhqtq" path="res://Assets/Dungeons/Wall/wall_shelves.gltf" id="30_46tpd"]
+[ext_resource type="AudioStream" uid="uid://bk3alodr3ijv8" path="res://Audio/TeleportSpell/teleport.ogg" id="30_o0ubt"]
 [ext_resource type="PackedScene" uid="uid://ccbdbtpi2ehj5" path="res://Assets/Dungeons/Floor/Small/floor_tile_small.gltf" id="31_qvsi7"]
 [ext_resource type="PackedScene" uid="uid://chdn2mnom0h4x" path="res://Assets/Characters/MonthlySeries5/Accessoires/Potionstation_decorated.gltf" id="31_v3xnv"]
 [ext_resource type="PackedScene" uid="uid://dfqu824ryf85i" path="res://Assets/Dungeons/Floor/Large/floor_dirt_large_rocky.gltf" id="32_m1hbu"]
@@ -158,6 +159,12 @@ size = Vector3(0.57197267, 0.23056641, 0.5)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_tvthq"]
 size = Vector3(0.43359375, 0.52246094, 0.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3gcn8"]
+size = Vector3(0.7346069, 0.50024414, 0.60478514)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_oow84"]
+size = Vector3(0.61689454, 0.5161133, 0.7610962)
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_b02ke"]
 height = 0.2
@@ -435,6 +442,7 @@ patrol_path = Array[Vector3]([Vector3(60, 0, -30), Vector3(76, 0, -30), Vector3(
 
 [node name="wall_inset_shelves_decoratedA2" parent="MobRoomSecret" unique_id=152733338 instance=ExtResource("73_5ea61")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -5)
+script = ExtResource("23_ml8gv")
 
 [node name="book_tan3" parent="MobRoomSecret/wall_inset_shelves_decoratedA2" unique_id=2114145603 instance=ExtResource("6_4uj5q")]
 transform = Transform3D(-0.7071068, 0, 0.7071068, 0, 1, 0, -0.7071068, 0, -0.7071068, 0.80000305, 1.9, 0)
@@ -569,6 +577,7 @@ metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
 [node name="wall_inset_shelves_decoratedA4" parent="MobRoomSecret" unique_id=669143696 instance=ExtResource("73_5ea61")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -5)
+script = ExtResource("23_ml8gv")
 
 [node name="potion_large_red2" parent="MobRoomSecret/wall_inset_shelves_decoratedA4" unique_id=1871446320 instance=ExtResource("4_ibpn0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.80000305, 1.95, 0)
@@ -726,6 +735,29 @@ transform = Transform3D(-1.0000001, 0, 2.9802322e-08, 0, 1, 0, -2.9802322e-08, 0
 [node name="candle_melted2" parent="MobRoomSecret/box_stacked2" unique_id=1772980734 instance=ExtResource("17_fo3fv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1.8, 0)
 
+[node name="Node3D" type="Node3D" parent="MobRoomSecret/box_stacked2" unique_id=1032425384]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0.90000004, 1.3000011)
+script = ExtResource("23_ml8gv")
+loot_gold = 12
+
+[node name="Area3D" type="Area3D" parent="MobRoomSecret/box_stacked2/Node3D" unique_id=981149040]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.099998474, 0.099999964, -0.10000038)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MobRoomSecret/box_stacked2/Node3D/Area3D" unique_id=1942684278]
+transform = Transform3D(0.9738393, 0, 0.22723833, 0, 1, 0, -0.22723833, 0, 0.9738393, -0.020210266, 0.18493652, 0.02788353)
+shape = SubResource("BoxShape3D_3gcn8")
+
+[node name="Node3D2" type="Node3D" parent="MobRoomSecret/box_stacked2" unique_id=1849977427]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.300003, 0, 0.8999996)
+script = ExtResource("23_ml8gv")
+loot_gold = 13
+
+[node name="Area3D" type="Area3D" parent="MobRoomSecret/box_stacked2/Node3D2" unique_id=363992176]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MobRoomSecret/box_stacked2/Node3D2/Area3D" unique_id=1511672302]
+transform = Transform3D(0.88543046, 0, 0.46477175, 0, 1, 0, -0.46477175, 0, 0.88543046, -0.051589966, 0.24194336, 0.12621307)
+shape = SubResource("BoxShape3D_oow84")
+
 [node name="BossRoom" type="Node3D" parent="." unique_id=1755320205]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68, 0, 16)
 script = ExtResource("19_2ybmr")
@@ -738,7 +770,7 @@ state = 7
 transform = Transform3D(-0.42261827, 0, -0.90630776, 0, 1, 0, 0.90630776, 0, -0.42261827, 5.5000076, 0, 2.7000008)
 state = 7
 lvl = 1
-loot_obj = 5
+loot_obj = 15
 loot_gold = 4
 
 [node name="Wall_Doorway" parent="BossRoom" unique_id=812446971 instance=ExtResource("1_o78hi")]
@@ -782,6 +814,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.1000004)
 [node name="OvalPortalVFX_06" parent="BossRoom/arch2" unique_id=531895884 instance=ExtResource("16_t7qvu")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 1.7, 0)
 size = Vector2(3, 4)
+
+[node name="teleport" type="AudioStreamPlayer3D" parent="BossRoom/arch2" unique_id=1481035252]
+stream = ExtResource("30_o0ubt")
+bus = &"Effet"
 
 [node name="Desk" type="Node3D" parent="BossRoom" unique_id=721156105]
 transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, -4.700001, 0, 0.5)

@@ -13,4 +13,5 @@ func _on_necromancer_dialog_close() -> void:
 	
 func _navigation_finish() -> void :
 	_necromancer.queue_free()
+	$arch2/teleport.play()
 	$"Skeleton Golem".state = Monster.State.IDLE
