@@ -18,8 +18,13 @@
 - combat
   - Ajouter un systeme d'aggro
 - barre de state : lvl pas explicie, ni l'xp, et depalcer le FPS
-- renommé le jeu ? Tales of Dungeon. 
+- renommé le jeu ? Tales of Dungeon. Adventures from the Lost Dungeon.
   - Dans les boss room 
+
+# histoire
+- culte du necromancien ? 
+- Trouver une solution pour emprunté le portail 
+- mission pour aller bruler les cadavre des lieutenent dans une catacomb.
 
 # Assets
 ## 3D and characters
