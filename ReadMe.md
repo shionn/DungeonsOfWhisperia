@@ -18,6 +18,8 @@
 - combat
   - Ajouter un systeme d'aggro
 - barre de state : lvl pas explicie, ni l'xp, et depalcer le FPS
+- renommé le jeu ? Tales of Dungeon. 
+  - Dans les boss room 
 
 # Assets
 ## 3D and characters
