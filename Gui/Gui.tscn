@@ -533,8 +533,10 @@ bus = &"Effet"
 [node name="Menu" type="MenuButton" parent="." unique_id=436163507]
 visible = false
 layout_mode = 1
-offset_right = 40.0
-offset_bottom = 8.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 63.0
+offset_bottom = 41.0
 text = "Menu"
 item_count = 4
 popup/item_0/text = "Sauvegarder"
@@ -689,7 +691,6 @@ layout_mode = 2
 texture = ExtResource("18_w65rx")
 
 [node name="Options" type="GridContainer" parent="." unique_id=139407599]
-visible = false
 z_index = 10
 layout_mode = 1
 anchors_preset = 8
@@ -764,6 +765,58 @@ theme_override_constants/margin_bottom = 5
 layout_mode = 2
 size_flags_vertical = 3
 columns = 2
+
+[node name="Fullscreen" type="Label" parent="Options/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer" unique_id=1173243998]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Plein écran"
+
+[node name="FullScreenButton" type="CheckButton" parent="Options/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer" unique_id=1319475036]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Scale" type="Label" parent="Options/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer" unique_id=391669916]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Mise à l'échelle (1.00)"
+
+[node name="HSliderScale" type="HSlider" parent="Options/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer" unique_id=201778535]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+min_value = 0.2
+max_value = 1.0
+step = 0.05
+value = 1.0
+scrollable = false
+
+[node name="ScaleMode" type="Label" parent="Options/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer" unique_id=1142465128]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Méthode d'échelle"
+
+[node name="ScaleModeButton" type="MenuButton" parent="Options/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer" unique_id=1089765666]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+text = "Linéaire"
+alignment = 0
+item_count = 6
+popup/item_0/text = "Bilinéaire"
+popup/item_0/id = 0
+popup/item_1/text = "FSR"
+popup/item_1/id = 1
+popup/item_2/text = "FSR2"
+popup/item_2/id = 2
+popup/item_3/text = "MetalFx"
+popup/item_3/id = 3
+popup/item_4/text = "MetalFx Temporel"
+popup/item_4/id = 4
+popup/item_5/text = "Entière (Nearest)"
+popup/item_5/id = 5
 
 [node name="Volume Music" type="Label" parent="Options/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer" unique_id=2027116726]
 layout_mode = 2
@@ -1269,6 +1322,8 @@ spell_id = 3
 [connection signal="pressed" from="Loot/PanelContainer/MarginContainer/VBoxContainer/CloseButton" to="." method="_close"]
 [connection signal="visibility_changed" from="Introduction" to="." method="update_mouse_mode"]
 [connection signal="pressed" from="Introduction/PanelContainer/MarginContainer/VBoxContainer/CloseButton" to="Introduction" method="_on_close_button_pressed"]
+[connection signal="toggled" from="Options/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer/FullScreenButton" to="Options" method="_on_full_screen_button_toggled"]
+[connection signal="value_changed" from="Options/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer/HSliderScale" to="Options" method="_on_h_slider_scale_value_changed"]
 [connection signal="value_changed" from="Options/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer/HSliderMusic" to="Options" method="_on_music_value_changed"]
 [connection signal="value_changed" from="Options/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer/HSliderSon" to="Options" method="_on_son_value_changed"]
 [connection signal="pressed" from="Options/PanelContainer/MarginContainer/VBoxContainer/CloseButton" to="Options" method="_on_close_button_pressed"]
