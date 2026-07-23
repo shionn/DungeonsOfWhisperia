@@ -25,6 +25,7 @@
 - culte du necromancien ? 
 - Trouver une solution pour emprunté le portail 
 - mission pour aller bruler les cadavre des lieutenent dans une catacomb.
+- source magique qui permet au necormancien de rester en vie.
 
 # Assets
 ## 3D and characters

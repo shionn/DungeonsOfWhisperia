@@ -23,13 +23,16 @@
 [ext_resource type="PackedScene" uid="uid://dn0yqbvgem56e" path="res://Assets/Halloween/Bench/bench_decorated.gltf" id="6_gonng"]
 [ext_resource type="PackedScene" uid="uid://c2eo4fhjbw8kj" path="res://Assets/Dungeons/Banner/banner_brown.gltf" id="6_it32w"]
 [ext_resource type="AudioStream" uid="uid://bcafx5mkymm12" path="res://Audio/RPG Sound Pack/interface/interface3.wav" id="6_rmard"]
+[ext_resource type="PackedScene" uid="uid://q2eogng1wa4t" path="res://Assets/Halloween/plaque.gltf" id="7_3ruak"]
 [ext_resource type="PackedScene" uid="uid://c740w1gfrmupy" path="res://Assets/Dungeons/Book/book_brown.gltf" id="7_3uwpk"]
 [ext_resource type="PackedScene" uid="uid://dlo1eot4wd5ay" path="res://Assets/Dungeons/Wall/wall_broken.gltf" id="7_ehe8n"]
 [ext_resource type="PackedScene" uid="uid://ds1umuqbncwso" path="res://Assets/Characters/MonthlySeries6/Accessoires/Lorekeeper_Tome.gltf" id="7_gonng"]
+[ext_resource type="PackedScene" uid="uid://b4uecetxspj8d" path="res://Assets/Halloween/coffin.gltf" id="8_2veej"]
 [ext_resource type="PackedScene" uid="uid://dn8xlfijthmhj" path="res://Assets/Dungeons/Wall/wall_archedwindow_gated.gltf" id="8_3p481"]
 [ext_resource type="PackedScene" uid="uid://xxwvvhvlk5e1" path="res://Assets/Dungeons/Bar/bar_innercorner.gltf" id="8_352hu"]
 [ext_resource type="PackedScene" uid="uid://oukei8y88dd2" path="res://Assets/Halloween/Grave/grave_A.gltf" id="8_iwmo4"]
 [ext_resource type="PackedScene" uid="uid://dfo44w1ffqu8w" path="res://Assets/Halloween/Grave/grave_A_destroyed.gltf" id="9_18hwo"]
+[ext_resource type="PackedScene" uid="uid://dlq3mode12rfx" path="res://Assets/Halloween/pillar.gltf" id="9_lyhif"]
 [ext_resource type="PackedScene" uid="uid://bsa57j4bdejj5" path="res://Assets/Dungeons/Wall/TSplit/wall_Tsplit_sloped.gltf" id="9_q0od2"]
 [ext_resource type="PackedScene" uid="uid://cv1l0hoks5jen" path="res://Assets/Dungeons/Wall/wall_pillar.gltf" id="10_5dcro"]
 [ext_resource type="PackedScene" uid="uid://s24f2qnimaan" path="res://Assets/Dungeons/Barrel/barrel_small.gltf" id="10_8ceck"]
@@ -575,6 +578,26 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -18)
 
 [node name="banner_brown3" parent="EntranceSecret" unique_id=974605515 instance=ExtResource("6_it32w")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -18)
+
+[node name="Tomb" type="Node3D" parent="EntranceSecret" unique_id=2126701468]
+
+[node name="plaque2" parent="EntranceSecret/Tomb" unique_id=1115088600 instance=ExtResource("7_3ruak")]
+transform = Transform3D(3, 0, 0, 0, 2, 0, 0, 0, 2, 2.9000015, 0, 0)
+
+[node name="coffin2" parent="EntranceSecret/Tomb" unique_id=1235820561 instance=ExtResource("8_2veej")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2.9000015, 0.70000005, 0)
+
+[node name="pillar2" parent="EntranceSecret/Tomb" unique_id=437263911 instance=ExtResource("9_lyhif")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 5, 0, 2.5)
+
+[node name="pillar5" parent="EntranceSecret/Tomb" unique_id=2114469585 instance=ExtResource("9_lyhif")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.40000153, 0, 2.5)
+
+[node name="pillar3" parent="EntranceSecret/Tomb" unique_id=2036069299 instance=ExtResource("9_lyhif")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 5, 0, -2.5)
+
+[node name="pillar4" parent="EntranceSecret/Tomb" unique_id=1883833597 instance=ExtResource("9_lyhif")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.40000153, 0, -2.5)
 
 [node name="MobRoomSecret" type="Node3D" parent="." unique_id=157219292]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68, 0, -29)
