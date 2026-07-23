@@ -190,11 +190,59 @@ radius = 0.18701172
 height = 0.44462585
 radius = 0.21435547
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_v5y75"]
+size = Vector3(1.5, 0.6, 0.5449951)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_uae3t"]
+size = Vector3(1.0697021, 0.56220704, 0.5449951)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_avr0k"]
+size = Vector3(0.6704346, 0.56220704, 0.5449951)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3o603"]
+size = Vector3(0.59784544, 0.45212403, 0.5596069)
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_oej0p"]
 size = Vector3(0.7385742, 0.5, 0.6290039)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ijfbe"]
 size = Vector3(0.7385742, 0.52734375, 0.62177736)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4qmnm"]
+size = Vector3(0.275, 0.55, 0.4)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_uae3t"]
+height = 0.5
+radius = 0.24267578
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_4lyfw"]
+height = 0.5214844
+radius = 0.2475586
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_sg7jx"]
+height = 0.38183594
+radius = 0.20263672
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_u64rk"]
+size = Vector3(0.65, 0.55, 0.4)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jm4er"]
+size = Vector3(0.44822997, 0.50913084, 0.4371826)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jc2n7"]
+size = Vector3(1.0667236, 0.55, 0.47429198)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_r7872"]
+size = Vector3(0.6600586, 0.55, 0.4)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g717u"]
+size = Vector3(0.5940674, 0.43151855, 0.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_242w5"]
+size = Vector3(0.22893676, 0.55, 0.4)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pjp3u"]
+size = Vector3(0.22893676, 0.55, 0.37980956)
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_b02ke"]
 height = 0.2
@@ -252,6 +300,80 @@ radius = 0.4428711
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_it32w"]
 radius = 0.2
 height = 1.3
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_4lyfw"]
+radius = 0.21608351
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_dp1lw"]
+radius = 0.16874415
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_3ruak"]
+radius = 0.20362796
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_2veej"]
+radius = 0.16827027
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_78w8x"]
+radius = 0.13902272
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_sg7jx"]
+radius = 0.09199268
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_3gcn8"]
+height = 1.5250001
+radius = 0.7
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1hhm1"]
+size = Vector3(1.1, 1.1, 1.1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pnbth"]
+size = Vector3(1.6, 1.6, 1.6)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yp05k"]
+size = Vector3(1.6, 0.6, 1.0843261)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_1tayw"]
+height = 0.90000004
+radius = 0.39013672
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_588y5"]
+height = 0.84999996
+radius = 0.39794922
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4lyfw"]
+radius = 0.3
+height = 1.096289
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_sg7jx"]
+radius = 0.23046875
+height = 1.0603516
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pq73c"]
+size = Vector3(1.6, 0.8, 1.2)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_ijfbe"]
+height = 1.0875001
+radius = 0.6
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_lyhif"]
+height = 2.15
+radius = 1.0
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_brlmy"]
+height = 0.625
+radius = 0.5239258
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_78w8x"]
+height = 1.025
+radius = 0.42919922
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_dp1lw"]
+height = 0.90625
+radius = 0.3
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_3ruak"]
+height = 0.90625
+radius = 0.21191406
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_tdnme"]
 
@@ -894,9 +1016,175 @@ bus = &"Effet"
 
 [node name="bookcase_double_decoratedA2" parent="BossRoom/BookCases" unique_id=1758756902 instance=ExtResource("13_3uwpk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.100006, 0, -5.200001)
+script = ExtResource("23_ml8gv")
+
+[node name="Area3D" type="Area3D" parent="BossRoom/BookCases/bookcase_double_decoratedA2" unique_id=360578975]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BossRoom/BookCases/bookcase_double_decoratedA2/Area3D" unique_id=82723846]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9000015, 0.55, -0.027999878)
+shape = SubResource("BoxShape3D_v5y75")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="BossRoom/BookCases/bookcase_double_decoratedA2/Area3D" unique_id=330506573]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9000015, 0.55, -0.027999878)
+shape = SubResource("BoxShape3D_v5y75")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="BossRoom/BookCases/bookcase_double_decoratedA2/Area3D" unique_id=1488015375]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0887833, 1.2320294, -0.027999878)
+shape = SubResource("BoxShape3D_uae3t")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="BossRoom/BookCases/bookcase_double_decoratedA2/Area3D" unique_id=1998543752]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.90441895, 2.513133, -0.027999878)
+shape = SubResource("BoxShape3D_uae3t")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="BossRoom/BookCases/bookcase_double_decoratedA2/Area3D" unique_id=983700621]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8955841, 2.513133, -0.027999878)
+shape = SubResource("BoxShape3D_uae3t")
+
+[node name="CollisionShape3D7" type="CollisionShape3D" parent="BossRoom/BookCases/bookcase_double_decoratedA2/Area3D" unique_id=1418633294]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.51784515, 1.852234, -0.027999878)
+shape = SubResource("BoxShape3D_avr0k")
+
+[node name="CollisionShape3D8" type="CollisionShape3D" parent="BossRoom/BookCases/bookcase_double_decoratedA2/Area3D" unique_id=1935062176]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2969437, 1.852234, -0.027999878)
+shape = SubResource("BoxShape3D_avr0k")
+
+[node name="CollisionShape3D9" type="CollisionShape3D" parent="BossRoom/BookCases/bookcase_double_decoratedA2/Area3D" unique_id=684157057]
+transform = Transform3D(0.9396926, 0, -0.34202012, 0, 1, 0, 0.34202012, 0, 0.9396926, -0.5443802, 1.7971925, -0.037490845)
+shape = SubResource("BoxShape3D_3o603")
+
+[node name="CollisionShape3D10" type="CollisionShape3D" parent="BossRoom/BookCases/bookcase_double_decoratedA2/Area3D" unique_id=1055724362]
+transform = Transform3D(0.9396926, 0, -0.34202012, 0, 1, 0, 0.34202012, 0, 0.9396926, 1.2451248, 1.7971925, -0.037490845)
+shape = SubResource("BoxShape3D_3o603")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="BossRoom/BookCases/bookcase_double_decoratedA2/Area3D" unique_id=1439755482]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7112198, 1.2320294, -0.027999878)
+shape = SubResource("BoxShape3D_uae3t")
+
+[node name="description" type="Node" parent="BossRoom/BookCases/bookcase_double_decoratedA2" unique_id=227694741]
+script = ExtResource("13_iikjq")
+text = "Cela ressemble aux livres et aux potions que j’ai vus dans le mausolée…
+Tout un tas de livres traitant de magie, d'alchimie et de nécromancie."
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="BossRoom/BookCases/bookcase_double_decoratedA2" unique_id=909490660]
+stream = ExtResource("38_4lyfw")
+bus = &"Effet"
+
+[node name="bookcase_double_decoratedA3" parent="BossRoom/BookCases" unique_id=562760918 instance=ExtResource("13_3uwpk")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -5.199993, 0, 5.199999)
+script = ExtResource("23_ml8gv")
+
+[node name="Area3D" type="Area3D" parent="BossRoom/BookCases/bookcase_double_decoratedA3" unique_id=1705658731]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BossRoom/BookCases/bookcase_double_decoratedA3/Area3D" unique_id=874423485]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9000015, 0.55, -0.027999878)
+shape = SubResource("BoxShape3D_v5y75")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="BossRoom/BookCases/bookcase_double_decoratedA3/Area3D" unique_id=901847877]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9000015, 0.55, -0.027999878)
+shape = SubResource("BoxShape3D_v5y75")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="BossRoom/BookCases/bookcase_double_decoratedA3/Area3D" unique_id=1083041748]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0887833, 1.2320294, -0.027999878)
+shape = SubResource("BoxShape3D_uae3t")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="BossRoom/BookCases/bookcase_double_decoratedA3/Area3D" unique_id=1490321826]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.90441895, 2.513133, -0.027999878)
+shape = SubResource("BoxShape3D_uae3t")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="BossRoom/BookCases/bookcase_double_decoratedA3/Area3D" unique_id=397374337]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8955841, 2.513133, -0.027999878)
+shape = SubResource("BoxShape3D_uae3t")
+
+[node name="CollisionShape3D7" type="CollisionShape3D" parent="BossRoom/BookCases/bookcase_double_decoratedA3/Area3D" unique_id=1318638199]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.51784515, 1.852234, -0.027999878)
+shape = SubResource("BoxShape3D_avr0k")
+
+[node name="CollisionShape3D8" type="CollisionShape3D" parent="BossRoom/BookCases/bookcase_double_decoratedA3/Area3D" unique_id=1648995361]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2969437, 1.852234, -0.027999878)
+shape = SubResource("BoxShape3D_avr0k")
+
+[node name="CollisionShape3D9" type="CollisionShape3D" parent="BossRoom/BookCases/bookcase_double_decoratedA3/Area3D" unique_id=1948687634]
+transform = Transform3D(0.9396926, 0, -0.34202012, 0, 1, 0, 0.34202012, 0, 0.9396926, -0.5443802, 1.7971925, -0.037490845)
+shape = SubResource("BoxShape3D_3o603")
+
+[node name="CollisionShape3D10" type="CollisionShape3D" parent="BossRoom/BookCases/bookcase_double_decoratedA3/Area3D" unique_id=313260094]
+transform = Transform3D(0.9396926, 0, -0.34202012, 0, 1, 0, 0.34202012, 0, 0.9396926, 1.2451248, 1.7971925, -0.037490845)
+shape = SubResource("BoxShape3D_3o603")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="BossRoom/BookCases/bookcase_double_decoratedA3/Area3D" unique_id=101622810]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7112198, 1.2320294, -0.027999878)
+shape = SubResource("BoxShape3D_uae3t")
+
+[node name="description" type="Node" parent="BossRoom/BookCases/bookcase_double_decoratedA3" unique_id=166850506]
+script = ExtResource("13_iikjq")
+text = "Cela ressemble aux livres et aux potions que j’ai vus dans le mausolée…
+Tout un tas de livres traitant de magie, d'alchimie et de nécromancie."
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="BossRoom/BookCases/bookcase_double_decoratedA3" unique_id=684260674]
+stream = ExtResource("38_4lyfw")
+bus = &"Effet"
+
+[node name="bookcase_double_decoratedA4" parent="BossRoom/BookCases" unique_id=1490578296 instance=ExtResource("13_3uwpk")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 5.2000046, 0, 5.199999)
+script = ExtResource("23_ml8gv")
+
+[node name="Area3D" type="Area3D" parent="BossRoom/BookCases/bookcase_double_decoratedA4" unique_id=1798292765]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BossRoom/BookCases/bookcase_double_decoratedA4/Area3D" unique_id=1429644046]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9000015, 0.55, -0.027999878)
+shape = SubResource("BoxShape3D_v5y75")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="BossRoom/BookCases/bookcase_double_decoratedA4/Area3D" unique_id=864545442]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9000015, 0.55, -0.027999878)
+shape = SubResource("BoxShape3D_v5y75")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="BossRoom/BookCases/bookcase_double_decoratedA4/Area3D" unique_id=663124698]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0887833, 1.2320294, -0.027999878)
+shape = SubResource("BoxShape3D_uae3t")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="BossRoom/BookCases/bookcase_double_decoratedA4/Area3D" unique_id=1358272261]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.90441895, 2.513133, -0.027999878)
+shape = SubResource("BoxShape3D_uae3t")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="BossRoom/BookCases/bookcase_double_decoratedA4/Area3D" unique_id=212893810]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8955841, 2.513133, -0.027999878)
+shape = SubResource("BoxShape3D_uae3t")
+
+[node name="CollisionShape3D7" type="CollisionShape3D" parent="BossRoom/BookCases/bookcase_double_decoratedA4/Area3D" unique_id=759555172]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.51784515, 1.852234, -0.027999878)
+shape = SubResource("BoxShape3D_avr0k")
+
+[node name="CollisionShape3D8" type="CollisionShape3D" parent="BossRoom/BookCases/bookcase_double_decoratedA4/Area3D" unique_id=38722001]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2969437, 1.852234, -0.027999878)
+shape = SubResource("BoxShape3D_avr0k")
+
+[node name="CollisionShape3D9" type="CollisionShape3D" parent="BossRoom/BookCases/bookcase_double_decoratedA4/Area3D" unique_id=1585217241]
+transform = Transform3D(0.9396926, 0, -0.34202012, 0, 1, 0, 0.34202012, 0, 0.9396926, -0.5443802, 1.7971925, -0.037490845)
+shape = SubResource("BoxShape3D_3o603")
+
+[node name="CollisionShape3D10" type="CollisionShape3D" parent="BossRoom/BookCases/bookcase_double_decoratedA4/Area3D" unique_id=676623594]
+transform = Transform3D(0.9396926, 0, -0.34202012, 0, 1, 0, 0.34202012, 0, 0.9396926, 1.2451248, 1.7971925, -0.037490845)
+shape = SubResource("BoxShape3D_3o603")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="BossRoom/BookCases/bookcase_double_decoratedA4/Area3D" unique_id=608388902]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7112198, 1.2320294, -0.027999878)
+shape = SubResource("BoxShape3D_uae3t")
+
+[node name="description" type="Node" parent="BossRoom/BookCases/bookcase_double_decoratedA4" unique_id=1894831421]
+script = ExtResource("13_iikjq")
+text = "Cela ressemble aux livres et aux potions que j’ai vus dans le mausolée…
+Tout un tas de livres traitant de magie, d'alchimie et de nécromancie."
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="BossRoom/BookCases/bookcase_double_decoratedA4" unique_id=1711806309]
+stream = ExtResource("38_4lyfw")
+bus = &"Effet"
 
 [node name="bookcase_double_decoratedB2" parent="BossRoom/BookCases" unique_id=1026479706 instance=ExtResource("14_13ejr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -5.2)
+script = ExtResource("23_ml8gv")
 
 [node name="Coffre1" type="Node3D" parent="BossRoom/BookCases/bookcase_double_decoratedB2" unique_id=413326298]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1, 0)
@@ -921,14 +1209,144 @@ transform = Transform3D(0.93969274, 0, 0.34202018, 0, 1, 0, -0.34202018, 0, 0.93
 transform = Transform3D(0.98480785, 0, -0.17364821, 0, 1, 0, 0.17364821, 0, 0.98480785, 0.0096206665, 0.18908262, -0.061100006)
 shape = SubResource("BoxShape3D_ijfbe")
 
-[node name="bookcase_double_decoratedB4" parent="BossRoom/BookCases" unique_id=385427132 instance=ExtResource("14_13ejr")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -9.200001, 0, 2)
+[node name="Area3D" type="Area3D" parent="BossRoom/BookCases/bookcase_double_decoratedB2" unique_id=1825535706]
 
-[node name="bookcase_double_decoratedA3" parent="BossRoom/BookCases" unique_id=1861614156 instance=ExtResource("13_3uwpk")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -5, 0, 5.199999)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BossRoom/BookCases/bookcase_double_decoratedB2/Area3D" unique_id=1565878894]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.23774338, 0.54999995, -0.050001144)
+shape = SubResource("BoxShape3D_4qmnm")
 
-[node name="bookcase_double_decoratedB3" parent="BossRoom/BookCases" unique_id=730767151 instance=ExtResource("14_13ejr")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 5.100006, 0, 5.199999)
+[node name="CollisionShape3D9" type="CollisionShape3D" parent="BossRoom/BookCases/bookcase_double_decoratedB2/Area3D" unique_id=479982552]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3878326, 0.5400854, 0.013875961)
+shape = SubResource("CylinderShape3D_uae3t")
+
+[node name="CollisionShape3D10" type="CollisionShape3D" parent="BossRoom/BookCases/bookcase_double_decoratedB2/Area3D" unique_id=1880508362]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4954681, 0.55082756, -0.038443565)
+shape = SubResource("CylinderShape3D_4lyfw")
+
+[node name="CollisionShape3D11" type="CollisionShape3D" parent="BossRoom/BookCases/bookcase_double_decoratedB2/Area3D" unique_id=1550603099]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1036682, 0.48100334, -0.038443565)
+shape = SubResource("CylinderShape3D_sg7jx")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="BossRoom/BookCases/bookcase_double_decoratedB2/Area3D" unique_id=828289064]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1497574, 1.2075868, -0.050001144)
+shape = SubResource("BoxShape3D_u64rk")
+
+[node name="CollisionShape3D8" type="CollisionShape3D" parent="BossRoom/BookCases/bookcase_double_decoratedB2/Area3D" unique_id=1576221467]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8491516, 1.8649842, -0.031410217)
+shape = SubResource("BoxShape3D_jm4er")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="BossRoom/BookCases/bookcase_double_decoratedB2/Area3D" unique_id=386946260]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9081192, 2.507587, -0.01285553)
+shape = SubResource("BoxShape3D_jc2n7")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="BossRoom/BookCases/bookcase_double_decoratedB2/Area3D" unique_id=606212632]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.55527496, 2.507587, -0.050001144)
+shape = SubResource("BoxShape3D_r7872")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="BossRoom/BookCases/bookcase_double_decoratedB2/Area3D" unique_id=686883559]
+transform = Transform3D(0.93969274, 0, 0.34202018, 0, 1, 0, -0.34202018, 0, 0.93969274, -1.2444344, 1.7983462, -0.00094127655)
+shape = SubResource("BoxShape3D_g717u")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="BossRoom/BookCases/bookcase_double_decoratedB2/Area3D" unique_id=15463341]
+transform = Transform3D(0.8932678, -0.44952512, 0.00021794827, 0.44952452, 0.89326715, 0.0012952812, -0.0007769473, -0.0010590595, 0.99999917, -1.4899712, 2.5053697, -0.05000019)
+shape = SubResource("BoxShape3D_242w5")
+
+[node name="CollisionShape3D7" type="CollisionShape3D" parent="BossRoom/BookCases/bookcase_double_decoratedB2/Area3D" unique_id=596221423]
+transform = Transform3D(0.8932678, -0.44952512, 0.00021794827, 0.44952452, 0.89326715, 0.0012952812, -0.0007769473, -0.0010590595, 0.99999917, -0.6023407, 1.2053566, -0.060095787)
+shape = SubResource("BoxShape3D_pjp3u")
+
+[node name="description" type="Node" parent="BossRoom/BookCases/bookcase_double_decoratedB2" unique_id=921049345]
+script = ExtResource("13_iikjq")
+text = "Cela ressemble aux livres et aux potions que j’ai vus dans le mausolée…
+Tout un tas de livres traitant de magie, d'alchimie et de nécromancie."
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="BossRoom/BookCases/bookcase_double_decoratedB2" unique_id=1621701991]
+stream = ExtResource("38_4lyfw")
+bus = &"Effet"
+
+[node name="bookcase_double_decoratedB4" parent="BossRoom/BookCases" unique_id=1466515888 instance=ExtResource("14_13ejr")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -9.200001, 0, 1.7999992)
+script = ExtResource("23_ml8gv")
+
+[node name="Coffre1" type="Node3D" parent="BossRoom/BookCases/bookcase_double_decoratedB4" unique_id=950662275]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1, 0)
+script = ExtResource("23_ml8gv")
+loot_gold = 5
+
+[node name="Area3D" type="Area3D" parent="BossRoom/BookCases/bookcase_double_decoratedB4/Coffre1" unique_id=642338414]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BossRoom/BookCases/bookcase_double_decoratedB4/Coffre1/Area3D" unique_id=1051187577]
+transform = Transform3D(0.98480785, 0, -0.17364821, 0, 1, 0, 0.17364821, 0, 0.98480785, 0.001411438, 0.2027545, -0.014476776)
+shape = SubResource("BoxShape3D_oej0p")
+
+[node name="Coffre2" type="Node3D" parent="BossRoom/BookCases/bookcase_double_decoratedB4" unique_id=632905458]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2000008, 1, 0)
+script = ExtResource("23_ml8gv")
+loot_gold = 9
+
+[node name="Area3D" type="Area3D" parent="BossRoom/BookCases/bookcase_double_decoratedB4/Coffre2" unique_id=82652204]
+transform = Transform3D(0.93969274, 0, 0.34202018, 0, 1, 0, -0.34202018, 0, 0.93969274, 0.041137695, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BossRoom/BookCases/bookcase_double_decoratedB4/Coffre2/Area3D" unique_id=711276377]
+transform = Transform3D(0.98480785, 0, -0.17364821, 0, 1, 0, 0.17364821, 0, 0.98480785, 0.0096206665, 0.18908262, -0.061100006)
+shape = SubResource("BoxShape3D_ijfbe")
+
+[node name="Area3D" type="Area3D" parent="BossRoom/BookCases/bookcase_double_decoratedB4" unique_id=799503470]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BossRoom/BookCases/bookcase_double_decoratedB4/Area3D" unique_id=1836479792]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.23774338, 0.54999995, -0.050001144)
+shape = SubResource("BoxShape3D_4qmnm")
+
+[node name="CollisionShape3D9" type="CollisionShape3D" parent="BossRoom/BookCases/bookcase_double_decoratedB4/Area3D" unique_id=1561459349]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3878326, 0.5400854, 0.013875961)
+shape = SubResource("CylinderShape3D_uae3t")
+
+[node name="CollisionShape3D10" type="CollisionShape3D" parent="BossRoom/BookCases/bookcase_double_decoratedB4/Area3D" unique_id=1777834214]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4954681, 0.55082756, -0.038443565)
+shape = SubResource("CylinderShape3D_4lyfw")
+
+[node name="CollisionShape3D11" type="CollisionShape3D" parent="BossRoom/BookCases/bookcase_double_decoratedB4/Area3D" unique_id=133557192]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1036682, 0.48100334, -0.038443565)
+shape = SubResource("CylinderShape3D_sg7jx")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="BossRoom/BookCases/bookcase_double_decoratedB4/Area3D" unique_id=827724704]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1497574, 1.2075868, -0.050001144)
+shape = SubResource("BoxShape3D_u64rk")
+
+[node name="CollisionShape3D8" type="CollisionShape3D" parent="BossRoom/BookCases/bookcase_double_decoratedB4/Area3D" unique_id=2069582333]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8491516, 1.8649842, -0.031410217)
+shape = SubResource("BoxShape3D_jm4er")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="BossRoom/BookCases/bookcase_double_decoratedB4/Area3D" unique_id=813628815]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9081192, 2.507587, -0.01285553)
+shape = SubResource("BoxShape3D_jc2n7")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="BossRoom/BookCases/bookcase_double_decoratedB4/Area3D" unique_id=532389875]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.55527496, 2.507587, -0.050001144)
+shape = SubResource("BoxShape3D_r7872")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="BossRoom/BookCases/bookcase_double_decoratedB4/Area3D" unique_id=429203842]
+transform = Transform3D(0.93969274, 0, 0.34202018, 0, 1, 0, -0.34202018, 0, 0.93969274, -1.2444344, 1.7983462, -0.00094127655)
+shape = SubResource("BoxShape3D_g717u")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="BossRoom/BookCases/bookcase_double_decoratedB4/Area3D" unique_id=498085258]
+transform = Transform3D(0.8932678, -0.44952512, 0.00021794827, 0.44952452, 0.89326715, 0.0012952812, -0.0007769473, -0.0010590595, 0.99999917, -1.4899712, 2.5053697, -0.05000019)
+shape = SubResource("BoxShape3D_242w5")
+
+[node name="CollisionShape3D7" type="CollisionShape3D" parent="BossRoom/BookCases/bookcase_double_decoratedB4/Area3D" unique_id=533015103]
+transform = Transform3D(0.8932678, -0.44952512, 0.00021794827, 0.44952452, 0.89326715, 0.0012952812, -0.0007769473, -0.0010590595, 0.99999917, -0.6023407, 1.2053566, -0.060095787)
+shape = SubResource("BoxShape3D_pjp3u")
+
+[node name="description" type="Node" parent="BossRoom/BookCases/bookcase_double_decoratedB4" unique_id=765847491]
+script = ExtResource("13_iikjq")
+text = "Cela ressemble aux livres et aux potions que j’ai vus dans le mausolée…
+Tout un tas de livres traitant de magie, d'alchimie et de nécromancie."
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="BossRoom/BookCases/bookcase_double_decoratedB4" unique_id=1449913109]
+stream = ExtResource("38_4lyfw")
+bus = &"Effet"
 
 [node name="arch2" parent="BossRoom" unique_id=1949722278 instance=ExtResource("15_13ejr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.1000004)
@@ -1717,24 +2135,128 @@ transform = Transform3D(-0.7071068, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, -0.707
 
 [node name="rocks_gold2" parent="RedRoom" unique_id=1718575430 instance=ExtResource("23_r72vg")]
 transform = Transform3D(-0.7071068, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, -0.7071068, 0, 0, -6)
+script = ExtResource("23_ml8gv")
+
+[node name="Area3D" type="Area3D" parent="RedRoom/rocks_gold2" unique_id=1552436853]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RedRoom/rocks_gold2/Area3D" unique_id=1445883480]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.66337204, 0.25654572, -0.8767233)
+shape = SubResource("SphereShape3D_4lyfw")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="RedRoom/rocks_gold2/Area3D" unique_id=395642129]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14061737, 0.6377694, -0.92655945)
+shape = SubResource("SphereShape3D_dp1lw")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="RedRoom/rocks_gold2/Area3D" unique_id=1275482668]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.05407715, 1.5141187, -0.31075096)
+shape = SubResource("SphereShape3D_dp1lw")
+
+[node name="CollisionShape3D7" type="CollisionShape3D" parent="RedRoom/rocks_gold2/Area3D" unique_id=467706179]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.37092972, 1.1383305, 0.056303978)
+shape = SubResource("SphereShape3D_dp1lw")
+
+[node name="CollisionShape3D8" type="CollisionShape3D" parent="RedRoom/rocks_gold2/Area3D" unique_id=1457880124]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.30059433, 0.63231474, 0.6923075)
+shape = SubResource("SphereShape3D_3ruak")
+
+[node name="CollisionShape3D9" type="CollisionShape3D" parent="RedRoom/rocks_gold2/Area3D" unique_id=730489990]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0012969971, 0.40425307, 0.99160004)
+shape = SubResource("SphereShape3D_2veej")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="RedRoom/rocks_gold2/Area3D" unique_id=645513790]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.88985825, 0.35177922, 0.011675835)
+shape = SubResource("SphereShape3D_78w8x")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="RedRoom/rocks_gold2/Area3D" unique_id=504034814]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.97003555, 0.32818776, 0.9272518)
+shape = SubResource("SphereShape3D_78w8x")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="RedRoom/rocks_gold2/Area3D" unique_id=76445053]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.084404, 0.29425523, 0.7231178)
+shape = SubResource("SphereShape3D_sg7jx")
+
+[node name="description" type="Node" parent="RedRoom/rocks_gold2" unique_id=1998249301]
+script = ExtResource("13_iikjq")
+text = "Je n’arriverai pas à les déloger sans un outil adapté. Et même avec le bon outil, je ne pense pas y arriver."
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
 [node name="shovel2" parent="RedRoom" unique_id=1887715603 instance=ExtResource("25_52jne")]
 transform = Transform3D(-3.7855173e-08, -0.49999997, 0.8660253, -2.1855694e-08, 0.8660253, 0.49999997, -1, -2.1175824e-22, -4.3711385e-08, 4.6000023, 1.5999999, -5)
 
 [node name="bucket_pickaxes2" parent="RedRoom" unique_id=372698892 instance=ExtResource("77_v3xnv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5999985, 0, -4.700001)
+script = ExtResource("23_ml8gv")
+
+[node name="Area3D" type="Area3D" parent="RedRoom/bucket_pickaxes2" unique_id=2083130386]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RedRoom/bucket_pickaxes2/Area3D" unique_id=1562524762]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6374999, 0)
+shape = SubResource("CylinderShape3D_3gcn8")
+
+[node name="description" type="Node" parent="RedRoom/bucket_pickaxes2" unique_id=1526704250]
+script = ExtResource("13_iikjq")
+text = "Ces pioches sont totalement émoussées."
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
 [node name="box_large2" parent="RedRoom" unique_id=1074113903 instance=ExtResource("80_o5uhr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5999985, 0, 6.7)
+script = ExtResource("23_ml8gv")
 
-[node name="box_small2" parent="RedRoom" unique_id=86078598 instance=ExtResource("81_2ybmr")]
-transform = Transform3D(0.90630776, 0, -0.42261827, 0, 1, 0, 0.42261827, 0, 0.90630776, 3.0999985, 0, 6.7000003)
+[node name="box_small4" parent="RedRoom/box_large2" unique_id=41364591 instance=ExtResource("81_2ybmr")]
+transform = Transform3D(0.9063078, 0, -0.42261827, 0, 1, 0, 0.42261827, 0, 0.9063078, 0.3999977, 1.5, 0.40000057)
+script = ExtResource("23_ml8gv")
 
-[node name="box_small3" parent="RedRoom" unique_id=226418559 instance=ExtResource("81_2ybmr")]
-transform = Transform3D(0.9396926, 0, 0.34202012, 0, 1, 0, -0.34202012, 0, 0.9396926, 4.699997, 0, 5.200001)
+[node name="Area3D" type="Area3D" parent="RedRoom/box_large2/box_small4" unique_id=847867658]
 
-[node name="box_small4" parent="RedRoom" unique_id=41364591 instance=ExtResource("81_2ybmr")]
-transform = Transform3D(0.9063078, 0, -0.42261827, 0, 1, 0, 0.42261827, 0, 0.9063078, 4.999996, 1.5, 7.1000004)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RedRoom/box_large2/box_small4/Area3D" unique_id=1022770493]
+transform = Transform3D(1.0000006, 0, 2.9802322e-08, 0, 1, 0, -2.9802322e-08, 0, 1.0000006, 0, 0.5, 0)
+shape = SubResource("BoxShape3D_1hhm1")
+
+[node name="description" type="Node" parent="RedRoom/box_large2/box_small4" unique_id=662128346]
+script = ExtResource("13_iikjq")
+text = "C'est du matériel de minage… Pioches rouillées, sacs de poudre à canon."
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Area3D" type="Area3D" parent="RedRoom/box_large2" unique_id=691410926]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RedRoom/box_large2/Area3D" unique_id=1496152778]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
+shape = SubResource("BoxShape3D_pnbth")
+
+[node name="description" type="Node" parent="RedRoom/box_large2" unique_id=928381570]
+script = ExtResource("13_iikjq")
+text = "C'est du matériel de minage… Pioches rouillées, sacs de poudre à canon."
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="box_small2" parent="RedRoom/box_large2" unique_id=86078598 instance=ExtResource("81_2ybmr")]
+transform = Transform3D(0.90630776, 0, -0.42261827, 0, 1, 0, 0.42261827, 0, 0.90630776, -1.5, 0, 4.7683716e-07)
+script = ExtResource("23_ml8gv")
+
+[node name="Area3D" type="Area3D" parent="RedRoom/box_large2/box_small2" unique_id=722798586]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RedRoom/box_large2/box_small2/Area3D" unique_id=1199676714]
+transform = Transform3D(1.0000006, 0, 2.9802322e-08, 0, 1, 0, -2.9802322e-08, 0, 1.0000006, 0, 0.5, 0)
+shape = SubResource("BoxShape3D_1hhm1")
+
+[node name="description" type="Node" parent="RedRoom/box_large2/box_small2" unique_id=263552056]
+script = ExtResource("13_iikjq")
+text = "C'est du matériel de minage… Pioches rouillées, sacs de poudre à canon."
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="box_small3" parent="RedRoom/box_large2" unique_id=226418559 instance=ExtResource("81_2ybmr")]
+transform = Transform3D(0.9396926, 0, 0.34202012, 0, 1, 0, -0.34202012, 0, 0.9396926, 0.099998474, 0, -1.499999)
+script = ExtResource("23_ml8gv")
+
+[node name="Area3D" type="Area3D" parent="RedRoom/box_large2/box_small3" unique_id=1626262203]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RedRoom/box_large2/box_small3/Area3D" unique_id=2000014213]
+transform = Transform3D(1.0000006, 0, 2.9802322e-08, 0, 1, 0, -2.9802322e-08, 0, 1.0000006, 0, 0.5, 0)
+shape = SubResource("BoxShape3D_1hhm1")
+
+[node name="description" type="Node" parent="RedRoom/box_large2/box_small3" unique_id=608895210]
+script = ExtResource("13_iikjq")
+text = "C'est du matériel de minage… Pioches rouillées, sacs de poudre à canon."
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
 [node name="YellowRoom" type="Node3D" parent="." unique_id=2027608995]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 14)
@@ -1763,6 +2285,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.4
 
 [node name="crates_stacked2" parent="YellowRoom" unique_id=463964757 instance=ExtResource("22_eijaf")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4, 0, 2.2999992)
+script = ExtResource("23_ml8gv")
 
 [node name="potion_small_orange2" parent="YellowRoom/crates_stacked2" unique_id=975049330 instance=ExtResource("36_r2s6b")]
 transform = Transform3D(-1.1, 1.6609539e-07, 0, -1.6609539e-07, -1.1, 0, 0, 0, 1.1, 0.29999924, 0.6, 0.75)
@@ -1775,6 +2298,41 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.24999994, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="YellowRoom/crates_stacked2/potion_small_orange2/Area3D" unique_id=2144714800]
 shape = SubResource("SphereShape3D_b02ke")
+
+[node name="Area3D" type="Area3D" parent="YellowRoom/crates_stacked2" unique_id=1062397561]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="YellowRoom/crates_stacked2/Area3D" unique_id=1394564432]
+transform = Transform3D(0.98743266, 0, 0.15804026, 0, 1, 0, -0.15804026, 0, 0.98743266, -0.20714188, 0.3, -0.42557716)
+shape = SubResource("BoxShape3D_yp05k")
+
+[node name="CollisionShape3D7" type="CollisionShape3D" parent="YellowRoom/crates_stacked2/Area3D" unique_id=2145832873]
+transform = Transform3D(0.98743266, 0, 0.15804026, 0, 1, 0, -0.15804026, 0, 0.98743266, -0.37238884, 0.45000002, 0.49814415)
+shape = SubResource("CylinderShape3D_1tayw")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="YellowRoom/crates_stacked2/Area3D" unique_id=1505365964]
+transform = Transform3D(0.87383026, 0, 0.48623112, 0, 1, 0, -0.48623112, 0, 0.87383026, -0.19226837, 0.90000004, -0.39884567)
+shape = SubResource("BoxShape3D_yp05k")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="YellowRoom/crates_stacked2/Area3D" unique_id=620540588]
+transform = Transform3D(0.96170866, 0, -0.27407396, 0, 1, 0, 0.27407396, 0, 0.96170866, -0.19226837, 1.5, -0.39884567)
+shape = SubResource("BoxShape3D_yp05k")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="YellowRoom/crates_stacked2/Area3D" unique_id=1042841881]
+transform = Transform3D(0.96170866, 0, -0.27407396, 0, 1, 0, 0.27407396, 0, 0.96170866, -0.436944, 1.675, -0.46848106)
+shape = SubResource("CylinderShape3D_588y5")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="YellowRoom/crates_stacked2/Area3D" unique_id=152844641]
+transform = Transform3D(0.96170866, 0, -0.27407396, 0, 1, 0, 0.27407396, 0, 0.96170866, 0.03683281, 1.6731446, -0.14855003)
+shape = SubResource("CapsuleShape3D_4lyfw")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="YellowRoom/crates_stacked2/Area3D" unique_id=1765235969]
+transform = Transform3D(0.96170866, 0, -0.27407396, 0, 1, 0, 0.27407396, 0, 0.96170866, 0.23683357, 1.6551759, -0.44854927)
+shape = SubResource("CapsuleShape3D_sg7jx")
+
+[node name="description" type="Node" parent="YellowRoom/crates_stacked2" unique_id=55642297]
+script = ExtResource("13_iikjq")
+text = "C’est du sel, de l’huile… et d’autres produits de première nécessité. "
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
 [node name="BlueRoom" type="Node3D" parent="." unique_id=347525843]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36, 0, 14)
@@ -1789,9 +2347,34 @@ loot_gold = 2
 
 [node name="crate_large_decorated2" parent="BlueRoom" unique_id=1489033680 instance=ExtResource("10_xec7q")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4.799999, 0, -1.8999996)
+script = ExtResource("23_ml8gv")
+
+[node name="description" type="Node" parent="BlueRoom/crate_large_decorated2" unique_id=434876306]
+script = ExtResource("13_iikjq")
+text = "C’est une pile d’assiettes sales. C’est tellement vieux qu’on dirait que les restes de nourriture ont fusionné avec la fayence… 
+
+Comme si le temps lui-même avait dévoré ces fragments de la vie passée."
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Area3D" type="Area3D" parent="BlueRoom/crate_large_decorated2" unique_id=364228899]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BlueRoom/crate_large_decorated2/Area3D" unique_id=1165320262]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+shape = SubResource("BoxShape3D_pq73c")
 
 [node name="barrel_small2" parent="BlueRoom" unique_id=26698089 instance=ExtResource("10_8ceck")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -4.9000006)
+
+[node name="description" type="Node" parent="BlueRoom/barrel_small2" unique_id=953497009]
+script = ExtResource("13_iikjq")
+text = "[i]Genepi[/i] ? Qu’est-ce que c’est que ça… ? Cela ressemble à une liqueur, mais les bords du tonneau sont recouverts d’une substance visqueuse et noire, comme si le liquide avait dévoré la fût lui-même."
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Area3D" type="Area3D" parent="BlueRoom/barrel_small2" unique_id=688795844]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BlueRoom/barrel_small2/Area3D" unique_id=1498307316]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5312501, 0)
+shape = SubResource("CylinderShape3D_ijfbe")
 
 [node name="wall_corner37" parent="BlueRoom" unique_id=374748025 instance=ExtResource("4_ra21l")]
 transform = Transform3D(1, 0, -5.563627e-08, 0, 1, 0, 5.563627e-08, 0, 1, -6, 0, 0)
@@ -1822,6 +2405,18 @@ transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -3, 
 
 [node name="barrel_large2" parent="BlueRoom" unique_id=1183584337 instance=ExtResource("13_opbu4")]
 transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, 4.4000015, 0, -6.3)
+script = ExtResource("23_ml8gv")
+
+[node name="description" type="Node" parent="BlueRoom/barrel_large2" unique_id=1020753781]
+script = ExtResource("13_iikjq")
+text = "C’est écrit [i]Bière[/i]… Bizarrement, le tonneau est vide"
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Area3D" type="Area3D" parent="BlueRoom/barrel_large2" unique_id=1490052384]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BlueRoom/barrel_large2/Area3D" unique_id=1738158900]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.97500014, 0)
+shape = SubResource("CylinderShape3D_lyhif")
 
 [node name="barrel_large_decorated2" parent="BlueRoom" unique_id=973397168 instance=ExtResource("15_352hu")]
 transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, -4.4000015, 0, -6.3999996)
@@ -1836,9 +2431,24 @@ loot_gold = 3
 
 [node name="plate_stack2" parent="BlueRoom/bar_straight_C3" unique_id=154144263 instance=ExtResource("17_qarta")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+script = ExtResource("23_ml8gv")
+
+[node name="Area3D" type="Area3D" parent="BlueRoom/bar_straight_C3/plate_stack2" unique_id=705311532]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BlueRoom/bar_straight_C3/plate_stack2/Area3D" unique_id=590864770]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3069682, 0)
+shape = SubResource("CylinderShape3D_brlmy")
+
+[node name="description" type="Node" parent="BlueRoom/bar_straight_C3/plate_stack2" unique_id=1135291545]
+script = ExtResource("13_iikjq")
+text = "C’est une pile d’assiettes sales. C’est tellement vieux qu’on dirait que les restes de nourriture ont fusionné avec la fayence… 
+
+Comme si le temps lui-même avait dévoré ces fragments de la vie passée."
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
 [node name="bartop_A_large2" parent="BlueRoom" unique_id=1062220783 instance=ExtResource("18_nsqvi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -7)
+script = ExtResource("23_ml8gv")
 
 [node name="bottle_A_brown2" parent="BlueRoom/bartop_A_large2" unique_id=2066352518 instance=ExtResource("19_j4w0s")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5999985, 1.0999999, -0.19999981)
@@ -1851,6 +2461,29 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1000023, 0, 0)
 
 [node name="bottle_A_labeled_green2" parent="BlueRoom/bartop_A_large2" unique_id=790674597 instance=ExtResource("22_m1hbu")]
 transform = Transform3D(0.9659258, 0, -0.25881904, 0, 1, 0, 0.25881904, 0, 0.9659258, 1.2999992, 1.0999999, -0.19999981)
+
+[node name="Area3D" type="Area3D" parent="BlueRoom/bartop_A_large2" unique_id=1630141891]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BlueRoom/bartop_A_large2/Area3D" unique_id=1563849344]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1000023, 0.4375, 0)
+shape = SubResource("CylinderShape3D_78w8x")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="BlueRoom/bartop_A_large2/Area3D" unique_id=1461323916]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.300003, 1.5425844, -0.19999981)
+shape = SubResource("CylinderShape3D_dp1lw")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="BlueRoom/bartop_A_large2/Area3D" unique_id=1087887973]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5999985, 1.5516741, -0.19999981)
+shape = SubResource("CylinderShape3D_3ruak")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="BlueRoom/bartop_A_large2/Area3D" unique_id=1520185582]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2999992, 1.5516741, -0.19999981)
+shape = SubResource("CylinderShape3D_3ruak")
+
+[node name="description" type="Node" parent="BlueRoom/bartop_A_large2" unique_id=1184383516]
+script = ExtResource("13_iikjq")
+text = "Divers alcools et condiments… Cela fait des siècles qu’ils fermentent, et ce mélange troublant ressemble au sang des anciens. Je ne m’y risquerai pas."
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
 [node name="bench2" parent="BlueRoom" unique_id=1510844515 instance=ExtResource("27_41n8b")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -2, 0, 4)
