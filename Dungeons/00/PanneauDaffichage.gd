@@ -4,7 +4,7 @@ extends Interactable
 func on_interact() -> void:
 	if not quest_book.auberge_01_reprendre_des_forces.is_done() :
 		gui.openDialog($Description)
-	elif not tags.have(Tags.DUNGEON_01_FINISHED): 
+	elif not quest_book.auberge_02_recevoir_prime.is_done() : 
 		$"Mission 1/Next".enable = bag.have(Items.ItemName.SkullHead_Dungeon1)
 		gui.openDialog($"Mission 1")
 	else :

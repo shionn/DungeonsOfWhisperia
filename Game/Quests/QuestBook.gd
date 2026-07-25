@@ -9,6 +9,11 @@ extends GameBase
 @onready var dungeon_01_have_proof : QuestObjectif = $"Dungeon01/Rapporter une preuve de votre réussite"
 @onready var dungeon_01_have_potion : QuestObjectif = $"Dungeon01/Trouver un indice sur l'origine de ces morts-vivant"
 @onready var dungeon_01_treasur_found : QuestObjectif = $"Dungeon01/Trouver le trésors"
+@onready var auberge_02 : Quest = $Auberge02
+@onready var auberge_02_recevoir_prime : QuestObjectif = $"Auberge02/Recevoir sa prime"
+@onready var auberge_02_trouver_mission : QuestObjectif = $"Auberge02/Trouver une autre mission"
+@onready var auberge_02_identifier_potion : QuestObjectif = $"Auberge02/Faire identifier la potion"
+@onready var auberge_02_connaitre_valthorion : QuestObjectif = $"Auberge02/En apprendre plus sur Valthorion"
 
 
 var _quests : Dictionary = {}
@@ -25,6 +30,7 @@ func start(quest:Quest) -> bool :
 	return false
 
 func is_done(quest:Quest, objectif: QuestObjectif = null) -> bool :
+	if not _quests.has(quest.name) : return false
 	var _q = (_quests.get(quest.name) as Dictionary)
 	if objectif :
 		return _q.get(objectif.name).get("done")

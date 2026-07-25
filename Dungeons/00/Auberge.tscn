@@ -2156,6 +2156,7 @@ metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 [connection signal="activate" from="Aigle Jaune/LookingForQuest/Le Gouffre des Ombres/Next/Next/Next" to="Aigle Jaune" method="_on_mine_infestee_next_activate"]
 [connection signal="close" from="Aigle Jaune/LookingForQuest/Mission Accomplie/Next/Next/Next/La potion étrange/Next" to="Aigle Jaune" method="_on_end_mission1_close"]
 [connection signal="close" from="Aigle Jaune/LookingForQuest/Mission Accomplie/Next/Next/Next/Je n\'ai rien trouvé/Next" to="Aigle Jaune" method="_on_end_mission1_close"]
+[connection signal="close" from="Alaric Duclair/Présentation/Next/Valthorion ?/Next/Next/Next/Next" to="Alaric Duclair" method="_on_valthorion_next_close"]
 [connection signal="activate" from="Pipette la Loupe/Bienvenue/Acheter/Next" to="Pipette la Loupe" method="_on_acheter_next_activate"]
 [connection signal="activate" from="Pipette la Loupe/Bienvenue/Acheter/Next/Potion de Soin/Potion de Soin Mineur" to="Pipette la Loupe" method="_on_potion_de_soin_mineur_activate"]
 [connection signal="activate" from="Pipette la Loupe/Bienvenue/Acheter/Next/Potion de Soin/Potion de Soin Moyenne" to="Pipette la Loupe" method="_on_potion_de_soin_moyenne_activate"]

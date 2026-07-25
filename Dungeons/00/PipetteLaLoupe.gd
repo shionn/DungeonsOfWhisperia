@@ -27,6 +27,6 @@ func _on_potion_de_soin_majeur_activate() -> void:
 	_buy(150, Items.ItemName.PotionVieMajeur )
 
 func _on_identification_necro_last_activate() -> void:
-	tags.add(Tags.AUBERGE_PLAYER_KNOW_VALTHORION)
+	quest_book.auberge_02_identifier_potion.done()
 	bag.unloot(Items.ItemName.FioleNecrolisAttivae)
 	bag.gold = bag.gold + 100

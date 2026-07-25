@@ -22,5 +22,5 @@ func _goTo(path : String) -> void :
 
 func _on_visibility_changed() -> void:
 	$PanelContainer/MarginContainer/VBoxContainer/Dungeon01.visible = quest_book.auberge_01_trouver_kkchos_a_faire.is_done()
-	$PanelContainer/MarginContainer/VBoxContainer/Dungeon02.visible = tags.have(Tags.DUNGEON_02_ENABLE)
+	$PanelContainer/MarginContainer/VBoxContainer/Dungeon02.visible = quest_book.auberge_02_trouver_mission.is_done()
 	
