@@ -2142,15 +2142,6 @@ autoplay = true
 bus = &"Background"
 parameters/looping = true
 
-[node name="Quest0" type="Node" parent="." unique_id=1580217648]
-script = ExtResource("3_fq3ns")
-text = "Vous avez traversé des forêts inconnues, fuyant les bandits qui vous ont traqué. Vos jambes tremblent, votre corps est secoué par la fatigue. La nuit est tombée, et le froid s’est insinué dans vos os. Vous vous êtes effondré, épuisé, sous un arbre. Vous ne savez plus combien de temps vous avez dormi. Quand vous vous êtes réveillé, le ciel était noir, et une lueur vacillante filtrait à travers les branches. Intrigué par cette lueur, vous vous êtes approché, découvrant alors une auberge perdue au cœur de cette forêt maudite.
-
-Vous vous êtes retrouvé devant la porte. Une porte en bois pourri, entourée de mousse. Un toit de chaume, comme oublié par le temps. Vous n’avez jamais entendu parler de cet endroit. Et pourtant… vous avez frappé.
-
-Une fois dans l’auberge, vous découvrez avec étonnement qu’elle est étrangement animée et fréquentée, malgré sa localisation isolée."
-metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
-
 [connection signal="close" from="Aigle Jaune/Bienvenue/Next/Next/Next/Next/Next" to="Aigle Jaune" method="_on_Bienvenue_close"]
 [connection signal="activate" from="Aigle Jaune/LookingForQuest/Service de l\'auberge/Manger/Next/Next" to="Aigle Jaune" method="_on_manger_activate"]
 [connection signal="activate" from="Aigle Jaune/LookingForQuest/Le Gouffre des Ombres/Next/Next/Next" to="Aigle Jaune" method="_on_mine_infestee_next_activate"]

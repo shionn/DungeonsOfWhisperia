@@ -993,7 +993,6 @@ state = 7
 transform = Transform3D(-0.42261827, 0, -0.90630776, 0, 1, 0, 0.90630776, 0, -0.42261827, 5.5000076, 0, 2.7000008)
 state = 7
 lvl = 1
-loot_obj = 15
 loot_gold = 4
 
 [node name="Wall_Doorway" parent="BossRoom" unique_id=812446971 instance=ExtResource("1_o78hi")]
@@ -1436,15 +1435,15 @@ transform = Transform3D(0.7660446, 0, -0.6427877, 0, 1, 0, 0.6427877, 0, 0.76604
 [node name="spellbook_open2" parent="BossRoom/Desk" unique_id=1529236413 instance=ExtResource("21_m2ftf")]
 transform = Transform3D(1, 0, -4.3711392e-08, 4.371139e-08, 1.9106855e-15, 0.99999994, 0, -1, 0, -0.071, 1.05, 0.212)
 
-[node name="Gold_Gem_Ring_032" parent="BossRoom/Desk" unique_id=94392524 instance=ExtResource("22_l7dob")]
+[node name="ValthorionRing" parent="BossRoom/Desk" unique_id=94392524 instance=ExtResource("22_l7dob")]
 transform = Transform3D(-0.051763795, 0.19318518, -8.444393e-09, 0, -8.742278e-09, -0.2, -0.19318518, -0.051763795, 2.2626667e-09, 1.654, 1.01, 0.412)
 script = ExtResource("23_ml8gv")
 loot_obj = 13
 hide_on_loot = true
 
-[node name="Area3D" type="Area3D" parent="BossRoom/Desk/Gold_Gem_Ring_032" unique_id=100811442]
+[node name="Area3D" type="Area3D" parent="BossRoom/Desk/ValthorionRing" unique_id=100811442]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="BossRoom/Desk/Gold_Gem_Ring_032/Area3D" unique_id=352846961]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BossRoom/Desk/ValthorionRing/Area3D" unique_id=352846961]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, -0.025007248)
 shape = SubResource("CylinderShape3D_b02ke")
 
@@ -1503,7 +1502,6 @@ transform = Transform3D(-0.99999994, 0, 8.742277e-08, 0, 1, 0, -8.742277e-08, 0,
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 0)
 
 [node name="Closed" type="Node3D" parent="RitualRoom/Secret" unique_id=1533201276]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
 
 [node name="banner_triple_white2" parent="RitualRoom/Secret/Closed" unique_id=1772313798 instance=ExtResource("6_d0l6h")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
@@ -2420,6 +2418,7 @@ shape = SubResource("BoxShape3D_pq73c")
 
 [node name="barrel_small2" parent="BlueRoom" unique_id=26698089 instance=ExtResource("10_8ceck")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -4.9000006)
+script = ExtResource("23_ml8gv")
 
 [node name="description" type="Node" parent="BlueRoom/barrel_small2" unique_id=953497009]
 script = ExtResource("13_iikjq")
@@ -4063,6 +4062,8 @@ Trouver un indice la personne se cachant derriere ces événements.
 [/ul]"
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
+[connection signal="close" from="EntranceSecret/Tomb/gravestone2/description" to="." method="_on_tomb_description_close"]
+[connection signal="dead" from="BossRoom/Skeleton Golem" to="." method="_on_skeleton_golem_dead"]
 [connection signal="body_entered" from="BossRoom/Area3D" to="BossRoom" method="_on_area_3d_body_entered"]
 [connection signal="close" from="BossRoom/NecromancerDialog" to="BossRoom" method="_on_necromancer_dialog_close"]
 [connection signal="state_change" from="RitualRoom/wall_inset3/Skull" to="RitualRoom" method="_on_skull_state_change"]

@@ -15,6 +15,7 @@ func _openSecret() -> void:
 	$Secret/Closed.queue_free()
 	$Secret/Open.show()
 	$Secret/AudioStreamPlayer3D.play()
+	quest_book.dungeon_02_trouver_passage_secret.done()
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	if body is PlayerG : tags.add(Tags.DUNGEON_02_VISIT_CULT_ROOM)

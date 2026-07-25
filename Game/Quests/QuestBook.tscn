@@ -23,6 +23,31 @@ metadata/_custom_type_script = "uid://vm6ojxtihve7"
 script = ExtResource("3_7x0jq")
 metadata/_custom_type_script = "uid://vm6ojxtihve7"
 
+[node name="Auberge02" type="Node" parent="." unique_id=128033724]
+script = ExtResource("2_7pmna")
+title = "De retour à l'auberge"
+description = "Vous avez réussi à nettoyer le mausolée des morts-vivants qui l’infectaient.
+Il est maintenant l’heure de toucher votre récompense et de repartir à l’aventure."
+metadata/_custom_type_script = "uid://bx0atspqwloy6"
+
+[node name="Recevoir sa prime" type="Node" parent="Auberge02" unique_id=433725536]
+script = ExtResource("3_7x0jq")
+metadata/_custom_type_script = "uid://vm6ojxtihve7"
+
+[node name="Trouver une autre mission" type="Node" parent="Auberge02" unique_id=511702519]
+script = ExtResource("3_7x0jq")
+metadata/_custom_type_script = "uid://vm6ojxtihve7"
+
+[node name="Faire identifier la potion" type="Node" parent="Auberge02" unique_id=1235213637]
+script = ExtResource("3_7x0jq")
+hidden = true
+metadata/_custom_type_script = "uid://vm6ojxtihve7"
+
+[node name="En apprendre plus sur Valthorion" type="Node" parent="Auberge02" unique_id=1158307667]
+script = ExtResource("3_7x0jq")
+hidden = true
+metadata/_custom_type_script = "uid://vm6ojxtihve7"
+
 [node name="Dungeon01" type="Node" parent="." unique_id=1685079018]
 script = ExtResource("2_7pmna")
 title = "Nétoyer le mausolé"
@@ -47,27 +72,34 @@ script = ExtResource("3_7x0jq")
 hidden = true
 metadata/_custom_type_script = "uid://vm6ojxtihve7"
 
-[node name="Auberge02" type="Node" parent="." unique_id=128033724]
+[node name="Dungeon02" type="Node" parent="." unique_id=2040650321]
 script = ExtResource("2_7pmna")
-title = "De retour à l'auberge"
-description = "Vous avez réussi à nettoyer le mausolée des morts-vivants qui l’infectaient.
-Il est maintenant l’heure de toucher votre récompense et de repartir à l’aventure."
+title = "Nétoyer le Gouffre des Ombres"
+description = "En arrivant pret du lac d’argent, dont les eaux scintillent comme des lames de couteau sous la lumière de la lune. Au loin, des cris étouffés résonnent, semblant provenir des profondeurs du donjon.  
+Dès que vous franchissez les portes de pierre, une magie noire vous enveloppe, suffocante et corrompue. L’air est lourd, chargé d’une odeur de pourriture et de sang séché. "
 metadata/_custom_type_script = "uid://bx0atspqwloy6"
 
-[node name="Recevoir sa prime" type="Node" parent="Auberge02" unique_id=433725536]
+[node name="Trouver le passage secret" type="Node" parent="Dungeon02" unique_id=878588092]
 script = ExtResource("3_7x0jq")
 metadata/_custom_type_script = "uid://vm6ojxtihve7"
 
-[node name="Trouver une autre mission" type="Node" parent="Auberge02" unique_id=511702519]
+[node name="Identifier le maitre de ces lieux" type="Node" parent="Dungeon02" unique_id=844561277]
 script = ExtResource("3_7x0jq")
 metadata/_custom_type_script = "uid://vm6ojxtihve7"
 
-[node name="Faire identifier la potion" type="Node" parent="Auberge02" unique_id=1235213637]
+[node name="Vaincre le maître des lieux" type="Node" parent="Dungeon02" unique_id=21305782]
 script = ExtResource("3_7x0jq")
-hidden = true
 metadata/_custom_type_script = "uid://vm6ojxtihve7"
 
-[node name="En apprendre plus sur Valthorion" type="Node" parent="Auberge02" unique_id=1158307667]
+[node name="Rapporter une preuve de votre réussite" type="Node" parent="Dungeon02" unique_id=816299679]
+script = ExtResource("3_7x0jq")
+metadata/_custom_type_script = "uid://vm6ojxtihve7"
+
+[node name="Trouver un objet identifiant le maitre des lieux" type="Node" parent="Dungeon02" unique_id=1771972858]
+script = ExtResource("3_7x0jq")
+metadata/_custom_type_script = "uid://vm6ojxtihve7"
+
+[node name="Trouver l\'aliance" type="Node" parent="Dungeon02" unique_id=171444011]
 script = ExtResource("3_7x0jq")
 hidden = true
 metadata/_custom_type_script = "uid://vm6ojxtihve7"

@@ -14,6 +14,13 @@ extends GameBase
 @onready var auberge_02_trouver_mission : QuestObjectif = $"Auberge02/Trouver une autre mission"
 @onready var auberge_02_identifier_potion : QuestObjectif = $"Auberge02/Faire identifier la potion"
 @onready var auberge_02_connaitre_valthorion : QuestObjectif = $"Auberge02/En apprendre plus sur Valthorion"
+@onready var dungeon_02 : Quest = $Dungeon02
+@onready var dungeon_02_trouver_passage_secret : QuestObjectif = $"Dungeon02/Trouver le passage secret"
+@onready var dungeon_02_identifier_valthorion : QuestObjectif = $"Dungeon02/Identifier le maitre de ces lieux"
+@onready var dungeon_02_kill_boss : QuestObjectif = $"Dungeon02/Vaincre le maître des lieux"
+@onready var dungeon_02_preuve_kill_boss : QuestObjectif = $"Dungeon02/Rapporter une preuve de votre réussite"
+@onready var dungeon_02_preuve_valthorion : QuestObjectif = $"Dungeon02/Trouver un objet identifiant le maitre des lieux"
+@onready var dungeon_02_trouver_alliance : QuestObjectif = $"Dungeon02/Trouver l'aliance"
 
 
 var _quests : Dictionary = {}
