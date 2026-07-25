@@ -151,6 +151,7 @@ func save_game() -> void :
 		"xp" : xp,
 		"gold" : bag.gold,
 		"tags" : tags._tags,
+		"quests" : quest_book._quests,
 		"bag": bag.to_save()
 	}
 	var json_string = JSON.stringify(save_data, "\t")
@@ -169,8 +170,8 @@ func load_game() -> void :
 		xp = save_data["xp"]
 		bag.gold = save_data.get("gold", 0)
 		for tag in save_data["tags"] : tags._tags.append(tag)
-		for item in save_data["bag"] : 
-			bag._items.append(item)
+		for item in save_data["bag"] : bag._items.append(item)
+		quest_book._quests = save_data["quests"]
 		gui.consoleLog("Partie chargée")
 
 

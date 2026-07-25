@@ -60,6 +60,10 @@ func openHelp(description: Dialog)  -> void :
 	$Introduction.open(description)
 	_show_mouse()
 
+func openQuest()  -> void :
+	$Introduction.openQuest()
+	_show_mouse()
+
 func openLoot(container: Object) -> void :
 	$Loot.loot(container)
 	$Bag.show()

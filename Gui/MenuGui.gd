@@ -10,3 +10,4 @@ func _on_id_pressed(id: int) -> void:
 		1: $"/root/World/Player".save_game()
 		2: $"../Options".show()
 		3: $"../Introduction".openHelp()
+		4: $"../Introduction".openQuest()

@@ -10,6 +10,9 @@ script = ExtResource("1_man2g")
 [node name="Auberge01" type="Node" parent="." unique_id=654278738]
 script = ExtResource("2_7pmna")
 title = "Découverte de l'auberge"
+description = "Vous avez traversé des forêts inconnues, fuyant les bandits qui vous ont traqué. Vos jambes tremblent, votre corps est secoué par la fatigue. La nuit est tombée, et le froid s’est insinué dans vos os. Vous vous êtes effondré, épuisé, sous un arbre. Vous ne savez plus combien de temps vous avez dormi. Quand vous vous êtes réveillé, le ciel était noir, et une lueur vacillante filtrait à travers les branches. Intrigué par cette lueur, vous vous êtes approché, découvrant alors une auberge perdue au cœur de cette forêt maudite.
+
+Une fois dans l’auberge, vous découvrez avec étonnement qu’elle est étrangement animée et fréquentée, malgré sa localisation isolée. Cependant vous êtes à bout de force, vous devez reprendre des forces avant de retourner à l'aventure."
 metadata/_custom_type_script = "uid://bx0atspqwloy6"
 
 [node name="Reprendre des forces" type="Node" parent="Auberge01" unique_id=1616089275]

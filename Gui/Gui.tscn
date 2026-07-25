@@ -32,6 +32,7 @@
 [ext_resource type="Script" uid="uid://o6q2ok64i8cs" path="res://Gui/Options.gd" id="24_7xgee"]
 [ext_resource type="Script" uid="uid://bc4y4enkrwodc" path="res://Gui/ConsoleLog.gd" id="24_xkmul"]
 [ext_resource type="Script" uid="uid://bcc2j6w4n4yqq" path="res://Gui/Transition.gd" id="25_60sjt"]
+[ext_resource type="Texture2D" uid="uid://boyc38jk2iy35" path="res://Gui/Assets/kenney/cursor-pack/tool_pickaxe.png" id="26_f4re5"]
 [ext_resource type="Script" uid="uid://b57hjgf2uu7ly" path="res://Gui/Introduction.gd" id="26_m2wub"]
 [ext_resource type="Script" uid="uid://c47eb21su127s" path="res://Gui/DungeonExit.gd" id="34_f4re5"]
 [ext_resource type="Texture2D" uid="uid://ctgwsk6s31p4p" path="res://Gui/Assets/kenney/cursor-pack/door_enter.png" id="34_w65rx"]
@@ -538,19 +539,22 @@ offset_top = 10.0
 offset_right = 63.0
 offset_bottom = 41.0
 text = "Menu"
-item_count = 4
+item_count = 5
 popup/item_0/text = "Sauvegarder"
 popup/item_0/icon = ExtResource("21_c4ovl")
 popup/item_0/id = 1
-popup/item_1/text = "Option"
-popup/item_1/icon = ExtResource("21_wbke4")
-popup/item_1/id = 2
+popup/item_1/text = "Objectif"
+popup/item_1/icon = ExtResource("26_f4re5")
+popup/item_1/id = 4
 popup/item_2/text = "Aide"
 popup/item_2/icon = ExtResource("23_883rq")
 popup/item_2/id = 3
-popup/item_3/text = "Quitter"
-popup/item_3/icon = ExtResource("21_f4re5")
-popup/item_3/id = 0
+popup/item_3/text = "Option"
+popup/item_3/icon = ExtResource("21_wbke4")
+popup/item_3/id = 2
+popup/item_4/text = "Quitter"
+popup/item_4/icon = ExtResource("21_f4re5")
+popup/item_4/id = 0
 script = ExtResource("22_mnphl")
 
 [node name="Introduction" type="GridContainer" parent="." unique_id=415794769]
@@ -562,9 +566,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -350.0
+offset_left = -400.0
 offset_top = -250.0
-offset_right = 350.0
+offset_right = 400.0
 offset_bottom = 250.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -628,16 +632,19 @@ theme_override_styles/tab_hovered = SubResource("StyleBoxEmpty_u21oi")
 theme_override_styles/tab_selected = SubResource("StyleBoxEmpty_2pnra")
 theme_override_styles/tab_disabled = SubResource("StyleBoxEmpty_l4ar5")
 theme_override_styles/tab_focus = SubResource("StyleBoxEmpty_owfy6")
+tab_alignment = 1
 current_tab = 0
-tab_0/icon = ExtResource("8_8pck7")
+tab_0/title = "Quête en Cours"
+tab_0/icon = ExtResource("26_f4re5")
 tab_1/icon = ExtResource("23_883rq")
 
-[node name="Context" type="RichTextLabel" parent="Introduction/PanelContainer/MarginContainer/VBoxContainer/TabContainer" unique_id=934426654]
+[node name="Quete" type="RichTextLabel" parent="Introduction/PanelContainer/MarginContainer/VBoxContainer/TabContainer" unique_id=1328228138]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 bbcode_enabled = true
 metadata/_tab_index = 0
+metadata/_tab_name = "Quête en Cours"
 
 [node name="Aide" type="RichTextLabel" parent="Introduction/PanelContainer/MarginContainer/VBoxContainer/TabContainer" unique_id=1096971895]
 visible = false
@@ -1323,6 +1330,7 @@ spell_id = 3
 [connection signal="visibility_changed" from="Loot" to="." method="_on_loot_visibility_changed"]
 [connection signal="pressed" from="Loot/PanelContainer/MarginContainer/VBoxContainer/CloseButton" to="." method="_close"]
 [connection signal="visibility_changed" from="Introduction" to="." method="update_mouse_mode"]
+[connection signal="visibility_changed" from="Introduction/PanelContainer/MarginContainer/VBoxContainer/TabContainer/Quete" to="Introduction" method="_on_quete_visibility_changed"]
 [connection signal="pressed" from="Introduction/PanelContainer/MarginContainer/VBoxContainer/CloseButton" to="Introduction" method="_on_close_button_pressed"]
 [connection signal="toggled" from="Options/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer/FullScreenButton" to="Options" method="_on_full_screen_button_toggled"]
 [connection signal="value_changed" from="Options/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer/HSliderScale" to="Options" method="_on_h_slider_scale_value_changed"]
