@@ -2,7 +2,7 @@ extends Interactable
 
 
 func on_interact() -> void:
-	if not tags.have(Tags.AUBERGE_PLAYER_RESTORED) :
+	if not quest_book.auberge_01_reprendre_des_dorces.is_done() :
 		gui.openDialog($Description)
 	elif not tags.have(Tags.DUNGEON_01_FINISHED): 
 		$"Mission 1/Next".enable = bag.have(Items.ItemName.SkullHead_Dungeon1)

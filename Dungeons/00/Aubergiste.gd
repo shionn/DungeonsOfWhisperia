@@ -8,7 +8,7 @@ func _ready() -> void:
 
 func interact() -> void:
 	look_at_player()
-	if tags.have(Tags.AUBERGE_PLAYER_RESTORED) :
+	if quest_book.auberge_01_reprendre_des_forces.is_done() : 
 		$"LookingForQuest/Service de l'auberge".enable = bag.gold >= 5
 
 		$"LookingForQuest/Le Gouffre des Ombres".enable = tags.have(Tags.AUBERGE_PLAYER_KNOW_SHADOW_CHASM) and not tags.have(Tags.DUNGEON_02_ENABLE)

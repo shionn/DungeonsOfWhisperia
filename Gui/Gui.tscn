@@ -691,6 +691,7 @@ layout_mode = 2
 texture = ExtResource("18_w65rx")
 
 [node name="Options" type="GridContainer" parent="." unique_id=139407599]
+visible = false
 z_index = 10
 layout_mode = 1
 anchors_preset = 8
@@ -1275,8 +1276,9 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -42.0
-offset_top = -48.0
+offset_top = -58.0
 offset_right = 42.0
+offset_bottom = -10.0
 grow_horizontal = 2
 grow_vertical = 0
 
