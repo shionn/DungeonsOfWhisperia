@@ -101,7 +101,6 @@ description = "Ceci est la preuve que j'ai accompli ma mission.
  
  Merci sincèrement d’avoir participé à cette alpha. Shionn[/i]"
 unique = true
-tag = "DUNGEON_01_FINISHED"
 metadata/_custom_type_script = "uid://bjbab3ep2gfn2"
 
 [node name="Crane2" type="Node" parent="Items" unique_id=721588022]
@@ -116,7 +115,6 @@ Mais avez-vous tous fouillé ? Avez-vous trouvé toute la quantité d'or possibl
 
 Merci sincèrement d’avoir participé à cette alpha. Shionn[/i]"
 unique = true
-tag = "DUNGEON_02_FINISHED"
 metadata/_custom_type_script = "uid://bjbab3ep2gfn2"
 
 [node name="Necrolis Attivae" type="Node" parent="Items" unique_id=1341189445]
@@ -128,7 +126,6 @@ description = "Sur l'étiquette il est écris [i]Necrolis Attivae[/i].
 
 Je n'ai jamais vu ni jamais entendu parler d'une telle potion. Elle est forcément importante."
 unique = true
-tag = "DUNGEON_01_POTION_NECROLIS"
 metadata/_custom_type_script = "uid://bjbab3ep2gfn2"
 
 [node name="Gemme Rouge" type="Node" parent="Items" unique_id=1337000464]
@@ -174,7 +171,6 @@ icon = ExtResource("20_6tx0c")
 description = "Cet anneau est magnifique. 
 À l'intérieur, je peux y lire [i]Valthorion[/i]."
 unique = true
-tag = "DUNGEON_02_VALTHORION_RING"
 metadata/_custom_type_script = "uid://bjbab3ep2gfn2"
 
 [node name="Alliance" type="Node" parent="Items" unique_id=556752775]
@@ -183,7 +179,6 @@ item_name = 14
 icon = ExtResource("21_0to5b")
 description = "C'est une alliance."
 unique = true
-tag = "DUNGEON_02_ALLIANCE"
 metadata/_custom_type_script = "uid://bjbab3ep2gfn2"
 
 [connection signal="_action" from="Items/Potion Vie Mineur" to="Items/Potion Vie Mineur" method="_give_back_1d3_pv"]

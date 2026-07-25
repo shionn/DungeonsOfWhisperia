@@ -32,9 +32,17 @@ func _update_quest_text(quest : Quest = null) -> void :
 		_quest_text.newline()
 		_quest_text.newline()
 		_quest_text.append_text("[i]Objectifs : %s[/i]"%quest.title)
-		var obj = "[ul]"
+		var text_objectif = "[ul]"
+		var text_objectif_hidden = ""
 		for objectif in quest.list_objectif() :
-			if objectif.is_done() : obj = obj + "[s][color=gray]%s.[/color][/s]\n"%objectif.name
-			else : obj = obj + "%s.\n"%objectif.name
-		obj = obj + "[/ul]"
-		_quest_text.append_text(obj)
+			if objectif.hidden and objectif.is_done() :
+				text_objectif_hidden = text_objectif_hidden + "[s][color=gray]%s.[/color][/s]\n"%objectif.name
+			if not objectif.hidden :
+				if objectif.is_done() : text_objectif = text_objectif + "[s][color=gray]%s.[/color][/s]\n"%objectif.name
+				else : text_objectif = text_objectif + "%s.\n"%objectif.name
+		text_objectif = text_objectif + "[/ul]"
+		_quest_text.append_text(text_objectif)
+		if text_objectif_hidden :
+			_quest_text.append_text("[i]Objectifs cachés :[/i]")
+			_quest_text.append_text("[ul]%s[/ul]"%text_objectif_hidden)
+			

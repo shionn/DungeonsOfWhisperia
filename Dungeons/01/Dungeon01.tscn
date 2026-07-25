@@ -700,7 +700,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, 4)
 [node name="Skeleton Golem" parent="BossRoom" unique_id=527358216 instance=ExtResource("31_u21oi")]
 transform = Transform3D(0.49999997, 0, 0.8660253, 0, 1, 0, -0.8660253, 0, 0.49999997, -2.2000008, 0, -3.9)
 lvl = 1
-loot_obj = 5
 loot_gold = 4
 
 [node name="Desk" type="Node3D" parent="BossRoom" unique_id=1645702767]
@@ -1771,6 +1770,7 @@ Rapporter une preuve de votre réussite.
 [/ul]"
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
+[connection signal="dead" from="BossRoom/Skeleton Golem" to="." method="_on_skeleton_golem_dead"]
 [connection signal="activate" from="BossRoom/bar_straight_C2/Code/Action1" to="BossRoom/bar_straight_C2/Code" method="_on_action_1_activate"]
 [connection signal="activate" from="BossRoom/bar_straight_C2/Code/Action2" to="BossRoom/bar_straight_C2/Code" method="_on_action_2_activate"]
 [connection signal="activate" from="BossRoom/bar_straight_C2/Code/Action3" to="BossRoom/bar_straight_C2/Code" method="_on_action_3_activate"]

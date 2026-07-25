@@ -1,5 +1,5 @@
 class_name Items
-extends Node
+extends GameBase
 
 enum ItemName {
 	None,

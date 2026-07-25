@@ -9,23 +9,25 @@ var gold: int = 0:
 		if value > gold : gui.consoleLog("Vous obtenez %d 💰." % [value-gold])
 		elif value < gold : gui.consoleLog("Vous perdez %d 💰." % [gold-value])
 		gold = value
-		item_change.emit()
+		gold_loot.emit()
 
-signal item_change()
+signal gold_loot()
+signal item_loot(item : Item)
+signal item_drop(item : Item)
 
 func loot(item : Items.ItemName) -> void : 
 	_items.append(item)
-	item_change.emit()
 	var _i =  _all_items.from(item)
-	if _i.tag : tags.add(_i.tag)
 	gui.consoleLog("Vous obtenez %s." % _i.name)
+	item_loot.emit(_i)
 
 func unloot(item : Items.ItemName) -> void : 
 	var index = _items.find(item)
 	if index >=0 :
 		gui.consoleLog("Vous utilisez %s." % _all_items.from(item).name)
 		_items.remove_at(index)
-	item_change.emit()
+	var _i =  _all_items.from(item)
+	item_drop.emit(_i)
 
 func have(item : Items.ItemName) -> bool:
 	return _items.find(item) >= 0

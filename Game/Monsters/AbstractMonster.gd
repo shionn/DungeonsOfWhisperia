@@ -18,6 +18,8 @@ enum State { IDLE, CHASE, ATTACK, ATTACKING, HIT, DEATH, PATROL, NAVIGATE }
 @export_category("patrol")
 @export var patrol_path : Array[Vector3] = []
 
+signal dead()
+
 const _movement_speed: float = 4.0
 
 var _atk : MonsterAtk
@@ -174,7 +176,6 @@ func _on_off_hand_atk_timers_timeout() -> void:
 		player.receive_atk(_atk.off_hand_damage(), self)
 		_atk = null
 
-
 func receive_atk(nb_atk: int) -> void:
 	if state == State.DEATH : return
 	_hit_take = _hit_take + 1
@@ -189,6 +190,7 @@ func receive_atk(nb_atk: int) -> void:
 			start_animation("Death_A", true)
 			player.xp = player.xp+compute_xp()
 			state = State.DEATH
+			dead.emit()
 		elif state != State.ATTACKING :
 			start_animation("Hit_A", true)
 			state = State.HIT

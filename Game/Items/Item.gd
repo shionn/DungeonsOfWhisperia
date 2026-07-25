@@ -10,7 +10,6 @@ extends GameBase
 @export_category("Loot Condition")
 @export var global : bool = true
 @export var unique : bool = false
-@export var tag : String
 @export_category("Item type")
 @export var gemme : bool = false
 
@@ -31,7 +30,7 @@ func open_description() -> void:
 		gui.openDialog(desc)
 
 func lootable() -> bool :
-	return not unique or tag == "" and not bag.have(item_name) or not tags.have(tag) 
+	return not unique or not bag.have(item_name) 
 
 func _give_back_2_pv() -> void:
 	player.pv = min(player.pv+2, player.get_max_pv())

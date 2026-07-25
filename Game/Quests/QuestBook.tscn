@@ -25,6 +25,8 @@ metadata/_custom_type_script = "uid://vm6ojxtihve7"
 
 [node name="Dungeon01" type="Node" parent="." unique_id=1685079018]
 script = ExtResource("2_7pmna")
+title = "Nétoyer le mausolé"
+description = "Lorsque vous arrivez près du mausolée, vous ne croisez d’abord aucun mort-vivant… Mais les bruits étouffés de grognements et les ombres qui s’échappent de ses ruines vous mettent aussitôt en garde. Les créatures semblent sortir du mausolée lui-même, comme si leur présence était inscrite dans ses murs. Vous hésitez un instant, puis vous décidez de pénétrer à l’intérieur, déterminé à découvrir ce qui se cache derrière cette menace."
 metadata/_custom_type_script = "uid://bx0atspqwloy6"
 
 [node name="Vaincre le maître des lieux" type="Node" parent="Dungeon01" unique_id=1956964364]
@@ -32,5 +34,23 @@ script = ExtResource("3_7x0jq")
 metadata/_custom_type_script = "uid://vm6ojxtihve7"
 
 [node name="Rapporter une preuve de votre réussite" type="Node" parent="Dungeon01" unique_id=1629543500]
+script = ExtResource("3_7x0jq")
+metadata/_custom_type_script = "uid://vm6ojxtihve7"
+
+[node name="Trouver un indice sur l\'origine de ces morts-vivant" type="Node" parent="Dungeon01" unique_id=2117157385]
+script = ExtResource("3_7x0jq")
+hidden = true
+metadata/_custom_type_script = "uid://vm6ojxtihve7"
+
+[node name="Trouver le trésors" type="Node" parent="Dungeon01" unique_id=1551524651]
+script = ExtResource("3_7x0jq")
+hidden = true
+metadata/_custom_type_script = "uid://vm6ojxtihve7"
+
+[node name="Auberge02" type="Node" parent="." unique_id=128033724]
+script = ExtResource("2_7pmna")
+metadata/_custom_type_script = "uid://bx0atspqwloy6"
+
+[node name="QuestObjectif" type="Node" parent="Auberge02" unique_id=433725536]
 script = ExtResource("3_7x0jq")
 metadata/_custom_type_script = "uid://vm6ojxtihve7"

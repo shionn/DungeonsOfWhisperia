@@ -17,7 +17,7 @@ func is_done() -> bool :
 func is_all_done() -> bool :
 	var all_done = true
 	for objectif in list_objectif() :
-		all_done = all_done and objectif.is_done()
+		all_done = all_done and (objectif.hidden or objectif.is_done())
 	return all_done
 
 func list_objectif() -> Array[QuestObjectif] :
