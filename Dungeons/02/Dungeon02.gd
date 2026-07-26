@@ -19,10 +19,8 @@ func _on_item_loot(item : Item) -> void :
 	if item.item_name == Items.ItemName.AnneauValthorion :
 		quest_book.dungeon_02_preuve_valthorion.done()
 
-
-func _on_tomb_description_close() -> void:
-	quest_book.dungeon_02_identifier_valthorion.done()
-
-
 func _on_skeleton_golem_dead() -> void:
 	quest_book.dungeon_02_kill_boss.done()
+
+func _on_tomb_description_activate() -> void:
+	quest_book.dungeon_02_identifier_valthorion.done()

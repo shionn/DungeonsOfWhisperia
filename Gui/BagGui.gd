@@ -12,13 +12,22 @@ var _interactable : Interactable
 #var drag : Item = null
 func _ready() -> void:
 	visible = false
-	bag.item_loot.connect(self._refresh)
-	bag.item_drop.connect(self._refresh)
-	bag.gold_loot.connect(self._refresh)
+	bag.item_loot.connect(self._item_loot)
+	bag.item_drop.connect(self._item_drop)
+	bag.gold_loot.connect(self._gold_loot)
 
 func _process(_delta: float) -> void:
 	if _dragButton:
 		_dragButton.global_position = get_viewport().get_mouse_position() + Vector2(5,5)
+
+func _item_loot(_item:Item) -> void : 
+	_refresh()
+
+func _item_drop(_item:Item) -> void : 
+	_refresh()
+
+func _gold_loot() -> void : 
+	_refresh()
 
 func _refresh() -> void:
 	for child in _container.get_children() : child.queue_free()
@@ -76,24 +85,6 @@ func _activate(item : Item) -> void :
 
 func _on_close_button_pressed() -> void:
 	hide()
-
-func save_game() -> void :
-	var file = FileAccess.open("user://bag.save", FileAccess.WRITE)
-	var item_names = []
-	for item in _grid.get_children() : item_names.append(item.name)
-	var json_string = JSON.stringify(item_names)
-	file.store_line(json_string)
-
-func load_game() -> void : 
-	#if FileAccess.file_exists("user://bag.save") :
-		#for item in _grid.get_children() : unloot(item.name)
-		#var file = FileAccess.open("user://bag.save", FileAccess.READ)
-		#for item_name in JSON.parse_string(file.get_line()) :
-			#var item = _items.get_node(item_name)
-			#_items.remove_child(item)
-			#_grid.add_child(item)
-	#on_item_change.emit()
-	pass
 
 func _on_visibility_changed() -> void:
 	if visible and _container : 

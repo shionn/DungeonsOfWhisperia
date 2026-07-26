@@ -994,7 +994,7 @@ state = 7
 
 [node name="Skeleton Golem" parent="BossRoom" unique_id=1583216697 instance=ExtResource("21_bkx1f")]
 transform = Transform3D(-0.42261827, 0, -0.90630776, 0, 1, 0, 0.90630776, 0, -0.42261827, 5.5000076, 0, 2.7000008)
-state = 7
+state = 5
 lvl = 1
 loot_obj = 0
 loot_gold = 4
@@ -2427,9 +2427,7 @@ script = ExtResource("23_ml8gv")
 
 [node name="description" type="Node" parent="BlueRoom/crate_large_decorated2" unique_id=434876306]
 script = ExtResource("13_iikjq")
-text = "C’est une pile d’assiettes sales. C’est tellement vieux qu’on dirait que les restes de nourriture ont fusionné avec la fayence… 
-
-Comme si le temps lui-même avait dévoré ces fragments de la vie passée."
+text = "Divers alcools et condiments… Cela fait des siècles qu’ils fermentent, et ce mélange troublant ressemble au sang des anciens. Je ne m’y risquerai pas."
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
 [node name="Area3D" type="Area3D" parent="BlueRoom/crate_large_decorated2" unique_id=364228899]
@@ -4070,7 +4068,7 @@ autoplay = true
 bus = &"Background"
 parameters/looping = true
 
-[connection signal="close" from="EntranceSecret/Tomb/gravestone2/description" to="." method="_on_tomb_description_close"]
+[connection signal="activate" from="EntranceSecret/Tomb/gravestone2/description" to="." method="_on_tomb_description_activate"]
 [connection signal="dead" from="BossRoom/Skeleton Golem" to="." method="_on_skeleton_golem_dead"]
 [connection signal="body_entered" from="BossRoom/Area3D" to="BossRoom" method="_on_area_3d_body_entered"]
 [connection signal="close" from="BossRoom/NecromancerDialog" to="BossRoom" method="_on_necromancer_dialog_close"]

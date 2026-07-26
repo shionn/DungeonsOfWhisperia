@@ -10,7 +10,7 @@ enum State { IDLE, CHASE, ATTACK, ATTACKING, HIT, DEATH, PATROL, NAVIGATE }
 @onready var _offHandAtkTimer = $OffHandAtkTimer as Timer
 @onready var _gcdTimer = $GcdTimer as Timer
 
-@export var state : State = State.IDLE
+@export var state : State = State.IDLE 
 @export var lvl : int = 1
 @export_category("loot")
 @export var loot_obj : Items.ItemName = Items.ItemName.None

@@ -9,7 +9,6 @@
 - ajouter des option graphique
   - definition ?
   - effet de flamme ?
-  - ombre ssao ?
 - ajouter des options d'input
   - sensibilité souris
 - combat
@@ -17,6 +16,11 @@
 - barre de state : lvl pas explicie, ni l'xp, et depalcer le FPS
 - finir les arme (critique)
 - bloquer les mouvement et la camera lors d'une transition.
+- ajouter des sort 
+  - chevalier : position defensive
+  - berserke : position offensive
+  - rogue : disparaitre dans l'ombre
+
 
 # histoire
 - culte du necromancien ? 

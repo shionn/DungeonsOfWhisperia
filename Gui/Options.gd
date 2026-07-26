@@ -10,16 +10,12 @@ func _ready() -> void:
 
 func _on_music_value_changed(value: float) -> void:
 	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Background"),value)
-	print(value)
-
 
 func _on_son_value_changed(value: float) -> void:
 	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Effet"), value)
-	print(value)
 
 func _on_close_button_pressed() -> void:
 	hide()
-
 
 func _on_full_screen_button_toggled(toggled_on: bool) -> void:
 	if toggled_on : get_window().mode = Window.MODE_FULLSCREEN
@@ -49,3 +45,8 @@ func _on_scale_mode_id_pressed(id: int) -> void:
 		5 : 
 			get_viewport().scaling_3d_mode = Viewport.SCALING_3D_MODE_NEAREST
 			_scale_mode_button.text = "Entière (Nearest)"
+
+
+func _on_shadow_ssao_button_toggled(toggled_on: bool) -> void:
+	var env  = $"/root/World/WorldEnvironment" as WorldEnvironment
+	env.environment.ssao_enabled = toggled_on

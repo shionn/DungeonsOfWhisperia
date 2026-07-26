@@ -23,8 +23,8 @@ var pv = 1
 var xp = 0 :
 	set(value) :
 		xp = value
-		# 100/300/600/1000/1500/2100
-		if xp > lvl * (lvl+1) * 50 :
+		# requiere 75*2*lvl pour passer au lvl suivant<
+		if xp > lvl * (lvl+1) * 75 :
 			lvl = lvl + 1
 			gui.consoleLog("Vous passer lvl %d"%lvl)
 			lvl_up.emit()
