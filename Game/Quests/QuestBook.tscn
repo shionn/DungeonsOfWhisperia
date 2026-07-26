@@ -40,12 +40,35 @@ metadata/_custom_type_script = "uid://vm6ojxtihve7"
 
 [node name="Faire identifier la potion" type="Node" parent="Auberge02" unique_id=1235213637]
 script = ExtResource("3_7x0jq")
-hidden = true
+secondary = true
 metadata/_custom_type_script = "uid://vm6ojxtihve7"
 
 [node name="En apprendre plus sur Valthorion" type="Node" parent="Auberge02" unique_id=1158307667]
 script = ExtResource("3_7x0jq")
-hidden = true
+secondary = true
+metadata/_custom_type_script = "uid://vm6ojxtihve7"
+
+[node name="Auberge03" type="Node" parent="." unique_id=228115913]
+script = ExtResource("2_7pmna")
+title = "Retour du Gouffre des Ombres"
+description = "De retour du gouffre des Ombres vous avez accomplis votre mission. Il est temps de faire votre rapport et de toucher votre répcompense. "
+metadata/_custom_type_script = "uid://bx0atspqwloy6"
+
+[node name="Faire son rapport" type="Node" parent="Auberge03" unique_id=1484628754]
+script = ExtResource("3_7x0jq")
+metadata/_custom_type_script = "uid://vm6ojxtihve7"
+
+[node name="Identifier la Bague" type="Node" parent="Auberge03" unique_id=226091951]
+script = ExtResource("3_7x0jq")
+metadata/_custom_type_script = "uid://vm6ojxtihve7"
+
+[node name="Trouver une autre mission" type="Node" parent="Auberge03" unique_id=1578656135]
+script = ExtResource("3_7x0jq")
+metadata/_custom_type_script = "uid://vm6ojxtihve7"
+
+[node name="Rendre l\'alliance" type="Node" parent="Auberge03" unique_id=1176519915]
+script = ExtResource("3_7x0jq")
+secondary = true
 metadata/_custom_type_script = "uid://vm6ojxtihve7"
 
 [node name="Dungeon01" type="Node" parent="." unique_id=1685079018]
@@ -64,12 +87,12 @@ metadata/_custom_type_script = "uid://vm6ojxtihve7"
 
 [node name="Trouver un indice sur l\'origine de ces morts-vivant" type="Node" parent="Dungeon01" unique_id=2117157385]
 script = ExtResource("3_7x0jq")
-hidden = true
+secondary = true
 metadata/_custom_type_script = "uid://vm6ojxtihve7"
 
 [node name="Trouver le trésors" type="Node" parent="Dungeon01" unique_id=1551524651]
 script = ExtResource("3_7x0jq")
-hidden = true
+secondary = true
 metadata/_custom_type_script = "uid://vm6ojxtihve7"
 
 [node name="Dungeon02" type="Node" parent="." unique_id=2040650321]
@@ -101,5 +124,5 @@ metadata/_custom_type_script = "uid://vm6ojxtihve7"
 
 [node name="Trouver l\'aliance" type="Node" parent="Dungeon02" unique_id=171444011]
 script = ExtResource("3_7x0jq")
-hidden = true
+secondary = true
 metadata/_custom_type_script = "uid://vm6ojxtihve7"

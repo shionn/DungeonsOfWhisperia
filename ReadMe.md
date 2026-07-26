@@ -15,9 +15,8 @@
 - combat
   - Ajouter un systeme d'aggro
 - barre de state : lvl pas explicie, ni l'xp, et depalcer le FPS
-- renommé le jeu ? Tales of Dungeon. Adventures from the Lost Dungeon. Écho des Profondeurs Oubliées.
-  - Dans les boss room 
 - finir les arme (critique)
+- bloquer les mouvement et la camera lors d'une transition.
 
 # histoire
 - culte du necromancien ? 

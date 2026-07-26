@@ -1453,6 +1453,10 @@ metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 transform = Transform3D(1, 8.969602e-25, 1.3393732e-12, 0, 1, -6.696866e-13, -1.3393732e-12, 6.696866e-13, 1, 0, 0, 0)
 shape = SubResource("BoxShape3D_y8qse")
 
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="BossRoom/Desk/spellbook_open2" unique_id=1198142106]
+stream = ExtResource("38_4lyfw")
+bus = &"Effet"
+
 [node name="ValthorionRing" parent="BossRoom/Desk" unique_id=94392524 instance=ExtResource("22_l7dob")]
 transform = Transform3D(-0.051763795, 0.19318518, -8.444393e-09, 0, -8.742278e-09, -0.2, -0.19318518, -0.051763795, 2.2626667e-09, 1.654, 1.01, 0.412)
 script = ExtResource("23_ml8gv")

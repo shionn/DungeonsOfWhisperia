@@ -1,15 +1,16 @@
 class_name QuestObjectif
 extends GameBase
 
-@export var hidden: bool = false
+@export var secondary: bool = false
+#@export var hidden: bool = false
 
 func is_done() -> bool :
 	return quest_book.is_done(_quest(), self)
 
 func done() -> void : 
-	if not quest_book.is_done(_quest(), self) :
+	if _quest().is_started() and not quest_book.is_done(_quest(), self) :
 		quest_book.done(_quest(), self)
-		if hidden : 
+		if secondary : 
 			gui.consoleLog("Objectif secondaire accompli : %s."%self.name)
 		else :
 			gui.consoleLog("Objectif accompli : %s."%self.name)

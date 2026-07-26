@@ -48,6 +48,7 @@
 [ext_resource type="PackedScene" uid="uid://dtbeiqnbxjtah" path="res://Assets/Dungeons/Bottle/bottle_C_brown.gltf" id="16_x11bk"]
 [ext_resource type="PackedScene" uid="uid://inewpyqb2si0" path="res://Assets/Scenes/StairsWallLeft.tscn" id="17_2aq5y"]
 [ext_resource type="PackedScene" uid="uid://dwp1aw2ohbybl" path="res://Assets/Dungeons/Bottle/bottle_C_green.gltf" id="17_jf8wf"]
+[ext_resource type="AudioStream" uid="uid://d3sex1te7mnxm" path="res://Audio/80-CC0-RPG-SFX/book_02.ogg" id="17_t7ldk"]
 [ext_resource type="PackedScene" uid="uid://gv22cmuit7gu" path="res://Assets/Dungeons/Banner/banner_blue.gltf" id="18_e7c1w"]
 [ext_resource type="PackedScene" uid="uid://btt55eik1mr7w" path="res://Assets/Dungeons/Crate/crate_large_decorated.gltf" id="18_qyrih"]
 [ext_resource type="PackedScene" uid="uid://diu8tw2qy424f" path="res://Assets/Dungeons/Floor/Small/floor_wood_small.gltf" id="19_kcjse"]
@@ -662,6 +663,10 @@ transform = Transform3D(0.49999988, -0.49999988, -0.70710665, 0.70710665, 0.7071
 [node name="CollisionShape3D" type="CollisionShape3D" parent="PanneauDAffichage/Area3D" unique_id=2106621469]
 transform = Transform3D(0.99999976, 0, 0, 0, 0.99999976, 1.3962165e-12, 0, -1.3962165e-12, 0.99999976, 0.049999952, 0.10000014, -3.5762787e-07)
 shape = SubResource("BoxShape3D_brlmy")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="PanneauDAffichage" unique_id=1485865860]
+stream = ExtResource("17_t7ldk")
+bus = &"Effet"
 
 [node name="RDC" type="Node3D" parent="." unique_id=1604559993]
 

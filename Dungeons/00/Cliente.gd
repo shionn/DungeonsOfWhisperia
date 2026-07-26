@@ -28,4 +28,4 @@ func _on_drink_timer_timeout() -> void:
 
 func _on_alliance_next_activate() -> void:
 	bag.unloot(Items.ItemName.Alliance)
-	tags.add(Tags.AUBERGE_ALLIANCE_RETURNED)
+	quest_book.auberge_03_randre_alliance.done()

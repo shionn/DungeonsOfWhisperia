@@ -6,6 +6,8 @@ func _ready() -> void:
 		$"BossRoom/Skeleton Golem".loot_obj = Items.ItemName.SkullHead_Dungeon2
 	if quest_book.dungeon_02_preuve_valthorion.is_done() :
 		$BossRoom/Desk/ValthorionRing.queue_free()
+	if quest_book.dungeon_02_trouver_alliance.is_done() :
+		$RitualRoom/Ranger.queue_free()
 	
 	bag.item_loot.connect(_on_item_loot)
 

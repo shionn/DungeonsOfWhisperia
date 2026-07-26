@@ -12,6 +12,8 @@ const _movement_speed: float = 4.0
 const _max_range: float = 20
 const _atk_range: float = 2
 
+signal lvl_up()
+
 var _state : State = State.MOVE
 var _attacked_monster : Monster
 var _current_spell : Spell
@@ -21,10 +23,11 @@ var pv = 1
 var xp = 0 :
 	set(value) :
 		xp = value
-		# 500/1500/3000/5000/7500
-		if xp > lvl * (lvl+1) * 250 :
+		# 100/300/600/1000/1500/2100
+		if xp > lvl * (lvl+1) * 25 :
 			lvl = lvl + 1
 			gui.consoleLog("Vous passer lvl %d"%lvl)
+			lvl_up.emit()
 
 func _ready() -> void:
 	_animation.animation_finished.connect(_on_animation_finished)

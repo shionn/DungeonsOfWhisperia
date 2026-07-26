@@ -8,3 +8,4 @@ class_name GameBase3D
 @onready var tags := $/root/World/Player/Tags as Tags
 
 const LOOT_RANGE: float = 3
+const GAME_VERSION: float = 0.2
