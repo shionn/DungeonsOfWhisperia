@@ -254,6 +254,9 @@ size = Vector3(0.22893676, 0.55, 0.4)
 [sub_resource type="BoxShape3D" id="BoxShape3D_pjp3u"]
 size = Vector3(0.22893676, 0.55, 0.37980956)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_y8qse"]
+size = Vector3(0.90000004, 0.7, 0.3)
+
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_b02ke"]
 height = 0.2
 radius = 0.35
@@ -1434,6 +1437,19 @@ transform = Transform3D(0.7660446, 0, -0.6427877, 0, 1, 0, 0.6427877, 0, 0.76604
 
 [node name="spellbook_open2" parent="BossRoom/Desk" unique_id=1529236413 instance=ExtResource("21_m2ftf")]
 transform = Transform3D(1, 0, -4.3711392e-08, 4.371139e-08, 1.9106855e-15, 0.99999994, 0, -1, 0, -0.071, 1.05, 0.212)
+
+[node name="description" type="Node" parent="BossRoom/Desk/spellbook_open2" unique_id=338539827]
+script = ExtResource("13_iikjq")
+text = "[i]Écho des Profondeurs Oubliées[/i]
+Ce livre aussi semble inachevé. Mais il semblerait que son auteur travail toujours dessus.
+C'est le chapitre deux."
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Area3D" type="Area3D" parent="BossRoom/Desk/spellbook_open2" unique_id=1167792568]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BossRoom/Desk/spellbook_open2/Area3D" unique_id=1738950900]
+transform = Transform3D(0.9999999, 0, 4.2632564e-14, 0, 0.9999999, 0, -1.3393731e-12, 6.6968653e-13, 0.9999775, 0, 0, 0)
+shape = SubResource("BoxShape3D_y8qse")
 
 [node name="ValthorionRing" parent="BossRoom/Desk" unique_id=94392524 instance=ExtResource("22_l7dob")]
 transform = Transform3D(-0.051763795, 0.19318518, -8.444393e-09, 0, -8.742278e-09, -0.2, -0.19318518, -0.051763795, 2.2626667e-09, 1.654, 1.01, 0.412)

@@ -320,8 +320,13 @@ offset_left = -128.5
 offset_right = 128.5
 offset_bottom = 34.0
 grow_horizontal = 2
-theme_override_font_sizes/font_size = 24
-text = "Dungeon of Whisperia"
+theme_override_colors/font_color = Color(0.7490196, 0.56078434, 0.3647059, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/shadow_outline_size = 6
+theme_override_font_sizes/font_size = 42
+text = "Écho des Profondeurs Oubliées"
 horizontal_alignment = 1
 
 [node name="PlayerChoose" type="Label" parent="GameStartGui/Control" unique_id=913242858]

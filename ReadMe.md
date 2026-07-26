@@ -12,12 +12,10 @@
   - ombre ssao ?
 - ajouter des options d'input
   - sensibilité souris
-- gameover
-  - Ajouter un bouton pour retourner à l'auberge à la derniere sauvegarde
 - combat
   - Ajouter un systeme d'aggro
 - barre de state : lvl pas explicie, ni l'xp, et depalcer le FPS
-- renommé le jeu ? Tales of Dungeon. Adventures from the Lost Dungeon.
+- renommé le jeu ? Tales of Dungeon. Adventures from the Lost Dungeon. Écho des Profondeurs Oubliées.
   - Dans les boss room 
 - finir les arme (critique)
 

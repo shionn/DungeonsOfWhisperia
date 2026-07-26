@@ -720,8 +720,8 @@ shape = SubResource("BoxShape3D_2pi1h")
 
 [node name="description" type="Node" parent="BossRoom/Desk/bar_straight_A2/spellbook_open2" unique_id=774727900]
 script = ExtResource("7_v4w5c")
-text = "[i]Les Donjons de Whisperia[/i]
-Ce livre aussi semble inachevé."
+text = "[i]Écho des Profondeurs Oubliées[/i]
+Ce livre aussi semble inachevé. Mais il semblerait que son auteur travail toujours dessus."
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="BossRoom/Desk/bar_straight_A2/spellbook_open2" unique_id=1666991161]
