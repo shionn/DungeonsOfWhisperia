@@ -17,6 +17,7 @@ enum State { IDLE, CHASE, ATTACK, ATTACKING, HIT, DEATH, PATROL, NAVIGATE }
 @export var loot_gold: int = 0
 @export_category("patrol")
 @export var patrol_path : Array[Vector3] = []
+@export var walk_speed : float = 1.5
 
 signal dead()
 
@@ -113,8 +114,9 @@ func _move_to_navigation() -> void :
 	if next_path_position != global_position :
 		self.look_at(next_path_position,Vector3.UP,true)
 	self.rotation.x = 0
-	self.velocity = global_position.direction_to(next_path_position) * _movement_speed
-	if state == State.PATROL or state == State.NAVIGATE : velocity = velocity /4
+	self.velocity = global_position.direction_to(next_path_position)
+	if state == State.PATROL or state == State.NAVIGATE : velocity = velocity * walk_speed 
+	else : velocity = velocity * _movement_speed
 	start_animation("Walking_A")
 
 func _update_navigation() -> bool :

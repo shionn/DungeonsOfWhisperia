@@ -996,6 +996,7 @@ state = 7
 transform = Transform3D(-0.42261827, 0, -0.90630776, 0, 1, 0, 0.90630776, 0, -0.42261827, 5.5000076, 0, 2.7000008)
 state = 7
 lvl = 1
+loot_obj = 0
 loot_gold = 4
 
 [node name="Wall_Doorway" parent="BossRoom" unique_id=812446971 instance=ExtResource("1_o78hi")]
@@ -1436,7 +1437,8 @@ transform = Transform3D(-0.7071068, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, -0.707
 transform = Transform3D(0.7660446, 0, -0.6427877, 0, 1, 0, 0.6427877, 0, 0.7660446, -1.2021561, 1.08, 0.070999146)
 
 [node name="spellbook_open2" parent="BossRoom/Desk" unique_id=1529236413 instance=ExtResource("21_m2ftf")]
-transform = Transform3D(1, 0, -4.3711392e-08, 4.371139e-08, 1.9106855e-15, 0.99999994, 0, -1, 0, -0.071, 1.05, 0.212)
+transform = Transform3D(1, -8.351872e-23, -3.650719e-30, 0, -4.371139e-08, 1, -8.351872e-23, -1, -4.371139e-08, -0.071, 1.05, 0.212)
+script = ExtResource("23_ml8gv")
 
 [node name="description" type="Node" parent="BossRoom/Desk/spellbook_open2" unique_id=338539827]
 script = ExtResource("13_iikjq")
@@ -1448,7 +1450,7 @@ metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 [node name="Area3D" type="Area3D" parent="BossRoom/Desk/spellbook_open2" unique_id=1167792568]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="BossRoom/Desk/spellbook_open2/Area3D" unique_id=1738950900]
-transform = Transform3D(0.9999999, 0, 4.2632564e-14, 0, 0.9999999, 0, -1.3393731e-12, 6.6968653e-13, 0.9999775, 0, 0, 0)
+transform = Transform3D(1, 8.969602e-25, 1.3393732e-12, 0, 1, -6.696866e-13, -1.3393732e-12, 6.696866e-13, 1, 0, 0, 0)
 shape = SubResource("BoxShape3D_y8qse")
 
 [node name="ValthorionRing" parent="BossRoom/Desk" unique_id=94392524 instance=ExtResource("22_l7dob")]

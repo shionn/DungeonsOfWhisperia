@@ -700,6 +700,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, 4)
 [node name="Skeleton Golem" parent="BossRoom" unique_id=527358216 instance=ExtResource("31_u21oi")]
 transform = Transform3D(0.49999997, 0, 0.8660253, 0, 1, 0, -0.8660253, 0, 0.49999997, -2.2000008, 0, -3.9)
 lvl = 1
+loot_obj = 0
 loot_gold = 4
 
 [node name="Desk" type="Node3D" parent="BossRoom" unique_id=1645702767]
@@ -1192,7 +1193,9 @@ loot_gold = 1
 
 [node name="Skeleton Minion 2" parent="Entrance" unique_id=160983968 instance=ExtResource("63_u21oi")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 20, 0, 13)
+state = 6
 loot_gold = 2
+patrol_path = Array[Vector3]([Vector3(0, 0, 12), Vector3(16, 0, 12)])
 
 [node name="torch_mounted" parent="Entrance" unique_id=342053045 instance=ExtResource("3_yra1b")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 18, 0, 6)
