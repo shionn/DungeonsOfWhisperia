@@ -26,6 +26,8 @@ extends GameBase
 var _quests : Dictionary = {}
 var current : Quest
 
+signal quest_done(quest:Quest)
+
 func start(quest:Quest) -> bool :
 	current = quest
 	if not _quests.has(quest.name) :
@@ -48,5 +50,6 @@ func done(quest:Quest, objectif: QuestObjectif = null) -> void :
 	if objectif :
 		_q.get(objectif.name).set("done", true)
 	else : 
+		quest_done.emit(quest)
 		_q.set("done", true)
 	

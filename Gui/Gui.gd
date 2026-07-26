@@ -54,11 +54,6 @@ func _hide_mouse() -> void :
 	if Input.mouse_mode == Input.MOUSE_MODE_VISIBLE :
 		_previous_mouse_pos = get_viewport().get_mouse_position()
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-	
-
-func openHelp(description: Dialog)  -> void :
-	$Introduction.open(description)
-	_show_mouse()
 
 func openQuest()  -> void :
 	$Introduction.openQuest()

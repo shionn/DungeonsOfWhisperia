@@ -37,6 +37,8 @@
 [ext_resource type="Script" uid="uid://c47eb21su127s" path="res://Gui/DungeonExit.gd" id="34_f4re5"]
 [ext_resource type="Texture2D" uid="uid://ctgwsk6s31p4p" path="res://Gui/Assets/kenney/cursor-pack/door_enter.png" id="34_w65rx"]
 [ext_resource type="Script" uid="uid://cbpdlo58gok7v" path="res://Gui/SpellButton.gd" id="37_f4re5"]
+[ext_resource type="Script" uid="uid://delfuyty1a63m" path="res://Gui/quest_done.gd" id="38_5npq8"]
+[ext_resource type="AudioStream" uid="uid://ddoswq0aa6a1s" path="res://Audio/NewThingGet/newthingget.ogg" id="38_86xcp"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8rxp0"]
 bg_color = Color(1, 0.94509804, 0.8235294, 1)
@@ -184,6 +186,67 @@ unicode = 39
 
 [sub_resource type="Shortcut" id="Shortcut_6qw7v"]
 events = [SubResource("InputEventKey_5npq8")]
+
+[sub_resource type="Animation" id="Animation_f4re5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_86xcp"]
+resource_name = "quest_done"
+length = 3.0000000000000004
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5npq8"]
+_data = {
+&"RESET": SubResource("Animation_f4re5"),
+&"quest_done": SubResource("Animation_86xcp")
+}
 
 [node name="Gui" type="Control" unique_id=679884730]
 layout_mode = 3
@@ -345,6 +408,11 @@ offset_right = 174.0
 offset_bottom = 44.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_color = Color(0.7490196, 0.56078434, 0.3647059, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/shadow_outline_size = 6
 theme_override_font_sizes/font_size = 64
 text = "Game Over"
 script = ExtResource("9_3yfkq")
@@ -543,7 +611,7 @@ item_count = 5
 popup/item_0/text = "Sauvegarder"
 popup/item_0/icon = ExtResource("21_c4ovl")
 popup/item_0/id = 1
-popup/item_1/text = "Objectif"
+popup/item_1/text = "Quête"
 popup/item_1/icon = ExtResource("26_f4re5")
 popup/item_1/id = 4
 popup/item_2/text = "Aide"
@@ -1323,6 +1391,51 @@ alignment = 0
 icon_alignment = 1
 script = ExtResource("37_f4re5")
 spell_id = 3
+
+[node name="QuestDone" type="Control" parent="." unique_id=1656049383]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -124.0
+offset_right = 20.0
+offset_bottom = -84.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("38_5npq8")
+
+[node name="Label" type="Label" parent="QuestDone" unique_id=1457659360]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -277.0
+offset_top = -44.0
+offset_right = 277.0
+offset_bottom = 44.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.7490196, 0.56078434, 0.3647059, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 0
+theme_override_constants/shadow_outline_size = 6
+theme_override_font_sizes/font_size = 64
+text = "Quête accomplie !"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="QuestDone" unique_id=1889830307]
+libraries/ = SubResource("AnimationLibrary_5npq8")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="QuestDone" unique_id=2143197114]
+stream = ExtResource("38_86xcp")
+bus = &"Effet"
 
 [connection signal="visibility_changed" from="Bag" to="." method="_on_bag_visibility_changed"]
 [connection signal="visibility_changed" from="Bag" to="Bag" method="_on_visibility_changed"]

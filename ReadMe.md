@@ -42,9 +42,9 @@
 - https://opengameart.org/content/80-cc0-rpg-sfx
 - https://opengameart.org/content/rpg-sound-pack
 - https://opengameart.org/content/zombie-skeleton-monster-voice-effects
-- https://opengameart.org/content/swishes-sound-pack ?
 - https://opengameart.org/content/boom-pack-2
 - https://opengameart.org/content/teleport-spell
+- https://opengameart.org/content/new-thing-get
 
 # Music
 - https://opengameart.org/content/rpg-title-1

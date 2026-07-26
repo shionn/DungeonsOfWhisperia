@@ -4048,20 +4048,6 @@ autoplay = true
 bus = &"Background"
 parameters/looping = true
 
-[node name="Description" type="Node" parent="." unique_id=772653064]
-script = ExtResource("13_iikjq")
-text = "En arrivant pret du lac d’argent, dont les eaux scintillent comme des lames de couteau sous la lumière de la lune. Au loin, des cris étouffés résonnent, semblant provenir des profondeurs du donjon.  
-Dès que vous franchissez les portes de pierre, une magie noire vous enveloppe, suffocante et corrompue. L’air est lourd, chargé d’une odeur de pourriture et de sang séché. Des crissements et craquements résonnent autour de vous — des os qui bougent, comme si des corps enterrés se remettaient en mouvement sous vos pieds.  
- 
-[i]Objectif :[i]
-[ul]
-Trouver le passage secret.
-Vaincre le maître des lieux.
-Rapporter une preuve de votre réussite.
-Trouver un indice la personne se cachant derriere ces événements.
-[/ul]"
-metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
-
 [connection signal="close" from="EntranceSecret/Tomb/gravestone2/description" to="." method="_on_tomb_description_close"]
 [connection signal="dead" from="BossRoom/Skeleton Golem" to="." method="_on_skeleton_golem_dead"]
 [connection signal="body_entered" from="BossRoom/Area3D" to="BossRoom" method="_on_area_3d_body_entered"]

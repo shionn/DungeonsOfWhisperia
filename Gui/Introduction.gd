@@ -3,13 +3,6 @@ extends GameBaseControl
 @onready var _quest_text : RichTextLabel = $PanelContainer/MarginContainer/VBoxContainer/TabContainer/Quete
 
 
-func open(description: Dialog) -> void:
-	var context = $PanelContainer/MarginContainer/VBoxContainer/TabContainer/Context
-	context.clear()
-	context.append_text(description.text)
-	context.show()
-	show()
-
 func openHelp() -> void : 
 	$PanelContainer/MarginContainer/VBoxContainer/TabContainer/Aide.show()
 	show()
@@ -43,6 +36,6 @@ func _update_quest_text(quest : Quest = null) -> void :
 		text_objectif = text_objectif + "[/ul]"
 		_quest_text.append_text(text_objectif)
 		if text_objectif_hidden :
-			_quest_text.append_text("[i]Objectifs cachés :[/i]")
+			_quest_text.append_text("[i]Objectifs secondaires :[/i]")
 			_quest_text.append_text("[ul]%s[/ul]"%text_objectif_hidden)
 			
