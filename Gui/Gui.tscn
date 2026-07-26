@@ -394,29 +394,6 @@ theme_override_constants/margin_top = 10
 [node name="Label" type="Label" parent="Stat/MarginContainer" unique_id=1617087483]
 layout_mode = 2
 
-[node name="GameOver" type="Label" parent="." unique_id=464855485]
-visible = false
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -174.0
-offset_top = -44.0
-offset_right = 174.0
-offset_bottom = 44.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0.7490196, 0.56078434, 0.3647059, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_offset_x = 2
-theme_override_constants/shadow_offset_y = 2
-theme_override_constants/shadow_outline_size = 6
-theme_override_font_sizes/font_size = 64
-text = "Game Over"
-script = ExtResource("9_3yfkq")
-
 [node name="Bag" type="GridContainer" parent="." unique_id=1113810662]
 visible = false
 z_index = 10
@@ -484,6 +461,7 @@ theme_override_constants/v_separation = 0
 layout_mode = 2
 size_flags_horizontal = 3
 tooltip_text = "Fermer"
+mouse_default_cursor_shape = 2
 text = "Fermer"
 
 [node name="E" type="TextureRect" parent="Bag" unique_id=94430058]
@@ -573,6 +551,7 @@ theme_override_constants/v_separation = 0
 layout_mode = 2
 size_flags_horizontal = 3
 tooltip_text = "Fermer"
+mouse_default_cursor_shape = 2
 text = "Fermer"
 
 [node name="E" type="TextureRect" parent="Loot" unique_id=1356311920]
@@ -606,6 +585,7 @@ offset_left = 10.0
 offset_top = 10.0
 offset_right = 63.0
 offset_bottom = 41.0
+mouse_default_cursor_shape = 2
 text = "Menu"
 item_count = 5
 popup/item_0/text = "Sauvegarder"
@@ -743,6 +723,7 @@ metadata/_tab_index = 1
 layout_mode = 2
 size_flags_horizontal = 3
 tooltip_text = "Fermer"
+mouse_default_cursor_shape = 2
 text = "Fermer"
 
 [node name="E" type="TextureRect" parent="Introduction" unique_id=1667435885]
@@ -850,6 +831,7 @@ text = "Plein écran"
 [node name="FullScreenButton" type="CheckButton" parent="Options/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer" unique_id=1319475036]
 layout_mode = 2
 size_flags_horizontal = 0
+mouse_default_cursor_shape = 2
 
 [node name="Scale" type="Label" parent="Options/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer" unique_id=391669916]
 layout_mode = 2
@@ -860,6 +842,7 @@ text = "Mise à l'échelle (1.00)"
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
+mouse_default_cursor_shape = 2
 min_value = 0.2
 max_value = 1.0
 step = 0.05
@@ -873,6 +856,7 @@ text = "Méthode d'échelle"
 
 [node name="ScaleModeButton" type="MenuButton" parent="Options/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer" unique_id=1089765666]
 layout_mode = 2
+mouse_default_cursor_shape = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
@@ -903,6 +887,7 @@ text = "Volume Musique"
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
+mouse_default_cursor_shape = 2
 min_value = -72.0
 max_value = 0.0
 value = -24.0
@@ -917,6 +902,7 @@ text = "Volume Son"
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
+mouse_default_cursor_shape = 2
 min_value = -72.0
 max_value = 0.0
 scrollable = false
@@ -925,6 +911,7 @@ scrollable = false
 layout_mode = 2
 size_flags_horizontal = 3
 tooltip_text = "Fermer"
+mouse_default_cursor_shape = 2
 text = "Fermer"
 
 [node name="E" type="TextureRect" parent="Options" unique_id=1691465736]
@@ -1044,6 +1031,7 @@ visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 tooltip_text = "Option"
+mouse_default_cursor_shape = 2
 text = "Option"
 
 [node name="OptionButton2" type="Button" parent="DialogGui/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer" unique_id=1857374092]
@@ -1051,6 +1039,7 @@ visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 tooltip_text = "Option"
+mouse_default_cursor_shape = 2
 text = "Option"
 
 [node name="OptionButton3" type="Button" parent="DialogGui/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer" unique_id=1747482232]
@@ -1058,6 +1047,7 @@ visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 tooltip_text = "Option"
+mouse_default_cursor_shape = 2
 text = "Option"
 
 [node name="OptionButton4" type="Button" parent="DialogGui/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer" unique_id=1779051247]
@@ -1065,6 +1055,7 @@ visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 tooltip_text = "Option"
+mouse_default_cursor_shape = 2
 text = "Option"
 
 [node name="OptionButton5" type="Button" parent="DialogGui/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer" unique_id=748938204]
@@ -1072,6 +1063,7 @@ visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 tooltip_text = "Option"
+mouse_default_cursor_shape = 2
 text = "Option"
 
 [node name="NextButton" type="Button" parent="DialogGui/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer" unique_id=1128545319]
@@ -1080,12 +1072,14 @@ z_index = 10
 layout_mode = 2
 size_flags_horizontal = 3
 tooltip_text = "Option"
+mouse_default_cursor_shape = 2
 text = "Suite"
 
 [node name="CloseButton" type="Button" parent="DialogGui/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer" unique_id=699872883]
 layout_mode = 2
 size_flags_horizontal = 3
 tooltip_text = "Fermer"
+mouse_default_cursor_shape = 2
 text = "Fermer"
 
 [node name="E" type="TextureRect" parent="DialogGui" unique_id=1546131923]
@@ -1119,6 +1113,11 @@ offset_right = 510.0
 offset_bottom = -10.0
 grow_vertical = 0
 mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 14
+theme_override_font_sizes/bold_font_size = 14
+theme_override_font_sizes/bold_italics_font_size = 14
+theme_override_font_sizes/italics_font_size = 14
+theme_override_font_sizes/mono_font_size = 14
 scroll_active = false
 scroll_following = true
 scroll_following_visible_characters = true
@@ -1192,12 +1191,14 @@ horizontal_alignment = 1
 [node name="Dungeon01" type="Button" parent="ExitAuberge/PanelContainer/MarginContainer/VBoxContainer" unique_id=932495963]
 custom_minimum_size = Vector2(250, 0)
 layout_mode = 2
+mouse_default_cursor_shape = 2
 text = "Mausolet"
 icon = ExtResource("34_w65rx")
 
 [node name="Dungeon02" type="Button" parent="ExitAuberge/PanelContainer/MarginContainer/VBoxContainer" unique_id=1618128841]
 custom_minimum_size = Vector2(250, 0)
 layout_mode = 2
+mouse_default_cursor_shape = 2
 text = "Gouffre des Ombres"
 icon = ExtResource("34_w65rx")
 
@@ -1205,6 +1206,7 @@ icon = ExtResource("34_w65rx")
 layout_mode = 2
 size_flags_horizontal = 3
 tooltip_text = "Fermer"
+mouse_default_cursor_shape = 2
 text = "Rester"
 icon = ExtResource("22_3yfkq")
 
@@ -1299,12 +1301,14 @@ theme_override_constants/separation = 20
 
 [node name="Auberge" type="Button" parent="ExitDungeon/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=348653783]
 layout_mode = 2
+mouse_default_cursor_shape = 2
 text = "Partir"
 icon = ExtResource("34_w65rx")
 
 [node name="CloseButton" type="Button" parent="ExitDungeon/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1343102454]
 layout_mode = 2
 tooltip_text = "Fermer"
+mouse_default_cursor_shape = 2
 text = "Rester"
 icon = ExtResource("22_3yfkq")
 
@@ -1359,6 +1363,7 @@ grow_vertical = 0
 
 [node name="Button1" type="Button" parent="Spells" unique_id=2092480838]
 layout_mode = 2
+mouse_default_cursor_shape = 2
 shortcut = SubResource("Shortcut_w65rx")
 text = "1"
 alignment = 0
@@ -1367,6 +1372,7 @@ script = ExtResource("37_f4re5")
 
 [node name="Button2" type="Button" parent="Spells" unique_id=152583694]
 layout_mode = 2
+mouse_default_cursor_shape = 2
 shortcut = SubResource("Shortcut_86xcp")
 text = "2"
 alignment = 0
@@ -1376,6 +1382,7 @@ spell_id = 1
 
 [node name="Button3" type="Button" parent="Spells" unique_id=23533590]
 layout_mode = 2
+mouse_default_cursor_shape = 2
 shortcut = SubResource("Shortcut_5npq8")
 text = "3"
 alignment = 0
@@ -1385,6 +1392,7 @@ spell_id = 2
 
 [node name="Button4" type="Button" parent="Spells" unique_id=899232034]
 layout_mode = 2
+mouse_default_cursor_shape = 2
 shortcut = SubResource("Shortcut_6qw7v")
 text = "4"
 alignment = 0
@@ -1437,6 +1445,65 @@ libraries/ = SubResource("AnimationLibrary_5npq8")
 stream = ExtResource("38_86xcp")
 bus = &"Effet"
 
+[node name="GameOver" type="Control" parent="." unique_id=741767315]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -124.0
+offset_right = 20.0
+offset_bottom = -84.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("9_3yfkq")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GameOver" unique_id=1062317570]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -174.0
+offset_top = -44.0
+offset_right = 174.0
+offset_bottom = 44.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GameOver" type="Label" parent="GameOver/VBoxContainer" unique_id=464855485]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.7490196, 0.56078434, 0.3647059, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/shadow_outline_size = 6
+theme_override_font_sizes/font_size = 64
+text = "Game Over"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GameOver/VBoxContainer" unique_id=856915663]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Title" type="Button" parent="GameOver/VBoxContainer/HBoxContainer" unique_id=1104466801]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "Écran titre"
+icon = ExtResource("34_w65rx")
+flat = true
+
+[node name="Exit" type="Button" parent="GameOver/VBoxContainer/HBoxContainer" unique_id=278992079]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "Quitter"
+icon = ExtResource("21_f4re5")
+flat = true
+
 [connection signal="visibility_changed" from="Bag" to="." method="_on_bag_visibility_changed"]
 [connection signal="visibility_changed" from="Bag" to="Bag" method="_on_visibility_changed"]
 [connection signal="pressed" from="Bag/PanelContainer/MarginContainer/VBoxContainer/CloseButton" to="Bag" method="hide"]
@@ -1470,3 +1537,6 @@ bus = &"Effet"
 [connection signal="pressed" from="Spells/Button2" to="Spells/Button2" method="_on_pressed"]
 [connection signal="pressed" from="Spells/Button3" to="Spells/Button3" method="_on_pressed"]
 [connection signal="pressed" from="Spells/Button4" to="Spells/Button4" method="_on_pressed"]
+[connection signal="visibility_changed" from="GameOver" to="." method="_on_game_over_visibility_changed"]
+[connection signal="pressed" from="GameOver/VBoxContainer/HBoxContainer/Title" to="GameOver" method="_on_title_pressed"]
+[connection signal="pressed" from="GameOver/VBoxContainer/HBoxContainer/Exit" to="GameOver" method="_on_exit_pressed"]

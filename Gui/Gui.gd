@@ -16,6 +16,7 @@ func _ready() -> void:
 	Input.set_custom_mouse_cursor(point_hand, Input.CURSOR_POINTING_HAND)
 	Input.set_custom_mouse_cursor(drag,       Input.CURSOR_DRAG)
 	Input.set_custom_mouse_cursor(can_drop,   Input.CURSOR_CAN_DROP)
+	Input.set_default_cursor_shape(Input.CURSOR_ARROW)
 
 func _physics_process(_delta: float) -> void:
 	if Input.is_action_just_pressed("menu") :
@@ -27,6 +28,8 @@ func _physics_process(_delta: float) -> void:
 			$DialogGui.hide()
 		elif $Bag.visible or $DialogGui.visible or $ExitAuberge.visible : 
 			_close()
+		elif $GameOver.visible :
+			pass
 		else :
 			$Bag.show()
 			$Menu.show()
@@ -39,7 +42,8 @@ func update_mouse_mode() -> void:
 	if ($Options.visible or $Bag.visible 
 			or $Loot.visible or $Introduction.visible 
 			or $Options.visible or $DialogGui.visible
-			or $ExitAuberge.visible or $ExitDungeon.visible) :
+			or $ExitAuberge.visible or $ExitDungeon.visible
+			or $GameOver.visible) :
 		_show_mouse()
 		$Spells.hide()
 	else :
@@ -101,10 +105,15 @@ func _close() -> void :
 func _on_bag_visibility_changed() -> void:
 	if not $Bag.visible : 
 		$Loot.hide()
+		$Menu.hide()
 		update_mouse_mode()
-
 
 func _on_loot_visibility_changed() -> void:
 	if not $Loot.visible : 
 		$Bag.hide()
+		update_mouse_mode()
+
+
+func _on_game_over_visibility_changed() -> void:
+	if $GameOver.visible :
 		update_mouse_mode()

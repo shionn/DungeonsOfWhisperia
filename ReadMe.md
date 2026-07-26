@@ -8,7 +8,6 @@
 - ajouter une fenetre de statistique. 
 - ajouter des option graphique
   - definition ?
-  - fullscreen ?
   - effet de flamme ?
   - ombre ssao ?
 - ajouter des options d'input
@@ -20,6 +19,7 @@
 - barre de state : lvl pas explicie, ni l'xp, et depalcer le FPS
 - renommé le jeu ? Tales of Dungeon. Adventures from the Lost Dungeon.
   - Dans les boss room 
+- finir les arme (critique)
 
 # histoire
 - culte du necromancien ? 
