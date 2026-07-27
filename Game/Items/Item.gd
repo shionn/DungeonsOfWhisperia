@@ -3,7 +3,10 @@ extends GameBase
 
 @export var item_name : Items.ItemName = Items.ItemName.None
 @export var icon : Resource
-@export var tooltip : String
+@export var tooltip : String :
+	get() : return display_name if tooltip.is_empty() else tooltip
+@export var display_name : String : 
+	get() : return name as String if display_name.is_empty() else display_name
 @export_multiline() var description : String
 @export_category("Utilisation")
 @export var conssommable : bool = false

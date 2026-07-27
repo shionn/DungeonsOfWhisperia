@@ -64,7 +64,7 @@ metadata/_custom_type_script = "uid://bjbab3ep2gfn2"
 script = ExtResource("5_p1v5b")
 item_name = 2
 icon = ExtResource("7_kva58")
-tooltip = "Clef"
+tooltip = "Clef Bouclier-Épée"
 description = "Cette clef semble spéciale, elle a un bouclier et une épée gravée sur sa base."
 global = false
 metadata/_custom_type_script = "uid://bjbab3ep2gfn2"
@@ -73,7 +73,6 @@ metadata/_custom_type_script = "uid://bjbab3ep2gfn2"
 script = ExtResource("5_p1v5b")
 item_name = 3
 icon = ExtResource("8_kva58")
-tooltip = "Boisson Rafinée"
 description = "Un des meilleurs crus de la region à boire avec modération.
 [i]Rend 2 pv[/i]"
 conssommable = true
@@ -93,7 +92,7 @@ metadata/_custom_type_script = "uid://bjbab3ep2gfn2"
 script = ExtResource("5_p1v5b")
 item_name = 5
 icon = ExtResource("9_fvag4")
-tooltip = "Crâne"
+display_name = "Crâne"
 description = "Ceci est la preuve que j'ai accompli ma mission.
  
  [i]Félicitations ! Vous avez accompli votre première quête, donnez le mot de passe [b]Crâne de golem[/b] et le montant d'or possédé à Shionn (Rurick) dans un message privé sur Discord.
@@ -107,11 +106,10 @@ metadata/_custom_type_script = "uid://bjbab3ep2gfn2"
 script = ExtResource("5_p1v5b")
 item_name = 15
 icon = ExtResource("9_fvag4")
-tooltip = "Crâne"
+display_name = "Crâne"
 description = "Ceci est la preuve que j'ai accompli ma mission.
 
-[i]Félicitations ! Vous avez accompli votre première quête, donnez le mot de passe [b]Crâne de golem[/b] à Shionn (Rurick) dans un message privé sur Discord.
-Mais avez-vous tous fouillé ? Avez-vous trouvé toute la quantité d'or possible également ?
+[i]Félicitations ! Vous avez accompli votre seconde quête, donnez le mot de passe [b]Crâne des ombres[/b] à Shionn (Rurick) dans un message privé sur Discord.
 
 Merci sincèrement d’avoir participé à cette alpha. Shionn[/i]"
 unique = true
@@ -121,7 +119,6 @@ metadata/_custom_type_script = "uid://bjbab3ep2gfn2"
 script = ExtResource("5_p1v5b")
 item_name = 6
 icon = ExtResource("11_kva58")
-tooltip = "Necrolis Attivae"
 description = "Sur l'étiquette il est écris [i]Necrolis Attivae[/i]. 
 
 Je n'ai jamais vu ni jamais entendu parler d'une telle potion. Elle est forcément importante."
@@ -164,7 +161,7 @@ global = false
 gemme = true
 metadata/_custom_type_script = "uid://bjbab3ep2gfn2"
 
-[node name="Anneau Valthorion" type="Node" parent="Items" unique_id=1911520983]
+[node name="Anneau de Valthorion" type="Node" parent="Items" unique_id=1911520983]
 script = ExtResource("5_p1v5b")
 item_name = 13
 icon = ExtResource("20_6tx0c")

@@ -18,13 +18,13 @@ signal item_drop(item : Item)
 func loot(item : Items.ItemName) -> void : 
 	_items.append(item)
 	var _i =  _all_items.from(item)
-	gui.consoleLog("Vous obtenez %s." % _i.name)
+	gui.consoleLog("Vous obtenez %s." % _i.display_name)
 	item_loot.emit(_i)
 
 func unloot(item : Items.ItemName) -> void : 
 	var index = _items.find(item)
 	if index >=0 :
-		gui.consoleLog("Vous utilisez %s." % _all_items.from(item).name)
+		gui.consoleLog("Vous utilisez %s." % _all_items.from(item).display_name)
 		_items.remove_at(index)
 	var _i =  _all_items.from(item)
 	item_drop.emit(_i)

@@ -59,7 +59,10 @@ func _start_drag(button : TextureButton, _item : Item) -> void :
 func _end_drag(_button : TextureButton, item : Item) -> void :
 	if Input.is_action_just_released("interact") and _dragButton:
 		if _interactable :
-			_interactable.on_item_drop(item)
+			if _interactable.is_in_range() :
+				_interactable.on_item_drop(item)
+			else :
+				gui.consoleLog("Trop loin")
 		_dragButton.set_default_cursor_shape(Control.CURSOR_ARROW)
 		_dragButton = null
 		_refresh()

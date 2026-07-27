@@ -982,9 +982,9 @@ state = 7
 [node name="Skeleton Golem" parent="BossRoom" unique_id=1583216697 instance=ExtResource("21_bkx1f")]
 transform = Transform3D(-0.42261827, 0, -0.90630776, 0, 1, 0, 0.90630776, 0, -0.42261827, 5.5000076, 0, 2.7000008)
 state = 5
-lvl = 1
+lvl = 2
 loot_obj = 0
-loot_gold = 4
+loot_gold = 7
 
 [node name="Wall_Doorway" parent="BossRoom" unique_id=812446971 instance=ExtResource("1_o78hi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8)
@@ -2615,6 +2615,7 @@ transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -6, 
 transform = Transform3D(-0.39847788, 0, -0.034862272, 0, 0.39999998, 0, 0.034862272, 0, -0.39847788, -0.10000038, 0.82, 0)
 script = ExtResource("23_ml8gv")
 loot_gold = 5
+hide_on_loot = true
 
 [node name="Area3D" type="Area3D" parent="BlueRoom/wall_inset_shelves_broken4/coin_stack_small2" unique_id=1519456601]
 
