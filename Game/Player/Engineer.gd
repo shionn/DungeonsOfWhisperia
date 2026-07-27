@@ -10,6 +10,7 @@ var _turret : Node3D
 func _ready() -> void:
 	$Character/Rig_Medium/Skeleton3D/Engineer_Head.hide()
 	$Character/Rig_Medium/Skeleton3D/Engineer_Goggles.hide()
+	$Character/Rig_Medium/Skeleton3D/RightHand/paladin_hammer2.queue_free()
 	super._ready()
 
 func get_def() -> int: 		return 1+lvl

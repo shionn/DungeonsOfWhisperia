@@ -3,10 +3,11 @@
 [ext_resource type="PackedScene" uid="uid://cra12rboysbac" path="res://Assets/Characters/Adventurers/Engineer.glb" id="1_n1ew3"]
 [ext_resource type="PackedScene" uid="uid://pa16u3bxw2jq" path="res://Assets/Animations/RigMedium.tscn" id="2_80q34"]
 [ext_resource type="PackedScene" uid="uid://bkrr6i8gahxeq" path="res://Assets/Characters/AdventurersAccessoires/engineer_Wrench.gltf" id="2_387ra"]
+[ext_resource type="PackedScene" uid="uid://cqoxib5yoyano" path="res://Assets/Characters/MonthlySeries4/Accessoires/paladin_hammer.gltf" id="3_4eofh"]
 
 [node name="Engineer" unique_id=1703605445 instance=ExtResource("1_n1ew3")]
 
-[node name="Skeleton3D" parent="Rig_Medium" parent_id_path=PackedInt32Array(2018661913) index="0" unique_id=1646387656]
+[node name="Skeleton3D" parent="Rig_Medium" parent_id_path=PackedInt32Array(294862414) index="0" unique_id=611641734]
 bones/1/position = Vector3(0, 0.39206383, 0)
 bones/1/rotation = Quaternion(-1.11122625e-10, 0.043157753, 2.5724098e-09, 0.9990683)
 bones/1/scale = Vector3(0.99999994, 1, 0.99999994)
@@ -70,5 +71,8 @@ bone_name = "handslot.r"
 bone_idx = 22
 
 [node name="engineer_Wrench2" parent="Rig_Medium/Skeleton3D/RightHand" index="0" unique_id=392190012 instance=ExtResource("2_387ra")]
+
+[node name="paladin_hammer2" parent="Rig_Medium/Skeleton3D/RightHand" index="1" unique_id=697886491 instance=ExtResource("3_4eofh")]
+transform = Transform3D(-4.3711267e-08, 0.14989465, 0.9887021, -0.14989538, 0.9775316, -0.14820112, -0.98870194, -0.14820185, 0.022468472, 0, 0, 0)
 
 [node name="AnimationPlayer" parent="." index="1" unique_id=1430341502 instance=ExtResource("2_80q34")]
