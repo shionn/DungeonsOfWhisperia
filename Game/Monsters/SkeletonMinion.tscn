@@ -11,18 +11,20 @@ script = ExtResource("2_unf0s")
 [node name="Chop" type="Node" parent="." index="8" unique_id=431445880 node_paths=PackedStringArray("sound")]
 script = ExtResource("3_1qcao")
 animation = "Melee_1H_Attack_Chop"
-animation_to_hit_factor = 0.7
 cold_down = 2.0
 sound = NodePath("../Swing2")
+animation_to_hit_factor = 0.7
+atk_dice = 1
 metadata/_custom_type_script = "uid://beivecuks870r"
 
 [node name="Chop2H" type="Node" parent="." index="9" unique_id=1501550697 node_paths=PackedStringArray("sound")]
 script = ExtResource("3_1qcao")
 animation = "Melee_2H_Attack_Chop"
-animation_to_hit_factor = 0.6
 cold_down = 5.0
 atk_range = 3.0
 sound = NodePath("../Swing2")
+animation_to_hit_factor = 0.6
+atk_dice = 1
 metadata/_custom_type_script = "uid://beivecuks870r"
 
 [node name="Character" parent="." index="10" unique_id=1366271086 instance=ExtResource("4_behvp")]
