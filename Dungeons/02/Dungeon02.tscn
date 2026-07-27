@@ -4093,6 +4093,8 @@ parameters/looping = true
 [connection signal="dead" from="BossRoom/Skeleton Golem" to="." method="_on_skeleton_golem_dead"]
 [connection signal="body_entered" from="BossRoom/Area3D" to="BossRoom" method="_on_area_3d_body_entered"]
 [connection signal="close" from="BossRoom/NecromancerDialog" to="BossRoom" method="_on_necromancer_dialog_close"]
+[connection signal="activate" from="RitualRoom/Decoration/grave_A2/description" to="." method="_on_ritual_tom_description_activate"]
+[connection signal="close" from="RitualRoom/Decoration/grave_A_destroyed2/description" to="." method="_on_ritual_tom_description_activate"]
 [connection signal="state_change" from="RitualRoom/wall_inset3/Skull" to="RitualRoom" method="_on_skull_state_change"]
 [connection signal="state_change" from="RitualRoom/wall_inset4/Skull" to="RitualRoom" method="_on_skull_state_change"]
 [connection signal="state_change" from="RitualRoom/wall_inset5/Skull" to="RitualRoom" method="_on_skull_state_change"]

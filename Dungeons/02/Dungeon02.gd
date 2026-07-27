@@ -24,3 +24,6 @@ func _on_skeleton_golem_dead() -> void:
 
 func _on_tomb_description_activate() -> void:
 	quest_book.dungeon_02_identifier_valthorion.done()
+
+func _on_ritual_tom_description_activate() -> void:
+	quest_book.dungeon_02_trouver_nom_aelthara.done()

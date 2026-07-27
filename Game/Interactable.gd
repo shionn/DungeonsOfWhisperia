@@ -27,7 +27,6 @@ var _description : Dialog
 func _ready() -> void:
 	_area.connect("mouse_entered", _on_mouse_entered)
 	_area.connect("mouse_exited", _on_mouse_exited)
-	_area.connect("input_event", _on_input_event)
 	_audio = get_node_or_null("AudioStreamPlayer3D")
 	_description = get_node_or_null("description")
 	_lootable = loot_gold > 0 or loot_obj
@@ -52,11 +51,9 @@ func is_in_range() -> bool:
 	return player.distance_to(self) <= interactDistance
 
 func _on_mouse_entered() -> void:
-	#print("_on_mouse_entered")
 	_bagGui.on_enter(self)
 
 func _on_mouse_exited() -> void:
-	#print("_on_mouse_exited")
 	_bagGui.on_exit(self)
 
 func on_item_drop(_item : Item)-> void:
@@ -65,16 +62,3 @@ func on_item_drop(_item : Item)-> void:
 		gui.consoleLog("Aucun effet.")
 
 func on_loot_obj_change() -> void : pass
-
-func _on_input_event(_camera: Node, _event: InputEvent, _event_position: Vector3, _normal: Vector3, _shape_idx: int) -> void:
-	#if event is InputEventMouseButton and Input.is_action_just_pressed("interact"): 
-#		if player :
-#			if player.global_position.distance_to(self.global_position) < interactable_distance :
-#				#player.play_anim_interact()
-#				on_interact()
-#			else :
-#				player.play_anim_no()
-#				gui.append_to_console("Trop loin")
-#		else :
-	#		on_interact()
-	pass

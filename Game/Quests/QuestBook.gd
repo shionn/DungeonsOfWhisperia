@@ -21,6 +21,7 @@ extends GameBase
 @onready var dungeon_02_preuve_kill_boss : QuestObjectif = $"Dungeon02/Rapporter une preuve de votre réussite"
 @onready var dungeon_02_preuve_valthorion : QuestObjectif = $"Dungeon02/Trouver un objet identifiant le maitre des lieux"
 @onready var dungeon_02_trouver_alliance : QuestObjectif = $"Dungeon02/Trouver l'aliance"
+@onready var dungeon_02_trouver_nom_aelthara : QuestObjectif = $"Dungeon02/Trouver l'ancien nom du gouffre"
 @onready var auberge_03 : Quest = $Auberge03
 @onready var auberge_03_rapport : QuestObjectif = $"Auberge03/Faire son rapport"
 @onready var auberge_03_identify_ring : QuestObjectif = $"Auberge03/Identifier la Bague"

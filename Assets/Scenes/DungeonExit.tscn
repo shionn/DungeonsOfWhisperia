@@ -8,7 +8,7 @@ size = Vector3(3.4, 4.8, 0.7)
 
 [node name="DungeonExit" unique_id=714659814 instance=ExtResource("1_26tlt")]
 script = ExtResource("2_smpm6")
-interactDistance = 5.0
+interactDistance = 6.0
 
 [node name="Area3D" type="Area3D" parent="." index="1" unique_id=1147276301]
 

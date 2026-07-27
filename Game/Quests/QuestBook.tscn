@@ -126,3 +126,8 @@ metadata/_custom_type_script = "uid://vm6ojxtihve7"
 script = ExtResource("3_7x0jq")
 secondary = true
 metadata/_custom_type_script = "uid://vm6ojxtihve7"
+
+[node name="Trouver l\'ancien nom du gouffre" type="Node" parent="Dungeon02" unique_id=430315397]
+script = ExtResource("3_7x0jq")
+secondary = true
+metadata/_custom_type_script = "uid://vm6ojxtihve7"

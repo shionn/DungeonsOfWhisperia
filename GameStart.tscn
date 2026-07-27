@@ -8,7 +8,7 @@
 [ext_resource type="Script" uid="uid://cn1ymbl8wokfn" path="res://Game/GameStart/CharacterSelection.gd" id="3_khsc5"]
 [ext_resource type="PackedScene" uid="uid://lmccymxaj0hd" path="res://Assets/Scenes/Barbarian.tscn" id="3_mfd5o"]
 [ext_resource type="PackedScene" uid="uid://tmyp1hgkyjfh" path="res://Assets/Scenes/Engineer.tscn" id="4_dwykc"]
-[ext_resource type="PackedScene" uid="uid://l4ocv1r3b2jl" path="res://Game/Environment.tscn" id="4_mfh1e"]
+[ext_resource type="PackedScene" uid="uid://l4ocv1r3b2jl" path="res://Game/DungeonEnvironment.tscn" id="4_mfh1e"]
 [ext_resource type="PackedScene" uid="uid://b8yjt6ifs5miv" path="res://Assets/Scenes/Knight.tscn" id="4_r85o0"]
 [ext_resource type="PackedScene" uid="uid://nspubd405fcp" path="res://Assets/Scenes/Rogue.tscn" id="4_v7141"]
 [ext_resource type="PackedScene" uid="uid://belo0gsitrwsq" path="res://Assets/Scenes/Cleric.tscn" id="4_w3npw"]

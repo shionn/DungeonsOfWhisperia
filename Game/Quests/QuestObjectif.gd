@@ -2,6 +2,7 @@ class_name QuestObjectif
 extends GameBase
 
 @export var secondary: bool = false
+@export var xp: int = 5
 #@export var hidden: bool = false
 
 func is_done() -> bool :
@@ -12,6 +13,7 @@ func done() -> void :
 		quest_book.done(_quest(), self)
 		if secondary : 
 			gui.consoleLog("Objectif secondaire accompli : %s."%self.name)
+			player.xp = player.xp + xp
 		else :
 			gui.consoleLog("Objectif accompli : %s."%self.name)
 			if _quest().is_all_done() : _quest().done()

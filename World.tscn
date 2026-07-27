@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cudoi1kpvpwh0" path="res://Game/World.gd" id="1_bcbcq"]
 [ext_resource type="PackedScene" uid="uid://dpbieqlycbivt" path="res://Gui/Gui.tscn" id="2_2dftf"]
-[ext_resource type="PackedScene" uid="uid://l4ocv1r3b2jl" path="res://Game/Environment.tscn" id="5_f5c0m"]
+[ext_resource type="PackedScene" uid="uid://l4ocv1r3b2jl" path="res://Game/DungeonEnvironment.tscn" id="5_f5c0m"]
 [ext_resource type="Script" uid="uid://bjbab3ep2gfn2" path="res://Game/Items/Item.gd" id="5_p1v5b"]
 [ext_resource type="Script" uid="uid://ccps0bdr1ahel" path="res://Game/Items/Items.gd" id="5_wygdx"]
 [ext_resource type="Texture2D" uid="uid://bjvv5v58sj148" path="res://Gui/Assets/kaykit/48/Potion_Small_Red.png" id="6_fvag4"]
