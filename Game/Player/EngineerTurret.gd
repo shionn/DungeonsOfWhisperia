@@ -6,7 +6,7 @@ extends GameBase3D
 const _bullet_model = preload("res://Game/Player/EngineerTurretBullet.tscn")
 
 const _FOV = deg_to_rad(45)
-const _ROTATE_SPEED = .5
+const _ROTATE_SPEED = 1
 const _ATK_COLD_DOWN_TIME = 2
 
 var _on_atk_cold_down = false
