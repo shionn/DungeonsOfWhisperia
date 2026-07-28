@@ -347,9 +347,17 @@ Et puis, il y a Pipette la Loupe. On l’appelle ainsi à cause de ses lunettes.
 pnj = NodePath("../../..")
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
+[node name="Next" type="Node" parent="Luna Honey/Bievenue_Restored/Fréquentation/Next" unique_id=680676297 node_paths=PackedStringArray("pnj")]
+script = ExtResource("3_fq3ns")
+text = "Il y aussi Ferris Ardent, il n'a pas son pareil avec les pierres et metaux. Mais cette passion n'est rien en comparaison de celle qu'il entretient pour la bière. Il aime la solitude et reste tout le temps sur la mezzanine. Je lui fais juste signe quand il veut quelque chose.
+
+Et vous ? Êtes vous de passage ? Ou allez vous vous installer ici ? "
+pnj = NodePath("../../../..")
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
 [node name="Mission Accomplie" type="Node" parent="Luna Honey/Bievenue_Restored" unique_id=591486330]
 script = ExtResource("3_fq3ns")
-text = "J'ai terrassé tous les mort-vivants de ce mausolée !"
+text = "J'ai réussi ma mission !"
 enable = false
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
@@ -622,6 +630,18 @@ transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70
 script = ExtResource("14_psk7j")
 
 [node name="Character" parent="Ferris Ardent" unique_id=1703605445 instance=ExtResource("15_wad6c")]
+
+[node name="DialogueJoueurFatigué" type="Node" parent="Ferris Ardent" unique_id=456705125 node_paths=PackedStringArray("pnj")]
+script = ExtResource("3_fq3ns")
+text = "Bonjour aventurier, tu sembles bien fatigué. Si tu cherches un repas chaud ou des conseils, le tenancier est là pour t'aider. Il connaît le coin mieux que personne… et il a une excellente recette de soupe."
+pnj = NodePath("..")
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Dialog" type="Node" parent="Ferris Ardent" unique_id=389929622 node_paths=PackedStringArray("pnj")]
+script = ExtResource("3_fq3ns")
+text = "Bonjour. Moi, c’est Ferris Ardent. J’aime la bière, les métaux et les pierres précieuses. J’ai exploré bien des mines, mais aujourd’hui j’ai trouvé mon point de chute ici."
+pnj = NodePath("..")
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
 [node name="PanneauDAffichage" parent="." unique_id=1099766786 instance=ExtResource("11_o35sb")]
 transform = Transform3D(1.2, 0, 0, 0, -5.2453668e-08, -1.2, 0, 1.2, -5.2453668e-08, 0.4, 2, -1.6999999)
