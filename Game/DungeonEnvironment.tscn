@@ -6,5 +6,5 @@ ssao_enabled = true
 adjustment_brightness = 0.81
 adjustment_contrast = 1.025
 
-[node name="WorldEnvironment" type="WorldEnvironment" unique_id=485933020]
+[node name="DungeonEnvironment" type="WorldEnvironment" unique_id=485933020]
 environment = SubResource("Environment_js7pq")
