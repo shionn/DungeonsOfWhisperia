@@ -2,10 +2,12 @@ extends GridContainer
 
 @onready var _scale_label = $PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer/Scale
 @onready var _scale_mode_button = $PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer/ScaleModeButton
+@onready var _vsync_mode_button = $PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer/VSyncMode
 
 func _ready() -> void:
 	hide()
 	_scale_mode_button.get_popup().id_pressed.connect(_on_scale_mode_id_pressed)
+	_vsync_mode_button.get_popup().id_pressed.connect(_on_vsync_mode_id_pressed)
 
 
 func _on_music_value_changed(value: float) -> void:
@@ -46,7 +48,18 @@ func _on_scale_mode_id_pressed(id: int) -> void:
 			get_viewport().scaling_3d_mode = Viewport.SCALING_3D_MODE_NEAREST
 			_scale_mode_button.text = "Entière (Nearest)"
 
-
 func _on_shadow_ssao_button_toggled(toggled_on: bool) -> void:
 	var env  = $"/root/World/WorldEnvironment" as WorldEnvironment
 	env.environment.ssao_enabled = toggled_on
+
+func _on_vsync_mode_id_pressed(id: int) -> void:
+	match id : 
+		0: 
+			DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_ENABLED)
+			_vsync_mode_button.text = "Activé"
+		1:
+			DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_ADAPTIVE)
+			_vsync_mode_button.text = "Adaptatif"
+		2: 
+			DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_DISABLED)
+			_vsync_mode_button.text = "Désactivé"
