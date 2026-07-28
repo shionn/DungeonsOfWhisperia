@@ -473,10 +473,6 @@ polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(1, 3, 2)]
 vertices = PackedVector3Array(1, 0, 0.5, -1, 0, 0.5, 1, 0, -0.5, -1, 0, -0.5)
 polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(1, 3, 2)]
 
-[sub_resource type="NavigationMesh" id="NavigationMesh_jm4er"]
-vertices = PackedVector3Array(5, 0, 5, -5, 0, 5, 5, 0, -5, -5, 0, -5)
-polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(1, 3, 2)]
-
 [sub_resource type="NavigationMesh" id="NavigationMesh_uae3t"]
 vertices = PackedVector3Array(1, 0, 0.5, -1, 0, 0.5, 1, 0, -0.5, -1, 0, -0.5)
 polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(1, 3, 2)]
@@ -487,10 +483,6 @@ polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(1, 3, 2)]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_eidup"]
 vertices = PackedVector3Array(5, 0, 5, -5, 0, 5, 5, 0, -5, -5, 0, -5)
-polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(1, 3, 2)]
-
-[sub_resource type="NavigationMesh" id="NavigationMesh_c3lrt"]
-vertices = PackedVector3Array(9, 0, 1, -9, 0, 1, 9, 0, -1, -9, 0, -1)
 polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(1, 3, 2)]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_dk8ou"]
@@ -545,8 +537,28 @@ polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(1, 3, 2)]
 vertices = PackedVector3Array(0.5, 0, 3.25, -0.5, 0, 3.25, 0.5, 0, -3.25, -0.5, 0, -3.25)
 polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(1, 3, 2)]
 
+[sub_resource type="NavigationMesh" id="NavigationMesh_jm4er"]
+vertices = PackedVector3Array(0.5, 0, 13.5, -0.5, 0, 13.5, 0.5, 0, -13.5, -0.5, 0, -13.5)
+polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(1, 3, 2)]
+
 [sub_resource type="NavigationMesh" id="NavigationMesh_588y5"]
-vertices = PackedVector3Array(0.5, 0, 5.25, -0.5, 0, 5.25, 0.5, 0, -5.25, -0.5, 0, -5.25)
+vertices = PackedVector3Array(1, 0, 0.5, -1, 0, 0.5, 1, 0, -0.5, -1, 0, -0.5)
+polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(1, 3, 2)]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_ubyst"]
+vertices = PackedVector3Array(2, 0, 0.5, -2, 0, 0.5, 2, 0, -0.5, -2, 0, -0.5)
+polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(1, 3, 2)]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_c3lrt"]
+vertices = PackedVector3Array(1, 0, 4.5, -1, 0, 4.5, 1, 0, -4.5, -1, 0, -4.5)
+polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(1, 3, 2)]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_2xv6d"]
+vertices = PackedVector3Array(1.25, 0, 3.5, -1.25, 0, 3.5, 1.25, 0, -3.5, -1.25, 0, -3.5)
+polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(1, 3, 2)]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_elpd6"]
+vertices = PackedVector3Array(9, 0, 0.75, -9, 0, 0.75, 9, 0, -0.75, -9, 0, -0.75)
 polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(1, 3, 2)]
 
 [node name="Dungeon02" type="Node3D" unique_id=879788223]
@@ -3980,64 +3992,56 @@ navigation_mesh = SubResource("NavigationMesh_pjp3u")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48, 0, -8.1)
 navigation_mesh = SubResource("NavigationMesh_pjp3u")
 
-[node name="NavigationRegion3D30" type="NavigationRegion3D" parent="Navigation" unique_id=774564193]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68, 0, 0.10000038)
-navigation_mesh = SubResource("NavigationMesh_jm4er")
-
 [node name="NavigationRegion3D31" type="NavigationRegion3D" parent="Navigation" unique_id=21613571]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48, 0, 0.10000038)
 navigation_mesh = SubResource("NavigationMesh_uae3t")
 
 [node name="NavigationRegion3D34" type="NavigationRegion3D" parent="Navigation" unique_id=470416261]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68, 0, -29.9)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68, 0, -30)
 navigation_mesh = SubResource("NavigationMesh_1hhm1")
 
 [node name="NavigationRegion3D35" type="NavigationRegion3D" parent="Navigation" unique_id=1033505958]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60, 0, -27.9)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60, 0, -28)
 navigation_mesh = SubResource("NavigationMesh_eidup")
 
 [node name="NavigationRegion3D36" type="NavigationRegion3D" parent="Navigation" unique_id=1682924341]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 76, 0, -27.9)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 76, 0, -28)
 navigation_mesh = SubResource("NavigationMesh_eidup")
 
-[node name="NavigationRegion3D40" type="NavigationRegion3D" parent="Navigation" unique_id=164618401]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68, 0, 12.1)
-navigation_mesh = SubResource("NavigationMesh_c3lrt")
-
 [node name="NavigationRegion3D41" type="NavigationRegion3D" parent="Navigation" unique_id=515023222]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68, 0, 20.1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68, 0, 20)
 navigation_mesh = SubResource("NavigationMesh_dk8ou")
 
 [node name="NavigationRegion3D42" type="NavigationRegion3D" parent="Navigation" unique_id=1200691365]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60, 0, 16.1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60, 0, 16)
 navigation_mesh = SubResource("NavigationMesh_7rbef")
 
 [node name="NavigationRegion3D43" type="NavigationRegion3D" parent="Navigation" unique_id=1427957723]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 76, 0, 16.1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 76, 0, 16)
 navigation_mesh = SubResource("NavigationMesh_x5dku")
 
 [node name="NavigationRegion3D45" type="NavigationRegion3D" parent="Navigation" unique_id=77416088]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 70, 0, 18.1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 70, 0, 18)
 navigation_mesh = SubResource("NavigationMesh_n6jxa")
 
 [node name="NavigationRegion3D44" type="NavigationRegion3D" parent="Navigation" unique_id=335235792]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 71.5, 0, 14.1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 71.5, 0, 14)
 navigation_mesh = SubResource("NavigationMesh_b1uxc")
 
 [node name="NavigationRegion3D46" type="NavigationRegion3D" parent="Navigation" unique_id=1977775450]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 70.5, 0, 16.1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 70.5, 0, 16)
 navigation_mesh = SubResource("NavigationMesh_ldvm7")
 
 [node name="NavigationRegion3D47" type="NavigationRegion3D" parent="Navigation" unique_id=1196971771]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 67, 0, 16.6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 67, 0, 16.5)
 navigation_mesh = SubResource("NavigationMesh_klgpk")
 
 [node name="NavigationRegion3D48" type="NavigationRegion3D" parent="Navigation" unique_id=354688539]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 62.2, 0, 14.1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 62.2, 0, 14)
 navigation_mesh = SubResource("NavigationMesh_5tmos")
 
 [node name="NavigationRegion3D49" type="NavigationRegion3D" parent="Navigation" unique_id=1863388748]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 63.999996, 0, 13.700001)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 64, 0, 13.6)
 navigation_mesh = SubResource("NavigationMesh_q6tun")
 
 [node name="NavigationRegion3D50" type="NavigationRegion3D" parent="Navigation" unique_id=1149930960]
@@ -4050,10 +4054,6 @@ navigation_mesh = SubResource("NavigationMesh_nf2qq")
 
 [node name="NavigationRegion3D8" type="NavigationRegion3D" parent="Navigation" unique_id=1667979672]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60, 0, 0)
-navigation_mesh = SubResource("NavigationMesh_nf2qq")
-
-[node name="NavigationRegion3D12" type="NavigationRegion3D" parent="Navigation" unique_id=1586775271]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 68, 0, 8.1)
 navigation_mesh = SubResource("NavigationMesh_nf2qq")
 
 [node name="NavigationRegion3D51" type="NavigationRegion3D" parent="Navigation" unique_id=1052898505]
@@ -4069,20 +4069,40 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 20, 
 navigation_mesh = SubResource("NavigationMesh_nf2qq")
 
 [node name="NavigationRegion3D6" type="NavigationRegion3D" parent="Navigation" unique_id=1402968922]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68, 0, -15.9)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68, 0, -16)
 navigation_mesh = SubResource("NavigationMesh_avr0k")
 
 [node name="NavigationRegion3D7" type="NavigationRegion3D" parent="Navigation" unique_id=723584581]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60, 0, -19.65)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60, 0, -19.75)
 navigation_mesh = SubResource("NavigationMesh_3o603")
 
-[node name="NavigationRegion3D19" type="NavigationRegion3D" parent="Navigation" unique_id=1966820938]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 76, 0, -19.65)
+[node name="NavigationRegion3D30" type="NavigationRegion3D" parent="Navigation" unique_id=372833996]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 76, 0, -19.75)
 navigation_mesh = SubResource("NavigationMesh_3o603")
 
-[node name="NavigationRegion3D32" type="NavigationRegion3D" parent="Navigation" unique_id=835852888]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68, 0, -10.15)
+[node name="NavigationRegion3D12" type="NavigationRegion3D" parent="Navigation" unique_id=2001437202]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68, 0, -2)
+navigation_mesh = SubResource("NavigationMesh_jm4er")
+
+[node name="NavigationRegion3D19" type="NavigationRegion3D" parent="Navigation" unique_id=567281826]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 69.5, 0, -4)
 navigation_mesh = SubResource("NavigationMesh_588y5")
+
+[node name="NavigationRegion3D32" type="NavigationRegion3D" parent="Navigation" unique_id=212814673]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 70.5, 0, 4)
+navigation_mesh = SubResource("NavigationMesh_ubyst")
+
+[node name="NavigationRegion3D33" type="NavigationRegion3D" parent="Navigation" unique_id=927523152]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 66.5, 0, 0)
+navigation_mesh = SubResource("NavigationMesh_c3lrt")
+
+[node name="NavigationRegion3D37" type="NavigationRegion3D" parent="Navigation" unique_id=819614729]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 64.25, 0, -1)
+navigation_mesh = SubResource("NavigationMesh_2xv6d")
+
+[node name="NavigationRegion3D38" type="NavigationRegion3D" parent="Navigation" unique_id=586587754]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68, 0, 12.26)
+navigation_mesh = SubResource("NavigationMesh_elpd6")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1699497070]
 stream = ExtResource("69_gcmxt")
@@ -4090,12 +4110,12 @@ autoplay = true
 bus = &"Background"
 parameters/looping = true
 
-[connection signal="activate" from="EntranceSecret/Tomb/gravestone2/description" to="." method="_on_tomb_description_activate"]
+[connection signal="close" from="EntranceSecret/Tomb/gravestone2/description" to="." method="_on_tomb_description_close"]
 [connection signal="dead" from="BossRoom/Skeleton Golem" to="." method="_on_skeleton_golem_dead"]
 [connection signal="body_entered" from="BossRoom/Area3D" to="BossRoom" method="_on_area_3d_body_entered"]
 [connection signal="close" from="BossRoom/NecromancerDialog" to="BossRoom" method="_on_necromancer_dialog_close"]
-[connection signal="activate" from="RitualRoom/Decoration/grave_A2/description" to="." method="_on_ritual_tom_description_activate"]
-[connection signal="close" from="RitualRoom/Decoration/grave_A_destroyed2/description" to="." method="_on_ritual_tom_description_activate"]
+[connection signal="close" from="RitualRoom/Decoration/grave_A2/description" to="." method="_on_ritual_tomb_description_close"]
+[connection signal="close" from="RitualRoom/Decoration/grave_A_destroyed2/description" to="." method="_on_ritual_tomb_description_close"]
 [connection signal="state_change" from="RitualRoom/wall_inset3/Skull" to="RitualRoom" method="_on_skull_state_change"]
 [connection signal="state_change" from="RitualRoom/wall_inset4/Skull" to="RitualRoom" method="_on_skull_state_change"]
 [connection signal="state_change" from="RitualRoom/wall_inset5/Skull" to="RitualRoom" method="_on_skull_state_change"]

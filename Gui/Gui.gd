@@ -88,6 +88,7 @@ func openLoot(container: Object) -> void :
 	_show_mouse()
 
 func openDialog(dialog: Dialog) -> void:
+	player.stop_move();
 	_dialog.open(dialog)
 	_show_mouse()
 

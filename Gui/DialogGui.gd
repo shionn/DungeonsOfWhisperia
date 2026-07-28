@@ -55,7 +55,8 @@ func _add_option(dialog:Dialog, button : Button, id:int) -> void :
 	
 
 func _on_close_button_pressed() -> void:
-	_current.close.emit()
+	#_current.close.emit()
+	#_current = null
 	hide()
 
 func _on_next_button_pressed() -> void:
@@ -77,3 +78,8 @@ func _on_option_button_3_pressed() -> void:
 	_current.close.emit()
 	var next = _current.options[2]
 	open(next)
+
+
+func _on_visibility_changed() -> void:
+	if not visible and _current :
+		_current.close.emit()

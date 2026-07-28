@@ -2189,7 +2189,7 @@ parameters/looping = true
 
 [connection signal="close" from="Aigle Jaune/Bienvenue/Next/Next/Next/Next/Next" to="Aigle Jaune" method="_on_Bienvenue_close"]
 [connection signal="activate" from="Aigle Jaune/LookingForQuest/Service de l\'auberge/Manger/Next/Next" to="Aigle Jaune" method="_on_manger_activate"]
-[connection signal="activate" from="Aigle Jaune/LookingForQuest/Le Gouffre des Ombres/Next/Next/Next" to="Aigle Jaune" method="_on_mine_infestee_next_activate"]
+[connection signal="close" from="Aigle Jaune/LookingForQuest/Le Gouffre des Ombres/Next/Next/Next" to="Aigle Jaune" method="_on_shadow_shasme_next_close"]
 [connection signal="close" from="Aigle Jaune/LookingForQuest/Mission Accomplie/Next/Next/Next/La potion étrange/Next" to="Aigle Jaune" method="_on_end_mission1_close"]
 [connection signal="close" from="Aigle Jaune/LookingForQuest/Mission Accomplie/Next/Next/Next/Je n\'ai rien trouvé/Next" to="Aigle Jaune" method="_on_end_mission1_close"]
 [connection signal="close" from="Alaric Duclair/Présentation/Next/Valthorion ?/Next/Next/Next/Next" to="Alaric Duclair" method="_on_valthorion_next_close"]

@@ -37,5 +37,5 @@ func _on_manger_activate() -> void:
 		_food.show()
 	gui.openTransition(middle, func() : gui.openDialog($"LookingForQuest/Service de l'auberge/Manger/Next/Next/ApportFood"))
 
-func _on_mine_infestee_next_activate() -> void:
+func _on_shadow_shasme_next_close() -> void:
 	quest_book.auberge_02_trouver_mission.done()
