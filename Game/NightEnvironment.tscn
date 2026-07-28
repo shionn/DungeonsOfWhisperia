@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dmjasqjskhmmu"]
+
+[ext_resource type="Sky" uid="uid://d3xbub3t7borr" path="res://Assets/BinbunVFX/BinbunSky/skies/basic/basic_sky_01.tres" id="1_fi1f8"]
+
+[sub_resource type="Environment" id="Environment_js7pq"]
+background_mode = 2
+background_energy_multiplier = 0.7
+sky = ExtResource("1_fi1f8")
+ssao_enabled = true
+adjustment_brightness = 0.81
+adjustment_contrast = 1.025
+
+[node name="NightEnvironment" type="WorldEnvironment" unique_id=485933020]
+environment = SubResource("Environment_js7pq")
