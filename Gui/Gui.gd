@@ -109,7 +109,9 @@ func is_open() -> bool :
 	return not $CenterCursor.visible
 
 func can_move() -> bool :
-	return not _dialog.visible and not _transition.visible and not _introduction.visible
+	# pas sec
+	#return not _dialog.visible and not _transition.visible and not _introduction.visible
+	return not is_open()
 
 func _close() -> void :
 	if Input.mouse_mode == Input.MOUSE_MODE_VISIBLE :
