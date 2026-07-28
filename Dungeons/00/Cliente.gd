@@ -7,6 +7,8 @@ func _ready() -> void:
 	#$Character/Rig_Medium/Skeleton3D/Hoarder_FrontPouch.hide()
 	#$Character/Rig_Medium/Skeleton3D/Hoarder_FrontPouch_Sword.hide()
 	super._ready()
+	if quest_book.auberge_03_randre_alliance.is_done() :
+		queue_free()
 	
 func interact() -> void:
 	look_at_player()

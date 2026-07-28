@@ -16,7 +16,8 @@ class_name Gui
 @onready var _menu = $Menu as MenuButton
 @onready var _loot = $Loot as GridContainer
 @onready var _spells = $Spells as HBoxContainer                                                                                                                                                                                             
-@onready var _console = $ConsoleLog as RichTextLabel                                                                                                                                                                                             
+@onready var _console = $ConsoleLog as RichTextLabel          
+@onready var _transition = $Transition as Transition                                                                                                                                                                      
 
 var _previous_mouse_pos: Vector2
 
@@ -52,8 +53,8 @@ func _physics_process(_delta: float) -> void:
 		$Introduction/PanelContainer/MarginContainer/VBoxContainer/TabContainer/Quete.visible = true
 		_introduction.visible = not _introduction.visible
 	if player.velocity.x or player.velocity.z : 
-		#_close()
-		pass
+		_close()
+		#pass
 
 func update_mouse_mode() -> void:
 	if (_options.visible or _bag.visible 
@@ -99,13 +100,16 @@ func openDungeonExit() -> void:
 	_show_mouse()
 
 func openTransition(onMiddle : Callable, onEnd : Callable = func():pass) -> void:
-	$Transition.doIt(onMiddle, onEnd)
+	_transition.doIt(onMiddle, onEnd)
 
 func consoleLog(text: String) -> void:
 	_console.log(text)
 
 func is_open() -> bool :
 	return not $CenterCursor.visible
+
+func can_move() -> bool :
+	return not _dialog.visible and not _transition.visible and not _introduction.visible
 
 func _close() -> void :
 	if Input.mouse_mode == Input.MOUSE_MODE_VISIBLE :
