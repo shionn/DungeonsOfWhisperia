@@ -95,10 +95,9 @@ icon = ExtResource("9_fvag4")
 display_name = "Crâne"
 description = "Ceci est la preuve que j'ai accompli ma mission.
  
- [i]Félicitations ! Vous avez accompli votre première quête, donnez le mot de passe [b]Crâne de golem[/b] et le montant d'or possédé à Shionn (Rurick) dans un message privé sur Discord.
- Mais avez-vous tous fouillé ? Avez-vous trouvé toute la quantité d'or possible également ?
+ [i]Félicitations ! Vous avez accompli votre première quête. Il vous reste encore des choses à accomplir dans cette version du jeu. Si vous le souhaitez, vous pouvez donnez le mot de passe [b]Crâne de golem[/b] à Shionn (Rurick) dans un message privé sur Discord.
  
- Merci sincèrement d’avoir participé à cette alpha. Shionn[/i]"
+Merci sincèrement d’avoir participé à cette alpha. Shionn[/i]"
 unique = true
 metadata/_custom_type_script = "uid://bjbab3ep2gfn2"
 

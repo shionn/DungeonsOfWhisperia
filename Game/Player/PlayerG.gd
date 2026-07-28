@@ -57,7 +57,7 @@ func _physics_process(_delta: float) -> void:
 
 func _handle_move_input() -> void:
 	var input_dir := Input.get_vector("move_left", "move_right", "move_front", "move_back")
-	if input_dir and not gui.is_open():
+	if input_dir and gui.can_move():
 		var cam_basis := get_viewport().get_camera_3d().get_global_transform().basis
 		var direction := cam_basis * Vector3(input_dir.x, 0, input_dir.y)
 		direction.y = 0
