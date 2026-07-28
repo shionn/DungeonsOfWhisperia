@@ -29,6 +29,7 @@ func loot(container:Object) -> void:
 	self.visible = true
 	if _container.get_child_count() > 0:
 		$AudioOpen.play()
+		# Input.warp_mouse(_container.get_child(0).global_position) # ca marche pas !
 	
 func _loot_item(item:Item, button:TextureButton, container:Object) -> void:
 	_bag.loot(item.item_name)
@@ -43,4 +44,3 @@ func _loot_gold(button:TextureButton, container:Object) -> void:
 	button.queue_free()
 	if container is Interactable and container.hide_on_loot : container.queue_free()
 	if _container.get_child_count() == 1 : hide()
-	
