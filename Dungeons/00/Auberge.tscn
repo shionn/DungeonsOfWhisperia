@@ -107,6 +107,7 @@
 [ext_resource type="PackedScene" uid="uid://bifqjl5vbnrgq" path="res://Assets/Characters/AdventurersAccessoires/potion_small_red.gltf" id="92_my2qj"]
 [ext_resource type="PackedScene" uid="uid://l2ef3kyhit8a" path="res://Assets/Characters/MonthlySeries5/Accessoires/Cauldron.gltf" id="95_ar0ji"]
 [ext_resource type="PackedScene" uid="uid://chdn2mnom0h4x" path="res://Assets/Characters/MonthlySeries5/Accessoires/Potionstation_decorated.gltf" id="96_t7ldk"]
+[ext_resource type="PackedScene" uid="uid://dmjasqjskhmmu" path="res://Game/NightEnvironment.tscn" id="108_wad6c"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_brlmy"]
 size = Vector3(1.7, 0.2, 1)
@@ -2186,6 +2187,8 @@ stream = ExtResource("28_6cvm0")
 autoplay = true
 bus = &"Background"
 parameters/looping = true
+
+[node name="NightEnvironment" parent="." unique_id=485933020 instance=ExtResource("108_wad6c")]
 
 [connection signal="close" from="Aigle Jaune/Bienvenue/Next/Next/Next/Next/Next" to="Aigle Jaune" method="_on_Bienvenue_close"]
 [connection signal="activate" from="Aigle Jaune/LookingForQuest/Service de l\'auberge/Manger/Next/Next" to="Aigle Jaune" method="_on_manger_activate"]

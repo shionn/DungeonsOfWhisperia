@@ -4,9 +4,16 @@
 
 [sub_resource type="Environment" id="Environment_js7pq"]
 background_mode = 2
-background_energy_multiplier = 0.7
+background_energy_multiplier = 0.5
 sky = ExtResource("1_fi1f8")
+ambient_light_source = 2
+ambient_light_color = Color(0.2509804, 0.2509804, 0.2509804, 1)
 ssao_enabled = true
+fog_enabled = true
+fog_light_color = Color(0.0627451, 0.08235294, 0.101960786, 1)
+fog_light_energy = 0.0
+fog_density = 0.02
+fog_sky_affect = 0.0
 adjustment_brightness = 0.81
 adjustment_contrast = 1.025
 

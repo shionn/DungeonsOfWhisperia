@@ -76,6 +76,7 @@
 [ext_resource type="PackedScene" uid="uid://c6i85c8iqhfgd" path="res://Assets/Dungeons/Wall/TSplit/wall_Tsplit.gltf" id="74_44ljc"]
 [ext_resource type="PackedScene" uid="uid://7em3lt4lnfwr" path="res://Assets/Dungeons/Wall/wall.gltf" id="75_4ah4m"]
 [ext_resource type="AudioStream" uid="uid://61hk6iwxjiwe" path="res://Audio/DungeonThemes/dungeon.ogg" id="76_bf8rt"]
+[ext_resource type="PackedScene" uid="uid://l4ocv1r3b2jl" path="res://Game/DungeonEnvironment.tscn" id="77_u21oi"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_78w8x"]
 height = 0.75
@@ -1761,6 +1762,8 @@ stream = ExtResource("76_bf8rt")
 autoplay = true
 bus = &"Background"
 parameters/looping = true
+
+[node name="DungeonEnvironment" parent="." unique_id=485933020 instance=ExtResource("77_u21oi")]
 
 [connection signal="dead" from="BossRoom/Skeleton Golem" to="." method="_on_skeleton_golem_dead"]
 [connection signal="activate" from="BossRoom/bar_straight_C2/Code/Action1" to="BossRoom/bar_straight_C2/Code" method="_on_action_1_activate"]

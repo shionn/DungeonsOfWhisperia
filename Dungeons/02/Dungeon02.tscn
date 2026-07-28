@@ -128,6 +128,7 @@
 [ext_resource type="PackedScene" uid="uid://csg4ffnbxbal1" path="res://Game/Monsters/SkeletonWarrior.tscn" id="85_87aba"]
 [ext_resource type="PackedScene" uid="uid://dhflr6qrk1e1d" path="res://Assets/Dungeons/Coin/coin_stack_small.gltf" id="105_tvthq"]
 [ext_resource type="PackedScene" uid="uid://be86xep67rb3s" path="res://Game/Monsters/Necromancer.tscn" id="113_v3xnv"]
+[ext_resource type="PackedScene" uid="uid://l4ocv1r3b2jl" path="res://Game/DungeonEnvironment.tscn" id="129_mncwc"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_cua28"]
 size = Vector3(1.5, 1.5, 0.5)
@@ -4109,6 +4110,8 @@ stream = ExtResource("69_gcmxt")
 autoplay = true
 bus = &"Background"
 parameters/looping = true
+
+[node name="DungeonEnvironment" parent="." unique_id=485933020 instance=ExtResource("129_mncwc")]
 
 [connection signal="close" from="EntranceSecret/Tomb/gravestone2/description" to="." method="_on_tomb_description_close"]
 [connection signal="dead" from="BossRoom/Skeleton Golem" to="." method="_on_skeleton_golem_dead"]
