@@ -4111,7 +4111,7 @@ autoplay = true
 bus = &"Background"
 parameters/looping = true
 
-[node name="DungeonEnvironment" parent="." unique_id=485933020 instance=ExtResource("129_mncwc")]
+[node name="Environment" parent="." unique_id=485933020 instance=ExtResource("129_mncwc")]
 
 [connection signal="close" from="EntranceSecret/Tomb/gravestone2/description" to="." method="_on_tomb_description_close"]
 [connection signal="dead" from="BossRoom/Skeleton Golem" to="." method="_on_skeleton_golem_dead"]

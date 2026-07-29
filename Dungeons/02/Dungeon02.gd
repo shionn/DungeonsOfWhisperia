@@ -10,6 +10,8 @@ func _ready() -> void:
 		$RitualRoom/Ranger.queue_free()
 	
 	bag.item_loot.connect(_on_item_loot)
+	gui._options._apply()
+
 
 func _on_item_loot(item : Item) -> void :
 	if item.item_name == Items.ItemName.Alliance :

@@ -2188,7 +2188,7 @@ autoplay = true
 bus = &"Background"
 parameters/looping = true
 
-[node name="NightEnvironment" parent="." unique_id=485933020 instance=ExtResource("108_wad6c")]
+[node name="Environment" parent="." unique_id=485933020 instance=ExtResource("108_wad6c")]
 
 [connection signal="close" from="Aigle Jaune/Bienvenue/Next/Next/Next/Next/Next" to="Aigle Jaune" method="_on_Bienvenue_close"]
 [connection signal="activate" from="Aigle Jaune/LookingForQuest/Service de l\'auberge/Manger/Next/Next" to="Aigle Jaune" method="_on_manger_activate"]

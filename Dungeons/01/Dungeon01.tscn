@@ -1763,7 +1763,7 @@ autoplay = true
 bus = &"Background"
 parameters/looping = true
 
-[node name="DungeonEnvironment" parent="." unique_id=485933020 instance=ExtResource("77_u21oi")]
+[node name="Environment" parent="." unique_id=485933020 instance=ExtResource("77_u21oi")]
 
 [connection signal="dead" from="BossRoom/Skeleton Golem" to="." method="_on_skeleton_golem_dead"]
 [connection signal="activate" from="BossRoom/bar_straight_C2/Code/Action1" to="BossRoom/bar_straight_C2/Code" method="_on_action_1_activate"]

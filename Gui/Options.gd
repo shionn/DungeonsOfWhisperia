@@ -9,6 +9,7 @@ extends GridContainer
 @onready var _effect_slide = $PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer/HSliderSon
 @onready var _full_screen = $PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer/FullScreenButton
 @onready var _scale_slide = $PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer/HSliderScale
+@onready var _ssao_button = $PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer/ShadowSSAOButton
 
 var _options : Dictionary = {}
 
@@ -66,6 +67,10 @@ func _apply() -> void:
 		DisplayServer.VSYNC_ADAPTIVE: _vsync_mode_button.text = "Adaptatif"
 		DisplayServer.VSYNC_DISABLED: _vsync_mode_button.text = "Désactivé"
 	DisplayServer.window_set_vsync_mode(_options.get_or_add("video-vsync", DisplayServer.VSYNC_ENABLED))
+
+	var env  = $"/root/World/Dungeon/Environment" as WorldEnvironment
+	env.environment.ssao_enabled = _options.get_or_add("video-ssao", true)
+	_ssao_button.button_pressed = _options.get_or_add("video-ssao", true)
 	
 
 func _on_music_value_changed(value: float) -> void:
@@ -104,8 +109,8 @@ func _on_scale_mode_id_pressed(id: int) -> void:
 
 func _on_shadow_ssao_button_toggled(toggled_on: bool) -> void:
 	_options.set("video-ssao", toggled_on)
-	var env  = $"/root/World/WorldEnvironment" as WorldEnvironment
-	env.environment.ssao_enabled = toggled_on
+	_apply()
+	_save()
 
 func _on_vsync_mode_id_pressed(id: int) -> void:
 	match id : 

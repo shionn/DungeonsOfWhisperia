@@ -7,4 +7,5 @@ func _ready() -> void:
 		if quest_book.dungeon_02_trouver_alliance.is_done() and not bag.have(Items.ItemName.Alliance) :
 			quest_book.auberge_03_randre_alliance.done()
 		gui.openQuest()
-		
+
+	gui._options._apply()

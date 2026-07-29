@@ -904,13 +904,11 @@ popup/item_5/text = "Entière (Nearest)"
 popup/item_5/id = 5
 
 [node name="ShadowSSAO" type="Label" parent="Options/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer" unique_id=319142186]
-visible = false
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Ombre SSAO"
 
 [node name="ShadowSSAOButton" type="CheckButton" parent="Options/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer" unique_id=1203785437]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 0
 mouse_default_cursor_shape = 2
