@@ -176,6 +176,7 @@ func load_game() -> void :
 		for item in save_data["bag"] : bag._items.append(item)
 		quest_book._quests = save_data["quests"]
 		gui.consoleLog("Partie chargée")
+		file.close()
 
 
 
