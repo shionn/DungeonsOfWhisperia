@@ -835,6 +835,21 @@ layout_mode = 2
 size_flags_horizontal = 0
 mouse_default_cursor_shape = 2
 
+[node name="Fov" type="Label" parent="Options/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer" unique_id=883559014]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Champ de vision (75°)"
+
+[node name="HSliderFov" type="HSlider" parent="Options/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer" unique_id=1340254960]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+min_value = 40.0
+max_value = 180.0
+value = 75.0
+scrollable = false
+
 [node name="VSync" type="Label" parent="Options/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer" unique_id=1089913169]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -1593,6 +1608,7 @@ bus = &"Effet"
 [connection signal="visibility_changed" from="Introduction/PanelContainer/MarginContainer/VBoxContainer/TabContainer/Quete" to="Introduction" method="_on_quete_visibility_changed"]
 [connection signal="pressed" from="Introduction/PanelContainer/MarginContainer/VBoxContainer/CloseButton" to="Introduction" method="_on_close_button_pressed"]
 [connection signal="toggled" from="Options/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer/FullScreenButton" to="Options" method="_on_full_screen_button_toggled"]
+[connection signal="value_changed" from="Options/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer/HSliderFov" to="Options" method="_on_h_slider_fov_value_changed"]
 [connection signal="value_changed" from="Options/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer/HSliderScale" to="Options" method="_on_h_slider_scale_value_changed"]
 [connection signal="toggled" from="Options/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer/ShadowSSAOButton" to="Options" method="_on_shadow_ssao_button_toggled"]
 [connection signal="value_changed" from="Options/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer/HSliderMusic" to="Options" method="_on_music_value_changed"]

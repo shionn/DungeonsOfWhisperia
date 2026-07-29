@@ -10,6 +10,9 @@ extends GridContainer
 @onready var _full_screen = $PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer/FullScreenButton
 @onready var _scale_slide = $PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer/HSliderScale
 @onready var _ssao_button = $PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer/ShadowSSAOButton
+@onready var _fov_label = $"PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer/Fov"
+@onready var _fov_slide = $PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer/HSliderFov
+
 
 var _options : Dictionary = {}
 
@@ -72,6 +75,8 @@ func _apply() -> void:
 	env.environment.ssao_enabled = _options.get_or_add("video-ssao", true)
 	_ssao_button.button_pressed = _options.get_or_add("video-ssao", true)
 	
+	get_viewport().get_camera_3d().fov = _options.get_or_add("video-fov", 75.0)
+	_fov_label.text = "Champ de vision (%d°)"%_options.get_or_add("video-fov", 75.0)
 
 func _on_music_value_changed(value: float) -> void:
 	_options.set("audio-background-value", value)
@@ -117,5 +122,11 @@ func _on_vsync_mode_id_pressed(id: int) -> void:
 		0: _options.set("video-vsync", DisplayServer.VSYNC_ENABLED)
 		1: _options.set("video-vsync", DisplayServer.VSYNC_ADAPTIVE)
 		2: _options.set("video-vsync", DisplayServer.VSYNC_DISABLED)
+	_apply()
+	_save()
+
+
+func _on_h_slider_fov_value_changed(value: float) -> void:
+	_options.set("video-fov", value)
 	_apply()
 	_save()
