@@ -36,13 +36,13 @@ animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
-materials/extract=2
+materials/extract=0
 materials/extract_format=0
 materials/extract_path="res://Assets/Materials/Characters"
 _subresources={
 "materials": {
 "rogue": {
-"use_external/enabled": true,
+"use_external/enabled": false,
 "use_external/fallback_path": "res://Assets/Materials/Characters/rogue.tres",
 "use_external/path": "uid://cigrtvjrb4j3j"
 }
