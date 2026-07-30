@@ -6,9 +6,10 @@
 # TODO
 - remplacer le curseur d'hors porté
 - ajouter une fenetre de statistique. 
-- ajouter des option graphique
+- ajouter des options
   - definition ?
   - effet de flamme ?
+  - configuration des racourci
 - ajouter des options d'input
   - sensibilité souris
 - combat
