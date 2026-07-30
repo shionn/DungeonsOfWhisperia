@@ -17,7 +17,8 @@ class_name Gui
 @onready var _loot = $Loot as GridContainer
 @onready var _spells = $Spells as HBoxContainer                                                                                                                                                                                             
 @onready var _console = $ConsoleLog as RichTextLabel          
-@onready var _transition = $Transition as Transition                                                                                                                                                                      
+@onready var _transition = $Transition as Transition             
+@onready var _input = $Popup as GridContainer                                                                                                                                                         
 
 var _previous_mouse_pos: Vector2
 
@@ -61,7 +62,7 @@ func update_mouse_mode() -> void:
 			or _loot.visible or _introduction.visible 
 			or _dialog.visible
 			or _exit_auberge.visible or _exit_dungeon.visible
-			or _game_over.visible) :
+			or _game_over.visible or _input.visible) :
 		_show_mouse()
 		_spells.hide()
 	else :

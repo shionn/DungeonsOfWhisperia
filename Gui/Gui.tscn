@@ -40,6 +40,7 @@
 [ext_resource type="Script" uid="uid://delfuyty1a63m" path="res://Gui/QuestDone.gd" id="38_5npq8"]
 [ext_resource type="AudioStream" uid="uid://ddoswq0aa6a1s" path="res://Audio/NewThingGet/newthingget.ogg" id="38_86xcp"]
 [ext_resource type="Script" uid="uid://ihft5lnbnu2i" path="res://Gui/LvlUp.gd" id="40_6qw7v"]
+[ext_resource type="Script" uid="uid://dt6wofx8ub18t" path="res://Gui/Popup.gd" id="41_tfp3c"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8rxp0"]
 bg_color = Color(1, 0.94509804, 0.8235294, 1)
@@ -750,6 +751,7 @@ layout_mode = 2
 texture = ExtResource("18_w65rx")
 
 [node name="Options" type="GridContainer" parent="." unique_id=139407599]
+visible = false
 z_index = 10
 layout_mode = 1
 anchors_preset = 8
@@ -1599,6 +1601,101 @@ libraries/ = SubResource("AnimationLibrary_5npq8")
 stream = ExtResource("38_86xcp")
 bus = &"Effet"
 
+[node name="Popup" type="GridContainer" parent="." unique_id=788165725]
+visible = false
+z_index = 10
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -400.0
+offset_top = -360.0
+offset_right = 400.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 3
+script = ExtResource("41_tfp3c")
+
+[node name="NW" type="TextureRect" parent="Popup" unique_id=1240629250]
+layout_mode = 2
+texture = ExtResource("11_883rq")
+
+[node name="N" type="TextureRect" parent="Popup" unique_id=228607473]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("12_m2wub")
+stretch_mode = 1
+
+[node name="NE" type="TextureRect" parent="Popup" unique_id=1827734058]
+layout_mode = 2
+texture = ExtResource("13_irpma")
+
+[node name="W" type="TextureRect" parent="Popup" unique_id=99989020]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("14_3yfkq")
+stretch_mode = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="Popup" unique_id=1488365425]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8rxp0")
+
+[node name="MarginContainer" type="MarginContainer" parent="Popup/PanelContainer" unique_id=2122216875]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Popup/PanelContainer/MarginContainer" unique_id=938349971]
+layout_mode = 2
+
+[node name="Text" type="RichTextLabel" parent="Popup/PanelContainer/MarginContainer/VBoxContainer" unique_id=16381462]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+bbcode_enabled = true
+text = "Félicitations ! Vous avez accompli votre seconde quête et cette beta dans sa version actuelle. Votre quête principale est achevée. Mais il reste peut-être des choses cachées à découvrir. N’oubliez pas de sauvegarder votre progression.  
+
+Si vous le souhaitez, n’hésitez pas à remonter tous les bugs ou propositions, que ce soit concernant les quêtes, votre ressenti, ou des choses que vous avez trouvées trop difficiles ou trop faciles. Tout commentaire est bienvenu.  
+
+Donnez le mot de passe [b]Crâne des ombres[/b] à Shionn (Rurick) dans un message privé sur Discord pour valider votre participation.  
+
+Merci sincèrement d’avoir participé à cette alpha. Shionn."
+
+[node name="CloseButton" type="Button" parent="Popup/PanelContainer/MarginContainer/VBoxContainer" unique_id=2128174906]
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "Fermer"
+mouse_default_cursor_shape = 2
+text = "Fermer"
+
+[node name="E" type="TextureRect" parent="Popup" unique_id=2057932048]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("15_ji1eb")
+stretch_mode = 1
+
+[node name="SW" type="TextureRect" parent="Popup" unique_id=1668508381]
+layout_mode = 2
+texture = ExtResource("16_8pck7")
+
+[node name="S" type="TextureRect" parent="Popup" unique_id=1924307926]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("17_el8jn")
+stretch_mode = 1
+
+[node name="SE" type="TextureRect" parent="Popup" unique_id=378087865]
+layout_mode = 2
+texture = ExtResource("18_w65rx")
+
 [connection signal="visibility_changed" from="Bag" to="." method="_on_bag_visibility_changed"]
 [connection signal="visibility_changed" from="Bag" to="Bag" method="_on_visibility_changed"]
 [connection signal="pressed" from="Bag/PanelContainer/MarginContainer/VBoxContainer/CloseButton" to="Bag" method="hide"]
@@ -1639,3 +1736,5 @@ bus = &"Effet"
 [connection signal="visibility_changed" from="GameOver" to="." method="_on_game_over_visibility_changed"]
 [connection signal="pressed" from="GameOver/VBoxContainer/HBoxContainer/Title" to="GameOver" method="_on_title_pressed"]
 [connection signal="pressed" from="GameOver/VBoxContainer/HBoxContainer/Exit" to="GameOver" method="_on_exit_pressed"]
+[connection signal="visibility_changed" from="Popup" to="." method="update_mouse_mode"]
+[connection signal="pressed" from="Popup/PanelContainer/MarginContainer/VBoxContainer/CloseButton" to="Popup" method="_on_close_button_pressed"]
