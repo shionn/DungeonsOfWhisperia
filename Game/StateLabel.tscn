@@ -38,7 +38,7 @@ tracks/2/keys = {
 
 [sub_resource type="Animation" id="Animation_33vya"]
 resource_name = "play"
-length = 3.0000000000000004
+length = 1.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = false
@@ -58,7 +58,7 @@ tracks/1/path = NodePath(".:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 2, 3),
+"times": PackedFloat32Array(0, 1, 1.5),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(0, 0, 0, 0)]
@@ -69,7 +69,7 @@ tracks/2/enabled = true
 tracks/2/path = NodePath(".")
 tracks/2/interp = 2
 tracks/2/loop_wrap = true
-tracks/2/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1, 1, 0.5, 1, 0, 3, 1, 1, -2, 0)
+tracks/2/keys = PackedFloat32Array(0.033333335, 1, 0, 1, 0, 0.75, 1, 0.5, 2, 0, 1.5, 1, 1, 1.5, 0)
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
@@ -77,10 +77,10 @@ tracks/3/path = NodePath(".:transparency")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 2, 3),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 0.5, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [0.0, 0.0, 1.0]
+"values": [1.0, 0.0, 0.0, 1.0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_8xfji"]
@@ -89,13 +89,17 @@ _data = {
 &"play": SubResource("Animation_33vya")
 }
 
-[node name="StateLabel" type="Label3D" unique_id=1882615327]
+[node name="Node3D" type="Node3D" unique_id=1284798136]
+script = ExtResource("1_8xfji")
+
+[node name="StateLabel" type="Label3D" parent="." unique_id=1882615327]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -2, 0)
 no_depth_test = true
 text = "1💀/1🛡"
-script = ExtResource("1_8xfji")
+font_size = 24
+outline_size = 8
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=719018387]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="StateLabel" unique_id=719018387]
 libraries/ = SubResource("AnimationLibrary_8xfji")
 
-[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[connection signal="animation_finished" from="StateLabel/AnimationPlayer" to="StateLabel" method="_on_animation_player_animation_finished"]
