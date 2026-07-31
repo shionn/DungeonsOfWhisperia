@@ -44,6 +44,11 @@ bus = &"Effet"
 stream = ExtResource("4_221vi")
 bus = &"Effet"
 
+[node name="StateLabel" type="Label3D" parent="." unique_id=9888170]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4000001, 0)
+no_depth_test = true
+text = "1 💀 1 🛡"
+
 [connection signal="timeout" from="AnimationTimer" to="." method="_on_animationTimer_timeout"]
 [connection signal="timeout" from="AtkTimer" to="." method="_on_atk_timer_timeout"]
 [connection signal="timeout" from="GcdTimer" to="." method="_on_gcd_timer_timeout"]

@@ -19,6 +19,10 @@ config/icon="res://icon.svg"
 
 buses/default_bus_layout="uid://dc7neup2idhg"
 
+[display]
+
+window/size/borderless=true
+
 [filesystem]
 
 import/blender/enabled=false
