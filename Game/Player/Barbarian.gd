@@ -18,7 +18,11 @@ func get_atk_animation() -> String:
 		AttackMode.SLICE : return "Melee_2H_Attack_Slice"
 		_ : return "Melee_2H_Attack_Chop"
 func is_atk_dual_Hand() -> bool:				return false
-func get_atk_main_hand() -> int:				return Dices.d6(2+lvl, 4)
+func get_atk_main_hand() -> int:
+	var dices = Dices.d6s(2+lvl, 4)
+	var count_6 = 0
+	for d in dices : if d == 6 : count_6 = count_6 + 1
+	return dices.size() + floori(count_6 / 2.0)
 func get_atk_main_hand_timer_factor() -> float: 
 	match _atk :
 		AttackMode.CHOP : return .5

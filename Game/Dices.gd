@@ -10,6 +10,15 @@ static func d6(count: int, threshold:int) -> int :
 			result = result+1
 	return result
 
+static func d6s(count, threshold:int) -> Array[int] :
+	var results : Array[int] = []
+	for i in range(0,count) :
+		var dice = _random.randi_range(1,6)
+		if dice >= threshold :
+			results.append(dice)
+	return results
+	
+
 static func d3(count: int = 1, threshold:int = 1) -> int :
 	var result = 0
 	for i in range(0,count) :

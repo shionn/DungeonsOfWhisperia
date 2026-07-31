@@ -13,7 +13,8 @@ func _ready() -> void:
 	
 	
 func _physics_process(_delta: float) -> void:
-	_name_label.look_at(player.global_position, Vector3.UP, true)
+	if  player.global_position.x and player.global_position.z :
+		_name_label.look_at(player.global_position, Vector3.UP, true)
 
 func interact() -> void:
 	print("interact is not overwrite")
