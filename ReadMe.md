@@ -1,9 +1,26 @@
+# Écho des Profondeurs oubliées
 
-# Layers
-1/ Physique
-9/ Monstre
+**Écho des Profondeurs oubliées** est un _Dungeon crawler_ qui s'inspire du jeu de société _Hero Quest_ et des jeu vidéo du style _Dungeon Master_ et _Ultima Underworld_. 
 
-# TODO
+## Capture
+
+![Selection des personnages](docs/screen/screen-select-character.png)
+![Auberge](docs/screen/screen-inn.png)
+![Donjon](docs/screen/screen-dungeon-1.png)
+![Donjon](docs/screen/screen-dungeon-2.png)
+![Donjon](docs/screen/screen-dungeon-3.png)
+
+## Asset
+
+![Made with Kaykit](docs/screen/KayKit_logo.png)
+
+Je ne suis pas graphiste, les assets proviennent principalement de [Kaykit par kaylousberg](https://kaylousberg.itch.io/kaykit-complete). 
+
+
+
+# Carnet de Dev
+
+## TODO
 - remplacer le curseur d'hors porté
 - ajouter une fenetre de statistique. 
 - ajouter des options
@@ -22,8 +39,7 @@
   - berserke : position offensive
   - rogue : disparaitre dans l'ombre
 
-
-# histoire
+## histoire
 - culte du necromancien ? 
 - Trouver une solution pour emprunté le portail 
 - mission pour aller bruler les cadavre des lieutenent dans une catacomb.
