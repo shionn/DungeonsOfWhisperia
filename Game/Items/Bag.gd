@@ -29,6 +29,14 @@ func unloot(item : Items.ItemName) -> void :
 	var _i =  _all_items.from(item)
 	item_drop.emit(_i)
 
+func unloot_not_global() -> void :
+	var new_items : Array[Items.ItemName] = []
+	for item_name in _items :
+		var _i =  _all_items.from(item_name)
+		if _i.global :
+			new_items.append(item_name)
+	_items = new_items
+
 func have(item : Items.ItemName) -> bool:
 	return _items.find(item) >= 0
 	
