@@ -28,17 +28,17 @@ uniform int mask3_blend_mode : hint_range(0, 11, 1) = 0;
 uniform bool mask3_radial = false;
 uniform float mask3_rotation = 0.0;
 
+group_uniforms Geometry;
+uniform bool billboard = false;
+uniform float displacement_scale : hint_range(0.0, 1.0, 0.05) = 0.0;
+uniform float displacement_offset : hint_range(0.0, 1.0, 0.05) = 0.5;
+
 group_uniforms Color;
 uniform vec4 primary_color : source_color;
 uniform vec4 secondary_color : source_color;
 uniform vec4 tertiary_color : source_color;
 uniform bool use_tertiary = false;
 uniform float color_smoothness : hint_range(0.0, 1.0, 0.1) = 0.5;
-
-group_uniforms Geometry;
-uniform bool billboard = false;
-uniform float displacement_scale : hint_range(0.0, 1.0, 0.05) = 0.0;
-uniform float displacement_offset : hint_range(0.0, 1.0, 0.05) = 0.5;
 
 group_uniforms UV;
 uniform float time_scale = 1.0;

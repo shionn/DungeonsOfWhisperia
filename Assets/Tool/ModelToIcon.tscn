@@ -16,6 +16,8 @@
 [ext_resource type="PackedScene" uid="uid://dgc6r0o5rxge4" path="res://Assets/Characters/AdventurersAccessoires/potion_small_blue.gltf" id="14_1n2eg"]
 [ext_resource type="PackedScene" uid="uid://dvelexyha7wyc" path="res://Assets/BinbunVFX/Treasure_Pro/Jewelry/Gold_Gem_Ring/Gold_Gem_Ring_03.glb" id="15_p0vbx"]
 [ext_resource type="PackedScene" uid="uid://dtpdw646dslny" path="res://Assets/BinbunVFX/Treasure_Pro/Jewelry/Gold_Ring/Gold_Ring_01.glb" id="16_q2n8a"]
+[ext_resource type="PackedScene" uid="uid://bhjjverbnt03i" path="res://Assets/Characters/AdventurersAccessoires/shield_badge.gltf" id="17_ln0k4"]
+[ext_resource type="PackedScene" uid="uid://du153ymwjgjyu" path="res://Assets/Characters/AdventurersAccessoires/axe_2handed.gltf" id="18_ewden"]
 
 [sub_resource type="Environment" id="Environment_b02ke"]
 background_energy_multiplier = 0.0
@@ -79,6 +81,9 @@ transform = Transform3D(0.7071067, 0.35355338, 0.6123724, 0, 0.8660254, -0.5, -0
 [node name="Gold_Ring_012" parent="Old" unique_id=1854425511 instance=ExtResource("16_q2n8a")]
 transform = Transform3D(0.7071067, 0.35355338, 0.6123724, 0, 0.8660254, -0.5, -0.70710677, 0.35355335, 0.61237246, 0, 0, 0)
 
+[node name="shield_badge2" parent="Old" unique_id=548612074 instance=ExtResource("17_ln0k4")]
+transform = Transform3D(0.8365163, 0.5, -0.22414389, -0.4829629, 0.8660254, 0.12940952, 0.25881904, -1.4901161e-08, 0.9659258, 0, 0, 0)
+
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=979525193]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 2, 0)
 
@@ -87,3 +92,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4901161e-08, 1)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=799984259]
 environment = SubResource("Environment_b02ke")
+
+[node name="axe_2handed2" parent="." unique_id=219411092 instance=ExtResource("18_ewden")]
+transform = Transform3D(0.96984625, 0.17101009, -0.17364818, -0.1413145, 0.9750824, 0.17101006, 0.19856574, -0.14131448, 0.96984625, 0, -0.3, -0.2)

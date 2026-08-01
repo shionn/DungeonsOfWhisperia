@@ -191,7 +191,7 @@ func receive_atk(nb_atk: int) -> void:
 	else :
 		#gui.consoleLog("Vous obtenez %d 💀" % [nb_atk])
 		var label : Node3D = preload("res://Game/StateLabel.tscn").instantiate()
-		label.set_text("%d💀"%[nb_atk, nb_def])
+		label.set_text("%d💀"%[nb_atk])
 		add_child(label)
 	if deg > 0 :
 		pv = pv - deg

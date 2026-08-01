@@ -9,7 +9,7 @@ func _ready() -> void:
 	bag.item_loot.connect(_on_item_loot)
 	bag.item_drop.connect(_on_item_drop)
 	
-	gui._options._apply()
+	options.apply()
 
 
 func _on_skeleton_golem_dead() -> void:

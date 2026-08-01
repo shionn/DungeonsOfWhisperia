@@ -1,7 +1,6 @@
 #include "dithering.gdshaderinc"
 
 const vec3 ign = vec3(0.06711056f, 0.00583715f, 52.9829189f);
-
 bool alpha_discard(float value, vec4 frag, int mode, float d_cutoff, float a_cutoff){
 	if(mode == 0){
 		return false;

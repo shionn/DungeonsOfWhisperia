@@ -52,10 +52,10 @@ func apply() -> void:
 	_apply_input("open_quest", KEY_J)
 	_apply_input("open_bag", KEY_I)
 	_apply_input("menu", KEY_ESCAPE)
-	_apply_input("spell_1", KEY_1)
+	_apply_input("spell_1", KEY_AMPERSAND)
 	_apply_input("spell_2", KEY_2)
-	_apply_input("spell_3", KEY_3)
-	_apply_input("spell_4", KEY_4)
+	_apply_input("spell_3", KEY_QUOTEDBL)
+	_apply_input("spell_4", KEY_APOSTROPHE)
 	
 	applied.emit()
 	
@@ -63,6 +63,15 @@ func _apply_input(action : String, default : Key) -> void :
 	for input in InputMap.action_get_events(action) :
 		if input is InputEventKey :
 			(input as InputEventKey).keycode = get_input_key(action,default)
+
+func get_input_key_char(action: String, default : Key) -> String: 
+	var key = get_input_key(action, default)
+	match key :
+		KEY_AMPERSAND : return "1"
+		KEY_QUOTEDBL : return "3"
+		KEY_APOSTROPHE : return "4"
+		_ : return OS.get_keycode_string(key)
+
 
 
 func get_audio_backbround_vol() -> float : return _options.get_or_add("audio-background-value", -24.0)

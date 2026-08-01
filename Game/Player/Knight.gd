@@ -1,5 +1,7 @@
 extends PlayerG
 
+@onready var _position_def : Spell = $"Position Defensive"
+
 enum AttackMode {CHOP, HORIZONTAL, DIAGONAL}
 var _atk : AttackMode = AttackMode.DIAGONAL
 
@@ -9,7 +11,16 @@ func _ready() -> void:
 	$Character/Rig_Medium/Skeleton3D/Knight_HelmetVisor.hide()
 	super._ready()
 
-func get_def() -> int: 		return 2+lvl
+func _on_position_defensive_cast() -> void:
+	_position_def.enable = true
+	_position_def.charge = 8+lvl*2
+
+func get_def() -> int: 
+	var def = 2 + lvl
+	if _position_def.enable : 
+		def = def + 1
+		_position_def.charge = _position_def.charge - 1
+	return def
 func get_max_pv() -> int:	return 6+lvl
 func get_atk_range()-> float:						return 2
 func get_atk_animation() -> String: 
@@ -20,7 +31,10 @@ func get_atk_animation() -> String:
 		AttackMode.DIAGONAL : return "Melee_1H_Attack_Slice_Diagonal"
 		_ : return "Melee_1H_Attack_Chop"
 func is_atk_dual_Hand() -> bool:				return false
-func get_atk_main_hand() -> int:				return Dices.d6(2+lvl, 4)
+func get_atk_main_hand() -> int:
+	var atk = 2 + lvl
+	if _position_def.enable : atk = atk - 1
+	return Dices.d6(atk, 4)
 func get_atk_main_hand_timer_factor() -> float: 
 	match _atk :
 		AttackMode.CHOP : return .55
@@ -30,4 +44,4 @@ func get_atk_main_hand_timer_factor() -> float:
 func get_atk_off_hand() -> int: 				return 0
 func get_atk_off_hand_timer_factor() -> float:	return 0
 func get_player_classe(): return "Knight"
-func get_spells(): return []
+func get_spells(): return [  $"Position Defensive" ]

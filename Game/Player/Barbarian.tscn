@@ -3,8 +3,25 @@
 [ext_resource type="PackedScene" uid="uid://ddvg2rw2bunm2" path="res://Game/Player/Player.tscn" id="1_jipi2"]
 [ext_resource type="Script" uid="uid://dr56oy5qoqu8u" path="res://Game/Player/Barbarian.gd" id="2_hlpfu"]
 [ext_resource type="PackedScene" uid="uid://lmccymxaj0hd" path="res://Assets/Scenes/Barbarian.tscn" id="2_hnhai"]
+[ext_resource type="PackedScene" uid="uid://bb22iem3wms10" path="res://Assets/BinbunVFX/magic_areas/effects/rim_area/rim_area_vfx_04.tscn" id="4_hlpfu"]
+[ext_resource type="Script" uid="uid://chilcihl71dnl" path="res://Game/Player/Spell.gd" id="5_d7w75"]
+[ext_resource type="Texture2D" uid="uid://cqq0crki4jkdh" path="res://Gui/Assets/kaykit/48/Axe_2Handed.png" id="6_e8d6y"]
 
 [node name="Player" unique_id=384338158 instance=ExtResource("1_jipi2")]
 script = ExtResource("2_hlpfu")
 
 [node name="Character" parent="." index="7" unique_id=496203564 instance=ExtResource("2_hnhai")]
+
+[node name="RimAreaVFX_04" parent="." index="10" unique_id=2046078749 instance=ExtResource("4_hlpfu")]
+visible = false
+light_enable = false
+
+[node name="Berserker" type="Node" parent="." index="11" unique_id=1169966538 node_paths=PackedStringArray("aura")]
+script = ExtResource("5_d7w75")
+icon = ExtResource("6_e8d6y")
+cold_down = 120
+animation = "Ranged_Magic_Raise"
+aura = NodePath("../RimAreaVFX_04")
+metadata/_custom_type_script = "uid://chilcihl71dnl"
+
+[connection signal="cast" from="Berserker" to="." method="_on_berserker_cast"]

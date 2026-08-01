@@ -3,8 +3,25 @@
 [ext_resource type="PackedScene" uid="uid://ddvg2rw2bunm2" path="res://Game/Player/Player.tscn" id="1_4bdfv"]
 [ext_resource type="PackedScene" uid="uid://b8yjt6ifs5miv" path="res://Assets/Scenes/Knight.tscn" id="2_cy0tt"]
 [ext_resource type="Script" uid="uid://bgw0weyrn60oj" path="res://Game/Player/Knight.gd" id="2_oskaq"]
+[ext_resource type="Script" uid="uid://chilcihl71dnl" path="res://Game/Player/Spell.gd" id="4_oskaq"]
+[ext_resource type="Texture2D" uid="uid://dj7ka5s3jl3pr" path="res://Gui/Assets/kaykit/48/Shield_Badge.png" id="5_efusb"]
+[ext_resource type="PackedScene" uid="uid://douw4khr83wp0" path="res://Assets/BinbunVFX/magic_areas/effects/rim_area/rim_area_vfx_02.tscn" id="6_o5has"]
 
 [node name="Player" unique_id=384338158 instance=ExtResource("1_4bdfv")]
 script = ExtResource("2_oskaq")
 
-[node name="Character" parent="." index="7" unique_id=432149207 instance=ExtResource("2_cy0tt")]
+[node name="Character" parent="." index="9" unique_id=432149207 instance=ExtResource("2_cy0tt")]
+
+[node name="RimAreaVFX_02" parent="." index="10" unique_id=104513358 instance=ExtResource("6_o5has")]
+visible = false
+light_enable = false
+
+[node name="Position Defensive" type="Node" parent="." index="11" unique_id=1555725152 node_paths=PackedStringArray("aura")]
+script = ExtResource("4_oskaq")
+icon = ExtResource("5_efusb")
+cold_down = 120
+animation = "Ranged_Magic_Raise"
+aura = NodePath("../RimAreaVFX_02")
+metadata/_custom_type_script = "uid://chilcihl71dnl"
+
+[connection signal="cast" from="Position Defensive" to="." method="_on_position_defensive_cast"]

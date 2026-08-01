@@ -54,7 +54,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
 script = ExtResource("3_khsc5")
 _anim = "Melee_2H_Attack_Slice"
 _description = "Le Barbare
-Equipé d'une Hache à 2 mains il possede une forte vitalitée. Il a une attaque solide, ces critiques sont dévastateur et une defense moyenne.
+Equipé d'une Hache à 2 mains il possede une forte vitalitée. Il a une attaque solide, ces critiques sont dévastateur et une defense moyenne. Il possede un sort lui permettant d'augmenter son attaque au détriment de sa défenses.
 [ul]
 Hache à deux main : 2+lvl (+1 sur critique)
 Défense : 1+lvl
@@ -111,7 +111,7 @@ shape = SubResource("CylinderShape3D_b02ke")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
 script = ExtResource("3_khsc5")
 _description = "Le Chevalier
-Equipée d'une épée et d'une solide Armure, il as une attaque solide et une défense solide. Mais il ne possede aucune capacité spéciale.   
+Equipée d'une épée et d'une solide Armure, il as une attaque solide et une défense solide. Il possede un sort lui permettant d'augmenter sa défense au détriment de son attaque.
 [ul]
 Epée : 2+lvl
 Défense : 2+lvl
