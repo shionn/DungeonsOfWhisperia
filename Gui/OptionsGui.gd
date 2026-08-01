@@ -25,6 +25,7 @@ func _ready() -> void:
 	_vsync_mode_button.get_popup().id_pressed.connect(_on_vsync_mode_id_pressed)
 	options.applied.connect(_on_applied)
 
+
 func _on_applied() -> void :
 	_music_vol_label.text = "Volume Musique (%ddb)" % options.get_audio_backbround_vol()
 	_music_slide.value = options.get_audio_backbround_vol()

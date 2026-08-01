@@ -33,7 +33,7 @@ func _ready() -> void:
 	Input.set_default_cursor_shape(Input.CURSOR_ARROW)
 
 func _physics_process(_delta: float) -> void:
-	if Input.is_action_just_pressed("menu") :
+	if Input.is_action_just_pressed("menu") and not _options.visible :
 		if _options.visible :
 			_options.hide()
 		elif _introduction.visible :

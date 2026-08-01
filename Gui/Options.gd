@@ -5,8 +5,11 @@ signal applied()
 
 var _options : Dictionary = {}
 
-func _ready() -> void:
+func _init() -> void:
 	load_to_file()
+
+func _ready() -> void:
+	apply()
 
 func load_to_file() -> void:
 	var file_name = "user://options.save"
@@ -14,7 +17,6 @@ func load_to_file() -> void:
 		var file = FileAccess.open(file_name, FileAccess.READ)
 		_options = JSON.parse_string(file.get_as_text())
 		file.close()
-	apply()
 
 func save_to_file() -> void:
 	var json_string = JSON.stringify(_options, "\t")
@@ -43,7 +45,21 @@ func apply() -> void:
 	
 	get_viewport().get_camera_3d().fov = get_video_fov()
 	
+	_apply_input("move_front", KEY_Z)
+	_apply_input("move_back", KEY_S)
+	_apply_input("move_left", KEY_Q)
+	_apply_input("move_right", KEY_D)
+	_apply_input("open_quest", KEY_J)
+	_apply_input("open_bag", KEY_I)
+	_apply_input("menu", KEY_ESCAPE)
+	
 	applied.emit()
+	
+func _apply_input(action : String, default : Key) -> void :
+	for input in InputMap.action_get_events(action) :
+		if input is InputEventKey :
+			(input as InputEventKey).keycode = get_input_key(action,default)
+
 
 func get_audio_backbround_vol() -> float : return _options.get_or_add("audio-background-value", -24.0)
 func get_audio_effect_vol()     -> float : return _options.get_or_add("audio-effect-value", -24.0)
@@ -53,6 +69,7 @@ func get_video_scale_mode()     -> Viewport.Scaling3DMode : return _options.get_
 func get_vsync_mode()           -> DisplayServer.VSyncMode : return _options.get_or_add("video-vsync", DisplayServer.VSYNC_ENABLED)
 func is_ssao_enable()           -> bool  : return _options.get_or_add("video-ssao", true)
 func get_video_fov()            -> float : return _options.get_or_add("video-fov", 75.0)
+func get_input_key(action: String, default : Key) -> Key: return _options.get_or_add("input-%s"%action, default)
 
 func set_audio_backbround_vol(value: float) -> void : _options.set("audio-background-value", value)
 func set_audio_effect_vol(value: float) -> void : _options.set("audio-effect-value", value)
@@ -62,3 +79,4 @@ func set_video_scale_mode(value: Viewport.Scaling3DMode) -> void : _options.set(
 func set_vsync_mode(value: DisplayServer.VSyncMode) -> void : _options.set("video-vsync", value)
 func set_ssao(value: bool) -> void : _options.set("video-ssao", value)
 func set_video_fov(value: float) -> void : _options.set("video-fov", value)
+func set_input_key(action_name: String, keycode : Key) : _options.set("input-%s"%action_name, keycode)
