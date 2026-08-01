@@ -1,132 +1,64 @@
-extends GridContainer
+class_name Options
+extends Node
 
-@onready var _scale_label = $PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer/Scale
-@onready var _scale_mode_button = $PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer/ScaleModeButton
-@onready var _vsync_mode_button = $PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer/VSyncMode
-@onready var _music_vol_label = $"PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer/Volume Music"
-@onready var _effect_vol_label = $"PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer/Volume Son"
-@onready var _music_slide = $PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer/HSliderMusic
-@onready var _effect_slide = $PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer/HSliderSon
-@onready var _full_screen = $PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer/FullScreenButton
-@onready var _scale_slide = $PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer/HSliderScale
-@onready var _ssao_button = $PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer/ShadowSSAOButton
-@onready var _fov_label = $"PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer/Fov"
-@onready var _fov_slide = $PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer/HSliderFov
-
+signal applied()
 
 var _options : Dictionary = {}
 
 func _ready() -> void:
-	hide()
-	_scale_mode_button.get_popup().id_pressed.connect(_on_scale_mode_id_pressed)
-	_vsync_mode_button.get_popup().id_pressed.connect(_on_vsync_mode_id_pressed)
-	_load()
+	load_to_file()
 
-func _load() -> void:
+func load_to_file() -> void:
 	var file_name = "user://options.save"
 	if FileAccess.file_exists(file_name) :
 		var file = FileAccess.open(file_name, FileAccess.READ)
 		_options = JSON.parse_string(file.get_as_text())
 		file.close()
-	_apply()
+	apply()
 
-func _save() -> void:
+func save_to_file() -> void:
 	var json_string = JSON.stringify(_options, "\t")
 	var file = FileAccess.open("user://options.save", FileAccess.WRITE)
 	file.store_line(json_string)
 	file.close()
 
-func _apply() -> void: 
-	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Background"), _options.get_or_add("audio-background-value", -24.0))
-	_music_vol_label.text = "Volume Musique (%ddb)" % _options.get_or_add("audio-background-value", -24.0)
-	_music_slide.value=_options.get_or_add("audio-background-value", -24.0)
+func apply_and_save() -> void:
+	apply()
+	save_to_file()
 
-	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Effet"), _options.get_or_add("audio-effect-value", 0.0))
-	_effect_vol_label.text = "Volume Son (%ddb)" % _options.get_or_add("audio-effect-value", -0.0)
-	_effect_slide.value=_options.get_or_add("audio-effect-value", 0.0)
+func apply() -> void:
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Background"), get_audio_backbround_vol() )
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Effet"),      get_audio_effect_vol())
 
-	if _options.get_or_add("video-fullscreen", false) :
-		get_window().mode = Window.MODE_FULLSCREEN
-		_full_screen.button_pressed = true
-	else :
-		get_window().mode = Window.MODE_WINDOWED
-		_full_screen.button_pressed = false
+	if is_fullscreen() : get_window().mode = Window.MODE_FULLSCREEN
+	else :               get_window().mode = Window.MODE_WINDOWED
 
-	_scale_label.text = "Mise à l'échelle (%.2f)" % _options.get_or_add("video-scale", 1.0)
-	_scale_slide.value = _options.get_or_add("video-scale", 1.0)
-	get_viewport().scaling_3d_scale = _options.get_or_add("video-scale")
-	
-	match _options.get_or_add("video-scale-mode", Viewport.SCALING_3D_MODE_BILINEAR) as Viewport.Scaling3DMode :
-		Viewport.SCALING_3D_MODE_BILINEAR : _scale_mode_button.text = "Linéaire"
-		Viewport.SCALING_3D_MODE_FSR : _scale_mode_button.text = "FSR 1"
-		Viewport.SCALING_3D_MODE_FSR2 : _scale_mode_button.text = "FSR 2"
-		Viewport.SCALING_3D_MODE_METALFX_SPATIAL : _scale_mode_button.text = "Métal FX"
-		Viewport.SCALING_3D_MODE_METALFX_TEMPORAL : _scale_mode_button.text = "Métal FX Temporel"
-		Viewport.SCALING_3D_MODE_NEAREST : _scale_mode_button.text = "Entière (Nearest)"
-	get_viewport().scaling_3d_mode = _options.get_or_add("video-scale-mode", Viewport.SCALING_3D_MODE_BILINEAR)
+	get_viewport().scaling_3d_scale = get_video_scale()
+	get_viewport().scaling_3d_mode  = get_video_scale_mode()
 
-	match _options.get_or_add("video-vsync", DisplayServer.VSYNC_ENABLED) as DisplayServer.VSyncMode : 
-		DisplayServer.VSYNC_ENABLED:  _vsync_mode_button.text = "Activé"
-		DisplayServer.VSYNC_ADAPTIVE: _vsync_mode_button.text = "Adaptatif"
-		DisplayServer.VSYNC_DISABLED: _vsync_mode_button.text = "Désactivé"
-	DisplayServer.window_set_vsync_mode(_options.get_or_add("video-vsync", DisplayServer.VSYNC_ENABLED))
+	DisplayServer.window_set_vsync_mode(get_vsync_mode())
 
 	var env  = $"/root/World/Dungeon/Environment" as WorldEnvironment
-	env.environment.ssao_enabled = _options.get_or_add("video-ssao", true)
-	_ssao_button.button_pressed = _options.get_or_add("video-ssao", true)
+	env.environment.ssao_enabled = is_ssao_enable()
 	
-	get_viewport().get_camera_3d().fov = _options.get_or_add("video-fov", 75.0)
-	_fov_label.text = "Champ de vision (%d°)"%_options.get_or_add("video-fov", 75.0)
+	get_viewport().get_camera_3d().fov = get_video_fov()
+	
+	applied.emit()
 
-func _on_music_value_changed(value: float) -> void:
-	_options.set("audio-background-value", value)
-	_apply()
-	_save()
+func get_audio_backbround_vol() -> float : return _options.get_or_add("audio-background-value", -24.0)
+func get_audio_effect_vol()     -> float : return _options.get_or_add("audio-effect-value", -24.0)
+func is_fullscreen()            -> bool  : return _options.get_or_add("video-fullscreen", false)
+func get_video_scale()          -> float : return _options.get_or_add("video-scale", 1.0)
+func get_video_scale_mode()     -> Viewport.Scaling3DMode : return _options.get_or_add("video-scale-mode", Viewport.SCALING_3D_MODE_BILINEAR)
+func get_vsync_mode()           -> DisplayServer.VSyncMode : return _options.get_or_add("video-vsync", DisplayServer.VSYNC_ENABLED)
+func is_ssao_enable()           -> bool  : return _options.get_or_add("video-ssao", true)
+func get_video_fov()            -> float : return _options.get_or_add("video-fov", 75.0)
 
-func _on_son_value_changed(value: float) -> void:
-	_options.set("audio-effect-value", value)
-	_apply()
-	_save()
-
-func _on_close_button_pressed() -> void:
-	hide()
-
-func _on_full_screen_button_toggled(toggled_on: bool) -> void:
-	_options.set("video-fullscreen", toggled_on)
-	_apply()
-	_save()
-
-func _on_h_slider_scale_value_changed(value: float) -> void:
-	_options.set("video-scale", value)
-	_apply()
-	_save()
-
-func _on_scale_mode_id_pressed(id: int) -> void:
-	match id :
-		0 : _options.set("video-scale-mode", Viewport.SCALING_3D_MODE_BILINEAR)
-		1 : _options.set("video-scale-mode", Viewport.SCALING_3D_MODE_FSR)
-		2 : _options.set("video-scale-mode", Viewport.SCALING_3D_MODE_FSR2)
-		3 : _options.set("video-scale-mode", Viewport.SCALING_3D_MODE_METALFX_SPATIAL)
-		4 : _options.set("video-scale-mode", Viewport.SCALING_3D_MODE_METALFX_TEMPORAL)
-		5 : _options.set("video-scale-mode", Viewport.SCALING_3D_MODE_NEAREST)
-	_apply()
-	_save()
-
-func _on_shadow_ssao_button_toggled(toggled_on: bool) -> void:
-	_options.set("video-ssao", toggled_on)
-	_apply()
-	_save()
-
-func _on_vsync_mode_id_pressed(id: int) -> void:
-	match id : 
-		0: _options.set("video-vsync", DisplayServer.VSYNC_ENABLED)
-		1: _options.set("video-vsync", DisplayServer.VSYNC_ADAPTIVE)
-		2: _options.set("video-vsync", DisplayServer.VSYNC_DISABLED)
-	_apply()
-	_save()
-
-
-func _on_h_slider_fov_value_changed(value: float) -> void:
-	_options.set("video-fov", value)
-	_apply()
-	_save()
+func set_audio_backbround_vol(value: float) -> void : _options.set("audio-background-value", value)
+func set_audio_effect_vol(value: float) -> void : _options.set("audio-effect-value", value)
+func set_fullsceen(value: bool) -> void : _options.set("video-fullscreen", value)
+func set_video_scale(value: float) -> void : _options.set("video-scale", value)
+func set_video_scale_mode(value: Viewport.Scaling3DMode) -> void : _options.set("video-scale-mode", value)
+func set_vsync_mode(value: DisplayServer.VSyncMode) -> void : _options.set("video-vsync", value)
+func set_ssao(value: bool) -> void : _options.set("video-ssao", value)
+func set_video_fov(value: float) -> void : _options.set("video-fov", value)

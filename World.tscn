@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://chj6or7vh11ry"]
 
 [ext_resource type="Script" uid="uid://cudoi1kpvpwh0" path="res://Game/World.gd" id="1_bcbcq"]
+[ext_resource type="Script" uid="uid://dv01u4y3igkh5" path="res://Gui/Options.gd" id="1_sjtuv"]
 [ext_resource type="PackedScene" uid="uid://dpbieqlycbivt" path="res://Gui/Gui.tscn" id="2_2dftf"]
 [ext_resource type="Script" uid="uid://bjbab3ep2gfn2" path="res://Game/Items/Item.gd" id="5_p1v5b"]
 [ext_resource type="Script" uid="uid://ccps0bdr1ahel" path="res://Game/Items/Items.gd" id="5_wygdx"]
@@ -173,6 +174,10 @@ icon = ExtResource("21_0to5b")
 description = "C'est une alliance."
 unique = true
 metadata/_custom_type_script = "uid://bjbab3ep2gfn2"
+
+[node name="Options" type="Node" parent="." unique_id=586375258]
+script = ExtResource("1_sjtuv")
+metadata/_custom_type_script = "uid://dv01u4y3igkh5"
 
 [connection signal="_action" from="Items/Potion Vie Mineur" to="Items/Potion Vie Mineur" method="_give_back_1d3_pv"]
 [connection signal="_action" from="Items/Potion Vie Moyenne" to="Items/Potion Vie Moyenne" method="_give_back_4_6_pv"]

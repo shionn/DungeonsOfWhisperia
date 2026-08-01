@@ -29,11 +29,13 @@
 [ext_resource type="Script" uid="uid://b5u38rsuiglhp" path="res://Gui/MenuGui.gd" id="22_mnphl"]
 [ext_resource type="Script" uid="uid://cstky8dpig813" path="res://Gui/DialogGui.gd" id="23_2m3pn"]
 [ext_resource type="Texture2D" uid="uid://d136lgd35s1xx" path="res://Gui/Assets/kenney/cursor-pack/mark_question.png" id="23_883rq"]
-[ext_resource type="Script" uid="uid://o6q2ok64i8cs" path="res://Gui/Options.gd" id="24_7xgee"]
+[ext_resource type="Script" uid="uid://o6q2ok64i8cs" path="res://Gui/OptionsGui.gd" id="24_7xgee"]
 [ext_resource type="Script" uid="uid://bc4y4enkrwodc" path="res://Gui/ConsoleLog.gd" id="24_xkmul"]
 [ext_resource type="Script" uid="uid://bcc2j6w4n4yqq" path="res://Gui/Transition.gd" id="25_60sjt"]
 [ext_resource type="Texture2D" uid="uid://boyc38jk2iy35" path="res://Gui/Assets/kenney/cursor-pack/tool_pickaxe.png" id="26_f4re5"]
 [ext_resource type="Script" uid="uid://b57hjgf2uu7ly" path="res://Gui/Introduction.gd" id="26_m2wub"]
+[ext_resource type="Texture2D" uid="uid://coqbc50srmggs" path="res://Gui/Assets/kenney/cursor-pack/drawing_brush.png" id="29_cq4r1"]
+[ext_resource type="Texture2D" uid="uid://yfroui2vo2nl" path="res://Gui/Assets/kenney/cursor-pack/steps.png" id="30_tamh2"]
 [ext_resource type="Script" uid="uid://c47eb21su127s" path="res://Gui/DungeonExit.gd" id="34_f4re5"]
 [ext_resource type="Texture2D" uid="uid://ctgwsk6s31p4p" path="res://Gui/Assets/kenney/cursor-pack/door_enter.png" id="34_w65rx"]
 [ext_resource type="Script" uid="uid://cbpdlo58gok7v" path="res://Gui/SpellButton.gd" id="37_f4re5"]
@@ -751,7 +753,6 @@ layout_mode = 2
 texture = ExtResource("18_w65rx")
 
 [node name="Options" type="GridContainer" parent="." unique_id=139407599]
-visible = false
 z_index = 10
 layout_mode = 1
 anchors_preset = 8
@@ -790,11 +791,11 @@ size_flags_vertical = 3
 texture = ExtResource("14_3yfkq")
 stretch_mode = 1
 
-[node name="PanelContainer" type="PanelContainer" parent="Options" unique_id=857109422]
+[node name="PanelC" type="PanelContainer" parent="Options" unique_id=857109422]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_8rxp0")
 
-[node name="MarginContainer" type="MarginContainer" parent="Options/PanelContainer" unique_id=326523103]
+[node name="MarginC" type="MarginContainer" parent="Options/PanelC" unique_id=326523103]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/margin_left = 2
@@ -802,62 +803,74 @@ theme_override_constants/margin_top = 2
 theme_override_constants/margin_right = 2
 theme_override_constants/margin_bottom = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Options/PanelContainer/MarginContainer" unique_id=936644291]
+[node name="VBoxC" type="VBoxContainer" parent="Options/PanelC/MarginC" unique_id=936644291]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 0
 
-[node name="Label" type="Label" parent="Options/PanelContainer/MarginContainer/VBoxContainer" unique_id=759920468]
+[node name="Label" type="Label" parent="Options/PanelC/MarginC/VBoxC" unique_id=759920468]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 24
 text = "Options"
 horizontal_alignment = 1
 
-[node name="MarginContainer" type="MarginContainer" parent="Options/PanelContainer/MarginContainer/VBoxContainer" unique_id=558236384]
+[node name="TabC" type="TabContainer" parent="Options/PanelC/MarginC/VBoxC" unique_id=14768021]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_constants/margin_left = 20
-theme_override_constants/margin_top = 5
-theme_override_constants/margin_right = 20
-theme_override_constants/margin_bottom = 5
+theme_override_colors/font_selected_color = Color(0, 0, 0, 1)
+theme_override_constants/tab_separation = 32
+theme_override_styles/panel = SubResource("StyleBoxEmpty_8pck7")
+theme_override_styles/tab_unselected = SubResource("StyleBoxEmpty_5koau")
+theme_override_styles/tab_hovered = SubResource("StyleBoxEmpty_u21oi")
+theme_override_styles/tab_selected = SubResource("StyleBoxEmpty_2pnra")
+theme_override_styles/tab_disabled = SubResource("StyleBoxEmpty_l4ar5")
+theme_override_styles/tab_focus = SubResource("StyleBoxEmpty_owfy6")
+tab_alignment = 1
+current_tab = 0
+tab_0/title = "Affichage et Son"
+tab_0/icon = ExtResource("29_cq4r1")
+tab_1/title = "Contrôle"
+tab_1/icon = ExtResource("30_tamh2")
 
-[node name="GridContainer" type="GridContainer" parent="Options/PanelContainer/MarginContainer/VBoxContainer/MarginContainer" unique_id=861830191]
+[node name="Affichage" type="GridContainer" parent="Options/PanelC/MarginC/VBoxC/TabC" unique_id=861830191]
 layout_mode = 2
 size_flags_vertical = 3
 columns = 2
+metadata/_tab_index = 0
+metadata/_tab_name = "Affichage et Son"
 
-[node name="Fullscreen" type="Label" parent="Options/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer" unique_id=1173243998]
+[node name="FullScreenL" type="Label" parent="Options/PanelC/MarginC/VBoxC/TabC/Affichage" unique_id=977665002]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Plein écran"
 
-[node name="FullScreenButton" type="CheckButton" parent="Options/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer" unique_id=1319475036]
+[node name="FullScreenB" type="CheckButton" parent="Options/PanelC/MarginC/VBoxC/TabC/Affichage" unique_id=906075981]
 layout_mode = 2
 size_flags_horizontal = 0
 mouse_default_cursor_shape = 2
 
-[node name="Fov" type="Label" parent="Options/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer" unique_id=883559014]
+[node name="FovL" type="Label" parent="Options/PanelC/MarginC/VBoxC/TabC/Affichage" unique_id=1470357246]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Champ de vision (75°)"
 
-[node name="HSliderFov" type="HSlider" parent="Options/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer" unique_id=1340254960]
+[node name="FovHSlider" type="HSlider" parent="Options/PanelC/MarginC/VBoxC/TabC/Affichage" unique_id=95305856]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
 mouse_default_cursor_shape = 2
 min_value = 40.0
-max_value = 180.0
+max_value = 120.0
 value = 75.0
 scrollable = false
 
-[node name="VSync" type="Label" parent="Options/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer" unique_id=1089913169]
+[node name="VSyncL" type="Label" parent="Options/PanelC/MarginC/VBoxC/TabC/Affichage" unique_id=1087222573]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Synchronisation Verticale"
 
-[node name="VSyncMode" type="MenuButton" parent="Options/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer" unique_id=1698938971]
+[node name="VSyncM" type="MenuButton" parent="Options/PanelC/MarginC/VBoxC/TabC/Affichage" unique_id=1242041588]
 layout_mode = 2
 mouse_default_cursor_shape = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -875,12 +888,12 @@ popup/item_1/id = 1
 popup/item_2/text = "Désactivé"
 popup/item_2/id = 2
 
-[node name="Scale" type="Label" parent="Options/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer" unique_id=391669916]
+[node name="ScaleL" type="Label" parent="Options/PanelC/MarginC/VBoxC/TabC/Affichage" unique_id=1931491397]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Mise à l'échelle (1.00)"
 
-[node name="HSliderScale" type="HSlider" parent="Options/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer" unique_id=201778535]
+[node name="ScaleHSlider" type="HSlider" parent="Options/PanelC/MarginC/VBoxC/TabC/Affichage" unique_id=552603733]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
@@ -891,12 +904,12 @@ step = 0.01
 value = 1.0
 scrollable = false
 
-[node name="ScaleMode" type="Label" parent="Options/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer" unique_id=1142465128]
+[node name="ScaleModeL" type="Label" parent="Options/PanelC/MarginC/VBoxC/TabC/Affichage" unique_id=1113777528]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Méthode d'échelle"
 
-[node name="ScaleModeButton" type="MenuButton" parent="Options/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer" unique_id=1089765666]
+[node name="ScaleModeB" type="MenuButton" parent="Options/PanelC/MarginC/VBoxC/TabC/Affichage" unique_id=230296202]
 layout_mode = 2
 mouse_default_cursor_shape = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -920,23 +933,23 @@ popup/item_4/id = 4
 popup/item_5/text = "Entière (Nearest)"
 popup/item_5/id = 5
 
-[node name="ShadowSSAO" type="Label" parent="Options/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer" unique_id=319142186]
+[node name="SSAOL" type="Label" parent="Options/PanelC/MarginC/VBoxC/TabC/Affichage" unique_id=349759801]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Ombre SSAO"
 
-[node name="ShadowSSAOButton" type="CheckButton" parent="Options/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer" unique_id=1203785437]
+[node name="SSAOB" type="CheckButton" parent="Options/PanelC/MarginC/VBoxC/TabC/Affichage" unique_id=760477011]
 layout_mode = 2
 size_flags_horizontal = 0
 mouse_default_cursor_shape = 2
 button_pressed = true
 
-[node name="Volume Music" type="Label" parent="Options/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer" unique_id=2027116726]
+[node name="MusicL" type="Label" parent="Options/PanelC/MarginC/VBoxC/TabC/Affichage" unique_id=1880611917]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Volume Musique"
 
-[node name="HSliderMusic" type="HSlider" parent="Options/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer" unique_id=1616776521]
+[node name="MusicHSlider" type="HSlider" parent="Options/PanelC/MarginC/VBoxC/TabC/Affichage" unique_id=590078215]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
@@ -946,12 +959,12 @@ max_value = 0.0
 value = -24.0
 scrollable = false
 
-[node name="Volume Son" type="Label" parent="Options/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer" unique_id=1596451124]
+[node name="SonL" type="Label" parent="Options/PanelC/MarginC/VBoxC/TabC/Affichage" unique_id=27651723]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Volume Son"
 
-[node name="HSliderSon" type="HSlider" parent="Options/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer" unique_id=2094957936]
+[node name="SonHSlider" type="HSlider" parent="Options/PanelC/MarginC/VBoxC/TabC/Affichage" unique_id=1224053541]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
@@ -960,7 +973,15 @@ min_value = -72.0
 max_value = 0.0
 scrollable = false
 
-[node name="CloseButton" type="Button" parent="Options/PanelContainer/MarginContainer/VBoxContainer" unique_id=121370059]
+[node name="Controle" type="GridContainer" parent="Options/PanelC/MarginC/VBoxC/TabC" unique_id=1764653607]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+columns = 2
+metadata/_tab_index = 1
+metadata/_tab_name = "Contrôle"
+
+[node name="CloseButton" type="Button" parent="Options/PanelC/MarginC/VBoxC" unique_id=121370059]
 layout_mode = 2
 size_flags_horizontal = 3
 tooltip_text = "Fermer"
@@ -1704,13 +1725,13 @@ texture = ExtResource("18_w65rx")
 [connection signal="visibility_changed" from="Introduction" to="." method="update_mouse_mode"]
 [connection signal="visibility_changed" from="Introduction/PanelContainer/MarginContainer/VBoxContainer/TabContainer/Quete" to="Introduction" method="_on_quete_visibility_changed"]
 [connection signal="pressed" from="Introduction/PanelContainer/MarginContainer/VBoxContainer/CloseButton" to="Introduction" method="_on_close_button_pressed"]
-[connection signal="toggled" from="Options/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer/FullScreenButton" to="Options" method="_on_full_screen_button_toggled"]
-[connection signal="value_changed" from="Options/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer/HSliderFov" to="Options" method="_on_h_slider_fov_value_changed"]
-[connection signal="value_changed" from="Options/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer/HSliderScale" to="Options" method="_on_h_slider_scale_value_changed"]
-[connection signal="toggled" from="Options/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer/ShadowSSAOButton" to="Options" method="_on_shadow_ssao_button_toggled"]
-[connection signal="value_changed" from="Options/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer/HSliderMusic" to="Options" method="_on_music_value_changed"]
-[connection signal="value_changed" from="Options/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/GridContainer/HSliderSon" to="Options" method="_on_son_value_changed"]
-[connection signal="pressed" from="Options/PanelContainer/MarginContainer/VBoxContainer/CloseButton" to="Options" method="_on_close_button_pressed"]
+[connection signal="toggled" from="Options/PanelC/MarginC/VBoxC/TabC/Affichage/FullScreenB" to="Options" method="_on_full_screen_button_toggled"]
+[connection signal="value_changed" from="Options/PanelC/MarginC/VBoxC/TabC/Affichage/FovHSlider" to="Options" method="_on_h_slider_fov_value_changed"]
+[connection signal="value_changed" from="Options/PanelC/MarginC/VBoxC/TabC/Affichage/ScaleHSlider" to="Options" method="_on_h_slider_scale_value_changed"]
+[connection signal="toggled" from="Options/PanelC/MarginC/VBoxC/TabC/Affichage/SSAOB" to="Options" method="_on_shadow_ssao_button_toggled"]
+[connection signal="value_changed" from="Options/PanelC/MarginC/VBoxC/TabC/Affichage/MusicHSlider" to="Options" method="_on_music_value_changed"]
+[connection signal="value_changed" from="Options/PanelC/MarginC/VBoxC/TabC/Affichage/SonHSlider" to="Options" method="_on_son_value_changed"]
+[connection signal="pressed" from="Options/PanelC/MarginC/VBoxC/CloseButton" to="Options" method="_on_close_button_pressed"]
 [connection signal="visibility_changed" from="DialogGui" to="." method="update_mouse_mode"]
 [connection signal="visibility_changed" from="DialogGui" to="DialogGui" method="_on_visibility_changed"]
 [connection signal="pressed" from="DialogGui/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/OptionButton1" to="DialogGui" method="_on_option_button_1_pressed"]

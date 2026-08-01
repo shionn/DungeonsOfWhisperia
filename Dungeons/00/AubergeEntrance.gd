@@ -8,4 +8,4 @@ func _ready() -> void:
 			quest_book.auberge_03_randre_alliance.done()
 		gui.openQuest()
 
-	gui._options._apply()
+	gui.options.apply()
