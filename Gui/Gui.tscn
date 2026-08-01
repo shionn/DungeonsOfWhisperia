@@ -160,37 +160,29 @@ _data = {
 &"fade_out": SubResource("Animation_wbke4")
 }
 
-[sub_resource type="InputEventKey" id="InputEventKey_w65rx"]
-device = -1
-keycode = 38
-unicode = 38
+[sub_resource type="InputEventAction" id="InputEventAction_tamh2"]
+action = &"spell_1"
 
 [sub_resource type="Shortcut" id="Shortcut_w65rx"]
-events = [SubResource("InputEventKey_w65rx")]
+events = [SubResource("InputEventAction_tamh2")]
 
-[sub_resource type="InputEventKey" id="InputEventKey_f4re5"]
-device = -1
-keycode = 50
-unicode = 233
+[sub_resource type="InputEventAction" id="InputEventAction_mnphl"]
+action = &"spell_2"
 
 [sub_resource type="Shortcut" id="Shortcut_86xcp"]
-events = [SubResource("InputEventKey_f4re5")]
+events = [SubResource("InputEventAction_mnphl")]
 
-[sub_resource type="InputEventKey" id="InputEventKey_86xcp"]
-device = -1
-keycode = 34
-unicode = 34
+[sub_resource type="InputEventAction" id="InputEventAction_2m3pn"]
+action = &"spell_3"
 
 [sub_resource type="Shortcut" id="Shortcut_5npq8"]
-events = [SubResource("InputEventKey_86xcp")]
+events = [SubResource("InputEventAction_2m3pn")]
 
-[sub_resource type="InputEventKey" id="InputEventKey_5npq8"]
-device = -1
-keycode = 39
-unicode = 39
+[sub_resource type="InputEventAction" id="InputEventAction_xkmul"]
+action = &"spell_4"
 
 [sub_resource type="Shortcut" id="Shortcut_6qw7v"]
-events = [SubResource("InputEventKey_5npq8")]
+events = [SubResource("InputEventAction_xkmul")]
 
 [sub_resource type="Animation" id="Animation_f4re5"]
 length = 0.001
@@ -828,14 +820,13 @@ theme_override_styles/tab_selected = SubResource("StyleBoxEmpty_2pnra")
 theme_override_styles/tab_disabled = SubResource("StyleBoxEmpty_l4ar5")
 theme_override_styles/tab_focus = SubResource("StyleBoxEmpty_owfy6")
 tab_alignment = 1
-current_tab = 1
+current_tab = 0
 tab_0/title = "Affichage et Son"
 tab_0/icon = ExtResource("29_cq4r1")
 tab_1/title = "Contrôle"
 tab_1/icon = ExtResource("30_tamh2")
 
 [node name="Affichage" type="GridContainer" parent="Options/PanelC/MarginC/VBoxC/TabC" unique_id=861830191]
-visible = false
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/h_separation = 15
@@ -977,6 +968,7 @@ max_value = 0.0
 scrollable = false
 
 [node name="Controle" type="GridContainer" parent="Options/PanelC/MarginC/VBoxC/TabC" unique_id=1764653607]
+visible = false
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/h_separation = 15
@@ -1035,6 +1027,57 @@ text = "Z
 "
 script = ExtResource("31_tamh2")
 action_name = "move_right"
+
+[node name="SpellL1" type="Label" parent="Options/PanelC/MarginC/VBoxC/TabC/Controle" unique_id=1438652059]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Sort 1"
+
+[node name="SpellB1" type="Button" parent="Options/PanelC/MarginC/VBoxC/TabC/Controle" unique_id=1777644836]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Z
+"
+script = ExtResource("31_tamh2")
+action_name = "spell_1"
+
+[node name="SpellL2" type="Label" parent="Options/PanelC/MarginC/VBoxC/TabC/Controle" unique_id=1143329882]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Sort 2"
+
+[node name="SpellB2" type="Button" parent="Options/PanelC/MarginC/VBoxC/TabC/Controle" unique_id=1861936883]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Z
+"
+script = ExtResource("31_tamh2")
+action_name = "spell_2"
+
+[node name="SpellL3" type="Label" parent="Options/PanelC/MarginC/VBoxC/TabC/Controle" unique_id=1112731493]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Sort 3"
+
+[node name="SpellB3" type="Button" parent="Options/PanelC/MarginC/VBoxC/TabC/Controle" unique_id=158535320]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Z
+"
+script = ExtResource("31_tamh2")
+action_name = "spell_3"
+
+[node name="SpellL4" type="Label" parent="Options/PanelC/MarginC/VBoxC/TabC/Controle" unique_id=1943696663]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Sort 4"
+
+[node name="SpellB4" type="Button" parent="Options/PanelC/MarginC/VBoxC/TabC/Controle" unique_id=100503782]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Sort 4"
+script = ExtResource("31_tamh2")
+action_name = "spell_4"
 
 [node name="SacL" type="Label" parent="Options/PanelC/MarginC/VBoxC/TabC/Controle" unique_id=768364120]
 layout_mode = 2
@@ -1823,12 +1866,27 @@ texture = ExtResource("18_w65rx")
 [connection signal="value_changed" from="Options/PanelC/MarginC/VBoxC/TabC/Affichage/MusicHSlider" to="Options" method="_on_music_value_changed"]
 [connection signal="value_changed" from="Options/PanelC/MarginC/VBoxC/TabC/Affichage/SonHSlider" to="Options" method="_on_son_value_changed"]
 [connection signal="pressed" from="Options/PanelC/MarginC/VBoxC/TabC/Controle/AvancerB" to="Options/PanelC/MarginC/VBoxC/TabC/Controle/AvancerB" method="_on_pressed"]
+[connection signal="visibility_changed" from="Options/PanelC/MarginC/VBoxC/TabC/Controle/AvancerB" to="Options/PanelC/MarginC/VBoxC/TabC/Controle/AvancerB" method="_on_visibility_changed"]
 [connection signal="pressed" from="Options/PanelC/MarginC/VBoxC/TabC/Controle/ReculerB" to="Options/PanelC/MarginC/VBoxC/TabC/Controle/ReculerB" method="_on_pressed"]
+[connection signal="visibility_changed" from="Options/PanelC/MarginC/VBoxC/TabC/Controle/ReculerB" to="Options/PanelC/MarginC/VBoxC/TabC/Controle/ReculerB" method="_on_visibility_changed"]
 [connection signal="pressed" from="Options/PanelC/MarginC/VBoxC/TabC/Controle/PasGaucheB" to="Options/PanelC/MarginC/VBoxC/TabC/Controle/PasGaucheB" method="_on_pressed"]
+[connection signal="visibility_changed" from="Options/PanelC/MarginC/VBoxC/TabC/Controle/PasGaucheB" to="Options/PanelC/MarginC/VBoxC/TabC/Controle/PasGaucheB" method="_on_visibility_changed"]
 [connection signal="pressed" from="Options/PanelC/MarginC/VBoxC/TabC/Controle/PasDroiteB" to="Options/PanelC/MarginC/VBoxC/TabC/Controle/PasDroiteB" method="_on_pressed"]
+[connection signal="visibility_changed" from="Options/PanelC/MarginC/VBoxC/TabC/Controle/PasDroiteB" to="Options/PanelC/MarginC/VBoxC/TabC/Controle/PasDroiteB" method="_on_visibility_changed"]
+[connection signal="pressed" from="Options/PanelC/MarginC/VBoxC/TabC/Controle/SpellB1" to="Options/PanelC/MarginC/VBoxC/TabC/Controle/SpellB1" method="_on_pressed"]
+[connection signal="visibility_changed" from="Options/PanelC/MarginC/VBoxC/TabC/Controle/SpellB1" to="Options/PanelC/MarginC/VBoxC/TabC/Controle/SpellB1" method="_on_visibility_changed"]
+[connection signal="pressed" from="Options/PanelC/MarginC/VBoxC/TabC/Controle/SpellB2" to="Options/PanelC/MarginC/VBoxC/TabC/Controle/SpellB2" method="_on_pressed"]
+[connection signal="visibility_changed" from="Options/PanelC/MarginC/VBoxC/TabC/Controle/SpellB2" to="Options/PanelC/MarginC/VBoxC/TabC/Controle/SpellB2" method="_on_visibility_changed"]
+[connection signal="pressed" from="Options/PanelC/MarginC/VBoxC/TabC/Controle/SpellB3" to="Options/PanelC/MarginC/VBoxC/TabC/Controle/SpellB3" method="_on_pressed"]
+[connection signal="visibility_changed" from="Options/PanelC/MarginC/VBoxC/TabC/Controle/SpellB3" to="Options/PanelC/MarginC/VBoxC/TabC/Controle/SpellB3" method="_on_visibility_changed"]
+[connection signal="pressed" from="Options/PanelC/MarginC/VBoxC/TabC/Controle/SpellB4" to="Options/PanelC/MarginC/VBoxC/TabC/Controle/SpellB4" method="_on_pressed"]
+[connection signal="visibility_changed" from="Options/PanelC/MarginC/VBoxC/TabC/Controle/SpellB4" to="Options/PanelC/MarginC/VBoxC/TabC/Controle/SpellB4" method="_on_visibility_changed"]
 [connection signal="pressed" from="Options/PanelC/MarginC/VBoxC/TabC/Controle/SacB" to="Options/PanelC/MarginC/VBoxC/TabC/Controle/SacB" method="_on_pressed"]
+[connection signal="visibility_changed" from="Options/PanelC/MarginC/VBoxC/TabC/Controle/SacB" to="Options/PanelC/MarginC/VBoxC/TabC/Controle/SacB" method="_on_visibility_changed"]
 [connection signal="pressed" from="Options/PanelC/MarginC/VBoxC/TabC/Controle/QueteB" to="Options/PanelC/MarginC/VBoxC/TabC/Controle/QueteB" method="_on_pressed"]
+[connection signal="visibility_changed" from="Options/PanelC/MarginC/VBoxC/TabC/Controle/QueteB" to="Options/PanelC/MarginC/VBoxC/TabC/Controle/QueteB" method="_on_visibility_changed"]
 [connection signal="pressed" from="Options/PanelC/MarginC/VBoxC/TabC/Controle/MenuB" to="Options/PanelC/MarginC/VBoxC/TabC/Controle/MenuB" method="_on_pressed"]
+[connection signal="visibility_changed" from="Options/PanelC/MarginC/VBoxC/TabC/Controle/MenuB" to="Options/PanelC/MarginC/VBoxC/TabC/Controle/MenuB" method="_on_visibility_changed"]
 [connection signal="pressed" from="Options/PanelC/MarginC/VBoxC/CloseButton" to="Options" method="_on_close_button_pressed"]
 [connection signal="visibility_changed" from="DialogGui" to="." method="update_mouse_mode"]
 [connection signal="visibility_changed" from="DialogGui" to="DialogGui" method="_on_visibility_changed"]

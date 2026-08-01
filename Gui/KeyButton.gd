@@ -6,9 +6,6 @@ extends Button
 
 var _capture : bool = false
 
-func _ready() -> void:
-	_on_applied()
-
 func _on_pressed() -> void:
 	_capture = true
 	text = "..."
@@ -24,4 +21,6 @@ func _unhandled_key_input(event: InputEvent) -> void:
 
 func _on_applied() -> void:
 	text = OS.get_keycode_string(options.get_input_key(action_name, KEY_0))
-	
+
+func _on_visibility_changed() -> void:
+	if visible : _on_applied()

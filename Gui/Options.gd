@@ -52,6 +52,10 @@ func apply() -> void:
 	_apply_input("open_quest", KEY_J)
 	_apply_input("open_bag", KEY_I)
 	_apply_input("menu", KEY_ESCAPE)
+	_apply_input("spell_1", KEY_1)
+	_apply_input("spell_2", KEY_2)
+	_apply_input("spell_3", KEY_3)
+	_apply_input("spell_4", KEY_4)
 	
 	applied.emit()
 	
