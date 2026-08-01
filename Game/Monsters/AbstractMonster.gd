@@ -183,13 +183,16 @@ func receive_atk(nb_atk: int) -> void:
 	_hit_take = _hit_take + 1
 	var nb_def = Dices.d6(get_def(), 6)
 	var deg = nb_atk - nb_def
-	var label : Node3D = preload("res://Game/StateLabel.tscn").instantiate()
-	label.set_text("%d💀/%d🛡"%[nb_atk, nb_def])
-	add_child(label)
 	if nb_atk > 0 : 
-		gui.consoleLog("Vous obtenez %d 💀, %s obtient %d 🛡" % [nb_atk, name, nb_def])
+		#gui.consoleLog("Vous obtenez %d 💀, %s obtient %d 🛡" % [nb_atk, name, nb_def])
+		var label : Node3D = preload("res://Game/StateLabel.tscn").instantiate()
+		label.set_text("%d💀/%d🛡"%[nb_atk, nb_def])
+		add_child(label)
 	else :
-		gui.consoleLog("Vous obtenez %d 💀" % [nb_atk])
+		#gui.consoleLog("Vous obtenez %d 💀" % [nb_atk])
+		var label : Node3D = preload("res://Game/StateLabel.tscn").instantiate()
+		label.set_text("%d💀"%[nb_atk, nb_def])
+		add_child(label)
 	if deg > 0 :
 		pv = pv - deg
 		get_hit_sound().play()
