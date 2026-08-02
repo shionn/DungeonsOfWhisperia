@@ -171,7 +171,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
 script = ExtResource("3_khsc5")
 _anim = "Melee_Dualwield_Attack_Chop"
 _description = "La Voleuse
-Equipée d'une dague dans chaque main, elle inflige deux attaque à chaque frappe. De plus si elle est hors de vision de son adversaire elle inflige des dégats supplémentaires. Il possede également un sort lui permttant de disparaitre pour un cours instant.
+Equipée d'une dague dans chaque main, elle inflige deux attaque à chaque frappe. De plus si elle est hors de vision de son adversaire elle inflige des dégats supplémentaires. Elle possede également un sort lui permettant de disparaitre pour un cours instant.
 [ul]
 Main droite : droite 1+lvl (+1 automatique dans le dos), main gauche : 2
 Défense : 2+lvl/2
