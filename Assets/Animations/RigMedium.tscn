@@ -18,6 +18,7 @@
 [ext_resource type="Animation" uid="uid://b63wfj51c0w8f" path="res://Assets/Animations/Rig_Medium/Melee_Dualwield_Attack_Stab.res" id="11_ck6ed"]
 [ext_resource type="Animation" uid="uid://b48p320s4ape" path="res://Assets/Animations/Rig_Medium/Ranged_Bow_Draw.res" id="13_aee20"]
 [ext_resource type="Animation" uid="uid://dafecr1csd801" path="res://Assets/Animations/Rig_Medium/Ranged_Bow_Release.res" id="14_lso78"]
+[ext_resource type="Animation" uid="uid://dqj2cvsu0poms" path="res://Assets/Animations/Rig_Medium/PickUp.res" id="15_fuffq"]
 [ext_resource type="Animation" uid="uid://uuuuvcnefldc" path="res://Assets/Animations/Rig_Medium/Sit_Chair_Idle.res" id="15_lso78"]
 [ext_resource type="Animation" uid="uid://d2ukclnbqjenj" path="res://Assets/Animations/Rig_Medium/Ranged_Magic_Raise.res" id="17_yo0wh"]
 [ext_resource type="Animation" uid="uid://he3ybmqrvq2q" path="res://Assets/Animations/Rig_Medium/Use_Item.res" id="19_v47we"]
@@ -39,6 +40,7 @@ _data = {
 &"Melee_Dualwield_Attack_Chop": ExtResource("9_5vv6p"),
 &"Melee_Dualwield_Attack_Slice": ExtResource("11_32k56"),
 &"Melee_Dualwield_Attack_Stab": ExtResource("11_ck6ed"),
+&"PickUp": ExtResource("15_fuffq"),
 &"Ranged_Bow_Draw": ExtResource("13_aee20"),
 &"Ranged_Bow_Release": ExtResource("14_lso78"),
 &"Ranged_Magic_Raise": ExtResource("17_yo0wh"),

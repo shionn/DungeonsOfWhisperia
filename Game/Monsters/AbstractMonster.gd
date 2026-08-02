@@ -169,6 +169,7 @@ func _on_atk_timer_timeout() -> void:
 	if state != State.DEATH :
 		_atk.sound.play()
 		player.receive_atk(_atk.damage(), self)
+		_hit_take = 0
 		if not _atk.dual_hand :
 			_atk = null
 
@@ -184,15 +185,19 @@ func receive_atk(nb_atk: int) -> void:
 	var nb_def = Dices.d6(get_def(), 6)
 	var deg = nb_atk - nb_def
 	if nb_atk > 0 : 
-		#gui.consoleLog("Vous obtenez %d 💀, %s obtient %d 🛡" % [nb_atk, name, nb_def])
-		var label : Node3D = preload("res://Game/StateLabel.tscn").instantiate()
-		label.set_text("%d💀/%d🛡"%[nb_atk, nb_def])
-		add_child(label)
+		if options.is_floating_damage_display() :
+			var label : Node3D = preload("res://Game/StateLabel.tscn").instantiate()
+			label.set_text("%d💀/%d🛡"%[nb_atk, nb_def])
+			add_child(label)
+		if options.is_console_damage_display() :
+			gui.consoleLog("Vous obtenez %d 💀, %s obtient %d 🛡" % [nb_atk, name, nb_def])
 	else :
-		#gui.consoleLog("Vous obtenez %d 💀" % [nb_atk])
-		var label : Node3D = preload("res://Game/StateLabel.tscn").instantiate()
-		label.set_text("%d💀"%[nb_atk])
-		add_child(label)
+		if options.is_floating_damage_display() :
+			var label : Node3D = preload("res://Game/StateLabel.tscn").instantiate()
+			label.set_text("%d💀"%[nb_atk])
+			add_child(label)
+		if options.is_console_damage_display() :
+			gui.consoleLog("Vous obtenez %d 💀" % [nb_atk])
 	if deg > 0 :
 		pv = pv - deg
 		get_hit_sound().play()
@@ -200,6 +205,7 @@ func receive_atk(nb_atk: int) -> void:
 			start_animation("Death_A", true)
 			player.xp = player.xp+compute_xp()
 			state = State.DEATH
+			collision_mask = 0
 			dead.emit()
 		elif state != State.ATTACKING :
 			start_animation("Hit_A", true)

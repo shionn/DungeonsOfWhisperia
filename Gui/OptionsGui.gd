@@ -19,10 +19,13 @@ extends GameBaseControl
 @onready var _effect_vol_label = $PanelC/MarginC/VBoxC/TabC/Affichage/SonL
 @onready var _effect_slide = $PanelC/MarginC/VBoxC/TabC/Affichage/SonHSlider
 
+@onready var _damage_log_button = $PanelC/MarginC/VBoxC/TabC/Affichage/DamageM
+
 func _ready() -> void:
 	hide()
 	_scale_mode_button.get_popup().id_pressed.connect(_on_scale_mode_id_pressed)
 	_vsync_mode_button.get_popup().id_pressed.connect(_on_vsync_mode_id_pressed)
+	_damage_log_button.get_popup().id_pressed.connect(_on_damage_log_id_pressed)
 	options.applied.connect(_on_applied)
 
 
@@ -55,6 +58,12 @@ func _on_applied() -> void :
 
 	_fov_label.text = "Champ de vision (%d°)"%options.get_video_fov()
 	_fov_slide.value = options.get_video_fov()
+	
+	match options.get_damage_display():
+		Options.DamageDisplayMode.FLOAT : _damage_log_button.text = "Flottant"
+		Options.DamageDisplayMode.CONSOLE : _damage_log_button.text = "Console"
+		Options.DamageDisplayMode.BOTH : _damage_log_button.text = "Les Deux"
+	
 
 func _on_music_value_changed(value: float) -> void:
 	options.set_audio_backbround_vol(value)
@@ -99,4 +108,11 @@ func _on_vsync_mode_id_pressed(id: int) -> void:
 
 func _on_h_slider_fov_value_changed(value: float) -> void:
 	options.set_video_fov(value)
+	options.apply_and_save()
+
+func _on_damage_log_id_pressed(id: int) -> void:
+	match id:
+		0 : options.set_damage_display(Options.DamageDisplayMode.FLOAT)
+		1 : options.set_damage_display(Options.DamageDisplayMode.CONSOLE)
+		2 : options.set_damage_display(Options.DamageDisplayMode.BOTH)
 	options.apply_and_save()

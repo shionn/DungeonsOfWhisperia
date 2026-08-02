@@ -1,6 +1,8 @@
 class_name Options
 extends Node
 
+enum DamageDisplayMode { FLOAT, CONSOLE, BOTH }
+
 signal applied()
 
 var _options : Dictionary = {}
@@ -83,6 +85,9 @@ func get_vsync_mode()           -> DisplayServer.VSyncMode : return _options.get
 func is_ssao_enable()           -> bool  : return _options.get_or_add("video-ssao", true)
 func get_video_fov()            -> float : return _options.get_or_add("video-fov", 75.0)
 func get_input_key(action: String, default : Key) -> Key: return _options.get_or_add("input-%s"%action, default)
+func get_damage_display()       -> DamageDisplayMode : return _options.get_or_add("interface-damage-display", DamageDisplayMode.FLOAT)
+func is_floating_damage_display()-> bool : return get_damage_display() != DamageDisplayMode.CONSOLE
+func is_console_damage_display() -> bool : return get_damage_display() != DamageDisplayMode.FLOAT
 
 func set_audio_backbround_vol(value: float) -> void : _options.set("audio-background-value", value)
 func set_audio_effect_vol(value: float) -> void : _options.set("audio-effect-value", value)
@@ -93,3 +98,4 @@ func set_vsync_mode(value: DisplayServer.VSyncMode) -> void : _options.set("vide
 func set_ssao(value: bool) -> void : _options.set("video-ssao", value)
 func set_video_fov(value: float) -> void : _options.set("video-fov", value)
 func set_input_key(action_name: String, keycode : Key) : _options.set("input-%s"%action_name, keycode)
+func set_damage_display(mode: DamageDisplayMode) -> void : _options.set("interface-damage-display", mode) 

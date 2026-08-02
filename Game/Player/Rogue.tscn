@@ -3,8 +3,32 @@
 [ext_resource type="PackedScene" uid="uid://ddvg2rw2bunm2" path="res://Game/Player/Player.tscn" id="1_bopnr"]
 [ext_resource type="Script" uid="uid://bcaqrmgt1rjo" path="res://Game/Player/Rogue.gd" id="2_5ega3"]
 [ext_resource type="PackedScene" uid="uid://nspubd405fcp" path="res://Assets/Scenes/Rogue.tscn" id="3_5ega3"]
+[ext_resource type="PackedScene" uid="uid://cdsloy1kvhikp" path="res://Assets/BinbunVFX/impact_explosions/effects/explosion/vfx_explosion_03.tscn" id="4_b1dj1"]
+[ext_resource type="Script" uid="uid://chilcihl71dnl" path="res://Game/Player/Spell.gd" id="5_7qrke"]
+[ext_resource type="Texture2D" uid="uid://bh6si28br6d54" path="res://Gui/Assets/kaykit/48/Rogue_Hooded.png" id="6_c4238"]
 
 [node name="Player" unique_id=384338158 instance=ExtResource("1_bopnr")]
 script = ExtResource("2_5ega3")
 
 [node name="Character" parent="." index="7" unique_id=1982882119 instance=ExtResource("3_5ega3")]
+
+[node name="VFXExplosion_03" parent="." index="10" unique_id=1231123273 instance=ExtResource("4_b1dj1")]
+visible = false
+preview = false
+one_shot = true
+autoplay = false
+primary_color = Color(0.41568628, 0.40784314, 0.34117648, 1)
+secondary_color = Color(0.30980393, 0.30588236, 0.24705882, 1)
+light_enable = false
+
+[node name="Disparaitre" type="Node" parent="." index="11" unique_id=877228080 node_paths=PackedStringArray("aura")]
+script = ExtResource("5_7qrke")
+icon = ExtResource("6_c4238")
+cold_down = 120
+animation = "PickUp"
+aura = NodePath("../VFXExplosion_03")
+duration = 5.0
+metadata/_custom_type_script = "uid://chilcihl71dnl"
+
+[connection signal="visibility_changed" from="VFXExplosion_03" to="." method="_on_vfx_explosion_03_visibility_changed"]
+[connection signal="enable_change" from="Disparaitre" to="." method="_on_disparaitre_enable_change"]

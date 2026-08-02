@@ -967,6 +967,29 @@ min_value = -72.0
 max_value = 0.0
 scrollable = false
 
+[node name="DamageL" type="Label" parent="Options/PanelC/MarginC/VBoxC/TabC/Affichage" unique_id=1001115929]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Affichage dégats"
+
+[node name="DamageM" type="MenuButton" parent="Options/PanelC/MarginC/VBoxC/TabC/Affichage" unique_id=1755933315]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+text = "Flottant"
+alignment = 0
+item_count = 3
+popup/item_0/text = "Flottant"
+popup/item_0/id = 0
+popup/item_1/text = "Console"
+popup/item_1/id = 1
+popup/item_2/text = "Les Deux"
+popup/item_2/id = 2
+
 [node name="Controle" type="GridContainer" parent="Options/PanelC/MarginC/VBoxC/TabC" unique_id=1764653607]
 visible = false
 layout_mode = 2

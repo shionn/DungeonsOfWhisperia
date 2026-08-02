@@ -1,5 +1,7 @@
 extends PlayerG
 
+@onready var _disparaitre : Spell = $Disparaitre
+
 enum AttackMode { CHOP, SLICE, STAB }
 var _atk : AttackMode = AttackMode.STAB
 
@@ -7,6 +9,7 @@ var _atk : AttackMode = AttackMode.STAB
 func _ready() -> void:
 	$Character/Rig_Medium/Skeleton3D/Rogue_Head.hide()
 	super._ready()
+	
 
 func get_def() -> int: 		return 2 + floori(lvl/2)
 func get_max_pv() -> int:	return 5+lvl
@@ -38,4 +41,13 @@ func get_atk_off_hand_timer_factor() -> float:
 		AttackMode.STAB : return .3
 		_ : return .4
 func get_player_classe(): return "Rogue"
-func get_spells(): return []
+func get_spells(): return [ $Disparaitre ]
+
+func _on_disparaitre_enable_change(enable: bool) -> void:
+	print("_on_disparaitre_enable_change ", enable)
+	if enable : 
+		$VFXExplosion_03/AnimationPlayer.play("main")
+		collision_layer = 0
+	else :
+		$VFXExplosion_03.hide()
+		collision_layer = 1
