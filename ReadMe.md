@@ -54,10 +54,8 @@ Je ne suis pas graphiste, les assets proviennent principalement de [Kaykit par k
 - barre de state : lvl pas explicie, ni l'xp, et depalcer le FPS
 - finir les arme (critique)
 - bloquer les mouvement et la camera lors d'une transition.
-- ajouter des sort 
-  - chevalier : position defensive
-  - berserke : position offensive
-  - rogue : disparaitre dans l'ombre
+- journal de quete : 
+	- ajouter check box suivant l'etat de la quete.
 
 ## histoire
 - culte du necromancien ? 
@@ -65,4 +63,6 @@ Je ne suis pas graphiste, les assets proviennent principalement de [Kaykit par k
 - mission pour aller bruler les cadavre des lieutenent dans une catacomb.
 - source magique qui permet au necormancien de rester en vie.
 
+## aide
+https://watabou.itch.io/one-page-dungeon
 # Assets

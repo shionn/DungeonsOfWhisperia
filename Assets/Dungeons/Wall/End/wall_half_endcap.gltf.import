@@ -43,7 +43,7 @@ _subresources={
 "nodes": {
 "PATH:wall_half_endcap": {
 "generate/physics": true,
-"physics/shape_type": 2
+"physics/shape_type": 1
 }
 }
 }
