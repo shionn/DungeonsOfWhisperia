@@ -715,13 +715,13 @@ shape = SubResource("BoxShape3D_b02ke")
 transform = Transform3D(1.1920929e-07, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, 1.1920929e-07, 1.9999999, 0, -4)
 
 [node name="torch_mounted3" parent="RDC/Lights" unique_id=853243303 instance=ExtResource("7_68h1y")]
-transform = Transform3D(0.9999999, 0, -1.6292066e-07, 0, 1, 0, 1.6292066e-07, 0, 0.9999999, 10.7, 0, -13.9)
+transform = Transform3D(0.9999999, 0, -1.6292066e-07, 0, 1, 0, 1.6292066e-07, 0, 0.9999999, 10.7, 0, -13.95)
 
 [node name="torch_mounted5" parent="RDC/Lights" unique_id=1646486250 instance=ExtResource("7_68h1y")]
 transform = Transform3D(1.1920927e-07, 0, 0.9999999, 0, 1, 0, -0.9999999, 0, 1.1920927e-07, 2, 4, -7.8999996)
 
 [node name="torch_mounted6" parent="RDC/Lights" unique_id=54796643 instance=ExtResource("7_68h1y")]
-transform = Transform3D(-0.9999999, 0, 7.5497894e-08, 0, 1, 0, -7.5497894e-08, 0, -0.9999999, 2, 4, 5.95)
+transform = Transform3D(-0.9999999, 0, 7.5497894e-08, 0, 1, 0, -7.5497894e-08, 0, -0.9999999, 2, 4, 6)
 
 [node name="torch_mounted2" parent="RDC/Lights" unique_id=1678202322 instance=ExtResource("7_68h1y")]
 transform = Transform3D(1.1920929e-07, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, 1.1920929e-07, 1.9999999, 0, 4)
@@ -1089,10 +1089,10 @@ transform = Transform3D(0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, 0.70
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
 
 [node name="torch_mounted3" parent="RDC/Decoration/pillar_decorated2" unique_id=1711296331 instance=ExtResource("7_68h1y")]
-transform = Transform3D(0.70710695, 0, 0.7071067, 0, 1, 0, -0.7071067, 0, 0.70710695, 0.21213198, 3, 0.2121315)
+transform = Transform3D(0.70710695, 0, 0.7071067, 0, 1, 0, -0.7071067, 0, 0.70710695, 0.22, 3, 0.22)
 
 [node name="torch_mounted4" parent="RDC/Decoration/pillar_decorated2" unique_id=637109710 instance=ExtResource("7_68h1y")]
-transform = Transform3D(-0.70710695, 0, -0.7071068, 0, 1, 0, 0.7071068, 0, -0.70710695, -0.21213198, 3, -0.21213245)
+transform = Transform3D(-0.70710695, 0, -0.7071068, 0, 1, 0, 0.7071068, 0, -0.70710695, -0.22, 3, -0.22)
 
 [node name="barrel_large_decorated2" parent="RDC/Decoration" unique_id=1911598696 instance=ExtResource("31_hoab0")]
 transform = Transform3D(0.5000001, 0, 0.8660253, 0, 1, 0, -0.8660253, 0, 0.5000001, 3.4999988, 0, 4.3999996)
@@ -1609,7 +1609,7 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -23.
 transform = Transform3D(0.70710665, 0, -0.7071069, 0, 1, 0, 0.7071069, 0, 0.70710665, -5.3999977, 0, -18.5)
 
 [node name="torch_mounted6" parent="Stair/Mezanine" unique_id=1093218368 instance=ExtResource("7_68h1y")]
-transform = Transform3D(0.9999999, 0, -1.6292066e-07, 0, 1, 0, 1.6292066e-07, 0, 0.9999999, -1.8999996, 0, -3.8999996)
+transform = Transform3D(0.9999999, 0, -1.6292066e-07, 0, 1, 0, 1.6292066e-07, 0, 0.9999999, -1.9, 0, -4)
 
 [node name="Cauldron2" parent="Stair/Mezanine" unique_id=2073098707 instance=ExtResource("95_ar0ji")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6000004, 0, -2.3999999)

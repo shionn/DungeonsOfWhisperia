@@ -21,6 +21,8 @@ buses/default_bus_layout="uid://dc7neup2idhg"
 
 [display]
 
+window/size/viewport_width=1600
+window/size/viewport_height=900
 window/size/borderless=true
 
 [filesystem]
