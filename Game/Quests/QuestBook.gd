@@ -33,6 +33,7 @@ var _quests : Dictionary = {}
 var current : Quest
 
 signal quest_done(quest:Quest)
+signal objectif_done(quest:Quest, objectif: QuestObjectif)
 
 func start(quest:Quest) -> bool :
 	current = quest
@@ -57,6 +58,7 @@ func is_done(quest:Quest, objectif: QuestObjectif = null) -> bool :
 func done(quest:Quest, objectif: QuestObjectif = null) -> void :
 	var _q = (_quests.get(quest.name) as Dictionary)
 	if objectif :
+		objectif_done.emit(quest, objectif)
 		_q.get(objectif.name).set("done", true)
 	else : 
 		quest_done.emit(quest)

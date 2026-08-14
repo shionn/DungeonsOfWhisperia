@@ -44,8 +44,8 @@
 [ext_resource type="PackedScene" uid="uid://dgb0ngh53yuev" path="res://Assets/Scenes/Chest_Large.tscn" id="41_sl4gf"]
 [ext_resource type="PackedScene" uid="uid://bjfrjb5gr6a3k" path="res://Assets/Dungeons/Wall/wall_arched.gltf" id="42_x7ngm"]
 [ext_resource type="PackedScene" uid="uid://mfxyh576b4gl" path="res://Assets/Dungeons/Wall/wall_open_scaffold.gltf" id="43_yafub"]
-[ext_resource type="AudioStream" uid="uid://bcafx5mkymm12" path="res://Audio/RPG Sound Pack/interface/interface3.wav" id="44_t6r01"]
 [ext_resource type="PackedScene" uid="uid://c740w1gfrmupy" path="res://Assets/Dungeons/Book/book_brown.gltf" id="45_q0e5r"]
+[ext_resource type="AudioStream" uid="uid://dwe540ehhi37p" path="res://Audio/80-CC0-RPG-SFX/item_stone_01.ogg" id="45_u21oi"]
 [ext_resource type="PackedScene" uid="uid://b6vicjv5yemah" path="res://Assets/Dungeons/Book/book_grey.gltf" id="46_olq8q"]
 [ext_resource type="PackedScene" uid="uid://bdb2tkwvqixia" path="res://Assets/Dungeons/Book/book_tan.gltf" id="47_e1og8"]
 [ext_resource type="PackedScene" uid="uid://b1dvxk4po0ale" path="res://Assets/Dungeons/Candle/candle_melted.gltf" id="48_em1gl"]
@@ -934,7 +934,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
 visible = false
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="BossRoom/SecretRoom" unique_id=1894905574]
-stream = ExtResource("44_t6r01")
+stream = ExtResource("45_u21oi")
 bus = &"Effet"
 
 [node name="bar_straight_C2" parent="BossRoom" unique_id=1918491113 instance=ExtResource("12_xd8xc")]

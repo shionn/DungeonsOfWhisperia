@@ -44,6 +44,8 @@
 [ext_resource type="AudioStream" uid="uid://ddoswq0aa6a1s" path="res://Audio/NewThingGet/newthingget.ogg" id="38_86xcp"]
 [ext_resource type="Script" uid="uid://ihft5lnbnu2i" path="res://Gui/LvlUp.gd" id="40_6qw7v"]
 [ext_resource type="Script" uid="uid://dt6wofx8ub18t" path="res://Gui/Popup.gd" id="41_tfp3c"]
+[ext_resource type="Script" uid="uid://baohqgm68smai" path="res://Gui/ObjectifQuestDone.gd" id="42_mnphl"]
+[ext_resource type="AudioStream" uid="uid://bwv1bxhlk2lsg" path="res://Audio/win-sound-1/win sound 1.wav" id="43_2m3pn"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8rxp0"]
 bg_color = Color(1, 0.94509804, 0.8235294, 1)
@@ -1648,9 +1650,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -20.0
-offset_top = -124.0
+offset_top = -200.0
 offset_right = 20.0
-offset_bottom = -84.0
+offset_bottom = -160.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
@@ -1683,6 +1685,52 @@ libraries/ = SubResource("AnimationLibrary_5npq8")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="QuestDone" unique_id=2143197114]
 stream = ExtResource("38_86xcp")
+bus = &"Effet"
+
+[node name="ObjectifQuestDone" type="Control" parent="." unique_id=605415388]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -124.0
+offset_right = 20.0
+offset_bottom = -84.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("42_mnphl")
+
+[node name="Label" type="Label" parent="ObjectifQuestDone" unique_id=1392351928]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -277.0
+offset_top = -44.0
+offset_right = 277.0
+offset_bottom = 44.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.7490196, 0.56078434, 0.3647059, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 0
+theme_override_constants/shadow_outline_size = 6
+theme_override_font_sizes/font_size = 24
+text = "Objectif accompli !"
+horizontal_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ObjectifQuestDone" unique_id=2062919242]
+libraries/ = SubResource("AnimationLibrary_5npq8")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="ObjectifQuestDone" unique_id=1111906079]
+stream = ExtResource("43_2m3pn")
 bus = &"Effet"
 
 [node name="GameOver" type="Control" parent="." unique_id=741767315]
@@ -1943,6 +1991,7 @@ texture = ExtResource("18_w65rx")
 [connection signal="pressed" from="Spells/Button3" to="Spells/Button3" method="_on_pressed"]
 [connection signal="pressed" from="Spells/Button4" to="Spells/Button4" method="_on_pressed"]
 [connection signal="animation_finished" from="QuestDone/AnimationPlayer" to="QuestDone" method="_on_animation_player_animation_finished"]
+[connection signal="animation_finished" from="ObjectifQuestDone/AnimationPlayer" to="ObjectifQuestDone" method="_on_animation_player_animation_finished"]
 [connection signal="visibility_changed" from="GameOver" to="." method="_on_game_over_visibility_changed"]
 [connection signal="pressed" from="GameOver/VBoxContainer/HBoxContainer/Title" to="GameOver" method="_on_title_pressed"]
 [connection signal="pressed" from="GameOver/VBoxContainer/HBoxContainer/Exit" to="GameOver" method="_on_exit_pressed"]

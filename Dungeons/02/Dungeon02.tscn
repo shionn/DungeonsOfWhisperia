@@ -22,7 +22,6 @@
 [ext_resource type="PackedScene" uid="uid://bslqc8p8h7opc" path="res://Assets/Dungeons/Banner/banner_triple_white.gltf" id="6_d0l6h"]
 [ext_resource type="PackedScene" uid="uid://dn0yqbvgem56e" path="res://Assets/Halloween/Bench/bench_decorated.gltf" id="6_gonng"]
 [ext_resource type="PackedScene" uid="uid://c2eo4fhjbw8kj" path="res://Assets/Dungeons/Banner/banner_brown.gltf" id="6_it32w"]
-[ext_resource type="AudioStream" uid="uid://bcafx5mkymm12" path="res://Audio/RPG Sound Pack/interface/interface3.wav" id="6_rmard"]
 [ext_resource type="PackedScene" uid="uid://c5wum8rleioq6" path="res://Assets/Halloween/Grave/gravestone.gltf" id="7_1tayw"]
 [ext_resource type="PackedScene" uid="uid://q2eogng1wa4t" path="res://Assets/Halloween/plaque.gltf" id="7_3ruak"]
 [ext_resource type="PackedScene" uid="uid://c740w1gfrmupy" path="res://Assets/Dungeons/Book/book_brown.gltf" id="7_3uwpk"]
@@ -118,6 +117,7 @@
 [ext_resource type="PackedScene" uid="uid://dpek8oj8ussjy" path="res://Assets/Characters/SkeletonAccessoires/Skeleton_Dagger.gltf" id="47_letkk"]
 [ext_resource type="PackedScene" uid="uid://dgc6r0o5rxge4" path="res://Assets/Characters/AdventurersAccessoires/potion_small_blue.gltf" id="47_ml8gv"]
 [ext_resource type="PackedScene" uid="uid://bhig0ujmb131t" path="res://Assets/Dungeons/Crate/crate_small.gltf" id="52_46tpd"]
+[ext_resource type="AudioStream" uid="uid://dwe540ehhi37p" path="res://Audio/80-CC0-RPG-SFX/item_stone_01.ogg" id="52_mncwc"]
 [ext_resource type="PackedScene" uid="uid://3uma11nuvu0l" path="res://Game/Monsters/SkeletonRogue.tscn" id="56_dxww1"]
 [ext_resource type="AudioStream" uid="uid://61hk6iwxjiwe" path="res://Audio/DungeonThemes/dungeon.ogg" id="69_gcmxt"]
 [ext_resource type="PackedScene" uid="uid://qv2dm02eh64" path="res://Assets/Dungeons/Wall/wall_inset_shelves_decoratedA.gltf" id="73_5ea61"]
@@ -592,20 +592,26 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -18)
 [node name="Tomb" type="Node3D" parent="EntranceSecret" unique_id=950563042]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
 
-[node name="gravestone2" parent="EntranceSecret/Tomb" unique_id=1746443215 instance=ExtResource("7_1tayw")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.0999985, 0, 0)
+[node name="gravestone3" parent="EntranceSecret/Tomb" unique_id=1746443215 instance=ExtResource("7_1tayw")]
+transform = Transform3D(-4.371139e-08, 7.642742e-15, -1, -8.742278e-08, -1, -3.821371e-15, -1, 8.742278e-08, 4.371139e-08, -1.0999985, 1.5, 0)
 script = ExtResource("23_ml8gv")
 
-[node name="Area3D" type="Area3D" parent="EntranceSecret/Tomb/gravestone2" unique_id=804761046]
+[node name="Area3D" type="Area3D" parent="EntranceSecret/Tomb/gravestone3" unique_id=804761046]
+transform = Transform3D(-1, -8.742278e-08, -8.742277e-08, 8.742278e-08, -1, 3.8213705e-15, -8.742277e-08, -3.821371e-15, 1, 1.3113413e-07, 1.5, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="EntranceSecret/Tomb/gravestone2/Area3D" unique_id=1582866756]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="EntranceSecret/Tomb/gravestone3/Area3D" unique_id=1582866756]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
 shape = SubResource("BoxShape3D_cua28")
 
-[node name="description" type="Node" parent="EntranceSecret/Tomb/gravestone2" unique_id=397955152]
+[node name="description" type="Node" parent="EntranceSecret/Tomb/gravestone3" unique_id=397955152]
 script = ExtResource("13_iikjq")
 text = "Ici dors pour l’éternité, Valthorion. Son éveil accompagnera celui des morts."
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="gravestone2" parent="EntranceSecret/Tomb" unique_id=898806604 instance=ExtResource("7_1tayw")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.0999985, 0, 0)
+visible = false
+script = ExtResource("23_ml8gv")
 
 [node name="plaque" parent="EntranceSecret/Tomb" unique_id=1115088600 instance=ExtResource("7_3ruak")]
 transform = Transform3D(3, 0, 0, 0, 4, 0, 0, 0, 2, 0.80000305, 0, 0)
@@ -1544,7 +1550,7 @@ transform = Transform3D(1.1924881e-08, 0, 1, 0, 1, 0, -1, 0, 1.1924881e-08, 0, 0
 transform = Transform3D(-1, 0, -3.1786506e-08, 0, 1, 0, 3.1786506e-08, 0, -1, 0, 0, -2)
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RitualRoom/Secret" unique_id=229163469]
-stream = ExtResource("6_rmard")
+stream = ExtResource("52_mncwc")
 bus = &"Effet"
 
 [node name="Decoration" type="Node3D" parent="RitualRoom" unique_id=1490041053]
@@ -4113,7 +4119,7 @@ parameters/looping = true
 
 [node name="Environment" parent="." unique_id=485933020 instance=ExtResource("129_mncwc")]
 
-[connection signal="close" from="EntranceSecret/Tomb/gravestone2/description" to="." method="_on_tomb_description_close"]
+[connection signal="close" from="EntranceSecret/Tomb/gravestone3/description" to="." method="_on_tomb_description_close"]
 [connection signal="dead" from="BossRoom/Skeleton Golem" to="." method="_on_skeleton_golem_dead"]
 [connection signal="body_entered" from="BossRoom/Area3D" to="BossRoom" method="_on_area_3d_body_entered"]
 [connection signal="close" from="BossRoom/NecromancerDialog" to="BossRoom" method="_on_necromancer_dialog_close"]

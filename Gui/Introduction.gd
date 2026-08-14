@@ -28,9 +28,10 @@ func _update_quest_text(quest : Quest = null) -> void :
 		var text_objectif = "[ul]"
 		var text_objectif_secondary = ""
 		for objectif in quest.list_objectif() :
-			if objectif.secondary and objectif.is_done() :
-				text_objectif_secondary = text_objectif_secondary + "[s][color=gray]%s.[/color][/s]\n"%objectif.name
-			if not objectif.secondary :
+			if objectif.secondary :
+				if objectif.is_done() : text_objectif_secondary = text_objectif_secondary + "[s][color=gray]%s.[/color][/s]\n"%objectif.name
+				else : text_objectif_secondary = text_objectif_secondary + "?????\n"
+			else: 
 				if objectif.is_done() : text_objectif = text_objectif + "[s][color=gray]%s.[/color][/s]\n"%objectif.name
 				else : text_objectif = text_objectif + "%s.\n"%objectif.name
 		text_objectif = text_objectif + "[/ul]"
