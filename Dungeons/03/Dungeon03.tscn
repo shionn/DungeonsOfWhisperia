@@ -25,11 +25,11 @@
 [ext_resource type="PackedScene" uid="uid://b4peav3v7nax7" path="res://Assets/Dungeons/Pillar/pillar.gltf" id="18_y72ap"]
 [ext_resource type="Script" uid="uid://02tq4wena32o" path="res://Dungeons/03/Cogs.gd" id="20_5mdf3"]
 [ext_resource type="AudioStream" uid="uid://61hk6iwxjiwe" path="res://Audio/DungeonThemes/dungeon.ogg" id="20_7j84j"]
-[ext_resource type="PackedScene" uid="uid://1hwhe1xxvjff" path="res://Assets/BoardGame/Checker/checker_black_single.gltf" id="20_b8r2j"]
+[ext_resource type="Script" uid="uid://c0y54kikur14d" path="res://Dungeons/03/WallTokenFlip.gd" id="20_b8r2j"]
 [ext_resource type="Script" uid="uid://c5h0pgnd6lw7o" path="res://Dungeons/03/CogSwitch.gd" id="20_bbrtj"]
 [ext_resource type="PackedScene" uid="uid://c1vdjgv5qw60t" path="res://Assets/Resource/Part/Parts_Cog_Large.gltf" id="20_fu8oi"]
+[ext_resource type="PackedScene" uid="uid://g1ense8xwee4" path="res://Dungeons/03/TokenSwitch.tscn" id="20_h5lcn"]
 [ext_resource type="PackedScene" uid="uid://dejtfuq0ondxl" path="res://Assets/Resource/Part/Parts_Axes.gltf" id="21_5mdf3"]
-[ext_resource type="PackedScene" uid="uid://b4016e6w7m4ck" path="res://Assets/BoardGame/Checker/checker_white_single.gltf" id="21_h5lcn"]
 [ext_resource type="PackedScene" uid="uid://4omyrxkhqtuc" path="res://Assets/Bits/RpgTools/screwdriver_A_long.gltf" id="21_qsbjf"]
 [ext_resource type="PackedScene" uid="uid://l4ocv1r3b2jl" path="res://Game/DungeonEnvironment.tscn" id="21_ww0ar"]
 [ext_resource type="Script" uid="uid://bpgb3pwbq61mh" path="res://Game/Interactable.gd" id="22_rwtb4"]
@@ -353,6 +353,93 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
 [node name="RoomSouthEast" type="Node3D" parent="." unique_id=474873426]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 24)
 
+[node name="WallTokenFlip" parent="RoomSouthEast" unique_id=1292456477 instance=ExtResource("8_ww55m")]
+transform = Transform3D(4.569558e-08, 0, 1, 0, 1, 0, -1, 0, 4.569558e-08, -2, 0, 2)
+script = ExtResource("20_b8r2j")
+
+[node name="11" parent="RoomSouthEast/WallTokenFlip" unique_id=1156152355 instance=ExtResource("20_h5lcn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 2.9, 0.30000004)
+
+[node name="12" parent="RoomSouthEast/WallTokenFlip" unique_id=855162966 instance=ExtResource("20_h5lcn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 2.9, 0.30000004)
+
+[node name="13" parent="RoomSouthEast/WallTokenFlip" unique_id=373072974 instance=ExtResource("20_h5lcn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.9, 0.3)
+
+[node name="14" parent="RoomSouthEast/WallTokenFlip" unique_id=1727020166 instance=ExtResource("20_h5lcn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 2.9, 0.29999998)
+state = true
+
+[node name="15" parent="RoomSouthEast/WallTokenFlip" unique_id=1278752523 instance=ExtResource("20_h5lcn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 2.9, 0.29999995)
+
+[node name="21" parent="RoomSouthEast/WallTokenFlip" unique_id=588817358 instance=ExtResource("20_h5lcn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 2.4, 0.3)
+
+[node name="22" parent="RoomSouthEast/WallTokenFlip" unique_id=1694128884 instance=ExtResource("20_h5lcn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 2.4, 0.30000004)
+state = true
+
+[node name="23" parent="RoomSouthEast/WallTokenFlip" unique_id=1950799144 instance=ExtResource("20_h5lcn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.4, 0.3)
+
+[node name="24" parent="RoomSouthEast/WallTokenFlip" unique_id=422225573 instance=ExtResource("20_h5lcn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 2.4, 0.29999998)
+state = true
+
+[node name="25" parent="RoomSouthEast/WallTokenFlip" unique_id=1386725315 instance=ExtResource("20_h5lcn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 2.4, 0.29999995)
+state = true
+
+[node name="31" parent="RoomSouthEast/WallTokenFlip" unique_id=1680896126 instance=ExtResource("20_h5lcn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.9000001, 0.29999998)
+state = true
+
+[node name="32" parent="RoomSouthEast/WallTokenFlip" unique_id=843818876 instance=ExtResource("20_h5lcn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 1.9000001, 0.30000004)
+
+[node name="33" parent="RoomSouthEast/WallTokenFlip" unique_id=2064390340 instance=ExtResource("20_h5lcn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9000001, 0.3)
+
+[node name="34" parent="RoomSouthEast/WallTokenFlip" unique_id=1504383491 instance=ExtResource("20_h5lcn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1.9000001, 0.29999998)
+
+[node name="35" parent="RoomSouthEast/WallTokenFlip" unique_id=1981234675 instance=ExtResource("20_h5lcn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1.9000001, 0.29999995)
+
+[node name="41" parent="RoomSouthEast/WallTokenFlip" unique_id=1639171331 instance=ExtResource("20_h5lcn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.4000001, 0.29999995)
+state = true
+
+[node name="42" parent="RoomSouthEast/WallTokenFlip" unique_id=1227066097 instance=ExtResource("20_h5lcn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 1.4000001, 0.30000004)
+
+[node name="43" parent="RoomSouthEast/WallTokenFlip" unique_id=385987766 instance=ExtResource("20_h5lcn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4000001, 0.3)
+state = true
+
+[node name="44" parent="RoomSouthEast/WallTokenFlip" unique_id=1593563918 instance=ExtResource("20_h5lcn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1.4000001, 0.29999998)
+
+[node name="45" parent="RoomSouthEast/WallTokenFlip" unique_id=1164143398 instance=ExtResource("20_h5lcn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1.4000001, 0.29999995)
+
+[node name="51" parent="RoomSouthEast/WallTokenFlip" unique_id=1045991337 instance=ExtResource("20_h5lcn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.9000001, 0.29999992)
+
+[node name="52" parent="RoomSouthEast/WallTokenFlip" unique_id=421186538 instance=ExtResource("20_h5lcn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0.9000001, 0.30000004)
+
+[node name="53" parent="RoomSouthEast/WallTokenFlip" unique_id=1004525406 instance=ExtResource("20_h5lcn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9000001, 0.3)
+state = true
+
+[node name="54" parent="RoomSouthEast/WallTokenFlip" unique_id=592562439 instance=ExtResource("20_h5lcn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.9000001, 0.29999998)
+
+[node name="55" parent="RoomSouthEast/WallTokenFlip" unique_id=1124936122 instance=ExtResource("20_h5lcn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.9000001, 0.29999995)
+
 [node name="Floor" type="Node3D" parent="RoomSouthEast" unique_id=478464422]
 
 [node name="floor_tile_large79" parent="RoomSouthEast/Floor" unique_id=804067447 instance=ExtResource("2_locl2")]
@@ -430,84 +517,6 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 6, 0
 
 [node name="wall_corner5" parent="RoomSouthEast/Wall" unique_id=1625283069 instance=ExtResource("6_8im25")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -2, 0, 10)
-
-[node name="wall2" parent="RoomSouthEast/Wall" unique_id=1292456477 instance=ExtResource("8_ww55m")]
-transform = Transform3D(4.569558e-08, 0, 1, 0, 1, 0, -1, 0, 4.569558e-08, -2, 0, 2)
-
-[node name="checker_black_single2" parent="RoomSouthEast/Wall/wall2" unique_id=1723884820 instance=ExtResource("20_b8r2j")]
-transform = Transform3D(0.5, 2.2847788e-08, -9.987085e-16, 0, -2.1855694e-08, -0.5, -2.2847788e-08, 0.5, -2.1855694e-08, -0.8999977, 2.4, 0.30000004)
-
-[node name="checker_black_single3" parent="RoomSouthEast/Wall/wall2" unique_id=1595373097 instance=ExtResource("20_b8r2j")]
-transform = Transform3D(0.5, 2.2847788e-08, -9.987085e-16, 0, -2.1855694e-08, -0.5, -2.2847788e-08, 0.5, -2.1855694e-08, -0.8999977, 1.4000001, 0.30000004)
-
-[node name="checker_white_single2" parent="RoomSouthEast/Wall/wall2" unique_id=1376462548 instance=ExtResource("21_h5lcn")]
-transform = Transform3D(0.5, 2.2847788e-08, -9.987085e-16, 0, -2.1855694e-08, -0.5, -2.2847788e-08, 0.5, -2.1855694e-08, -0.8999996, 2.8999999, 0.30000004)
-
-[node name="checker_white_single3" parent="RoomSouthEast/Wall/wall2" unique_id=234197999 instance=ExtResource("21_h5lcn")]
-transform = Transform3D(0.5, 2.2847788e-08, -9.987085e-16, 0, -2.1855694e-08, -0.5, -2.2847788e-08, 0.5, -2.1855694e-08, -0.8999996, 1.8999999, 0.30000004)
-
-[node name="checker_white_single4" parent="RoomSouthEast/Wall/wall2" unique_id=364604876 instance=ExtResource("21_h5lcn")]
-transform = Transform3D(0.5, 2.2847788e-08, -9.987085e-16, 0, -2.1855694e-08, -0.5, -2.2847788e-08, 0.5, -2.1855694e-08, -0.8999996, 0.89999986, 0.30000004)
-
-[node name="checker_black_single4" parent="RoomSouthEast/Wall/wall2" unique_id=1745270490 instance=ExtResource("20_b8r2j")]
-transform = Transform3D(0.5, 2.2847788e-08, -9.987085e-16, 0, -2.1855694e-08, -0.5, -2.2847788e-08, 0.5, -2.1855694e-08, 0.10000229, 2.4, 0.3)
-
-[node name="checker_black_single5" parent="RoomSouthEast/Wall/wall2" unique_id=1420300554 instance=ExtResource("20_b8r2j")]
-transform = Transform3D(0.5, 2.2847788e-08, -9.987085e-16, 0, -2.1855694e-08, -0.5, -2.2847788e-08, 0.5, -2.1855694e-08, 0.10000229, 1.4000001, 0.3)
-
-[node name="checker_white_single5" parent="RoomSouthEast/Wall/wall2" unique_id=1461067797 instance=ExtResource("21_h5lcn")]
-transform = Transform3D(0.5, 2.2847788e-08, -9.987085e-16, 0, -2.1855694e-08, -0.5, -2.2847788e-08, 0.5, -2.1855694e-08, 0.10000038, 2.8999999, 0.3)
-
-[node name="checker_white_single6" parent="RoomSouthEast/Wall/wall2" unique_id=1713898728 instance=ExtResource("21_h5lcn")]
-transform = Transform3D(0.5, 2.2847788e-08, -9.987085e-16, 0, -2.1855694e-08, -0.5, -2.2847788e-08, 0.5, -2.1855694e-08, 0.10000038, 1.8999999, 0.3)
-
-[node name="checker_white_single7" parent="RoomSouthEast/Wall/wall2" unique_id=1218414255 instance=ExtResource("21_h5lcn")]
-transform = Transform3D(0.5, 2.2847788e-08, -9.987085e-16, 0, -2.1855694e-08, -0.5, -2.2847788e-08, 0.5, -2.1855694e-08, 0.10000038, 0.89999986, 0.3)
-
-[node name="checker_black_single6" parent="RoomSouthEast/Wall/wall2" unique_id=35642454 instance=ExtResource("20_b8r2j")]
-transform = Transform3D(0.5, 2.2847788e-08, -9.987085e-16, 0, -2.1855694e-08, -0.5, -2.2847788e-08, 0.5, -2.1855694e-08, -0.3999977, 2.4, 0.3)
-
-[node name="checker_black_single7" parent="RoomSouthEast/Wall/wall2" unique_id=1790473182 instance=ExtResource("20_b8r2j")]
-transform = Transform3D(0.5, 2.2847788e-08, -9.987085e-16, 0, -2.1855694e-08, -0.5, -2.2847788e-08, 0.5, -2.1855694e-08, -0.3999977, 1.4000001, 0.3)
-
-[node name="checker_white_single8" parent="RoomSouthEast/Wall/wall2" unique_id=1951592123 instance=ExtResource("21_h5lcn")]
-transform = Transform3D(0.5, 2.2847788e-08, -9.987085e-16, 0, -2.1855694e-08, -0.5, -2.2847788e-08, 0.5, -2.1855694e-08, -0.39999962, 2.8999999, 0.3)
-
-[node name="checker_white_single9" parent="RoomSouthEast/Wall/wall2" unique_id=289097040 instance=ExtResource("21_h5lcn")]
-transform = Transform3D(0.5, 2.2847788e-08, -9.987085e-16, 0, -2.1855694e-08, -0.5, -2.2847788e-08, 0.5, -2.1855694e-08, -0.39999962, 1.8999999, 0.3)
-
-[node name="checker_white_single10" parent="RoomSouthEast/Wall/wall2" unique_id=704545983 instance=ExtResource("21_h5lcn")]
-transform = Transform3D(0.5, 2.2847788e-08, -9.987085e-16, 0, -2.1855694e-08, -0.5, -2.2847788e-08, 0.5, -2.1855694e-08, -0.39999962, 0.89999986, 0.3)
-
-[node name="checker_black_single8" parent="RoomSouthEast/Wall/wall2" unique_id=875473531 instance=ExtResource("20_b8r2j")]
-transform = Transform3D(0.5, 2.2847788e-08, -9.987085e-16, 0, -2.1855694e-08, -0.5, -2.2847788e-08, 0.5, -2.1855694e-08, 0.6000023, 2.4, 0.29999998)
-
-[node name="checker_black_single9" parent="RoomSouthEast/Wall/wall2" unique_id=500383307 instance=ExtResource("20_b8r2j")]
-transform = Transform3D(0.5, 2.2847788e-08, -9.987085e-16, 0, -2.1855694e-08, -0.5, -2.2847788e-08, 0.5, -2.1855694e-08, 0.6000023, 1.4000001, 0.29999998)
-
-[node name="checker_white_single11" parent="RoomSouthEast/Wall/wall2" unique_id=1176371893 instance=ExtResource("21_h5lcn")]
-transform = Transform3D(0.5, 2.2847788e-08, -9.987085e-16, 0, -2.1855694e-08, -0.5, -2.2847788e-08, 0.5, -2.1855694e-08, 0.6000004, 2.8999999, 0.29999998)
-
-[node name="checker_white_single12" parent="RoomSouthEast/Wall/wall2" unique_id=2142381474 instance=ExtResource("21_h5lcn")]
-transform = Transform3D(0.5, 2.2847788e-08, -9.987085e-16, 0, -2.1855694e-08, -0.5, -2.2847788e-08, 0.5, -2.1855694e-08, 0.6000004, 1.8999999, 0.29999998)
-
-[node name="checker_white_single13" parent="RoomSouthEast/Wall/wall2" unique_id=419637243 instance=ExtResource("21_h5lcn")]
-transform = Transform3D(0.5, 2.2847788e-08, -9.987085e-16, 0, -2.1855694e-08, -0.5, -2.2847788e-08, 0.5, -2.1855694e-08, 0.6000004, 0.89999986, 0.29999998)
-
-[node name="checker_black_single10" parent="RoomSouthEast/Wall/wall2" unique_id=457584279 instance=ExtResource("20_b8r2j")]
-transform = Transform3D(0.5, 2.2847788e-08, -9.987085e-16, 0, -2.1855694e-08, -0.5, -2.2847788e-08, 0.5, -2.1855694e-08, 1.1000023, 2.4, 0.29999995)
-
-[node name="checker_black_single11" parent="RoomSouthEast/Wall/wall2" unique_id=1636791811 instance=ExtResource("20_b8r2j")]
-transform = Transform3D(0.5, 2.2847788e-08, -9.987085e-16, 0, -2.1855694e-08, -0.5, -2.2847788e-08, 0.5, -2.1855694e-08, 1.1000023, 1.4000001, 0.29999995)
-
-[node name="checker_white_single14" parent="RoomSouthEast/Wall/wall2" unique_id=1247541905 instance=ExtResource("21_h5lcn")]
-transform = Transform3D(0.5, 2.2847788e-08, -9.987085e-16, 0, -2.1855694e-08, -0.5, -2.2847788e-08, 0.5, -2.1855694e-08, 1.1000004, 2.8999999, 0.29999995)
-
-[node name="checker_white_single15" parent="RoomSouthEast/Wall/wall2" unique_id=990379376 instance=ExtResource("21_h5lcn")]
-transform = Transform3D(0.5, 2.2847788e-08, -9.987085e-16, 0, -2.1855694e-08, -0.5, -2.2847788e-08, 0.5, -2.1855694e-08, 1.1000004, 1.8999999, 0.29999995)
-
-[node name="checker_white_single16" parent="RoomSouthEast/Wall/wall2" unique_id=1934929844 instance=ExtResource("21_h5lcn")]
-transform = Transform3D(0.5, 2.2847788e-08, -9.987085e-16, 0, -2.1855694e-08, -0.5, -2.2847788e-08, 0.5, -2.1855694e-08, 1.1000004, 0.89999986, 0.29999995)
 
 [node name="wall_arched2" parent="RoomSouthEast/Wall" unique_id=1116426912 instance=ExtResource("7_ap7gn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 10)
@@ -1503,5 +1512,30 @@ parameters/looping = true
 
 [node name="Environment" parent="." unique_id=485933020 instance=ExtResource("21_ww0ar")]
 
+[connection signal="state_change" from="RoomSouthEast/WallTokenFlip/11" to="RoomSouthEast/WallTokenFlip" method="_on_token_switch_state_change"]
+[connection signal="state_change" from="RoomSouthEast/WallTokenFlip/12" to="RoomSouthEast/WallTokenFlip" method="_on_token_switch_state_change"]
+[connection signal="state_change" from="RoomSouthEast/WallTokenFlip/13" to="RoomSouthEast/WallTokenFlip" method="_on_token_switch_state_change"]
+[connection signal="state_change" from="RoomSouthEast/WallTokenFlip/14" to="RoomSouthEast/WallTokenFlip" method="_on_token_switch_state_change"]
+[connection signal="state_change" from="RoomSouthEast/WallTokenFlip/15" to="RoomSouthEast/WallTokenFlip" method="_on_token_switch_state_change"]
+[connection signal="state_change" from="RoomSouthEast/WallTokenFlip/21" to="RoomSouthEast/WallTokenFlip" method="_on_token_switch_state_change"]
+[connection signal="state_change" from="RoomSouthEast/WallTokenFlip/22" to="RoomSouthEast/WallTokenFlip" method="_on_token_switch_state_change"]
+[connection signal="state_change" from="RoomSouthEast/WallTokenFlip/23" to="RoomSouthEast/WallTokenFlip" method="_on_token_switch_state_change"]
+[connection signal="state_change" from="RoomSouthEast/WallTokenFlip/24" to="RoomSouthEast/WallTokenFlip" method="_on_token_switch_state_change"]
+[connection signal="state_change" from="RoomSouthEast/WallTokenFlip/25" to="RoomSouthEast/WallTokenFlip" method="_on_token_switch_state_change"]
+[connection signal="state_change" from="RoomSouthEast/WallTokenFlip/31" to="RoomSouthEast/WallTokenFlip" method="_on_token_switch_state_change"]
+[connection signal="state_change" from="RoomSouthEast/WallTokenFlip/32" to="RoomSouthEast/WallTokenFlip" method="_on_token_switch_state_change"]
+[connection signal="state_change" from="RoomSouthEast/WallTokenFlip/33" to="RoomSouthEast/WallTokenFlip" method="_on_token_switch_state_change"]
+[connection signal="state_change" from="RoomSouthEast/WallTokenFlip/34" to="RoomSouthEast/WallTokenFlip" method="_on_token_switch_state_change"]
+[connection signal="state_change" from="RoomSouthEast/WallTokenFlip/35" to="RoomSouthEast/WallTokenFlip" method="_on_token_switch_state_change"]
+[connection signal="state_change" from="RoomSouthEast/WallTokenFlip/41" to="RoomSouthEast/WallTokenFlip" method="_on_token_switch_state_change"]
+[connection signal="state_change" from="RoomSouthEast/WallTokenFlip/42" to="RoomSouthEast/WallTokenFlip" method="_on_token_switch_state_change"]
+[connection signal="state_change" from="RoomSouthEast/WallTokenFlip/43" to="RoomSouthEast/WallTokenFlip" method="_on_token_switch_state_change"]
+[connection signal="state_change" from="RoomSouthEast/WallTokenFlip/44" to="RoomSouthEast/WallTokenFlip" method="_on_token_switch_state_change"]
+[connection signal="state_change" from="RoomSouthEast/WallTokenFlip/45" to="RoomSouthEast/WallTokenFlip" method="_on_token_switch_state_change"]
+[connection signal="state_change" from="RoomSouthEast/WallTokenFlip/51" to="RoomSouthEast/WallTokenFlip" method="_on_token_switch_state_change"]
+[connection signal="state_change" from="RoomSouthEast/WallTokenFlip/52" to="RoomSouthEast/WallTokenFlip" method="_on_token_switch_state_change"]
+[connection signal="state_change" from="RoomSouthEast/WallTokenFlip/53" to="RoomSouthEast/WallTokenFlip" method="_on_token_switch_state_change"]
+[connection signal="state_change" from="RoomSouthEast/WallTokenFlip/54" to="RoomSouthEast/WallTokenFlip" method="_on_token_switch_state_change"]
+[connection signal="state_change" from="RoomSouthEast/WallTokenFlip/55" to="RoomSouthEast/WallTokenFlip" method="_on_token_switch_state_change"]
 [connection signal="state_change" from="RoomSouthWest/SwitchWall/Switch" to="RoomSouthWest/CogWall" method="_on_switch_state_change"]
 [connection signal="activate" from="RoomSouthWest/SwitchWall/Switch/screwdriver" to="RoomSouthWest/SwitchWall/Switch" method="_on_screwdriver_activate"]
