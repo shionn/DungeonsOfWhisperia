@@ -10,6 +10,7 @@ signal state_change(token: FlipTokenSwitch)
 func _ready() -> void:
 	white.visible = state
 	black.visible = not state
+	super._ready()
 
 func toggle() -> void : 
 	state = not state

@@ -32,9 +32,11 @@
 [ext_resource type="PackedScene" uid="uid://dejtfuq0ondxl" path="res://Assets/Resource/Part/Parts_Axes.gltf" id="21_5mdf3"]
 [ext_resource type="PackedScene" uid="uid://4omyrxkhqtuc" path="res://Assets/Bits/RpgTools/screwdriver_A_long.gltf" id="21_qsbjf"]
 [ext_resource type="PackedScene" uid="uid://l4ocv1r3b2jl" path="res://Game/DungeonEnvironment.tscn" id="21_ww0ar"]
+[ext_resource type="PackedScene" uid="uid://cmeo77dmkveko" path="res://Assets/BinbunVFX/Treasure_Pro/Gems/Ruby/Ruby_01.glb" id="22_h5lcn"]
 [ext_resource type="Script" uid="uid://bpgb3pwbq61mh" path="res://Game/Interactable.gd" id="22_rwtb4"]
 [ext_resource type="PackedScene" uid="uid://xaa4bgvl23m8" path="res://Assets/Resource/Part/Parts_Cog.gltf" id="22_s8d85"]
 [ext_resource type="AudioStream" uid="uid://b4uycjqyw7yeb" path="res://Audio/80-CC0-RPG-SFX/lock_03.ogg" id="23_a71vf"]
+[ext_resource type="PackedScene" uid="uid://dr35k8w1xh3ob" path="res://Assets/BinbunVFX/loot_effects/effects/floating/loot_vfx_mythic.tscn" id="23_rvnds"]
 [ext_resource type="PackedScene" uid="uid://cx6kgjrd4yw7g" path="res://Assets/BinbunVFX/Treasure_Pro/Gems/Topaz/Topaz_01.glb" id="24_s8d85"]
 [ext_resource type="PackedScene" uid="uid://dalp31cf3de8a" path="res://Assets/Dungeons/Wall/Half/wall_half.gltf" id="25_hb751"]
 [ext_resource type="PackedScene" uid="uid://66kjelr6ky7q" path="res://Assets/BinbunVFX/loot_effects/effects/floating/loot_vfx_legendary.tscn" id="25_p1f0m"]
@@ -439,6 +441,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.9000001, 0.29999998)
 
 [node name="55" parent="RoomSouthEast/WallTokenFlip" unique_id=1124936122 instance=ExtResource("20_h5lcn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.9000001, 0.29999995)
+
+[node name="Ruby_012" parent="RoomSouthEast/WallTokenFlip" unique_id=1651331708 instance=ExtResource("22_h5lcn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6000004, 2, 0.2999999)
+
+[node name="LootVFX_Mythic" parent="RoomSouthEast/WallTokenFlip/Ruby_012" unique_id=661382816 instance=ExtResource("23_rvnds")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+visible = false
 
 [node name="Floor" type="Node3D" parent="RoomSouthEast" unique_id=478464422]
 

@@ -10,7 +10,7 @@ func _on_token_switch_state_change(token: FlipTokenSwitch) -> void:
 	if y < 5 : _toggle(x, y+1)
 	
 	if all_white() or all_black() :
-		pass
+		$Ruby_012/LootVFX_Mythic.show()
 	
 
 func _toggle(x:int, y:int) -> void:
