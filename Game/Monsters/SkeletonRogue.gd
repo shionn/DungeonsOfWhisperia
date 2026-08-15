@@ -3,7 +3,7 @@ extends Monster
 # TODO ca sert encore ca ? 
 enum AttackMode { CHOP, SLICE, STAB }
 
-func get_fov() -> float : return 80
+func get_fov() -> float : return 60
 func get_rig() -> String : return "RigMedium/"
 func get_def() -> int : return lvl+1
 func get_hit_sound() -> AudioStreamPlayer3D : return $ZombieYell9

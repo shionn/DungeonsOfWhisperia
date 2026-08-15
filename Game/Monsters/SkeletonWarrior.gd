@@ -2,7 +2,7 @@ extends Monster
 
 enum AttackMode { CHOP, CHOP_2H }
 
-func get_fov() -> float : return 70
+func get_fov() -> float : return 50
 func get_rig() -> String : return "RigMedium/"
 func get_def() -> int : return lvl+2
 func get_hit_sound() -> AudioStreamPlayer3D : return $ZombieYell9

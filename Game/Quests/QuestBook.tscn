@@ -122,9 +122,10 @@ metadata/_custom_type_script = "uid://vm6ojxtihve7"
 script = ExtResource("3_7x0jq")
 metadata/_custom_type_script = "uid://vm6ojxtihve7"
 
-[node name="Trouver l\'alliance" type="Node" parent="Dungeon02" unique_id=171444011]
+[node name="Trouver l\'aliance" type="Node" parent="Dungeon02" unique_id=171444011]
 script = ExtResource("3_7x0jq")
 secondary = true
+label = "Trouver l'alliance"
 metadata/_custom_type_script = "uid://vm6ojxtihve7"
 
 [node name="Trouver l\'ancien nom du gouffre" type="Node" parent="Dungeon02" unique_id=430315397]

@@ -2,8 +2,11 @@ extends GameBase3D
 
 @onready var _necromancer : Monster = $Valthorion
 
+var done : bool = false
+
 func _on_area_3d_body_entered(body: Node3D) -> void:
-	if body is PlayerG and _necromancer:
+	if body is PlayerG and !done:
+		done = true
 		gui.openDialog($NecromancerDialog)
 	
 

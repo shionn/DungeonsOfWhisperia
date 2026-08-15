@@ -3,6 +3,11 @@ extends GameBase
 
 @export var secondary: bool = false
 @export var xp: int = 5
+@export var label: String : 
+	get() :
+		if label == null or label.is_empty() :
+			return name
+		return label
 #@export var hidden: bool = false
 
 func is_done() -> bool :
