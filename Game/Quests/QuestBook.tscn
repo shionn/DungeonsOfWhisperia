@@ -73,8 +73,8 @@ metadata/_custom_type_script = "uid://vm6ojxtihve7"
 
 [node name="Dungeon01" type="Node" parent="." unique_id=1685079018]
 script = ExtResource("2_7pmna")
-title = "Nétoyer le mausolé"
-description = "Lorsque vous arrivez près du mausolée, vous ne croisez d’abord aucun mort-vivant… Mais les bruits étouffés de grognements et les ombres qui s’échappent de ses ruines vous mettent aussitôt en garde. Les créatures semblent sortir du mausolée lui-même, comme si leur présence était inscrite dans ses murs. Vous hésitez un instant, puis vous décidez de pénétrer à l’intérieur, déterminé à découvrir ce qui se cache derrière cette menace."
+title = "Néttoyer le mausolé"
+description = "Lorsque vous arrivez près du mausolée, vous ne croisez d’abord aucun mort-vivant… Mais les bruits étouffés de grognements et les ombres qui s’échappent de ces ruines vous mettent aussitôt en garde. Les créatures semblent sortir du mausolée lui-même, comme si leur présence était inscrite dans ses murs. Vous hésitez un instant, puis vous décidez de pénétrer à l’intérieur, déterminé à découvrir ce qui se cache derrière cette menace."
 metadata/_custom_type_script = "uid://bx0atspqwloy6"
 
 [node name="Vaincre le maître des lieux" type="Node" parent="Dungeon01" unique_id=1956964364]
@@ -97,7 +97,7 @@ metadata/_custom_type_script = "uid://vm6ojxtihve7"
 
 [node name="Dungeon02" type="Node" parent="." unique_id=2040650321]
 script = ExtResource("2_7pmna")
-title = "Nétoyer le Gouffre des Ombres"
+title = "Néttoyer le Gouffre des Ombres"
 description = "En arrivant pret du lac d’argent, dont les eaux scintillent comme des lames de couteau sous la lumière de la lune. Au loin, des cris étouffés résonnent, semblant provenir des profondeurs du donjon.  
 Dès que vous franchissez les portes de pierre, une magie noire vous enveloppe, suffocante et corrompue. L’air est lourd, chargé d’une odeur de pourriture et de sang séché. "
 metadata/_custom_type_script = "uid://bx0atspqwloy6"
@@ -122,7 +122,7 @@ metadata/_custom_type_script = "uid://vm6ojxtihve7"
 script = ExtResource("3_7x0jq")
 metadata/_custom_type_script = "uid://vm6ojxtihve7"
 
-[node name="Trouver l\'aliance" type="Node" parent="Dungeon02" unique_id=171444011]
+[node name="Trouver l\'alliance" type="Node" parent="Dungeon02" unique_id=171444011]
 script = ExtResource("3_7x0jq")
 secondary = true
 metadata/_custom_type_script = "uid://vm6ojxtihve7"

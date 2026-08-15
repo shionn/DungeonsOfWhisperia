@@ -357,7 +357,7 @@ shape = SubResource("CylinderShape3D_tdnme")
 [node name="description" type="Node" parent="DinerRoom/table_long_decorated_A2" unique_id=1871448693]
 script = ExtResource("7_v4w5c")
 text = "Pourquoi des squelettes mangent ? Ils sont déjà mort !
-Ou alors il y aurait quelque chose ici qui mangerait tous ça ? "
+Ou alors il y aurait quelque chose ici qui mangerait tout ça ? "
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
 [node name="table_long_decorated_C2" parent="DinerRoom" unique_id=1030142129 instance=ExtResource("8_kmn0o")]

@@ -141,12 +141,12 @@ metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 script = ExtResource("3_fq3ns")
 text = "J’ai été attaqué par des voleurs. J’ai fui dans la forêt, je me suis perdu… J’ai erré pendant des jours. 
 
-C’est la lumière de votre auberge qui m’a guidé jusqu’ici. Je n’ai plus un sous. Et je suis totalement épuisé."
+C’est la lumière de votre auberge qui m’a guidé jusqu’ici. Je n’ai plus un sou. Et je suis totalement épuisé."
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
 [node name="Next" type="Node" parent="Aigle Jaune/Bienvenue/Next" unique_id=1734174409 node_paths=PackedStringArray("pnj")]
 script = ExtResource("3_fq3ns")
-text = "Mon pauvre, cette histoire me semble familière. Vous n’êtes pas le premier ni le dernier à traverser de tels épreuves. Je vous propose un repas, et vous me rembourserez quand vous pourrez."
+text = "Mon pauvre, cette histoire me semble familière. Vous n’êtes pas le premier ni le dernier à traverser de tel épreuves. Je vous propose un repas, et vous me rembourserez quand vous pourrez."
 pnj = NodePath("../../..")
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
@@ -653,7 +653,7 @@ action = 1
 script = ExtResource("3_fq3ns")
 text = "Ca ressemble à un panneau d’affichage pour des petites annonces de travail. Les primes semblent assez basse. 
 
-Mais je suis bien trop épuissé pour repartir à l’aventure pour l’instant."
+Mais je suis bien trop épuisé pour repartir à l’aventure pour l’instant."
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
 [node name="Rien" type="Node" parent="PanneauDAffichage" unique_id=308382634]
