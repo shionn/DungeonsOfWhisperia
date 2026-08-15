@@ -38,22 +38,27 @@
 [ext_resource type="PackedScene" uid="uid://xaa4bgvl23m8" path="res://Assets/Resource/Part/Parts_Cog.gltf" id="22_s8d85"]
 [ext_resource type="AudioStream" uid="uid://b4uycjqyw7yeb" path="res://Audio/80-CC0-RPG-SFX/lock_03.ogg" id="23_a71vf"]
 [ext_resource type="PackedScene" uid="uid://dr35k8w1xh3ob" path="res://Assets/BinbunVFX/loot_effects/effects/floating/loot_vfx_mythic.tscn" id="23_rvnds"]
+[ext_resource type="Script" uid="uid://bfsecyqppq0uh" path="res://Dungeons/03/RoomNorthEast.gd" id="24_056qb"]
 [ext_resource type="PackedScene" uid="uid://bmrfa8swl8dj2" path="res://Assets/Halloween/Sign/sign_both.gltf" id="24_gn0cy"]
 [ext_resource type="PackedScene" uid="uid://cx6kgjrd4yw7g" path="res://Assets/BinbunVFX/Treasure_Pro/Gems/Topaz/Topaz_01.glb" id="24_s8d85"]
 [ext_resource type="PackedScene" uid="uid://dalp31cf3de8a" path="res://Assets/Dungeons/Wall/Half/wall_half.gltf" id="25_hb751"]
 [ext_resource type="PackedScene" uid="uid://4ilhuut2ig2v" path="res://Assets/Halloween/Sign/sign_left.gltf" id="25_oy3hp"]
 [ext_resource type="PackedScene" uid="uid://66kjelr6ky7q" path="res://Assets/BinbunVFX/loot_effects/effects/floating/loot_vfx_legendary.tscn" id="25_p1f0m"]
+[ext_resource type="PackedScene" uid="uid://q2eogng1wa4t" path="res://Assets/Halloween/plaque.gltf" id="25_wqofv"]
 [ext_resource type="Script" uid="uid://cb7ievftqrcdd" path="res://Dungeons/03/LightSign.gd" id="26_056qb"]
+[ext_resource type="PackedScene" uid="uid://x2ytemwsn88t" path="res://Assets/BinbunVFX/Treasure_Pro/Gems/Diamond/Diamond_02.glb" id="26_dd06p"]
 [ext_resource type="PackedScene" uid="uid://drjtx1q1w5f6" path="res://Assets/Halloween/Sign/sign_right.gltf" id="26_kvdn1"]
+[ext_resource type="PackedScene" uid="uid://cvy3jhncal1qp" path="res://Assets/BinbunVFX/loot_effects/effects/floating/loot_vfx_rare.tscn" id="27_dd06p"]
 [ext_resource type="Script" uid="uid://d3tvhs8310doa" path="res://Dungeons/03/NorthWestRoom.gd" id="30_22oqy"]
 [ext_resource type="PackedScene" uid="uid://soofixexy3kb" path="res://Assets/Scenes/Pressure_Plate.tscn" id="31_22oqy"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_b02ke"]
-radius = 0.4
 height = 1.7005
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_78w8x"]
+size = Vector3(0.5, 2, 0.5)
+
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kvdn1"]
-radius = 0.4
 height = 1.7005
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_b02ke"]
@@ -572,12 +577,22 @@ transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 0, 0
 
 [node name="RoomNorthEast" type="Node3D" parent="." unique_id=1456503486]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, 0, 24)
+script = ExtResource("24_056qb")
+
+[node name="plaque2" parent="RoomNorthEast" unique_id=1790892488 instance=ExtResource("25_wqofv")]
+transform = Transform3D(1, 0, 0, 0, 2, 0, 0, 0, 1, -4, 0, 8)
+
+[node name="Diamond_022" parent="RoomNorthEast/plaque2" unique_id=1147832244 instance=ExtResource("26_dd06p")]
+transform = Transform3D(1, 0, 0, 0, 0.5, 0, 0, 0, 1, 0, 0.35000002, 0)
+
+[node name="LootVFX_Rare" parent="RoomNorthEast/plaque2/Diamond_022" unique_id=500027091 instance=ExtResource("27_dd06p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.19999999, 0)
 
 [node name="wall_crossing2" parent="RoomNorthEast" unique_id=1806840270 instance=ExtResource("13_ww55m")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -6, 0, -14)
 script = ExtResource("26_056qb")
 length1 = 9.4
-target_angle = 180.0
+angle = 2
 
 [node name="Laser1" parent="RoomNorthEast/wall_crossing2" unique_id=1404719460 instance=ExtResource("19_oy3hp")]
 transform = Transform3D(-4.371138e-08, 0, 1, 0, 1, 0, -1, 0, -4.371138e-08, -0.2999897, 1, -2)
@@ -586,10 +601,11 @@ beam_length = 9.4
 [node name="Area3D" type="Area3D" parent="RoomNorthEast/wall_crossing2" unique_id=992243931]
 
 [node name="sign_1" parent="RoomNorthEast" unique_id=1721992292 instance=ExtResource("26_kvdn1")]
-transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 4, 0, -12)
+transform = Transform3D(-1, 0, 3.1786506e-08, 0, 1, 0, -3.1786506e-08, 0, -1, 4, 0, -12)
 script = ExtResource("26_056qb")
 length1 = 8.0
-target_angle = -90.0
+angle = 2
+target_angle = 3
 
 [node name="Laser1" parent="RoomNorthEast/sign_1" unique_id=583207132 instance=ExtResource("19_oy3hp")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 1, 0)
@@ -599,14 +615,19 @@ visible = false
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RoomNorthEast/sign_1/Area3D" unique_id=1088630590]
-transform = Transform3D(-4.371139e-08, 1, -1.1924881e-08, -1, -4.371139e-08, -1.1924881e-08, -1.1924881e-08, 1.1924881e-08, 1, 0.099749565, 0, 0.29999924)
+transform = Transform3D(-4.371139e-08, 1, -1.1924882e-08, -1, -4.371139e-08, -1.1924881e-08, -1.1924881e-08, 1.1924882e-08, 1, 0.09974861, 0, 0.29999924)
 shape = SubResource("CapsuleShape3D_b02ke")
 
-[node name="sign_2" parent="RoomNorthEast" unique_id=161355543 instance=ExtResource("26_kvdn1")]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 4, 0, -4)
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomNorthEast/sign_1/Area3D" unique_id=1342198314]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.049999952, 0)
+shape = SubResource("BoxShape3D_78w8x")
+
+[node name="sign_2" parent="RoomNorthEast" unique_id=161355543 node_paths=PackedStringArray("previous") instance=ExtResource("26_kvdn1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -4)
 script = ExtResource("26_056qb")
 length1 = 8.0
-target_angle = 180.0
+target_angle = 2
+previous = NodePath("../sign_1")
 
 [node name="Laser1" parent="RoomNorthEast/sign_2" unique_id=313981462 instance=ExtResource("19_oy3hp")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 1, 0)
@@ -620,10 +641,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 transform = Transform3D(-4.371139e-08, 1, -1.1924881e-08, -1, -4.371139e-08, -1.1924881e-08, -1.1924881e-08, 1.1924881e-08, 1, 0.099749565, 0, 0.29999924)
 shape = SubResource("CapsuleShape3D_b02ke")
 
-[node name="sign_split" parent="RoomNorthEast" unique_id=1071956429 instance=ExtResource("24_gn0cy")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4, 0, -4)
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomNorthEast/sign_2/Area3D" unique_id=799111144]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.049999952, 0)
+shape = SubResource("BoxShape3D_78w8x")
+
+[node name="sign_split" parent="RoomNorthEast" unique_id=1071956429 node_paths=PackedStringArray("previous") instance=ExtResource("24_gn0cy")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -4, 0, -4)
 script = ExtResource("26_056qb")
-target_angle = 90.0
+angle = 2
+target_angle = 1
+previous = NodePath("../sign_2")
 
 [node name="Laser1" parent="RoomNorthEast/sign_split" unique_id=1504764579 instance=ExtResource("19_oy3hp")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 1, 0)
@@ -644,9 +671,15 @@ shape = SubResource("CapsuleShape3D_kvdn1")
 transform = Transform3D(-0.08715578, 0.9961947, -1.308516e-08, -0.9961947, -0.08715578, -1.4649879e-08, -1.573458e-08, 1.1758548e-08, 1, 0.09975052, 1, 0.29999924)
 shape = SubResource("CapsuleShape3D_kvdn1")
 
-[node name="sign_31" parent="RoomNorthEast" unique_id=800876 instance=ExtResource("26_kvdn1")]
-transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, -4, 0, -8)
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="RoomNorthEast/sign_split/Area3D" unique_id=1251878956]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.95000005, 0)
+shape = SubResource("BoxShape3D_78w8x")
+
+[node name="sign_31" parent="RoomNorthEast" unique_id=800876 node_paths=PackedStringArray("previous") instance=ExtResource("26_kvdn1")]
+transform = Transform3D(-1, 0, 2.6226832e-07, 0, 1, 0, -2.6226832e-07, 0, -1, -4, 0, -8)
 script = ExtResource("26_056qb")
+angle = 2
+previous = NodePath("../sign_split")
 
 [node name="Laser1" parent="RoomNorthEast/sign_31" unique_id=1315607361 instance=ExtResource("19_oy3hp")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 1, 0)
@@ -659,11 +692,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 transform = Transform3D(-4.371139e-08, 1, -1.1924881e-08, -1, -4.371139e-08, -1.1924881e-08, -1.1924881e-08, 1.1924881e-08, 1, 0.099749565, 0, 0.29999924)
 shape = SubResource("CapsuleShape3D_b02ke")
 
-[node name="sign_32" parent="RoomNorthEast" unique_id=1061489996 instance=ExtResource("26_kvdn1")]
-transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 0, 0, -8)
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomNorthEast/sign_31/Area3D" unique_id=1257478695]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.049999952, 0)
+shape = SubResource("BoxShape3D_78w8x")
+
+[node name="sign_32" parent="RoomNorthEast" unique_id=1061489996 node_paths=PackedStringArray("previous") instance=ExtResource("26_kvdn1")]
+transform = Transform3D(7.5497894e-08, 0, 1, 0, 1, 0, -1, 0, 7.5497894e-08, 0, 0, -8)
 script = ExtResource("26_056qb")
 length1 = 16.0
-target_angle = -90.0
+angle = 1
+target_angle = 3
+previous = NodePath("../sign_31")
 
 [node name="Laser1" parent="RoomNorthEast/sign_32" unique_id=2009289357 instance=ExtResource("19_oy3hp")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 1, 0)
@@ -677,11 +716,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 transform = Transform3D(-4.371139e-08, 1, -1.1924881e-08, -1, -4.371139e-08, -1.1924881e-08, -1.1924881e-08, 1.1924881e-08, 1, 0.099749565, 0, 0.29999924)
 shape = SubResource("CapsuleShape3D_b02ke")
 
-[node name="sign_33" parent="RoomNorthEast" unique_id=1485818068 instance=ExtResource("26_kvdn1")]
-transform = Transform3D(-1, 0, 2.6226834e-07, 0, 1, 0, -2.6226834e-07, 0, -1, 0, 0, 8)
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomNorthEast/sign_32/Area3D" unique_id=1741029890]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.049999952, 0)
+shape = SubResource("BoxShape3D_78w8x")
+
+[node name="sign_33" parent="RoomNorthEast" unique_id=1485818068 node_paths=PackedStringArray("previous") instance=ExtResource("26_kvdn1")]
+transform = Transform3D(1, 0, -3.496911e-07, 0, 1, 0, 3.496911e-07, 0, 1, 0, 0, 8)
 script = ExtResource("26_056qb")
-enable_end = true
-target_angle = 180.0
+target_angle = 2
+previous = NodePath("../sign_32")
 
 [node name="Laser1" parent="RoomNorthEast/sign_33" unique_id=439998108 instance=ExtResource("19_oy3hp")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 1, 0)
@@ -694,10 +737,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 transform = Transform3D(-4.371139e-08, 1, -1.1924881e-08, -1, -4.371139e-08, -1.1924881e-08, -1.1924881e-08, 1.1924881e-08, 1, 0.099749565, 0, 0.29999924)
 shape = SubResource("CapsuleShape3D_b02ke")
 
-[node name="sign_41" parent="RoomNorthEast" unique_id=940400106 instance=ExtResource("26_kvdn1")]
-transform = Transform3D(-1, 0, 2.6226834e-07, 0, 1, 0, -2.6226834e-07, 0, -1, -4, 0, 0)
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomNorthEast/sign_33/Area3D" unique_id=1567845825]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.049999952, 0)
+shape = SubResource("BoxShape3D_78w8x")
+
+[node name="sign_41" parent="RoomNorthEast" unique_id=940400106 node_paths=PackedStringArray("previous") instance=ExtResource("26_kvdn1")]
+transform = Transform3D(-2.1855695e-07, 0, -1, 0, 1, 0, 1, 0, -2.1855695e-07, -4, 0, 0)
 script = ExtResource("26_056qb")
-target_angle = 180.0
+angle = 3
+target_angle = 2
+previous = NodePath("../sign_split")
 
 [node name="Laser1" parent="RoomNorthEast/sign_41" unique_id=444678441 instance=ExtResource("19_oy3hp")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 1, 0)
@@ -710,11 +759,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 transform = Transform3D(-4.371139e-08, 1, -1.1924881e-08, -1, -4.371139e-08, -1.1924881e-08, -1.1924881e-08, 1.1924881e-08, 1, 0.099749565, 0, 0.29999924)
 shape = SubResource("CapsuleShape3D_b02ke")
 
-[node name="sign_42" parent="RoomNorthEast" unique_id=196271672 instance=ExtResource("25_oy3hp")]
-transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -8, 0, 0)
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomNorthEast/sign_41/Area3D" unique_id=1289381891]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.049999952, 0)
+shape = SubResource("BoxShape3D_78w8x")
+
+[node name="sign_42" parent="RoomNorthEast" unique_id=196271672 node_paths=PackedStringArray("previous") instance=ExtResource("25_oy3hp")]
+transform = Transform3D(-4.371138e-08, 0, -1, 0, 1, 0, 1, 0, -4.371138e-08, -8, 0, 0)
 script = ExtResource("26_056qb")
 length1 = 8.0
-target_angle = 90.0
+angle = 3
+target_angle = 1
+previous = NodePath("../sign_41")
 
 [node name="Laser1" parent="RoomNorthEast/sign_42" unique_id=628240403 instance=ExtResource("19_oy3hp")]
 transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 0, 1, 0)
@@ -725,14 +780,19 @@ beam_length = 8.0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RoomNorthEast/sign_42/Area3D" unique_id=460544966]
-transform = Transform3D(-4.371139e-08, 1, -1.1924881e-08, -1, -4.371139e-08, -1.1924881e-08, -1.1924881e-08, 1.1924881e-08, 1, 0.099749565, 0, 0.29999924)
+transform = Transform3D(-4.371139e-08, 1, -1.1924882e-08, -1, -4.371139e-08, -1.1924881e-08, -1.1924881e-08, 1.1924882e-08, 1, -0.10025215, 0, 0.29999924)
 shape = SubResource("CapsuleShape3D_b02ke")
 
-[node name="sign_43" parent="RoomNorthEast" unique_id=30387364 instance=ExtResource("25_oy3hp")]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -8, 0, 8)
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomNorthEast/sign_42/Area3D" unique_id=530813737]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.049999952, 0)
+shape = SubResource("BoxShape3D_78w8x")
+
+[node name="sign_43" parent="RoomNorthEast" unique_id=30387364 node_paths=PackedStringArray("previous") instance=ExtResource("25_oy3hp")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -8, 0, 8)
 script = ExtResource("26_056qb")
-enable_end = true
-target_angle = 180.0
+angle = 1
+target_angle = 2
+previous = NodePath("../sign_42")
 
 [node name="Laser1" parent="RoomNorthEast/sign_43" unique_id=313158214 instance=ExtResource("19_oy3hp")]
 transform = Transform3D(1.3113417e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113417e-07, 0, 1, 0)
@@ -744,6 +804,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RoomNorthEast/sign_43/Area3D" unique_id=1516246823]
 transform = Transform3D(-4.371139e-08, 1, -1.1924881e-08, -1, -4.371139e-08, -1.1924881e-08, -1.1924881e-08, 1.1924881e-08, 1, 0.099749565, 0, 0.29999924)
 shape = SubResource("CapsuleShape3D_b02ke")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomNorthEast/sign_43/Area3D" unique_id=1861656786]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.049999952, 0)
+shape = SubResource("BoxShape3D_78w8x")
 
 [node name="Floor" type="Node3D" parent="RoomNorthEast" unique_id=491774076]
 

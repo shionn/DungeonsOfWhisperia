@@ -4,7 +4,8 @@ extends Interactable
 @export var enable_end = false
 @export var length1 : float = 4
 @export var length2 : float = 4
-@export var target_angle : float = 0
+@export var angle : int = 0
+@export var target_angle : int = 0
 @export var previous : LightSign = null
 
 var _laser1 : VFX_Beam = null
@@ -20,21 +21,25 @@ func _ready() -> void:
 	if _laser2 : 
 		_laser2.beam_length = length1
 		_laser2.enable_end = enable_end
+	rotation.y = deg_to_rad(angle*90)
 
 
 func _on_activate() -> void:
-	rotate_y(deg_to_rad(90))
-	print("%f,%f"%[rad_to_deg(rotation.y),target_angle])
-	var v = is_equal_approx( rad_to_deg(rotation.y), target_angle)
+	angle = angle + 1
+	if angle >= 4: angle = angle -4
+	rotation.y = deg_to_rad(angle*90)
+	get_parent().updade_lights()
+
+func updade_light() -> void:
+	if previous : previous.updade_light()
+	var v = is_emiting()
 	if _laser1 : _laser1.visible = v
 	if _laser2 : _laser2.visible = v
-	
-			
-	pass # Replace with function body.
 
 func is_good() -> bool:
-	print("%f,%f"%[rad_to_deg(rotation.y),target_angle])
-	return is_emiting() and is_equal_approx( rad_to_deg(rotation.y), target_angle)
+	if _laser2 :
+		return is_emiting() and angle%2 == target_angle%2
+	return is_emiting() and angle == target_angle
 
 func is_emiting() -> bool:
 	return previous == null or previous.is_good()
