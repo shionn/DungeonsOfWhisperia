@@ -22,6 +22,8 @@
 [ext_resource type="Texture2D" uid="uid://ebx8aa8ddqnm" path="res://Gui/Assets/kaykit/48/Gold_Gem_Ring_3.png" id="20_6tx0c"]
 [ext_resource type="Texture2D" uid="uid://bbbfyt8fxs1hn" path="res://Gui/Assets/kaykit/48/Gold_Ring_1.png" id="21_0to5b"]
 [ext_resource type="Texture2D" uid="uid://64kvvj3y4ods" path="res://Gui/Assets/kaykit/48/cube_gold.png" id="21_5j71u"]
+[ext_resource type="Texture2D" uid="uid://byui8uixljpqc" path="res://Gui/Assets/kaykit/48/Parts_Cog.png" id="22_ydbc3"]
+[ext_resource type="Texture2D" uid="uid://blvsgs7x3kfkk" path="res://Gui/Assets/kaykit/48/Parts_Cog_Large.png" id="23_aj1ai"]
 
 [node name="World" type="Node3D" unique_id=1017407997]
 script = ExtResource("1_bcbcq")
@@ -203,6 +205,24 @@ icon = ExtResource("21_5j71u")
 description = "C'est un cube en or, il est lourd."
 global = false
 cube = true
+metadata/_custom_type_script = "uid://bjbab3ep2gfn2"
+
+[node name="Petit Engrenage" type="Node" parent="Items" unique_id=782522857]
+script = ExtResource("5_p1v5b")
+item_name = 19
+icon = ExtResource("22_ydbc3")
+tooltip = "Petit engrenage"
+description = "C'est un petit engrenage. "
+global = false
+metadata/_custom_type_script = "uid://bjbab3ep2gfn2"
+
+[node name="Gros Engrenage" type="Node" parent="Items" unique_id=397443337]
+script = ExtResource("5_p1v5b")
+item_name = 20
+icon = ExtResource("23_aj1ai")
+tooltip = "Gros engrenage"
+description = "C'est un gros engrenage. "
+global = false
 metadata/_custom_type_script = "uid://bjbab3ep2gfn2"
 
 [node name="Options" type="Node" parent="." unique_id=586375258]

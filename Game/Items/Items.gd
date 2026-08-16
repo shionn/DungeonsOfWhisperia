@@ -21,6 +21,8 @@ enum ItemName {
 	CubeCopper,
 	CubeSilver,
 	CubeGold,
+	SmallCog,
+	LargeCog,
 }
 
 func from(item_name : ItemName) -> Item :

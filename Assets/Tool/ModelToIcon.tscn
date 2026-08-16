@@ -22,6 +22,8 @@
 [ext_resource type="PackedScene" uid="uid://copay0wjtq0qm" path="res://Assets/BoardGame/Cube/cube_copper.gltf" id="20_sa6kv"]
 [ext_resource type="PackedScene" uid="uid://d7c8lqfo3jjs" path="res://Assets/BoardGame/Cube/cube_gold.gltf" id="21_axfkp"]
 [ext_resource type="PackedScene" uid="uid://f4c1fxsiu7hi" path="res://Assets/BoardGame/Cube/cube_silver.gltf" id="22_g2ywm"]
+[ext_resource type="PackedScene" uid="uid://xaa4bgvl23m8" path="res://Assets/Resource/Part/Parts_Cog.gltf" id="23_g2ywm"]
+[ext_resource type="PackedScene" uid="uid://c1vdjgv5qw60t" path="res://Assets/Resource/Part/Parts_Cog_Large.gltf" id="24_pbvhe"]
 
 [sub_resource type="Environment" id="Environment_b02ke"]
 background_energy_multiplier = 0.0
@@ -102,6 +104,12 @@ transform = Transform3D(0.49999997, 0, -0.86602545, -0.43301272, 0.8660254, -0.2
 
 [node name="cube_silver2" parent="Old" unique_id=1957957694 instance=ExtResource("22_g2ywm")]
 transform = Transform3D(0.49999997, 0, -0.86602545, -0.43301272, 0.8660254, -0.24999999, 0.75, 0.5, 0.43301266, 0, -0.25, -0.1)
+
+[node name="Parts_Cog_Large" parent="Old" unique_id=1021368399 instance=ExtResource("24_pbvhe")]
+transform = Transform3D(0.96592593, -0.25881907, 1.13133405e-08, 0.12940952, 0.48296288, -0.8660254, 0.22414389, 0.8365164, 0.5, 0, 0, 0)
+
+[node name="Parts_Cog2" parent="Old" unique_id=261695925 instance=ExtResource("23_g2ywm")]
+transform = Transform3D(0.96592593, 0, -0.2588191, 0.1294095, 0.8660254, 0.4829629, 0.22414392, -0.50000006, 0.8365164, 1.8626451e-09, -1.4901161e-08, 0)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=979525193]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 2, 0)

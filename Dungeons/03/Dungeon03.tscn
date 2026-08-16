@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cw83g6dt3kbad" path="res://Dungeons/03/Dungeon03.gd" id="1_72t4p"]
 [ext_resource type="PackedScene" uid="uid://kwbu30ltyyru" path="res://Assets/Dungeons/Floor/Large/floor_dirt_large.gltf" id="1_fgonf"]
+[ext_resource type="Script" uid="uid://bimqcro2b055y" path="res://Dungeons/03/Central.gd" id="2_03wwx"]
 [ext_resource type="PackedScene" uid="uid://b3w65ugrkoyx4" path="res://Assets/Dungeons/Floor/Large/floor_tile_large.gltf" id="2_locl2"]
 [ext_resource type="PackedScene" uid="uid://djyg2cdin7gyb" path="res://Assets/Scenes/DungeonExit.tscn" id="3_locl2"]
 [ext_resource type="PackedScene" uid="uid://ccbdbtpi2ehj5" path="res://Assets/Dungeons/Floor/Small/floor_tile_small.gltf" id="3_m8tn1"]
@@ -17,8 +18,12 @@
 [ext_resource type="PackedScene" uid="uid://d51lyq7dmfus" path="res://Assets/Dungeons/Wall/End/wall_half_endcap_sloped.gltf" id="8_8im25"]
 [ext_resource type="PackedScene" uid="uid://7em3lt4lnfwr" path="res://Assets/Dungeons/Wall/wall.gltf" id="8_ww55m"]
 [ext_resource type="PackedScene" uid="uid://cl36lcn4lo2eq" path="res://Assets/Scenes/Torch_Mounted.tscn" id="9_ap7gn"]
+[ext_resource type="PackedScene" uid="uid://b1pornh7valq3" path="res://Assets/Halloween/Skull/skull.gltf" id="10_pjofm"]
+[ext_resource type="PackedScene" uid="uid://bs4g14gbelnvi" path="res://Assets/BinbunVFX/loot_effects/effects/floating/loot_vfx_uncommon.tscn" id="12_e5ej3"]
+[ext_resource type="PackedScene" uid="uid://5wchrnhcm1me" path="res://Assets/BinbunVFX/Treasure_Pro/Gems/Ruby/Ruby_02.glb" id="13_8exks"]
 [ext_resource type="PackedScene" uid="uid://c46ooxce6k3yk" path="res://Assets/BinbunVFX/portal_vfx/effects/gate/gate_portal_vfx_06.tscn" id="13_ww0ar"]
 [ext_resource type="PackedScene" uid="uid://dholpdwxyyxfv" path="res://Assets/Dungeons/Wall/Crossing/wall_crossing.gltf" id="13_ww55m"]
+[ext_resource type="PackedScene" uid="uid://k6sgt0ngbtxx" path="res://Assets/BinbunVFX/Treasure_Pro/Gems/Sapphire/Sapphire_01.glb" id="13_x8tiv"]
 [ext_resource type="PackedScene" uid="uid://xqftme4a1q27" path="res://Assets/Dungeons/Wall/wall_inset.gltf" id="14_vn7kh"]
 [ext_resource type="PackedScene" uid="uid://cv1l0hoks5jen" path="res://Assets/Dungeons/Wall/wall_pillar.gltf" id="15_m8tn1"]
 [ext_resource type="Script" uid="uid://dexpl21rteomv" path="res://Game/Roof.gd" id="18_24axm"]
@@ -46,16 +51,15 @@
 [ext_resource type="PackedScene" uid="uid://66kjelr6ky7q" path="res://Assets/BinbunVFX/loot_effects/effects/floating/loot_vfx_legendary.tscn" id="25_p1f0m"]
 [ext_resource type="PackedScene" uid="uid://q2eogng1wa4t" path="res://Assets/Halloween/plaque.gltf" id="25_wqofv"]
 [ext_resource type="Script" uid="uid://cb7ievftqrcdd" path="res://Dungeons/03/LightSign.gd" id="26_056qb"]
-[ext_resource type="PackedScene" uid="uid://x2ytemwsn88t" path="res://Assets/BinbunVFX/Treasure_Pro/Gems/Diamond/Diamond_02.glb" id="26_dd06p"]
 [ext_resource type="PackedScene" uid="uid://drjtx1q1w5f6" path="res://Assets/Halloween/Sign/sign_right.gltf" id="26_kvdn1"]
 [ext_resource type="PackedScene" uid="uid://cvy3jhncal1qp" path="res://Assets/BinbunVFX/loot_effects/effects/floating/loot_vfx_rare.tscn" id="27_dd06p"]
 [ext_resource type="Script" uid="uid://d3tvhs8310doa" path="res://Dungeons/03/NorthWestRoom.gd" id="30_22oqy"]
 [ext_resource type="PackedScene" uid="uid://soofixexy3kb" path="res://Assets/Scenes/Pressure_Plate.tscn" id="31_22oqy"]
+[ext_resource type="PackedScene" uid="uid://dlke4fo5vigdi" path="res://Assets/BinbunVFX/Treasure_Pro/Gems/Sapphire/Sapphire_02.glb" id="31_x8tiv"]
 [ext_resource type="PackedScene" uid="uid://dj04kkrln1kbp" path="res://Assets/Scenes/Lootable_Copper_Cube.tscn" id="44_3xsv1"]
 [ext_resource type="PackedScene" uid="uid://b1skmxyfmh2gf" path="res://Assets/Scenes/Lootable_Gold_Cube.tscn" id="45_pjofm"]
 [ext_resource type="PackedScene" uid="uid://bf6ydualo64ha" path="res://Assets/Scenes/Lootable_Silver_Cube.tscn" id="46_8exks"]
 [ext_resource type="PackedScene" uid="uid://cwnm8j06u4lyi" path="res://Assets/BinbunVFX/Treasure_Pro/Gems/Emerald/Emerald_02.glb" id="48_c4k6w"]
-[ext_resource type="PackedScene" uid="uid://crng4r6trrp3n" path="res://Assets/BinbunVFX/loot_effects/effects/ground/ground_loot_vfx_uncommon.tscn" id="49_3xsv1"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_b02ke"]
 height = 1.7005
@@ -74,6 +78,7 @@ script = ExtResource("1_72t4p")
 
 [node name="Central" type="Node3D" parent="." unique_id=1890867375]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, 0)
+script = ExtResource("2_03wwx")
 
 [node name="Floor" type="Node3D" parent="Central" unique_id=338800573]
 
@@ -168,11 +173,29 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 6, 0
 [node name="torch_mounted" parent="Central/Wall/wall_inset2" unique_id=1245216849 instance=ExtResource("9_ap7gn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
 
+[node name="skull" parent="Central/Wall/wall_inset2" unique_id=2123561740 instance=ExtResource("10_pjofm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, -0.09999943)
+
+[node name="Emerald_022" parent="Central/Wall/wall_inset2/skull" unique_id=1970519033 instance=ExtResource("48_c4k6w")]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -0.19999981, 0.39999998, 0.29999924)
+
+[node name="LootVFX_Uncommon" parent="Central/Wall/wall_inset2/skull/Emerald_022" unique_id=1585262107 instance=ExtResource("12_e5ej3")]
+visible = false
+
 [node name="wall_inset4" parent="Central/Wall" unique_id=1882961492 instance=ExtResource("14_vn7kh")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -6, 0, -6)
 
 [node name="torch_mounted" parent="Central/Wall/wall_inset4" unique_id=338668333 instance=ExtResource("9_ap7gn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0000002, 0, 0)
+
+[node name="skull" parent="Central/Wall/wall_inset4" unique_id=1535072814 instance=ExtResource("10_pjofm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, -0.09999943)
+
+[node name="Topaz_012" parent="Central/Wall/wall_inset4/skull" unique_id=1653328412 instance=ExtResource("24_s8d85")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0.19999981, 0.39999998, 0.2999997)
+
+[node name="LootVFX_Legendary" parent="Central/Wall/wall_inset4/skull/Topaz_012" unique_id=603875447 instance=ExtResource("25_p1f0m")]
+visible = false
 
 [node name="wall_inset3" parent="Central/Wall" unique_id=563154177 instance=ExtResource("14_vn7kh")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 6, 0, 6)
@@ -180,11 +203,29 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 6, 0
 [node name="torch_mounted" parent="Central/Wall/wall_inset3" unique_id=1177742265 instance=ExtResource("9_ap7gn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9999998, 0, 0)
 
+[node name="skull" parent="Central/Wall/wall_inset3" unique_id=849348980 instance=ExtResource("10_pjofm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, -0.099998474)
+
+[node name="Sapphire_012" parent="Central/Wall/wall_inset3/skull" unique_id=1773398113 instance=ExtResource("13_x8tiv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.19999981, 0.39999998, 0.29999924)
+
+[node name="LootVFX_Rare" parent="Central/Wall/wall_inset3/skull/Sapphire_012" unique_id=500027091 instance=ExtResource("27_dd06p")]
+visible = false
+
 [node name="wall_inset5" parent="Central/Wall" unique_id=1549944265 instance=ExtResource("14_vn7kh")]
 transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -6, 0, 6)
 
 [node name="torch_mounted" parent="Central/Wall/wall_inset5" unique_id=788140462 instance=ExtResource("9_ap7gn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0000002, 0, 0)
+
+[node name="skull" parent="Central/Wall/wall_inset5" unique_id=1530649961 instance=ExtResource("10_pjofm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, -0.09999943)
+
+[node name="Ruby_022" parent="Central/Wall/wall_inset5/skull" unique_id=252046332 instance=ExtResource("13_8exks")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -0.19999981, 0.39999998, 0.3000002)
+
+[node name="LootVFX_Mythic" parent="Central/Wall/wall_inset5/skull/Ruby_022" unique_id=661382816 instance=ExtResource("23_rvnds")]
+visible = false
 
 [node name="wall_corner36" parent="Central/Wall" unique_id=2077037377 instance=ExtResource("6_8im25")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 2)
@@ -465,8 +506,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.9000001, 0.29999995)
 [node name="Ruby_012" parent="RoomSouthEast/WallTokenFlip" unique_id=1651331708 instance=ExtResource("22_h5lcn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6000004, 2, 0.2999999)
 
-[node name="LootVFX_Mythic" parent="RoomSouthEast/WallTokenFlip/Ruby_012" unique_id=661382816 instance=ExtResource("23_rvnds")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+[node name="LootVFX_Mythic" parent="RoomSouthEast/WallTokenFlip/Ruby_012" unique_id=1488676964 instance=ExtResource("23_rvnds")]
+transform = Transform3D(0.5, -2.284779e-08, -2.284779e-08, 2.284779e-08, 5.9624403e-09, 0.5, -2.284779e-08, -0.5, 5.962441e-09, 0, 0, 0)
 visible = false
 
 [node name="Floor" type="Node3D" parent="RoomSouthEast" unique_id=478464422]
@@ -574,11 +615,11 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -6, 
 [node name="wall3" parent="RoomSouthEast/Wall" unique_id=1013593073 instance=ExtResource("8_ww55m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -14)
 
+[node name="torch_mounted" parent="RoomSouthEast/Wall/wall3" unique_id=655217534 instance=ExtResource("9_ap7gn")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 2, 0, 0)
+
 [node name="wall_arched5" parent="RoomSouthEast/Wall" unique_id=524547967 instance=ExtResource("7_ap7gn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -14)
-
-[node name="torch_mounted" parent="RoomSouthEast" unique_id=655217534 instance=ExtResource("9_ap7gn")]
-transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 0, 0, -14)
 
 [node name="RoomNorthEast" type="Node3D" parent="." unique_id=1456503486]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, 0, 24)
@@ -587,11 +628,10 @@ script = ExtResource("24_056qb")
 [node name="plaque2" parent="RoomNorthEast" unique_id=1790892488 instance=ExtResource("25_wqofv")]
 transform = Transform3D(1, 0, 0, 0, 2, 0, 0, 0, 1, -4, 0, 8)
 
-[node name="Diamond_022" parent="RoomNorthEast/plaque2" unique_id=1147832244 instance=ExtResource("26_dd06p")]
-transform = Transform3D(1, 0, 0, 0, 0.5, 0, 0, 0, 1, 0, 0.35000002, 0)
+[node name="Sapphire_022" parent="RoomNorthEast/plaque2" unique_id=1813223203 instance=ExtResource("31_x8tiv")]
+transform = Transform3D(1, 0, 0, 0, 0.5, 0, 0, 0, 1, 0, 0.48, 0)
 
-[node name="LootVFX_Rare" parent="RoomNorthEast/plaque2/Diamond_022" unique_id=500027091 instance=ExtResource("27_dd06p")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.19999999, 0)
+[node name="LootVFX_Rare" parent="RoomNorthEast/plaque2/Sapphire_022" unique_id=2061728608 instance=ExtResource("27_dd06p")]
 visible = false
 
 [node name="wall_crossing2" parent="RoomNorthEast" unique_id=1806840270 instance=ExtResource("13_ww55m")]
@@ -969,10 +1009,10 @@ transform = Transform3D(1.7484554e-07, 2, 8.742278e-08, 0, -8.742277e-08, 2, 2, 
 [node name="Cog" parent="RoomSouthWest/CogWall/Parts_Axes4" unique_id=85157834 instance=ExtResource("20_fu8oi")]
 transform = Transform3D(-4.371139e-08, -1, -4.3711385e-08, 1, -4.3711385e-08, -4.3711392e-08, 4.3711385e-08, -4.3711392e-08, 1, -0.30000067, 0, 0)
 
-[node name="Topaz" parent="RoomSouthWest/CogWall/Parts_Axes4" unique_id=1653328412 instance=ExtResource("24_s8d85")]
+[node name="Topaz" parent="RoomSouthWest/CogWall/Parts_Axes4" unique_id=1111073106 instance=ExtResource("24_s8d85")]
 transform = Transform3D(-2.1855696e-08, -0.5, -2.185569e-08, 0.5, -2.1855694e-08, -2.1855694e-08, 2.1855692e-08, -2.1855692e-08, 0.5, -0.58015203, 0, 0)
 
-[node name="LootVFX_Legendary" parent="RoomSouthWest/CogWall/Parts_Axes4/Topaz" unique_id=603875447 instance=ExtResource("25_p1f0m")]
+[node name="LootVFX_Legendary" parent="RoomSouthWest/CogWall/Parts_Axes4/Topaz" unique_id=827187701 instance=ExtResource("25_p1f0m")]
 transform = Transform3D(1, 0, 0, 0, 1, -1.2621775e-29, 0, 2.96718e-37, 1, 0, 0.10000038, 0)
 visible = false
 
@@ -1233,11 +1273,10 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -10,
 [node name="wall_cracked3" parent="NodeNorthWest/Wall" unique_id=1803022992 instance=ExtResource("6_mqtgq")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2, 0, -2)
 
-[node name="Emerald_022" parent="NodeNorthWest/Wall/wall_cracked3" unique_id=1970519033 instance=ExtResource("48_c4k6w")]
+[node name="Emerald_022" parent="NodeNorthWest/Wall/wall_cracked3" unique_id=420420072 instance=ExtResource("48_c4k6w")]
 transform = Transform3D(-4.3711385e-08, -1, -4.371139e-08, 1, -4.371139e-08, 4.371139e-08, -4.371139e-08, -4.371139e-08, 1, -2, 2, -0.29999924)
 
-[node name="GroundLootVFX_Uncommon" parent="NodeNorthWest/Wall/wall_cracked3/Emerald_022" unique_id=1085953083 instance=ExtResource("49_3xsv1")]
-transform = Transform3D(-8.742277e-08, -3.5527137e-15, 1, -1, -3.5527135e-15, -8.742278e-08, 2.1175824e-22, -1, -1.0658141e-14, 0, 0, 0)
+[node name="LootVFX_Uncommon" parent="NodeNorthWest/Wall/wall_cracked3/Emerald_022" unique_id=1676537277 instance=ExtResource("12_e5ej3")]
 visible = false
 
 [node name="wall_cracked4" parent="NodeNorthWest/Wall" unique_id=831204915 instance=ExtResource("6_mqtgq")]
@@ -1790,6 +1829,7 @@ parameters/looping = true
 
 [node name="Environment" parent="." unique_id=485933020 instance=ExtResource("21_ww0ar")]
 
+[connection signal="resolv" from="RoomSouthEast/WallTokenFlip" to="Central" method="_on_south_east_resolv"]
 [connection signal="state_change" from="RoomSouthEast/WallTokenFlip/11" to="RoomSouthEast/WallTokenFlip" method="_on_token_switch_state_change"]
 [connection signal="state_change" from="RoomSouthEast/WallTokenFlip/12" to="RoomSouthEast/WallTokenFlip" method="_on_token_switch_state_change"]
 [connection signal="state_change" from="RoomSouthEast/WallTokenFlip/13" to="RoomSouthEast/WallTokenFlip" method="_on_token_switch_state_change"]
@@ -1815,6 +1855,7 @@ parameters/looping = true
 [connection signal="state_change" from="RoomSouthEast/WallTokenFlip/53" to="RoomSouthEast/WallTokenFlip" method="_on_token_switch_state_change"]
 [connection signal="state_change" from="RoomSouthEast/WallTokenFlip/54" to="RoomSouthEast/WallTokenFlip" method="_on_token_switch_state_change"]
 [connection signal="state_change" from="RoomSouthEast/WallTokenFlip/55" to="RoomSouthEast/WallTokenFlip" method="_on_token_switch_state_change"]
+[connection signal="resolv" from="RoomNorthEast" to="Central" method="_on_north_east_resolv"]
 [connection signal="activate" from="RoomNorthEast/sign_1" to="RoomNorthEast/sign_1" method="_on_activate"]
 [connection signal="activate" from="RoomNorthEast/sign_2" to="RoomNorthEast/sign_2" method="_on_activate"]
 [connection signal="activate" from="RoomNorthEast/sign_split" to="RoomNorthEast/sign_split" method="_on_activate"]
@@ -1826,6 +1867,7 @@ parameters/looping = true
 [connection signal="activate" from="RoomNorthEast/sign_43" to="RoomNorthEast/sign_43" method="_on_activate"]
 [connection signal="state_change" from="RoomSouthWest/SwitchWall/Switch" to="RoomSouthWest/CogWall" method="_on_switch_state_change"]
 [connection signal="activate" from="RoomSouthWest/SwitchWall/Switch/screwdriver" to="RoomSouthWest/SwitchWall/Switch" method="_on_screwdriver_activate"]
+[connection signal="resolv" from="NodeNorthWest" to="Central" method="_on_north_west_resolv"]
 [connection signal="activate" from="NodeNorthWest/Switch1" to="NodeNorthWest" method="_on_switch_activate"]
 [connection signal="item_place" from="NodeNorthWest/Switch1" to="NodeNorthWest" method="_on_switch_1_item_place"]
 [connection signal="activate" from="NodeNorthWest/Switch2" to="NodeNorthWest" method="_on_switch_activate"]

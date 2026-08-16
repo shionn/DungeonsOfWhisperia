@@ -1,5 +1,6 @@
 extends Node3D
 
+signal resolv()
 
 func _on_token_switch_state_change(token: FlipTokenSwitch) -> void:
 	var x = token.name.substr(0,1).to_int()
@@ -11,6 +12,7 @@ func _on_token_switch_state_change(token: FlipTokenSwitch) -> void:
 	
 	if all_white() or all_black() :
 		$Ruby_012/LootVFX_Mythic.show()
+		resolv.emit()
 	
 
 func _toggle(x:int, y:int) -> void:

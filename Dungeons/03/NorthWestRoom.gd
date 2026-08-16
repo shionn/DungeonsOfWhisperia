@@ -1,5 +1,6 @@
 extends GameBase3D
 
+signal resolv()
 
 func _on_switch_1_item_place(plate: PressurePlate, item: Item) -> void:
 	if item.cube : 
@@ -53,4 +54,5 @@ func _on_switch_activate(_plate: PressurePlate) -> void:
 		if node is PressurePlate :
 			enable = enable and node.is_toggle()
 	if enable :
-		$Wall/wall_cracked3/Emerald_022/GroundLootVFX_Uncommon.show()
+		$Wall/wall_cracked3/Emerald_022/LootVFX_Uncommon.show()
+		resolv.emit()
