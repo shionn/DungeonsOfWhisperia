@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bf6ydualo64ha"]
+
+[ext_resource type="PackedScene" uid="uid://f4c1fxsiu7hi" path="res://Assets/BoardGame/Cube/cube_silver.gltf" id="1_m7qvt"]
+[ext_resource type="Script" uid="uid://bpgb3pwbq61mh" path="res://Game/Interactable.gd" id="2_qw5k4"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8v8m1"]
+size = Vector3(0.6, 0.6, 0.6)
+
+[node name="cube_silver" unique_id=1957957694 instance=ExtResource("1_m7qvt")]
+script = ExtResource("2_qw5k4")
+loot_obj = 17
+hide_on_loot = true
+
+[node name="Area3D" type="Area3D" parent="." index="1" unique_id=1192591785]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0" unique_id=505245704]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
+shape = SubResource("BoxShape3D_8v8m1")

@@ -15,6 +15,7 @@ extends GameBase
 @export var unique : bool = false
 @export_category("Item type")
 @export var gemme : bool = false
+@export var cube : bool = false
 
 signal _action()
 

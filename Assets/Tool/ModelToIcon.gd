@@ -8,10 +8,10 @@ func _ready() -> void:
 	#$Skeleton_Minion/Rig_Medium/Skeleton3D/Skeleton_Minion_Jaw.hide()
 	#$Skeleton_Minion/Rig_Medium/Skeleton3D/Skeleton_Minion_LegLeft.hide()
 	#$Skeleton_Minion/Rig_Medium/Skeleton3D/Skeleton_Minion_LegRight.hide()
-	$Rogue_Hooded/Rig_Medium/Skeleton3D/RogueHooded_Body.hide()
-	$Rogue_Hooded/Rig_Medium/Skeleton3D/RogueHooded_Cape.hide()
-	$Rogue_Hooded/Rig_Medium/Skeleton3D/RogueHooded_ArmRight.hide()
-	$Rogue_Hooded/Rig_Medium/Skeleton3D/RogueHooded_ArmLeft.hide()
+	#$Rogue_Hooded/Rig_Medium/Skeleton3D/RogueHooded_Body.hide()
+	#$Rogue_Hooded/Rig_Medium/Skeleton3D/RogueHooded_Cape.hide()
+	#$Rogue_Hooded/Rig_Medium/Skeleton3D/RogueHooded_ArmRight.hide()
+	#$Rogue_Hooded/Rig_Medium/Skeleton3D/RogueHooded_ArmLeft.hide()
 	pass
 	
 func _unhandled_input(event: InputEvent) -> void:
@@ -26,5 +26,5 @@ func _unhandled_input(event: InputEvent) -> void:
 			var img = get_viewport().get_texture().get_image()
 			var node = get_children().get(get_children().size()-1)
 			img.save_png("Gui/Assets/kaykit/%s.png"%[node.name])
-			print("done")
+			print("done %s"%node.name)
 			

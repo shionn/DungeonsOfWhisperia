@@ -18,6 +18,9 @@ enum ItemName {
 	AnneauValthorion,
 	Alliance,
 	SkullHead_Dungeon2,
+	CubeCopper,
+	CubeSilver,
+	CubeGold,
 }
 
 func from(item_name : ItemName) -> Item :

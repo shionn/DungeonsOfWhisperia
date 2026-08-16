@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dj04kkrln1kbp"]
+
+[ext_resource type="PackedScene" uid="uid://copay0wjtq0qm" path="res://Assets/BoardGame/Cube/cube_copper.gltf" id="1_ih0rc"]
+[ext_resource type="Script" uid="uid://bpgb3pwbq61mh" path="res://Game/Interactable.gd" id="2_nbjyw"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_b02ke"]
+size = Vector3(0.55, 0.55, 0.55)
+
+[node name="cube_copper" unique_id=695013954 instance=ExtResource("1_ih0rc")]
+script = ExtResource("2_nbjyw")
+loot_obj = 16
+hide_on_loot = true
+
+[node name="Area3D" type="Area3D" parent="." index="1" unique_id=58531352]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0" unique_id=399385687]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
+shape = SubResource("BoxShape3D_b02ke")

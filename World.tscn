@@ -16,9 +16,12 @@
 [ext_resource type="Texture2D" uid="uid://wtnragxwbeo1" path="res://Gui/Assets/kaykit/48/Jewel_Red.png" id="16_6w02q"]
 [ext_resource type="Texture2D" uid="uid://tshe7v1i7wsg" path="res://Gui/Assets/kaykit/48/Jewel_Green.png" id="17_1fphk"]
 [ext_resource type="Texture2D" uid="uid://5b37qc2lu48j" path="res://Gui/Assets/kaykit/48/Jewel_Orange.png" id="18_sjtuv"]
+[ext_resource type="Texture2D" uid="uid://bmhuprnumqx0d" path="res://Gui/Assets/kaykit/48/cube_copper.png" id="19_6tx0c"]
 [ext_resource type="Texture2D" uid="uid://xh4id0a8h8u5" path="res://Gui/Assets/kaykit/48/Jewel_Blue.png" id="19_cvq6i"]
+[ext_resource type="Texture2D" uid="uid://bs18k45t6aq1k" path="res://Gui/Assets/kaykit/48/cube_silver.png" id="20_0to5b"]
 [ext_resource type="Texture2D" uid="uid://ebx8aa8ddqnm" path="res://Gui/Assets/kaykit/48/Gold_Gem_Ring_3.png" id="20_6tx0c"]
 [ext_resource type="Texture2D" uid="uid://bbbfyt8fxs1hn" path="res://Gui/Assets/kaykit/48/Gold_Ring_1.png" id="21_0to5b"]
+[ext_resource type="Texture2D" uid="uid://64kvvj3y4ods" path="res://Gui/Assets/kaykit/48/cube_gold.png" id="21_5j71u"]
 
 [node name="World" type="Node3D" unique_id=1017407997]
 script = ExtResource("1_bcbcq")
@@ -173,6 +176,33 @@ item_name = 14
 icon = ExtResource("21_0to5b")
 description = "C'est une alliance."
 unique = true
+metadata/_custom_type_script = "uid://bjbab3ep2gfn2"
+
+[node name="Cube en Cuivre" type="Node" parent="Items" unique_id=1994148734]
+script = ExtResource("5_p1v5b")
+item_name = 16
+icon = ExtResource("19_6tx0c")
+description = "C'est un cube en cuivre, il est très léger."
+global = false
+cube = true
+metadata/_custom_type_script = "uid://bjbab3ep2gfn2"
+
+[node name="Cube en Argent" type="Node" parent="Items" unique_id=1423352270]
+script = ExtResource("5_p1v5b")
+item_name = 17
+icon = ExtResource("20_0to5b")
+description = "C'est un cube en argent, il est léger."
+global = false
+cube = true
+metadata/_custom_type_script = "uid://bjbab3ep2gfn2"
+
+[node name="Cube en Or" type="Node" parent="Items" unique_id=132311466]
+script = ExtResource("5_p1v5b")
+item_name = 18
+icon = ExtResource("21_5j71u")
+description = "C'est un cube en or, il est lourd."
+global = false
+cube = true
 metadata/_custom_type_script = "uid://bjbab3ep2gfn2"
 
 [node name="Options" type="Node" parent="." unique_id=586375258]
