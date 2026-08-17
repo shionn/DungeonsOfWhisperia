@@ -7,9 +7,6 @@
 
 [node name="Skeleton Golem" unique_id=706438754 instance=ExtResource("1_n84kc")]
 script = ExtResource("2_hm0ww")
-lvl = null
-loot_obj = null
-loot_gold = null
 
 [node name="Character" parent="." index="8" unique_id=1568710970 instance=ExtResource("2_55ba2")]
 

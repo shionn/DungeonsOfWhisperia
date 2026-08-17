@@ -31,6 +31,7 @@ func _on_switch_state_change(state: bool) -> void:
 		_cog3.rotation.x = 0
 		_cog4.rotation.x = 0
 	_light.visible = _cog2.visible and _cog3.visible and state
+	$AudioStreamPlayer3D.playing = state
 
 
 func _on_parts_axes_2_item_drop(_item: Item) -> void:

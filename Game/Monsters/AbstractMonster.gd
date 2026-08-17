@@ -2,6 +2,7 @@
 extends GameBaseCharacterBody3D 
 
 enum State { IDLE, CHASE, ATTACK, ATTACKING, HIT, DEATH, PATROL, NAVIGATE }
+enum Weapon { DEFAULT, COG }
 
 @onready var _animation = $"Character/AnimationPlayer" as AnimationPlayer
 @onready var _navigation_agent: NavigationAgent3D = $NavigationAgent3D
@@ -12,6 +13,7 @@ enum State { IDLE, CHASE, ATTACK, ATTACKING, HIT, DEATH, PATROL, NAVIGATE }
 
 @export var state : State = State.IDLE 
 @export var lvl : int = 1
+@export var weapon : Weapon = Weapon.DEFAULT
 @export_category("loot")
 @export var loot_obj : Items.ItemName = Items.ItemName.None
 @export var loot_gold: int = 0

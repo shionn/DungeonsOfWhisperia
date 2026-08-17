@@ -12,6 +12,13 @@ func _init() -> void:
 
 func _ready() -> void:
 	apply()
+#	get_window().get_viewport().size_changed.connect(_on_size_changed)
+
+func _on_size_changed() -> void : 
+	print("viewport %d,%d"%[get_window().get_viewport().get_visible_rect().size.x, get_window().get_viewport().get_visible_rect().size.y])
+	print("DisplayServer %d,%d"%[DisplayServer.window_get_size().x, DisplayServer.window_get_size().y])
+	#DisplayServer.window_set_size()
+
 
 func load_to_file() -> void:
 	var file_name = "user://options.save"

@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://mdcw1qtplj50" path="res://Assets/Characters/Skeleton/Skeleton_Golem.glb" id="1_fucn3"]
 [ext_resource type="PackedScene" uid="uid://dce5c7kupjaoy" path="res://Assets/Characters/SkeletonAccessoires/Skeleton_Mace_Large.gltf" id="2_3xrv4"]
 [ext_resource type="PackedScene" uid="uid://by01ys5qqtv5x" path="res://Assets/Animations/RigLarge.tscn" id="2_8qywu"]
+[ext_resource type="PackedScene" uid="uid://c1vdjgv5qw60t" path="res://Assets/Resource/Part/Parts_Cog_Large.gltf" id="3_ex0ia"]
 
 [node name="Skeleton_Golem" unique_id=1568710970 instance=ExtResource("1_fucn3")]
 
@@ -40,6 +41,9 @@ bone_name = "handslot.r"
 bone_idx = 22
 
 [node name="Skeleton_Mace_Large" parent="Rig_Large/Skeleton3D/RightHand" index="0" unique_id=856041715 instance=ExtResource("2_3xrv4")]
+
+[node name="Parts_Cog_Large" parent="Rig_Large/Skeleton3D/RightHand" index="1" unique_id=1021368399 instance=ExtResource("3_ex0ia")]
+transform = Transform3D(1.936158, 0.21520263, -0.4527473, -0.4561782, 0.007497892, -1.9472661, -0.20783098, 1.9883745, 0.056343943, 0.062331975, 0.7939625, 0.07575655)
 
 [node name="LeftHand" type="BoneAttachment3D" parent="Rig_Large/Skeleton3D" index="9" unique_id=1405047992]
 transform = Transform3D(-0.16077973, -0.106249854, 0.98125476, 0.9839672, 0.060494788, 0.16777472, -0.077186465, 0.992497, 0.09481996, 1.1731902, 1.2665626, 0.22395352)

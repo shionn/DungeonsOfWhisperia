@@ -31,6 +31,7 @@ Je ne suis pas graphiste, les assets proviennent principalement de [Kaykit par k
 - https://opengameart.org/content/teleport-spell
 - https://opengameart.org/content/new-thing-get
 - https://opengameart.org/content/win-sound-1
+- https://opengameart.org/content/30-cc0-sfx-loops
 
 ### Music
 - https://opengameart.org/content/rpg-title-1
