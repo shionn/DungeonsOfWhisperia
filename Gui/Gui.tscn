@@ -1440,7 +1440,7 @@ icon = ExtResource("34_w65rx")
 custom_minimum_size = Vector2(250, 0)
 layout_mode = 2
 mouse_default_cursor_shape = 2
-text = "TODO 3"
+text = "Chambres de l'Équilibre"
 icon = ExtResource("34_w65rx")
 
 [node name="CloseButton" type="Button" parent="ExitAuberge/PanelContainer/MarginContainer/VBoxContainer" unique_id=1231563995]

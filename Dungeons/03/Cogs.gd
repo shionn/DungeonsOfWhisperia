@@ -1,4 +1,4 @@
-extends Node3D
+extends GameBase3D
 
 @onready var _cog1 = $Parts_Axes1/Cog
 @onready var _cog2 = $Parts_Axes2/Cog
@@ -6,12 +6,10 @@ extends Node3D
 @onready var _cog4 = $Parts_Axes4/Cog
 @onready var _light = $Parts_Axes4/Topaz/LootVFX_Legendary as VFXLoot
 
+signal resolv()
+
 var _rotating = false 
 
-func _ready() -> void:
-	
-	pass
-	
 func _physics_process(delta: float) -> void:
 	if _rotating :
 		_cog1.rotate_x(delta)
@@ -24,9 +22,30 @@ func _physics_process(delta: float) -> void:
 
 func _on_switch_state_change(state: bool) -> void:
 	_rotating = state
-	if not _rotating :
+	if _rotating :
+		if _cog2.visible and _cog3.visible :
+			resolv.emit()
+	else :
 		_cog1.rotation.x = 0
 		_cog2.rotation.x = 0
 		_cog3.rotation.x = 0
 		_cog4.rotation.x = 0
 	_light.visible = _cog2.visible and _cog3.visible and state
+
+
+func _on_parts_axes_2_item_drop(_item: Item) -> void:
+	if _item.item_name == Items.ItemName.LargeCog :
+		if _rotating : gui.openDialog($RunningInteract)
+		else :
+			bag.unloot(_item.item_name)
+			_cog2.show()
+	else : gui.openDialog($OtherItem)
+
+
+func _on_parts_axes_3_item_drop(_item: Item) -> void:
+	if _item.item_name == Items.ItemName.SmallCog :
+		if _rotating : gui.openDialog($RunningInteract)
+		else :
+			bag.unloot(_item.item_name)
+			_cog3.show()
+	else : gui.openDialog($OtherItem)

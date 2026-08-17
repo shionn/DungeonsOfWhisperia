@@ -60,6 +60,7 @@
 [ext_resource type="PackedScene" uid="uid://b1skmxyfmh2gf" path="res://Assets/Scenes/Lootable_Gold_Cube.tscn" id="45_pjofm"]
 [ext_resource type="PackedScene" uid="uid://bf6ydualo64ha" path="res://Assets/Scenes/Lootable_Silver_Cube.tscn" id="46_8exks"]
 [ext_resource type="PackedScene" uid="uid://cwnm8j06u4lyi" path="res://Assets/BinbunVFX/Treasure_Pro/Gems/Emerald/Emerald_02.glb" id="48_c4k6w"]
+[ext_resource type="Script" uid="uid://cxe0hpd6pnr8q" path="res://Gui/Dialog.gd" id="49_e5ej3"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_b02ke"]
 height = 1.7005
@@ -70,8 +71,20 @@ size = Vector3(0.5, 2, 0.5)
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kvdn1"]
 height = 1.7005
 
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_b02ke"]
+height = 0.2
+radius = 0.22
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_brlmy"]
+height = 0.3
+radius = 0.4
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_b02ke"]
 size = Vector3(0.2, 0.5, 0.2)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_78w8x"]
+height = 1.25
+radius = 0.12
 
 [node name="Dungeon03" type="Node3D" unique_id=1701170448]
 script = ExtResource("1_72t4p")
@@ -960,6 +973,29 @@ transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 6, 0
 [node name="RoomSouthWest" type="Node3D" parent="." unique_id=998963300]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -24)
 
+[node name="Small_Cog" parent="RoomSouthWest" unique_id=1636469684 instance=ExtResource("22_s8d85")]
+transform = Transform3D(0.99999994, -7.5710346e-08, 1.7320509, -1.7320509, -4.3711385e-08, 0.99999994, 0, -2, -8.742278e-08, -5.9, 1.1, -6.500002)
+script = ExtResource("22_rwtb4")
+loot_obj = 19
+hide_on_loot = true
+
+[node name="Area3D" type="Area3D" parent="RoomSouthWest/Small_Cog" unique_id=624431331]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RoomSouthWest/Small_Cog/Area3D" unique_id=73043513]
+transform = Transform3D(0.5, -1.1920929e-07, 0.8660256, 0.8660254, -5.7620454e-08, -0.4999999, 5.2756334e-08, 1, -2.185569e-08, 0, 0, 0)
+shape = SubResource("CylinderShape3D_b02ke")
+
+[node name="Large_Cog" parent="RoomSouthWest" unique_id=316079276 instance=ExtResource("20_fu8oi")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -3.7, 0, -8)
+script = ExtResource("22_rwtb4")
+loot_obj = 20
+hide_on_loot = true
+
+[node name="Area3D" type="Area3D" parent="RoomSouthWest/Large_Cog" unique_id=1182876417]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RoomSouthWest/Large_Cog/Area3D" unique_id=983537391]
+shape = SubResource("CylinderShape3D_brlmy")
+
 [node name="SwitchWall" parent="RoomSouthWest" unique_id=1244570300 instance=ExtResource("14_vn7kh")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -10, 0, 10)
 
@@ -993,15 +1029,33 @@ transform = Transform3D(-4.3711395e-08, 0, 1, 0, 1, 0, -1, 0, -4.3711395e-08, -0
 
 [node name="Parts_Axes2" parent="RoomSouthWest/CogWall" unique_id=380982629 instance=ExtResource("21_5mdf3")]
 transform = Transform3D(1.7484554e-07, 2, 8.742278e-08, 0, -8.742277e-08, 2, 2, -1.7484554e-07, -1.1464112e-14, 0.39999962, 1.5999999, 9.536743e-07)
+script = ExtResource("22_rwtb4")
+interactDistance = 4.0
 
 [node name="Cog" parent="RoomSouthWest/CogWall/Parts_Axes2" unique_id=1021368399 instance=ExtResource("20_fu8oi")]
 transform = Transform3D(-4.371139e-08, -1, -4.3711385e-08, 1, -4.3711385e-08, -4.3711392e-08, 4.3711385e-08, -4.3711392e-08, 1, -0.3000002, 0, 0)
+visible = false
+
+[node name="Area3D" type="Area3D" parent="RoomSouthWest/CogWall/Parts_Axes2" unique_id=532018619]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RoomSouthWest/CogWall/Parts_Axes2/Area3D" unique_id=1633621185]
+transform = Transform3D(-4.371139e-08, 1, 4.3711385e-08, -1, -4.3711385e-08, -4.3711385e-08, -4.3711385e-08, -4.371045e-08, 1, 0, 0, 0)
+shape = SubResource("CylinderShape3D_78w8x")
 
 [node name="Parts_Axes3" parent="RoomSouthWest/CogWall" unique_id=1373535795 instance=ExtResource("21_5mdf3")]
 transform = Transform3D(-8.742279e-08, 0, -2, 0, 2, 0, 2, 0, -8.742279e-08, -0.70000076, 1.8496816, 0.1000061)
+script = ExtResource("22_rwtb4")
+interactDistance = 4.0
 
 [node name="Cog" parent="RoomSouthWest/CogWall/Parts_Axes3" unique_id=655956598 instance=ExtResource("22_s8d85")]
 transform = Transform3D(-4.3711395e-08, 0, 1, 0, 1, 0, -1, 0, -4.3711395e-08, -0.35000086, 0, 0)
+visible = false
+
+[node name="Area3D" type="Area3D" parent="RoomSouthWest/CogWall/Parts_Axes3" unique_id=24887334]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RoomSouthWest/CogWall/Parts_Axes3/Area3D" unique_id=1275620718]
+transform = Transform3D(-4.371139e-08, 1, 4.3711385e-08, -1, -4.3711385e-08, -4.3711385e-08, -4.3711385e-08, -4.371045e-08, 1, 0, 0, 0)
+shape = SubResource("CylinderShape3D_78w8x")
 
 [node name="Parts_Axes4" parent="RoomSouthWest/CogWall" unique_id=89794583 instance=ExtResource("21_5mdf3")]
 transform = Transform3D(1.7484554e-07, 2, 8.742278e-08, 0, -8.742277e-08, 2, 2, -1.7484554e-07, -1.1464112e-14, -1.7999992, 1.5999999, 4.7683716e-06)
@@ -1015,6 +1069,16 @@ transform = Transform3D(-2.1855696e-08, -0.5, -2.185569e-08, 0.5, -2.1855694e-08
 [node name="LootVFX_Legendary" parent="RoomSouthWest/CogWall/Parts_Axes4/Topaz" unique_id=827187701 instance=ExtResource("25_p1f0m")]
 transform = Transform3D(1, 0, 0, 0, 1, -1.2621775e-29, 0, 2.96718e-37, 1, 0, 0.10000038, 0)
 visible = false
+
+[node name="RunningInteract" type="Node" parent="RoomSouthWest/CogWall" unique_id=1435836849]
+script = ExtResource("49_e5ej3")
+text = "Je ne peux pas ajouter un engrenage tant que le mécanisme est actif. Je risquerai de me blesser. Je dois l'arretez."
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="OtherItem" type="Node" parent="RoomSouthWest/CogWall" unique_id=1585279431]
+script = ExtResource("49_e5ej3")
+text = "Je ne peux pas mettre cela ici."
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
 [node name="Wall" type="Node3D" parent="RoomSouthWest" unique_id=1175794551]
 
@@ -1867,6 +1931,9 @@ parameters/looping = true
 [connection signal="activate" from="RoomNorthEast/sign_43" to="RoomNorthEast/sign_43" method="_on_activate"]
 [connection signal="state_change" from="RoomSouthWest/SwitchWall/Switch" to="RoomSouthWest/CogWall" method="_on_switch_state_change"]
 [connection signal="activate" from="RoomSouthWest/SwitchWall/Switch/screwdriver" to="RoomSouthWest/SwitchWall/Switch" method="_on_screwdriver_activate"]
+[connection signal="resolv" from="RoomSouthWest/CogWall" to="Central" method="_on_south_west_resolv"]
+[connection signal="item_drop" from="RoomSouthWest/CogWall/Parts_Axes2" to="RoomSouthWest/CogWall" method="_on_parts_axes_2_item_drop"]
+[connection signal="item_drop" from="RoomSouthWest/CogWall/Parts_Axes3" to="RoomSouthWest/CogWall" method="_on_parts_axes_3_item_drop"]
 [connection signal="resolv" from="NodeNorthWest" to="Central" method="_on_north_west_resolv"]
 [connection signal="activate" from="NodeNorthWest/Switch1" to="NodeNorthWest" method="_on_switch_activate"]
 [connection signal="item_place" from="NodeNorthWest/Switch1" to="NodeNorthWest" method="_on_switch_1_item_place"]
