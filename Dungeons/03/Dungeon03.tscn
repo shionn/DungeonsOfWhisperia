@@ -26,6 +26,7 @@
 [ext_resource type="PackedScene" uid="uid://k6sgt0ngbtxx" path="res://Assets/BinbunVFX/Treasure_Pro/Gems/Sapphire/Sapphire_01.glb" id="13_x8tiv"]
 [ext_resource type="PackedScene" uid="uid://xqftme4a1q27" path="res://Assets/Dungeons/Wall/wall_inset.gltf" id="14_vn7kh"]
 [ext_resource type="PackedScene" uid="uid://cv1l0hoks5jen" path="res://Assets/Dungeons/Wall/wall_pillar.gltf" id="15_m8tn1"]
+[ext_resource type="PackedScene" uid="uid://vjplcyh026ca" path="res://Game/Monsters/BlackKnight.tscn" id="17_2u0qn"]
 [ext_resource type="Script" uid="uid://dexpl21rteomv" path="res://Game/Roof.gd" id="18_24axm"]
 [ext_resource type="PackedScene" uid="uid://b4peav3v7nax7" path="res://Assets/Dungeons/Pillar/pillar.gltf" id="18_y72ap"]
 [ext_resource type="PackedScene" uid="uid://ke1g5awfw3aw" path="res://Assets/BinbunVFX/beam_vfx/effects/laser/laser_vfx_04.tscn" id="19_oy3hp"]
@@ -75,8 +76,10 @@
 [ext_resource type="AudioStream" uid="uid://jq61tyjujyta" path="res://Audio/30-cc0-sfx-loops/machine_06.ogg" id="53_vi7ap"]
 [ext_resource type="PackedScene" uid="uid://ccpi60vfgxxjo" path="res://Game/Monsters/SkeletonGolem.tscn" id="54_vy3ur"]
 [ext_resource type="PackedScene" uid="uid://6h3k07jyv80i" path="res://Assets/Scenes/Meuble_2C_A.tscn" id="57_63gg8"]
-[ext_resource type="PackedScene" uid="uid://dj0modsh7x76o" path="res://Assets/Scenes/Bar_Straight_C.tscn" id="58_5n2am"]
-[ext_resource type="PackedScene" uid="uid://cs14pkxuhb8fg" path="res://Assets/Dungeons/Tables/table_long_tablecloth.gltf" id="59_gy3gi"]
+[ext_resource type="Script" uid="uid://ckgsmfsvs6nnn" path="res://Dungeons/03/Secret_Room.gd" id="58_b3up8"]
+[ext_resource type="PackedScene" uid="uid://d2jm5u2yvk7w6" path="res://Assets/BinbunVFX/Treasure_Pro/Gems/Diamond/Diamond_01.glb" id="59_b3up8"]
+[ext_resource type="PackedScene" uid="uid://doj4jomx3h34p" path="res://Assets/BinbunVFX/loot_effects/effects/ground/ground_loot_vfx_common.tscn" id="60_2u0qn"]
+[ext_resource type="PackedScene" uid="uid://be86xep67rb3s" path="res://Game/Monsters/Necromancer.tscn" id="61_iro63"]
 [ext_resource type="PackedScene" uid="uid://vd24afk1pvyd" path="res://Assets/Scenes/Box_Stacked.tscn" id="66_y88mc"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_tdnme"]
@@ -107,6 +110,12 @@ radius = 0.12
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_b02ke"]
 size = Vector3(0.2, 0.5, 0.2)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_b02ke"]
+radius = 0.2
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_oow84"]
+size = Vector3(2, 3, 3)
 
 [node name="Dungeon03" type="Node3D" unique_id=1701170448]
 script = ExtResource("1_72t4p")
@@ -231,7 +240,7 @@ transform = Transform3D(0.8660254, 0, -0.5, 0, 1, 0, 0.5, 0, 0.8660254, 4.600000
 [node name="RoomSouthEast" type="Node3D" parent="." unique_id=474873426]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 24)
 
-[node name="SkeletonWarrior" parent="RoomSouthEast" unique_id=706438754 instance=ExtResource("30_ms3fl")]
+[node name="SkeletonWarrior" parent="RoomSouthEast" unique_id=233849590 instance=ExtResource("30_ms3fl")]
 transform = Transform3D(0.5, 0, 0.8660254, 0, 1, 0, -0.8660254, 0, 0.5, 6.8, 0, 6.3999996)
 
 [node name="WallTokenFlip" parent="RoomSouthEast" unique_id=1292456477 instance=ExtResource("8_ww55m")]
@@ -812,18 +821,62 @@ bus = &"Effet"
 
 [node name="SecretRoom" type="Node3D" parent="." unique_id=1705367066]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, 0)
-
-[node name="table_long_tablecloth2" parent="SecretRoom" unique_id=625139395 instance=ExtResource("59_gy3gi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
-
-[node name="bar_straight_C3" parent="SecretRoom" unique_id=491312944 instance=ExtResource("58_5n2am")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -3.5, 0, 5.8)
+script = ExtResource("58_b3up8")
 
 [node name="box_stacked" parent="SecretRoom" unique_id=354657273 instance=ExtResource("66_y88mc")]
 transform = Transform3D(-0.4999999, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, -0.4999999, 8, 0, 8)
 loot1 = 7
 gold1 = 10
 gold2 = 14
+
+[node name="Autel" parent="SecretRoom" unique_id=1982365075 instance=ExtResource("25_wqofv")]
+transform = Transform3D(1, 0, 0, 0, 4, 0, 0, 0, 3, 2, -0.5, 0)
+
+[node name="Axes" parent="SecretRoom/Autel" unique_id=64291728 instance=ExtResource("21_5mdf3")]
+transform = Transform3D(2.9802322e-08, -1, 0, 0.25, 7.450581e-09, 0, 0, 0, 0.33333334, 0, 0.35, 0)
+script = ExtResource("22_rwtb4")
+
+[node name="Area3D" type="Area3D" parent="SecretRoom/Autel/Axes" unique_id=1524673584]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SecretRoom/Autel/Axes/Area3D" unique_id=1041765904]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6, 0, 0)
+shape = SubResource("SphereShape3D_b02ke")
+
+[node name="AxesL" parent="SecretRoom/Autel" unique_id=2134004551 instance=ExtResource("21_5mdf3")]
+transform = Transform3D(-4.371139e-08, 1, 0, -0.25, -1.0927847e-08, 0, 0, 0, 0.33333334, 0, 0.425, -0.33333334)
+
+[node name="Diamond_012" parent="SecretRoom/Autel/AxesL" unique_id=1690057727 instance=ExtResource("59_b3up8")]
+transform = Transform3D(1, 4.3711392e-08, 4.371139e-08, 4.371139e-08, 1.9106857e-15, -1.0000001, -4.371139e-08, 1.0000001, 0, -0.4, 0, 0)
+
+[node name="GroundLootVFX_Common" parent="SecretRoom/Autel/AxesL/Diamond_012" unique_id=2071615077 instance=ExtResource("60_2u0qn")]
+transform = Transform3D(1, 3.5527137e-15, 0, -3.5527137e-15, 1, 0, 0, 0, 1, 0, 0.19999999, 0)
+light_energy = 1.0
+
+[node name="AxesR" parent="SecretRoom/Autel" unique_id=185432867 instance=ExtResource("21_5mdf3")]
+transform = Transform3D(4.371139e-08, -1, -8.742278e-08, -0.25, -1.0927847e-08, 0, -1.2737904e-15, 2.9140926e-08, -0.33333334, 0, 0.425, 0.33333334)
+
+[node name="Diamond_012" parent="SecretRoom/Autel/AxesR" unique_id=1132727576 instance=ExtResource("59_b3up8")]
+transform = Transform3D(1, 4.3711392e-08, 4.371139e-08, 4.371139e-08, 1.9106857e-15, -1.0000001, -4.371139e-08, 1.0000001, 0, -0.4, 0, 0)
+
+[node name="GroundLootVFX_Common" parent="SecretRoom/Autel/AxesR/Diamond_012" unique_id=85542156 instance=ExtResource("60_2u0qn")]
+transform = Transform3D(1, 3.5527137e-15, 0, -3.5527137e-15, 1, 0, 0, 0, 1, 0, 0.19999999, 0)
+light_energy = 1.0
+
+[node name="Monster" parent="SecretRoom" unique_id=2091262154 instance=ExtResource("61_iro63")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4, 0, 0)
+state = 7
+
+[node name="Area3D" type="Area3D" parent="SecretRoom" unique_id=1871302519]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SecretRoom/Area3D" unique_id=128003891]
+shape = SubResource("BoxShape3D_oow84")
+
+[node name="BlackKnight" parent="SecretRoom" unique_id=706438754 instance=ExtResource("17_2u0qn")]
+transform = Transform3D(0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, 0.70710677, 1, 0, -6.7)
+state = 5
+lvl = 2
+loot_gold = 5
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=817384587]
 stream = ExtResource("20_7j84j")
@@ -1327,8 +1380,14 @@ transform = Transform3D(7.5497894e-08, 0, 1, 0, 1, 0, -1, 0, 7.5497894e-08, -10,
 [node name="wall_corner41" parent="Walls/Wall" unique_id=2040607785 instance=ExtResource("6_8im25")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -6, 0, -2)
 
+[node name="torch_mounted" parent="Walls/Wall/wall_corner41" unique_id=1061607330 instance=ExtResource("9_ap7gn")]
+transform = Transform3D(-0.99999994, 0, 1.589326e-08, 0, 1, 0, -1.589326e-08, 0, -0.99999994, -2, 0, 0)
+
 [node name="wall_corner42" parent="Walls/Wall" unique_id=235852104 instance=ExtResource("6_8im25")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 2)
+
+[node name="torch_mounted" parent="Walls/Wall/wall_corner42" unique_id=1282138482 instance=ExtResource("9_ap7gn")]
+transform = Transform3D(1.1924881e-08, 0, 1, 0, 1, 0, -1, 0, 1.1924881e-08, 0, 0, 2)
 
 [node name="wall_corner61" parent="Walls/Wall" unique_id=1954603990 instance=ExtResource("6_8im25")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 10, 0, 10)
@@ -2113,3 +2172,4 @@ transform = Transform3D(-1, -8.742278e-08, 0, 8.742278e-08, -1, 0, 0, 0, 1, 6, 0
 [connection signal="activate" from="NodeNorthWest/Switch4" to="NodeNorthWest" method="_on_switch_activate"]
 [connection signal="item_place" from="NodeNorthWest/Switch4" to="NodeNorthWest" method="_on_switch_4_item_place"]
 [connection signal="activate" from="NodeNorthWest/Meuble/paladin_book2/description/Lire la suite" to="NodeNorthWest" method="_on_lire_la_suite_activate"]
+[connection signal="body_shape_entered" from="SecretRoom/Area3D" to="SecretRoom" method="_on_area_3d_body_shape_entered"]

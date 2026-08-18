@@ -5,6 +5,7 @@
 [ext_resource type="Animation" uid="uid://cu1ma64o26t7c" path="res://Assets/Animations/Rig_Large/Idle_A.res" id="3_pq4if"]
 [ext_resource type="Animation" uid="uid://c8lg5ibu722cw" path="res://Assets/Animations/Rig_Large/Walking_A.res" id="4_0jr0q"]
 [ext_resource type="Animation" uid="uid://dymwbdoxqkhng" path="res://Assets/Animations/Rig_Large/Melee_1H_Slash.res" id="4_feo0d"]
+[ext_resource type="Animation" uid="uid://cujqrjwqkcjx3" path="res://Assets/Animations/Rig_Large/Melee_1H_Stab.res" id="5_feo0d"]
 [ext_resource type="Animation" uid="uid://wxjjtnqhtb3h" path="res://Assets/Animations/Rig_Large/Melee_2H_Attack.res" id="5_ltr41"]
 [ext_resource type="Animation" uid="uid://c1nkgnkweu042" path="res://Assets/Animations/Rig_Large/Melee_2H_Slam.res" id="6_uxx1p"]
 
@@ -14,6 +15,7 @@ _data = {
 &"Hit_A": ExtResource("2_6k2yg"),
 &"Idle_A": ExtResource("3_pq4if"),
 &"Melee_1H_Slash": ExtResource("4_feo0d"),
+&"Melee_1H_Stab": ExtResource("5_feo0d"),
 &"Melee_2H_Attack": ExtResource("5_ltr41"),
 &"Melee_2H_Slam": ExtResource("6_uxx1p"),
 &"Walking_A": ExtResource("4_0jr0q")

@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://dgc2txo2vk14u"]
+
+[ext_resource type="PackedScene" uid="uid://cij0sw42mn6u5" path="res://Assets/Characters/MonthlySeries5/BlackKnight.glb" id="1_ufrun"]
+[ext_resource type="PackedScene" uid="uid://544025weo45m" path="res://Assets/Characters/MonthlySeries5/Accessoires/BlackKnight_Sword.gltf" id="2_x2va1"]
+[ext_resource type="PackedScene" uid="uid://brvkjoo2dgly" path="res://Assets/Characters/MonthlySeries5/Accessoires/BlackKnight_Shield.gltf" id="3_w6r48"]
+[ext_resource type="PackedScene" uid="uid://by01ys5qqtv5x" path="res://Assets/Animations/RigLarge.tscn" id="4_w6r48"]
+
+[node name="BlackKnight" unique_id=1751742794 instance=ExtResource("1_ufrun")]
+
+[node name="Skeleton3D" parent="Rig_Large" parent_id_path=PackedInt32Array(1004524976) index="0" unique_id=1930344019]
+bones/1/position = Vector3(0, 0.95983857, 0)
+bones/1/rotation = Quaternion(2.255949e-10, 0.17319314, 2.5649072e-09, 0.9848879)
+bones/2/position = Vector3(0.34189013, 0.22717452, 2.7846536e-08)
+bones/2/rotation = Quaternion(0.97625697, 0.060139295, 0.044718944, 0.20323808)
+bones/3/rotation = Quaternion(0.38606462, 3.887788e-08, -2.8804902e-07, 0.9224718)
+bones/4/rotation = Quaternion(-0.5434468, -0.020576118, 0.06515547, 0.8366583)
+bones/5/rotation = Quaternion(-0.00014458763, 0.9202248, -0.3913903, 3.218181e-05)
+bones/6/rotation = Quaternion(0.028232738, -0.13047159, 0.006231665, 0.99103045)
+bones/7/rotation = Quaternion(2.7755574e-17, -1.1920201e-07, -2.3283064e-10, 1)
+bones/8/position = Vector3(0.88401353, 0.49826336, 1.604588e-07)
+bones/8/rotation = Quaternion(-0.53630614, 0.0005754586, -0.7652754, 0.35599002)
+bones/9/rotation = Quaternion(7.881497e-09, -5.7954082e-08, -0.54420954, 0.8389493)
+bones/11/rotation = Quaternion(-0.025542492, -0.31168377, 0.14376508, 0.9388996)
+bones/12/position = Vector3(6.060935e-08, 0.23070048, -0.13799977)
+bones/12/rotation = Quaternion(-0.09439981, 0.10738044, -0.64511883, 0.75058645)
+bones/13/rotation = Quaternion(0.05596485, -0.035059966, 0.0037994627, 0.9978098)
+bones/14/position = Vector3(-0.8840135, 0.49826312, 1.8061023e-07)
+bones/14/rotation = Quaternion(-0.60394996, -0.09815252, 0.68855584, 0.38923177)
+bones/15/rotation = Quaternion(4.3554387e-08, 4.241262e-08, 0.5501995, 0.83503324)
+bones/17/rotation = Quaternion(-0.027678039, 0.28841054, -0.07522256, 0.95414615)
+bones/18/position = Vector3(-1.0046796e-09, 0.2307003, -0.13799965)
+bones/18/rotation = Quaternion(-0.09439981, -0.10738047, 0.64511883, 0.7505864)
+bones/19/position = Vector3(-0.34189013, 0.22717452, 2.0398836e-08)
+bones/19/rotation = Quaternion(0.94679, -0.106437005, 0.29934296, 0.051514626)
+bones/20/rotation = Quaternion(0.35656473, -5.4381047e-08, 2.4085875e-07, 0.9342707)
+bones/21/rotation = Quaternion(-0.6128999, 0.038280863, -0.082084306, 0.7849525)
+bones/22/rotation = Quaternion(0.00018874474, 0.9201331, -0.39160573, -4.1430852e-05)
+
+[node name="RightHand" type="BoneAttachment3D" parent="Rig_Large/Skeleton3D" index="9" unique_id=1528728282]
+transform = Transform3D(-0.16078013, 0.10624957, -0.9812546, -0.9839094, 0.06122915, 0.16784519, 0.07791465, 0.99245214, 0.09469564, -1.1793679, 1.2554864, 0.20234384)
+bone_name = "handslot.r"
+bone_idx = 18
+
+[node name="BlackKnight_Sword" parent="Rig_Large/Skeleton3D/RightHand" index="0" unique_id=343728585 instance=ExtResource("2_x2va1")]
+
+[node name="LeftHand" type="BoneAttachment3D" parent="Rig_Large/Skeleton3D" index="10" unique_id=1833964633]
+transform = Transform3D(-0.16077968, -0.106249854, 0.9812547, 0.9839672, 0.060494754, 0.16777474, -0.077186406, 0.992497, 0.09482004, 1.1731902, 1.2665623, 0.22395357)
+bone_name = "handslot.l"
+bone_idx = 12
+
+[node name="BlackKnight_Shield" parent="Rig_Large/Skeleton3D/LeftHand" index="0" unique_id=1413435766 instance=ExtResource("3_w6r48")]
+transform = Transform3D(1, 1.4210855e-14, 2.1463612e-15, 0, 1, 0, 6.943251e-15, 0, 1, 0, -1.3850308e-07, 0.50000024)
+
+[node name="AnimationPlayer" parent="." index="1" unique_id=63969122 instance=ExtResource("4_w6r48")]
