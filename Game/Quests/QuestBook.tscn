@@ -132,3 +132,37 @@ metadata/_custom_type_script = "uid://vm6ojxtihve7"
 script = ExtResource("3_7x0jq")
 secondary = true
 metadata/_custom_type_script = "uid://vm6ojxtihve7"
+
+[node name="Dungeon03" type="Node" parent="." unique_id=1581868977]
+script = ExtResource("2_7pmna")
+title = "Restaurer l'anneau de Valthorion"
+description = "En entrant dans le donjon, vous remarquer qu'un champs de force bloque l'entrée de la salle des rituels. "
+metadata/_custom_type_script = "uid://bx0atspqwloy6"
+
+[node name="Faire tomber le champ de force" type="Node" parent="Dungeon03" unique_id=61613207]
+script = ExtResource("3_7x0jq")
+metadata/_custom_type_script = "uid://vm6ojxtihve7"
+
+[node name="Restaurer l\'anneau de Valthorion" type="Node" parent="Dungeon03" unique_id=2052896692]
+script = ExtResource("3_7x0jq")
+metadata/_custom_type_script = "uid://vm6ojxtihve7"
+
+[node name="Resoudre l\'énigme des Engrenages" type="Node" parent="Dungeon03" unique_id=828133927]
+script = ExtResource("3_7x0jq")
+secondary = true
+metadata/_custom_type_script = "uid://vm6ojxtihve7"
+
+[node name="Resoudre l\'énigme des Dalles" type="Node" parent="Dungeon03" unique_id=1595053163]
+script = ExtResource("3_7x0jq")
+secondary = true
+metadata/_custom_type_script = "uid://vm6ojxtihve7"
+
+[node name="Resoudre l\'énigme des Lumières" type="Node" parent="Dungeon03" unique_id=1419338064]
+script = ExtResource("3_7x0jq")
+secondary = true
+metadata/_custom_type_script = "uid://vm6ojxtihve7"
+
+[node name="Resoudre l\'énigme des Jetons" type="Node" parent="Dungeon03" unique_id=1846138225]
+script = ExtResource("3_7x0jq")
+secondary = true
+metadata/_custom_type_script = "uid://vm6ojxtihve7"

@@ -27,6 +27,13 @@ extends GameBase
 @onready var auberge_03_identify_ring : QuestObjectif = $"Auberge03/Identifier la Bague"
 @onready var auberge_03_trouver_mission : QuestObjectif = $"Auberge03/Trouver une autre mission"
 @onready var auberge_03_randre_alliance : QuestObjectif = $"Auberge03/Rendre l'alliance"
+@onready var dungeon_03 : Quest = $Dungeon03
+@onready var dungeon_03_faire_tomber_le_champ_de_force : QuestObjectif = $"Dungeon03/Faire tomber le champ de force"
+@onready var dungeon_03_restaurer_l_anneau : QuestObjectif = $"Dungeon03/Restaurer l'anneau de Valthorion"
+@onready var dungeon_03_resoudre_engrenage : QuestObjectif = $"Dungeon03/Resoudre l'énigme des Engrenages"
+@onready var dungeon_03_resoudre_dalles : QuestObjectif = $"Dungeon03/Resoudre l'énigme des Dalles"
+@onready var dungeon_03_resoudre_lumiere : QuestObjectif = $"Dungeon03/Resoudre l'énigme des Lumières"
+@onready var dungeon_03_resoudre_jetons : QuestObjectif = $"Dungeon03/Resoudre l'énigme des Jetons"
 
 
 var _quests : Dictionary = {}

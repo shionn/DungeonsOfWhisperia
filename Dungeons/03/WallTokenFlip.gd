@@ -1,4 +1,4 @@
-extends Node3D
+extends GameBase3D
 
 signal resolv()
 
@@ -27,3 +27,8 @@ func all_black() -> bool :
 	for child in get_children() :
 		if child is FlipTokenSwitch and child.state : return false
 	return true
+
+
+func _on_lire_la_suite_activate() -> void:
+	
+	pass # Replace with function body.

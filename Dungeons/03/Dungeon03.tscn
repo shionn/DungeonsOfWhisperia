@@ -52,6 +52,11 @@
 [ext_resource type="Script" uid="uid://cb7ievftqrcdd" path="res://Dungeons/03/LightSign.gd" id="26_056qb"]
 [ext_resource type="PackedScene" uid="uid://drjtx1q1w5f6" path="res://Assets/Halloween/Sign/sign_right.gltf" id="26_kvdn1"]
 [ext_resource type="PackedScene" uid="uid://cvy3jhncal1qp" path="res://Assets/BinbunVFX/loot_effects/effects/floating/loot_vfx_rare.tscn" id="27_dd06p"]
+[ext_resource type="PackedScene" uid="uid://lkdece1ud37e" path="res://Assets/Dungeons/Crate/crates_stacked.gltf" id="27_dpj6n"]
+[ext_resource type="PackedScene" uid="uid://clagf6lso8van" path="res://Assets/Characters/MonthlySeries4/Accessoires/paladin_book.gltf" id="27_syqet"]
+[ext_resource type="PackedScene" uid="uid://btt55eik1mr7w" path="res://Assets/Dungeons/Crate/crate_large_decorated.gltf" id="28_syqet"]
+[ext_resource type="AudioStream" uid="uid://d3sex1te7mnxm" path="res://Audio/80-CC0-RPG-SFX/book_02.ogg" id="29_63gg8"]
+[ext_resource type="PackedScene" uid="uid://bhig0ujmb131t" path="res://Assets/Dungeons/Crate/crate_small.gltf" id="29_qjwwm"]
 [ext_resource type="PackedScene" uid="uid://c6b3kcp64w5n8" path="res://Assets/Scenes/Decorated_Small_Box.tscn" id="30_1ghu8"]
 [ext_resource type="Script" uid="uid://d3tvhs8310doa" path="res://Dungeons/03/NorthWestRoom.gd" id="30_22oqy"]
 [ext_resource type="PackedScene" uid="uid://dlo1eot4wd5ay" path="res://Assets/Dungeons/Wall/wall_broken.gltf" id="30_70gou"]
@@ -72,6 +77,15 @@
 [ext_resource type="PackedScene" uid="uid://dj0modsh7x76o" path="res://Assets/Scenes/Bar_Straight_C.tscn" id="58_5n2am"]
 [ext_resource type="PackedScene" uid="uid://cs14pkxuhb8fg" path="res://Assets/Dungeons/Tables/table_long_tablecloth.gltf" id="59_gy3gi"]
 [ext_resource type="PackedScene" uid="uid://vd24afk1pvyd" path="res://Assets/Scenes/Box_Stacked.tscn" id="66_y88mc"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tdnme"]
+size = Vector3(0.3, 0.55, 0.4)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_brlmy"]
+size = Vector3(1.3000001, 2.7, 2.1000001)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3gcn8"]
+size = Vector3(2, 1.3000001, 1)
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_b02ke"]
 height = 1.7005
@@ -320,6 +334,63 @@ loot_gold_right = 3
 
 [node name="cube_silver2" parent="RoomSouthEast/Meuble" unique_id=1957957694 instance=ExtResource("46_8exks")]
 transform = Transform3D(0.9659258, 0, -0.25881904, 0, 1, 0, 0.25881904, 0, 0.9659258, 1.4, 1, 0.4)
+
+[node name="paladin_book2" parent="RoomSouthEast/Meuble" unique_id=1917160765 instance=ExtResource("27_syqet")]
+transform = Transform3D(-0.9659258, 0, -0.25881913, 0, 1, 0, 0.25881913, 0, -0.9659258, -1.2999992, 2.35, -0.10000038)
+
+[node name="Area3D" type="Area3D" parent="RoomSouthEast/Meuble/paladin_book2" unique_id=169892005]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RoomSouthEast/Meuble/paladin_book2/Area3D" unique_id=573459096]
+shape = SubResource("BoxShape3D_tdnme")
+
+[node name="description" type="Node" parent="RoomSouthEast/Meuble/paladin_book2" unique_id=524457390]
+script = ExtResource("49_e5ej3")
+text = "Ce livre semble contenir un indice sur la résolution de l’énigme.
+
+[i]Attention : lire la suite vous privera de l’expérience gagnée lors de la résolution de l’énigme.[/i]"
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Lire la suite" type="Node" parent="RoomSouthEast/Meuble/paladin_book2/description" unique_id=1284942435]
+script = ExtResource("49_e5ej3")
+text = "Il faut que tous les jetons soient de la même couleur. Commencez par le deuxième jeton, en partant de la droite et du haut. Ensuite, prenez le deuxième jeton, en partant de la gauche sur la ligne du centre. 
+En sortant de la pièce, les jetons reprendront leur position initiale."
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RoomSouthEast/Meuble/paladin_book2" unique_id=1229284616]
+stream = ExtResource("29_63gg8")
+bus = &"Effet"
+
+[node name="crates_stacked2" parent="RoomSouthEast" unique_id=1530162916 instance=ExtResource("27_dpj6n")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4, 0, -12.2)
+script = ExtResource("22_rwtb4")
+interactDistance = 4.0
+
+[node name="box_large2" parent="RoomSouthEast/crates_stacked2" unique_id=44849461 instance=ExtResource("32_j7lkl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -0.40000057)
+
+[node name="box_small2" parent="RoomSouthEast/crates_stacked2/box_large2" unique_id=1094953167 instance=ExtResource("33_1ghu8")]
+transform = Transform3D(0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, 0.70710677, 0.30000114, 1.5, -0.3000002)
+
+[node name="crate_large_decorated2" parent="RoomSouthEast/crates_stacked2" unique_id=1489033680 instance=ExtResource("28_syqet")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -0.70000076)
+
+[node name="crate_small2" parent="RoomSouthEast/crates_stacked2" unique_id=1767463513 instance=ExtResource("29_qjwwm")]
+transform = Transform3D(0.9396926, 0, -0.34202012, 0, 1, 0, 0.34202012, 0, 0.9396926, 0.3000002, 0, 1.8000001)
+
+[node name="Area3D" type="Area3D" parent="RoomSouthEast/crates_stacked2" unique_id=5403468]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RoomSouthEast/crates_stacked2/Area3D" unique_id=813604522]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.14999962, 0.85, -0.1500001)
+shape = SubResource("BoxShape3D_brlmy")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomSouthEast/crates_stacked2/Area3D" unique_id=1830480975]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8000002, 0.65000004, -0.7000017)
+shape = SubResource("BoxShape3D_3gcn8")
+
+[node name="description" type="Node" parent="RoomSouthEast/crates_stacked2" unique_id=817848221]
+script = ExtResource("49_e5ej3")
+text = "C’est un joli tas de bric-à-brac. Aucun intérêt. "
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
 [node name="RoomNorthEast" type="Node3D" parent="." unique_id=1456503486]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, 0, 24)
@@ -1986,6 +2057,7 @@ transform = Transform3D(-1, -8.742278e-08, 0, 8.742278e-08, -1, 0, 0, 0, 1, 6, 0
 [connection signal="state_change" from="RoomSouthEast/WallTokenFlip/53" to="RoomSouthEast/WallTokenFlip" method="_on_token_switch_state_change"]
 [connection signal="state_change" from="RoomSouthEast/WallTokenFlip/54" to="RoomSouthEast/WallTokenFlip" method="_on_token_switch_state_change"]
 [connection signal="state_change" from="RoomSouthEast/WallTokenFlip/55" to="RoomSouthEast/WallTokenFlip" method="_on_token_switch_state_change"]
+[connection signal="activate" from="RoomSouthEast/Meuble/paladin_book2/description/Lire la suite" to="RoomSouthEast/WallTokenFlip" method="_on_lire_la_suite_activate"]
 [connection signal="resolv" from="RoomNorthEast" to="Central" method="_on_north_east_resolv"]
 [connection signal="activate" from="RoomNorthEast/sign_1" to="RoomNorthEast/sign_1" method="_on_activate"]
 [connection signal="activate" from="RoomNorthEast/sign_2" to="RoomNorthEast/sign_2" method="_on_activate"]
