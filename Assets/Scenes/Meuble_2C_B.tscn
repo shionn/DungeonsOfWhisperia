@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://c7hr3jjaw5mle"]
+
+[ext_resource type="PackedScene" uid="uid://dj0modsh7x76o" path="res://Assets/Scenes/Bar_Straight_C.tscn" id="1_mdxtx"]
+[ext_resource type="Script" uid="uid://dqg84wbce3k8h" path="res://Assets/Scenes/Scripts/Meuble_2c_b.gd" id="1_p172h"]
+[ext_resource type="PackedScene" uid="uid://bcpilxt3dmp07" path="res://Assets/Dungeons/Bar/bartop_B_large.gltf" id="2_p172h"]
+
+[node name="Meuble" type="Node3D" unique_id=273363225]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
+script = ExtResource("1_p172h")
+
+[node name="bar_straight_C2" parent="." unique_id=946520791 instance=ExtResource("1_mdxtx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0)
+
+[node name="bar_straight_C3" parent="." unique_id=1811642704 instance=ExtResource("1_mdxtx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="bartop_B_large2" parent="." unique_id=1778058900 instance=ExtResource("2_p172h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)

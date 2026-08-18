@@ -61,7 +61,7 @@
 [ext_resource type="PackedScene" uid="uid://cjml6vq4ntvix" path="res://Assets/Resource/Stone/Stone_Chunks_Small.gltf" id="31_y88mc"]
 [ext_resource type="PackedScene" uid="uid://bu7hkqv2gmh3m" path="res://Assets/Dungeons/Box/box_large.gltf" id="32_j7lkl"]
 [ext_resource type="PackedScene" uid="uid://x7rqp0xpsk6m" path="res://Assets/Dungeons/Box/box_small.gltf" id="33_1ghu8"]
-[ext_resource type="PackedScene" uid="uid://bcpilxt3dmp07" path="res://Assets/Dungeons/Bar/bartop_B_large.gltf" id="34_gy3gi"]
+[ext_resource type="PackedScene" uid="uid://c7hr3jjaw5mle" path="res://Assets/Scenes/Meuble_2C_B.tscn" id="39_j7lkl"]
 [ext_resource type="PackedScene" uid="uid://dj04kkrln1kbp" path="res://Assets/Scenes/Lootable_Copper_Cube.tscn" id="44_3xsv1"]
 [ext_resource type="PackedScene" uid="uid://b1skmxyfmh2gf" path="res://Assets/Scenes/Lootable_Gold_Cube.tscn" id="45_pjofm"]
 [ext_resource type="PackedScene" uid="uid://bf6ydualo64ha" path="res://Assets/Scenes/Lootable_Silver_Cube.tscn" id="46_8exks"]
@@ -541,21 +541,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6000004, 2, 0.2999999)
 transform = Transform3D(0.5, -2.284779e-08, -2.284779e-08, 2.284779e-08, 5.9624403e-09, 0.5, -2.284779e-08, -0.5, 5.962441e-09, 0, 0, 0)
 visible = false
 
-[node name="Meuble" type="Node3D" parent="RoomSouthEast" unique_id=1774252767]
+[node name="Meuble" parent="RoomSouthEast" unique_id=273363225 instance=ExtResource("39_j7lkl")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9, 0, 6)
+loot_gold_left = 4
+loot_gold_right = 3
 
-[node name="bar_straight_C2" parent="RoomSouthEast/Meuble" unique_id=946520791 instance=ExtResource("58_5n2am")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0)
-loot_gold = 4
-
-[node name="bar_straight_C3" parent="RoomSouthEast/Meuble" unique_id=1297283212 instance=ExtResource("58_5n2am")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
-loot_gold = 3
-
-[node name="bartop_B_large2" parent="RoomSouthEast/Meuble" unique_id=1778058900 instance=ExtResource("34_gy3gi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-
-[node name="cube_silver" parent="RoomSouthEast/Meuble" unique_id=1957957694 instance=ExtResource("46_8exks")]
+[node name="cube_silver2" parent="RoomSouthEast/Meuble" unique_id=1957957694 instance=ExtResource("46_8exks")]
 transform = Transform3D(0.9659258, 0, -0.25881904, 0, 1, 0, 0.25881904, 0, 0.9659258, 1.4, 1, 0.4)
 
 [node name="Floor" type="Node3D" parent="RoomSouthEast" unique_id=478464422]
