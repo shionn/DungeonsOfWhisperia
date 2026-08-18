@@ -14,8 +14,6 @@ extends Node3D
 func _ready() -> void:
 	trunk1.loot_gold = gold1
 	trunk1.loot_obj = loot1
-	trunk1._ready()
 	trunk2.loot_gold = gold2
 	trunk2.loot_obj = loot2
-	trunk2._ready()
 	

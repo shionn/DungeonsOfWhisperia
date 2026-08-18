@@ -11,7 +11,5 @@ extends Node3D
 func _ready() -> void:
 	_left.loot_gold = loot_gold_left
 	_left.loot_obj = loot_item_left
-	_left._ready()
 	_right.loot_gold = loot_gold_right
 	_right.loot_obj = loot_item_right
-	_right._ready()

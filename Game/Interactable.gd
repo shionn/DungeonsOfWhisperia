@@ -12,11 +12,13 @@ enum Action { ACTIVATE, LOOK }
 @export var loot_obj : Items.ItemName = Items.ItemName.None :
 	set(value) :
 		loot_obj = value
+		if value != Items.ItemName.None : _lootable = true
 		loot_obj_change.emit()
 		
 @export var loot_gold: int = 0 :
 	set(value) :
 		loot_gold = value
+		if value > 0 : _lootable = true
 		loot_obj_change.emit()
 @export var hide_on_loot: bool = false
 
