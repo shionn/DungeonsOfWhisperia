@@ -2064,6 +2064,7 @@ transform = Transform3D(-1, -8.742278e-08, 0, 8.742278e-08, -1, 0, 0, 0, 1, 22, 
 [node name="floor_dirt_large81" parent="Roof" unique_id=2085873895 instance=ExtResource("1_fgonf")]
 transform = Transform3D(-1, -8.742278e-08, 0, 8.742278e-08, -1, 0, 0, 0, 1, 6, 0, -20)
 
+[connection signal="player_enter" from="CentralEast/Wall_Doorway4" to="RoomSouthEast/WallTokenFlip" method="_on_player_enter"]
 [connection signal="state_change" from="RoomSouthEast/WallTokenFlip/11" to="RoomSouthEast/WallTokenFlip" method="_on_token_switch_state_change"]
 [connection signal="state_change" from="RoomSouthEast/WallTokenFlip/12" to="RoomSouthEast/WallTokenFlip" method="_on_token_switch_state_change"]
 [connection signal="state_change" from="RoomSouthEast/WallTokenFlip/13" to="RoomSouthEast/WallTokenFlip" method="_on_token_switch_state_change"]

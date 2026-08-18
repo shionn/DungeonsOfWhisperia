@@ -27,3 +27,9 @@ func all_black() -> bool :
 
 func _on_lire_la_suite_activate() -> void:
 	quest_book.dungeon_03_resoudre_jetons.xp = 0
+
+
+func _on_player_enter() -> void:
+	for child in get_children() :
+		if child is FlipTokenSwitch :
+			child.reset()

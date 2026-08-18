@@ -28,4 +28,5 @@ func _test_all() -> void :
 	if _south_east_light.visible and _south_west_light.visible and _north_east_light.visible and _north_west_light.visible :
 		if _portal : 
 			_portal.queue_free()
+			_portal = null
 			quest_book.dungeon_03_faire_tomber_le_champ_de_force.done()

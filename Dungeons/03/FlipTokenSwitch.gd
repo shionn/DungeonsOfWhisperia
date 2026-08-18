@@ -7,13 +7,21 @@ extends Interactable
 
 signal state_change(token: FlipTokenSwitch)
 
+var initial_state: bool
+
 func _ready() -> void:
 	white.visible = state
 	black.visible = not state
+	initial_state = state
 	super._ready()
 
 func toggle() -> void : 
 	state = not state
+	white.visible = state
+	black.visible = not state
+
+func reset() -> void :
+	state = initial_state
 	white.visible = state
 	black.visible = not state
 

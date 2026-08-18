@@ -13,6 +13,8 @@ const SPEED = 3
 @export var locked = false
 @export var unlock_item : Items.ItemName
 
+signal player_enter()
+
 func _on_knob_activate() -> void:
 	if locked :
 		$LockAudio.play()
@@ -44,3 +46,6 @@ func _physics_process(delta: float) -> void:
 			door.rotation.y = min(door.rotation.y + delta*SPEED, 0)
 		elif not revert and door.rotation.y > 0 :
 			door.rotation.y = max(door.rotation.y - delta*SPEED, 0)
+
+func _on_area_3d_body_shape_entered(_body_rid: RID, body: Node3D, _body_shape_index: int, _local_shape_index: int) -> void:
+	if body is PlayerG : player_enter.emit()
