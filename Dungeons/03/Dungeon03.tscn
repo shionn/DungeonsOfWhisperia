@@ -52,9 +52,15 @@
 [ext_resource type="Script" uid="uid://cb7ievftqrcdd" path="res://Dungeons/03/LightSign.gd" id="26_056qb"]
 [ext_resource type="PackedScene" uid="uid://drjtx1q1w5f6" path="res://Assets/Halloween/Sign/sign_right.gltf" id="26_kvdn1"]
 [ext_resource type="PackedScene" uid="uid://cvy3jhncal1qp" path="res://Assets/BinbunVFX/loot_effects/effects/floating/loot_vfx_rare.tscn" id="27_dd06p"]
+[ext_resource type="PackedScene" uid="uid://c6b3kcp64w5n8" path="res://Assets/Scenes/Decorated_Small_Box.tscn" id="30_1ghu8"]
 [ext_resource type="Script" uid="uid://d3tvhs8310doa" path="res://Dungeons/03/NorthWestRoom.gd" id="30_22oqy"]
+[ext_resource type="PackedScene" uid="uid://dlo1eot4wd5ay" path="res://Assets/Dungeons/Wall/wall_broken.gltf" id="30_70gou"]
+[ext_resource type="PackedScene" uid="uid://csg4ffnbxbal1" path="res://Game/Monsters/SkeletonWarrior.tscn" id="30_ms3fl"]
 [ext_resource type="PackedScene" uid="uid://soofixexy3kb" path="res://Assets/Scenes/Pressure_Plate.tscn" id="31_22oqy"]
 [ext_resource type="PackedScene" uid="uid://dlke4fo5vigdi" path="res://Assets/BinbunVFX/Treasure_Pro/Gems/Sapphire/Sapphire_02.glb" id="31_x8tiv"]
+[ext_resource type="PackedScene" uid="uid://cjml6vq4ntvix" path="res://Assets/Resource/Stone/Stone_Chunks_Small.gltf" id="31_y88mc"]
+[ext_resource type="PackedScene" uid="uid://bu7hkqv2gmh3m" path="res://Assets/Dungeons/Box/box_large.gltf" id="32_j7lkl"]
+[ext_resource type="PackedScene" uid="uid://x7rqp0xpsk6m" path="res://Assets/Dungeons/Box/box_small.gltf" id="33_1ghu8"]
 [ext_resource type="PackedScene" uid="uid://bcpilxt3dmp07" path="res://Assets/Dungeons/Bar/bartop_B_large.gltf" id="34_gy3gi"]
 [ext_resource type="PackedScene" uid="uid://dj04kkrln1kbp" path="res://Assets/Scenes/Lootable_Copper_Cube.tscn" id="44_3xsv1"]
 [ext_resource type="PackedScene" uid="uid://b1skmxyfmh2gf" path="res://Assets/Scenes/Lootable_Gold_Cube.tscn" id="45_pjofm"]
@@ -65,6 +71,7 @@
 [ext_resource type="PackedScene" uid="uid://ccpi60vfgxxjo" path="res://Game/Monsters/SkeletonGolem.tscn" id="54_vy3ur"]
 [ext_resource type="PackedScene" uid="uid://dj0modsh7x76o" path="res://Assets/Scenes/Bar_Straight_C.tscn" id="58_5n2am"]
 [ext_resource type="PackedScene" uid="uid://cs14pkxuhb8fg" path="res://Assets/Dungeons/Tables/table_long_tablecloth.gltf" id="59_gy3gi"]
+[ext_resource type="PackedScene" uid="uid://vd24afk1pvyd" path="res://Assets/Scenes/Box_Stacked.tscn" id="66_y88mc"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_b02ke"]
 height = 1.7005
@@ -353,6 +360,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.999999, 0, 0)
 [node name="CentralWest" type="Node3D" parent="." unique_id=987857688]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, -20)
 
+[node name="Decorated_Small_Box" parent="CentralWest" unique_id=743162988 instance=ExtResource("30_1ghu8")]
+transform = Transform3D(0.25881907, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, 0.25881907, 2.7999992, 0, -0.79999924)
+loot_gold = 13
+loot_item = 1
+
 [node name="Floor" type="Node3D" parent="CentralWest" unique_id=1768911949]
 
 [node name="floor_tile_large104" parent="CentralWest/Floor" unique_id=1534922382 instance=ExtResource("2_locl2")]
@@ -404,8 +416,11 @@ transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 6, 0
 [node name="wall2" parent="CentralWest/Wall" unique_id=906063940 instance=ExtResource("8_ww55m")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 6, 0, 2)
 
-[node name="wall_cracked2" parent="CentralWest/Wall" unique_id=1283349453 instance=ExtResource("6_mqtgq")]
+[node name="wall_broken2" parent="CentralWest/Wall" unique_id=1073200171 instance=ExtResource("30_70gou")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -6, 0, 2)
+
+[node name="Stone_Chunks_Small2" parent="CentralWest/Wall/wall_broken2" unique_id=2107338531 instance=ExtResource("31_y88mc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.8000002)
 
 [node name="Wall_Doorway" parent="CentralWest" unique_id=812446971 instance=ExtResource("7_64ivq")]
 transform = Transform3D(-4.371138e-08, 0, 1, 0, 1, 0, -1, 0, -4.371138e-08, 6, 0, 6)
@@ -420,8 +435,17 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -6, 
 [node name="torch_mounted" parent="CentralWest/Wall_Doorway2" unique_id=1440424743 instance=ExtResource("9_ap7gn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
 
+[node name="box_large2" parent="CentralWest" unique_id=1962146680 instance=ExtResource("32_j7lkl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.299999, 0, -0.29999924)
+
+[node name="box_small2" parent="CentralWest" unique_id=450865947 instance=ExtResource("33_1ghu8")]
+transform = Transform3D(0.8660254, 0, -0.5, 0, 1, 0, 0.5, 0, 0.8660254, 4.6000004, 1.5, -0.5)
+
 [node name="RoomSouthEast" type="Node3D" parent="." unique_id=474873426]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 24)
+
+[node name="SkeletonWarrior" parent="RoomSouthEast" unique_id=706438754 instance=ExtResource("30_ms3fl")]
+transform = Transform3D(0.5, 0, 0.8660254, 0, 1, 0, -0.8660254, 0, 0.5, 6.8, 0, 6.3999996)
 
 [node name="WallTokenFlip" parent="RoomSouthEast" unique_id=1292456477 instance=ExtResource("8_ww55m")]
 transform = Transform3D(4.569558e-08, 0, 1, 0, 1, 0, -1, 0, 4.569558e-08, -2, 0, 2)
@@ -1194,7 +1218,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 12)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, 0, -24)
 script = ExtResource("30_22oqy")
 
-[node name="Skeleton Golem" parent="NodeNorthWest" unique_id=706438754 instance=ExtResource("54_vy3ur")]
+[node name="Skeleton Golem" parent="NodeNorthWest" unique_id=1972222577 instance=ExtResource("54_vy3ur")]
 transform = Transform3D(0.7071069, 0, 0.7071067, 0, 1, 0, -0.7071067, 0, 0.7071069, -7.799999, 0, -7.799999)
 weapon = 1
 loot_obj = 20
@@ -1503,6 +1527,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -4)
 
 [node name="pillar3" parent="SecretRoom/Wall" unique_id=2118436712 instance=ExtResource("18_y72ap")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 4)
+
+[node name="box_stacked" parent="SecretRoom" unique_id=354657273 instance=ExtResource("66_y88mc")]
+transform = Transform3D(-0.4999999, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, -0.4999999, 8, 0, 8)
+loot1 = 7
+gold1 = 10
+gold2 = 14
 
 [node name="Roof" type="Node3D" parent="." unique_id=1965132085]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 4, 0)

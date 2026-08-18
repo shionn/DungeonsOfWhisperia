@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://vd24afk1pvyd"]
+
+[ext_resource type="PackedScene" uid="uid://cbjrk02rg0au6" path="res://Assets/Dungeons/Box/box_stacked.gltf" id="1_qynp4"]
+[ext_resource type="Script" uid="uid://h1ob3qf73ocu" path="res://Assets/Scenes/Scripts/Box_Stacked.gd" id="2_35pby"]
+[ext_resource type="Script" uid="uid://bpgb3pwbq61mh" path="res://Game/Interactable.gd" id="3_d2l1u"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_no45c"]
+size = Vector3(0.7346069, 0.50024414, 0.60478514)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mh3sv"]
+size = Vector3(0.61689454, 0.5161133, 0.7610962)
+
+[node name="box_stacked" unique_id=354657273 instance=ExtResource("1_qynp4")]
+script = ExtResource("2_35pby")
+
+[node name="Node3D" type="Node3D" parent="." index="1" unique_id=1729824643]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0.90000004, 1.3000011)
+script = ExtResource("3_d2l1u")
+
+[node name="Area3D" type="Area3D" parent="Node3D" index="0" unique_id=325531997]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.099998474, 0.099999964, -0.10000038)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/Area3D" index="0" unique_id=67653444]
+transform = Transform3D(0.9738393, 0, 0.22723833, 0, 1, 0, -0.22723833, 0, 0.9738393, -0.020210266, 0.18493652, 0.02788353)
+shape = SubResource("BoxShape3D_no45c")
+
+[node name="Node3D2" type="Node3D" parent="." index="2" unique_id=548578458]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.300003, 0, 0.8999996)
+script = ExtResource("3_d2l1u")
+loot_gold = 13
+
+[node name="Area3D" type="Area3D" parent="Node3D2" index="0" unique_id=2146797996]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D2/Area3D" index="0" unique_id=176570536]
+transform = Transform3D(0.88543046, 0, 0.46477175, 0, 1, 0, -0.46477175, 0, 0.88543046, -0.051589966, 0.24194336, 0.12621307)
+shape = SubResource("BoxShape3D_mh3sv")

@@ -32,7 +32,7 @@ func on_item_drop(_item : Item)-> void:
 	else :
 		super.on_item_drop(_item)
 
-func on_loot_obj_change() -> void:
+func _on_loot_obj_change() -> void:
 	_blue.hide()
 	_red.hide()
 	_orange.hide()

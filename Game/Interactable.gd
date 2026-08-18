@@ -12,13 +12,17 @@ enum Action { ACTIVATE, LOOK }
 @export var loot_obj : Items.ItemName = Items.ItemName.None :
 	set(value) :
 		loot_obj = value
-		on_loot_obj_change()
+		loot_obj_change.emit()
 		
-@export var loot_gold: int = 0
+@export var loot_gold: int = 0 :
+	set(value) :
+		loot_gold = value
+		loot_obj_change.emit()
 @export var hide_on_loot: bool = false
 
 signal activate() 
 signal item_drop(_item : Item)
+signal loot_obj_change()
 
 var _lootable = false
 var _audio : AudioStreamPlayer3D
@@ -60,5 +64,3 @@ func on_item_drop(_item : Item)-> void:
 	item_drop.emit(_item)
 	if item_drop.get_connections().is_empty() :
 		gui.consoleLog("Aucun effet.")
-
-func on_loot_obj_change() -> void : pass
