@@ -1,9 +1,9 @@
 extends Node3D
 
-@onready var _south_east_light = $Wall/wall_inset5/skull/Ruby_022/LootVFX_Mythic
-@onready var _south_west_light = $Wall/wall_inset4/skull/Topaz_012/LootVFX_Legendary
-@onready var _north_east_light = $Wall/wall_inset3/skull/Sapphire_012/LootVFX_Rare
-@onready var _north_west_light = $Wall/wall_inset2/skull/Emerald_022/LootVFX_Uncommon
+@onready var _south_east_light = $wall_inset5/skull/Ruby_022/LootVFX_Mythic
+@onready var _south_west_light = $wall_inset4/skull/Topaz_012/LootVFX_Legendary
+@onready var _north_east_light = $wall_inset3/skull/Sapphire_012/LootVFX_Rare
+@onready var _north_west_light = $wall_inset2/skull/Emerald_022/LootVFX_Uncommon
 
 @onready var _portal = $GatePortalVFX_06
 
