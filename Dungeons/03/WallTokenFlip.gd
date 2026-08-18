@@ -1,7 +1,5 @@
 extends GameBase3D
 
-signal resolv()
-
 func _on_token_switch_state_change(token: FlipTokenSwitch) -> void:
 	var x = token.name.substr(0,1).to_int()
 	var y = token.name.substr(1,1).to_int()
@@ -12,8 +10,7 @@ func _on_token_switch_state_change(token: FlipTokenSwitch) -> void:
 	
 	if all_white() or all_black() :
 		$Ruby_012/LootVFX_Mythic.show()
-		resolv.emit()
-	
+		quest_book.dungeon_03_resoudre_jetons.done()
 
 func _toggle(x:int, y:int) -> void:
 	get_node("%d%d"%[x,y]).toggle()
@@ -28,7 +25,5 @@ func all_black() -> bool :
 		if child is FlipTokenSwitch and child.state : return false
 	return true
 
-
 func _on_lire_la_suite_activate() -> void:
-	
-	pass # Replace with function body.
+	quest_book.dungeon_03_resoudre_jetons.xp = 0

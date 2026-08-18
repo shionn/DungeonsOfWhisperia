@@ -1,7 +1,5 @@
 extends GameBase3D
 
-signal resolv()
-
 func _on_switch_1_item_place(plate: PressurePlate, item: Item) -> void:
 	if item.cube : 
 		_place(plate, item)
@@ -9,7 +7,6 @@ func _on_switch_1_item_place(plate: PressurePlate, item: Item) -> void:
 		else : plate.toggle_down_deep()
 	else :
 		pass
-
 
 func _on_switch_2_item_place(plate: PressurePlate, item: Item) -> void:
 	if item.cube : 
@@ -19,14 +16,12 @@ func _on_switch_2_item_place(plate: PressurePlate, item: Item) -> void:
 	else :
 		pass
 
-
 func _on_switch_3_item_place(plate: PressurePlate, item: Item) -> void:
 	if item.cube : 
 		_place(plate, item)
 		if item.item_name == Items.ItemName.CubeGold : plate.toggle_down()
 	else :
 		pass # Replace with function body.
-
 
 func _on_switch_4_item_place(plate: PressurePlate, item: Item) -> void:
 	if item.cube : 
@@ -54,5 +49,9 @@ func _on_switch_activate(_plate: PressurePlate) -> void:
 		if node is PressurePlate :
 			enable = enable and node.is_toggle()
 	if enable :
-		$Wall/wall_cracked3/Emerald_022/LootVFX_Uncommon.show()
-		resolv.emit()
+		$wall_cracked3/Emerald_022/LootVFX_Uncommon.show()
+		quest_book.dungeon_03_resoudre_dalles.done()
+
+
+func _on_lire_la_suite_activate() -> void:
+	quest_book.dungeon_03_resoudre_dalles.xp = 0

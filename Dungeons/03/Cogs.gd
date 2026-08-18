@@ -6,8 +6,6 @@ extends GameBase3D
 @onready var _cog4 = $Parts_Axes4/Cog
 @onready var _light = $Parts_Axes4/Topaz/LootVFX_Legendary as VFXLoot
 
-signal resolv()
-
 var _rotating = false 
 
 func _physics_process(delta: float) -> void:
@@ -24,7 +22,7 @@ func _on_switch_state_change(state: bool) -> void:
 	_rotating = state
 	if _rotating :
 		if _cog2.visible and _cog3.visible :
-			resolv.emit()
+			quest_book.dungeon_03_resoudre_engrenage.done()
 	else :
 		_cog1.rotation.x = 0
 		_cog2.rotation.x = 0

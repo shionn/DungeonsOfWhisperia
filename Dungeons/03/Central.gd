@@ -1,4 +1,4 @@
-extends Node3D
+extends GameBase3D
 
 @onready var _south_east_light = $wall_inset5/skull/Ruby_022/LootVFX_Mythic
 @onready var _south_west_light = $wall_inset4/skull/Topaz_012/LootVFX_Legendary
@@ -7,22 +7,25 @@ extends Node3D
 
 @onready var _portal = $GatePortalVFX_06
 
+func _ready() -> void:
+	_south_east_light.visible = quest_book.dungeon_03_resoudre_jetons.is_done()
+	_south_west_light.visible = quest_book.dungeon_03_resoudre_engrenage.is_done()
+	_north_east_light.visible = quest_book.dungeon_03_resoudre_lumiere.is_done()
+	_north_west_light.visible = quest_book.dungeon_03_resoudre_dalles.is_done()
+	if quest_book.dungeon_03_faire_tomber_le_champ_de_force.is_done() :
+		_portal.queue_free()
+	quest_book.objectif_done.connect(_on_objectif_done)
+
+func _on_objectif_done(_quest: Quest, objectif: QuestObjectif) -> void : 
+	if objectif == quest_book.dungeon_03_resoudre_jetons : _south_east_light.show()
+	if objectif == quest_book.dungeon_03_resoudre_engrenage : _south_west_light.show()
+	if objectif == quest_book.dungeon_03_resoudre_lumiere : _north_east_light.show()
+	if objectif == quest_book.dungeon_03_resoudre_dalles : _north_west_light.show()
+	_test_all()
+
+
 func _test_all() -> void : 
 	if _south_east_light.visible and _south_west_light.visible and _north_east_light.visible and _north_west_light.visible :
-		if _portal : _portal.queue_free()
-
-func _on_south_east_resolv() -> void:
-	_south_east_light.show()
-	_test_all()
-
-func _on_north_east_resolv() -> void:
-	_north_east_light.show()
-	_test_all()
-
-func _on_north_west_resolv() -> void:
-	_north_west_light.show()
-	_test_all()
-
-func _on_south_west_resolv() -> void:
-	_south_west_light.show()
-	_test_all()
+		if _portal : 
+			_portal.queue_free()
+			quest_book.dungeon_03_faire_tomber_le_champ_de_force.done()

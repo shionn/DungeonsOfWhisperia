@@ -74,6 +74,7 @@
 [ext_resource type="Script" uid="uid://cxe0hpd6pnr8q" path="res://Gui/Dialog.gd" id="49_e5ej3"]
 [ext_resource type="AudioStream" uid="uid://jq61tyjujyta" path="res://Audio/30-cc0-sfx-loops/machine_06.ogg" id="53_vi7ap"]
 [ext_resource type="PackedScene" uid="uid://ccpi60vfgxxjo" path="res://Game/Monsters/SkeletonGolem.tscn" id="54_vy3ur"]
+[ext_resource type="PackedScene" uid="uid://6h3k07jyv80i" path="res://Assets/Scenes/Meuble_2C_A.tscn" id="57_63gg8"]
 [ext_resource type="PackedScene" uid="uid://dj0modsh7x76o" path="res://Assets/Scenes/Bar_Straight_C.tscn" id="58_5n2am"]
 [ext_resource type="PackedScene" uid="uid://cs14pkxuhb8fg" path="res://Assets/Dungeons/Tables/table_long_tablecloth.gltf" id="59_gy3gi"]
 [ext_resource type="PackedScene" uid="uid://vd24afk1pvyd" path="res://Assets/Scenes/Box_Stacked.tscn" id="66_y88mc"]
@@ -337,6 +338,7 @@ transform = Transform3D(0.9659258, 0, -0.25881904, 0, 1, 0, 0.25881904, 0, 0.965
 
 [node name="paladin_book2" parent="RoomSouthEast/Meuble" unique_id=1917160765 instance=ExtResource("27_syqet")]
 transform = Transform3D(-0.9659258, 0, -0.25881913, 0, 1, 0, 0.25881913, 0, -0.9659258, -1.2999992, 2.35, -0.10000038)
+script = ExtResource("22_rwtb4")
 
 [node name="Area3D" type="Area3D" parent="RoomSouthEast/Meuble/paladin_book2" unique_id=169892005]
 
@@ -776,6 +778,37 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 6, 0
 
 [node name="cube_gold" parent="NodeNorthWest/wall_inset5" unique_id=157250760 instance=ExtResource("45_pjofm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6000023, 0.75, 0.099998474)
+
+[node name="Meuble" parent="NodeNorthWest" unique_id=1830271753 instance=ExtResource("57_63gg8")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 5, 0, 5)
+loot_gold_left = 2
+loot_gold_right = 4
+
+[node name="paladin_book2" parent="NodeNorthWest/Meuble" unique_id=905642445 instance=ExtResource("27_syqet")]
+transform = Transform3D(-0.9659258, 0, -0.25881913, 0, 1, 0, 0.25881913, 0, -0.9659258, -1.2999992, 2.35, -0.10000038)
+script = ExtResource("22_rwtb4")
+interactDistance = 4.0
+
+[node name="Area3D" type="Area3D" parent="NodeNorthWest/Meuble/paladin_book2" unique_id=216620242]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NodeNorthWest/Meuble/paladin_book2/Area3D" unique_id=1682368618]
+shape = SubResource("BoxShape3D_tdnme")
+
+[node name="description" type="Node" parent="NodeNorthWest/Meuble/paladin_book2" unique_id=1919116412]
+script = ExtResource("49_e5ej3")
+text = "Ce livre semble contenir un indice sur la résolution de l’énigme.
+
+[i]Attention : lire la suite vous privera de l’expérience gagnée lors de la résolution de l’énigme.[/i]"
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Lire la suite" type="Node" parent="NodeNorthWest/Meuble/paladin_book2/description" unique_id=1006886486]
+script = ExtResource("49_e5ej3")
+text = "Chaque dalle réagit à un certain poids. Il faut trouver le bon poids : ni trop lourd, ni trop léger. Il y a trois cubes, mais qu’est-ce qui pourrait activer la quatrième dalle ?"
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="NodeNorthWest/Meuble/paladin_book2" unique_id=305989024]
+stream = ExtResource("29_63gg8")
+bus = &"Effet"
 
 [node name="SecretRoom" type="Node3D" parent="." unique_id=1705367066]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, 0)
@@ -2031,7 +2064,6 @@ transform = Transform3D(-1, -8.742278e-08, 0, 8.742278e-08, -1, 0, 0, 0, 1, 22, 
 [node name="floor_dirt_large81" parent="Roof" unique_id=2085873895 instance=ExtResource("1_fgonf")]
 transform = Transform3D(-1, -8.742278e-08, 0, 8.742278e-08, -1, 0, 0, 0, 1, 6, 0, -20)
 
-[connection signal="resolv" from="RoomSouthEast/WallTokenFlip" to="Central" method="_on_south_east_resolv"]
 [connection signal="state_change" from="RoomSouthEast/WallTokenFlip/11" to="RoomSouthEast/WallTokenFlip" method="_on_token_switch_state_change"]
 [connection signal="state_change" from="RoomSouthEast/WallTokenFlip/12" to="RoomSouthEast/WallTokenFlip" method="_on_token_switch_state_change"]
 [connection signal="state_change" from="RoomSouthEast/WallTokenFlip/13" to="RoomSouthEast/WallTokenFlip" method="_on_token_switch_state_change"]
@@ -2058,7 +2090,6 @@ transform = Transform3D(-1, -8.742278e-08, 0, 8.742278e-08, -1, 0, 0, 0, 1, 6, 0
 [connection signal="state_change" from="RoomSouthEast/WallTokenFlip/54" to="RoomSouthEast/WallTokenFlip" method="_on_token_switch_state_change"]
 [connection signal="state_change" from="RoomSouthEast/WallTokenFlip/55" to="RoomSouthEast/WallTokenFlip" method="_on_token_switch_state_change"]
 [connection signal="activate" from="RoomSouthEast/Meuble/paladin_book2/description/Lire la suite" to="RoomSouthEast/WallTokenFlip" method="_on_lire_la_suite_activate"]
-[connection signal="resolv" from="RoomNorthEast" to="Central" method="_on_north_east_resolv"]
 [connection signal="activate" from="RoomNorthEast/sign_1" to="RoomNorthEast/sign_1" method="_on_activate"]
 [connection signal="activate" from="RoomNorthEast/sign_2" to="RoomNorthEast/sign_2" method="_on_activate"]
 [connection signal="activate" from="RoomNorthEast/sign_split" to="RoomNorthEast/sign_split" method="_on_activate"]
@@ -2068,12 +2099,10 @@ transform = Transform3D(-1, -8.742278e-08, 0, 8.742278e-08, -1, 0, 0, 0, 1, 6, 0
 [connection signal="activate" from="RoomNorthEast/sign_41" to="RoomNorthEast/sign_41" method="_on_activate"]
 [connection signal="activate" from="RoomNorthEast/sign_42" to="RoomNorthEast/sign_42" method="_on_activate"]
 [connection signal="activate" from="RoomNorthEast/sign_43" to="RoomNorthEast/sign_43" method="_on_activate"]
-[connection signal="resolv" from="RoomSouthWest/CogWall" to="Central" method="_on_south_west_resolv"]
 [connection signal="item_drop" from="RoomSouthWest/CogWall/Parts_Axes2" to="RoomSouthWest/CogWall" method="_on_parts_axes_2_item_drop"]
 [connection signal="item_drop" from="RoomSouthWest/CogWall/Parts_Axes3" to="RoomSouthWest/CogWall" method="_on_parts_axes_3_item_drop"]
 [connection signal="state_change" from="RoomSouthWest/SwitchWall/Switch" to="RoomSouthWest/CogWall" method="_on_switch_state_change"]
 [connection signal="activate" from="RoomSouthWest/SwitchWall/Switch/screwdriver" to="RoomSouthWest/SwitchWall/Switch" method="_on_screwdriver_activate"]
-[connection signal="resolv" from="NodeNorthWest" to="Central" method="_on_north_west_resolv"]
 [connection signal="activate" from="NodeNorthWest/Switch1" to="NodeNorthWest" method="_on_switch_activate"]
 [connection signal="item_place" from="NodeNorthWest/Switch1" to="NodeNorthWest" method="_on_switch_1_item_place"]
 [connection signal="activate" from="NodeNorthWest/Switch2" to="NodeNorthWest" method="_on_switch_activate"]
@@ -2082,3 +2111,4 @@ transform = Transform3D(-1, -8.742278e-08, 0, 8.742278e-08, -1, 0, 0, 0, 1, 6, 0
 [connection signal="item_place" from="NodeNorthWest/Switch3" to="NodeNorthWest" method="_on_switch_3_item_place"]
 [connection signal="activate" from="NodeNorthWest/Switch4" to="NodeNorthWest" method="_on_switch_activate"]
 [connection signal="item_place" from="NodeNorthWest/Switch4" to="NodeNorthWest" method="_on_switch_4_item_place"]
+[connection signal="activate" from="NodeNorthWest/Meuble/paladin_book2/description/Lire la suite" to="NodeNorthWest" method="_on_lire_la_suite_activate"]
