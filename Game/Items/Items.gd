@@ -24,6 +24,7 @@ enum ItemName {
 	SmallCog,
 	LargeCog,
 	DrawCompass,
+	AnneauValthorionRestored,
 }
 
 func from(item_name : ItemName) -> Item :

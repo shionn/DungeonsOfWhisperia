@@ -107,6 +107,7 @@
 [ext_resource type="PackedScene" uid="uid://enbgtpx7wt5m" path="res://Assets/Bits/RpgTools/hammer.gltf" id="76_5khw7"]
 [ext_resource type="PackedScene" uid="uid://bmurq8gfdf5sq" path="res://Assets/Bits/RpgTools/nail.gltf" id="76_kuv0f"]
 [ext_resource type="PackedScene" uid="uid://bvkl8cwjtc1at" path="res://Assets/Bits/RpgTools/lock_A.gltf" id="78_xtx5a"]
+[ext_resource type="PackedScene" uid="uid://dvelexyha7wyc" path="res://Assets/BinbunVFX/Treasure_Pro/Jewelry/Gold_Gem_Ring/Gold_Gem_Ring_03.glb" id="88_2s7rd"]
 [ext_resource type="PackedScene" uid="uid://urvfc5s43r6p" path="res://Assets/Halloween/arch.gltf" id="90_w1x8n"]
 [ext_resource type="PackedScene" uid="uid://bojxodbjjxr2s" path="res://Assets/BinbunVFX/portal_vfx/effects/oval/oval_portal_vfx_06.tscn" id="91_2s7rd"]
 [ext_resource type="AudioStream" uid="uid://bk3alodr3ijv8" path="res://Audio/TeleportSpell/teleport.ogg" id="92_ti2xu"]
@@ -182,8 +183,7 @@ size = Vector3(1, 0.2, 0.5)
 [sub_resource type="BoxShape3D" id="BoxShape3D_j2ult"]
 size = Vector3(0.7, 0.3, 0.9)
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_b02ke"]
-radius = 0.2
+[sub_resource type="SphereShape3D" id="SphereShape3D_2s7rd"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_oow84"]
 size = Vector3(2, 3, 3)
@@ -279,7 +279,7 @@ script = ExtResource("2_03wwx")
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -20, 0, 0)
 
 [node name="GatePortalVFX_06" parent="Central" unique_id=185455769 instance=ExtResource("13_ww0ar")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7, 2, 0)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7, 5, 0)
 
 [node name="wall2" parent="Central/GatePortalVFX_06" unique_id=1258816924 instance=ExtResource("8_ww55m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0)
@@ -1303,13 +1303,17 @@ transform = Transform3D(1, 0, 0, 0, 4, 0, 0, 0, 3, 2, -0.5, 0)
 
 [node name="Axes" parent="SecretRoom/Autel" unique_id=64291728 instance=ExtResource("21_5mdf3")]
 transform = Transform3D(2.9802322e-08, -1, 0, 0.25, 7.450581e-09, 0, 0, 0, 0.33333334, 0, 0.35, 0)
+
+[node name="Gold_Gem_Ring_032" parent="SecretRoom/Autel/Axes" unique_id=94392524 instance=ExtResource("88_2s7rd")]
+transform = Transform3D(-8.742278e-09, -5.9604646e-09, 0.2, -5.9604646e-09, 0.2, 5.9604646e-09, -0.20000003, -5.9604655e-09, -8.742278e-09, 0.61, 0, 0)
+visible = false
 script = ExtResource("22_rwtb4")
 
-[node name="Area3D" type="Area3D" parent="SecretRoom/Autel/Axes" unique_id=1524673584]
+[node name="Area3D" type="Area3D" parent="SecretRoom/Autel/Axes/Gold_Gem_Ring_032" unique_id=972055593]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SecretRoom/Autel/Axes/Area3D" unique_id=1041765904]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6, 0, 0)
-shape = SubResource("SphereShape3D_b02ke")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SecretRoom/Autel/Axes/Gold_Gem_Ring_032/Area3D" unique_id=1303364853]
+transform = Transform3D(1.0000001, 3.5527137e-15, 3.5527137e-15, 1.7763568e-15, 1, 1.0587912e-22, 0, -1.0587912e-22, 1, 0, 0, 0)
+shape = SubResource("SphereShape3D_2s7rd")
 
 [node name="AxesL" parent="SecretRoom/Autel" unique_id=2134004551 instance=ExtResource("21_5mdf3")]
 transform = Transform3D(-4.371139e-08, 1, 0, -0.25, -1.0927847e-08, 0, 0, 0, 0.33333334, 0, 0.425, -0.33333334)
@@ -1340,20 +1344,20 @@ shape = SubResource("BoxShape3D_oow84")
 
 [node name="Cinematique" type="Node" parent="SecretRoom" unique_id=709935586 node_paths=PackedStringArray("pnj")]
 script = ExtResource("49_e5ej3")
-text = "C'est encore toi, je t'attendais, c'est gentil de me rapporter mon anneau. J'ai préparer le rituel pour le restaurer il suffit de le placer juste en face de moi. Donc soit gentil et rend le moi. "
+text = "C’est encore toi, je t’attendais, c’est gentil de me rapporter mon anneau. J’ai préparé le rituel pour le restaurer, il suffit de le placer juste en face de moi. Donc, soit gentil et rends-le-moi. "
 pnj = NodePath("../Valthorion")
 close_enable = false
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
 [node name="Non" type="Node" parent="SecretRoom/Cinematique" unique_id=862441583 node_paths=PackedStringArray("pnj")]
 script = ExtResource("49_e5ej3")
-text = "Tres bien dans ce cas je vais laisser ma nouvelle création le prendre sur ton cadavre. "
+text = "Très bien, dans ce cas, je vais laisser ma nouvelle création le prendre sur ton cadavre. "
 pnj = NodePath("../../Valthorion")
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
 [node name="Cinematique2" type="Node" parent="SecretRoom" unique_id=421577414 node_paths=PackedStringArray("pnj")]
 script = ExtResource("49_e5ej3")
-text = "Il semblerait que tu soit plus fort que prevu. Je n'ai pas les forces pour t'affronter aujourd'hui, mais ce n'ai que partie remise, nous nous reverons bientot. "
+text = "l semblerait que tu sois plus fort que prévu. Je n’ai pas les forces pour t’affronter aujourd’hui, mais ce n’est que partie remise, nous nous reverrons bientôt."
 pnj = NodePath("../Valthorion")
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
@@ -2794,6 +2798,7 @@ navigation_mesh = SubResource("NavigationMesh_fjlqb")
 [connection signal="item_place" from="NodeNorthWest/Switch4" to="NodeNorthWest" method="_on_switch_4_item_place"]
 [connection signal="activate" from="NodeNorthWest/Meuble/paladin_book2/description/Lire la suite" to="NodeNorthWest" method="_on_lire_la_suite_activate"]
 [connection signal="dead" from="SecretRoom/BlackKnight" to="SecretRoom" method="_on_black_knight_dead"]
+[connection signal="item_drop" from="SecretRoom/Autel/Axes/Gold_Gem_Ring_032" to="SecretRoom" method="_on_autel_item_drop"]
 [connection signal="body_shape_entered" from="SecretRoom/Area3D" to="SecretRoom" method="_on_area_3d_body_shape_entered"]
 [connection signal="close" from="SecretRoom/Cinematique/Non" to="SecretRoom" method="_on_non_close"]
 [connection signal="activate" from="SecretRoom/Cinematique2" to="SecretRoom" method="_on_cinematique_2_activate"]
