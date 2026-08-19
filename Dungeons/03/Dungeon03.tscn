@@ -65,9 +65,19 @@
 [ext_resource type="PackedScene" uid="uid://soofixexy3kb" path="res://Assets/Scenes/Pressure_Plate.tscn" id="31_22oqy"]
 [ext_resource type="PackedScene" uid="uid://dlke4fo5vigdi" path="res://Assets/BinbunVFX/Treasure_Pro/Gems/Sapphire/Sapphire_02.glb" id="31_x8tiv"]
 [ext_resource type="PackedScene" uid="uid://cjml6vq4ntvix" path="res://Assets/Resource/Stone/Stone_Chunks_Small.gltf" id="31_y88mc"]
+[ext_resource type="PackedScene" uid="uid://dc44lvf00ql8x" path="res://Assets/Bits/RpgTools/wrench_B.gltf" id="31_yamyj"]
+[ext_resource type="PackedScene" uid="uid://csidqht22o63m" path="res://Assets/Bits/RpgTools/trowel.gltf" id="32_e0h6t"]
 [ext_resource type="PackedScene" uid="uid://bu7hkqv2gmh3m" path="res://Assets/Dungeons/Box/box_large.gltf" id="32_j7lkl"]
 [ext_resource type="PackedScene" uid="uid://x7rqp0xpsk6m" path="res://Assets/Dungeons/Box/box_small.gltf" id="33_1ghu8"]
+[ext_resource type="PackedScene" uid="uid://dhc1w6os3n1c" path="res://Assets/Bits/RpgTools/screw_A.gltf" id="33_n7bar"]
+[ext_resource type="PackedScene" uid="uid://beuvvbu6l3s0v" path="res://Assets/Bits/RpgTools/screw_B.gltf" id="34_p6jpo"]
+[ext_resource type="PackedScene" uid="uid://piuf5fsp31yo" path="res://Assets/Bits/RpgTools/screwdriver_A_long_color.gltf" id="35_x3t5q"]
+[ext_resource type="PackedScene" uid="uid://bkiodg855cvcp" path="res://Assets/Bits/RpgTools/screwdriver_B_long_color.gltf" id="36_hvp6w"]
+[ext_resource type="PackedScene" uid="uid://20yt160bpt8j" path="res://Assets/Bits/RpgTools/chisel.gltf" id="37_hvp6w"]
+[ext_resource type="PackedScene" uid="uid://bvkkeh87w2jra" path="res://Assets/Bits/RpgTools/handplane.gltf" id="37_oxdc1"]
+[ext_resource type="AudioStream" uid="uid://rc5hdthh3pa2" path="res://Audio/KenneyRpgAudio/handleCoins2.ogg" id="38_e0h6t"]
 [ext_resource type="PackedScene" uid="uid://c7hr3jjaw5mle" path="res://Assets/Scenes/Meuble_2C_B.tscn" id="39_j7lkl"]
+[ext_resource type="PackedScene" uid="uid://dk5yyv5yar8ny" path="res://Assets/Bits/RpgTools/grindstone.gltf" id="43_wrdrf"]
 [ext_resource type="PackedScene" uid="uid://dj04kkrln1kbp" path="res://Assets/Scenes/Lootable_Copper_Cube.tscn" id="44_3xsv1"]
 [ext_resource type="PackedScene" uid="uid://b1skmxyfmh2gf" path="res://Assets/Scenes/Lootable_Gold_Cube.tscn" id="45_pjofm"]
 [ext_resource type="PackedScene" uid="uid://bf6ydualo64ha" path="res://Assets/Scenes/Lootable_Silver_Cube.tscn" id="46_8exks"]
@@ -78,12 +88,42 @@
 [ext_resource type="PackedScene" uid="uid://6h3k07jyv80i" path="res://Assets/Scenes/Meuble_2C_A.tscn" id="57_63gg8"]
 [ext_resource type="Script" uid="uid://ckgsmfsvs6nnn" path="res://Dungeons/03/Secret_Room.gd" id="58_b3up8"]
 [ext_resource type="PackedScene" uid="uid://d2jm5u2yvk7w6" path="res://Assets/BinbunVFX/Treasure_Pro/Gems/Diamond/Diamond_01.glb" id="59_b3up8"]
+[ext_resource type="PackedScene" uid="uid://bysoel76lf8pw" path="res://Assets/Dungeons/Bar/bar_straight_A.gltf" id="59_x3t5q"]
 [ext_resource type="PackedScene" uid="uid://doj4jomx3h34p" path="res://Assets/BinbunVFX/loot_effects/effects/ground/ground_loot_vfx_common.tscn" id="60_2u0qn"]
+[ext_resource type="PackedScene" uid="uid://cfcdv5b7avpe1" path="res://Assets/Bits/RpgTools/blueprint_stacked.gltf" id="60_hvp6w"]
 [ext_resource type="PackedScene" uid="uid://be86xep67rb3s" path="res://Game/Monsters/Necromancer.tscn" id="61_iro63"]
+[ext_resource type="PackedScene" uid="uid://btqo2flys228k" path="res://Assets/Bits/RpgTools/anvil.gltf" id="61_oxdc1"]
+[ext_resource type="PackedScene" uid="uid://dj0modsh7x76o" path="res://Assets/Scenes/Bar_Straight_C.tscn" id="62_f5d3a"]
+[ext_resource type="PackedScene" uid="uid://cb813186cwd3n" path="res://Assets/Bits/RpgTools/drafting_compass.gltf" id="63_oxdc1"]
+[ext_resource type="PackedScene" uid="uid://j6jipvw28rgs" path="res://Assets/Bits/RpgTools/file.gltf" id="64_fjtdr"]
+[ext_resource type="PackedScene" uid="uid://bn8u3hkxao6jh" path="res://Assets/Characters/AdventurersAccessoires/spellbook_open.gltf" id="66_7jqpf"]
 [ext_resource type="PackedScene" uid="uid://vd24afk1pvyd" path="res://Assets/Scenes/Box_Stacked.tscn" id="66_y88mc"]
+[ext_resource type="PackedScene" uid="uid://nvl7qu3464h4" path="res://Game/Monsters/SkeletonMinion.tscn" id="68_f2tn8"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_tdnme"]
 size = Vector3(0.3, 0.55, 0.4)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_brlmy"]
+radius = 0.3
+height = 1.7
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_yamyj"]
+radius = 0.22352631
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yamyj"]
+size = Vector3(0.37226564, 1.0795898, 0.38916016)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_e0h6t"]
+radius = 0.19482422
+height = 1.2294922
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_yamyj"]
+radius = 0.14501953
+height = 0.975
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_hvp6w"]
+radius = 0.14501953
+height = 1.1944336
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_brlmy"]
 size = Vector3(1.3000001, 2.7, 2.1000001)
@@ -110,6 +150,20 @@ radius = 0.12
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_b02ke"]
 size = Vector3(0.2, 0.5, 0.2)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_3gcn8"]
+radius = 0.3
+height = 0.90000004
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7jqpf"]
+size = Vector3(0.90000004, 0.7, 0.3)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_78w8x"]
+radius = 0.13134766
+height = 1.0563965
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_oej0p"]
+size = Vector3(2, 0.3, 1.7)
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_b02ke"]
 radius = 0.2
@@ -242,6 +296,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 24)
 
 [node name="SkeletonWarrior" parent="RoomSouthEast" unique_id=233849590 instance=ExtResource("30_ms3fl")]
 transform = Transform3D(0.5, 0, 0.8660254, 0, 1, 0, -0.8660254, 0, 0.5, 6.8, 0, 6.3999996)
+lvl = 2
+loot_gold = 3
 
 [node name="WallTokenFlip" parent="RoomSouthEast" unique_id=1292456477 instance=ExtResource("8_ww55m")]
 transform = Transform3D(4.569558e-08, 0, 1, 0, 1, 0, -1, 0, 4.569558e-08, -2, 0, 2)
@@ -371,6 +427,69 @@ metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 stream = ExtResource("29_63gg8")
 bus = &"Effet"
 
+[node name="Tools" type="Node3D" parent="RoomSouthEast/Meuble" unique_id=1062913698]
+script = ExtResource("22_rwtb4")
+
+[node name="trowel2" parent="RoomSouthEast/Meuble/Tools" unique_id=2018847706 instance=ExtResource("32_e0h6t")]
+transform = Transform3D(0.07898986, -0.90285903, -0.42261824, 0.9961947, 0.08715569, -4.354505e-08, 0.036833625, -0.42101005, 0.90630776, -0.70000076, 1.1, 0.40000057)
+
+[node name="screw_A2" parent="RoomSouthEast/Meuble/Tools" unique_id=1454856511 instance=ExtResource("33_n7bar")]
+transform = Transform3D(4.8291305e-08, -4.2221956e-08, 0.99999994, -0.9659258, 0.25881907, 4.2297078e-08, -0.25881907, -0.96592575, 1.589326e-08, 1.5, 2.15, -0.19999981)
+
+[node name="screw_B2" parent="RoomSouthEast/Meuble/Tools" unique_id=588521064 instance=ExtResource("34_p6jpo")]
+transform = Transform3D(0.22414383, -0.83651626, 0.50000006, 0.9659258, 0.25881898, -4.222196e-08, -0.12940946, 0.48296294, 0.8660254, 1.2999992, 2.15, -0.19999981)
+
+[node name="screwdriver_A_long_color2" parent="RoomSouthEast/Meuble/Tools" unique_id=931485889 instance=ExtResource("35_x3t5q")]
+transform = Transform3D(-1.0734447e-08, -0.81915206, 0.5735765, 1, -4.371139e-08, -4.371139e-08, 6.0878094e-08, 0.5735765, 0.81915206, 0.5999985, 1.05, 0)
+
+[node name="screwdriver_B_long_color2" parent="RoomSouthEast/Meuble/Tools" unique_id=1549868784 instance=ExtResource("36_hvp6w")]
+transform = Transform3D(-1.0734447e-08, -0.81915206, 0.5735765, 1, -4.371139e-08, -4.371139e-08, 6.0878094e-08, 0.5735765, 0.81915206, 0.29999924, 1.05, 0)
+
+[node name="handplane2" parent="RoomSouthEast/Meuble/Tools" unique_id=1863124060 instance=ExtResource("37_oxdc1")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 2.1, -0.20000076)
+
+[node name="chisel2" parent="RoomSouthEast/Meuble/Tools" unique_id=607213909 instance=ExtResource("37_hvp6w")]
+transform = Transform3D(-0.08715573, 0.99619466, 5.1164445e-08, 8.7422784e-08, -4.3711392e-08, 1, 0.99619466, 0.08715573, -8.3280405e-08, 0.20000076, 1.55, -0.19999981)
+
+[node name="wrench_B2" parent="RoomSouthEast/Meuble/Tools" unique_id=337553682 instance=ExtResource("31_yamyj")]
+transform = Transform3D(0.17364824, 0.98480755, -6.9121007e-09, 4.470348e-08, -8.5791616e-16, -0.9999999, -0.98480743, 0.17364831, -4.661189e-08, -0.8999901, 1.5499998, -0.10000038)
+
+[node name="Area3D" type="Area3D" parent="RoomSouthEast/Meuble/Tools" unique_id=1887657612]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RoomSouthEast/Meuble/Tools/Area3D" unique_id=1118775485]
+transform = Transform3D(-5.9710864e-08, -0.8660254, -0.49999997, 1, -4.371139e-08, -4.371139e-08, 1.599948e-08, -0.49999997, 0.8660254, -1.2299042, 0, 0.125)
+shape = SubResource("CapsuleShape3D_brlmy")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="RoomSouthEast/Meuble/Tools/Area3D" unique_id=299917901]
+transform = Transform3D(-5.9710864e-08, -0.8660254, -0.49999997, 1, -4.371139e-08, -4.371139e-08, 1.599948e-08, -0.49999997, 0.8660254, 1.3700962, 1.137924, -0.17500019)
+shape = SubResource("SphereShape3D_yamyj")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="RoomSouthEast/Meuble/Tools/Area3D" unique_id=671534265]
+transform = Transform3D(-4.3711385e-08, -1, 4.371139e-08, 1, -4.371139e-08, -4.371139e-08, 4.371139e-08, 4.371139e-08, 1, 0.00989151, 1.2861326, -0.18041992)
+shape = SubResource("BoxShape3D_yamyj")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="RoomSouthEast/Meuble/Tools/Area3D" unique_id=270296078]
+transform = Transform3D(-2.2023029e-08, -0.9126253, 0.4087971, 1, -4.371139e-08, -4.371139e-08, 5.7761206e-08, 0.4087971, 0.9126253, 0.26734352, 0, 0.11823082)
+shape = SubResource("CapsuleShape3D_e0h6t")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomSouthEast/Meuble/Tools/Area3D" unique_id=1551342686]
+transform = Transform3D(-5.0637723e-08, -0.98480785, -0.17364816, 1, -4.3711385e-08, -4.371139e-08, 3.5456917e-08, -0.17364816, 0.98480785, -0.9174042, 0.549768, -0.106863976)
+shape = SubResource("CapsuleShape3D_yamyj")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="RoomSouthEast/Meuble/Tools/Area3D" unique_id=1720132208]
+transform = Transform3D(-4.819991e-08, -0.9940856, -0.10859985, 1, -4.3711385e-08, -4.3711385e-08, 3.870581e-08, -0.10859985, 0.9940856, 0.5587635, 0.51470053, -0.17761993)
+shape = SubResource("CapsuleShape3D_hvp6w")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RoomSouthEast/Meuble/Tools" unique_id=2010733041]
+stream = ExtResource("38_e0h6t")
+bus = &"Effet"
+
+[node name="description" type="Node" parent="RoomSouthEast/Meuble/Tools" unique_id=686341534]
+script = ExtResource("49_e5ej3")
+text = "Tout un tas d’outils qui ont probablement appartenu à celui qui a créé tous ça."
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
 [node name="crates_stacked2" parent="RoomSouthEast" unique_id=1530162916 instance=ExtResource("27_dpj6n")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4, 0, -12.2)
 script = ExtResource("22_rwtb4")
@@ -402,6 +521,9 @@ shape = SubResource("BoxShape3D_3gcn8")
 script = ExtResource("49_e5ej3")
 text = "C’est un joli tas de bric-à-brac. Aucun intérêt. "
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="grindstone2" parent="RoomSouthEast" unique_id=2130706737 instance=ExtResource("43_wrdrf")]
+transform = Transform3D(0.49999997, 0, -0.8660253, 0, 1, 0, 0.8660253, 0, 0.49999997, 8, 0, 0)
 
 [node name="RoomNorthEast" type="Node3D" parent="." unique_id=1456503486]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, 0, 24)
@@ -741,6 +863,98 @@ shape = SubResource("BoxShape3D_b02ke")
 stream = ExtResource("23_a71vf")
 bus = &"Effet"
 
+[node name="Node3D" type="Node3D" parent="RoomSouthWest" unique_id=877884196]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -7)
+
+[node name="anvil2" parent="RoomSouthWest/Node3D" unique_id=1726723143 instance=ExtResource("61_oxdc1")]
+transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, -2.7000015, 0, -1.5999947)
+
+[node name="Desk" type="Node3D" parent="RoomSouthWest/Node3D" unique_id=1038211473]
+transform = Transform3D(0.8660254, 0, -0.5, 0, 1, 0, 0.5, 0, 0.8660254, 3.1999998, 0, -0.5000019)
+script = ExtResource("22_rwtb4")
+
+[node name="bar_straight_C2" parent="RoomSouthWest/Node3D/Desk" unique_id=946520791 instance=ExtResource("62_f5d3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9999995, 0, 0.6000004)
+loot_gold = 3
+
+[node name="bar_straight_A3" parent="RoomSouthWest/Node3D/Desk" unique_id=1659470636 instance=ExtResource("59_x3t5q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0.6000004)
+
+[node name="bar_straight_A4" parent="RoomSouthWest/Node3D/Desk" unique_id=1982904162 instance=ExtResource("59_x3t5q")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -1, 0, -0.39999962)
+
+[node name="bar_straight_A5" parent="RoomSouthWest/Node3D/Desk" unique_id=1925678162 instance=ExtResource("59_x3t5q")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 1, 0, -0.39999962)
+
+[node name="drafting_compass2" parent="RoomSouthWest/Node3D/Desk" unique_id=1605519094 instance=ExtResource("63_oxdc1")]
+transform = Transform3D(-0.9659258, 0.2588191, -3.656529e-08, -3.785517e-08, 0, 1, 0.2588191, 0.9659258, 9.79764e-09, 8.3, 1.05, -32.4)
+top_level = true
+script = ExtResource("22_rwtb4")
+loot_obj = 21
+hide_on_loot = true
+
+[node name="Area3D" type="Area3D" parent="RoomSouthWest/Node3D/Desk/drafting_compass2" unique_id=870827834]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RoomSouthWest/Node3D/Desk/drafting_compass2/Area3D" unique_id=479538862]
+transform = Transform3D(1, 0, -4.440892e-16, 0, 1, 0, -2.220446e-16, 0, 1, 0, -0.25000572, 0)
+shape = SubResource("CapsuleShape3D_3gcn8")
+
+[node name="file2" parent="RoomSouthWest/Node3D/Desk" unique_id=257201286 instance=ExtResource("64_fjtdr")]
+transform = Transform3D(0.75, 0.49999997, -0.43301266, 0.5, -5.861255e-08, 0.8660254, 0.4330127, -0.8660253, -0.25000003, -0.5963979, 1.05, -0.23301315)
+
+[node name="blueprint_stacked2" parent="RoomSouthWest/Node3D/Desk" unique_id=872429002 instance=ExtResource("60_hvp6w")]
+transform = Transform3D(0.8660254, 0, -0.5, 0, 1, 0, 0.5, 0, 0.8660254, 0.98659945, 1, -0.12320328)
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RoomSouthWest/Node3D/Desk" unique_id=2142026753]
+stream = ExtResource("38_e0h6t")
+bus = &"Effet"
+
+[node name="description" type="Node" parent="RoomSouthWest/Node3D/Desk" unique_id=555069440]
+script = ExtResource("49_e5ej3")
+text = "Tout un tas d’outils qui ont probablement appartenu à celui qui a créé tous ça."
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="spellbook_open2" parent="RoomSouthWest/Node3D/Desk" unique_id=1529236413 instance=ExtResource("66_7jqpf")]
+transform = Transform3D(0.7071067, -0.70710677, -2.634178e-08, 3.7252903e-08, -5.9604645e-08, 1, -0.7071067, -0.7071067, -5.795191e-08, -1.2624364, 1, 0.6134014)
+script = ExtResource("22_rwtb4")
+
+[node name="description" type="Node" parent="RoomSouthWest/Node3D/Desk/spellbook_open2" unique_id=2048903595]
+script = ExtResource("49_e5ej3")
+text = "[i]Écho des Profondeurs Oubliées[/i]
+Ce livre aussi semble inachevé. Mais il semblerait que son auteur travail toujours dessus.
+C'est le chapitre Trois."
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Area3D" type="Area3D" parent="RoomSouthWest/Node3D/Desk/spellbook_open2" unique_id=2123257756]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RoomSouthWest/Node3D/Desk/spellbook_open2/Area3D" unique_id=746891956]
+transform = Transform3D(1, 8.969602e-25, 1.3393732e-12, 0, 1, -6.696866e-13, -1.3393732e-12, 6.696866e-13, 1, 0, 0, 0)
+shape = SubResource("BoxShape3D_7jqpf")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RoomSouthWest/Node3D/Desk/spellbook_open2" unique_id=739231127]
+stream = ExtResource("29_63gg8")
+bus = &"Effet"
+
+[node name="Area3D" type="Area3D" parent="RoomSouthWest/Node3D/Desk" unique_id=1551002429]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RoomSouthWest/Node3D/Desk/Area3D" unique_id=2069273463]
+transform = Transform3D(0.4330126, 0.49999988, 0.7499999, -0.86602527, -5.2154064e-08, 0.49999997, 0.24999987, -0.8660252, 0.4330125, -0.45621443, 1.0539472, -0.48827744)
+shape = SubResource("CapsuleShape3D_78w8x")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomSouthWest/Node3D/Desk/Area3D" unique_id=1988511915]
+transform = Transform3D(0.8660254, 0, -0.5, 0, 1, 0, 0.5, 0, 0.8660254, 0.9544234, 1.05, -0.13348389)
+shape = SubResource("BoxShape3D_oej0p")
+
+[node name="SkeletonMinion" parent="RoomSouthWest" unique_id=706438754 instance=ExtResource("68_f2tn8")]
+transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, -8, 0, 4)
+lvl = 2
+loot_gold = 2
+
+[node name="SkeletonWarrior" parent="RoomSouthWest" unique_id=982705985 instance=ExtResource("30_ms3fl")]
+transform = Transform3D(-0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, -0.70710677, 1.5, 0, -5)
+lvl = 2
+loot_gold = 2
+
 [node name="NodeNorthWest" type="Node3D" parent="." unique_id=1668201866]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, 0, -24)
 script = ExtResource("30_22oqy")
@@ -872,7 +1086,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="SecretRoom/Area3D" unique_id=128003891]
 shape = SubResource("BoxShape3D_oow84")
 
-[node name="BlackKnight" parent="SecretRoom" unique_id=706438754 instance=ExtResource("17_2u0qn")]
+[node name="BlackKnight" parent="SecretRoom" unique_id=894084666 instance=ExtResource("17_2u0qn")]
 transform = Transform3D(0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, 0.70710677, 1, 0, -6.7)
 state = 5
 lvl = 2
@@ -2163,6 +2377,7 @@ transform = Transform3D(-1, -8.742278e-08, 0, 8.742278e-08, -1, 0, 0, 0, 1, 6, 0
 [connection signal="item_drop" from="RoomSouthWest/CogWall/Parts_Axes3" to="RoomSouthWest/CogWall" method="_on_parts_axes_3_item_drop"]
 [connection signal="state_change" from="RoomSouthWest/SwitchWall/Switch" to="RoomSouthWest/CogWall" method="_on_switch_state_change"]
 [connection signal="activate" from="RoomSouthWest/SwitchWall/Switch/screwdriver" to="RoomSouthWest/SwitchWall/Switch" method="_on_screwdriver_activate"]
+[connection signal="loot_obj_change" from="RoomSouthWest/Node3D/Desk/drafting_compass2" to="." method="_on_drafting_compass_loot"]
 [connection signal="activate" from="NodeNorthWest/Switch1" to="NodeNorthWest" method="_on_switch_activate"]
 [connection signal="item_place" from="NodeNorthWest/Switch1" to="NodeNorthWest" method="_on_switch_1_item_place"]
 [connection signal="activate" from="NodeNorthWest/Switch2" to="NodeNorthWest" method="_on_switch_activate"]

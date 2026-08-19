@@ -24,6 +24,7 @@
 [ext_resource type="Texture2D" uid="uid://64kvvj3y4ods" path="res://Gui/Assets/kaykit/48/cube_gold.png" id="21_5j71u"]
 [ext_resource type="Texture2D" uid="uid://byui8uixljpqc" path="res://Gui/Assets/kaykit/48/Parts_Cog.png" id="22_ydbc3"]
 [ext_resource type="Texture2D" uid="uid://blvsgs7x3kfkk" path="res://Gui/Assets/kaykit/48/Parts_Cog_Large.png" id="23_aj1ai"]
+[ext_resource type="Texture2D" uid="uid://cobbbrvosbnpb" path="res://Gui/Assets/kaykit/48/Drafting_Compass.png" id="24_aj1ai"]
 
 [node name="World" type="Node3D" unique_id=1017407997]
 script = ExtResource("1_bcbcq")
@@ -223,6 +224,13 @@ icon = ExtResource("23_aj1ai")
 tooltip = "Gros engrenage"
 description = "C'est un gros engrenage. "
 global = false
+metadata/_custom_type_script = "uid://bjbab3ep2gfn2"
+
+[node name="Compas" type="Node" parent="Items" unique_id=1308618716]
+script = ExtResource("5_p1v5b")
+item_name = 21
+icon = ExtResource("24_aj1ai")
+description = "C'est un compas qui semble de très bonne facture."
 metadata/_custom_type_script = "uid://bjbab3ep2gfn2"
 
 [node name="Options" type="Node" parent="." unique_id=586375258]

@@ -170,3 +170,8 @@ script = ExtResource("3_7x0jq")
 secondary = true
 label = " Résoudre l'énigme des Jetons"
 metadata/_custom_type_script = "uid://vm6ojxtihve7"
+
+[node name="Retrouver le compas de Feris" type="Node" parent="Dungeon03" unique_id=1450149530]
+script = ExtResource("3_7x0jq")
+secondary = true
+metadata/_custom_type_script = "uid://vm6ojxtihve7"

@@ -34,6 +34,7 @@ extends GameBase
 @onready var dungeon_03_resoudre_dalles : QuestObjectif = $"Dungeon03/Resoudre l'énigme des Dalles"
 @onready var dungeon_03_resoudre_lumiere : QuestObjectif = $"Dungeon03/Resoudre l'énigme des Lumières"
 @onready var dungeon_03_resoudre_jetons : QuestObjectif = $"Dungeon03/Resoudre l'énigme des Jetons"
+@onready var dungeon_03_retrouver_compas : QuestObjectif = $"Dungeon03/Retrouver le compas de Feris"
 
 
 var _quests : Dictionary = {}
