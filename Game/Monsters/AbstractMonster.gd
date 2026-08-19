@@ -105,7 +105,7 @@ func _see_player() -> bool :
 	var fov = get_fov()
 	if state == State.PATROL : fov = fov-20;
 	if rad_to_deg(orientation.angle_to(direction)) <= get_fov() :
-		var query = PhysicsRayQueryParameters3D.create(start, end, 1)
+		var query = PhysicsRayQueryParameters3D.create(start, end, 3)
 		var result = get_world_3d().direct_space_state.intersect_ray(query)
 		if (result && result.collider == player):
 			return true

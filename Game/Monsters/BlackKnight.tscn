@@ -6,7 +6,6 @@
 [ext_resource type="Script" uid="uid://beivecuks870r" path="res://Game/Monsters/MonsterAtk.gd" id="4_b6bev"]
 
 [node name="BlackKnight" unique_id=706438754 instance=ExtResource("1_q5ppm")]
-collision_mask = 1
 script = ExtResource("2_b6bev")
 
 [node name="Character" parent="." index="9" unique_id=1751742794 instance=ExtResource("3_npvdu")]
