@@ -8,7 +8,7 @@ class_name Gui
 
 @onready var _options = $Options as GridContainer
 @onready var _introduction = $Introduction as GridContainer
-@onready var _dialog = $DialogGui as GridContainer
+@onready var _dialog = $DialogGui as DialogGui 
 @onready var _bag = $Bag as GridContainer
 @onready var _exit_auberge = $ExitAuberge as GridContainer
 @onready var _exit_dungeon = $ExitDungeon as GridContainer
@@ -39,7 +39,7 @@ func _physics_process(_delta: float) -> void:
 		elif _introduction.visible :
 			_introduction.hide()
 		elif _dialog.visible :
-			_dialog.hide()
+			if _dialog._current.close_enable : _dialog.hide()
 		elif _bag.visible or _exit_auberge.visible or _exit_dungeon.visible: 
 			_close()
 		elif _game_over.visible :

@@ -22,7 +22,8 @@ func open(dialog: Dialog)->void :
 	else : 
 		dialog.activate.emit()
 		_current = dialog
-		_close_button.show()
+		if dialog.close_enable : _close_button.show()
+		else : _close_button.hide()
 		_option_button1.hide()
 		_option_button2.hide()
 		_option_button3.hide()
