@@ -5,6 +5,8 @@ extends GameBase3D
 
 var entered = false
 
+func _ready() -> void:
+	bag.item_loot.connect(_on_item_loot)
 
 func _on_area_3d_body_shape_entered(_body_rid: RID, body: Node3D, _body_shape_index: int, _local_shape_index: int) -> void:
 	if body is PlayerG and not entered :
@@ -34,5 +36,8 @@ func _on_autel_item_drop(_item: Item) -> void:
 		$Autel/Axes/Ring.show()
 		bag.unloot(Items.ItemName.AnneauValthorion)
 		$Autel/Axes.loot_obj = Items.ItemName.AnneauValthorionRestored
-		
-	pass # Replace with function body.
+
+func _on_item_loot(_item: Item) -> void:
+	if _item.item_name == Items.ItemName.AnneauValthorionRestored :
+		$Autel/Axes/Ring.queue_free()
+		quest_book.dungeon_03_restaurer_l_anneau.done()

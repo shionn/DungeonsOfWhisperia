@@ -173,6 +173,18 @@ description = "Cet anneau est magnifique.
 unique = true
 metadata/_custom_type_script = "uid://bjbab3ep2gfn2"
 
+[node name="Anneau de Valthorion Restauré" type="Node" parent="Items" unique_id=221999972]
+script = ExtResource("5_p1v5b")
+item_name = 22
+icon = ExtResource("20_6tx0c")
+display_name = "Anneau de Valthorion"
+description = "Cet anneau est magnifique. 
+À l'intérieur, je peux y lire [i]Valthorion[/i].
+
+Sa magie a été restaurée."
+unique = true
+metadata/_custom_type_script = "uid://bjbab3ep2gfn2"
+
 [node name="Alliance" type="Node" parent="Items" unique_id=556752775]
 script = ExtResource("5_p1v5b")
 item_name = 14

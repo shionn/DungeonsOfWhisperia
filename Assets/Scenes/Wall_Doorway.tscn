@@ -17,7 +17,7 @@ size = Vector3(2, 0.5, 1)
 [node name="Wall_Doorway" unique_id=812446971 instance=ExtResource("1_fhw0n")]
 script = ExtResource("2_gfxh0")
 
-[node name="Knob" type="Node3D" parent="wall_doorway/wall_doorway_door" parent_id_path=PackedInt32Array(1186919055) index="1" unique_id=1387879665]
+[node name="Knob" type="Node3D" parent="wall_doorway/wall_doorway_door" parent_id_path=PackedInt32Array(1110341718) index="1" unique_id=1387879665]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4200989, 1.1378222, 0)
 script = ExtResource("3_akee4")
 

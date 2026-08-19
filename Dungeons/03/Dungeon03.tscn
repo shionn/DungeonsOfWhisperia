@@ -279,7 +279,7 @@ script = ExtResource("2_03wwx")
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -20, 0, 0)
 
 [node name="GatePortalVFX_06" parent="Central" unique_id=185455769 instance=ExtResource("13_ww0ar")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7, 2, 0)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7, 5, 0)
 
 [node name="wall2" parent="Central/GatePortalVFX_06" unique_id=1258816924 instance=ExtResource("8_ww55m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0)
