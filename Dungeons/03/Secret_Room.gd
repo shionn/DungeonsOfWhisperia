@@ -31,8 +31,8 @@ func _on_dead_delay_timeout() -> void:
 
 func _on_autel_item_drop(_item: Item) -> void:
 	if _item.item_name == Items.ItemName.AnneauValthorion :
-		$Autel/Axes/Gold_Gem_Ring_032.show()
+		$Autel/Axes/Ring.show()
 		bag.unloot(Items.ItemName.AnneauValthorion)
-		$Autel/Axes/Gold_Gem_Ring_032.loot_obj = Items.ItemName.AnneauValthorionRestored
+		$Autel/Axes.loot_obj = Items.ItemName.AnneauValthorionRestored
 		
 	pass # Replace with function body.

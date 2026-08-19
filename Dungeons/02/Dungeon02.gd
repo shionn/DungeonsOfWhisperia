@@ -15,7 +15,7 @@ func _ready() -> void:
 
 func _on_item_loot(item : Item) -> void :
 	if item.item_name == Items.ItemName.Alliance :
-		quest_book.dungeon_02_trouver_alliance.done()
+		quest_book.dungeon_02_trouver_aliance.done()
 	if item.item_name == Items.ItemName.SkullHead_Dungeon2 :
 		quest_book.dungeon_02_preuve_kill_boss.done()
 	if item.item_name == Items.ItemName.AnneauValthorion :

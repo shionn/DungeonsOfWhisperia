@@ -183,7 +183,7 @@ size = Vector3(1, 0.2, 0.5)
 [sub_resource type="BoxShape3D" id="BoxShape3D_j2ult"]
 size = Vector3(0.7, 0.3, 0.9)
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_2s7rd"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_u3qrv"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_oow84"]
 size = Vector3(2, 3, 3)
@@ -279,7 +279,7 @@ script = ExtResource("2_03wwx")
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -20, 0, 0)
 
 [node name="GatePortalVFX_06" parent="Central" unique_id=185455769 instance=ExtResource("13_ww0ar")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7, 5, 0)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7, 2, 0)
 
 [node name="wall2" parent="Central/GatePortalVFX_06" unique_id=1258816924 instance=ExtResource("8_ww55m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0)
@@ -1303,17 +1303,18 @@ transform = Transform3D(1, 0, 0, 0, 4, 0, 0, 0, 3, 2, -0.5, 0)
 
 [node name="Axes" parent="SecretRoom/Autel" unique_id=64291728 instance=ExtResource("21_5mdf3")]
 transform = Transform3D(2.9802322e-08, -1, 0, 0.25, 7.450581e-09, 0, 0, 0, 0.33333334, 0, 0.35, 0)
-
-[node name="Gold_Gem_Ring_032" parent="SecretRoom/Autel/Axes" unique_id=94392524 instance=ExtResource("88_2s7rd")]
-transform = Transform3D(-8.742278e-09, -5.9604646e-09, 0.2, -5.9604646e-09, 0.2, 5.9604646e-09, -0.20000003, -5.9604655e-09, -8.742278e-09, 0.61, 0, 0)
-visible = false
 script = ExtResource("22_rwtb4")
 
-[node name="Area3D" type="Area3D" parent="SecretRoom/Autel/Axes/Gold_Gem_Ring_032" unique_id=972055593]
+[node name="Ring" parent="SecretRoom/Autel/Axes" unique_id=94392524 instance=ExtResource("88_2s7rd")]
+transform = Transform3D(-8.742278e-09, -5.9604646e-09, 0.2, -5.9604646e-09, 0.2, 5.9604646e-09, -0.20000003, -5.9604655e-09, -8.742278e-09, 0.61, 0, 0)
+visible = false
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SecretRoom/Autel/Axes/Gold_Gem_Ring_032/Area3D" unique_id=1303364853]
+[node name="Area3D" type="Area3D" parent="SecretRoom/Autel/Axes" unique_id=972055593]
+transform = Transform3D(-8.742278e-09, -5.9604646e-09, 0.2, -5.9604646e-09, 0.2, 5.9604646e-09, -0.20000003, -5.9604655e-09, -8.742278e-09, 0.61, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SecretRoom/Autel/Axes/Area3D" unique_id=1303364853]
 transform = Transform3D(1.0000001, 3.5527137e-15, 3.5527137e-15, 1.7763568e-15, 1, 1.0587912e-22, 0, -1.0587912e-22, 1, 0, 0, 0)
-shape = SubResource("SphereShape3D_2s7rd")
+shape = SubResource("SphereShape3D_u3qrv")
 
 [node name="AxesL" parent="SecretRoom/Autel" unique_id=2134004551 instance=ExtResource("21_5mdf3")]
 transform = Transform3D(-4.371139e-08, 1, 0, -0.25, -1.0927847e-08, 0, 0, 0, 0.33333334, 0, 0.425, -0.33333334)
@@ -2798,7 +2799,7 @@ navigation_mesh = SubResource("NavigationMesh_fjlqb")
 [connection signal="item_place" from="NodeNorthWest/Switch4" to="NodeNorthWest" method="_on_switch_4_item_place"]
 [connection signal="activate" from="NodeNorthWest/Meuble/paladin_book2/description/Lire la suite" to="NodeNorthWest" method="_on_lire_la_suite_activate"]
 [connection signal="dead" from="SecretRoom/BlackKnight" to="SecretRoom" method="_on_black_knight_dead"]
-[connection signal="item_drop" from="SecretRoom/Autel/Axes/Gold_Gem_Ring_032" to="SecretRoom" method="_on_autel_item_drop"]
+[connection signal="item_drop" from="SecretRoom/Autel/Axes" to="SecretRoom" method="_on_autel_item_drop"]
 [connection signal="body_shape_entered" from="SecretRoom/Area3D" to="SecretRoom" method="_on_area_3d_body_shape_entered"]
 [connection signal="close" from="SecretRoom/Cinematique/Non" to="SecretRoom" method="_on_non_close"]
 [connection signal="activate" from="SecretRoom/Cinematique2" to="SecretRoom" method="_on_cinematique_2_activate"]
