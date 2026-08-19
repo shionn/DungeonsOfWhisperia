@@ -36,6 +36,7 @@
 [ext_resource type="Script" uid="uid://c5h0pgnd6lw7o" path="res://Dungeons/03/CogSwitch.gd" id="20_bbrtj"]
 [ext_resource type="PackedScene" uid="uid://c1vdjgv5qw60t" path="res://Assets/Resource/Part/Parts_Cog_Large.gltf" id="20_fu8oi"]
 [ext_resource type="PackedScene" uid="uid://g1ense8xwee4" path="res://Dungeons/03/TokenSwitch.tscn" id="20_h5lcn"]
+[ext_resource type="PackedScene" uid="uid://ceax801pr7nkb" path="res://Assets/Resource/Copper/Copper_Bar.gltf" id="20_v2vmi"]
 [ext_resource type="PackedScene" uid="uid://dejtfuq0ondxl" path="res://Assets/Resource/Part/Parts_Axes.gltf" id="21_5mdf3"]
 [ext_resource type="PackedScene" uid="uid://4omyrxkhqtuc" path="res://Assets/Bits/RpgTools/screwdriver_A_long.gltf" id="21_qsbjf"]
 [ext_resource type="PackedScene" uid="uid://l4ocv1r3b2jl" path="res://Game/DungeonEnvironment.tscn" id="21_ww0ar"]
@@ -94,18 +95,23 @@
 [ext_resource type="PackedScene" uid="uid://be86xep67rb3s" path="res://Game/Monsters/Necromancer.tscn" id="61_iro63"]
 [ext_resource type="PackedScene" uid="uid://btqo2flys228k" path="res://Assets/Bits/RpgTools/anvil.gltf" id="61_oxdc1"]
 [ext_resource type="PackedScene" uid="uid://dj0modsh7x76o" path="res://Assets/Scenes/Bar_Straight_C.tscn" id="62_f5d3a"]
+[ext_resource type="PackedScene" uid="uid://dlp63mn565spi" path="res://Assets/Resource/Iron/Iron_Bar.gltf" id="62_mwix5"]
 [ext_resource type="PackedScene" uid="uid://cb813186cwd3n" path="res://Assets/Bits/RpgTools/drafting_compass.gltf" id="63_oxdc1"]
 [ext_resource type="PackedScene" uid="uid://j6jipvw28rgs" path="res://Assets/Bits/RpgTools/file.gltf" id="64_fjtdr"]
 [ext_resource type="PackedScene" uid="uid://bn8u3hkxao6jh" path="res://Assets/Characters/AdventurersAccessoires/spellbook_open.gltf" id="66_7jqpf"]
 [ext_resource type="PackedScene" uid="uid://vd24afk1pvyd" path="res://Assets/Scenes/Box_Stacked.tscn" id="66_y88mc"]
+[ext_resource type="PackedScene" uid="uid://bxrf8wcdm0l4s" path="res://Assets/Bits/RpgTools/magnifying_glass.gltf" id="67_j2ult"]
 [ext_resource type="PackedScene" uid="uid://nvl7qu3464h4" path="res://Game/Monsters/SkeletonMinion.tscn" id="68_f2tn8"]
+[ext_resource type="PackedScene" uid="uid://enbgtpx7wt5m" path="res://Assets/Bits/RpgTools/hammer.gltf" id="76_5khw7"]
+[ext_resource type="PackedScene" uid="uid://bmurq8gfdf5sq" path="res://Assets/Bits/RpgTools/nail.gltf" id="76_kuv0f"]
+[ext_resource type="PackedScene" uid="uid://bvkl8cwjtc1at" path="res://Assets/Bits/RpgTools/lock_A.gltf" id="78_xtx5a"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_tdnme"]
 size = Vector3(0.3, 0.55, 0.4)
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_brlmy"]
 radius = 0.3
-height = 1.7
+height = 1.5951172
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_yamyj"]
 radius = 0.22352631
@@ -114,8 +120,8 @@ radius = 0.22352631
 size = Vector3(0.37226564, 1.0795898, 0.38916016)
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_e0h6t"]
-radius = 0.19482422
-height = 1.2294922
+radius = 0.3
+height = 1.0147461
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_yamyj"]
 radius = 0.14501953
@@ -129,7 +135,7 @@ height = 1.1944336
 size = Vector3(1.3000001, 2.7, 2.1000001)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_3gcn8"]
-size = Vector3(2, 1.3000001, 1)
+size = Vector3(1.5, 1.3000001, 1)
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_b02ke"]
 height = 1.7005
@@ -164,6 +170,12 @@ height = 1.0563965
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_oej0p"]
 size = Vector3(2, 0.3, 1.7)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mwix5"]
+size = Vector3(1, 0.2, 0.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_j2ult"]
+size = Vector3(0.7, 0.3, 0.9)
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_b02ke"]
 radius = 0.2
@@ -263,6 +275,32 @@ transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 6, 0
 
 [node name="torch_mounted" parent="CentralEast/Wall_Doorway3" unique_id=1959831930 instance=ExtResource("9_ap7gn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.999999, 0, 0)
+
+[node name="Meuble" type="Node3D" parent="CentralEast" unique_id=811483663]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, 1)
+
+[node name="Iron_Bar2" parent="CentralEast/Meuble" unique_id=1128515861 instance=ExtResource("62_mwix5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 1, 0.10000038)
+
+[node name="Iron_Bar3" parent="CentralEast/Meuble" unique_id=297523006 instance=ExtResource("62_mwix5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1000004, 1, 0.10000038)
+
+[node name="Iron_Bar4" parent="CentralEast/Meuble" unique_id=997190294 instance=ExtResource("62_mwix5")]
+transform = Transform3D(-3.4652956e-08, 0.3652171, -0.93092245, 4.7892435e-08, 0.93092245, 0.3652171, 1, -3.1928288e-08, -4.9750348e-08, -0.70000076, 1.1365632, 0.10000038)
+
+[node name="bar_straight_C2" parent="CentralEast/Meuble" unique_id=946520791 instance=ExtResource("62_f5d3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0)
+loot_gold = 1
+
+[node name="bar_straight_C3" parent="CentralEast/Meuble" unique_id=1754388965 instance=ExtResource("62_f5d3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+loot_gold = 2
+
+[node name="Copper_Bar2" parent="CentralEast/Meuble" unique_id=83039949 instance=ExtResource("20_v2vmi")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.3999996, 1, -0.10000038)
+
+[node name="Copper_Bar3" parent="CentralEast/Meuble" unique_id=1683592565 instance=ExtResource("20_v2vmi")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.3999996, 1, 0.29999924)
 
 [node name="CentralWest" type="Node3D" parent="." unique_id=987857688]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, -20)
@@ -869,11 +907,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -7)
 [node name="anvil2" parent="RoomSouthWest/Node3D" unique_id=1726723143 instance=ExtResource("61_oxdc1")]
 transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, -2.7000015, 0, -1.5999947)
 
+[node name="Iron_Bar2" parent="RoomSouthWest/Node3D/anvil2" unique_id=1613529305 instance=ExtResource("62_mwix5")]
+transform = Transform3D(0.8660254, -0.4330127, -0.24999999, 0, 0.49999997, -0.8660254, 0.5, 0.75, 0.43301266, 1.3436127, 0.4, -0.32719803)
+
 [node name="Desk" type="Node3D" parent="RoomSouthWest/Node3D" unique_id=1038211473]
 transform = Transform3D(0.8660254, 0, -0.5, 0, 1, 0, 0.5, 0, 0.8660254, 3.1999998, 0, -0.5000019)
 script = ExtResource("22_rwtb4")
 
-[node name="bar_straight_C2" parent="RoomSouthWest/Node3D/Desk" unique_id=946520791 instance=ExtResource("62_f5d3a")]
+[node name="bar_straight_C2" parent="RoomSouthWest/Node3D/Desk" unique_id=306678467 instance=ExtResource("62_f5d3a")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9999995, 0, 0.6000004)
 loot_gold = 3
 
@@ -904,6 +945,9 @@ transform = Transform3D(0.75, 0.49999997, -0.43301266, 0.5, -5.861255e-08, 0.866
 
 [node name="blueprint_stacked2" parent="RoomSouthWest/Node3D/Desk" unique_id=872429002 instance=ExtResource("60_hvp6w")]
 transform = Transform3D(0.8660254, 0, -0.5, 0, 1, 0, 0.5, 0, 0.8660254, 0.98659945, 1, -0.12320328)
+
+[node name="magnifying_glass2" parent="RoomSouthWest/Node3D/Desk" unique_id=14929299 instance=ExtResource("67_j2ult")]
+transform = Transform3D(0.34202015, -0.93969244, -4.836528e-08, 3.7252917e-08, -5.960464e-08, 1, -0.93969244, -0.34202015, -4.138973e-08, 0.27680826, 1.05, 0.87981415)
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RoomSouthWest/Node3D/Desk" unique_id=2142026753]
 stream = ExtResource("38_e0h6t")
@@ -945,6 +989,10 @@ shape = SubResource("CapsuleShape3D_78w8x")
 transform = Transform3D(0.8660254, 0, -0.5, 0, 1, 0, 0.5, 0, 0.8660254, 0.9544234, 1.05, -0.13348389)
 shape = SubResource("BoxShape3D_oej0p")
 
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="RoomSouthWest/Node3D/Desk/Area3D" unique_id=1441430946]
+transform = Transform3D(0.9396926, 0, -0.34202015, 0, 1, 0, 0.34202015, 0, 0.9396926, 0.025984287, 1.05, 0.7931061)
+shape = SubResource("BoxShape3D_mwix5")
+
 [node name="SkeletonMinion" parent="RoomSouthWest" unique_id=706438754 instance=ExtResource("68_f2tn8")]
 transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, -8, 0, 4)
 lvl = 2
@@ -954,6 +1002,38 @@ loot_gold = 2
 transform = Transform3D(-0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, -0.70710677, 1.5, 0, -5)
 lvl = 2
 loot_gold = 2
+
+[node name="crates_stacked2" parent="RoomSouthWest" unique_id=1025050971 instance=ExtResource("27_dpj6n")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.20000029, 0, 12.099998)
+script = ExtResource("22_rwtb4")
+interactDistance = 4.0
+
+[node name="box_large2" parent="RoomSouthWest/crates_stacked2" unique_id=1004020986 instance=ExtResource("32_j7lkl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.9, 0, -0.5999994)
+
+[node name="box_small2" parent="RoomSouthWest/crates_stacked2/box_large2" unique_id=1448964651 instance=ExtResource("33_1ghu8")]
+transform = Transform3D(0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, 0.70710677, 0.30000114, 1.5, -0.3000002)
+
+[node name="crate_large_decorated2" parent="RoomSouthWest/crates_stacked2" unique_id=455653688 instance=ExtResource("28_syqet")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8, 0, -0.70000076)
+
+[node name="crate_small2" parent="RoomSouthWest/crates_stacked2" unique_id=1876062579 instance=ExtResource("29_qjwwm")]
+transform = Transform3D(0.9396926, 0, -0.34202012, 0, 1, 0, 0.34202012, 0, 0.9396926, 7.2999997, 0, -0.5999994)
+
+[node name="Area3D" type="Area3D" parent="RoomSouthWest/crates_stacked2" unique_id=161957773]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RoomSouthWest/crates_stacked2/Area3D" unique_id=2088893618]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.14999962, 0.85, -0.1500001)
+shape = SubResource("BoxShape3D_brlmy")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomSouthWest/crates_stacked2/Area3D" unique_id=1215432040]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7499995, 0.65000004, -0.6999998)
+shape = SubResource("BoxShape3D_3gcn8")
+
+[node name="description" type="Node" parent="RoomSouthWest/crates_stacked2" unique_id=355244898]
+script = ExtResource("49_e5ej3")
+text = "C’est un joli tas de bric-à-brac. Aucun intérêt. "
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
 [node name="NodeNorthWest" type="Node3D" parent="." unique_id=1668201866]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, 0, -24)
@@ -1004,8 +1084,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6000023, 0.75, 0.099998474
 
 [node name="Meuble" parent="NodeNorthWest" unique_id=1830271753 instance=ExtResource("57_63gg8")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 5, 0, 5)
-loot_gold_left = 2
-loot_gold_right = 4
+loot_gold_left = 3
+loot_gold_right = 2
 
 [node name="paladin_book2" parent="NodeNorthWest/Meuble" unique_id=905642445 instance=ExtResource("27_syqet")]
 transform = Transform3D(-0.9659258, 0, -0.25881913, 0, 1, 0, 0.25881913, 0, -0.9659258, -1.2999992, 2.35, -0.10000038)
@@ -1032,6 +1112,52 @@ metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="NodeNorthWest/Meuble/paladin_book2" unique_id=305989024]
 stream = ExtResource("29_63gg8")
 bus = &"Effet"
+
+[node name="Tools" type="Node3D" parent="NodeNorthWest/Meuble" unique_id=440530674]
+script = ExtResource("22_rwtb4")
+
+[node name="nail2" parent="NodeNorthWest/Meuble/Tools" unique_id=67840259 instance=ExtResource("76_kuv0f")]
+transform = Transform3D(4.8291305e-08, -4.2221956e-08, 0.99999994, -0.9659258, 0.25881907, 4.2297078e-08, -0.25881907, -0.96592575, 1.589326e-08, 1.5, 2.15, -0.19999886)
+
+[node name="nail3" parent="NodeNorthWest/Meuble/Tools" unique_id=836670851 instance=ExtResource("76_kuv0f")]
+transform = Transform3D(0.22414383, -0.83651626, 0.50000006, 0.9659258, 0.25881898, -4.222196e-08, -0.12940946, 0.48296294, 0.8660254, 1.2999992, 2.15, -0.19999886)
+
+[node name="trowel2" parent="NodeNorthWest/Meuble/Tools" unique_id=1508980002 instance=ExtResource("32_e0h6t")]
+transform = Transform3D(0.076897636, -0.87894505, 0.47068244, -0.9961947, -0.087155625, -3.4856146e-08, 0.04102267, -0.46889144, -0.88230264, -0.8550739, 1.1000001, 0.32959557)
+
+[node name="hammer2" parent="NodeNorthWest/Meuble/Tools" unique_id=113959408 instance=ExtResource("76_5khw7")]
+transform = Transform3D(0.42261824, -0.9063078, 2.5238156e-08, 0.9063078, 0.42261824, -3.9615976e-08, 2.5238158e-08, 3.9615973e-08, 1, 0, 2.2446654, -0.20000076)
+
+[node name="lock_A2" parent="NodeNorthWest/Meuble/Tools" unique_id=1106854050 instance=ExtResource("78_xtx5a")]
+transform = Transform3D(0.7071068, 0.7071067, 8.5059663e-16, 4.371139e-08, -4.371139e-08, 1, 0.7071067, -0.7071068, -6.181723e-08, 1, 1.1, 0.20000076)
+
+[node name="Area3D" type="Area3D" parent="NodeNorthWest/Meuble/Tools" unique_id=1297018650]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NodeNorthWest/Meuble/Tools/Area3D" unique_id=1437543123]
+transform = Transform3D(-5.9710864e-08, -0.8660254, -0.49999997, 1, -4.371139e-08, -4.371139e-08, 1.599948e-08, -0.49999997, 0.8660254, -1.27532, 0, 0.09877968)
+shape = SubResource("CapsuleShape3D_brlmy")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="NodeNorthWest/Meuble/Tools/Area3D" unique_id=334207331]
+transform = Transform3D(0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, 0.70710677, 1.1000004, 0.100000024, 0.10000038)
+shape = SubResource("BoxShape3D_j2ult")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="NodeNorthWest/Meuble/Tools/Area3D" unique_id=198484819]
+transform = Transform3D(-5.9710864e-08, -0.8660254, -0.49999997, 1, -4.371139e-08, -4.371139e-08, 1.599948e-08, -0.49999997, 0.8660254, 1.3700962, 1.137924, -0.17500019)
+shape = SubResource("SphereShape3D_yamyj")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="NodeNorthWest/Meuble/Tools/Area3D" unique_id=392742240]
+transform = Transform3D(0.42261824, -0.9062031, -0.013772359, 0.90630776, 0.42256945, 0.006422129, 2.4568863e-08, -0.0151961045, 0.99988455, -0.22995758, 1.3453727, -0.19335747)
+shape = SubResource("CapsuleShape3D_e0h6t")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="NodeNorthWest/Meuble/Tools" unique_id=1550188111]
+stream = ExtResource("38_e0h6t")
+bus = &"Effet"
+
+[node name="description" type="Node" parent="NodeNorthWest/Meuble/Tools" unique_id=2068226978]
+script = ExtResource("49_e5ej3")
+text = "Tout un tas d’outils qui ont probablement appartenu à celui qui a créé tous ça."
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
 [node name="SecretRoom" type="Node3D" parent="." unique_id=1705367066]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, 0)
