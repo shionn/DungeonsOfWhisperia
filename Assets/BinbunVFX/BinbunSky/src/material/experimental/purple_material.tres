@@ -1,7 +1,7 @@
-[gd_resource type="ShaderMaterial" load_steps=10 format=3 uid="uid://c7bw5r58fyaj8"]
+[gd_resource type="ShaderMaterial" format=3 uid="uid://c7bw5r58fyaj8"]
 
-[ext_resource type="Shader" uid="uid://kgjsu8n7pyom" path="res://assets/BinbunSky/src/shader/main.gdshader" id="1_cx38b"]
-[ext_resource type="Texture2D" uid="uid://de68x5ujqbcqu" path="res://assets/BinbunSky/src/textures/clouds/clouds_07.tres" id="2_24b4v"]
+[ext_resource type="Shader" uid="uid://kgjsu8n7pyom" path="res://Assets/BinbunVFX/BinbunSky/src/shader/main.gdshader" id="1_cx38b"]
+[ext_resource type="Texture2D" uid="uid://de68x5ujqbcqu" path="res://Assets/BinbunVFX/BinbunSky/src/textures/clouds/clouds_07.tres" id="2_24b4v"]
 
 [sub_resource type="Gradient" id="Gradient_0xm2m"]
 
@@ -12,10 +12,10 @@ fractal_octaves = 8
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_ig7tw"]
 width = 1024
 height = 1024
+noise = SubResource("FastNoiseLite_ig7tw")
+color_ramp = SubResource("Gradient_0xm2m")
 seamless = true
 seamless_blend_skirt = 0.4
-color_ramp = SubResource("Gradient_0xm2m")
-noise = SubResource("FastNoiseLite_ig7tw")
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_h2yge"]
 noise_type = 2
@@ -27,19 +27,19 @@ cellular_return_type = 6
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_0xm2m"]
 width = 1024
 height = 1024
-invert = true
-seamless = true
-seamless_blend_skirt = 0.0
 noise = SubResource("FastNoiseLite_h2yge")
+seamless = true
+invert = true
+seamless_blend_skirt = 0.0
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_1bvp3"]
 frequency = 0.001
 fractal_type = 2
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_lquwl"]
+noise = SubResource("FastNoiseLite_1bvp3")
 seamless = true
 seamless_blend_skirt = 0.2
-noise = SubResource("FastNoiseLite_1bvp3")
 
 [resource]
 shader = ExtResource("1_cx38b")

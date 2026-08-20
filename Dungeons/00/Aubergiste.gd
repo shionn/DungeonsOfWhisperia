@@ -16,6 +16,8 @@ func interact() -> void:
 
 		$"LookingForQuest/Mission Accomplie".enable = bag.have(Items.ItemName.SkullHead_Dungeon1)
 		$"LookingForQuest/Mission Accomplie/Next/Next/Next/La potion étrange".enable = bag.have(Items.ItemName.FioleNecrolisAttivae)
+		
+		$"LookingForQuest/Dungeon02 Accomplie".enable = bag.have(Items.ItemName.SkullHead_Dungeon2)
 		gui.openDialog($LookingForQuest)
 	elif _food.visible :
 		gui.openDialog($Bienvenue/ApportFood)
@@ -39,3 +41,8 @@ func _on_manger_activate() -> void:
 
 func _on_shadow_shasme_next_close() -> void:
 	quest_book.auberge_02_trouver_mission.done()
+
+func _on_dungeon_02_accomplie_next_close() -> void:
+	quest_book.auberge_03_rapport.done()
+	bag.unloot(Items.ItemName.SkullHead_Dungeon2)
+	bag.gold = bag.gold+30

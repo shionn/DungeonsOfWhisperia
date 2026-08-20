@@ -176,9 +176,7 @@ metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
 [node name="LookingForQuest" type="Node" parent="Aigle Jaune" unique_id=1344520848 node_paths=PackedStringArray("pnj")]
 script = ExtResource("3_fq3ns")
-text = "Vous semblez aller mieux. 
-
-Si vous cherchez un travail, jetez un œil au panneau d’affichage près de l’entrée. Il y a des missions qui pourraient vous intéresser."
+text = "Vous semblez aller mieux. "
 pnj = NodePath("..")
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
@@ -211,6 +209,19 @@ metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 script = ExtResource("3_fq3ns")
 text = "Votre repas est prêt. Il est sur le bar à gauche. J’ai préparé un ragoût de viande et de légumes, cuisiné avec des ingrédients locaux, accompagné d’un pain de campagne. Cela devrait vous redonner un peu d’énergie."
 enable = false
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Travail" type="Node" parent="Aigle Jaune/LookingForQuest/Service de l\'auberge" unique_id=676093190]
+script = ExtResource("3_fq3ns")
+text = "J'ai besoin de trouver un travail."
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Next" type="Node" parent="Aigle Jaune/LookingForQuest/Service de l\'auberge/Travail" unique_id=2099562861 node_paths=PackedStringArray("pnj")]
+script = ExtResource("3_fq3ns")
+text = "Si vous cherchez un travail, jetez un œil au panneau d’affichage près de l’entrée. Il y a des missions qui pourraient vous intéresser. 
+
+Sinon, discutez avec les clients : ils proposent parfois des missions."
+pnj = NodePath("../../../..")
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
 [node name="Le Gouffre des Ombres" type="Node" parent="Aigle Jaune/LookingForQuest" unique_id=1410289639]
@@ -295,6 +306,43 @@ script = ExtResource("3_fq3ns")
 text = "Si tu n’as rien trouvé… alors peut-être que la vérité est ailleurs. Parle à Alaric, l’historien. Il connaît l’histoire de cette région. 
 
 Même sans indice, tu as risqué ta vie et accompli ta mission. Prends cela. 10 pièces d’or… moins les 2 pour ton repas."
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Dungeon02 Accomplie" type="Node" parent="Aigle Jaune/LookingForQuest" unique_id=1201361476]
+script = ExtResource("3_fq3ns")
+text = "J’ai exploré et nettoyé le goufre des ombres, en voici la preuve. [i]Vous posez le crâne sur la table.[/i]"
+label = "Mission Accomplie"
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Next" type="Node" parent="Aigle Jaune/LookingForQuest/Dungeon02 Accomplie" unique_id=2052197835 node_paths=PackedStringArray("pnj")]
+script = ExtResource("3_fq3ns")
+text = "Bravo, voici ta récompense. 
+
+As-tu trouvé des indices sur l’origine de ces événements ? D’où proviennent tous ces squelettes ? Il y a forcément quelqu’un derrière tout ça."
+pnj = NodePath("../../..")
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Next" type="Node" parent="Aigle Jaune/LookingForQuest/Dungeon02 Accomplie/Next" unique_id=896206820]
+script = ExtResource("3_fq3ns")
+text = "Oui, je pense que c’est Valthorion. Il est sorti de son sommeil."
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Next" type="Node" parent="Aigle Jaune/LookingForQuest/Dungeon02 Accomplie/Next/Next" unique_id=283848416 node_paths=PackedStringArray("pnj")]
+script = ExtResource("3_fq3ns")
+text = "Impossible. Valthorion est mort il y a des lustres. Mes ancêtres s’en sont assurés."
+pnj = NodePath("../../../../..")
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Next" type="Node" parent="Aigle Jaune/LookingForQuest/Dungeon02 Accomplie/Next/Next/Next" unique_id=1602258549]
+script = ExtResource("3_fq3ns")
+text = "Pourtant, je suis sûr que c’était lui. J’ai trouvé un autel à son nom. Il était écrit dessus : « Ici dors pour l’éternité, Valthorion. Son éveil accompagnera celui des morts. » 
+
+Puis je l’ai surpris dans une étude. Il analysait cette bague. [i]Vous montrez la bague.[/i] Puis Valthorion a disparu dans un portail.  "
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Next" type="Node" parent="Aigle Jaune/LookingForQuest/Dungeon02 Accomplie/Next/Next/Next/Next" unique_id=752238525]
+script = ExtResource("3_fq3ns")
+text = "Je ne comprends pas comment il peut être encore en vie… Cette bague me semble étrange. Montre-la à Ferris. Il en tirera peut-être quelque chose."
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
 [node name="Luna Honey" parent="." unique_id=957068427 instance=ExtResource("1_fq3ns")]
@@ -2195,6 +2243,7 @@ parameters/looping = true
 [connection signal="close" from="Aigle Jaune/LookingForQuest/Le Gouffre des Ombres/Next/Next/Next" to="Aigle Jaune" method="_on_shadow_shasme_next_close"]
 [connection signal="close" from="Aigle Jaune/LookingForQuest/Mission Accomplie/Next/Next/Next/La potion étrange/Next" to="Aigle Jaune" method="_on_end_mission1_close"]
 [connection signal="close" from="Aigle Jaune/LookingForQuest/Mission Accomplie/Next/Next/Next/Je n\'ai rien trouvé/Next" to="Aigle Jaune" method="_on_end_mission1_close"]
+[connection signal="close" from="Aigle Jaune/LookingForQuest/Dungeon02 Accomplie/Next/Next/Next/Next/Next" to="Aigle Jaune" method="_on_dungeon_02_accomplie_next_close"]
 [connection signal="close" from="Alaric Duclair/Présentation/Next/Valthorion ?/Next/Next/Next/Next" to="Alaric Duclair" method="_on_valthorion_next_close"]
 [connection signal="activate" from="Pipette la Loupe/Bienvenue/Acheter/Next" to="Pipette la Loupe" method="_on_acheter_next_activate"]
 [connection signal="activate" from="Pipette la Loupe/Bienvenue/Acheter/Next/Potion de Soin/Potion de Soin Mineur" to="Pipette la Loupe" method="_on_potion_de_soin_mineur_activate"]

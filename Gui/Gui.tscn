@@ -605,6 +605,7 @@ popup/item_4/id = 0
 script = ExtResource("22_mnphl")
 
 [node name="Introduction" type="GridContainer" parent="." unique_id=415794769]
+visible = false
 z_index = 10
 layout_mode = 1
 anchors_preset = 8
@@ -679,13 +680,12 @@ theme_override_styles/tab_selected = SubResource("StyleBoxEmpty_2pnra")
 theme_override_styles/tab_disabled = SubResource("StyleBoxEmpty_l4ar5")
 theme_override_styles/tab_focus = SubResource("StyleBoxEmpty_owfy6")
 tab_alignment = 1
-current_tab = 1
+current_tab = 0
 tab_0/title = "Quête en Cours"
 tab_0/icon = ExtResource("26_f4re5")
 tab_1/icon = ExtResource("23_883rq")
 
 [node name="Quete" type="RichTextLabel" parent="Introduction/PanelContainer/MarginContainer/VBoxContainer/TabContainer" unique_id=1328228138]
-visible = false
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/default_color = Color(0, 0, 0, 1)
@@ -694,6 +694,7 @@ metadata/_tab_index = 0
 metadata/_tab_name = "Quête en Cours"
 
 [node name="Aide" type="RichTextLabel" parent="Introduction/PanelContainer/MarginContainer/VBoxContainer/TabContainer" unique_id=1096971895]
+visible = false
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/default_color = Color(0, 0, 0, 1)
@@ -1971,6 +1972,7 @@ texture = ExtResource("18_w65rx")
 [connection signal="pressed" from="DialogGui/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/OptionButton1" to="DialogGui" method="_on_option_button_1_pressed"]
 [connection signal="pressed" from="DialogGui/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/OptionButton2" to="DialogGui" method="_on_option_button_2_pressed"]
 [connection signal="pressed" from="DialogGui/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/OptionButton3" to="DialogGui" method="_on_option_button_3_pressed"]
+[connection signal="pressed" from="DialogGui/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/OptionButton4" to="DialogGui" method="_on_option_button_4_pressed"]
 [connection signal="pressed" from="DialogGui/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/NextButton" to="DialogGui" method="_on_next_button_pressed"]
 [connection signal="pressed" from="DialogGui/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/CloseButton" to="DialogGui" method="_on_close_button_pressed"]
 [connection signal="visibility_changed" from="ExitAuberge" to="." method="update_mouse_mode"]

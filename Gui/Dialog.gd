@@ -2,6 +2,9 @@ class_name Dialog
 extends Node
 
 @export_multiline var text: String
+@export var label: String:
+	get():
+		return name as String if label.is_empty() else label
 @export var pnj: GameBaseCharacterBody3D = null
 @export var enable:bool = true
 @export var close_enable = true

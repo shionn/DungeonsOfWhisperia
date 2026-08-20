@@ -8,6 +8,7 @@ extends GameBaseControl
 @onready var _option_button1 = $PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/OptionButton1 as Button
 @onready var _option_button2 = $PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/OptionButton2 as Button
 @onready var _option_button3 = $PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/OptionButton3 as Button
+@onready var _option_button4 = $PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/OptionButton4 as Button
 @onready var _next_button = $PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/NextButton as Button
 
 var _current : Dialog
@@ -27,6 +28,7 @@ func open(dialog: Dialog)->void :
 		_option_button1.hide()
 		_option_button2.hide()
 		_option_button3.hide()
+		_option_button4.hide()
 		_next_button.hide()
 		
 		_text.clear()
@@ -47,11 +49,12 @@ func open(dialog: Dialog)->void :
 			_add_option(dialog, _option_button1, 0)
 			_add_option(dialog, _option_button2, 1)
 			_add_option(dialog, _option_button3, 2)
+			_add_option(dialog, _option_button4, 3)
 		show()
 
 func _add_option(dialog:Dialog, button : Button, id:int) -> void :
 	if dialog.options.size() > id and dialog.options[id].enable : 
-		button.text = dialog.options[id].name
+		button.text = dialog.options[id].label
 		button.show()
 	
 
@@ -80,6 +83,10 @@ func _on_option_button_3_pressed() -> void:
 	var next = _current.options[2]
 	open(next)
 
+func _on_option_button_4_pressed() -> void:
+	_current.close.emit()
+	var next = _current.options[3]
+	open(next)
 
 func _on_visibility_changed() -> void:
 	if not visible and _current :
