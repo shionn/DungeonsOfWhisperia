@@ -53,8 +53,8 @@ func open(dialog: Dialog)->void :
 		show()
 
 func _add_option(dialog:Dialog, button : Button, id:int) -> void :
-	if dialog.options.size() > id and dialog.options[id].enable : 
-		button.text = dialog.options[id].label
+	if dialog.enabled_options().size() > id : 
+		button.text = dialog.enabled_options()[id].label
 		button.show()
 	
 
@@ -70,22 +70,22 @@ func _on_next_button_pressed() -> void:
 
 func _on_option_button_1_pressed() -> void:
 	_current.close.emit()
-	var next = _current.options[0]
+	var next = _current.enabled_options()[0]
 	open(next)
 
 func _on_option_button_2_pressed() -> void:
 	_current.close.emit()
-	var next = _current.options[1]
+	var next = _current.enabled_options()[1]
 	open(next)
 
 func _on_option_button_3_pressed() -> void:
 	_current.close.emit()
-	var next = _current.options[2]
+	var next = _current.enabled_options()[2]
 	open(next)
 
 func _on_option_button_4_pressed() -> void:
 	_current.close.emit()
-	var next = _current.options[3]
+	var next = _current.enabled_options()[3]
 	open(next)
 
 func _on_visibility_changed() -> void:

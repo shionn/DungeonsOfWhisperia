@@ -508,6 +508,22 @@ text = "C'est ce qu'on dit. Toutefois, on n'a jamais trouvé de souterrain y men
 pnj = NodePath("../../../../../../..")
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
+[node name="Chambres de l’Équilibre ?" type="Node" parent="Alaric Duclair/Présentation/Next" unique_id=265180431]
+script = ExtResource("3_fq3ns")
+text = "Alaric, je cherche un emplacement appelé “Chambres de l’Équilibre”. As-tu la moindre idée d’où cela se trouve ?  "
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Next" type="Node" parent="Alaric Duclair/Présentation/Next/Chambres de l’Équilibre ?" unique_id=1047067143 node_paths=PackedStringArray("pnj")]
+script = ExtResource("3_fq3ns")
+text = "Les Chambres de l’Équilibre… C’est un lieu mentionné dans les Chroniques des Gardiens, un texte que je possède ici, dans mes archives. [i]Alaric sort un vieux parchemin[/i].
+
+Selon ce récit, les Chambres ont été construite sous les Ruines de Vaelith. Une ancienne cité entourée de murs de pierre noire, à l’ouest des Monts de l’Éclipse. C'est à deux jours de marche. [i]Alaric montre un emplacement sur une carte[/i].
+
+
+"
+pnj = NodePath("../../../..")
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
 [node name="Pipette la Loupe" parent="." unique_id=529852479 instance=ExtResource("1_fq3ns")]
 transform = Transform3D(-0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, -0.70710677, 22.4, 4, 4.5)
 script = ExtResource("11_oipk7")
@@ -690,6 +706,43 @@ metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 script = ExtResource("3_fq3ns")
 text = "Bonjour. Moi, c’est Ferris Ardent. J’aime la bière, les métaux et les pierres précieuses. J’ai exploré bien des mines, mais aujourd’hui j’ai trouvé mon point de chute ici."
 pnj = NodePath("..")
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Anneau de Valthorion" type="Node" parent="Ferris Ardent/Dialog" unique_id=651483036]
+script = ExtResource("3_fq3ns")
+text = "Bonjour Ferris, j’ai trouvé cette bague. Je crois qu’elle appartient à Valthorion. Dans le gouffre des ombres, j’ai trouvé Valthorion qui l’inspectait. "
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Next" type="Node" parent="Ferris Ardent/Dialog/Anneau de Valthorion" unique_id=1013183058 node_paths=PackedStringArray("pnj")]
+script = ExtResource("3_fq3ns")
+text = "[i]Ferris inspecte la bague[/i]. C’est bien elle… C’est mon père qui l’a fabriquée. J’étais encore enfant, mais je me souviens de ses mains sur le métal, de la manière dont il murmurait des incantations. Cette bague est liée à l’âme de Valthorion. Elle lui sert de catalyseur magique. 
+
+[i]Ferris inspecte plus longuement la bague[/i]. Cependant… quelque chose cloche. Il n’emanne plus aucune force magique de celle-ci. Après 300 ans, elle a perdu sa force."
+pnj = NodePath("../../..")
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Next" type="Node" parent="Ferris Ardent/Dialog/Anneau de Valthorion/Next" unique_id=1625579267]
+script = ExtResource("3_fq3ns")
+text = "Tu dis que ton père et toi avez fabriqué cette bague ? Et qu’elle a 300 ans ?"
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Next" type="Node" parent="Ferris Ardent/Dialog/Anneau de Valthorion/Next/Next" unique_id=1660745055 node_paths=PackedStringArray("pnj")]
+script = ExtResource("3_fq3ns")
+text = "Oui, nous les nains vivons assez longtemps. Mais j’étais très petit à l’époque."
+pnj = NodePath("../../../../..")
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Next" type="Node" parent="Ferris Ardent/Dialog/Anneau de Valthorion/Next/Next/Next" unique_id=1619312876]
+script = ExtResource("3_fq3ns")
+text = "Donc cette bague a perdu sa force ? C’est une bonne nouvelle non ? Je vais probablement devoir affronter Valthorion… Elle pourrait m’aider à le battre ?"
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Next" type="Node" parent="Ferris Ardent/Dialog/Anneau de Valthorion/Next/Next/Next/Next" unique_id=730840636 node_paths=PackedStringArray("pnj")]
+script = ExtResource("3_fq3ns")
+text = " Peut-être… mais il faudrait la restaurer avant. Pour cela, tu devras te rendre aux Chambres de l’Équilibre. C’est là-bas que mon père a conçu cet anneau.
+
+Cependant, j’étais trop petit pour me souvenir de l’emplacement exact. Mais je me souviens que mon père m’a souvent rabâché qu’il avait oublié son compas là-bas. Si tu trouves où c’est, dis-le-moi. Je vais chercher ce fichu compas.  "
+pnj = NodePath("../../../../../../..")
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
 [node name="PanneauDAffichage" parent="." unique_id=1099766786 instance=ExtResource("11_o35sb")]
@@ -2245,6 +2298,7 @@ parameters/looping = true
 [connection signal="close" from="Aigle Jaune/LookingForQuest/Mission Accomplie/Next/Next/Next/Je n\'ai rien trouvé/Next" to="Aigle Jaune" method="_on_end_mission1_close"]
 [connection signal="close" from="Aigle Jaune/LookingForQuest/Dungeon02 Accomplie/Next/Next/Next/Next/Next" to="Aigle Jaune" method="_on_dungeon_02_accomplie_next_close"]
 [connection signal="close" from="Alaric Duclair/Présentation/Next/Valthorion ?/Next/Next/Next/Next" to="Alaric Duclair" method="_on_valthorion_next_close"]
+[connection signal="close" from="Alaric Duclair/Présentation/Next/Chambres de l’Équilibre ?/Next" to="Alaric Duclair" method="_on_chambre_equilibre_next_close"]
 [connection signal="activate" from="Pipette la Loupe/Bienvenue/Acheter/Next" to="Pipette la Loupe" method="_on_acheter_next_activate"]
 [connection signal="activate" from="Pipette la Loupe/Bienvenue/Acheter/Next/Potion de Soin/Potion de Soin Mineur" to="Pipette la Loupe" method="_on_potion_de_soin_mineur_activate"]
 [connection signal="activate" from="Pipette la Loupe/Bienvenue/Acheter/Next/Potion de Soin/Potion de Soin Moyenne" to="Pipette la Loupe" method="_on_potion_de_soin_moyenne_activate"]
@@ -2255,4 +2309,5 @@ parameters/looping = true
 [connection signal="close" from="Cliente/Dialog/Des morts-vivants ?/Next" to="Cliente" method="drink"]
 [connection signal="activate" from="Cliente/Dialog/Alliance/Next" to="Cliente" method="_on_alliance_next_activate"]
 [connection signal="timeout" from="Cliente/DrinkTimer" to="Cliente" method="_on_drink_timer_timeout"]
+[connection signal="close" from="Ferris Ardent/Dialog/Anneau de Valthorion/Next/Next/Next/Next/Next" to="Ferris Ardent" method="_on_valthorion_ring_next_close"]
 [connection signal="close" from="PanneauDAffichage/Mission 1" to="PanneauDAffichage" method="_on_mission_1_close"]

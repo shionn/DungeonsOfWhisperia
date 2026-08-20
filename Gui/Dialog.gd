@@ -19,3 +19,6 @@ func _ready() -> void:
 	for child in get_children() :
 		if child is Dialog and child.name != "Next" :
 			options.append(child)
+
+func enabled_options() -> Array[Dialog]:
+	return options.filter(func (o):return o.enable)
