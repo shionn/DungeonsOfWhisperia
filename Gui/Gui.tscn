@@ -605,7 +605,6 @@ popup/item_4/id = 0
 script = ExtResource("22_mnphl")
 
 [node name="Introduction" type="GridContainer" parent="." unique_id=415794769]
-visible = false
 z_index = 10
 layout_mode = 1
 anchors_preset = 8
@@ -680,12 +679,13 @@ theme_override_styles/tab_selected = SubResource("StyleBoxEmpty_2pnra")
 theme_override_styles/tab_disabled = SubResource("StyleBoxEmpty_l4ar5")
 theme_override_styles/tab_focus = SubResource("StyleBoxEmpty_owfy6")
 tab_alignment = 1
-current_tab = 0
+current_tab = 1
 tab_0/title = "Quête en Cours"
 tab_0/icon = ExtResource("26_f4re5")
 tab_1/icon = ExtResource("23_883rq")
 
 [node name="Quete" type="RichTextLabel" parent="Introduction/PanelContainer/MarginContainer/VBoxContainer/TabContainer" unique_id=1328228138]
+visible = false
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/default_color = Color(0, 0, 0, 1)
@@ -694,19 +694,18 @@ metadata/_tab_index = 0
 metadata/_tab_name = "Quête en Cours"
 
 [node name="Aide" type="RichTextLabel" parent="Introduction/PanelContainer/MarginContainer/VBoxContainer/TabContainer" unique_id=1096971895]
-visible = false
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 bbcode_enabled = true
 text = "Ceci est une version [color=red]alpha[/color] pour tester et montrer le concept. 
 
-[u]Contrôle :[/u]
+[u]Contrôle par défaut :[/u]
 [ul]
-Se déplacer avec ZQSD
-Orienter la vue avec la souris
+Se déplacer avec ZQSD, Orienter la vue avec la souris
 Action avec le clic gauche (Attaquer/Ramasser/Actionner)
-Ouvrir/Fermer l’interface avec Échap (Invantaire/Menu/Options/Quitter/Sauvegarder)
+Échap : Ouvrir/Fermer l’interface avec (Invantaire/Menu/Options/Quitter/Sauvegarder)
+1/2/3/4 : Lancer un sort
 J : Ouvrir la quête en cour
 I : Ouvrir l'inventaire
 Un objet dans le Sac :
@@ -717,7 +716,7 @@ Clic gauche et déplacer sur l’interaction pour combiner (clef sur serrure par
 [/ul]
 [/ul]
 
-Ce jeu est développé en open source sur le discord de la communauté de whisp. "
+Ce jeu est développé en open source. "
 metadata/_tab_index = 1
 
 [node name="CloseButton" type="Button" parent="Introduction/PanelContainer/MarginContainer/VBoxContainer" unique_id=1618956886]
