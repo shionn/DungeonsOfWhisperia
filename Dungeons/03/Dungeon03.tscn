@@ -189,6 +189,9 @@ size = Vector3(2, 0.3, 1.7)
 [sub_resource type="BoxShape3D" id="BoxShape3D_mwix5"]
 size = Vector3(1, 0.2, 0.5)
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_6jjys"]
+radius = 0.3
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_j2ult"]
 size = Vector3(0.7, 0.3, 0.9)
 
@@ -457,7 +460,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, -20)
 [node name="Decorated_Small_Box" parent="CentralWest" unique_id=743162988 instance=ExtResource("30_1ghu8")]
 transform = Transform3D(0.25881907, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, 0.25881907, 2.7999992, 0, -0.79999924)
 loot_gold = 13
-loot_item = 1
 
 [node name="Wall_Doorway" parent="CentralWest" unique_id=812446971 instance=ExtResource("7_64ivq")]
 transform = Transform3D(-4.371138e-08, 0, 1, 0, 1, 0, -1, 0, -4.371138e-08, 6, 0, 6)
@@ -584,10 +586,21 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.9000001, 0.29999995)
 
 [node name="Ruby_012" parent="RoomSouthEast/WallTokenFlip" unique_id=1651331708 instance=ExtResource("22_h5lcn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6000004, 2, 0.2999999)
+script = ExtResource("22_rwtb4")
 
 [node name="LootVFX_Mythic" parent="RoomSouthEast/WallTokenFlip/Ruby_012" unique_id=1488676964 instance=ExtResource("23_rvnds")]
 transform = Transform3D(0.5, -2.284779e-08, -2.284779e-08, 2.284779e-08, 5.9624403e-09, 0.5, -2.284779e-08, -0.5, 5.962441e-09, 0, 0, 0)
 visible = false
+
+[node name="description" type="Node" parent="RoomSouthEast/WallTokenFlip/Ruby_012" unique_id=1536243468]
+script = ExtResource("49_e5ej3")
+text = "Cette gemme est solidement enchâssée, je n’arriverai pas à l’enlever."
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Area3D" type="Area3D" parent="RoomSouthEast/WallTokenFlip/Ruby_012" unique_id=185090720]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RoomSouthEast/WallTokenFlip/Ruby_012/Area3D" unique_id=1363654269]
+shape = SubResource("SphereShape3D_b02ke")
 
 [node name="Meuble" parent="RoomSouthEast" unique_id=273363225 instance=ExtResource("39_j7lkl")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9, 0, 6)
@@ -730,9 +743,20 @@ transform = Transform3D(1, 0, 0, 0, 2, 0, 0, 0, 1, -4, 0, 8)
 
 [node name="Sapphire_022" parent="RoomNorthEast/plaque2" unique_id=1813223203 instance=ExtResource("31_x8tiv")]
 transform = Transform3D(1, 0, 0, 0, 0.5, 0, 0, 0, 1, 0, 0.48, 0)
+script = ExtResource("22_rwtb4")
 
 [node name="LootVFX_Rare" parent="RoomNorthEast/plaque2/Sapphire_022" unique_id=2061728608 instance=ExtResource("27_dd06p")]
 visible = false
+
+[node name="description" type="Node" parent="RoomNorthEast/plaque2/Sapphire_022" unique_id=330436983]
+script = ExtResource("49_e5ej3")
+text = "Cette gemme est solidement enchâssée, je n’arriverai pas à l’enlever."
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Area3D" type="Area3D" parent="RoomNorthEast/plaque2/Sapphire_022" unique_id=783013519]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RoomNorthEast/plaque2/Sapphire_022/Area3D" unique_id=913142813]
+shape = SubResource("SphereShape3D_b02ke")
 
 [node name="wall_crossing2" parent="RoomNorthEast" unique_id=1806840270 instance=ExtResource("13_ww55m")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -6, 0, -14)
@@ -1037,10 +1061,21 @@ transform = Transform3D(-4.371139e-08, -1, -4.3711385e-08, 1, -4.3711385e-08, -4
 
 [node name="Topaz" parent="RoomSouthWest/CogWall/Parts_Axes4" unique_id=1111073106 instance=ExtResource("24_s8d85")]
 transform = Transform3D(-2.1855696e-08, -0.5, -2.185569e-08, 0.5, -2.1855694e-08, -2.1855694e-08, 2.1855692e-08, -2.1855692e-08, 0.5, -0.58015203, 0, 0)
+script = ExtResource("22_rwtb4")
 
 [node name="LootVFX_Legendary" parent="RoomSouthWest/CogWall/Parts_Axes4/Topaz" unique_id=827187701 instance=ExtResource("25_p1f0m")]
 transform = Transform3D(1, 0, 0, 0, 1, -1.2621775e-29, 0, 2.96718e-37, 1, 0, 0.10000038, 0)
 visible = false
+
+[node name="description" type="Node" parent="RoomSouthWest/CogWall/Parts_Axes4/Topaz" unique_id=1765596218]
+script = ExtResource("49_e5ej3")
+text = "Cette gemme est solidement enchâssée, je n’arriverai pas à l’enlever."
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Area3D" type="Area3D" parent="RoomSouthWest/CogWall/Parts_Axes4/Topaz" unique_id=1779739578]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RoomSouthWest/CogWall/Parts_Axes4/Topaz/Area3D" unique_id=1327421442]
+shape = SubResource("SphereShape3D_b02ke")
 
 [node name="RunningInteract" type="Node" parent="RoomSouthWest/CogWall" unique_id=1435836849]
 script = ExtResource("49_e5ej3")
@@ -1247,9 +1282,20 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2, 0
 
 [node name="Emerald_022" parent="NodeNorthWest/wall_cracked3" unique_id=420420072 instance=ExtResource("48_c4k6w")]
 transform = Transform3D(-4.3711385e-08, -1, -4.371139e-08, 1, -4.371139e-08, 4.371139e-08, -4.371139e-08, -4.371139e-08, 1, -2, 2, -0.29999924)
+script = ExtResource("22_rwtb4")
 
 [node name="LootVFX_Uncommon" parent="NodeNorthWest/wall_cracked3/Emerald_022" unique_id=1676537277 instance=ExtResource("12_e5ej3")]
 visible = false
+
+[node name="description" type="Node" parent="NodeNorthWest/wall_cracked3/Emerald_022" unique_id=1217885557]
+script = ExtResource("49_e5ej3")
+text = "Cette gemme est solidement enchâssée, je n’arriverai pas à l’enlever."
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Area3D" type="Area3D" parent="NodeNorthWest/wall_cracked3/Emerald_022" unique_id=1127491388]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NodeNorthWest/wall_cracked3/Emerald_022/Area3D" unique_id=576765202]
+shape = SubResource("SphereShape3D_6jjys")
 
 [node name="wall_inset2" parent="NodeNorthWest" unique_id=1326642194 instance=ExtResource("14_vn7kh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -10)

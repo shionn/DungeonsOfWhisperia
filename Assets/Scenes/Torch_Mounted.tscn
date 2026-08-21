@@ -146,7 +146,7 @@ material = SubResource("ShaderMaterial_1x0cp")
 
 [node name="torch_mounted" parent="." index="0" unique_id=1668036802]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0.25)
-layers = 0
+layers = 1024
 
 [node name="OmniLight3D" type="OmniLight3D" parent="." index="1" unique_id=307047342]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.45, 0.5)
