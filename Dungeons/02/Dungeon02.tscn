@@ -248,6 +248,9 @@ size = Vector3(0.22893676, 0.55, 0.4)
 [sub_resource type="BoxShape3D" id="BoxShape3D_pjp3u"]
 size = Vector3(0.22893676, 0.55, 0.37980956)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_3gcn8"]
+size = Vector3(2.4, 3.5, 0.5)
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_y8qse"]
 size = Vector3(0.90000004, 0.7, 0.3)
 
@@ -1377,6 +1380,8 @@ bus = &"Effet"
 
 [node name="arch2" parent="BossRoom" unique_id=1949722278 instance=ExtResource("15_13ejr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.1000004)
+script = ExtResource("23_ml8gv")
+action = 1
 
 [node name="OvalPortalVFX_06" parent="BossRoom/arch2" unique_id=531895884 instance=ExtResource("16_t7qvu")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 1.7, 0)
@@ -1385,6 +1390,17 @@ size = Vector2(3, 4)
 [node name="teleport" type="AudioStreamPlayer3D" parent="BossRoom/arch2" unique_id=1481035252]
 stream = ExtResource("30_o0ubt")
 bus = &"Effet"
+
+[node name="Area3D" type="Area3D" parent="BossRoom/arch2" unique_id=1843030480]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BossRoom/arch2/Area3D" unique_id=966210922]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.75, -0.049999237)
+shape = SubResource("BoxShape3D_3gcn8")
+
+[node name="description" type="Node" parent="BossRoom/arch2" unique_id=342698906]
+script = ExtResource("13_iikjq")
+text = "Cela ressemble à un portail. Il m’est impossible de l’emprunter sans savoir où il mène."
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
 [node name="Desk" type="Node3D" parent="BossRoom" unique_id=721156105]
 transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, -4.700001, 0, 0.5)

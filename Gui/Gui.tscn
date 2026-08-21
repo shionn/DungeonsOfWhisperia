@@ -46,6 +46,7 @@
 [ext_resource type="Script" uid="uid://dt6wofx8ub18t" path="res://Gui/Popup.gd" id="41_tfp3c"]
 [ext_resource type="Script" uid="uid://baohqgm68smai" path="res://Gui/ObjectifQuestDone.gd" id="42_mnphl"]
 [ext_resource type="AudioStream" uid="uid://bwv1bxhlk2lsg" path="res://Audio/win-sound-1/win sound 1.wav" id="43_2m3pn"]
+[ext_resource type="Script" uid="uid://cxe0hpd6pnr8q" path="res://Gui/Dialog.gd" id="47_xkmul"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8rxp0"]
 bg_color = Color(1, 0.94509804, 0.8235294, 1)
@@ -1895,11 +1896,11 @@ layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 bbcode_enabled = true
-text = "Félicitations ! Vous avez accompli votre seconde quête et cette beta dans sa version actuelle. Votre quête principale est achevée. Mais il reste peut-être des choses cachées à découvrir. N’oubliez pas de sauvegarder votre progression.  
+text = "Félicitations ! Vous avez accompli votre troisième Donjon. Vous avez terminé cette beta dans sa version actuelle. Votre quête principale est achevée. Cependant, il reste peut-être des choses cachées à découvrir. N’oubliez pas de sauvegarder votre progression.  
 
-Si vous le souhaitez, n’hésitez pas à remonter tous les bugs ou propositions, que ce soit concernant les quêtes, votre ressenti, ou des choses que vous avez trouvées trop difficiles ou trop faciles. Tout commentaire est bienvenu.  
+Si vous le souhaitez, n’hésitez pas à signaler tous les bugs ou propositions, que ce soit concernant les quêtes, votre ressenti, ou des éléments que vous avez trouvés trop difficiles ou trop faciles. Tout commentaire est bienvenu.  
 
-Donnez le mot de passe [b]Crâne des ombres[/b] à Shionn (Rurick) dans un message privé sur Discord pour valider votre participation.  
+Donnez le mot de passe [b]Bague de l’équilibre[/b] à Shionn (Rurick) dans un message privé sur Discord pour valider votre participation.  
 
 Merci sincèrement d’avoir participé à cette alpha. Shionn."
 
@@ -1929,6 +1930,39 @@ stretch_mode = 1
 [node name="SE" type="TextureRect" parent="Popup" unique_id=378087865]
 layout_mode = 2
 texture = ExtResource("18_w65rx")
+
+[node name="Donjon1" type="Node" parent="Popup" unique_id=1507227980]
+script = ExtResource("47_xkmul")
+text = "Félicitations ! Vous avez accompli votre premier donjon. Il reste encore deux donjons à compléter avant de terminer cette version alpha du jeu.
+
+Si vous le souhaitez, n’hésitez pas à signaler tous les bugs ou suggestions, que ce soit en rapport avec les quêtes, votre ressenti, ou des éléments que vous avez trouvés trop difficiles ou trop faciles. Tout commentaire est bienvenu.  
+
+Donnez le mot de passe [b]Crâne de golem[/b] à Shionn (Rurick) dans un message privé sur Discord pour confirmer votre participation.  
+
+Merci sincèrement d’avoir participé à cette alpha. Shionn."
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Donjon2" type="Node" parent="Popup" unique_id=531850590]
+script = ExtResource("47_xkmul")
+text = "élicitations ! Vous avez accompli votre second donjon. Il reste encore un donjon à compléter avant de terminer cette version alpha du jeu.
+
+Si vous le souhaitez, n’hésitez pas à signaler tous les bugs ou suggestions, que ce soit en rapport avec les quêtes, votre ressenti, ou des éléments que vous avez trouvés trop difficiles ou trop faciles. Tout commentaire est bienvenu.  
+
+Donnez le mot de passe [b]Crâne des ombres[/b] à Shionn (Rurick) dans un message privé sur Discord pour confirmer votre participation.  
+
+Merci sincèrement d’avoir participé à cette alpha. Shionn."
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
+
+[node name="Donjon3" type="Node" parent="Popup" unique_id=850457568]
+script = ExtResource("47_xkmul")
+text = "Félicitations ! Vous avez accompli votre troisième Donjon. Vous avez terminé cette beta dans sa version actuelle. Votre quête principale est achevée. Cependant, il reste peut-être des choses cachées à découvrir. N’oubliez pas de sauvegarder votre progression.  
+
+Si vous le souhaitez, n’hésitez pas à signaler tous les bugs ou propositions, que ce soit concernant les quêtes, votre ressenti, ou des éléments que vous avez trouvés trop difficiles ou trop faciles. Tout commentaire est bienvenu.  
+
+Donnez le mot de passe [b]Bague de l’équilibre[/b] à Shionn (Rurick) dans un message privé sur Discord pour valider votre participation.  
+
+Merci sincèrement d’avoir participé à cette alpha. Shionn."
+metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
 [connection signal="visibility_changed" from="Bag" to="." method="_on_bag_visibility_changed"]
 [connection signal="visibility_changed" from="Bag" to="Bag" method="_on_visibility_changed"]

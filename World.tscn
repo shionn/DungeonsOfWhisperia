@@ -97,11 +97,7 @@ script = ExtResource("5_p1v5b")
 item_name = 5
 icon = ExtResource("9_fvag4")
 display_name = "Crâne"
-description = "Ceci est la preuve que j'ai accompli ma mission.
- 
- [i]Félicitations ! Vous avez accompli votre première quête. Il vous reste encore des choses à accomplir dans cette version du jeu. Si vous le souhaitez, vous pouvez donnez le mot de passe [b]Crâne de golem[/b] à Shionn (Rurick) dans un message privé sur Discord.
- 
-Merci sincèrement d’avoir participé à cette alpha. Shionn[/i]"
+description = "Ceci est la preuve que j'ai accompli ma mission."
 unique = true
 metadata/_custom_type_script = "uid://bjbab3ep2gfn2"
 
@@ -110,11 +106,7 @@ script = ExtResource("5_p1v5b")
 item_name = 15
 icon = ExtResource("9_fvag4")
 display_name = "Crâne"
-description = "Ceci est la preuve que j'ai accompli ma mission.
-
-[i]Félicitations ! Vous avez accompli votre seconde quête, donnez le mot de passe [b]Crâne des ombres[/b] à Shionn (Rurick) dans un message privé sur Discord.
-
-Merci sincèrement d’avoir participé à cette alpha. Shionn[/i]"
+description = "Ceci est la preuve que j'ai accompli ma mission."
 unique = true
 metadata/_custom_type_script = "uid://bjbab3ep2gfn2"
 
