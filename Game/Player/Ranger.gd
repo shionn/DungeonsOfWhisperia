@@ -48,9 +48,8 @@ func get_atk_animation() -> String:
 		
 func is_atk_dual_Hand() -> bool: return false
 func get_atk_main_hand() -> int:
-	if _atk == AttackMode.BOW : 
-		return Dices.d6(lvl+1, 4) + 1
-	return Dices.d6(1 + floori(lvl/2), 4) + 1
+	if _atk == AttackMode.BOW : return Dices.d6(lvl+1, 4) + 1
+	return Dices.d6(1 + floori(lvl/2), 4)
 func get_atk_main_hand_timer_factor() -> float: 
 	match _atk :
 		AttackMode.CHOP : return .55
