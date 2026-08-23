@@ -14,6 +14,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 1
 
 [node name="VFXHit_01" parent="." unique_id=2057619479 instance=ExtResource("3_1k87l")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+visible = false
 preview = false
 autoplay = false
 

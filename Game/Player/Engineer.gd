@@ -1,11 +1,10 @@
 extends PlayerG
 
-const _turret_model = preload("res://Game/Player/EngineerTurret.tscn")
+const _turret_model = preload("res://Game/Player/Spells/EngineerTurret.tscn")
 
 enum AttackMode {CHOP, HORIZONTAL, DIAGONAL}
 
 var _atk : AttackMode = AttackMode.DIAGONAL
-var _turret : Node3D
 
 func _ready() -> void:
 	$Character/Rig_Medium/Skeleton3D/Engineer_Head.hide()
@@ -38,9 +37,6 @@ func get_spells(): return [$"Invoquer Tourelle"]
 
 
 func _on_invoquer_tourelle_cast() -> void:
-	if _turret : _turret.queue_free()
-	_turret =  _turret_model.instantiate()
-	_turret.lvl = lvl
-	$/root/World/Dungeon.add_child(_turret)
+	var _turret =  _turret_model.instantiate()
 	_turret.position   = self.global_position +_character.global_basis * Vector3.BACK
-	#turret.rotation.y = _character.rotation.y
+	$/root/World/Dungeon.add_child(_turret)

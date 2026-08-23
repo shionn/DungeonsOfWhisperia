@@ -18,7 +18,7 @@ class_name Gui
 @onready var _spells = $Spells as HBoxContainer                                                                                                                                                                                             
 @onready var _console = $ConsoleLog as RichTextLabel          
 @onready var _transition = $Transition as Transition             
-@onready var _input = $Popup as GridContainer                                                                                                                                                         
+@onready var _popup = $Popup as GridContainer                                                                                                                                                         
 
 var _previous_mouse_pos: Vector2
 
@@ -55,14 +55,13 @@ func _physics_process(_delta: float) -> void:
 		_introduction.visible = not _introduction.visible
 	if player.velocity.x or player.velocity.z : 
 		_close()
-		#pass
 
 func update_mouse_mode() -> void:
 	if (_options.visible or _bag.visible 
 			or _loot.visible or _introduction.visible 
 			or _dialog.visible
 			or _exit_auberge.visible or _exit_dungeon.visible
-			or _game_over.visible or _input.visible) :
+			or _game_over.visible or _popup.visible) :
 		_show_mouse()
 		_spells.hide()
 	else :

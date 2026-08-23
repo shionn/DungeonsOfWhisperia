@@ -150,25 +150,25 @@ metadata/_custom_type_script = "uid://vm6ojxtihve7"
 [node name="Resoudre l\'énigme des Engrenages" type="Node" parent="Dungeon03" unique_id=828133927]
 script = ExtResource("3_7x0jq")
 secondary = true
-label = "Résoudre l'énigme des Engrenages  "
+label = "Résoudre l'énigme des Engrenages"
 metadata/_custom_type_script = "uid://vm6ojxtihve7"
 
 [node name="Resoudre l\'énigme des Dalles" type="Node" parent="Dungeon03" unique_id=1595053163]
 script = ExtResource("3_7x0jq")
 secondary = true
-label = " Résoudre l'énigme des Dalles  "
+label = "Résoudre l'énigme des Dalles"
 metadata/_custom_type_script = "uid://vm6ojxtihve7"
 
 [node name="Resoudre l\'énigme des Lumières" type="Node" parent="Dungeon03" unique_id=1419338064]
 script = ExtResource("3_7x0jq")
 secondary = true
-label = " Résoudre l'énigme des Lumières  "
+label = "Résoudre l'énigme des Lumières"
 metadata/_custom_type_script = "uid://vm6ojxtihve7"
 
 [node name="Resoudre l\'énigme des Jetons" type="Node" parent="Dungeon03" unique_id=1846138225]
 script = ExtResource("3_7x0jq")
 secondary = true
-label = " Résoudre l'énigme des Jetons"
+label = "Résoudre l'énigme des Jetons"
 metadata/_custom_type_script = "uid://vm6ojxtihve7"
 
 [node name="Retrouver le compas de Feris" type="Node" parent="Dungeon03" unique_id=1450149530]

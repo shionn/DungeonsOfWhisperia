@@ -93,8 +93,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
 script = ExtResource("3_khsc5")
 _description = "L’Ingénieur [color=red]Disponible mais inachevé[/color] 
 Armé de sa  clef à molette,  il est capable de créer une  tourelle automatique pour  combattre à sa place. 
-[ul] 
-Clef à molette :  1 + niveau / 2,  Tourelle : 1 + niveau
+[ul]
+Clef à molette :  1 + niveau / 2,  Tourelle : niveau + 1 automatique.
 Défense :  1 + niveau
 PV :  5 + niveau
 Difficulté :  Difficile
