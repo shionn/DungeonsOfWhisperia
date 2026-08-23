@@ -23,7 +23,7 @@ func _physics_process(_delta: float) -> void:
 	else : button.text = options.get_input_key_char("spell_%d"%[spell_id+1], KEY_0)
 
 func _on_pressed() -> void:
-	player.start_spell(spell)
+	player.start_cast_spell(spell)
 
 func _on_cold_down_change(on_cold_down :bool) -> void:
 	button.disabled = on_cold_down

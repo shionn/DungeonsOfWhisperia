@@ -16,7 +16,6 @@ signal lvl_up()
 
 var _state : State = State.MOVE
 var _attacked_monster : Monster
-var _current_spell : Spell
 
 var lvl = 1
 var pv = 1
@@ -34,8 +33,10 @@ func _ready() -> void:
 	_mainHandAtkTimer.timeout.connect(_on_main_hand_atk_timer)
 	_offHandAtkTimer.timeout.connect(_on_off_hand_atk_timer)
 	load_game()
+	_look_like_camera()
 	
 func _physics_process(_delta: float) -> void:
+	#_character.rotation.y = get_viewport().get_camera_3d().rotation.y+PI
 	match _state :
 		State.MOVE:
 			if Input.is_action_just_released("interact") :
@@ -100,7 +101,7 @@ func _start_atk() -> void:
 	var duration = _start_animation(get_atk_animation())
 	_mainHandAtkTimer.start(duration*get_atk_main_hand_timer_factor())
 	if is_atk_dual_Hand() : _offHandAtkTimer.start(duration*get_atk_off_hand_timer_factor())
-	_character.rotation.y = get_viewport().get_camera_3d().rotation.y+PI
+	_look_like_camera()
 	_state = State.ATTACK
 	stop_move()
 
@@ -114,23 +115,27 @@ func _on_off_hand_atk_timer() -> void:
 	_attacked_monster.receive_atk(nb_atk)
 	$Swing3.play()
 
-func start_spell(spell : Spell) -> void:
-	if not spell.on_cold_down : 
+func start_cast_spell(spell : Spell) -> void:
+	_look_like_camera()
+	if spell.available() : 
+		_attacked_monster = world.target_monster # est-ce quye ca serai pas mieux de le faire dans le spell ? 
 		_state = State.SPELL
-		_start_animation(spell.animation)
-		_current_spell = spell
+		spell.start_cast()
 
 func _start_animation(anim_name:String) -> float:
-	var animation =  "RigMedium/"  + anim_name
-	var duration = _animation.get_animation(animation).length
+	var duration = _get_animation(anim_name).length
+	var animation =  "RigMedium/" + anim_name
 	_animation.play(animation)
 	return duration
+
+func _get_animation(anim_name:String) -> Animation:
+	var animation =  "RigMedium/" + anim_name
+	return _animation.get_animation(animation)
 
 func _on_animation_finished(_anim_name : String) -> void:
 	#print("animation end %s %d"%[_anim_name, _state])
 	match _state :
 		State.SPELL :
-			_current_spell.activate()
 			_state = State.MOVE
 		State.ATTACK:
 			_state = State.MOVE
@@ -143,6 +148,9 @@ func reset_orientation() -> void:
 	$Camera3D.rotation.x = 0
 	global_position.x = 0
 	global_position.z = 0
+
+func _look_like_camera() -> void:
+	_character.rotation.y = get_viewport().get_camera_3d().rotation.y+PI
 
 func save_game() -> void : 
 	if isDead() : 

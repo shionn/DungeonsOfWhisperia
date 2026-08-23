@@ -1,6 +1,7 @@
 extends PlayerG
 
 const projectil_model = preload("res://Game/Player/Spells/ProjectilMagic.tscn")
+const fireball_model = preload("res://Game/Player/Spells/FireBall.tscn")
 
 enum AttackMode { CHOP, HORIZONTAL, DIAGONAL, PROJECTIL }
 var _atk : AttackMode = AttackMode.CHOP
@@ -10,17 +11,19 @@ func _ready() -> void:
 	$Character/Rig_Medium/Skeleton3D/Mage_Hat.hide()
 	super._ready()
 
-#func _on_berserker_cast() -> void:
-#	_berserker.enable = true
-#	_berserker.charge = 8+lvl*2
+func _on_fireball_cast() -> void:
+	var arrow : Node3D = fireball_model.instantiate() 
+	$/root/World/Dungeon.add_child(arrow)
+	arrow.target = _attacked_monster
+	arrow.position = _character.global_position 
 
 func _on_main_hand_atk_timer() -> void:
 	if _atk == AttackMode.PROJECTIL :
 		var arrow : Node3D = projectil_model.instantiate() 
 		$/root/World/Dungeon.add_child(arrow)
 		arrow.target = _attacked_monster
-		arrow.position   = _character.global_position 
-	else :
+		arrow.position = _character.global_position 
+	else : 
 		super._on_main_hand_atk_timer()
 
 func get_def() -> int: return 1+floori(lvl/2)
@@ -54,4 +57,4 @@ func get_atk_main_hand_timer_factor() -> float:
 func get_atk_off_hand() -> int: return 0
 func get_atk_off_hand_timer_factor() -> float:	return 0
 func get_player_classe(): return "Mage"
-func get_spells(): return []
+func get_spells(): return [$Fireball]

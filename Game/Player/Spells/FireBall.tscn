@@ -1,3 +1,16 @@
 [gd_scene format=3 uid="uid://c08ac0y37anjl"]
 
+[ext_resource type="Script" uid="uid://dn0dmli6fi6od" path="res://Game/Player/Spells/Fireball.gd" id="1_lnkb4"]
+[ext_resource type="PackedScene" uid="uid://q8efih80ittq" path="res://Assets/BinbunVFX/magic_projectiles/effects/mprojectile_basic/mprojectile_basic_vfx_04.tscn" id="1_vkdyd"]
+[ext_resource type="PackedScene" uid="uid://vkstbs4fu60" path="res://Assets/BinbunVFX/impact_explosions/effects/hit/vfx_hit_05.tscn" id="2_iynsu"]
+
 [node name="FireBall" type="Node3D" unique_id=1707230949]
+script = ExtResource("1_lnkb4")
+
+[node name="MProjectileBasicVFX_04" parent="." unique_id=1212987996 instance=ExtResource("1_vkdyd")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 1, 0)
+
+[node name="VFXHit_05" parent="." unique_id=826109690 instance=ExtResource("2_iynsu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+preview = false
+autoplay = false

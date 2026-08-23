@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://chh33810xheeu" path="res://Assets/Scenes/Mage.tscn" id="2_233wh"]
 [ext_resource type="Script" uid="uid://davt6on3p6qsv" path="res://Game/Player/Mage.gd" id="2_hh55x"]
 [ext_resource type="Script" uid="uid://chilcihl71dnl" path="res://Game/Player/Spells/Spell.gd" id="4_hh55x"]
+[ext_resource type="Texture2D" uid="uid://d08jcwijx4nsi" path="res://Gui/Assets/kaykit/64/MProjectileBasicVFX_04.png" id="5_n2a3q"]
 
 [node name="Player" unique_id=384338158 instance=ExtResource("1_mvojr")]
 script = ExtResource("2_hh55x")
@@ -12,6 +13,11 @@ script = ExtResource("2_hh55x")
 
 [node name="Fireball" type="Node" parent="." index="10" unique_id=1426269102]
 script = ExtResource("4_hh55x")
+icon = ExtResource("5_n2a3q")
 cold_down = 180
 animation = "Ranged_Magic_Spellcasting_Long"
+animation_factor = 0.6
+requier_target_monster = true
 metadata/_custom_type_script = "uid://chilcihl71dnl"
+
+[connection signal="cast" from="Fireball" to="." method="_on_fireball_cast"]
