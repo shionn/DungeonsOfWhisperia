@@ -91,13 +91,14 @@ transform = Transform3D(0.93969256, 0, 0.3420201, 0, 1, 0, -0.3420201, 0, 0.9396
 [node name="Engineer" parent="Node3D/Characters/Node3D2" unique_id=1703605445 instance=ExtResource("4_dwykc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
 script = ExtResource("3_khsc5")
-_description = "L'Ingénieur [color=red]Disponible mais inachevé[/color]
-Armé de sa clef, il est capable de créer une tourelle automatique tirant sur tous ce qui est hostile qui rentre dans sa ligne de vue.
-[ul]
-Clef à Molette : 1 + niveau / 2, Tourelle : 1 + niveau
-Défense : 1 + niveau
-PV : 5 + niveau
-Difficulté : Difficile
+_description = "L’Ingénieur [color=red]Disponible mais inachevé[/color] 
+Armé de sa  clef à molette,  il est capable de créer une  tourelle automatique pour  combattre à sa place. 
+[ul] 
+Clef à molette :  1 + niveau / 2,  Tourelle : 1 + niveau
+Défense :  1 + niveau
+PV :  5 + niveau
+Difficulté :  Difficile
+Invocation : Invoque une tourelle automatique  tirant sur tous ceux qui sont hostiles et qui entrent dans sa  ligne de vue.  Se recharge en 120 secondes. 
 [/ul]"
 
 [node name="Area3D" type="Area3D" parent="Node3D/Characters/Node3D2/Engineer" unique_id=756693837]
