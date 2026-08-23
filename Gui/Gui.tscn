@@ -1606,6 +1606,7 @@ grow_vertical = 0
 [node name="Button1" type="Button" parent="Spells" unique_id=2092480838]
 layout_mode = 2
 mouse_default_cursor_shape = 2
+theme_override_constants/outline_size = 7
 shortcut = SubResource("Shortcut_w65rx")
 text = "1"
 alignment = 0
