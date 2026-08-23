@@ -20,8 +20,8 @@ light_enable = false
 script = ExtResource("4_oskaq")
 icon = ExtResource("6_8dbln")
 cold_down = 120
-animation = "Ranged_Magic_Raise"
 aura = NodePath("../RimAreaVFX_02")
+animation = "Ranged_Magic_Raise"
 metadata/_custom_type_script = "uid://chilcihl71dnl"
 
 [connection signal="cast" from="Position Defensive" to="." method="_on_position_defensive_cast"]

@@ -25,9 +25,9 @@ light_enable = false
 script = ExtResource("5_7qrke")
 icon = ExtResource("6_c4238")
 cold_down = 120
-animation = "PickUp"
 aura = NodePath("../VFXExplosion_03")
 duration = 5.0
+animation = "PickUp"
 metadata/_custom_type_script = "uid://chilcihl71dnl"
 
 [connection signal="visibility_changed" from="VFXExplosion_03" to="." method="_on_vfx_explosion_03_visibility_changed"]

@@ -12,7 +12,6 @@ func _ready() -> void:
 	super._ready()
 
 func _on_position_defensive_cast() -> void:
-	_position_def.enable = true
 	_position_def.charge = 8+lvl*2
 
 func get_def() -> int: 

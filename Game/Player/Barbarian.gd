@@ -11,7 +11,6 @@ func _ready() -> void:
 	super._ready()
 
 func _on_berserker_cast() -> void:
-	_berserker.enable = true
 	_berserker.charge = 8+lvl*2
 
 func get_def() -> int: 

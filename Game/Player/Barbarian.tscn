@@ -20,8 +20,8 @@ light_enable = false
 script = ExtResource("5_d7w75")
 icon = ExtResource("6_e8d6y")
 cold_down = 120
-animation = "Ranged_Magic_Raise"
 aura = NodePath("../RimAreaVFX_04")
+animation = "Ranged_Magic_Raise"
 metadata/_custom_type_script = "uid://chilcihl71dnl"
 
 [connection signal="cast" from="Berserker" to="." method="_on_berserker_cast"]
