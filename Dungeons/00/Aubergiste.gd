@@ -18,7 +18,7 @@ func interact() -> void:
 		$"LookingForQuest/Mission Accomplie".enable = bag.have(Items.ItemName.SkullHead_Dungeon1)
 		$"LookingForQuest/Mission Accomplie/Next/Next/Next/La potion étrange".enable = bag.have(Items.ItemName.FioleNecrolisAttivae)
 		
-		$"LookingForQuest/Dungeon02 Accomplie".enable = bag.have(Items.ItemName.SkullHead_Dungeon2)
+		$"LookingForQuest/Dungeon02 Accomplie".enable = bag.have(Items.ItemName.SkullHead_Dungeon2) and quest_book.auberge_03.is_started()
 		gui.openDialog($LookingForQuest)
 	elif _food.visible :
 		gui.openDialog($Bienvenue/ApportFood)
