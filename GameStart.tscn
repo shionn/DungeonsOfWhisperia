@@ -133,7 +133,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
 script = ExtResource("3_khsc5")
 _description = "La Sorcière
 [color=red]Pas encore disponible[/color]"
-enable = false
 
 [node name="Area3D" type="Area3D" parent="Node3D/Characters/Node3D3/Mage" unique_id=1650824414]
 

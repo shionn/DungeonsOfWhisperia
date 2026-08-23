@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dfrxj4lceed4b"]
 
-[ext_resource type="Script" uid="uid://be0dsota4hoqq" path="res://Game/Player/Spells/Projectil_Magic.gd" id="1_0iyjw"]
+[ext_resource type="Script" uid="uid://be0dsota4hoqq" path="res://Game/Player/Spells/ProjectilMagic.gd" id="1_0iyjw"]
 [ext_resource type="PackedScene" uid="uid://bjpdybxj6pn7q" path="res://Assets/BinbunVFX/magic_projectiles/effects/mprojectile_basic/mprojectile_basic_vfx_01.tscn" id="2_1k87l"]
 [ext_resource type="PackedScene" uid="uid://ri1dspbxt43r" path="res://Assets/BinbunVFX/impact_explosions/effects/hit/vfx_hit_01.tscn" id="3_1k87l"]
 

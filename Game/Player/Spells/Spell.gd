@@ -26,7 +26,6 @@ var charge : int = 0 :
 		if charge == 0 :
 			enable = false
 			if aura : aura.hide()
-	
 
 var on_cold_down = false :
 	set(value) :

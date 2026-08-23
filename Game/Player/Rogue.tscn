@@ -4,8 +4,8 @@
 [ext_resource type="Script" uid="uid://bcaqrmgt1rjo" path="res://Game/Player/Rogue.gd" id="2_5ega3"]
 [ext_resource type="PackedScene" uid="uid://nspubd405fcp" path="res://Assets/Scenes/Rogue.tscn" id="3_5ega3"]
 [ext_resource type="PackedScene" uid="uid://cdsloy1kvhikp" path="res://Assets/BinbunVFX/impact_explosions/effects/explosion/vfx_explosion_03.tscn" id="4_b1dj1"]
-[ext_resource type="Script" uid="uid://chilcihl71dnl" path="res://Game/Player/Spell.gd" id="5_7qrke"]
-[ext_resource type="Texture2D" uid="uid://bh6si28br6d54" path="res://Gui/Assets/kaykit/48/Rogue_Hooded.png" id="6_c4238"]
+[ext_resource type="Script" uid="uid://chilcihl71dnl" path="res://Game/Player/Spells/Spell.gd" id="5_7qrke"]
+[ext_resource type="Texture2D" uid="uid://1hk32qwrkjny" path="res://Gui/Assets/kaykit/64/Rogue_Hooded.png" id="6_c4238"]
 
 [node name="Player" unique_id=384338158 instance=ExtResource("1_bopnr")]
 script = ExtResource("2_5ega3")

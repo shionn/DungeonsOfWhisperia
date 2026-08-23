@@ -34,7 +34,7 @@ func get_atk_animation() -> String:
 		AttackMode.CHOP : return "Melee_1H_Attack_Chop"
 		AttackMode.HORIZONTAL : return "Melee_1H_Attack_Slice_Horizontal"
 		AttackMode.DIAGONAL : return "Melee_1H_Attack_Slice_Diagonal"
-		AttackMode.PROJECTIL : return "Ranged_Magic_Shoot" #Ranged_Magic_Spellcasting_Long
+		AttackMode.PROJECTIL : return "Ranged_Magic_Shoot" #
 		_ : return "Melee_1H_Attack_Chop"
 
 func is_atk_dual_Hand() -> bool:				return false

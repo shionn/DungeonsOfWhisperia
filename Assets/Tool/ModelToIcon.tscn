@@ -25,6 +25,7 @@
 [ext_resource type="PackedScene" uid="uid://xaa4bgvl23m8" path="res://Assets/Resource/Part/Parts_Cog.gltf" id="23_g2ywm"]
 [ext_resource type="PackedScene" uid="uid://c1vdjgv5qw60t" path="res://Assets/Resource/Part/Parts_Cog_Large.gltf" id="24_pbvhe"]
 [ext_resource type="PackedScene" uid="uid://cb813186cwd3n" path="res://Assets/Bits/RpgTools/drafting_compass.gltf" id="25_pbvhe"]
+[ext_resource type="PackedScene" uid="uid://q8efih80ittq" path="res://Assets/BinbunVFX/magic_projectiles/effects/mprojectile_basic/mprojectile_basic_vfx_04.tscn" id="26_hqjg0"]
 
 [sub_resource type="Environment" id="Environment_b02ke"]
 background_energy_multiplier = 0.0
@@ -88,15 +89,6 @@ transform = Transform3D(0.7071067, 0.35355338, 0.6123724, 0, 0.8660254, -0.5, -0
 [node name="Gold_Ring_012" parent="Old" unique_id=1854425511 instance=ExtResource("16_q2n8a")]
 transform = Transform3D(0.7071067, 0.35355338, 0.6123724, 0, 0.8660254, -0.5, -0.70710677, 0.35355335, 0.61237246, 0, 0, 0)
 
-[node name="shield_badge2" parent="Old" unique_id=548612074 instance=ExtResource("17_ln0k4")]
-transform = Transform3D(0.8365163, 0.5, -0.22414389, -0.4829629, 0.8660254, 0.12940952, 0.25881904, -1.4901161e-08, 0.9659258, 0, 0, 0)
-
-[node name="axe_2handed2" parent="Old" unique_id=219411092 instance=ExtResource("18_ewden")]
-transform = Transform3D(0.96984625, 0.17101009, -0.17364818, -0.1413145, 0.9750824, 0.17101006, 0.19856574, -0.14131448, 0.96984625, 0, -0.3, -0.2)
-
-[node name="Rogue_Hooded" parent="Old" unique_id=35779863 instance=ExtResource("19_mkfvx")]
-transform = Transform3D(0.9659258, 0, -0.25881904, 0, 1, 0, 0.25881904, 0, 0.9659258, 0, -1.6, -0.2)
-
 [node name="cube_copper2" parent="Old" unique_id=695013954 instance=ExtResource("20_sa6kv")]
 transform = Transform3D(0.49999997, 0, -0.86602545, -0.43301272, 0.8660254, -0.24999999, 0.75, 0.5, 0.43301266, 0, -0.25, -0.1)
 
@@ -114,6 +106,18 @@ transform = Transform3D(0.96592593, 0, -0.2588191, 0.1294095, 0.8660254, 0.48296
 
 [node name="drafting_compass2" parent="Old" unique_id=920039576 instance=ExtResource("25_pbvhe")]
 transform = Transform3D(0.96592593, 0, -0.25881907, 0.0669873, 0.9659258, 0.25, 0.25000003, -0.25881907, 0.9330128, 0, 0.20000002, 0)
+
+[node name="Rogue_Hooded" parent="Old" unique_id=35779863 instance=ExtResource("19_mkfvx")]
+transform = Transform3D(0.9659258, 0, -0.25881904, 0, 1, 0, 0.25881904, 0, 0.9659258, 0, -1.6, -0.2)
+
+[node name="shield_badge2" parent="Old" unique_id=548612074 instance=ExtResource("17_ln0k4")]
+transform = Transform3D(0.8365163, 0.5, -0.22414389, -0.4829629, 0.8660254, 0.12940952, 0.25881904, -1.4901161e-08, 0.9659258, 0, 0, 0)
+
+[node name="axe_2handed2" parent="Old" unique_id=219411092 instance=ExtResource("18_ewden")]
+transform = Transform3D(0.96984625, 0.17101009, -0.17364818, -0.1413145, 0.9750824, 0.17101006, 0.19856574, -0.14131448, 0.96984625, 0, -0.3, -0.2)
+
+[node name="MProjectileBasicVFX_04" parent="Old" unique_id=1753975740 instance=ExtResource("26_hqjg0")]
+transform = Transform3D(-0.8365163, -0.25881904, -0.48296288, -0.22414388, 0.9659258, -0.1294095, 0.49999997, 0, -0.86602545, 0, 0, 0)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=979525193]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 2, 0)

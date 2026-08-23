@@ -3,8 +3,15 @@
 [ext_resource type="PackedScene" uid="uid://ddvg2rw2bunm2" path="res://Game/Player/Player.tscn" id="1_mvojr"]
 [ext_resource type="PackedScene" uid="uid://chh33810xheeu" path="res://Assets/Scenes/Mage.tscn" id="2_233wh"]
 [ext_resource type="Script" uid="uid://davt6on3p6qsv" path="res://Game/Player/Mage.gd" id="2_hh55x"]
+[ext_resource type="Script" uid="uid://chilcihl71dnl" path="res://Game/Player/Spells/Spell.gd" id="4_hh55x"]
 
 [node name="Player" unique_id=384338158 instance=ExtResource("1_mvojr")]
 script = ExtResource("2_hh55x")
 
 [node name="Character" parent="." index="9" unique_id=1229200088 instance=ExtResource("2_233wh")]
+
+[node name="Fireball" type="Node" parent="." index="10" unique_id=1426269102]
+script = ExtResource("4_hh55x")
+cold_down = 180
+animation = "Ranged_Magic_Spellcasting_Long"
+metadata/_custom_type_script = "uid://chilcihl71dnl"
