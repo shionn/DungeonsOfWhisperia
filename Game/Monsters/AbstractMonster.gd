@@ -228,6 +228,7 @@ func compute_xp() -> int:
 
 func is_in_loot_range() -> bool : return distance_to(player) <= LOOT_RANGE 
 func is_dead() -> bool : return state == Monster.State.DEATH
+func is_atkable() -> bool : return state != State.DEATH and state != State.NAVIGATE
 
 func navitage_to(pos: Vector3) -> void:
 	_navigation_agent.set_target_position(pos)

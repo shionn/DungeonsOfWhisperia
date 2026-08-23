@@ -4,7 +4,6 @@ extends GameBase
 @export var icon : Resource
 @export var cold_down : int
 @export var aura : Node3D
-# est-ce utilisé ? 
 @export var duration : float
 
 @export var animation : String
@@ -52,7 +51,7 @@ func _init() -> void:
 	
 	
 func available() -> bool :
-	return not on_cold_down and (not requier_target_monster or world.target_monster and not world.target_monster.is_dead())
+	return not on_cold_down and (not requier_target_monster or world.target_monster and world.target_monster.is_atkable())
 
 func start_cast() -> void :
 	world.player._start_animation(animation)

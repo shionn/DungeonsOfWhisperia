@@ -42,7 +42,7 @@ func _physics_process(_delta: float) -> void:
 			if Input.is_action_just_released("interact") :
 				if world.target_monster and world.target_monster.state == Monster.State.DEATH :
 					pass # do loot
-				if world.target_monster and world.target_monster.state != Monster.State.DEATH && not gui.is_open():
+				if world.target_monster and world.target_monster.is_atkable() && not gui.is_open():
 					_attacked_monster = world.target_monster
 					var _range = get_atk_range() + 1  if _attacked_monster.is_large() else get_atk_range()
 					if distance_to(_attacked_monster) < _range  :
@@ -51,6 +51,7 @@ func _physics_process(_delta: float) -> void:
 				_handle_move_input()
 		State.HIT: stop_move()
 		State.DEATH: stop_move()
+		State.SPELL: stop_move()
 
 	if is_on_floor() : velocity.y = 0
 	else : velocity += get_gravity() * _delta
