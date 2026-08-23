@@ -11,7 +11,14 @@ script = ExtResource("2_hh55x")
 
 [node name="Character" parent="." index="9" unique_id=1229200088 instance=ExtResource("2_233wh")]
 
-[node name="Fireball" type="Node" parent="." index="10" unique_id=1426269102]
+[node name="ProjectilMagic" type="Node" parent="." index="10" unique_id=1883221148]
+script = ExtResource("4_hh55x")
+animation = "Ranged_Magic_Shoot"
+animation_factor = 0.3
+requier_target_monster = true
+metadata/_custom_type_script = "uid://chilcihl71dnl"
+
+[node name="Fireball" type="Node" parent="." index="11" unique_id=1426269102]
 script = ExtResource("4_hh55x")
 icon = ExtResource("5_n2a3q")
 cold_down = 180
@@ -20,4 +27,5 @@ animation_factor = 0.6
 requier_target_monster = true
 metadata/_custom_type_script = "uid://chilcihl71dnl"
 
+[connection signal="cast" from="ProjectilMagic" to="." method="_on_projectil_magic_cast"]
 [connection signal="cast" from="Fireball" to="." method="_on_fireball_cast"]
