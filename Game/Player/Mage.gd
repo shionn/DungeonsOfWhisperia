@@ -33,10 +33,7 @@ func _on_projectil_magic_cast() -> void:
 func _on_entrave_cast() -> void:
 	var entrave : Node3D = entrave_model.instantiate() 
 	entrave.target = _attacked_monster
-	#entrave.position = _attacked_monster.global_position
 	_attacked_monster.add_child(entrave)
-	#$/root/World/Dungeon.add_child(entrave)
-
 
 func get_def() -> int: return 1+floori(lvl/2)
 func get_max_pv() -> int:	return 4+lvl

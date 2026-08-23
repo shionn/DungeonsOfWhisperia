@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://1hk32qwrkjny" path="res://Gui/Assets/kaykit/64/Rogue_Hooded.png" id="6_c4238"]
 
 [node name="Player" unique_id=384338158 instance=ExtResource("1_bopnr")]
+visible = false
 script = ExtResource("2_5ega3")
 
 [node name="Character" parent="." index="7" unique_id=1982882119 instance=ExtResource("3_5ega3")]

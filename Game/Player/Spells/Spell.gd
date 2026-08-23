@@ -29,7 +29,6 @@ var enable : bool = false :
 
 var charge : int = 0 :
 	set(value) : 
-		print(value)
 		charge = value
 		if charge == 0 :
 			enable = false

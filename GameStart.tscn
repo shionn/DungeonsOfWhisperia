@@ -54,13 +54,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
 script = ExtResource("3_khsc5")
 _anim = "Melee_2H_Attack_Slice"
 _description = "Le Barbare
-Equipé d'une Hache à 2 mains il possede une forte vitalitée. Il a une attaque solide, ces critiques sont dévastateur et une defense moyenne. Il possede un sort lui permettant d'augmenter son attaque au détriment de sa défenses.
+Equipé d’une hache à deux mains, il possède une forte vitalité. Il a une attaque solide, ses critiques sont dévastateurs mais sa défense est moyenne.
 [ul]
-Hache à deux main : 2+lvl (+1 sur critique)
-Défense : 1+lvl
-PV : 8+lvl*1.5
+Hache à deux mains : 2 + niveau (+1 sur critique)
+Défense : 1 + niveau
+PV : 8 + niveau × 1.5
 Difficulté : Moyenne
-[/ul]"
+Berserker : Donne +1 en attaque, mais inflige -1 en défense pour les 8 + (niveau × 2) prochains coups. Se recharge en 120 secondes.
+[/ul]  "
 
 [node name="Area3D" type="Area3D" parent="Node3D/Characters/Node3D/Barbarian" unique_id=672690255]
 
@@ -93,9 +94,9 @@ script = ExtResource("3_khsc5")
 _description = "L'Ingénieur [color=red]Disponible mais inachevé[/color]
 Armé de sa clef, il est capable de créer une tourelle automatique tirant sur tous ce qui est hostile qui rentre dans sa ligne de vue.
 [ul]
-Clef à Molette : 1 + lvl/2, Tourelle : 1+lvl
-Défense : 1 + lvl
-PV : 5 + lvl
+Clef à Molette : 1 + niveau / 2, Tourelle : 1 + niveau
+Défense : 1 + niveau
+PV : 5 + niveau
 Difficulté : Difficile
 [/ul]"
 
@@ -113,10 +114,11 @@ script = ExtResource("3_khsc5")
 _description = "Le Chevalier
 Equipée d'une épée et d'une solide Armure, il as une attaque solide et une défense solide. Il possede un sort lui permettant d'augmenter sa défense au détriment de son attaque.
 [ul]
-Epée : 2+lvl
-Défense : 2+lvl
-PV : 6+lvl
+Epée : 2 + niveau
+Défense : 2 + niveau
+PV : 6 + niveau
 Difficulté : Facile
+Posture Defensive : Donne +1 en défense, mais inflige -1 en attaque pour les 8 + (niveau × 2) coups encaissés. Se recharge en 120 secondes.
 [/ul]"
 
 [node name="Area3D" type="Area3D" parent="Node3D/Characters/Node3D4/Knight" unique_id=1499626837]
@@ -131,8 +133,17 @@ transform = Transform3D(0.93969256, 0, -0.3420201, 0, 1, 0, 0.3420201, 0, 0.9396
 [node name="Mage" parent="Node3D/Characters/Node3D3" unique_id=1229200088 instance=ExtResource("5_r85o0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
 script = ExtResource("3_khsc5")
+_anim = "Ranged_Magic_Spellcasting_Long"
 _description = "La Sorcière
-[color=red]Pas encore disponible[/color]"
+Armée de sa magie, elle possède une grande force d’attaque et de contrôle. À distance, elle attaque avec des projectiles magiques, mais se contente de taper avec son bâton au corps à corps.
+[ul]
+Projectile Magique à distance : niveau + 1 (dont une automatique), Bâton au corps à corps : 1 + niveau / 2
+Défense : 1 + niveau / 2
+PV : 4 + niveau
+Difficulté : Difficile
+Boule de feu : Dégâts niveau × 2 + 2 automatiques, se recharge en 180 secondes.
+Entrave : Immobilise un ennemi pendant 15 secondes, se recharge en 60 secondes.
+[/ul]"
 
 [node name="Area3D" type="Area3D" parent="Node3D/Characters/Node3D3/Mage" unique_id=1650824414]
 
@@ -148,13 +159,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
 script = ExtResource("3_khsc5")
 _anim = "Ranged_Bow_Draw"
 _description = "Le Ranger
-Equipée d'une dague et d'un arc, il est capable d'attaqué à distance et au corp à corp. Son arc est redoutable mais il est trés fragile au corp à corp.  
+Equipé d’une dague et d’un arc, il est capable d’attaque à distance et au corps à corps. Son arc est redoutable, mais il est très fragile au corps à corps.
 [ul]
-Arc : 2+lvl (dont une automatique), Dague 1+lvl/2
-Défense : 2+lvl/2
-PV : 5+lvl
+Arc : 2 + niveau (dont une automatique), Dague : 1 + niveau / 2
+Défense : 2 + niveau / 2
+PV : 5 + niveau
 Difficulté : Moyenne
-[/ul]"
+[/ul] "
 
 [node name="Area3D" type="Area3D" parent="Node3D/Characters/Node3D6/Ranger" unique_id=1113056427]
 
@@ -170,12 +181,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
 script = ExtResource("3_khsc5")
 _anim = "Melee_Dualwield_Attack_Chop"
 _description = "La Voleuse
-Equipée d'une dague dans chaque main, elle inflige deux attaque à chaque frappe. De plus si elle est hors de vision de son adversaire elle inflige des dégats supplémentaires. Elle possede également un sort lui permettant de disparaitre pour un cours instant.
+Equipée d’une dague dans chaque main, elle inflige deux attaques à chaque frappe. De plus, si elle est hors de la vision de son adversaire, elle inflige des dégâts supplémentaires. Elle possède également un sort lui permettant de disparaître pour un court instant.
 [ul]
-Main droite : droite 1+lvl (+1 automatique dans le dos), main gauche : 2
-Défense : 2+lvl/2
-PV : 5+lvl
+Main droite : 1 + niveau (+1 automatique dans le dos), main gauche : 2
+Défense : 2 + niveau / 2
+PV : 5 + niveau
 Difficulté : Moyenne
+Disparaître : projette un nuage de fumée pour disparaître pendant 5 secondes, se recharge en 120 secondes.
 [/ul]"
 
 [node name="Area3D" type="Area3D" parent="Node3D/Characters/Node3D5/Rogue" unique_id=1933930093]
@@ -362,7 +374,7 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -400.0
-offset_top = -200.0
+offset_top = -250.0
 offset_right = 400.0
 grow_horizontal = 2
 grow_vertical = 0
@@ -408,6 +420,11 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 14
+theme_override_font_sizes/bold_font_size = 14
+theme_override_font_sizes/bold_italics_font_size = 14
+theme_override_font_sizes/italics_font_size = 14
+theme_override_font_sizes/mono_font_size = 14
 text = "Ceci est un test d'exemple
 Ceci est un test d'exemple
 Ceci est un test d'exemple
