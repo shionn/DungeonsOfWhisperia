@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://be0dsota4hoqq" path="res://Game/Player/Spells/ProjectilMagic.gd" id="1_0iyjw"]
 [ext_resource type="PackedScene" uid="uid://bjpdybxj6pn7q" path="res://Assets/BinbunVFX/magic_projectiles/effects/mprojectile_basic/mprojectile_basic_vfx_01.tscn" id="2_1k87l"]
 [ext_resource type="PackedScene" uid="uid://ri1dspbxt43r" path="res://Assets/BinbunVFX/impact_explosions/effects/hit/vfx_hit_01.tscn" id="3_1k87l"]
+[ext_resource type="AudioStream" uid="uid://844xj8x3y6kl" path="res://Audio/80-CC0-RPG-SFX/NotUsed/spell_02.ogg" id="4_3iaj2"]
+[ext_resource type="AudioStream" uid="uid://cygoxfm6o268i" path="res://Audio/BoomPack2/explosion_2.wav" id="5_3iaj2"]
 
 [node name="ProjectilMagic" type="Node3D" unique_id=644912581]
 script = ExtResource("1_0iyjw")
@@ -14,3 +16,15 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 1
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 preview = false
 autoplay = false
+
+[node name="EffectAudio" type="AudioStreamPlayer3D" parent="." unique_id=1277888724]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+stream = ExtResource("4_3iaj2")
+max_distance = 20.0
+bus = &"Effet"
+
+[node name="ExplosionAudio" type="AudioStreamPlayer3D" parent="." unique_id=1339992810]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+stream = ExtResource("5_3iaj2")
+max_distance = 20.0
+bus = &"Effet"

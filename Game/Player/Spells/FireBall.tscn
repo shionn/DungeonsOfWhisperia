@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://dn0dmli6fi6od" path="res://Game/Player/Spells/Fireball.gd" id="1_lnkb4"]
 [ext_resource type="PackedScene" uid="uid://q8efih80ittq" path="res://Assets/BinbunVFX/magic_projectiles/effects/mprojectile_basic/mprojectile_basic_vfx_04.tscn" id="1_vkdyd"]
 [ext_resource type="PackedScene" uid="uid://vkstbs4fu60" path="res://Assets/BinbunVFX/impact_explosions/effects/hit/vfx_hit_05.tscn" id="2_iynsu"]
+[ext_resource type="AudioStream" uid="uid://dlp7ne8tqk651" path="res://Audio/80-CC0-RPG-SFX/spell_fire_06.ogg" id="4_ky1p4"]
+[ext_resource type="AudioStream" uid="uid://bxef5m46abikk" path="res://Audio/BoomPack2/explosion_4.wav" id="5_usefr"]
 
 [node name="FireBall" type="Node3D" unique_id=1707230949]
 script = ExtResource("1_lnkb4")
@@ -14,3 +16,15 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 1
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 preview = false
 autoplay = false
+
+[node name="EffectAudio" type="AudioStreamPlayer3D" parent="." unique_id=1782048229]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+stream = ExtResource("4_ky1p4")
+max_distance = 20.0
+bus = &"Effet"
+
+[node name="ExplosionAudio" type="AudioStreamPlayer3D" parent="." unique_id=14259528]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+stream = ExtResource("5_usefr")
+max_distance = 20.0
+bus = &"Effet"

@@ -53,7 +53,6 @@ func _init() -> void:
 	
 	
 func available() -> bool :
-	print(world.target_monster)
 	return not on_cold_down and (not requier_target_monster or world.target_monster and not world.target_monster.is_dead())
 
 func start_cast() -> void :
