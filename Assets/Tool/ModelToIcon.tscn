@@ -26,6 +26,7 @@
 [ext_resource type="PackedScene" uid="uid://c1vdjgv5qw60t" path="res://Assets/Resource/Part/Parts_Cog_Large.gltf" id="24_pbvhe"]
 [ext_resource type="PackedScene" uid="uid://cb813186cwd3n" path="res://Assets/Bits/RpgTools/drafting_compass.gltf" id="25_pbvhe"]
 [ext_resource type="PackedScene" uid="uid://q8efih80ittq" path="res://Assets/BinbunVFX/magic_projectiles/effects/mprojectile_basic/mprojectile_basic_vfx_04.tscn" id="26_hqjg0"]
+[ext_resource type="PackedScene" uid="uid://clb4kcvkf03dg" path="res://Assets/BinbunVFX/magic_areas/effects/lift_area/lift_area_vfx_03.tscn" id="27_obn78"]
 
 [sub_resource type="Environment" id="Environment_b02ke"]
 background_energy_multiplier = 0.0
@@ -118,6 +119,9 @@ transform = Transform3D(0.96984625, 0.17101009, -0.17364818, -0.1413145, 0.97508
 
 [node name="MProjectileBasicVFX_04" parent="Old" unique_id=1753975740 instance=ExtResource("26_hqjg0")]
 transform = Transform3D(-0.8365163, -0.25881904, -0.48296288, -0.22414388, 0.9659258, -0.1294095, 0.49999997, 0, -0.86602545, 0, 0, 0)
+
+[node name="LiftAreaVFX_03" parent="Old" unique_id=17648465 instance=ExtResource("27_obn78")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, -3)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=979525193]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 2, 0)

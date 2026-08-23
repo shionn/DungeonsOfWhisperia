@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://davt6on3p6qsv" path="res://Game/Player/Mage.gd" id="2_hh55x"]
 [ext_resource type="Script" uid="uid://chilcihl71dnl" path="res://Game/Player/Spells/Spell.gd" id="4_hh55x"]
 [ext_resource type="Texture2D" uid="uid://d08jcwijx4nsi" path="res://Gui/Assets/kaykit/64/MProjectileBasicVFX_04.png" id="5_n2a3q"]
+[ext_resource type="Texture2D" uid="uid://bx5jh3w1c3h0m" path="res://Gui/Assets/kaykit/64/LiftAreaVFX_03.png" id="6_x2uoi"]
 
 [node name="Player" unique_id=384338158 instance=ExtResource("1_mvojr")]
 script = ExtResource("2_hh55x")
@@ -27,5 +28,16 @@ animation_factor = 0.6
 requier_target_monster = true
 metadata/_custom_type_script = "uid://chilcihl71dnl"
 
+[node name="Entrave" type="Node" parent="." index="12" unique_id=75666208]
+script = ExtResource("4_hh55x")
+icon = ExtResource("6_x2uoi")
+cold_down = 60
+duration = 15.0
+animation = "Ranged_Magic_Shoot"
+animation_factor = 0.3
+requier_target_monster = true
+metadata/_custom_type_script = "uid://chilcihl71dnl"
+
 [connection signal="cast" from="ProjectilMagic" to="." method="_on_projectil_magic_cast"]
 [connection signal="cast" from="Fireball" to="." method="_on_fireball_cast"]
+[connection signal="cast" from="Entrave" to="." method="_on_entrave_cast"]

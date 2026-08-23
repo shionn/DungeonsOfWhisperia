@@ -2,6 +2,7 @@ extends PlayerG
 
 const projectil_model = preload("res://Game/Player/Spells/ProjectilMagic.tscn")
 const fireball_model = preload("res://Game/Player/Spells/FireBall.tscn")
+const entrave_model = preload("res://Game/Player/Spells/Entrave.tscn")
 
 enum AttackMode { CHOP, HORIZONTAL, DIAGONAL }
 var _atk : AttackMode = AttackMode.CHOP
@@ -19,16 +20,24 @@ func _start_atk() -> void:
 
 func _on_fireball_cast() -> void:
 	var fireball : Node3D = fireball_model.instantiate() 
-	$/root/World/Dungeon.add_child(fireball)
 	fireball.target = _attacked_monster
 	fireball.position = _character.global_position 
+	$/root/World/Dungeon.add_child(fireball)
 
 func _on_projectil_magic_cast() -> void:
 	var projectil : Node3D = projectil_model.instantiate() 
-	$/root/World/Dungeon.add_child(projectil)
 	projectil.target = _attacked_monster
 	projectil.position = _character.global_position 
-	
+	$/root/World/Dungeon.add_child(projectil)
+
+func _on_entrave_cast() -> void:
+	var entrave : Node3D = entrave_model.instantiate() 
+	entrave.target = _attacked_monster
+	#entrave.position = _attacked_monster.global_position
+	_attacked_monster.add_child(entrave)
+	#$/root/World/Dungeon.add_child(entrave)
+
+
 func get_def() -> int: return 1+floori(lvl/2)
 func get_max_pv() -> int:	return 4+lvl
 
@@ -55,4 +64,4 @@ func get_atk_main_hand_timer_factor() -> float:
 func get_atk_off_hand() -> int: return 0
 func get_atk_off_hand_timer_factor() -> float:	return 0
 func get_player_classe(): return "Mage"
-func get_spells(): return [$Fireball]
+func get_spells(): return [$Fireball, $Entrave]
