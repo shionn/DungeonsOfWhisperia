@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://xwjy2fk12ijv"]
+
+[ext_resource type="Script" uid="uid://dyq0awmkypujp" path="res://Game/Player/Spells/Entrave.gd" id="1_c2u1e"]
+[ext_resource type="PackedScene" uid="uid://clb4kcvkf03dg" path="res://Assets/BinbunVFX/magic_areas/effects/lift_area/lift_area_vfx_03.tscn" id="1_vsflp"]
+
+[node name="Entrave" type="Node3D" unique_id=2090088450]
+script = ExtResource("1_c2u1e")
+
+[node name="LiftAreaVFX_03" parent="." unique_id=161753605 instance=ExtResource("1_vsflp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.05, 0)
