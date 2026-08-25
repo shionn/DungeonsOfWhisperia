@@ -1208,13 +1208,13 @@ transform = Transform3D(0.9396926, 0, -0.34202015, 0, 1, 0, 0.34202015, 0, 0.939
 shape = SubResource("BoxShape3D_mwix5")
 
 [node name="SkeletonMinion" parent="RoomSouthWest" unique_id=510653427 instance=ExtResource("68_f2tn8")]
-transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, -8, 0, 4)
+transform = Transform3D(0.3420201, 0, -0.9396926, 0, 1, 0, 0.9396926, 0, 0.3420201, -8, 0, 9.7)
 collision_mask = 1
 lvl = 2
 loot_gold = 2
 
 [node name="SkeletonWarrior" parent="RoomSouthWest" unique_id=982705985 instance=ExtResource("30_ms3fl")]
-transform = Transform3D(-0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, -0.70710677, 1.5, 0, -5)
+transform = Transform3D(0.9659258, 0, -0.25881898, 0, 1, 0, 0.25881898, 0, 0.9659258, 1.5, 0, -5)
 collision_mask = 1
 lvl = 2
 loot_gold = 2

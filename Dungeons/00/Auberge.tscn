@@ -69,7 +69,6 @@
 [ext_resource type="PackedScene" uid="uid://ci8abno7ya78x" path="res://Assets/Dungeons/Banner/banner_triple_yellow.gltf" id="30_df0jl"]
 [ext_resource type="PackedScene" uid="uid://dctptn7sxm10s" path="res://Assets/Dungeons/Bed/bed_B_single.gltf" id="30_gy2ll"]
 [ext_resource type="PackedScene" uid="uid://qv2dm02eh64" path="res://Assets/Dungeons/Wall/wall_inset_shelves_decoratedA.gltf" id="30_rr5s8"]
-[ext_resource type="PackedScene" uid="uid://bmj1m3g818shm" path="res://Assets/Dungeons/Barrel/barrel_large_decorated.gltf" id="31_hoab0"]
 [ext_resource type="PackedScene" uid="uid://lloiny58xuo1" path="res://Assets/Dungeons/Book/bookcase_single_decoratedA.gltf" id="31_hs5f0"]
 [ext_resource type="PackedScene" uid="uid://b6is0dowm6vx5" path="res://Assets/Dungeons/Book/bookcase_double_decoratedA.gltf" id="32_l5bnf"]
 [ext_resource type="PackedScene" uid="uid://dt83bove5us53" path="res://Assets/Dungeons/Book/bookcase_single_decoratedB.gltf" id="33_pm82x"]
@@ -79,7 +78,6 @@
 [ext_resource type="PackedScene" uid="uid://lkdece1ud37e" path="res://Assets/Dungeons/Crate/crates_stacked.gltf" id="43_52cfg"]
 [ext_resource type="PackedScene" uid="uid://dtkqe34k0hfda" path="res://Assets/Dungeons/Tables/stool_round.gltf" id="46_od4xh"]
 [ext_resource type="PackedScene" uid="uid://bqbfybidqqw6b" path="res://Assets/Dungeons/Tables/table_long_decorated_A.gltf" id="47_o35sb"]
-[ext_resource type="PackedScene" uid="uid://benoj54dmovyq" path="res://Assets/Dungeons/Tables/table_long_decorated_B.gltf" id="48_6hlga"]
 [ext_resource type="PackedScene" uid="uid://cd70tnt7fd2v6" path="res://Assets/Dungeons/Tables/table_long_decorated_C.gltf" id="49_ntc8q"]
 [ext_resource type="PackedScene" uid="uid://beewm24j3envo" path="res://Assets/Dungeons/Tables/table_long.gltf" id="50_doy55"]
 [ext_resource type="PackedScene" uid="uid://bxdny4ajpu4o6" path="res://Assets/Dungeons/Tables/table_medium.gltf" id="50_jf8wf"]
@@ -87,6 +85,7 @@
 [ext_resource type="PackedScene" uid="uid://bmk1gkynr64n1" path="res://Assets/Dungeons/Tables/table_small_decorated_C.gltf" id="59_em8p4"]
 [ext_resource type="PackedScene" uid="uid://kwbu30ltyyru" path="res://Assets/Dungeons/Floor/Large/floor_dirt_large.gltf" id="66_fpiy1"]
 [ext_resource type="PackedScene" uid="uid://b0ap676pqxq1o" path="res://Assets/Dungeons/Weapons/sword_shield_gold.gltf" id="66_lv1qi"]
+[ext_resource type="PackedScene" uid="uid://bodcdvqp3h17w" path="res://Assets/Scenes/BenchChairTable/Table_Long_Decorated_B.tscn" id="66_wad6c"]
 [ext_resource type="PackedScene" uid="uid://bsjemn7gxjp11" path="res://Assets/NatureForest/Color1/Hill_Top_E_Center_Color1.gltf" id="67_nx0cc"]
 [ext_resource type="PackedScene" uid="uid://ds1umuqbncwso" path="res://Assets/Characters/MonthlySeries6/Accessoires/Lorekeeper_Tome.gltf" id="68_8skfw"]
 [ext_resource type="PackedScene" uid="uid://3a34mpeb0dy7" path="res://Assets/NatureForest/Color1/Hill_Top_F_Side_Color1.gltf" id="68_x11bk"]
@@ -107,6 +106,7 @@
 [ext_resource type="PackedScene" uid="uid://bifqjl5vbnrgq" path="res://Assets/Characters/AdventurersAccessoires/potion_small_red.gltf" id="92_my2qj"]
 [ext_resource type="PackedScene" uid="uid://l2ef3kyhit8a" path="res://Assets/Characters/MonthlySeries5/Accessoires/Cauldron.gltf" id="95_ar0ji"]
 [ext_resource type="PackedScene" uid="uid://chdn2mnom0h4x" path="res://Assets/Characters/MonthlySeries5/Accessoires/Potionstation_decorated.gltf" id="96_t7ldk"]
+[ext_resource type="PackedScene" uid="uid://cmh3h8q425t4u" path="res://Assets/Scenes/BarrelAndBoxe/Barrel_Large_Decorated.tscn" id="98_oci04"]
 [ext_resource type="PackedScene" uid="uid://dmjasqjskhmmu" path="res://Game/NightEnvironment.tscn" id="108_wad6c"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_brlmy"]
@@ -1195,8 +1195,8 @@ transform = Transform3D(0.70710695, 0, 0.7071067, 0, 1, 0, -0.7071067, 0, 0.7071
 [node name="torch_mounted4" parent="RDC/Decoration/pillar_decorated2" unique_id=637109710 instance=ExtResource("7_68h1y")]
 transform = Transform3D(-0.70710695, 0, -0.7071068, 0, 1, 0, 0.7071068, 0, -0.70710695, -0.22, 3, -0.22)
 
-[node name="barrel_large_decorated2" parent="RDC/Decoration" unique_id=1911598696 instance=ExtResource("31_hoab0")]
-transform = Transform3D(0.5000001, 0, 0.8660253, 0, 1, 0, -0.8660253, 0, 0.5000001, 3.4999988, 0, 4.3999996)
+[node name="barrel_large_decorated3" parent="RDC/Decoration" unique_id=1937505340 instance=ExtResource("98_oci04")]
+transform = Transform3D(-0.49999997, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, -0.49999997, 3.4999988, 0, 4.3999996)
 
 [node name="box_stacked2" parent="RDC/Decoration" unique_id=1649656929 instance=ExtResource("40_wji3q")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23, 0, -14)
@@ -1222,20 +1222,20 @@ transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 1, 0
 [node name="chair7" parent="RDC/Decoration/table_long_decorated_A2" unique_id=146574782 instance=ExtResource("42_fq3ns")]
 transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 1, 0, -0.9000001)
 
-[node name="table_long_decorated_B2" parent="RDC/Decoration" unique_id=968905533 instance=ExtResource("48_6hlga")]
+[node name="table_long_decorated_B3" parent="RDC/Decoration" unique_id=191034937 instance=ExtResource("66_wad6c")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.4, 0, -6)
 
-[node name="chair4" parent="RDC/Decoration/table_long_decorated_B2" unique_id=913633766 instance=ExtResource("42_fq3ns")]
+[node name="chair4" parent="RDC/Decoration/table_long_decorated_B3" unique_id=913633766 instance=ExtResource("42_fq3ns")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9999995, 0, 0.9000001)
 
-[node name="chair5" parent="RDC/Decoration/table_long_decorated_B2" unique_id=1644816230 instance=ExtResource("42_fq3ns")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9999995, 0, -0.9000001)
+[node name="chair5" parent="RDC/Decoration/table_long_decorated_B3" unique_id=1644816230 instance=ExtResource("42_fq3ns")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9999995, 0, -0.90000033)
 
-[node name="chair8" parent="RDC/Decoration/table_long_decorated_B2" unique_id=552323078 instance=ExtResource("42_fq3ns")]
-transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, -1.0000005, 0, -0.90000033)
+[node name="chair8" parent="RDC/Decoration/table_long_decorated_B3" unique_id=552323078 instance=ExtResource("42_fq3ns")]
+transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, -1.0000005, 0, -0.9000006)
 
-[node name="chair9" parent="RDC/Decoration/table_long_decorated_B2" unique_id=100337857 instance=ExtResource("42_fq3ns")]
-transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, -1.0000005, 0, 0.8999996)
+[node name="chair9" parent="RDC/Decoration/table_long_decorated_B3" unique_id=100337857 instance=ExtResource("42_fq3ns")]
+transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, -1.0000005, 0, 0.89999914)
 
 [node name="table_long_decorated_C2" parent="RDC/Decoration" unique_id=1040177809 instance=ExtResource("49_ntc8q")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.800001, 0, -15.7)
@@ -1706,7 +1706,7 @@ transform = Transform3D(-6.1582e-08, 0.6427877, 0.7660444, -1, -4.371139e-08, -4
 [node name="sword_shield_gold2" parent="Stair/Mezanine" unique_id=798147546 instance=ExtResource("66_lv1qi")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -23.5, 2, 0)
 
-[node name="barrel_large_decorated2" parent="Stair/Mezanine" unique_id=1937505340 instance=ExtResource("31_hoab0")]
+[node name="barrel_large_decorated3" parent="Stair/Mezanine" unique_id=188414271 instance=ExtResource("98_oci04")]
 transform = Transform3D(0.70710665, 0, -0.7071069, 0, 1, 0, 0.7071069, 0, 0.70710665, -5.3999977, 0, -18.5)
 
 [node name="torch_mounted6" parent="Stair/Mezanine" unique_id=1093218368 instance=ExtResource("7_68h1y")]

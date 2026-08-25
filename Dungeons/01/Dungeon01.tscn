@@ -35,7 +35,7 @@
 [ext_resource type="PackedScene" uid="uid://bysoel76lf8pw" path="res://Assets/Dungeons/Bar/bar_straight_A.gltf" id="32_3n75t"]
 [ext_resource type="PackedScene" uid="uid://bn8u3hkxao6jh" path="res://Assets/Characters/AdventurersAccessoires/spellbook_open.gltf" id="33_787tb"]
 [ext_resource type="AudioStream" uid="uid://d3sex1te7mnxm" path="res://Audio/80-CC0-RPG-SFX/book_02.ogg" id="34_sf1ur"]
-[ext_resource type="PackedScene" uid="uid://lhqqwnqs4xcc" path="res://Assets/Dungeons/Candle/candle_thin.gltf" id="35_rvjtx"]
+[ext_resource type="PackedScene" uid="uid://cyt5mcfiwbowj" path="res://Assets/Scenes/Candle/Candle_Thin.tscn" id="36_u21oi"]
 [ext_resource type="PackedScene" uid="uid://d0d62rw45klnc" path="res://Assets/Dungeons/Chair/chair.gltf" id="36_xkwjn"]
 [ext_resource type="PackedScene" uid="uid://dt83bove5us53" path="res://Assets/Dungeons/Book/bookcase_single_decoratedB.gltf" id="37_ar432"]
 [ext_resource type="PackedScene" uid="uid://d1eaddharejqv" path="res://Assets/Characters/AdventurersAccessoires/potion_huge_green.gltf" id="38_vy7ur"]
@@ -58,8 +58,8 @@
 [ext_resource type="PackedScene" uid="uid://bifqjl5vbnrgq" path="res://Assets/Characters/AdventurersAccessoires/potion_small_red.gltf" id="55_tbbi6"]
 [ext_resource type="AudioStream" uid="uid://ce7drpk5sjkcm" path="res://Audio/KenneyRpgAudio/metalClick.ogg" id="56_c7r8k"]
 [ext_resource type="PackedScene" uid="uid://cpt65wpacxuj1" path="res://Assets/Scenes/Wall_Doorway_Boss.tscn" id="59_oqh7g"]
+[ext_resource type="PackedScene" uid="uid://bw8sqr0ht3x3j" path="res://Assets/Scenes/Candle/Shelf_Small_Candles.tscn" id="60_2pnra"]
 [ext_resource type="PackedScene" uid="uid://k1idxjl5napw" path="res://Assets/Dungeons/Banner/banner_thin_brown.gltf" id="60_m1nss"]
-[ext_resource type="PackedScene" uid="uid://b6lorylhdtgtv" path="res://Assets/Dungeons/Shelves/shelf_small_candles.gltf" id="61_gpb47"]
 [ext_resource type="PackedScene" uid="uid://djyg2cdin7gyb" path="res://Assets/Scenes/DungeonExit.tscn" id="62_5koau"]
 [ext_resource type="PackedScene" uid="uid://c2eo4fhjbw8kj" path="res://Assets/Dungeons/Banner/banner_brown.gltf" id="62_rswyo"]
 [ext_resource type="PackedScene" uid="uid://nvl7qu3464h4" path="res://Game/Monsters/SkeletonMinion.tscn" id="63_u21oi"]
@@ -700,8 +700,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, 4)
 
 [node name="Skeleton Golem" parent="BossRoom" unique_id=527358216 instance=ExtResource("31_u21oi")]
 transform = Transform3D(0.49999997, 0, 0.8660253, 0, 1, 0, -0.8660253, 0, 0.49999997, -2.2000008, 0, -3.9)
-lvl = 1
-loot_obj = 0
 loot_gold = 4
 
 [node name="Desk" type="Node3D" parent="BossRoom" unique_id=1645702767]
@@ -749,8 +747,8 @@ metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 stream = ExtResource("29_mja3c")
 bus = &"Effet"
 
-[node name="candle_thin2" parent="BossRoom/Desk/bar_straight_A2" unique_id=767218740 instance=ExtResource("35_rvjtx")]
-transform = Transform3D(0.5000001, 0, -0.8660257, 0, 1, 0, 0.8660257, 0, 0.5000001, 1.7062206, 0.7, -0.17679405)
+[node name="candle_thin3" parent="BossRoom/Desk/bar_straight_A2" unique_id=509292536 instance=ExtResource("36_u21oi")]
+transform = Transform3D(0.50000006, 0, -0.86602557, 0, 1, 0, 0.86602557, 0, 0.50000006, 1.7062206, 0.7, -0.17679405)
 
 [node name="chair2" parent="BossRoom/Desk" unique_id=2112622686 instance=ExtResource("36_xkwjn")]
 transform = Transform3D(0.8660254, 0, -0.5, 0, 1, 0, 0.5, 0, 0.8660254, 1.4232044, 0, 0.98660326)
@@ -1176,7 +1174,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4, 
 [node name="banner_thin_brown3" parent="BossRoom" unique_id=425786732 instance=ExtResource("60_m1nss")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4, 0, -4)
 
-[node name="shelf_small_candles2" parent="BossRoom" unique_id=1909991513 instance=ExtResource("61_gpb47")]
+[node name="shelf_small_candles3" parent="BossRoom" unique_id=1909991513 instance=ExtResource("60_2pnra")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 2, -5.7000003)
 
 [node name="banner_brown2" parent="BossRoom" unique_id=100304499 instance=ExtResource("62_rswyo")]
