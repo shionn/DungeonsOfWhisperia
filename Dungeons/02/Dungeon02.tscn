@@ -73,7 +73,6 @@
 [ext_resource type="PackedScene" uid="uid://dg16k84dtvwob" path="res://Assets/Dungeons/Bar/bartop_A_large.gltf" id="18_nsqvi"]
 [ext_resource type="PackedScene" uid="uid://d17shvcpj3oew" path="res://Assets/Dungeons/Barrel/barrel_small_stack.gltf" id="18_pecol"]
 [ext_resource type="Script" uid="uid://drquw2n4fq4e4" path="res://Dungeons/02/BossRoom.gd" id="19_2ybmr"]
-[ext_resource type="PackedScene" uid="uid://dbaa76cyf7r3p" path="res://Assets/Bits/RpgTools/lantern.gltf" id="19_a5mn1"]
 [ext_resource type="PackedScene" uid="uid://dgrs5abapqwq0" path="res://Assets/Dungeons/Bottle/bottle_A_brown.gltf" id="19_j4w0s"]
 [ext_resource type="PackedScene" uid="uid://d0d62rw45klnc" path="res://Assets/Dungeons/Chair/chair.gltf" id="19_letkk"]
 [ext_resource type="PackedScene" uid="uid://cpxbxsa88w1au" path="res://Assets/Dungeons/Bottle/bottle_B_green.gltf" id="20_41n8b"]
@@ -124,6 +123,7 @@
 [ext_resource type="PackedScene" uid="uid://bu7hkqv2gmh3m" path="res://Assets/Dungeons/Box/box_large.gltf" id="80_o5uhr"]
 [ext_resource type="PackedScene" uid="uid://x7rqp0xpsk6m" path="res://Assets/Dungeons/Box/box_small.gltf" id="81_2ybmr"]
 [ext_resource type="PackedScene" uid="uid://csg4ffnbxbal1" path="res://Game/Monsters/SkeletonWarrior.tscn" id="85_87aba"]
+[ext_resource type="PackedScene" uid="uid://efyawar5mf24" path="res://Assets/Scenes/Candle/Lantern.tscn" id="86_mncwc"]
 [ext_resource type="PackedScene" uid="uid://cc8toymc0j5si" path="res://Assets/Scenes/Rocks_Decorated.tscn" id="90_t6qsb"]
 [ext_resource type="PackedScene" uid="uid://cmh3h8q425t4u" path="res://Assets/Scenes/BarrelAndBoxe/Barrel_Large_Decorated.tscn" id="105_mncwc"]
 [ext_resource type="PackedScene" uid="uid://dhflr6qrk1e1d" path="res://Assets/Dungeons/Coin/coin_stack_small.gltf" id="105_tvthq"]
@@ -2169,7 +2169,7 @@ transform = Transform3D(1, 0, 3.5527137e-15, 0, 1, 0, -3.5527137e-15, 0, 1, 0, -
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RedRoom/wall_inset_candles3/potion_small_red2/Area3D" unique_id=82476046]
 shape = SubResource("SphereShape3D_b02ke")
 
-[node name="lantern2" parent="RedRoom" unique_id=416189999 instance=ExtResource("19_a5mn1")]
+[node name="lantern3" parent="RedRoom" unique_id=557039301 instance=ExtResource("86_mncwc")]
 transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, -0.099998474, 1.5, -6.1000004)
 
 [node name="wall_corner44" parent="RedRoom" unique_id=17662683 instance=ExtResource("4_ra21l")]

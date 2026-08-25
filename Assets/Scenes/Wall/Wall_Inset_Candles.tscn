@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dji08pidw3pgl"]
 
-[ext_resource type="PackedScene" uid="uid://yand4djtdef5" path="res://Assets/Dungeons/Wall/wall_inset_candles.gltf" id="1_dfme8"]
+[ext_resource type="PackedScene" path="res://Assets/Dungeons/Wall/wall_inset_candles.gltf" id="1_dfme8"]
 [ext_resource type="PackedScene" uid="uid://dhqevcfe27wis" path="res://Assets/BinbunVFX/fire_effects/effects/Fire/fire_candle.tscn" id="2_qnu5y"]
 
 [node name="wall_inset_candles" unique_id=156602149 instance=ExtResource("1_dfme8")]
