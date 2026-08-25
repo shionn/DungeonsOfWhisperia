@@ -10,7 +10,8 @@ func _ready() -> void:
 	$Area3D.connect("mouse_entered",_mouse_entered)
 	$Area3D.connect("mouse_exited",_mouse_exit)
 	$Area3D.connect("input_event",_on_input_event)
-	if name == "Ranger" : $Rig_Medium/Skeleton3D/RightHand/Dagger.hide()
+	if name == "Ranger" : $Rig_Medium/Skeleton3D/RightHand/Dagger.queue_free()
+	if name == "Engineer" : $Rig_Medium/Skeleton3D/RightHand/paladin_hammer2.queue_free()
 	$AnimationPlayer.play("RigMedium/Idle_A")
 	
 func _mouse_entered() -> void :

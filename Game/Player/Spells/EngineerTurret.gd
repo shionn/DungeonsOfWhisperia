@@ -23,7 +23,7 @@ func _physics_process(delta: float) -> void:
 func _find_monster_to_atk() -> Monster :
 	var monsters = get_tree().get_nodes_in_group("Monsters") as Array[Monster] 
 	for monster in monsters : 
-		if not monster.is_dead() : 
+		if monster.is_atkable() : 
 			var start = global_position+Vector3.UP
 			var end = monster.global_position+Vector3.UP
 			var direction = (end-start).normalized()

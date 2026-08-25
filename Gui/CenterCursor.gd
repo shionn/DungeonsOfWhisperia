@@ -15,7 +15,7 @@ func _physics_process(_delta: float) -> void:
 	visible = Input.mouse_mode == Input.MOUSE_MODE_CAPTURED and not player.isDead()
 	
 	_cross.visible = world.target_monster == null and world.target_interactable == null and world.target_pnj == null
-	_sword.visible = world.target_monster and not world.target_monster.is_dead()
+	_sword.visible = world.target_monster and world.target_monster.is_atkable()
 	_speak.visible = world.target_pnj != null and world.target_pnj.is_in_range()  
 	
 	_magnifier.visible = (
@@ -29,7 +29,7 @@ func _physics_process(_delta: float) -> void:
 	_disable.visible = (
 			world.target_interactable and not world.target_interactable.is_in_range()
 		or 
-			world.target_monster      and not world.target_monster.is_in_loot_range()      and world.target_monster.is_dead() 
+			world.target_monster      and not world.target_monster.is_in_loot_range()      and not world.target_monster.is_atkable() 
 		or 
 			world.target_pnj          and not world.target_pnj.is_in_range()
 		)

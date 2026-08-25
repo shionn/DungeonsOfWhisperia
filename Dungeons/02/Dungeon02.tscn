@@ -20,7 +20,6 @@
 [ext_resource type="PackedScene" uid="uid://bdb2tkwvqixia" path="res://Assets/Dungeons/Book/book_tan.gltf" id="6_4uj5q"]
 [ext_resource type="PackedScene" uid="uid://xqftme4a1q27" path="res://Assets/Dungeons/Wall/wall_inset.gltf" id="6_c4tja"]
 [ext_resource type="PackedScene" uid="uid://bslqc8p8h7opc" path="res://Assets/Dungeons/Banner/banner_triple_white.gltf" id="6_d0l6h"]
-[ext_resource type="PackedScene" uid="uid://dn0yqbvgem56e" path="res://Assets/Halloween/Bench/bench_decorated.gltf" id="6_gonng"]
 [ext_resource type="PackedScene" uid="uid://c2eo4fhjbw8kj" path="res://Assets/Dungeons/Banner/banner_brown.gltf" id="6_it32w"]
 [ext_resource type="PackedScene" uid="uid://c5wum8rleioq6" path="res://Assets/Halloween/Grave/gravestone.gltf" id="7_1tayw"]
 [ext_resource type="PackedScene" uid="uid://q2eogng1wa4t" path="res://Assets/Halloween/plaque.gltf" id="7_3ruak"]
@@ -31,26 +30,24 @@
 [ext_resource type="PackedScene" uid="uid://xxwvvhvlk5e1" path="res://Assets/Dungeons/Bar/bar_innercorner.gltf" id="8_352hu"]
 [ext_resource type="PackedScene" uid="uid://oukei8y88dd2" path="res://Assets/Halloween/Grave/grave_A.gltf" id="8_iwmo4"]
 [ext_resource type="PackedScene" uid="uid://dfo44w1ffqu8w" path="res://Assets/Halloween/Grave/grave_A_destroyed.gltf" id="9_18hwo"]
-[ext_resource type="PackedScene" uid="uid://4idc4skll21x" path="res://Assets/Halloween/Candle/candle_triple.gltf" id="9_ijfbe"]
 [ext_resource type="PackedScene" uid="uid://dlq3mode12rfx" path="res://Assets/Halloween/pillar.gltf" id="9_lyhif"]
 [ext_resource type="PackedScene" uid="uid://bsa57j4bdejj5" path="res://Assets/Dungeons/Wall/TSplit/wall_Tsplit_sloped.gltf" id="9_q0od2"]
-[ext_resource type="PackedScene" uid="uid://1yxtj1ndx2vt" path="res://Assets/Halloween/Candle/candle.gltf" id="10_1tayw"]
 [ext_resource type="PackedScene" uid="uid://cv1l0hoks5jen" path="res://Assets/Dungeons/Wall/wall_pillar.gltf" id="10_5dcro"]
 [ext_resource type="PackedScene" uid="uid://s24f2qnimaan" path="res://Assets/Dungeons/Barrel/barrel_small.gltf" id="10_8ceck"]
 [ext_resource type="PackedScene" uid="uid://bc0c4x5rj731i" path="res://Assets/Scenes/Bar_Straight_C_short.tscn" id="10_nsqvi"]
 [ext_resource type="PackedScene" uid="uid://btt55eik1mr7w" path="res://Assets/Dungeons/Crate/crate_large_decorated.gltf" id="10_xec7q"]
 [ext_resource type="PackedScene" uid="uid://mxs3nwfqfjmx" path="res://Assets/Dungeons/Wall/wall_inset_shelves_broken.gltf" id="11_0jkld"]
-[ext_resource type="PackedScene" uid="uid://bdpkl4fxlugbk" path="res://Assets/Halloween/Candle/candle_melted.gltf" id="11_mncwc"]
 [ext_resource type="PackedScene" uid="uid://b1pornh7valq3" path="res://Assets/Halloween/Skull/skull.gltf" id="11_vgs0b"]
+[ext_resource type="PackedScene" uid="uid://bchj7jitnmph6" path="res://Assets/Scenes/Candle/Candle_Triple.tscn" id="12_1tayw"]
 [ext_resource type="PackedScene" uid="uid://nq87m86hxcwd" path="res://Assets/Dungeons/Tables/table_long_broken.gltf" id="12_7fary"]
 [ext_resource type="PackedScene" uid="uid://dojlveaaakuvh" path="res://Assets/Dungeons/Banner/banner_white.gltf" id="12_gheph"]
 [ext_resource type="PackedScene" uid="uid://ck8jhnerogudh" path="res://Assets/Dungeons/Rocks/rubble_large.gltf" id="12_j4w0s"]
 [ext_resource type="Script" uid="uid://bqcv11mwjlskq" path="res://Dungeons/02/Skull.gd" id="12_rmpyj"]
 [ext_resource type="PackedScene" uid="uid://7em3lt4lnfwr" path="res://Assets/Dungeons/Wall/wall.gltf" id="12_rtwjv"]
-[ext_resource type="PackedScene" uid="uid://c37a2nm8yxacg" path="res://Assets/Halloween/Candle/candle_thin.gltf" id="12_t6qsb"]
 [ext_resource type="PackedScene" uid="uid://ch3qca6f0r8yr" path="res://Assets/Characters/AdventurersAccessoires/potion_medium_blue.gltf" id="12_xegty"]
 [ext_resource type="PackedScene" uid="uid://b6is0dowm6vx5" path="res://Assets/Dungeons/Book/bookcase_double_decoratedA.gltf" id="13_3uwpk"]
 [ext_resource type="Script" uid="uid://cxe0hpd6pnr8q" path="res://Gui/Dialog.gd" id="13_iikjq"]
+[ext_resource type="PackedScene" uid="uid://dch2b2eih6ni5" path="res://Assets/Scenes/Candle/Candle.tscn" id="13_mncwc"]
 [ext_resource type="PackedScene" uid="uid://ou26vngabxxy" path="res://Assets/Dungeons/Barrel/barrel_large.gltf" id="13_opbu4"]
 [ext_resource type="PackedScene" uid="uid://c8kltwisq87l5" path="res://Assets/Dungeons/Banner/banner_red.gltf" id="13_q0od2"]
 [ext_resource type="PackedScene" uid="uid://klr1d6x5mt0l" path="res://Assets/Dungeons/Wall/wall_cracked.gltf" id="13_r72vg"]
@@ -58,13 +55,13 @@
 [ext_resource type="PackedScene" uid="uid://hh61qm11e8u0" path="res://Assets/Dungeons/Banner/banner_green.gltf" id="14_5dcro"]
 [ext_resource type="PackedScene" uid="uid://c7stbidqh5xkq" path="res://Assets/Dungeons/Book/bookcase_double_decoratedB.gltf" id="14_13ejr"]
 [ext_resource type="PackedScene" uid="uid://i1isspc4jgp2" path="res://Assets/Characters/AdventurersAccessoires/potion_medium_orange.gltf" id="14_iikjq"]
-[ext_resource type="PackedScene" uid="uid://nk8lovrnrinx" path="res://Assets/Dungeons/Rocks/rocks_decorated.gltf" id="14_m1hbu"]
+[ext_resource type="PackedScene" uid="uid://buso5bw83r5a5" path="res://Assets/Scenes/Candle/Candle_Melted.tscn" id="14_t6qsb"]
 [ext_resource type="PackedScene" uid="uid://pr25veao6k8m" path="res://Assets/Dungeons/Banner/banner_yellow.gltf" id="15_0jkld"]
 [ext_resource type="PackedScene" uid="uid://bjfrjb5gr6a3k" path="res://Assets/Dungeons/Wall/wall_arched.gltf" id="15_3ri71"]
 [ext_resource type="PackedScene" uid="uid://urvfc5s43r6p" path="res://Assets/Halloween/arch.gltf" id="15_13ejr"]
+[ext_resource type="PackedScene" uid="uid://cyt5mcfiwbowj" path="res://Assets/Scenes/Candle/Candle_Thin.tscn" id="15_62v0y"]
 [ext_resource type="PackedScene" uid="uid://bmj1m3g818shm" path="res://Assets/Dungeons/Barrel/barrel_large_decorated.gltf" id="15_352hu"]
 [ext_resource type="PackedScene" uid="uid://brneq4xqot0lu" path="res://Assets/Characters/AdventurersAccessoires/potion_medium_red.gltf" id="15_gcmxt"]
-[ext_resource type="PackedScene" uid="uid://yand4djtdef5" path="res://Assets/Dungeons/Wall/wall_inset_candles.gltf" id="15_gs1cg"]
 [ext_resource type="PackedScene" uid="uid://dj0modsh7x76o" path="res://Assets/Scenes/Bar_Straight_C.tscn" id="16_nlict"]
 [ext_resource type="PackedScene" uid="uid://gv22cmuit7gu" path="res://Assets/Dungeons/Banner/banner_blue.gltf" id="16_rtwjv"]
 [ext_resource type="PackedScene" uid="uid://bojxodbjjxr2s" path="res://Assets/BinbunVFX/portal_vfx/effects/oval/oval_portal_vfx_06.tscn" id="16_t7qvu"]
@@ -96,7 +93,7 @@
 [ext_resource type="PackedScene" uid="uid://faxw718wtx6r" path="res://Assets/Bits/RpgTools/shovel.gltf" id="25_52jne"]
 [ext_resource type="PackedScene" uid="uid://devkrtutcqnyx" path="res://Assets/Scenes/Ranger.tscn" id="25_m2ftf"]
 [ext_resource type="Script" uid="uid://dfe0ekqmj7vpg" path="res://Dungeons/02/RangerDead.gd" id="26_l7dob"]
-[ext_resource type="PackedScene" uid="uid://vd24afk1pvyd" path="res://Assets/Scenes/Box_Stacked.tscn" id="27_1tayw"]
+[ext_resource type="PackedScene" uid="uid://vd24afk1pvyd" path="res://Assets/Scenes/BarrelAndBoxe/Box_Stacked.tscn" id="27_1tayw"]
 [ext_resource type="PackedScene" uid="uid://bj2yg7f3e8tc0" path="res://Assets/Dungeons/Tables/bench.gltf" id="27_41n8b"]
 [ext_resource type="PackedScene" uid="uid://y38wo3hdhqtq" path="res://Assets/Dungeons/Wall/wall_shelves.gltf" id="30_46tpd"]
 [ext_resource type="AudioStream" uid="uid://bk3alodr3ijv8" path="res://Audio/TeleportSpell/teleport.ogg" id="30_o0ubt"]
@@ -118,13 +115,17 @@
 [ext_resource type="PackedScene" uid="uid://bhig0ujmb131t" path="res://Assets/Dungeons/Crate/crate_small.gltf" id="52_46tpd"]
 [ext_resource type="AudioStream" uid="uid://dwe540ehhi37p" path="res://Audio/80-CC0-RPG-SFX/item_stone_01.ogg" id="52_mncwc"]
 [ext_resource type="PackedScene" uid="uid://3uma11nuvu0l" path="res://Game/Monsters/SkeletonRogue.tscn" id="56_dxww1"]
+[ext_resource type="PackedScene" uid="uid://2trx40jwoprf" path="res://Assets/Scenes/BenchChairTable/Bench_Decorated.tscn" id="56_mncwc"]
 [ext_resource type="AudioStream" uid="uid://61hk6iwxjiwe" path="res://Audio/DungeonThemes/dungeon.ogg" id="69_gcmxt"]
+[ext_resource type="PackedScene" uid="uid://dji08pidw3pgl" path="res://Assets/Scenes/Wall/Wall_Inset_Candles.tscn" id="71_t6qsb"]
 [ext_resource type="PackedScene" uid="uid://qv2dm02eh64" path="res://Assets/Dungeons/Wall/wall_inset_shelves_decoratedA.gltf" id="73_5ea61"]
 [ext_resource type="PackedScene" uid="uid://dholpdwxyyxfv" path="res://Assets/Dungeons/Wall/Crossing/wall_crossing.gltf" id="73_kc6pu"]
 [ext_resource type="PackedScene" uid="uid://bt65i4uo2ym8u" path="res://Assets/Dungeons/Weapons/bucket_pickaxes.gltf" id="77_v3xnv"]
 [ext_resource type="PackedScene" uid="uid://bu7hkqv2gmh3m" path="res://Assets/Dungeons/Box/box_large.gltf" id="80_o5uhr"]
 [ext_resource type="PackedScene" uid="uid://x7rqp0xpsk6m" path="res://Assets/Dungeons/Box/box_small.gltf" id="81_2ybmr"]
 [ext_resource type="PackedScene" uid="uid://csg4ffnbxbal1" path="res://Game/Monsters/SkeletonWarrior.tscn" id="85_87aba"]
+[ext_resource type="PackedScene" uid="uid://cc8toymc0j5si" path="res://Assets/Scenes/Rocks_Decorated.tscn" id="90_t6qsb"]
+[ext_resource type="PackedScene" uid="uid://cmh3h8q425t4u" path="res://Assets/Scenes/BarrelAndBoxe/Barrel_Large_Decorated.tscn" id="105_mncwc"]
 [ext_resource type="PackedScene" uid="uid://dhflr6qrk1e1d" path="res://Assets/Dungeons/Coin/coin_stack_small.gltf" id="105_tvthq"]
 [ext_resource type="PackedScene" uid="uid://be86xep67rb3s" path="res://Game/Monsters/Necromancer.tscn" id="113_v3xnv"]
 [ext_resource type="PackedScene" uid="uid://l4ocv1r3b2jl" path="res://Game/DungeonEnvironment.tscn" id="129_mncwc"]
@@ -607,16 +608,16 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2, 0
 [node name="pillar4" parent="EntranceSecret/Tomb" unique_id=1883833597 instance=ExtResource("9_lyhif")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1.699997, 0, -2.5)
 
-[node name="candle_triple2" parent="EntranceSecret/Tomb" unique_id=254351728 instance=ExtResource("9_ijfbe")]
+[node name="candle_triple3" parent="EntranceSecret/Tomb" unique_id=65124121 instance=ExtResource("12_1tayw")]
 transform = Transform3D(0.7071068, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, 0.7071068, -1.2999954, 0.8, -1.5)
 
-[node name="candle2" parent="EntranceSecret/Tomb" unique_id=434937645 instance=ExtResource("10_1tayw")]
+[node name="candle3" parent="EntranceSecret/Tomb" unique_id=957018870 instance=ExtResource("13_mncwc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0.8, 1.5)
 
-[node name="candle_melted2" parent="EntranceSecret/Tomb" unique_id=1231580519 instance=ExtResource("11_mncwc")]
+[node name="candle_melted3" parent="EntranceSecret/Tomb" unique_id=1772980734 instance=ExtResource("14_t6qsb")]
 transform = Transform3D(-0.50000006, 0, 0.8660254, 0, 1, 0, -0.8660254, 0, -0.50000006, 2, 0.8, -1.5)
 
-[node name="candle_thin2" parent="EntranceSecret/Tomb" unique_id=269303815 instance=ExtResource("12_t6qsb")]
+[node name="candle_thin3" parent="EntranceSecret/Tomb" unique_id=509292536 instance=ExtResource("15_62v0y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.199997, 0.8, 1.4)
 
 [node name="MobRoomSecret" type="Node3D" parent="." unique_id=157219292]
@@ -1448,6 +1449,9 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 10, 
 [node name="Potionstation_decorated2" parent="BossRoom" unique_id=44712774 instance=ExtResource("31_v3xnv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5999985, 0, -1.1999998)
 
+[node name="candle_triple3" parent="BossRoom/Potionstation_decorated2" unique_id=1584516174 instance=ExtResource("12_1tayw")]
+transform = Transform3D(0.81915206, 0, 0.57357645, 0, 1, 0, -0.57357645, 0, 0.81915206, -0.96873474, 0.80000013, -0.42604446)
+
 [node name="Area3D" type="Area3D" parent="BossRoom" unique_id=1924639577]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6)
 collision_layer = 0
@@ -1531,9 +1535,6 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -2, 
 [node name="bench5" parent="RitualRoom/Decoration" unique_id=1128101826 instance=ExtResource("5_sxs5t")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -2, 0, 2)
 
-[node name="bench_decorated3" parent="RitualRoom/Decoration" unique_id=2117704139 instance=ExtResource("6_gonng")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 2)
-
 [node name="Lorekeeper_Tome2" parent="RitualRoom/Decoration" unique_id=1309289027 instance=ExtResource("7_gonng")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2, 0, 0)
 script = ExtResource("23_ml8gv")
@@ -1593,6 +1594,9 @@ transform = Transform3D(0.9659258, 0.24999997, 0.06698729, -0.25783417, 0.95202,
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RitualRoom/Decoration/grave_A_destroyed2/Area3D" unique_id=663729865]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.15, 0)
 shape = SubResource("BoxShape3D_qre1t")
+
+[node name="bench_decorated2" parent="RitualRoom/Decoration" unique_id=1294102811 instance=ExtResource("56_mncwc")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 2)
 
 [node name="wall_inset3" parent="RitualRoom" unique_id=103094456 instance=ExtResource("6_c4tja")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -10)
@@ -1842,19 +1846,19 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
 [node name="Wall_Doorway" parent="GreenRoom" unique_id=1404395131 instance=ExtResource("17_c4tja")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
 
-[node name="wall_inset_candles3" parent="GreenRoom" unique_id=566549988 instance=ExtResource("15_gs1cg")]
+[node name="wall_inset_candles2" parent="GreenRoom" unique_id=156602149 instance=ExtResource("71_t6qsb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -4)
 
-[node name="potion_small_green2" parent="GreenRoom/wall_inset_candles3" unique_id=980597776 instance=ExtResource("22_q3obp")]
+[node name="potion_small_green2" parent="GreenRoom/wall_inset_candles2" unique_id=980597776 instance=ExtResource("22_q3obp")]
 transform = Transform3D(-1.1, 1.6609539e-07, 0, -1.6609539e-07, -1.1, 0, 0, 0, 1.1, -0.79999924, 0.48, 0.14999962)
 script = ExtResource("23_ml8gv")
 loot_obj = 10
 hide_on_loot = true
 
-[node name="Area3D" type="Area3D" parent="GreenRoom/wall_inset_candles3/potion_small_green2" unique_id=225536945]
+[node name="Area3D" type="Area3D" parent="GreenRoom/wall_inset_candles2/potion_small_green2" unique_id=225536945]
 transform = Transform3D(1, 0, 3.5527137e-15, 0, 1, 0, -3.5527137e-15, 0, 1, 0, -0.24999994, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="GreenRoom/wall_inset_candles3/potion_small_green2/Area3D" unique_id=1676256051]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GreenRoom/wall_inset_candles2/potion_small_green2/Area3D" unique_id=1676256051]
 shape = SubResource("SphereShape3D_b02ke")
 
 [node name="Weapons" type="Node3D" parent="GreenRoom" unique_id=371264448]
@@ -2150,19 +2154,19 @@ transform = Transform3D(-0.50000006, 0, 0.8660254, 0, 1, 0, -0.8660254, 0, -0.50
 loot_obj = 1
 loot_gold = 2
 
-[node name="wall_inset_candles2" parent="RedRoom" unique_id=1317505179 instance=ExtResource("15_gs1cg")]
+[node name="wall_inset_candles3" parent="RedRoom" unique_id=58091074 instance=ExtResource("71_t6qsb")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -6, 0, -4)
 
-[node name="potion_small_red2" parent="RedRoom/wall_inset_candles2" unique_id=1798733911 instance=ExtResource("22_l8ttn")]
+[node name="potion_small_red2" parent="RedRoom/wall_inset_candles3" unique_id=1798733911 instance=ExtResource("22_l8ttn")]
 transform = Transform3D(-1.1, 1.6609539e-07, 0, -1.6609539e-07, -1.1, 0, 0, 0, 1.1, -0.79999924, 0.48, 0.14999962)
 script = ExtResource("23_ml8gv")
 loot_obj = 9
 hide_on_loot = true
 
-[node name="Area3D" type="Area3D" parent="RedRoom/wall_inset_candles2/potion_small_red2" unique_id=1753919906]
+[node name="Area3D" type="Area3D" parent="RedRoom/wall_inset_candles3/potion_small_red2" unique_id=1753919906]
 transform = Transform3D(1, 0, 3.5527137e-15, 0, 1, 0, -3.5527137e-15, 0, 1, 0, -0.25, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="RedRoom/wall_inset_candles2/potion_small_red2/Area3D" unique_id=82476046]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RedRoom/wall_inset_candles3/potion_small_red2/Area3D" unique_id=82476046]
 shape = SubResource("SphereShape3D_b02ke")
 
 [node name="lantern2" parent="RedRoom" unique_id=416189999 instance=ExtResource("19_a5mn1")]
@@ -2213,7 +2217,7 @@ transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -6, 
 [node name="banner_red2" parent="RedRoom" unique_id=149543920 instance=ExtResource("13_q0od2")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 6, 0, 4)
 
-[node name="rocks_decorated2" parent="RedRoom" unique_id=187201980 instance=ExtResource("14_m1hbu")]
+[node name="rocks_decorated3" parent="RedRoom" unique_id=1045865978 instance=ExtResource("90_t6qsb")]
 transform = Transform3D(-0.7071068, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, -0.7071068, 4, 0, -2)
 
 [node name="rocks_gold2" parent="RedRoom" unique_id=1718575430 instance=ExtResource("23_r72vg")]
@@ -2500,7 +2504,7 @@ metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.97500014, 0)
 shape = SubResource("CylinderShape3D_lyhif")
 
-[node name="barrel_large_decorated2" parent="BlueRoom" unique_id=973397168 instance=ExtResource("15_352hu")]
+[node name="barrel_large_decorated3" parent="BlueRoom" unique_id=522886226 instance=ExtResource("105_mncwc")]
 transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, -4.4000015, 0, -6.3999996)
 
 [node name="bar_straight_C2" parent="BlueRoom" unique_id=2056931620 instance=ExtResource("16_nlict")]
@@ -2579,19 +2583,19 @@ transform = Transform3D(0.7071067, 0, -0.7071068, 0, 1, 0, 0.7071068, 0, 0.70710
 [node name="bench5" parent="BlueRoom" unique_id=839151583 instance=ExtResource("27_41n8b")]
 transform = Transform3D(0.49999988, 0, -0.86602527, 0, 1, 0, 0.86602527, 0, 0.49999988, 4.700001, 0, 2.6000004)
 
-[node name="wall_inset_candles4" parent="BlueRoom" unique_id=540786374 instance=ExtResource("15_gs1cg")]
+[node name="wall_inset_candles2" parent="BlueRoom" unique_id=913131297 instance=ExtResource("71_t6qsb")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -2, 0, 8)
 
-[node name="potion_small_blue2" parent="BlueRoom/wall_inset_candles4" unique_id=1972663799 instance=ExtResource("47_ml8gv")]
+[node name="potion_small_blue2" parent="BlueRoom/wall_inset_candles2" unique_id=1972663799 instance=ExtResource("47_ml8gv")]
 transform = Transform3D(-1.1, 1.6609539e-07, -7.1054274e-15, -1.6609539e-07, -1.1, -1.1801787e-21, -7.1054274e-15, 0, 1.1, -0.79999924, 0.48, 0.14999962)
 script = ExtResource("23_ml8gv")
 loot_obj = 12
 hide_on_loot = true
 
-[node name="Area3D" type="Area3D" parent="BlueRoom/wall_inset_candles4/potion_small_blue2" unique_id=901906599]
+[node name="Area3D" type="Area3D" parent="BlueRoom/wall_inset_candles2/potion_small_blue2" unique_id=901906599]
 transform = Transform3D(1, -1.1540219e-21, 7.1054274e-15, -1.1540219e-21, 1, -8.4703295e-22, -7.1054274e-15, -8.4703295e-22, 1, 0, -0.24999997, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="BlueRoom/wall_inset_candles4/potion_small_blue2/Area3D" unique_id=415173576]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BlueRoom/wall_inset_candles2/potion_small_blue2/Area3D" unique_id=415173576]
 shape = SubResource("SphereShape3D_b02ke")
 
 [node name="wall_inset_shelves_broken4" parent="BlueRoom" unique_id=243784388 instance=ExtResource("11_0jkld")]
@@ -3383,7 +3387,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 58, 
 [node name="wall21" parent="Wall" unique_id=229220447 instance=ExtResource("12_rtwjv")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 82, 0, -26)
 
-[node name="wall_inset_candles2" parent="Wall" unique_id=156602149 instance=ExtResource("15_gs1cg")]
+[node name="wall_inset_candles4" parent="Wall" unique_id=1782455695 instance=ExtResource("71_t6qsb")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 54, 0, -26)
 
 [node name="wall_arched4" parent="Wall" unique_id=1858489357 instance=ExtResource("15_3ri71")]
@@ -3395,7 +3399,7 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 61.9
 [node name="wall_arched6" parent="Wall" unique_id=308994343 instance=ExtResource("15_3ri71")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 69.99999, 0, -10)
 
-[node name="wall_inset_candles3" parent="Wall" unique_id=1157009322 instance=ExtResource("15_gs1cg")]
+[node name="wall_inset_candles2" parent="Wall" unique_id=1414021681 instance=ExtResource("71_t6qsb")]
 transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 82, 0, -30)
 
 [node name="wall_crossing2" parent="Wall" unique_id=210071418 instance=ExtResource("73_kc6pu")]

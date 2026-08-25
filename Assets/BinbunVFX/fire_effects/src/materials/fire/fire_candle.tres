@@ -1,7 +1,7 @@
-[gd_resource type="ShaderMaterial" load_steps=7 format=3 uid="uid://bmxtqujfc74cr"]
+[gd_resource type="ShaderMaterial" format=3 uid="uid://bmxtqujfc74cr"]
 
-[ext_resource type="Shader" uid="uid://dvnai5wsqfd3s" path="res://assets/BinbunVFX/fire_effects/src/shader/fire/flame_01.gdshader" id="1_vq7se"]
-[ext_resource type="Texture2D" uid="uid://cb6uibjeyk6lq" path="res://assets/BinbunVFX/fire_effects/src/texture/flame/flame_01.tres" id="2_8k0hr"]
+[ext_resource type="Shader" uid="uid://dvnai5wsqfd3s" path="res://Assets/BinbunVFX/fire_effects/src/shader/fire/flame_01.gdshader" id="1_vq7se"]
+[ext_resource type="Texture2D" uid="uid://cb6uibjeyk6lq" path="res://Assets/BinbunVFX/fire_effects/src/texture/flame/flame_01.tres" id="2_8k0hr"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_vkxb0"]
 noise_type = 5
@@ -11,8 +11,8 @@ domain_warp_frequency = 0.013
 domain_warp_fractal_octaves = 2
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_gpxmu"]
-seamless = true
 noise = SubResource("FastNoiseLite_vkxb0")
+seamless = true
 
 [sub_resource type="Gradient" id="Gradient_h2yge"]
 interpolation_mode = 2
