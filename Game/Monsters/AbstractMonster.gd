@@ -207,7 +207,7 @@ func receive_atk(nb_atk: int) -> void:
 		get_hit_sound().play()
 		if pv <= 0 :
 			start_animation("Death_A", true)
-			player.xp = player.xp+compute_xp()
+			if not player.isDead(): player.xp = player.xp+compute_xp()
 			state = State.DEATH
 			collision_mask = 0
 			dead.emit()

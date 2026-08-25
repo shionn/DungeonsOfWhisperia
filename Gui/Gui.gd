@@ -79,26 +79,26 @@ func _hide_mouse() -> void :
 
 func openQuest()  -> void :
 	_introduction.openQuest()
-	_show_mouse()
+	update_mouse_mode()
 
 func openLoot(container: Object) -> void :
 	_loot.loot(container)
 	_bag.show()
 	_menu.show()
-	_show_mouse()
+	update_mouse_mode()
 
 func openDialog(dialog: Dialog) -> void:
 	player.stop_move();
 	_dialog.open(dialog)
-	_show_mouse()
+	update_mouse_mode()
 
 func openAubergeExit() -> void:
 	_exit_auberge.show()
-	_show_mouse()
+	update_mouse_mode()
 
 func openDungeonExit() -> void:
 	_exit_dungeon.show()
-	_show_mouse()
+	update_mouse_mode()
 
 func openTransition(onMiddle : Callable, onEnd : Callable = func():pass) -> void:
 	_transition.doIt(onMiddle, onEnd)
@@ -124,7 +124,7 @@ func _close() -> void :
 		_options.hide()
 		_exit_auberge.hide()
 		_exit_dungeon.hide()
-		_hide_mouse()
+		update_mouse_mode()
 
 func _on_bag_visibility_changed() -> void:
 	if not _bag.visible : 
