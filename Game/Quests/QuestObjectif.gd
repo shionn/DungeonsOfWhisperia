@@ -18,7 +18,7 @@ func done() -> void :
 		quest_book.done(_quest(), self)
 		if secondary : 
 			gui.consoleLog("Objectif secondaire accompli : %s."%self.name)
-			player.xp = player.xp + xp
+			player.xp = player.xp + xp * player.lvl
 		else :
 			gui.consoleLog("Objectif accompli : %s."%self.name)
 			if _quest().is_all_done() : _quest().done()
