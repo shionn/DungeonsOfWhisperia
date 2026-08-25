@@ -223,8 +223,8 @@ func _on_gcd_timer_timeout() -> void:
 
 func compute_xp() -> int:
 	var large = 1 if is_large() else 0
-	var lvl_diff = lvl*2-player.lvl*2
-	return max(get_def()+get_max_pv()+list_atks().get(0).atk_dice+lvl+large+lvl_diff,0)
+	var lvl_diff = lvl*lvl-player.lvl*player.lvl
+	return max(get_def()+get_max_pv()+list_atks().get(0).atk_dice+lvl+large+lvl_diff,1)
 
 func is_in_loot_range() -> bool : return distance_to(player) <= LOOT_RANGE 
 func is_dead() -> bool : return state == Monster.State.DEATH
