@@ -87,11 +87,11 @@
 [ext_resource type="PackedScene" uid="uid://b0ap676pqxq1o" path="res://Assets/Dungeons/Weapons/sword_shield_gold.gltf" id="66_lv1qi"]
 [ext_resource type="PackedScene" uid="uid://bodcdvqp3h17w" path="res://Assets/Scenes/BenchChairTable/Table_Long_Decorated_B.tscn" id="66_wad6c"]
 [ext_resource type="PackedScene" uid="uid://bsjemn7gxjp11" path="res://Assets/NatureForest/Color1/Hill_Top_E_Center_Color1.gltf" id="67_nx0cc"]
-[ext_resource type="PackedScene" uid="uid://ds1umuqbncwso" path="res://Assets/Characters/MonthlySeries6/Accessoires/Lorekeeper_Tome.gltf" id="68_8skfw"]
 [ext_resource type="PackedScene" uid="uid://3a34mpeb0dy7" path="res://Assets/NatureForest/Color1/Hill_Top_F_Side_Color1.gltf" id="68_x11bk"]
 [ext_resource type="PackedScene" uid="uid://1dsaxq7icuau" path="res://Assets/NatureForest/Color1/Hill_Top_C_InnerCorner_Color1.gltf" id="69_jf8wf"]
 [ext_resource type="PackedScene" uid="uid://ck76hsbmyppqb" path="res://Assets/NatureForest/Color1/Hill_12x12x8_Color1.gltf" id="70_nx0cc"]
 [ext_resource type="PackedScene" uid="uid://bqco8q8yxudyo" path="res://Assets/MedievalHexagon/decoration/nature/trees_A_large.gltf" id="71_lv1qi"]
+[ext_resource type="PackedScene" uid="uid://bb6xorc3qsi21" path="res://Assets/Scenes/Accessoires/Lorekeeper_Tome.tscn" id="71_wad6c"]
 [ext_resource type="PackedScene" uid="uid://cjnne0knj2qsw" path="res://Assets/MedievalHexagon/decoration/nature/trees_B_small.gltf" id="75_wji3q"]
 [ext_resource type="PackedScene" uid="uid://5h3nagtolsm2" path="res://Assets/Characters/AdventurersAccessoires/potion_huge_blue.gltf" id="82_8skfw"]
 [ext_resource type="PackedScene" uid="uid://c4nq6wvr8mcoi" path="res://Assets/Characters/AdventurersAccessoires/potion_large_blue.gltf" id="83_trlst"]
@@ -1258,7 +1258,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3000002, 1, -0.39999962)
 [node name="chair5" parent="RDC/Decoration/table_medium2" unique_id=948432204 instance=ExtResource("42_fq3ns")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.8999996, 0, 0)
 
-[node name="Lorekeeper_Tome2" parent="RDC/Decoration" unique_id=727173911 instance=ExtResource("68_8skfw")]
+[node name="Lorekeeper_Tome3" parent="RDC/Decoration" unique_id=830294022 instance=ExtResource("71_wad6c")]
 transform = Transform3D(0.76604444, 0, 0.6427876, 0, 1, 0, -0.6427876, 0, 0.76604444, 3, 0, -16.900002)
 
 [node name="Stair" type="Node3D" parent="." unique_id=1140349430]

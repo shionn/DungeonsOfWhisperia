@@ -84,7 +84,7 @@ func get_input_key_char(action: String, default : Key) -> String:
 
 
 func get_audio_backbround_vol() -> float : return _options.get_or_add("audio-background-value", -24.0)
-func get_audio_effect_vol()     -> float : return _options.get_or_add("audio-effect-value", -24.0)
+func get_audio_effect_vol()     -> float : return _options.get_or_add("audio-effect-value", 0.0)
 func is_fullscreen()            -> bool  : return _options.get_or_add("video-fullscreen", false)
 func get_video_scale()          -> float : return _options.get_or_add("video-scale", 1.0)
 func get_video_scale_mode()     -> Viewport.Scaling3DMode : return _options.get_or_add("video-scale-mode", Viewport.SCALING_3D_MODE_BILINEAR)

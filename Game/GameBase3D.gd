@@ -9,4 +9,4 @@ class_name GameBase3D
 @onready var options := $/root/World/Options as Options
 
 const LOOT_RANGE: float = 3
-const GAME_VERSION: float = 0.2
+const GAME_VERSION: float = 0.3

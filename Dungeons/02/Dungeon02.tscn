@@ -25,7 +25,6 @@
 [ext_resource type="PackedScene" uid="uid://q2eogng1wa4t" path="res://Assets/Halloween/plaque.gltf" id="7_3ruak"]
 [ext_resource type="PackedScene" uid="uid://c740w1gfrmupy" path="res://Assets/Dungeons/Book/book_brown.gltf" id="7_3uwpk"]
 [ext_resource type="PackedScene" uid="uid://dlo1eot4wd5ay" path="res://Assets/Dungeons/Wall/wall_broken.gltf" id="7_ehe8n"]
-[ext_resource type="PackedScene" uid="uid://ds1umuqbncwso" path="res://Assets/Characters/MonthlySeries6/Accessoires/Lorekeeper_Tome.gltf" id="7_gonng"]
 [ext_resource type="PackedScene" uid="uid://dn8xlfijthmhj" path="res://Assets/Dungeons/Wall/wall_archedwindow_gated.gltf" id="8_3p481"]
 [ext_resource type="PackedScene" uid="uid://xxwvvhvlk5e1" path="res://Assets/Dungeons/Bar/bar_innercorner.gltf" id="8_352hu"]
 [ext_resource type="PackedScene" uid="uid://oukei8y88dd2" path="res://Assets/Halloween/Grave/grave_A.gltf" id="8_iwmo4"]
@@ -60,7 +59,6 @@
 [ext_resource type="PackedScene" uid="uid://bjfrjb5gr6a3k" path="res://Assets/Dungeons/Wall/wall_arched.gltf" id="15_3ri71"]
 [ext_resource type="PackedScene" uid="uid://urvfc5s43r6p" path="res://Assets/Halloween/arch.gltf" id="15_13ejr"]
 [ext_resource type="PackedScene" uid="uid://cyt5mcfiwbowj" path="res://Assets/Scenes/Candle/Candle_Thin.tscn" id="15_62v0y"]
-[ext_resource type="PackedScene" uid="uid://bmj1m3g818shm" path="res://Assets/Dungeons/Barrel/barrel_large_decorated.gltf" id="15_352hu"]
 [ext_resource type="PackedScene" uid="uid://brneq4xqot0lu" path="res://Assets/Characters/AdventurersAccessoires/potion_medium_red.gltf" id="15_gcmxt"]
 [ext_resource type="PackedScene" uid="uid://dj0modsh7x76o" path="res://Assets/Scenes/Bar_Straight_C.tscn" id="16_nlict"]
 [ext_resource type="PackedScene" uid="uid://gv22cmuit7gu" path="res://Assets/Dungeons/Banner/banner_blue.gltf" id="16_rtwjv"]
@@ -113,6 +111,7 @@
 [ext_resource type="PackedScene" uid="uid://dgc6r0o5rxge4" path="res://Assets/Characters/AdventurersAccessoires/potion_small_blue.gltf" id="47_ml8gv"]
 [ext_resource type="PackedScene" uid="uid://bhig0ujmb131t" path="res://Assets/Dungeons/Crate/crate_small.gltf" id="52_46tpd"]
 [ext_resource type="AudioStream" uid="uid://dwe540ehhi37p" path="res://Audio/80-CC0-RPG-SFX/item_stone_01.ogg" id="52_mncwc"]
+[ext_resource type="PackedScene" uid="uid://bb6xorc3qsi21" path="res://Assets/Scenes/Accessoires/Lorekeeper_Tome.tscn" id="53_1tayw"]
 [ext_resource type="PackedScene" uid="uid://3uma11nuvu0l" path="res://Game/Monsters/SkeletonRogue.tscn" id="56_dxww1"]
 [ext_resource type="PackedScene" uid="uid://2trx40jwoprf" path="res://Assets/Scenes/BenchChairTable/Bench_Decorated.tscn" id="56_mncwc"]
 [ext_resource type="AudioStream" uid="uid://61hk6iwxjiwe" path="res://Audio/DungeonThemes/dungeon.ogg" id="69_gcmxt"]
@@ -555,7 +554,7 @@ transform = Transform3D(-0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, -0.
 [node name="crates_stacked2" parent="EntranceSecret" unique_id=1530162916 instance=ExtResource("22_eijaf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.4000015, 0, -4.3)
 
-[node name="barrel_large_decorated2" parent="EntranceSecret" unique_id=1937505340 instance=ExtResource("15_352hu")]
+[node name="barrel_large_decorated3" parent="EntranceSecret" unique_id=1937505340 instance=ExtResource("105_mncwc")]
 transform = Transform3D(-0.2588191, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, -0.2588191, -4.3999977, 0, 4.5)
 
 [node name="banner_triple_brown2" parent="EntranceSecret" unique_id=1161574174 instance=ExtResource("5_a4cxk")]
@@ -1531,7 +1530,7 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -2, 
 [node name="bench5" parent="RitualRoom/Decoration" unique_id=1128101826 instance=ExtResource("5_sxs5t")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -2, 0, 2)
 
-[node name="Lorekeeper_Tome2" parent="RitualRoom/Decoration" unique_id=1309289027 instance=ExtResource("7_gonng")]
+[node name="Lorekeeper_Tome2" parent="RitualRoom/Decoration" unique_id=830294022 instance=ExtResource("53_1tayw")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2, 0, 0)
 script = ExtResource("23_ml8gv")
 action = 1
@@ -1552,7 +1551,7 @@ Le passage se dévoile, et la mort guette.[/i]"
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RitualRoom/Decoration/Lorekeeper_Tome2" unique_id=1661484575]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 6, 0, 5)
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, 0)
 stream = ExtResource("38_4lyfw")
 bus = &"Effet"
 

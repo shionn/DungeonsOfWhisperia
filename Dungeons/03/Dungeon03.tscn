@@ -89,6 +89,7 @@
 [ext_resource type="AudioStream" uid="uid://jq61tyjujyta" path="res://Audio/30-cc0-sfx-loops/machine_06.ogg" id="53_vi7ap"]
 [ext_resource type="PackedScene" uid="uid://ccpi60vfgxxjo" path="res://Game/Monsters/SkeletonGolem.tscn" id="54_vy3ur"]
 [ext_resource type="PackedScene" uid="uid://6h3k07jyv80i" path="res://Assets/Scenes/Meuble_2C_A.tscn" id="57_63gg8"]
+[ext_resource type="AudioStream" uid="uid://ce7drpk5sjkcm" path="res://Audio/KenneyRpgAudio/metalClick.ogg" id="57_ti2xu"]
 [ext_resource type="Script" uid="uid://ckgsmfsvs6nnn" path="res://Dungeons/03/Secret_Room.gd" id="58_b3up8"]
 [ext_resource type="PackedScene" uid="uid://d2jm5u2yvk7w6" path="res://Assets/BinbunVFX/Treasure_Pro/Gems/Diamond/Diamond_01.glb" id="59_b3up8"]
 [ext_resource type="PackedScene" uid="uid://bysoel76lf8pw" path="res://Assets/Dungeons/Bar/bar_straight_A.gltf" id="59_x3t5q"]
@@ -791,6 +792,9 @@ shape = SubResource("CapsuleShape3D_b02ke")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.049999952, 0)
 shape = SubResource("BoxShape3D_78w8x")
 
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RoomNorthEast/sign_1" unique_id=36843374]
+stream = ExtResource("57_ti2xu")
+
 [node name="sign_2" parent="RoomNorthEast" unique_id=161355543 node_paths=PackedStringArray("previous") instance=ExtResource("26_kvdn1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -4)
 script = ExtResource("26_056qb")
@@ -813,6 +817,9 @@ shape = SubResource("CapsuleShape3D_b02ke")
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomNorthEast/sign_2/Area3D" unique_id=799111144]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.049999952, 0)
 shape = SubResource("BoxShape3D_78w8x")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RoomNorthEast/sign_2" unique_id=16872945]
+stream = ExtResource("57_ti2xu")
 
 [node name="sign_split" parent="RoomNorthEast" unique_id=1071956429 node_paths=PackedStringArray("previous") instance=ExtResource("24_gn0cy")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -4, 0, -4)
@@ -844,6 +851,9 @@ shape = SubResource("CapsuleShape3D_kvdn1")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.95000005, 0)
 shape = SubResource("BoxShape3D_78w8x")
 
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RoomNorthEast/sign_split" unique_id=924274802]
+stream = ExtResource("57_ti2xu")
+
 [node name="sign_31" parent="RoomNorthEast" unique_id=800876 node_paths=PackedStringArray("previous") instance=ExtResource("26_kvdn1")]
 transform = Transform3D(-1, 0, 2.6226832e-07, 0, 1, 0, -2.6226832e-07, 0, -1, -4, 0, -8)
 script = ExtResource("26_056qb")
@@ -864,6 +874,9 @@ shape = SubResource("CapsuleShape3D_b02ke")
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomNorthEast/sign_31/Area3D" unique_id=1257478695]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.049999952, 0)
 shape = SubResource("BoxShape3D_78w8x")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RoomNorthEast/sign_31" unique_id=660453760]
+stream = ExtResource("57_ti2xu")
 
 [node name="sign_32" parent="RoomNorthEast" unique_id=1061489996 node_paths=PackedStringArray("previous") instance=ExtResource("26_kvdn1")]
 transform = Transform3D(7.5497894e-08, 0, 1, 0, 1, 0, -1, 0, 7.5497894e-08, 0, 0, -8)
@@ -889,6 +902,9 @@ shape = SubResource("CapsuleShape3D_b02ke")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.049999952, 0)
 shape = SubResource("BoxShape3D_78w8x")
 
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RoomNorthEast/sign_32" unique_id=1780275759]
+stream = ExtResource("57_ti2xu")
+
 [node name="sign_33" parent="RoomNorthEast" unique_id=1485818068 node_paths=PackedStringArray("previous") instance=ExtResource("26_kvdn1")]
 transform = Transform3D(1, 0, -3.496911e-07, 0, 1, 0, 3.496911e-07, 0, 1, 0, 0, 8)
 script = ExtResource("26_056qb")
@@ -909,6 +925,9 @@ shape = SubResource("CapsuleShape3D_b02ke")
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomNorthEast/sign_33/Area3D" unique_id=1567845825]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.049999952, 0)
 shape = SubResource("BoxShape3D_78w8x")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RoomNorthEast/sign_33" unique_id=1174508119]
+stream = ExtResource("57_ti2xu")
 
 [node name="sign_41" parent="RoomNorthEast" unique_id=940400106 node_paths=PackedStringArray("previous") instance=ExtResource("26_kvdn1")]
 transform = Transform3D(-2.1855695e-07, 0, -1, 0, 1, 0, 1, 0, -2.1855695e-07, -4, 0, 0)
@@ -931,6 +950,9 @@ shape = SubResource("CapsuleShape3D_b02ke")
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomNorthEast/sign_41/Area3D" unique_id=1289381891]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.049999952, 0)
 shape = SubResource("BoxShape3D_78w8x")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RoomNorthEast/sign_41" unique_id=1830746525]
+stream = ExtResource("57_ti2xu")
 
 [node name="sign_42" parent="RoomNorthEast" unique_id=196271672 node_paths=PackedStringArray("previous") instance=ExtResource("25_oy3hp")]
 transform = Transform3D(-4.371138e-08, 0, -1, 0, 1, 0, 1, 0, -4.371138e-08, -8, 0, 0)
@@ -956,6 +978,9 @@ shape = SubResource("CapsuleShape3D_b02ke")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.049999952, 0)
 shape = SubResource("BoxShape3D_78w8x")
 
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RoomNorthEast/sign_42" unique_id=70903564]
+stream = ExtResource("57_ti2xu")
+
 [node name="sign_43" parent="RoomNorthEast" unique_id=30387364 node_paths=PackedStringArray("previous") instance=ExtResource("25_oy3hp")]
 transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -8, 0, 8)
 script = ExtResource("26_056qb")
@@ -977,6 +1002,9 @@ shape = SubResource("CapsuleShape3D_b02ke")
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomNorthEast/sign_43/Area3D" unique_id=1861656786]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.049999952, 0)
 shape = SubResource("BoxShape3D_78w8x")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RoomNorthEast/sign_43" unique_id=1878470464]
+stream = ExtResource("57_ti2xu")
 
 [node name="SkeletonMinion" parent="RoomNorthEast" unique_id=1912192789 instance=ExtResource("68_f2tn8")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -8, 0, 2)
