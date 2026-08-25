@@ -227,10 +227,6 @@ polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(1, 3, 2)]
 vertices = PackedVector3Array(1, 0, 1.5, -1, 0, 1.5, 1, 0, -1.5, -1, 0, -1.5)
 polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(1, 3, 2)]
 
-[sub_resource type="NavigationMesh" id="NavigationMesh_2s7rd"]
-vertices = PackedVector3Array(1.5, 0, 0.5, -1.5, 0, 0.5, 1.5, 0, -0.5, -1.5, 0, -0.5)
-polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(1, 3, 2)]
-
 [sub_resource type="NavigationMesh" id="NavigationMesh_u3qrv"]
 vertices = PackedVector3Array(2.5, 0, 8.5, -2.5, 0, 8.5, 2.5, 0, -8.5, -2.5, 0, -8.5)
 polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(1, 3, 2)]
@@ -1468,7 +1464,7 @@ metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
 [node name="Cinematique2" type="Node" parent="SecretRoom" unique_id=421577414 node_paths=PackedStringArray("pnj")]
 script = ExtResource("49_e5ej3")
-text = "l semblerait que tu sois plus fort que prévu. Je n’ai pas les forces pour t’affronter aujourd’hui, mais ce n’est que partie remise, nous nous reverrons bientôt."
+text = "Il semblerait que tu sois plus fort que prévu. Je n’ai pas les forces pour t’affronter aujourd’hui, mais ce n’est que partie remise, nous nous reverrons bientôt."
 pnj = NodePath("../Valthorion")
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
@@ -2786,22 +2782,6 @@ navigation_mesh = SubResource("NavigationMesh_w1x8n")
 [node name="NavigationRegion3D12" type="NavigationRegion3D" parent="Navigation" unique_id=667443931]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10)
 navigation_mesh = SubResource("NavigationMesh_w1x8n")
-
-[node name="NavigationRegion3D13" type="NavigationRegion3D" parent="Navigation" unique_id=64407146]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 14)
-navigation_mesh = SubResource("NavigationMesh_2s7rd")
-
-[node name="NavigationRegion3D14" type="NavigationRegion3D" parent="Navigation" unique_id=608907391]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 14)
-navigation_mesh = SubResource("NavigationMesh_2s7rd")
-
-[node name="NavigationRegion3D15" type="NavigationRegion3D" parent="Navigation" unique_id=1778566258]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -14)
-navigation_mesh = SubResource("NavigationMesh_2s7rd")
-
-[node name="NavigationRegion3D16" type="NavigationRegion3D" parent="Navigation" unique_id=622246739]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -14)
-navigation_mesh = SubResource("NavigationMesh_2s7rd")
 
 [node name="NavigationRegion3D23" type="NavigationRegion3D" parent="Navigation" unique_id=1713625170]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, 0)

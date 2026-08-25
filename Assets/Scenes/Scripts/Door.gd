@@ -8,12 +8,21 @@ extends GameBase3D
 const PI_2 = PI / 2
 const SPEED = 3
 
-@export var open = false
+@export var open = false : 
+	set(value) :
+		open = value
+		_update_navigation()
 @export var revert = false
 @export var locked = false
 @export var unlock_item : Items.ItemName
 
 signal player_enter()
+
+func _ready() -> void:
+	_update_navigation()
+
+func _update_navigation() -> void:
+	$NavigationRegion3D.enabled = open
 
 func _on_knob_activate() -> void:
 	if locked :

@@ -391,71 +391,7 @@ radius = 0.21191406
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_tdnme"]
 
-[sub_resource type="NavigationMesh" id="NavigationMesh_2ybmr"]
-vertices = PackedVector3Array(7, 0, 2, -7, 0, 2, 7, 0, -2, -7, 0, -2)
-polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(1, 3, 2)]
-
-[sub_resource type="NavigationMesh" id="NavigationMesh_bkx1f"]
-vertices = PackedVector3Array(3, 0, 3, -3, 0, 3, 3, 0, -3, -3, 0, -3)
-polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(1, 3, 2)]
-
-[sub_resource type="NavigationMesh" id="NavigationMesh_dxww1"]
-vertices = PackedVector3Array(4, 0, 2, -4, 0, 2, 4, 0, -2, -4, 0, -2)
-polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(1, 3, 2)]
-
-[sub_resource type="NavigationMesh" id="NavigationMesh_4lyfw"]
-vertices = PackedVector3Array(4, 0, 3, -4, 0, 3, 4, 0, -3, -4, 0, -3)
-polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(1, 3, 2)]
-
-[sub_resource type="NavigationMesh" id="NavigationMesh_sg7jx"]
-vertices = PackedVector3Array(1, 0, 3, -1, 0, 3, 1, 0, -3, -1, 0, -3)
-polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(1, 3, 2)]
-
-[sub_resource type="NavigationMesh" id="NavigationMesh_dp1lw"]
-vertices = PackedVector3Array(4.5, 0, 3.5, -4.5, 0, 3.5, 4.5, 0, -3.5, -4.5, 0, -3.5)
-polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(1, 3, 2)]
-
-[sub_resource type="NavigationMesh" id="NavigationMesh_3ruak"]
-vertices = PackedVector3Array(5, 0, 3, -5, 0, 3, 5, 0, -3, -5, 0, -3)
-polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(1, 3, 2)]
-
-[sub_resource type="NavigationMesh" id="NavigationMesh_2veej"]
-vertices = PackedVector3Array(3.5, 0, 2.5, -3.5, 0, 2.5, 3.5, 0, -2.5, -3.5, 0, -2.5)
-polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(1, 3, 2)]
-
-[sub_resource type="NavigationMesh" id="NavigationMesh_lyhif"]
-vertices = PackedVector3Array(1, 0, 0.7, -1, 0, 0.7, 1, 0, -0.7, -1, 0, -0.7)
-polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(1, 3, 2)]
-
-[sub_resource type="NavigationMesh" id="NavigationMesh_ijfbe"]
-vertices = PackedVector3Array(1, 0, 1.3, -1, 0, 1.3, 1, 0, -1.3, -1, 0, -1.3)
-polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(1, 3, 2)]
-
-[sub_resource type="NavigationMesh" id="NavigationMesh_1tayw"]
-vertices = PackedVector3Array(7, 0, 1, -7, 0, 1, 7, 0, -1, -7, 0, -1)
-polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(1, 3, 2)]
-
-[sub_resource type="NavigationMesh" id="NavigationMesh_mncwc"]
-vertices = PackedVector3Array(3, 0, 1, -3, 0, 1, 3, 0, -1, -3, 0, -1)
-polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(1, 3, 2)]
-
-[sub_resource type="NavigationMesh" id="NavigationMesh_62v0y"]
-vertices = PackedVector3Array(4.5, 0, 3, -4.5, 0, 3, 4.5, 0, -3, -4.5, 0, -3)
-polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(1, 3, 2)]
-
 [sub_resource type="NavigationMesh" id="NavigationMesh_u64rk"]
-
-[sub_resource type="NavigationMesh" id="NavigationMesh_jc2n7"]
-vertices = PackedVector3Array(2, 0, 9, -2, 0, 9, 2, 0, -9, -2, 0, -9)
-polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(1, 3, 2)]
-
-[sub_resource type="NavigationMesh" id="NavigationMesh_r7872"]
-vertices = PackedVector3Array(3, 0, 2, -3, 0, 2, 3, 0, -2, -3, 0, -2)
-polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(1, 3, 2)]
-
-[sub_resource type="NavigationMesh" id="NavigationMesh_242w5"]
-vertices = PackedVector3Array(3, 0, 2, -3, 0, 2, 3, 0, -2, -3, 0, -2)
-polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(1, 3, 2)]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_uae3t"]
 
@@ -503,24 +439,12 @@ polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(1, 3, 2)]
 vertices = PackedVector3Array(0.6, 0, 0.6, -0.6, 0, 0.6, 0.6, 0, -0.6, -0.6, 0, -0.6)
 polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(1, 3, 2)]
 
-[sub_resource type="NavigationMesh" id="NavigationMesh_mkaem"]
-vertices = PackedVector3Array(9, 0, 0.5, -9, 0, 0.5, 9, 0, -0.5, -9, 0, -0.5)
-polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(1, 3, 2)]
-
-[sub_resource type="NavigationMesh" id="NavigationMesh_nf2qq"]
-vertices = PackedVector3Array(3, 0, 0.5, -3, 0, 0.5, 3, 0, -0.5, -3, 0, -0.5)
-polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(1, 3, 2)]
-
 [sub_resource type="NavigationMesh" id="NavigationMesh_avr0k"]
 vertices = PackedVector3Array(8.5, 0, 0.5, -8.5, 0, 0.5, 8.5, 0, -0.5, -8.5, 0, -0.5)
 polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(1, 3, 2)]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_3o603"]
 vertices = PackedVector3Array(0.5, 0, 3.25, -0.5, 0, 3.25, 0.5, 0, -3.25, -0.5, 0, -3.25)
-polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(1, 3, 2)]
-
-[sub_resource type="NavigationMesh" id="NavigationMesh_jm4er"]
-vertices = PackedVector3Array(0.5, 0, 13.5, -0.5, 0, 13.5, 0.5, 0, -13.5, -0.5, 0, -13.5)
 polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(1, 3, 2)]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_588y5"]
@@ -531,20 +455,92 @@ polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(1, 3, 2)]
 vertices = PackedVector3Array(2, 0, 0.5, -2, 0, 0.5, 2, 0, -0.5, -2, 0, -0.5)
 polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(1, 3, 2)]
 
-[sub_resource type="NavigationMesh" id="NavigationMesh_c3lrt"]
-vertices = PackedVector3Array(1, 0, 4.5, -1, 0, 4.5, 1, 0, -4.5, -1, 0, -4.5)
-polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(1, 3, 2)]
-
-[sub_resource type="NavigationMesh" id="NavigationMesh_2xv6d"]
-vertices = PackedVector3Array(1.25, 0, 3.5, -1.25, 0, 3.5, 1.25, 0, -3.5, -1.25, 0, -3.5)
-polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(1, 3, 2)]
-
 [sub_resource type="NavigationMesh" id="NavigationMesh_elpd6"]
 vertices = PackedVector3Array(9, 0, 0.75, -9, 0, 0.75, 9, 0, -0.75, -9, 0, -0.75)
 polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(1, 3, 2)]
 
+[sub_resource type="NavigationMesh" id="NavigationMesh_62v0y"]
+vertices = PackedVector3Array(1, 0, 0.5, -1, 0, 0.5, 1, 0, -0.5, -1, 0, -0.5)
+polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(1, 3, 2)]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_g717u"]
+vertices = PackedVector3Array(4, 0, 2.5, -4, 0, 2.5, 4, 0, -2.5, -4, 0, -2.5)
+polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(1, 3, 2)]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_pjp3u"]
+vertices = PackedVector3Array(0.5, 0, 1, -0.5, 0, 1, 0.5, 0, -1, -0.5, 0, -1)
+polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(1, 3, 2)]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_ke7sq"]
+vertices = PackedVector3Array(4.5, 0, 3.5, -4.5, 0, 3.5, 4.5, 0, -3.5, -4.5, 0, -3.5)
+polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(1, 3, 2)]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_mncwc"]
+vertices = PackedVector3Array(3, 0, 2, -3, 0, 2, 3, 0, -2, -3, 0, -2)
+polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(1, 3, 2)]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_og0jo"]
+vertices = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, -1)
+polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(1, 3, 2)]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_xjhxy"]
+vertices = PackedVector3Array(2.5, 0, 4.5, -2.5, 0, 4.5, 2.5, 0, -4.5, -2.5, 0, -4.5)
+polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(1, 3, 2)]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_jw2eb"]
+vertices = PackedVector3Array(1.5, 0, 1.5, -1.5, 0, 1.5, 1.5, 0, -1.5, -1.5, 0, -1.5)
+polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(1, 3, 2)]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_gof2p"]
+vertices = PackedVector3Array(3.5, 0, 2.5, -3.5, 0, 2.5, 3.5, 0, -2.5, -3.5, 0, -2.5)
+polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(1, 3, 2)]
+
 [sub_resource type="NavigationMesh" id="NavigationMesh_t6qsb"]
-vertices = PackedVector3Array(2, 0, 8.5, -2, 0, 8.5, 2, 0, -8.5, -2, 0, -8.5)
+vertices = PackedVector3Array(1, 0, 0.5, -1, 0, 0.5, 1, 0, -0.5, -1, 0, -0.5)
+polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(1, 3, 2)]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_nf2qq"]
+vertices = PackedVector3Array(0.5, 0, 3.5, -0.5, 0, 3.5, 0.5, 0, -3.5, -0.5, 0, -3.5)
+polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(1, 3, 2)]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_jc2n7"]
+vertices = PackedVector3Array(4.5, 0, 3, -4.5, 0, 3, 4.5, 0, -3, -4.5, 0, -3)
+polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(1, 3, 2)]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_r7872"]
+vertices = PackedVector3Array(1.5, 0, 8.5, -1.5, 0, 8.5, 1.5, 0, -8.5, -1.5, 0, -8.5)
+polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(1, 3, 2)]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_242w5"]
+vertices = PackedVector3Array(9.5, 0, 0.5, -9.5, 0, 0.5, 9.5, 0, -0.5, -9.5, 0, -0.5)
+polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(1, 3, 2)]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_jm4er"]
+vertices = PackedVector3Array(1.5, 0, 8.5, -1.5, 0, 8.5, 1.5, 0, -8.5, -1.5, 0, -8.5)
+polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(1, 3, 2)]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_c3lrt"]
+vertices = PackedVector3Array(3.5, 0, 1.5, -3.5, 0, 1.5, 3.5, 0, -1.5, -3.5, 0, -1.5)
+polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(1, 3, 2)]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_mkaem"]
+vertices = PackedVector3Array(3.5, 0, 0.5, -3.5, 0, 0.5, 3.5, 0, -0.5, -3.5, 0, -0.5)
+polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(1, 3, 2)]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_2xv6d"]
+vertices = PackedVector3Array(0.5, 0, 11, -0.5, 0, 11, 0.5, 0, -11, -0.5, 0, -11)
+polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(1, 3, 2)]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_v3j14"]
+vertices = PackedVector3Array(2, 0, 4.5, -2, 0, 4.5, 2, 0, -4.5, -2, 0, -4.5)
+polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(1, 3, 2)]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_ahen0"]
+vertices = PackedVector3Array(0.5, 0, 1, -0.5, 0, 1, 0.5, 0, -1, -0.5, 0, -1)
+polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(1, 3, 2)]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_a7oie"]
+vertices = PackedVector3Array(7.5, 0, 0.5, -7.5, 0, 0.5, 7.5, 0, -0.5, -7.5, 0, -0.5)
 polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(1, 3, 2)]
 
 [node name="Dungeon02" type="Node3D" unique_id=879788223]
@@ -3878,73 +3874,9 @@ transform = Transform3D(1, 0, 0, 0, -1, 8.742278e-08, 0, -8.742278e-08, -1, 12, 
 [node name="Navigation" type="Node3D" parent="." unique_id=1542007034]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
 
-[node name="NavigationRegion3D3" type="NavigationRegion3D" parent="Navigation" unique_id=574000808]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, -3)
-navigation_mesh = SubResource("NavigationMesh_2ybmr")
-
-[node name="NavigationRegion3D4" type="NavigationRegion3D" parent="Navigation" unique_id=1235621510]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 0, 2)
-navigation_mesh = SubResource("NavigationMesh_bkx1f")
-
-[node name="NavigationRegion3D5" type="NavigationRegion3D" parent="Navigation" unique_id=865037076]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, 3)
-navigation_mesh = SubResource("NavigationMesh_dxww1")
-
-[node name="NavigationRegion3D9" type="NavigationRegion3D" parent="Navigation" unique_id=926207117]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0, 14)
-navigation_mesh = SubResource("NavigationMesh_4lyfw")
-
-[node name="NavigationRegion3D10" type="NavigationRegion3D" parent="Navigation" unique_id=961966329]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36, 0, 18)
-navigation_mesh = SubResource("NavigationMesh_sg7jx")
-
-[node name="NavigationRegion3D11" type="NavigationRegion3D" parent="Navigation" unique_id=282743646]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.5, 0, 11.5)
-navigation_mesh = SubResource("NavigationMesh_dp1lw")
-
-[node name="NavigationRegion3D13" type="NavigationRegion3D" parent="Navigation" unique_id=63825765]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36, 0, -10)
-navigation_mesh = SubResource("NavigationMesh_3ruak")
-
-[node name="NavigationRegion3D14" type="NavigationRegion3D" parent="Navigation" unique_id=933742476]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.5, 0, -15.5)
-navigation_mesh = SubResource("NavigationMesh_2veej")
-
-[node name="NavigationRegion3D15" type="NavigationRegion3D" parent="Navigation" unique_id=664774344]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39, 0, -13.7)
-navigation_mesh = SubResource("NavigationMesh_lyhif")
-
-[node name="NavigationRegion3D16" type="NavigationRegion3D" parent="Navigation" unique_id=519372363]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39, 0, -18.8)
-navigation_mesh = SubResource("NavigationMesh_ijfbe")
-
-[node name="NavigationRegion3D" type="NavigationRegion3D" parent="Navigation" unique_id=1745506536]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 7.599592e-07)
-navigation_mesh = SubResource("NavigationMesh_1tayw")
-
-[node name="NavigationRegion3D17" type="NavigationRegion3D" parent="Navigation" unique_id=1729583554]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, 7.599592e-07)
-navigation_mesh = SubResource("NavigationMesh_mncwc")
-
-[node name="NavigationRegion3D18" type="NavigationRegion3D" parent="Navigation" unique_id=1184044053]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.5, 0, -13.999999)
-navigation_mesh = SubResource("NavigationMesh_62v0y")
-
 [node name="NavigationRegion3D20" type="NavigationRegion3D" parent="Navigation" unique_id=1237280926]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45, 0, 0)
 navigation_mesh = SubResource("NavigationMesh_u64rk")
-
-[node name="NavigationRegion3D21" type="NavigationRegion3D" parent="Navigation" unique_id=1071921734]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 55, 0, 0)
-navigation_mesh = SubResource("NavigationMesh_jc2n7")
-
-[node name="NavigationRegion3D22" type="NavigationRegion3D" parent="Navigation" unique_id=2119254698]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50, 0, -5.6)
-navigation_mesh = SubResource("NavigationMesh_r7872")
-
-[node name="NavigationRegion3D23" type="NavigationRegion3D" parent="Navigation" unique_id=954500114]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50, 0, 5.6)
-navigation_mesh = SubResource("NavigationMesh_242w5")
 
 [node name="NavigationRegion3D31" type="NavigationRegion3D" parent="Navigation" unique_id=21613571]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48, 0, 0.10000038)
@@ -3998,30 +3930,6 @@ navigation_mesh = SubResource("NavigationMesh_5tmos")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 64, 0, 13.6)
 navigation_mesh = SubResource("NavigationMesh_q6tun")
 
-[node name="NavigationRegion3D50" type="NavigationRegion3D" parent="Navigation" unique_id=1149930960]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34, 0, 0)
-navigation_mesh = SubResource("NavigationMesh_mkaem")
-
-[node name="NavigationRegion3D2" type="NavigationRegion3D" parent="Navigation" unique_id=273942956]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28, 0, 12)
-navigation_mesh = SubResource("NavigationMesh_nf2qq")
-
-[node name="NavigationRegion3D8" type="NavigationRegion3D" parent="Navigation" unique_id=1667979672]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60, 0, 0)
-navigation_mesh = SubResource("NavigationMesh_nf2qq")
-
-[node name="NavigationRegion3D51" type="NavigationRegion3D" parent="Navigation" unique_id=1052898505]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28, 0, -12)
-navigation_mesh = SubResource("NavigationMesh_nf2qq")
-
-[node name="NavigationRegion3D52" type="NavigationRegion3D" parent="Navigation" unique_id=1395918457]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 20, 0, -8)
-navigation_mesh = SubResource("NavigationMesh_nf2qq")
-
-[node name="NavigationRegion3D53" type="NavigationRegion3D" parent="Navigation" unique_id=1631606263]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 20, 0, 8)
-navigation_mesh = SubResource("NavigationMesh_nf2qq")
-
 [node name="NavigationRegion3D6" type="NavigationRegion3D" parent="Navigation" unique_id=1402968922]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68, 0, -16)
 navigation_mesh = SubResource("NavigationMesh_avr0k")
@@ -4034,10 +3942,6 @@ navigation_mesh = SubResource("NavigationMesh_3o603")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 76, 0, -19.75)
 navigation_mesh = SubResource("NavigationMesh_3o603")
 
-[node name="NavigationRegion3D12" type="NavigationRegion3D" parent="Navigation" unique_id=2001437202]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68, 0, -2)
-navigation_mesh = SubResource("NavigationMesh_jm4er")
-
 [node name="NavigationRegion3D19" type="NavigationRegion3D" parent="Navigation" unique_id=567281826]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 69.5, 0, -4)
 navigation_mesh = SubResource("NavigationMesh_588y5")
@@ -4046,21 +3950,125 @@ navigation_mesh = SubResource("NavigationMesh_588y5")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 70.5, 0, 4)
 navigation_mesh = SubResource("NavigationMesh_ubyst")
 
-[node name="NavigationRegion3D33" type="NavigationRegion3D" parent="Navigation" unique_id=927523152]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 66.5, 0, 0)
-navigation_mesh = SubResource("NavigationMesh_c3lrt")
-
-[node name="NavigationRegion3D37" type="NavigationRegion3D" parent="Navigation" unique_id=819614729]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 64.25, 0, -1)
-navigation_mesh = SubResource("NavigationMesh_2xv6d")
-
 [node name="NavigationRegion3D38" type="NavigationRegion3D" parent="Navigation" unique_id=586587754]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68, 0, 12.26)
 navigation_mesh = SubResource("NavigationMesh_elpd6")
 
-[node name="NavigationRegion3D24" type="NavigationRegion3D" parent="Navigation" unique_id=2040577447]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45, 0, 0)
+[node name="NavigationRegion3D18" type="NavigationRegion3D" parent="Navigation" unique_id=375434831]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.5, 0, -11.999999)
+navigation_mesh = SubResource("NavigationMesh_62v0y")
+
+[node name="NavigationRegion3D25" type="NavigationRegion3D" parent="Navigation" unique_id=2053930653]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.5, 0, -11.999999)
+navigation_mesh = SubResource("NavigationMesh_62v0y")
+
+[node name="NavigationRegion3D26" type="NavigationRegion3D" parent="Navigation" unique_id=484417807]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.5, 0, -13.999999)
+navigation_mesh = SubResource("NavigationMesh_g717u")
+
+[node name="NavigationRegion3D27" type="NavigationRegion3D" parent="Navigation" unique_id=160861848]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, -10.499999)
+navigation_mesh = SubResource("NavigationMesh_pjp3u")
+
+[node name="NavigationRegion3D28" type="NavigationRegion3D" parent="Navigation" unique_id=184806101]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, -5.499999)
+navigation_mesh = SubResource("NavigationMesh_pjp3u")
+
+[node name="NavigationRegion3D29" type="NavigationRegion3D" parent="Navigation" unique_id=482563755]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 5.500001)
+navigation_mesh = SubResource("NavigationMesh_pjp3u")
+
+[node name="NavigationRegion3D39" type="NavigationRegion3D" parent="Navigation" unique_id=2146032500]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 10.500001)
+navigation_mesh = SubResource("NavigationMesh_pjp3u")
+
+[node name="NavigationRegion3D13" type="NavigationRegion3D" parent="Navigation" unique_id=1386653909]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36, 0, -10.899999)
+navigation_mesh = SubResource("NavigationMesh_ke7sq")
+
+[node name="NavigationRegion3D14" type="NavigationRegion3D" parent="Navigation" unique_id=54356380]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.5, 0, -16.399998)
+navigation_mesh = SubResource("NavigationMesh_mncwc")
+
+[node name="NavigationRegion3D15" type="NavigationRegion3D" parent="Navigation" unique_id=211666163]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.5, 0, -18.399998)
+navigation_mesh = SubResource("NavigationMesh_og0jo")
+
+[node name="NavigationRegion3D3" type="NavigationRegion3D" parent="Navigation" unique_id=643300179]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 0, 0)
+navigation_mesh = SubResource("NavigationMesh_xjhxy")
+
+[node name="NavigationRegion3D4" type="NavigationRegion3D" parent="Navigation" unique_id=1635428565]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, 0)
+navigation_mesh = SubResource("NavigationMesh_xjhxy")
+
+[node name="NavigationRegion3D5" type="NavigationRegion3D" parent="Navigation" unique_id=593967177]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, -3)
+navigation_mesh = SubResource("NavigationMesh_jw2eb")
+
+[node name="NavigationRegion3D16" type="NavigationRegion3D" parent="Navigation" unique_id=2127387157]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 3)
+navigation_mesh = SubResource("NavigationMesh_jw2eb")
+
+[node name="NavigationRegion3D2" type="NavigationRegion3D" parent="Navigation" unique_id=1836821564]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0, 14)
+navigation_mesh = SubResource("NavigationMesh_gof2p")
+
+[node name="NavigationRegion3D9" type="NavigationRegion3D" parent="Navigation" unique_id=932123006]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.5, 0, 12)
 navigation_mesh = SubResource("NavigationMesh_t6qsb")
+
+[node name="NavigationRegion3D17" type="NavigationRegion3D" parent="Navigation" unique_id=1429168368]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.5, 0, 12)
+navigation_mesh = SubResource("NavigationMesh_t6qsb")
+
+[node name="NavigationRegion3D11" type="NavigationRegion3D" parent="Navigation" unique_id=2096164960]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36, 0, 18)
+navigation_mesh = SubResource("NavigationMesh_nf2qq")
+
+[node name="NavigationRegion3D10" type="NavigationRegion3D" parent="Navigation" unique_id=1544413089]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36, 0, 11.5)
+navigation_mesh = SubResource("NavigationMesh_jc2n7")
+
+[node name="NavigationRegion3D50" type="NavigationRegion3D" parent="Navigation" unique_id=679105053]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45, 0, 0)
+navigation_mesh = SubResource("NavigationMesh_r7872")
+
+[node name="NavigationRegion3D40" type="NavigationRegion3D" parent="Navigation" unique_id=50391703]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34, 0, 0)
+navigation_mesh = SubResource("NavigationMesh_242w5")
+
+[node name="NavigationRegion3D51" type="NavigationRegion3D" parent="Navigation" unique_id=516308677]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 55, 0, 0)
+navigation_mesh = SubResource("NavigationMesh_jm4er")
+
+[node name="NavigationRegion3D21" type="NavigationRegion3D" parent="Navigation" unique_id=11513488]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50, 0, 6)
+navigation_mesh = SubResource("NavigationMesh_c3lrt")
+
+[node name="NavigationRegion3D22" type="NavigationRegion3D" parent="Navigation" unique_id=1786454769]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50, 0, -6)
+navigation_mesh = SubResource("NavigationMesh_c3lrt")
+
+[node name="NavigationRegion3D8" type="NavigationRegion3D" parent="Navigation" unique_id=2131847253]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60, 0, 0)
+navigation_mesh = SubResource("NavigationMesh_mkaem")
+
+[node name="NavigationRegion3D12" type="NavigationRegion3D" parent="Navigation" unique_id=921562111]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68, 0, -4.5)
+navigation_mesh = SubResource("NavigationMesh_2xv6d")
+
+[node name="NavigationRegion3D23" type="NavigationRegion3D" parent="Navigation" unique_id=332900179]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65.5, 0, 0)
+navigation_mesh = SubResource("NavigationMesh_v3j14")
+
+[node name="NavigationRegion3D24" type="NavigationRegion3D" parent="Navigation" unique_id=975129025]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68, 0, 10.5)
+navigation_mesh = SubResource("NavigationMesh_ahen0")
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="Navigation" unique_id=518981400]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+navigation_mesh = SubResource("NavigationMesh_a7oie")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1699497070]
 stream = ExtResource("69_gcmxt")

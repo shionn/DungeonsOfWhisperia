@@ -14,10 +14,14 @@ radius = 0.45
 [sub_resource type="BoxShape3D" id="BoxShape3D_b02ke"]
 size = Vector3(2, 0.5, 1)
 
+[sub_resource type="NavigationMesh" id="NavigationMesh_6qb25"]
+vertices = PackedVector3Array(0.5, 0, 1.5, -0.5, 0, 1.5, 0.5, 0, -1.5, -0.5, 0, -1.5)
+polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(1, 3, 2)]
+
 [node name="Wall_Doorway" unique_id=812446971 instance=ExtResource("1_fhw0n")]
 script = ExtResource("2_gfxh0")
 
-[node name="Knob" type="Node3D" parent="wall_doorway/wall_doorway_door" parent_id_path=PackedInt32Array(1110341718) index="1" unique_id=1387879665]
+[node name="Knob" type="Node3D" parent="wall_doorway/wall_doorway_door" parent_id_path=PackedInt32Array(1318822188) index="1" unique_id=1387879665]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4200989, 1.1378222, 0)
 script = ExtResource("3_akee4")
 
@@ -47,6 +51,10 @@ bus = &"Effet"
 [node name="UnLockAudio" type="AudioStreamPlayer3D" parent="." index="5" unique_id=906564280]
 stream = ExtResource("7_wxjb5")
 bus = &"Effet"
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="." index="6" unique_id=382898979]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
+navigation_mesh = SubResource("NavigationMesh_6qb25")
 
 [connection signal="activate" from="wall_doorway/wall_doorway_door/Knob" to="." method="_on_knob_activate"]
 [connection signal="item_drop" from="wall_doorway/wall_doorway_door/Knob" to="." method="_on_knob_item_drop"]
