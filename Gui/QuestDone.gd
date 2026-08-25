@@ -15,4 +15,4 @@ func _on_quest_done(quest:Quest) -> void :
 	open()
 
 func _on_animation_player_animation_finished(_anim_name: StringName) -> void:
-	player.xp = player.xp + _quest.xp
+	player.xp = player.xp + _quest.xp * player.lvl

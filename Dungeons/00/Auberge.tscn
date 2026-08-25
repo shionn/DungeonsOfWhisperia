@@ -184,8 +184,8 @@ metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 script = ExtResource("3_fq3ns")
 text = "Que souhaites tu ? 
 [ul]
-Manger pour 5 PO ? [i]Cela restaure les points de vie[/i]
-Dormir pour 5 PO ? [i]Cela reposera ton corp et d'accordera un bonus temporaire de défence[/i] (non disponible pour l'instant)
+Manger pour 10 PO ? [i]Cela restaure les points de vie[/i]
+Dormir pour 10 PO ? [i]Cela reposera ton corp et d'accordera un bonus temporaire de défense[/i] (non disponible pour l'instant)
 [/ul]"
 pnj = NodePath("../..")
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
@@ -652,8 +652,9 @@ metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
 
 [node name="Next" type="Node" parent="Cliente/Dialog/Des morts-vivants ?" unique_id=959936653 node_paths=PackedStringArray("pnj")]
 script = ExtResource("3_fq3ns")
-text = "Le passage secret… il était enfermé. On pensait que rien ne pouvait sortir. Mais les morts-vivants, ils sont libres maintenant. Le donjon est devenu leur prison… et leur champ de chasse.
+text = "Le passage secret… Ils étaient enfermés. On pensait que rien ne pouvait sortir. Mais les morts-vivants, ils sont libres maintenant. Le donjon est devenu leur prison… et leur champ de chasse.
 Le patron de l’auberge a entendu parler de ça. Il cherche quelqu’un pour nettoyer les galeries. Car les morts-vivants commencent à sortir du donjon. Mais moi… je n’ai plus envie de me battre.  
+
 Tu veux tenter ta chance ? Je ne sais pas si tu en as la force, mais si tu trouves mon alliance, ramène-la-moi.  "
 pnj = NodePath("../../..")
 metadata/_custom_type_script = "uid://cxe0hpd6pnr8q"
