@@ -50,7 +50,6 @@ Je ne suis pas graphiste, les assets proviennent principalement de [Kaykit par k
   - effet de flamme ?
 - ajouter des options d'input
   - sensibilité souris
-  - configuration des racourci
 - combat
   - Ajouter un systeme d'aggro
 - barre de state : lvl pas explicie, ni l'xp, et depalcer le FPS

@@ -12,13 +12,13 @@ height = 1.6
 radius = 0.6
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_brlmy"]
-height = 0.225
-radius = 0.4
+height = 0.25
+radius = 0.3
 
 [node name="chest_large" unique_id=1347016859 instance=ExtResource("1_x5kk7")]
 script = ExtResource("2_piqbm")
 
-[node name="coin_stack_large" parent="chest_large" parent_id_path=PackedInt32Array(1366413650) index="0" unique_id=865505570 instance=ExtResource("3_dalx3")]
+[node name="coin_stack_large" parent="chest_large" parent_id_path=PackedInt32Array(1335325298) index="0" unique_id=865505570 instance=ExtResource("3_dalx3")]
 transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, 0, 0, 0)
 script = ExtResource("2_gfekg")
 hide_on_loot = true
@@ -29,14 +29,14 @@ hide_on_loot = true
 transform = Transform3D(0.50000006, 0.7071068, -0.50000006, -0.7071068, -4.371139e-08, -0.7071068, -0.50000006, 0.7071068, 0.50000006, 0.009, 0.6, 0)
 shape = SubResource("CylinderShape3D_b02ke")
 
-[node name="chest_large_lid" parent="chest_large" parent_id_path=PackedInt32Array(1366413650) index="1" unique_id=752989813]
+[node name="chest_large_lid" parent="chest_large" parent_id_path=PackedInt32Array(1335325298) index="1" unique_id=1437095482]
 script = ExtResource("2_gfekg")
 interactDistance = 4.0
 
 [node name="Area3D" type="Area3D" parent="chest_large/chest_large_lid" index="1" unique_id=2006755612]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="chest_large/chest_large_lid/Area3D" index="0" unique_id=336617854]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 1.5875001)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0.045417428, 1.6312501)
 shape = SubResource("CylinderShape3D_brlmy")
 
 [node name="LockAudio" type="AudioStreamPlayer3D" parent="." index="1" unique_id=312878236]
@@ -48,5 +48,3 @@ stream = ExtResource("5_ascpd")
 bus = &"Effet"
 
 [connection signal="activate" from="chest_large/coin_stack_large" to="." method="_on_coin_stack_large_activate"]
-[connection signal="activate" from="chest_large/chest_large_lid" to="." method="_on_activate"]
-[connection signal="item_drop" from="chest_large/chest_large_lid" to="." method="_on_item_drop"]

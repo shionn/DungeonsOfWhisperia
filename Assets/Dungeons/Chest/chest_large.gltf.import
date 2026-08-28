@@ -47,7 +47,7 @@ _subresources={
 },
 "PATH:chest_large/chest_large_lid": {
 "generate/physics": true,
-"physics/shape_type": 1
+"physics/shape_type": 2
 }
 }
 }
